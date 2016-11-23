@@ -40,6 +40,6 @@ Por padrão, o SDK será instalado “lado a lado” (SxS). Isso significa que v
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -40,6 +40,6 @@ A equipe do XUnit criou um tutorial que mostra [como usar o xunit com o .NET Cor
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

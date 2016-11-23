@@ -21,6 +21,6 @@ ms.openlocfilehash: fe7b64a0d3fc1ebd1948a21f670711c891aee757
 Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, sugerimos que você acesse a [documentação do ASP.NET Core](https://docs.asp.net).
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

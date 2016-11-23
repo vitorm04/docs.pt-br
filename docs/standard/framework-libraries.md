@@ -58,7 +58,7 @@ O .NET inclui um conjunto de APIs utilitárias que fornecem funcionalidade para 
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) – Uma API para carregar e consultar documentos XML com o LINQ.
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) – Uma API para ler arquivos ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx) pode ser usado para gravar arquivos).
 
-## <a name="appmodel-apis"></a>APIs do modelo de aplicativo
+## <a name="app-model-apis"></a>APIs do modelo de aplicativo
 
 Há muitos modelos de aplicativo que podem ser usados com o .NET, fornecidos por várias empresas.
 
@@ -66,6 +66,6 @@ Há muitos modelos de aplicativo que podem ser usados com o .NET, fornecidos por
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
