@@ -356,6 +356,6 @@ Em alguns casos, usar ao máximo a classe [TimeZoneInfo](xref:System.TimeZoneInf
 [Datas, horas e fusos horários](index.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -220,6 +220,6 @@ Os dois métodos são úteis quando usados em conjunto com o método [String.Rem
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -134,6 +134,6 @@ Você pode [criar .NET Standard Libraries](../core/tutorials/libraries.md) usand
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

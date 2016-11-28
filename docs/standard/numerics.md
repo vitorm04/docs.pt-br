@@ -77,6 +77,6 @@ Os tipos de vetor habilitados para SMID no .NET Core incluem o seguinte:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

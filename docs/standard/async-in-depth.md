@@ -148,6 +148,6 @@ Uma vez que `await` é encontrado, a execução de `CalculateResult()` é gerada
 `async` e `await` são a melhor prática para gerenciar o trabalho vinculado à CPU quando você precisar de capacidade de resposta. Existem vários padrões para usar a assincronia com o trabalho vinculado à CPU. É importante observar que há um pequeno custo para usar a assincronia e não é recomendado para loops estreitos.  Cabe a você determinar como escrever seu código em torno dessa nova capacidade.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

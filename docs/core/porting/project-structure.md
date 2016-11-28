@@ -125,6 +125,6 @@ Consulte a [Documentação de portabilidade do .NET Core][porting-doc] para ver 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

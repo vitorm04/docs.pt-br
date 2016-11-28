@@ -43,6 +43,6 @@ O identificador do fuso horário é um campo de chave que identifica exclusivame
 [Convertendo horários entre fusos horários](converting-between-time-zones.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -84,6 +84,6 @@ O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessa
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

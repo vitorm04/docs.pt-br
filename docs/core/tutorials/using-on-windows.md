@@ -276,6 +276,6 @@ Este project.json inclui cláusulas de suporte para UWP e .NET 4.6 e é direcion
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

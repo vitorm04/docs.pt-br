@@ -62,6 +62,6 @@ Para obter detalhes de como converter horários entre fusos horários, consulte 
 [Datas, horas e fusos horários](index.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

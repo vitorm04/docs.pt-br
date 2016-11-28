@@ -291,6 +291,6 @@ Por padrão, o armazenamento de uma [BlockingCollection&lt;T&gt;](https://docs.m
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

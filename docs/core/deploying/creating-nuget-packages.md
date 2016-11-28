@@ -67,6 +67,6 @@ E agora você tem os arquivos necessários para publicar um pacote NuGet.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

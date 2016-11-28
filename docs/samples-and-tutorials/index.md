@@ -99,6 +99,6 @@ Uma versão concluída do código que você criará está localizada [no reposit
 Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. Uma versão concluída do código que você criará está localizada [no repositório de documentos principais no GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

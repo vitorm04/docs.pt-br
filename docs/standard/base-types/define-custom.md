@@ -247,6 +247,6 @@ No caso deste exemplo, o método que implementa [ICustomFormatter.Format](xref:S
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

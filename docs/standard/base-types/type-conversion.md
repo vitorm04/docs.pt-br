@@ -1228,6 +1228,6 @@ Para obter mais informações de como usar conversores de tipo para realizar con
 [Tabelas de conversão de tipos](conversion-tables.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

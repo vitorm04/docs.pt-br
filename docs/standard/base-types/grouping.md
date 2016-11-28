@@ -1164,6 +1164,6 @@ O primeiro grupo de captura corresponde a cada palavra da sentença. O segundo g
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

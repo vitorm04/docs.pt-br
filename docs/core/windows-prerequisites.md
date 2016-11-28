@@ -81,6 +81,6 @@ No momento, não é possível baixar um instalador offline para o [.NET Core 1.0
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

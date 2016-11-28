@@ -52,6 +52,6 @@ Para obter mais informações sobre o .NET Portability Analyzer, consulte o arti
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

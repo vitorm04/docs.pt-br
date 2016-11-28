@@ -535,6 +535,6 @@ Um tipo derivado herda todos os membros de seu tipo de base; ou seja, esses memb
 [Conversão de tipos no .NET Framework](type-conversion.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

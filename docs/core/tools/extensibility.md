@@ -132,6 +132,6 @@ As ferramentas da CLI do .NET Core permitem dois pontos de extensibilidade princ
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 
