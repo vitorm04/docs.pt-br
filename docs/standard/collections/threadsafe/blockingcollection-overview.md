@@ -134,6 +134,6 @@ Para cenários em que um consumidor precisa remover itens de várias coleções 
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

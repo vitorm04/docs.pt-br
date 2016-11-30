@@ -111,6 +111,6 @@ Se o fuso horário for encontrado, o método retornará seu objeto [TimeZoneInfo
 [Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md)
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

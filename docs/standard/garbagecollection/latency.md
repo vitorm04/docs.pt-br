@@ -65,6 +65,6 @@ Ao usar o modo [LowLatency](xref:System.Runtime.GCLatencyMode.LowLatency), consi
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

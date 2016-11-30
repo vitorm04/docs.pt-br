@@ -49,6 +49,6 @@ Você pode chamar a sobrecarga de método [GC.Collect(Int32, GCCollectionMode,
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 
