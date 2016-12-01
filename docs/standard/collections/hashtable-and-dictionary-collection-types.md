@@ -51,6 +51,6 @@ As classes `Dictionary<T>` e `ConcurrentDictionary<T>` têm a mesma funcionalida
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

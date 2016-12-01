@@ -353,6 +353,6 @@ A classe `StatClass` representa uma estrutura que é retornada pela chamada do s
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
