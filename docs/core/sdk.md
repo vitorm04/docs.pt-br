@@ -2,12 +2,12 @@
 title: "Visão geral do SDK do .NET Core"
 description: "Visão geral do SDK do .NET Core"
 keywords: .NET, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
 translationtype: Human Translation
@@ -35,9 +35,7 @@ Instaladores nativos destinam-se principalmente a computadores do desenvolvedor.
 
 Scripts de instalação, por outro lado, não exigem privilégios administrativos. No entanto, eles também não instalarão nenhum pré-requisito no computador. Você precisa instalar todos os pré-requisitos manualmente. Os scripts destinam-se principalmente a configurar servidores de build ou para quando você deseja instalar as ferramentas sem privilégios de administrador (observe as limitações dos pré-requisitos acima). Veja mais informações no [tópico de referência do script de instalação](tools/dotnet-install-script.md). Se você estiver interessado em como configurar o SDK no seu servidor de build de CI, leia o documento [SDK com servidores de CI](tools/using-ci-with-cli.md). 
 
-Por padrão, o SDK será instalado “lado a lado” (SxS). Isso significa que várias versões das ferramentas de CLI podem coexistir em um determinado momento em um único computador. A maneira como a versão correta é usada é explicada mais detalhadamente na [seção do driver](tools/index.md#driver) do tópico de Ferramentas de Linha de Comando do .NET Core. 
-
-
+Por padrão, o SDK será instalado “lado a lado” (SxS). Isso significa que várias versões das ferramentas de CLI podem coexistir em um determinado momento em um único computador. A maneira como a versão correta é usada é explicada mais detalhadamente na [seção do driver](tools/index.md#driver) do tópico de Ferramentas de Linha de Comando do .NET Core.
 
 
 <!--HONumber=Nov16_HO4-->

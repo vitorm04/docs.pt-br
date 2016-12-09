@@ -3,11 +3,11 @@ title: Como usar ForEach para remover itens de uma BlockingCollection
 description: Como usar ForEach para remover itens de uma BlockingCollection
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: f3db5825-b5c9-4e8b-80bc-e11760d9523e
 translationtype: Human Translation

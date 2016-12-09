@@ -2,12 +2,12 @@
 title: Comando dotnet-migrate | SDK do .NET Core
 description: "O comando dotnet-migrate migra um projeto e todas as suas dependências."
 keywords: dotnet-migrate, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation

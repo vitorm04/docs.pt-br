@@ -3,11 +3,10 @@ title: Testes de unidade no .NET Core usando o teste dotnet
 description: Testes de unidade no .NET Core usando o teste dotnet
 keywords: .NET, .NET Core
 author: ardalis
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 translationtype: Human Translation

@@ -3,11 +3,11 @@ title: Criando imagens do Docker do .NET Core
 description: "Noções básicas de imagens do Docker e do .NET Core"
 keywords: .NET, .NET Core, Docker
 author: spboyer
-manager: wpickett
+ms.author: shboyer
 ms.date: 08/29/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 translationtype: Human Translation

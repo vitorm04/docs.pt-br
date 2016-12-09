@@ -3,11 +3,10 @@ title: "Compilar uma solução completa do .NET Core no Windows usando o Visual 
 description: "Compilar uma solução completa do .NET Core no Windows usando o Visual Studio 2017"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
@@ -26,9 +25,9 @@ O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para desenv
 
 Siga as instruções na [nossa página de pré-requisitos](../windows-prerequisites.md) para atualizar seu ambiente.
 
-# <a name="a-solution-using-only-net-core-projects"></a>Uma solução que usa apenas projetos .NET Core
+## <a name="a-solution-using-only-net-core-projects"></a>Uma solução que usa apenas projetos .NET Core
 
-## <a name="writing-the-library"></a>Escrevendo a biblioteca
+### <a name="writing-the-library"></a>Escrevendo a biblioteca
 
 1. No Visual Studio, escolha **Arquivo**, **Novo** e **Projeto**. Na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C#**, escolha o nó **.NET Core** e escolha **Biblioteca de Classes (.NET Standard)**. 
 

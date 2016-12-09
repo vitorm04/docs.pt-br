@@ -3,11 +3,11 @@ title: Assincronia detalhada
 description: "Explicação detalhada de como o código assíncrono funciona no .NET"
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation

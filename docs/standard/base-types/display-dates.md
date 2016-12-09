@@ -3,11 +3,11 @@ title: "Como exibir datas em calendários não gregorianos"
 description: "Como exibir datas em calendários não gregorianos"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 93f06e1d-544b-4ccc-a0b2-95cd674852cb
 translationtype: Human Translation

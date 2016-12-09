@@ -3,11 +3,11 @@ title: "Introdução ao .NET Core no Windows/Linux/macOS usando a linha de coman
 description: "Introdução ao .NET Core no Windows, Linux ou macOS usando a CLI (Interface de Linha de Comando) do .NET Core"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation

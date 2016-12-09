@@ -3,11 +3,11 @@ title: Como aplicar uma viagem de ida e volta a valores de data e hora
 description: Como aplicar uma viagem de ida e volta a valores de data e hora
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation

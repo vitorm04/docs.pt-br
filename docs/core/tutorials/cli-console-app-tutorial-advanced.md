@@ -2,12 +2,10 @@
 title: "Escrevendo aplicativos de console do .NET Core usando as ferramentas da CLI: um guia passo a passo avançado"
 description: "Escrevendo aplicativos de console do .NET Core usando as ferramentas da CLI: um guia passo a passo avançado"
 keywords: .NET, .NET Core
-author: dotnet-bot
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
 translationtype: Human Translation

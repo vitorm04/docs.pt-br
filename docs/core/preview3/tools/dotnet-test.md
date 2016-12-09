@@ -2,12 +2,12 @@
 title: Comando dotnet-test | SDK do .NET Core
 description: "O comando “dotnet test” é usado para executar testes de unidade em um determinado projeto."
 keywords: dotnet-test, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation

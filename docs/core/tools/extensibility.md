@@ -2,12 +2,12 @@
 title: Modelo de extensibilidade da CLI do .NET Core
 description: Modelo de extensibilidade da CLI do .NET Core
 keywords: CLI, extensibilidade, comandos personalizados, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
