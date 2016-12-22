@@ -1,0 +1,5 @@
+# [Propriedade de eixo descendente XML (Visual Basic)](xml-descendant-axis-property.md)
+# [Propriedade do indexador de extensão (Visual Basic)](extension-indexer-property.md)
+# [Propriedade do eixo filho XML (Visual Basic)](xml-child-axis-property.md)
+# [Propriedade do valor XML (Visual Basic)](xml-value-property.md)
+# [Propriedade de eixo do atributo XML (Visual Basic)](xml-attribute-axis-property.md)

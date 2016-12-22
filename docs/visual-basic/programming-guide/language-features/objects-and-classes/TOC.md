@@ -1,0 +1,8 @@
+# [Tempo de vida do objeto: como os objetos são criados e destruídos (Visual Basic)](object-lifetime-how-objects-are-created-and-destroyed.md)
+# [Noções básicas de herança (Visual Basic)](inheritance-basics.md)
+# [Objetos e classes no Visual Basic](index.md)
+# [Propriedades e métodos sobrecarregados (Visual Basic)](overloaded-properties-and-methods.md)
+# [Como inferir nomes e tipos de propriedade em declarações de tipo anônimo (Visual Basic)](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+# [Tipos anônimos (Visual Basic)](anonymous-types.md)
+# [Como declarar um objeto usando um inicializador de objeto (Visual Basic)](how-to-declare-an-object-by-using-an-object-initializer.md)
+# [Instruções passo a passo: definindo classes (Visual Basic)](walkthrough-defining-classes.md)

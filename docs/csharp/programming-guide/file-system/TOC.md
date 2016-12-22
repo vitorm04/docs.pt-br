@@ -1,0 +1,6 @@
+# [Como ler um arquivo de texto uma linha de cada vez (Visual C#)](how-to-read-a-text-file-one-line-at-a-time.md)
+# [Como ler um arquivo de texto (Guia de Programação em C#)](how-to-read-from-a-text-file.md)
+# [Como copiar, excluir e mover arquivos e pastas (Guia de Programação em C#)](how-to-copy-delete-and-move-files-and-folders.md)
+# [Como escrever em um arquivo de texto (Guia de Programação em C#)](how-to-write-to-a-text-file.md)
+# [Sistema de arquivos e o Registro (Guia de Programação em C#)](file-system-and-the-registry.md)
+# [Como fornecer uma caixa de diálogo de progresso para operações de arquivo (Guia de Programação em C#)](how-to-provide-a-progress-dialog-box-for-file-operations.md)

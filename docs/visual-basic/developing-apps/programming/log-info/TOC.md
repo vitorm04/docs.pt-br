@@ -1,0 +1,8 @@
+# [Instruções passo a passo: alterando onde My.Application.Log grava informações (Visual Basic)](walkthrough-changing-where-my-application-log-writes-information.md)
+# [Como gravar em um log de eventos do aplicativo (Visual Basic)](how-to-write-to-an-application-event-log.md)
+# [Solucionando problemas: ouvintes de log (Visual Basic)](troubleshooting-log-listeners.md)
+# [Como registrar em log as exceções no Visual Basic](how-to-log-exceptions.md)
+# [Como gravar informações de evento em um arquivo de texto (Visual Basic)](how-to-write-event-information-to-a-text-file.md)
+# [Como gravar mensagens de log (Visual Basic)](how-to-write-log-messages.md)
+# [Registrando informações em log a partir do aplicativo (Visual Basic)](logging-information-from-the-application.md)
+# [Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)](walkthrough-filtering-my-application-log-output.md)

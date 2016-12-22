@@ -1,0 +1,6 @@
+# [Solucionando problemas de matrizes (Visual Basic)](troubleshooting-arrays.md)
+# [Matrizes no Visual Basic](index.md)
+# [Como inicializar uma variável de matriz no Visual Basic](how-to-initialize-an-array-variable.md)
+# [Como classificar uma matriz no Visual Basic](how-to-sort-an-array.md)
+# [Dimensões de matriz no Visual Basic](array-dimensions.md)
+# [Como atribuir uma matriz a outra matriz (Visual Basic)](how-to-assign-one-array-to-another-array.md)

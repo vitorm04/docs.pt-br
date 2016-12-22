@@ -1,0 +1,7 @@
+# [Matrizes como objetos (Guia de Programação em C#)](arrays-as-objects.md)
+# [Matrizes de tipo implícito (Guia de Programação em C#)](implicitly-typed-arrays.md)
+# [Matrizes (Guia de Programação em C#)](index.md)
+# [Passando matrizes com o uso de ref e out (Guia de Programação em C#)](passing-arrays-using-ref-and-out.md)
+# [Usando foreach com matrizes (Guia de Programação em C#)](using-foreach-with-arrays.md)
+# [Matrizes denteadas (Guia de Programação em C#)](jagged-arrays.md)
+# [Matrizes multidimensionais (Guia de Programação em C#)](multidimensional-arrays.md)

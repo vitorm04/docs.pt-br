@@ -1,0 +1,7 @@
+# [Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres (Guia de Programação em C#)](how-to-search-strings-using-string-methods.md)
+# [Como pesquisar cadeias de caracteres usando expressões regulares (Guia de Programação em C#)](how-to-search-strings-using-regular-expressions.md)
+# [Como modificar o conteúdo de uma cadeia de caracteres (Guia de Programação em C#)](how-to-modify-string-contents.md)
+# [Como determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)](how-to-determine-whether-a-string-represents-a-numeric-value.md)
+# [Como converter uma cadeia de caracteres em um DateTime (Guia de Programação em C#)](how-to-convert-a-string-to-a-datetime.md)
+# [Como converter entre codificações herdadas e Unicode (Guia de Programação em C#)](how-to-convert-between-legacy-encodings-and-unicode.md)
+# [Cadeias de caracteres (Guia de Programação em C#)](index.md)

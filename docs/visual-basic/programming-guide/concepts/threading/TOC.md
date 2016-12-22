@@ -1,0 +1,6 @@
+# [Parâmetros e valores de retorno para procedimentos multithread (Visual Basic)](parameters-and-return-values-for-multithreaded-procedures.md)
+# [Timers de thread (Visual Basic)](thread-timers.md)
+# [Threading (Visual Basic)](index.md)
+# [Thread Pooling (Visual Basic)](thread-pooling.md)
+# [Sincronização de thread (Visual Basic)](thread-synchronization.md)
+# [Aplicativos multithread (Visual Basic)](multithreaded-applications.md)

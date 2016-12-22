@@ -1,0 +1,1 @@
+Para obter mais informações, consulte a [Especificação da linguagem C#](../../../../visual-basic/reference/language-specification.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.

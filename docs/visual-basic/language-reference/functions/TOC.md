@@ -1,0 +1,5 @@
+# [Funções da cadeia de caracteres (Visual Basic)](string-functions.md)
+# [Função CType (Visual Basic)](ctype-function.md)
+# [Funções de conversão do tipo (Visual Basic)](type-conversion-functions.md)
+# [Funções (Visual Basic)](index.md)
+# [Funções matemáticas (Visual Basic)](math-functions.md)

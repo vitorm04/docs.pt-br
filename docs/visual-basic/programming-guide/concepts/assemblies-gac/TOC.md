@@ -1,0 +1,8 @@
+# [Assemblies e o Cache de Assembly Global (Visual Basic)](index.md)
+# [Como: Criar Assemblies amigáveis assinados (Visual Basic)](how-to-create-signed-friend-assemblies.md)
+# [Como: determinar se um arquivo é um Assembly (Visual Basic)](how-to-determine-if-a-file-is-an-assembly.md)
+# [Como: carregar e descarregar Assemblies (Visual Basic)](how-to-load-and-unload-assemblies.md)
+# [Como: Criar Assemblies amigáveis não assinados (Visual Basic)](how-to-create-unsigned-friend-assemblies.md)
+# [Como: compartilhar um Assembly com outros aplicativos (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+# [Passo a passo: Inserindo informações de tipo de Assemblies do Microsoft Office no Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+# [Como: criar e usar Assemblies usando a linha de comando (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)

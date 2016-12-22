@@ -1,0 +1,5 @@
+# [Tipos anuláveis (Guia de Programação em C#)](index.md)
+# [Como converter bool? em bool com segurança (Guia de Programação em C#)](how-to-safely-cast-from-bool-to-bool.md)
+# [Como identificar um tipo anulável (Guia de Programação em C#)](how-to-identify-a-nullable-type.md)
+# [Executando a conversão boxing de tipos anuláveis (Guia de Programação em C#)](boxing-nullable-types.md)
+# [Usando tipos anuláveis (Guia de Programação em C#)](using-nullable-types.md)

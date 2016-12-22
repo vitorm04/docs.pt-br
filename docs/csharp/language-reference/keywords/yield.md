@@ -1,0 +1,94 @@
+---
+title: "yield (Refer&#234;ncia de C#) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/03/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "yield"
+  - "yield_CSharpKeyword"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "palavra-chave yield [C#]"
+ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
+caps.latest.revision: 46
+caps.handback.revision: 46
+author: "BillWagner"
+ms.author: "wiwagn"
+manager: "wpickett"
+---
+# yield (Refer&#234;ncia de C#)
+[!INCLUDE[vs2017banner](../../../csharp/includes/vs2017banner.md)]
+
+Quando você usa a palavra\-chave `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador.  Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita \(a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo\) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.  
+  
+ O exemplo a seguir mostra as duas formas de instrução `yield`.  
+  
+<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+## Comentários  
+ Você usa uma instrução `yield return` para retornar cada elemento individualmente.  
+  
+ Você consome um método iterador ao usar uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ou consulta LINQ.  Cada iteração do loop `foreach` chama o método iterador.  Quando uma instrução `yield return` é atingida no método iterador, `expression` é retornado e o local atual no código é retido.  A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.  
+  
+ Você pode usar uma instrução `yield break` para terminar a iteração.  
+  
+ Para obter mais informações sobre iteradores, consulte [Iteradores](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md).  
+  
+## Métodos de Iterador Acessadores get  
+ A declaração de um iterador deve atender aos seguintes requisitos:  
+  
+-   O tipo de retorno deve ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
+  
+-   A instrução não pode conter quaisquer parâmetros [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md).  
+  
+ O tipo `yield` de um iterador que retorna <xref:System.Collections.IEnumerable> ou <xref:System.Collections.IEnumerator> é `object`.  Se o iterador retornar <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.Generic.IEnumerator%601>, uma conversão implícita deverá existir do tipo da expressão na instrução `yield return` para o parâmetro de tipo genérico.  
+  
+ Você não pode incluir uma instrução `yield return` ou `yield break` nos métodos com as seguintes características:  
+  
+-   Métodos anônimos.  Para obter mais informações, consulte [Métodos anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+  
+-   Métodos que contêm blocos inseguros.  Para obter mais informações, consulte [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
+  
+## Tratamento de exceções  
+ Uma instrução `yield return` não pode estar localizada em um bloco try\-catch.  Uma instrução `yield return` pode estar localizada no bloco try de uma instrução try\-finally.  
+  
+ Uma instrução `yield break` pode estar localizada em um bloco try ou em um bloco catch, mas não em um bloco finally.  
+  
+ Se o corpo `foreach` \(fora do método iterador\) acionar uma exceção, um bloco `finally` no método iterador será executado.  
+  
+## Implementação Técnica  
+ O código a seguir retorna uma `IEnumerable<string>` de um método iterador e itera através de seus elementos.  
+  
+<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+ A chamada a `MyIteratorMethod` não executa o corpo do método.  Em vez disso, a chamada retorna `IEnumerable<string>` na variável `elements`.  
+  
+ Em uma iteração do loop `foreach`, o método <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado para `elements`.  Essa chamada executará o corpo de `MyIteratorMethod` até que a próxima instrução `yield return` seja atingida.  A expressão retornada pela instrução `yield return` determina não apenas o valor da variável `element` para consumo pelo corpo do loop, mas também a propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A> dos elementos que é `IEnumerable<string>`.  
+  
+ Em cada iteração subsequente do loop `foreach`, a execução do corpo do iterador continuará de onde parou, parando novamente quando atingir uma instrução `yield return`.  O loop `foreach` é concluído quando o fim do método iterador ou uma instrução `yield break` é atingida.  
+  
+## Exemplo  
+ O exemplo a seguir contém uma instrução `yield return` dentro de um loop `for`.  Cada iteração do corpo da instrução `foreach` em `Process` cria uma chamada à função iteradora `Power`.  Cada chamada à função iteradora prossegue para a próxima execução da instrução `yield return` que ocorre durante a próxima iteração do loop `for`.  
+  
+ O tipo de retorno do método iterador é <xref:System.Collections.IEnumerable> que é um tipo de interface de iterador.  Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.  
+  
+ [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
+  
+## Exemplo  
+ O exemplo a seguir demonstra um acessador `get` que é um iterador.  No exemplo, cada instrução `yield return` retorna uma instância de uma classe definida pelo usuário.  
+  
+ [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
+  
+## Especificação da Linguagem C\#  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+  
+## Consulte também  
+ [Referência de C\#](../../../csharp/language-reference/index.md)   
+ [Guia de Programação em C\#](../../../csharp/programming-guide/index.md)   
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
+ [Iteradores](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)

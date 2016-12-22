@@ -1,0 +1,7 @@
+# [Como capturar uma exceção não compatível com CLS](how-to-catch-a-non-cls-exception.md)
+# [Como manipular uma exceção usando try/catch (Guia de Programação em C#)](how-to-handle-an-exception-using-try-catch.md)
+# [Manipulação de exceções (Guia de Programação em C#)](exception-handling.md)
+# [Usando exceções (Guia de Programação em C#)](using-exceptions.md)
+# [Criando e lançando exceções (Guia de Programação em C#)](creating-and-throwing-exceptions.md)
+# [Exceções geradas pelo compilador (Guia de Programação em C#)](compiler-generated-exceptions.md)
+# [Como executar código de limpeza usando finally (Guia de Programação em C#)](how-to-execute-cleanup-code-using-finally.md)
