@@ -1,0 +1,7 @@
+# [Eventos (Guia de Programação em C#)](index.md)
+## [Como realizar e cancelar a assinatura de eventos (Guia de Programação em C#)](how-to-subscribe-to-and-unsubscribe-from-events.md)
+## [Como publicar eventos em conformidade com as diretrizes do .NET Framework (Guia de Programação em C#)](how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+## [Como acionar eventos de classe base em classes derivadas (Guia de Programação em C#)](how-to-raise-base-class-events-in-derived-classes.md)
+## [Como implementar eventos de interface (Guia de Programação em C#)](how-to-implement-interface-events.md)
+## [How to: Use a Dictionary to Store Event Instances](TocOutOfQuery)
+## [Como implementar acessadores de eventos personalizados (Guia de Programação em C#)](how-to-implement-custom-event-accessors.md)

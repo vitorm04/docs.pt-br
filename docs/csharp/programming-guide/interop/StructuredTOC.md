@@ -1,0 +1,7 @@
+# [Interoperabilidade (Guia de Programação em C#)](interoperability.md)
+## [Visão geral sobre interoperabilidade (Guia de Programação em C#)](interoperability-overview.md)
+## [Como acessar objetos de interoperabilidade do Office usando recursos do Visual C# (Guia de Programação em C#)](how-to-access-office-onterop-objects.md)
+## [Como usar propriedades indexadas na programação para interoperabilidade COM (Guia de Programação em C#)](how-to-use-indexed-properties-in-com-interop-rogramming.md)
+## [Como usar invocação de plataforma para executar um arquivo wave (Guia de Programação em C#)](how-to-use-platform-invoke-to-play-a-wave-file.md)
+## [Passo a passo: Programação do Office (C# e Visual Basic)](walkthrough-office-programming.md)
+## [Exemplo de classe COM (Guia de Programação em C#)](example-com-class.md)

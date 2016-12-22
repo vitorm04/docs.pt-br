@@ -1,0 +1,5 @@
+# [Delegates](TocOutOfQuery)
+## [Usando delegados (Guia de Programação em C#)](using-delegates.md)
+## [Delegados com métodos nomeados versus anônimos (Guia de Programação em C#)](delegates-with-named-vs-anonymous-methods.md)
+## [How to: Combine Delegates (Multicast Delegates)](TocOutOfQuery)
+## [Como declarar e usar um delegado e criar uma instância dele (Guia de Programação em C#)](how-to-declare-instantiate-and-use-a-delegate.md)

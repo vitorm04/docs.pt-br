@@ -1,0 +1,6 @@
+# [Desenvolvimento com My (Visual Basic)](index.md)
+## [Executando tarefas com My.Application, My.Computer e My.User (Visual Basic)](performing-tasks-with-my-application-my-computer-and-my-user.md)
+## [Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices (Visual Basic)](default-object-instances-provided-by-my-forms-and-my-webservices.md)
+## [Desenvolvimento de aplicativo rápido com My.Resources e My.Settings (Visual Basic)](rapid-application-development-with-my-resources-and-my-settings.md)
+## [Visão geral do modelo de aplicativo do Visual Basic](overview-of-the-visual-basic-application-model.md)
+## [Como My depende do tipo de projeto (Visual Basic)](how-my-depends-on-project-type.md)

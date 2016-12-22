@@ -1,0 +1,8 @@
+# [Imprimindo e gerando relatórios (Visual Basic)](printing-and-reporting.md)
+## [PrintForm Component (Visual Basic)](printform-component.md)
+## [Como imprimir um formulário rolável (Visual Basic)](how-to-print-a-scrollable-form.md)
+## [Como imprimir áreas cliente e não cliente de um formulário (Visual Basic)](how-to-print-client-and-non-client-areas-of-a-form.md)
+## [Como imprimir a área cliente de um formulário (Visual Basic)](how-to-print-the-client-area-of-a-form.md)
+## [Como imprimir um formulário usando o componente PrintForm (Visual Basic)](how-to-print-a-form-by-using-the-printform-component.md)
+## [Deploying Applications That Reference the PrintForm Component (Visual Basic)](deploying-applications-that-reference-the-printform-component.md)
+## [Adicionando relatórios imprimíveis a aplicativos do Visual Studio](adding-printable-reports-to-visual-studio-applications.md)

@@ -1,0 +1,5 @@
+# [Árvores de expressão (c#)](index.md)
+## [Como: executar árvores de expressão (c#)](how-to-execute-expression-trees.md)
+## [Como: modificar árvores de expressão (c#)](how-to-modify-expression-trees.md)
+## [Como: usar árvores de expressão para compilar consultas dinâmicas (c#)](how-to-use-expression-trees-to-build-dynamic-queries.md)
+## [Depurando árvores de expressão no Visual Studio (c#)](debugging-expression-trees-in-visual-studio.md)

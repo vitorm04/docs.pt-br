@@ -1,0 +1,5 @@
+# [Getting Started with Visual C#](TocOutOfQuery)
+## [What's New for Visual C#](whats-new.md)
+## [Introduction to the C# Language and the .NET Framework](TocOutOfQuery)
+## [Additional Resources for Visual C# Programmers](additional-resources.md)
+## [Visual c# alterações significativas no Visual Studio 2013](breaking-changes-in-visual-studio-2013.md)

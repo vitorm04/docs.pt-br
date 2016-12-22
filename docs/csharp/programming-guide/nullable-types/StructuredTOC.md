@@ -1,0 +1,5 @@
+# [Nullable Types](TocOutOfQuery)
+## [Usando tipos anuláveis (Guia de Programação em C#)](using-nullable-types.md)
+## [Executando a conversão boxing de tipos anuláveis (Guia de Programação em C#)](boxing-nullable-types.md)
+## [Como identificar um tipo anulável (Guia de Programação em C#)](how-to-identify-a-nullable-type.md)
+## [Como converter bool? em bool com segurança (Guia de Programação em C#)](how-to-safely-cast-from-bool-to-bool.md)

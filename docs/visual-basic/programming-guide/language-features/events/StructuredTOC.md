@@ -1,0 +1,6 @@
+# [Events](TocOutOfQuery)
+## [Instruções passo a passo: declarando e acionando eventos (Visual Basic)](walkthrough-declaring-and-raising-events.md)
+## [Instruções passo a passo: tratando eventos (Visual Basic)](walkthrough-handling-events.md)
+## [Como declarar eventos personalizados para evitar bloqueio (Visual Basic)](how-to-declare-custom-events-to-avoid-blocking.md)
+## [Como declarar eventos personalizados para conservar memória (Visual Basic)](how-to-declare-custom-events-to-conserve-memory.md)
+## [Solucionando problemas de manipuladores de eventos herdados no Visual Basic](troubleshooting-inherited-event-handlers.md)

@@ -1,0 +1,5 @@
+# [Main() and Command-Line Arguments](TocOutOfQuery)
+## [Argumentos de linha de comando (Guia de Programação em C#)](command-line-arguments.md)
+## [Como exibir argumentos de linha de comando (Guia de Programação em C#)](how-to-display-command-line-arguments.md)
+## [Como acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)](how-to-access-command-line-arguments-using-foreach.md)
+## [Valores de retorno de Main() (Guia de Programação em C#)](main-return-values.md)

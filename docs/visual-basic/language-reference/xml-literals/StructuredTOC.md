@@ -1,0 +1,6 @@
+# [XML Literals](TocOutOfQuery)
+## [Literal do elemento XML (Visual Basic)](xml-element-literal.md)
+## [Literal de documento XML (Visual Basic)](xml-document-literal.md)
+## [Literal CDATA XML (Visual Basic)](xml-cdata-literal.md)
+## [Literal de comentário XML (Visual Basic)](xml-comment-literal.md)
+## [Literal de instrução de processamento XML (Visual Basic)](xml-processing-instruction-literal.md)

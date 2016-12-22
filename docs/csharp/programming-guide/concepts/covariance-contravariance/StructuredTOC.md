@@ -1,0 +1,7 @@
+# [9dd7efe5-73c1-413b-b8a9-76645dc60c7a](TocOutOfQuery)
+## [57008df7-48c7-403b-935a-253c3c265726](TocOutOfQuery)
+### [Criando Interfaces genéricas variantes (c#)](creating-variant-generic-interfaces.md)
+### [Usando variação em Interfaces para coleções genéricas (c#)](using-variance-in-interfaces-for-generic-collections.md)
+## [Variação em delegações (c#)](variance-in-delegates.md)
+### [Usando variação em delegações (c#)](using-variance-in-delegates.md)
+### [Usando variação para delegações Func e Action genéricas (c#)](using-variance-for-func-and-action-generic-delegates.md)

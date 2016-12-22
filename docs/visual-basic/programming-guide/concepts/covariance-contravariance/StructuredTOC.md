@@ -1,0 +1,7 @@
+# [Covariância e contravariância (Visual Basic)](covariance-and-contravariance.md)
+## [Variação em Interfaces genéricas (Visual Basic)](variance-in-generic-interfaces.md)
+### [Criando Interfaces genéricas variantes (Visual Basic)](creating-variant-generic-interfaces.md)
+### [Usando variação em Interfaces para coleções genéricas (Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)
+## [Variação em delegações (Visual Basic)](variance-in-delegates.md)
+### [Usando variação em delegações (Visual Basic)](using-variance-in-delegates.md)
+### [Usando variação para delegações Func e Action genérica (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

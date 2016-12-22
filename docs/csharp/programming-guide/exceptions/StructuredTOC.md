@@ -1,0 +1,8 @@
+# [Exceções e manipulação de exceções (Guia de Programação em C#)](exceptions-and-exception-handling.md)
+## [Usando exceções (Guia de Programação em C#)](using-exceptions.md)
+## [Manipulação de exceções (Guia de Programação em C#)](exception-handling.md)
+## [Creating and Throwing Exceptions](TocOutOfQuery)
+## [Compiler-Generated Exceptions](TocOutOfQuery)
+## [How to: Handle an Exception Using try/catch](TocOutOfQuery)
+## [Como executar código de limpeza usando finally (Guia de Programação em C#)](how-to-execute-cleanup-code-using-finally.md)
+## [Como capturar uma exceção não compatível com CLS](how-to-catch-a-non-cls-exception.md)

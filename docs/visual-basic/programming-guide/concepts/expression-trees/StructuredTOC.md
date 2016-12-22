@@ -1,0 +1,5 @@
+# [Árvores de expressão (Visual Basic)](index.md)
+## [Como: executar árvores de expressão (Visual Basic)](how-to-execute-expression-trees.md)
+## [Como: modificar árvores de expressão (Visual Basic)](how-to-modify-expression-trees.md)
+## [Como: usar árvores de expressão para compilar consultas dinâmicas (Visual Basic)](how-to-use-expression-trees-to-build-dynamic-queries.md)
+## [3605c0fa-8ae6-46ec-a67b-1139322a0ffe](TocOutOfQuery)

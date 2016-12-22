@@ -1,0 +1,8 @@
+# [204b9182-eb7e-4dac-a170-5cb72139077e](TocOutOfQuery)
+## [Aplicativos multithread (Visual Basic)](multithreaded-applications.md)
+## [8e212e70-9b86-4ae3-95d4-04f609cf2d67](TocOutOfQuery)
+## [Passo a passo: Multithreading com o componente BackgroundWorker (Visual Basic)](walkthrough-multithreading-with-the-backgroundworker-component.md)
+## [Sincronização de thread (Visual Basic)](thread-synchronization.md)
+## [Timers de thread (Visual Basic)](thread-timers.md)
+## [Thread Pooling (Visual Basic)](thread-pooling.md)
+### [Como: usar um Pool de threads (Visual Basic)](how-to-use-a-thread-pool.md)

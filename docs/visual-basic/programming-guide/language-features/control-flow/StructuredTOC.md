@@ -1,0 +1,7 @@
+# [Fluxo de controle no Visual Basic](index.md)
+## [Decision Structures](TocOutOfQuery)
+## [Estruturas de loop (Visual Basic)](loop-structures.md)
+### [Instruções passo a passo: implementando IEnumerable(Of T) no Visual Basic](walkthrough-implementing-ienumerable-of-t.md)
+## [Other Control Structures](TocOutOfQuery)
+### [Como descartar um recurso do sistema (Visual Basic)](how-to-dispose-of-a-system-resource.md)
+## [Estruturas de controle aninhadas (Visual Basic)](nested-control-structures.md)

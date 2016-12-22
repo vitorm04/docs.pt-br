@@ -1,0 +1,8 @@
+# [Threading (c#)](index.md)
+## [cac78794-fe52-47a9-ae0d-64b4604d67c0](TocOutOfQuery)
+## [59e4dc7a-c4ab-400c-b308-764fdaa4a750](TocOutOfQuery)
+## [Passo a passo: Multithreading com o componente BackgroundWorker (c#)](walkthrough-multithreading-with-the-backgroundworker-component.md)
+## [Sincronização de thread (c#)](thread-synchronization.md)
+## [Timers de thread (c#)](thread-timers.md)
+## [Thread Pooling (c#)](thread-pooling.md)
+### [Como: usar um Pool de Thread (c#)](how-to-use-a-thread-pool.md)
