@@ -3,17 +3,16 @@ title: Escolhendo entre o .NET Core e .NET Framework para aplicativos de servido
 description: "Um guia sobre qual tipo de .NET você deve considerar ao compilar um aplicativo de servidor no .NET."
 keywords: .NET, .NET Core, .NET Framework
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: d6ce9e3dd3c1189f35d147d140bb45095b3d77a5
-ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
+ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
+ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
 
 ---
 
@@ -50,13 +49,13 @@ O .NET Core também oferece suporte aos sistemas operacionais mencionados anteri
 
 O .NET Core é a melhor escolha caso você esteja adotando um sistema baseado em microsserviços, composto por vários microsserviços independentes, dinamicamente escalonáveis, com ou sem estado. O .NET Core é leve e sua superfície de API pode ser minimizada de acordo com o escopo do microsserviço. Uma arquitetura de microsserviços também permite combinar tecnologias através de um limite de serviço, permitindo uma aceitação gradual do .NET Core para novos microsserviços que vivem em conjunto com outros microsserviços ou serviços desenvolvidos com o .NET Framework, Java, Ruby ou outras tecnologias monolíticas.
 
-Você pode usar muitas plataformas de infraestrutura. Para sistemas de microsserviço grandes e complexos, é possível usar a [Azure Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/). Para microsserviços sem monitoração de estado, também é possível usar outros produtos como o [Serviço de Aplicativo do Azure](https://azure.microsoft.com/en-us/services/app-service/). Alternativas de microsserviços baseadas em Docker também se adaptam a qualquer tipo de abordagem de microsserviços, conforme explicado a seguir. Todas essas plataformas oferecem suporte ao .NET Core e são ideais para hospedar microsserviços.
+Você pode usar muitas plataformas de infraestrutura. Para sistemas de microsserviço grandes e complexos, é possível usar a [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/). Para microsserviços sem monitoração de estado, também é possível usar outros produtos como o [Serviço de Aplicativo do Azure](https://azure.microsoft.com/services/app-service/). Alternativas de microsserviços baseadas em Docker também se adaptam a qualquer tipo de abordagem de microsserviços, conforme explicado a seguir. Todas essas plataformas oferecem suporte ao .NET Core e são ideais para hospedar microsserviços.
 
 ### <a name="containers"></a>Contêineres
 
 Contêineres são usados em conjunto com uma arquitetura de microsserviços, embora também possam ser usados para colocar em contêineres aplicativos Web ou serviços que sigam qualquer padrão de arquitetura. Você poderá usar os contêineres do .NET Framework para Windows, mas a natureza leve e a modularidade do .NET Core o torna perfeito para contêineres.  Ao criar e implantar um contêiner, o tamanho da imagem é muito menor com o .NET Core do que com o .NET Framework.  Como ele é multiplataforma, é possível implantar aplicativos de servidor para contêineres do Docker do Linux, por exemplo.
 
-Você pode hospedar contêineres de Docker em sua própria infraestrutura do Windows ou Linux, ou usar um serviço de nuvem como [Serviço de Contêiner do Azure](https://azure.microsoft.com/en-us/services/container-service/), que pode gerenciar, organizar e dimensionar seu aplicativo baseado em contêiner na nuvem.
+Você pode hospedar contêineres de Docker em sua própria infraestrutura do Windows ou Linux, ou usar um serviço de nuvem como [Serviço de Contêiner do Azure](https://azure.microsoft.com/services/container-service/), que pode gerenciar, organizar e dimensionar seu aplicativo baseado em contêiner na nuvem.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>Necessidade de alto desempenho e sistemas escaláveis
 
@@ -110,6 +109,7 @@ Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Co
 * [Visão Geral dos Componentes .NET](components.md)
 
 
-<!--HONumber=Nov16_HO3-->
+
+<!--HONumber=Jan17_HO3-->
 
 

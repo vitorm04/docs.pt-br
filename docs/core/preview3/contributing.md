@@ -1,4 +1,4 @@
-# <a name="using-the-cli-preview3-folder-and-sub-folders"></a>Usando a pasta cli-preview3 e subpastas
+# <a name="using-the-preview3-folder-and-sub-folders"></a>Usando a pasta preview3 e subpastas
 
 Essa pasta é o nó de nível superior que corresponde à pasta ferramentas, mas contém deltas para a versão de Visualização 3 das ferramentas do .NET Core.
 
@@ -37,6 +37,6 @@ Nossa meta final é que diferentes versões apareçam como ramificações no [re
 Na hora certa, será possível mesclar cada versão atual na pasta principal [documentos](../docs), mesclar os nós de sumário e publicá-los como um conjunto separado de documentos. Talvez seja necessário mesclar modificações na versão LTS e na versão atual de um arquivo, mas será possível encontrar essas alterações com relativa facilidade.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

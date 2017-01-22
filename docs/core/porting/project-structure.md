@@ -3,16 +3,15 @@ title: Organizando seu projeto para dar suporte ao .NET Framework e ao .NET Core
 description: Organizando seu projeto para dar suporte ao .NET Framework e ao .NET Core
 keywords: .NET, .NET Core
 author: conniey
-manager: wpickett
+ms.author: mairaw
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
 
 ---
 
@@ -54,7 +53,7 @@ Considere o repositório abaixo:
 
 ![Projeto existente][example-initial-project]
 
-[**Código-Fonte**][example-initial-project-code]
+[**Código-fonte**][example-initial-project-code]
 
 Há várias maneiras diferentes de adicionar suporte ao .NET Core para este repositório dependendo das restrições e da complexidade dos projetos existentes, as quais são descritas abaixo.
 
@@ -64,7 +63,7 @@ O repositório pode ser reorganizado de forma que qualquer arquivo existente `*.
 
 ![Criar um xproj direcionado a várias estruturas][example-xproj]
 
-[**Código-Fonte**][example-xproj-code]
+[**Código-fonte**][example-xproj-code]
 
 Observe as seguintes alterações:
 * Adição de `global.json`
@@ -77,7 +76,7 @@ Se os projetos existentes contiverem operações complexas de build ou proprieda
 
 ![][example-pcl]
 
-[**Código-Fonte**][example-pcl-code]
+[**Código-fonte**][example-pcl-code]
 
 Observe as seguintes alterações:
 *  Renomeando `project.json` para `{project-name}.project.json`
@@ -91,7 +90,7 @@ Se houver projetos existentes que usam estruturas mais antigas, poderá ser úti
 
 ![Projeto .NET Core com PCL existente em uma pasta diferente][example-xproj-different-folder]
 
-[**Código-Fonte**][example-xproj-different-code]
+[**Código-fonte**][example-xproj-different-code]
 
 Observe as seguintes alterações:
 * O .NET Core e projetos existentes são mantidos em pastas separadas.
@@ -125,6 +124,6 @@ Consulte a [Documentação de portabilidade do .NET Core][porting-doc] para ver 
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO3-->
 
 

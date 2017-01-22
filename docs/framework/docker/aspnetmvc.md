@@ -3,16 +3,16 @@ title: "Migrando aplicativos ASP.NET MVC para contêineres do Windows"
 description: "Saiba como selecionar um aplicativo ASP.NET MVC existente e executá-lo em um contêiner do Docker do Windows"
 keywords: "Contêineres do Windows, Docker, ASP.NET MVC"
 author: BillWagner
-manager: wpickett
+ms.author: wiwagn
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: dotnet-mvc
 ms.devlang: dotnet
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 3e8a8a953cbb3dde6ddf386f8c3b3a1fd4c549f1
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c81e9783499ede9a612969f16a7e85d77fa921c4
 
 ---
 
@@ -42,7 +42,7 @@ No mínimo, seu computador de desenvolvimento deve estar executando a [Atualiza�
 Antes de começar, você precisa instalar o [Docker para Windows](https://docs.docker.com/docker-for-windows/), versão 1.12 Beta 26 ou mais recente. No momento, o suporte do contêiner do Windows está disponível apenas no canal Beta.
 
 > [!IMPORTANT]
-> Se você estiver usando o Windows Server 2016, precisará seguir as instruções para [Implantação do Host do Contêiner – Windows Server](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment) antes de executar os contêineres do Docker.
+> Se você estiver usando o Windows Server 2016, precisará seguir as instruções para [Implantação do Host do Contêiner – Windows Server](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) antes de executar os contêineres do Docker.
 
 Após instalar e iniciar o Docker, você precisará clicar com o botão direito do mouse no ícone de bandeja e selecionar **Switch to Windows containers** (Alternar para contêineres do Windows) para executar imagens do Docker baseadas no Windows. Este comando demora alguns segundos para ser executado:
 
@@ -181,6 +181,6 @@ Neste tópico, você viu as etapas para mover e executar um aplicativo ASP.NET M
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

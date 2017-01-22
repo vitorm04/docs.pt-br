@@ -4,23 +4,22 @@ description: "Saiba mais sobre os scripts dotnet-install para instalar as ferram
 keywords: dotnet-install, dotnet-install scripts, .NET Core
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 30e969c55d08b3ac276c6e7786fa96985dbb0a6b
+ms.sourcegitcommit: ae23d83d5ca03d1a9a248e375bc092e0d9d0cde0
+ms.openlocfilehash: d6a420fa29107952020ddfa58ce0256fd8829890
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
 ## <a name="name"></a>Nome
-dotnet-install.ps1 | dotnet-install.sh – Script usado para instalar as ferramentas de CLI (Interface de Linha de Comando) e o tempo de execução compartilhado
+`dotnet-install.ps1` | `dotnet-install.sh` – Script usado para instalar as ferramentas de CLI (Interface de Linha de Comando) e o tempo de execução compartilhado.
 
 ## <a name="synopsis"></a>Sinopse
 Windows:
@@ -64,7 +63,7 @@ Qual versão da CLI deve ser instalada. Você precisa especificar a versão de 3
 
 `-InstallDir [DIR]`
 
-Caminho de instalação. O diretório será criado se não existir. O valor padrão é *%LocalAppData%\.dotnet*.
+Caminho de instalação. O diretório será criado se não existir. O valor padrão é *%LocalAppData%\Microsoft\dotnet*.
 
 `-Debug`
 
@@ -127,6 +126,6 @@ macOS/Linux:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

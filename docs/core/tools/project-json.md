@@ -4,15 +4,15 @@ description: "Referência do project.json"
 keywords: .NET, .NET Core, project.json
 author: aL3891
 ms.author: mairaw
-ms.date: 09/30/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ce3dbad938c01fd0f9d79cefb29884be986b8e1f
+ms.sourcegitcommit: 4023c5ec72055fee78863a43b60989e1eb34fb22
+ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
 
 ---
 
@@ -518,7 +518,7 @@ Por exemplo:
 }
 ```
 
-Isso ignora os avisos `The variable 'var' is assigned but its value is never used` e `The variable 'var' is assigned but its value is never used`
+Isso ignora os avisos `The variable 'var' is declared but never used` e `The variable 'var' is assigned but its value is never used`.
 
 ### <a name="additionalarguments"></a>additionalArguments
 Digite: String[]
@@ -1655,6 +1655,6 @@ Por exemplo:
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO3-->
 
 

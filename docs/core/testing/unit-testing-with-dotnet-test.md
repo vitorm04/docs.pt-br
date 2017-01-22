@@ -10,8 +10,8 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 0c98084786408a285111ae724ed404ce32160aea
+ms.sourcegitcommit: 5687fc7ded899a478d1972ffea10a1e37d40124b
+ms.openlocfilehash: f1f08f550d7484869e67fe705dc789ca5dae8e2f
 
 ---
 
@@ -20,6 +20,9 @@ ms.openlocfilehash: 0c98084786408a285111ae724ed404ce32160aea
 Por [Steve Smith](http://ardalis.com) e [Bill Wagner](https://github.com/BillWagner)
 
 [Exibir ou baixar o código de exemplo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test)
+
+> [!NOTE]
+> Este tópico aplica-se ao .NET Core 1.0.
 
 ## <a name="creating-the-projects"></a>Criando os Projetos
 
@@ -106,10 +109,6 @@ O projeto de teste requer outros pacotes para criar e executar testes de unidade
 
 ```json
 "dependencies": {
-  "Microsoft.NETCore.App": {
-    "type":"platform",
-    "version": "1.0.0"
-  },
   "xunit":"2.1.0",
   "dotnet-test-xunit": "1.0.0-rc2-192208-24",
   "PrimeService": {
@@ -213,6 +212,6 @@ Você estruturou essa solução para que a adição de novos pacotes de testes s
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO3-->
 
 
