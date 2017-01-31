@@ -10,8 +10,8 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 17023a076df7b99a26a20ddc7b78984dd170d001
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 
 ---
 
@@ -21,7 +21,7 @@ Temos um catálogo avançado de exemplos e tutoriais que você pode usar para ap
 
 Você pode encontrar ótimos recursos para aprender a linguagem de programação F# no [site da F# Foundation](http://fsharp.org/learn.html). 
 
-Você pode encontrar ótimos recursos para aprender ASP.NET Core no [site do ASP.NET](https://docs.asp.net/en/latest/tutorials/index.html).
+Você pode encontrar ótimos recursos para aprender ASP.NET Core no [site do ASP.NET](https://docs.microsoft.com/aspnet/core/tutorials/).
 
 Além disso, se você estiver interessado em explorar C# usando um espaço online, experimente estes [tutoriais interativos](http://go.microsoft.com/fwlink/?LinkId=817234).
 
@@ -98,6 +98,6 @@ Uma versão concluída do código que você criará está localizada [no reposit
 Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. Uma versão concluída do código que você criará está localizada [no repositório de documentos principais no GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -10,8 +10,8 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 48d20bb82584435904ded5d509afcbfc8a7ce76a
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 1829b32f1a5f92c5ee065c3107750621681ac82c
 
 ---
 
@@ -26,9 +26,9 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Como Gerenciar Versões de Dependência de Pacote para o .NET Core 1.0](managing-package-dependency-versions.md)
 - [Usando o MSBuild para compilar projetos do .NET Core](target-dotnetcore-with-msbuild.md)
 
-Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, sugerimos que você acesse a [documentação do ASP.NET Core](https://docs.asp.net).
+Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, sugerimos que você acesse a [documentação do ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO3-->
 
 
