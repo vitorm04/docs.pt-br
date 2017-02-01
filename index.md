@@ -3,8 +3,8 @@ layout: HubPage
 hide_bc: true
 title: "Documentação .NET"
 translationtype: Human Translation
-ms.sourcegitcommit: c8b9e166a49c86dcabfa89887db1dce3a8e45f4f
-ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 44b21665593717023aef7a85fe88a60d07519327
 
 ---
 <div id="main" class="v2">
@@ -86,7 +86,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/articles/welcome">O que é o .NET?</a></h3>
-                                                <p><a href="https://www.microsoft.com/net">Introdução</a></p>
+                                                <p><a href="/dotnet/articles/standard/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/articles/standard/tour">Tour do .NET</a></p>
                                                 <p><a href="/dotnet/articles/standard/components">Conceitos de arquitetura do .NET</a></p>
                                             </div>
@@ -108,7 +108,7 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 <p><a href="/dotnet/articles/core/getting-started">Introdução</a></p>
                                                 <p><a href="/dotnet/articles/core/tutorials">Tutoriais</a></p>
                                                 <p><a href="/dotnet/articles/core/porting">Portabilidade do .NET Framework</a></p>
-                                                <p><a href="https://docs.asp.net/en/latest/getting-started.html">ASP.NET Core</a></p>
+                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -164,10 +164,10 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/csharp">Guia de C#</a></h3>
+                                                <h3><a href="/dotnet/articles/csharp">Guia do C#</a></h3>
                                                 <p><a href="/dotnet/articles/csharp/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/csharp/tour-of-csharp">Tour de C#</a></p>
-                                                <p><a href="/dotnet/articles/csharp/language-reference">Referência da linguagem C</a></p>
+                                                <p><a href="/dotnet/articles/csharp/tour-of-csharp">Tour do C#</a></p>
+                                                <p><a href="/dotnet/articles/csharp/language-reference">Referência da linguagem C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -183,10 +183,10 @@ ms.openlocfilehash: d8b2def6b766aa1af9318fe5b0620f4db4a2ee43
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/fsharp">Guia de F#</a></h3>
+                                                <h3><a href="/dotnet/articles/fsharp">Guia do F#</a></h3>
                                                 <p><a href="/dotnet/articles/fsharp/tutorials/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/tour">Tour de F#</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/language-reference">Referência da linguagem F#</a></p>
+                                                <p><a href="/dotnet/articles/fsharp/tour">Tour do F#</a></p>
+                                                <p><a href="/dotnet/articles/fsharp/language-reference">Referência da Linguagem F#</a></p>
                                             </div>
                                         </div>
                                     </div>
