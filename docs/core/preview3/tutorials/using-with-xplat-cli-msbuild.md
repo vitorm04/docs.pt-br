@@ -1,5 +1,5 @@
 ---
-title: "Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando (Visualização 3 do SDK)"
+title: "Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando (Ferramentas do .NET Core RC4) | Microsoft Docs"
 description: "Introdução ao .NET Core no Windows, Linux ou macOS usando a CLI (Interface de Linha de Comando) do .NET Core"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: ab71aab99505f211fe4adc86957eda4707761f1c
-ms.openlocfilehash: 01b17021e79bcdb2dc69f97b709f4aa63dbab9aa
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 4c17da61f492e17edf4d69d79be430ead3dd0cc6
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-sdk-preview-3"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando (Visualização 3 do SDK)
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-net-core-tools-rc4"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando (Ferramentas do .NET Core RC4)
+
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para a versão de Visualização 2 das Ferramentas do .NET Core, consulte o tópico [Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando](../../tutorials/using-with-xplat-cli.md).
 
 Este guia mostrará como usar as ferramentas de CLI do .NET Core para criar aplicativos de console de plataforma cruzada.  Ele começará com o aplicativo de console mais básico e eventualmente abrangerá vários projetos, incluindo testes. Você adicionará esses recursos passo a passo, avançando com base no que você já viu e criou.
 
@@ -24,7 +27,7 @@ Se você não estiver familiarizado com o conjunto de ferramentas da CLI do .NET
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Antes de começar, verifique se você tem as [ferramentas da CLI do .NET Core da Visualização 3 ou posterior](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md).  Você também precisará de um editor de texto.
+Antes de começar, verifique se você tem as [ferramentas da CLI do .NET Core do RC4 ou posterior](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md).  Você também precisará de um editor de texto.
 
 ## <a name="hello-console-app"></a>Olá, Aplicativo de Console.
 
@@ -314,10 +317,10 @@ E pronto.
  
 Esperamos que esse guia tenha ajudado você a aprender como criar um aplicativo de console .NET Core, desde os princípios básicos até um sistema multiprojeto com testes de unidade.  A próxima etapa é criar seus próprios aplicativos de console incríveis.
  
-Se um exemplo mais avançado de um aplicativo de console lhe interessa, consulte o próximo tutorial: [Organizar e testar projetos com a linha de comando do .NET Core (Visualização 3 do SDK)](using-with-xplat-cli-msbuild-folders.md).
+Se um exemplo mais avançado de um aplicativo de console lhe interessar, confira o próximo tutorial: [Organizar e testar projetos com a linha de comando do .NET Core (Ferramentas do .NET Core RC4)](using-with-xplat-cli-msbuild-folders.md).
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

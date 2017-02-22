@@ -1,5 +1,5 @@
 ---
-title: "Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)"
+title: "Usando ferramentas e SDK do .NET Core na CI (Integração Contínua) | Microsoft Docs"
 description: "Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
+ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 0fda867f1d29caaca716ad27baf6e43146cb99df
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 95c7f0f9911c7cb37c12afec74d0e942db77fbf6
 
 ---
 
-# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)
+# <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci-net-core-tools-rc4"></a>Uso de ferramentas e SDK do .NET Core na CI (Integração Contínua) (Ferramentas do .NET Core RC4)
+
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para a versão da Visualização 2 das Ferramentas do .NET Core, consulte o tópico [Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)](../../tools/using-ci-with-cli.md).
 
 ## <a name="overview"></a>Visão Geral
 Este documento descreve o uso do SDK do .NET Core e suas ferramentas no servidor de build. Em geral, em um servidor de build de CI, você deseja automatizar a instalação de alguma forma. O ideal é que a automação não exija privilégios administrativos, se possível. 
@@ -88,8 +91,6 @@ install:
 ```
 
 
-
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

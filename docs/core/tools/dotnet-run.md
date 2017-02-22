@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-run | SDK do .NET Core
+title: Comando dotnet-run | Microsoft Docs
 description: "O comando dotnet-run fornece uma opção conveniente para executar o aplicativo do código-fonte."
 keywords: dotnet-run, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 18731d9fcc190371d908779a69a81114e0685aba
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 ---
 
 #<a name="dotnet-run"></a>dotnet-run
 
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [dotnet-run (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-run.md).
+
 ## <a name="name"></a>Nome 
 
-dotnet-run – Executa o código-fonte “in-loco” sem qualquer comando de compilação ou inicialização explícito
+`dotnet-run` – Executa o código-fonte “in-loco” sem qualquer comando de compilação ou inicialização explícito.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -77,6 +80,6 @@ Execute o projeto no diretório atual (o argumento `--help` neste exemplo é pas
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

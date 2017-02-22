@@ -1,8 +1,8 @@
 # <a name="using-the-preview3-folder-and-sub-folders"></a>Usando a pasta preview3 e subpastas
 
-Essa pasta é o nó de nível superior que corresponde à pasta ferramentas, mas contém deltas para a versão de Visualização 3 das ferramentas do .NET Core.
+Essa pasta é o nó de nível superior que corresponde à pasta Ferramentas, mas contém deltas para a versão do Ferramentas do .NET Core RC4.
 
-O objetivo dessa estrutura separada de pasta paralela é fornecer um local para o conteúdo relacionado à versão da Visualização 3, que pode ser mesclado com relativa facilidade à estrutura principal ao fornecer versão de alternância no site publicado.
+O objetivo dessa estrutura separada de pasta paralela é fornecer um local para o conteúdo relacionado à versão do RC4, que pode ser mesclado com relativa facilidade à estrutura principal ao fornecer versão de alternância no site publicado.
 
 O conteúdo desse nó deve ser um conjunto menor de documento que representa os deltas da versão de Suporte a Longo Prazo (LTS) e a última versão atual. 
 
@@ -11,9 +11,9 @@ O conteúdo desse nó deve ser um conjunto menor de documento que representa os 
 Há dois casos para a adição de novo conteúdo para essa versão:
 
 * Alterações nos documentos existentes
-    - Copie o conteúdo existente para uma pasta paralela nessa estrutura. Faça as alterações e adicione o arquivo modificado ao sumário para a versão de Visualização 3.
+    - Copie o conteúdo existente para uma pasta paralela nessa estrutura. Faça as alterações e adicione o arquivo modificado ao sumário da versão do RC4.
 * Novos documentos
-    - Coloque o novo documento no local apropriado e adicione-o ao sumário sob o nó para a versão de Visualização 3. 
+    - Coloque o novo documento no local apropriado e adicione-o ao sumário sob o nó da versão do RC4. 
 
 Todos os arquivos da versão atual devem ter o seguinte adicionado à parte superior do tópico:
 
@@ -37,6 +37,6 @@ Nossa meta final é que diferentes versões apareçam como ramificações no [re
 Na hora certa, será possível mesclar cada versão atual na pasta principal [documentos](../docs), mesclar os nós de sumário e publicá-los como um conjunto separado de documentos. Talvez seja necessário mesclar modificações na versão LTS e na versão atual de um arquivo, mas será possível encontrar essas alterações com relativa facilidade.
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

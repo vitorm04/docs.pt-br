@@ -10,12 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 ---
 
 # <a name="net-core-application-deployment"></a>Implantação do .NET Core Application #
+
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Implantação do Aplicativo .NET Core (Ferramentas do .NET Core RC4)](../preview3/deploying/index.md).
 
 Você pode criar dois tipos de implantações de aplicativos do .NET Core: 
 
@@ -391,6 +394,6 @@ Veja a seguir o arquivo `project.json` completo para este projeto.
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

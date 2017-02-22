@@ -1,5 +1,5 @@
 ---
-title: Telemetria de Ferramentas do .NET Core
+title: Telemetria de Ferramentas do .NET Core | Microsoft Docs
 description: .NET Core
 keywords: .NET, .NET Core
 author: richlander
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2b312bb-f80b-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 127c3f175754f91170d130ca98c17ef3cb68fd14
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: f19efabc4330682ebfe6e38384086e2338cd6264
 
 ---
 
 # <a name="net-core-tools-telemetry"></a>Telemetria de Ferramentas do .NET Core
+
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Telemetria de Ferramentas do Aplicativo .NET Core (Ferramentas do .NET Core RC4)](../preview3/tools/telemetry.md).
 
 As Ferramentas do .NET Core incluem um [recurso de telemetria](https://github.com/dotnet/cli/pull/2145) que coleta informações de uso. É importante que a Equipe do .NET compreenda como as ferramentas estão sendo usadas para que possamos melhorá-las.
 
@@ -105,6 +108,6 @@ a minute to complete and will only happen once.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

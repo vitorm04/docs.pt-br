@@ -1,5 +1,5 @@
 ---
-title: "Referência do project.json"
+title: "Referência project.json | Microsoft Docs"
 description: "Referência do project.json"
 keywords: .NET, .NET Core, project.json
 author: aL3891
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 4023c5ec72055fee78863a43b60989e1eb34fb22
-ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
+ms.sourcegitcommit: 8fba5c76375763abf90e2e17d3bcc9d0039089f0
+ms.openlocfilehash: 2cdb43a9095217498c12c97548e4aa632b13a59c
 
 ---
 
 # <a name="projectjson-reference"></a>Referência do project.json
+
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a documentação de Ferramentas do .NET Core RC4, consulte a seção [Ferramentas de interface de linha de comando do .NET Core (Ferramentas do .NET Core RC4)](../preview3/tools/index.md).
 
 O arquivo project.json é usado em projetos .NET Core para definir metadados do projeto, informações de compilação e dependências. Nesse tópico de referência, você verá a lista de todas as propriedades que podem ser definidas no arquivo project.json.
 
@@ -322,7 +325,7 @@ Por exemplo:
 Tipo: Object
 
 Um objeto que define as dependências do pacote do projeto, cada chave desse objeto é o nome de um pacote e cada valor contém informações de controle de versão.
-Para obter mais informações, consulte o artigo [Resolução de dependências](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3-x) no site de documentação do NuGet.
+Para obter mais informações, consulte o artigo [Resolução de dependências](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3x) no site de documentação do NuGet.
 
 Por exemplo:
 
@@ -344,7 +347,7 @@ Por exemplo:
 ### <a name="version"></a>version
 Tipo: String
 
-Especifica a versão ou o intervalo de versões da dependência. Use o curinga \* para especificar uma [versão de dependência flutuante](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#floating-versions).
+Especifica a versão ou o intervalo de versões da dependência. Use o curinga \* para especificar uma [versão de dependência flutuante](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#floating-versions).
 
 Por exemplo:
 
@@ -1643,7 +1646,7 @@ Por exemplo:
 ## <a name="usersecretsid"></a>userSecretsId
 Tipo: String
 
-Especifica um identificador secreto do usuário a ser usado no tempo de desenvolvimento. Para obter mais informações, consulte o [Armazenamento seguro dos segredos do aplicativo durante o desenvolvimento](https://docs.asp.net/en/latest/security/app-secrets.html).
+Especifica um identificador secreto do usuário a ser usado no tempo de desenvolvimento. Para obter mais informações, consulte o [Armazenamento seguro dos segredos do aplicativo durante o desenvolvimento](https://docs.microsoft.com/aspnet/core/security/app-secrets).
 
 Por exemplo:
 
@@ -1655,6 +1658,6 @@ Por exemplo:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

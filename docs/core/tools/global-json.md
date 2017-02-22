@@ -1,5 +1,5 @@
 ---
-title: "Referência global.json | .NET Core"
+title: "Referência global.json | Microsoft Docs"
 description: "Referência global.json"
 keywords: .NET, .NET Core
 author: aL3891
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
 translationtype: Human Translation
-ms.sourcegitcommit: 6f3a46284bd5820520739577919fa202f5b784d7
-ms.openlocfilehash: adce52849247f5b12d43b389a7699de04fe278c4
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6b0ad546a8a121ad5ea4642c11842a8dccf7055
 
 ---
 
 # <a name="globaljson-reference"></a>Referência global.json
+
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Referência global.json (Ferramentas do .NET Core RC4)](../preview3/tools/global-json.md).
 
 O arquivo global.json é usado em projetos do .NET Core para definir os metadados de solução. Esse arquivo é usado quando o comando [dotnet-restore](dotnet-restore.md) é invocado para restaurar as dependências de um projeto do .NET Core.
 Neste tópico de referência, a lista de todas as propriedades que podem ser definidas no arquivo project.json será apresentada.
@@ -68,6 +71,6 @@ Por exemplo:
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

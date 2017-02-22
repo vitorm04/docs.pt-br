@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-restore | SDK do .NET Core
-description: "Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando de dotnet restore"
+title: Comando dotnet-restore | Microsoft Docs
+description: "Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore."
 keywords: dotnet-restore, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
+ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 594956488dee39903feba44e10d6bb81801412a4
 
 ---
 
-#<a name="dotnet-restore"></a>dotnet-restore
+#<a name="dotnet-restore-net-core-tools-rc4"></a>dotnet-restore (Ferramentas do .NET Core RC4)
+
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para a versão da Visualização 2 das Ferramentas do .NET Core, consulte o tópico [dotnet-restore](../../tools/dotnet-restore.md).
 
 ## <a name="name"></a>Nome
 
-`dotnet-restore` – Restaura as dependências e as ferramentas de um projeto
+`dotnet-restore` – Restaura as dependências e as ferramentas de um projeto.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -84,7 +87,7 @@ Restaure as dependências e as ferramentas para o projeto no diretório atual:
 
 Restaure as dependências e as ferramentas para o projeto `app1` encontrado no caminho fornecido:
 
-`dotnet restore ~/projects/app1/app1.csproj``
+`dotnet restore ~/projects/app1/app1.csproj`
     
 Restaure as dependências e as ferramentas para o projeto no diretório atual usando o caminho de arquivo fornecido como a fonte de fallback:
 
@@ -100,6 +103,6 @@ Restaure as dependências e as ferramentas para o projeto no diretório atual, m
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

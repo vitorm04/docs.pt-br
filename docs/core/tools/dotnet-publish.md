@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-publish | SDK do .NET Core
+title: Comando dotnet-publish | Microsoft Docs
 description: "O comando dotnet-publish publica seu projeto .NET Core em um diretório."
 keywords: dotnet-publish, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 2b00a2c6da73c2252997b63aca8fc475cac8999f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1cf1611ab83874ad44855521d21040d102206338
 
 ---
 
 #<a name="dotnet-publish"></a>dotnet-publish
 
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [dotnet-publish (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-publish.md).
+
 ## <a name="name"></a>Nome
 
-`dotnet-publish` – Empacota o aplicativo e todas as suas dependências em uma pasta, preparando-o para publicação
+`dotnet-publish` – Empacota o aplicativo e todas as suas dependências em uma pasta, preparando-o para publicação.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -102,6 +105,6 @@ Publique o aplicativo atual usando a estrutura `netcoreapp1.0` e o tempo de exec
 * [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

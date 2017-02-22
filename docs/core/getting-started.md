@@ -3,16 +3,15 @@ title: "Guia de Introdução ao .NET Core"
 description: Encontre recursos para aprender a criar aplicativos .NET Core no Windows, Linux e macOS.
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 10/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 translationtype: Human Translation
-ms.sourcegitcommit: bfba7f8c3af791fcf0f1a6438214d3318a6d329c
-ms.openlocfilehash: 88ace26f653934ddf759977539debb1c62b2b5c8
+ms.sourcegitcommit: 13ce9816570d47600556392b945578c487a1f03b
+ms.openlocfilehash: a3833d8a6605fa51633d17d026ada7825889b70b
 
 ---
 
@@ -26,6 +25,8 @@ Instalar o .NET Core no [Windows](https://www.microsoft.com/net/core#windows).
 
 Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo.
 
+* [Criar um Aplicativo C# Hello World com o .NET Core no Visual Studio 2017 RC](../csharp/getting-started/with-visual-studio-2017.md) – Saiba como criar, depurar e publicar um único aplicativo para console do .NET Core usando o Visual Studio 2017 RC.
+* [Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017 RC](../csharp/getting-started/library-with-visual-studio-2017.md) – Aprenda a criar uma biblioteca de classes escrita em C# usando o Visual Studio 2017 RC
 * [Introdução ao .NET Core no Windows usando o Visual Studio 2015](tutorials/using-on-windows.md) -Saiba como usar o [Visual Studio](https://www.visualstudio.com/), o IDE (ambiente de desenvolvimento integrado) completo do Windows, para diversos cenários de .NET Core.  
 * [Introdução ao Visual Studio Code usando C# e .NET Core no Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) – Esse vídeo do Channel9 mostra como instalar e usar o [Visual Studio Code](https://www.visualstudio.com/products/code-vs), o editor de código leve de plataforma cruzada da Microsoft, para criar seu primeiro aplicativo de console no .NET Core.
 * [Introdução ao .NET Core no macOS usando o Visual Studio Code](tutorials/using-on-macos.md) – Este tutorial é voltado principalmente para o macOS, mas você pode seguir as etapas no Windows para fazer um tour pelas etapas e fluxo de trabalho de como criar uma Solução do .NET Core usando o VS Code.
@@ -38,12 +39,12 @@ Consulte o tópico de [Desenvolvimento de pré-requisitos para o Windows](window
 
 Instale o .NET Core na sua distribuição/versão:
 
-* [Servidor Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#redhat)
-* [Ubuntu 14.04, 16.04 e Linux Mint 17](https://www.microsoft.com/net/core#ubuntu)
-* [Debian 8.2](https://www.microsoft.com/net/core#debian)
-* [Fedora 23](https://www.microsoft.com/net/core#fedora)
-* [CentOS 7.1 e Oracle Linux 7.1](https://www.microsoft.com/net/core#centos)
-* [openSUSE 13.2](https://www.microsoft.com/net/core#opensuse)
+* [Servidor Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
+* [Ubuntu 14.04, 16.04 e Linux Mint 17](https://www.microsoft.com/net/core#linuxubuntu)
+* [Debian 8.2](https://www.microsoft.com/net/core#linuxdebian)
+* [Fedora 23](https://www.microsoft.com/net/core#linuxfedora)
+* [CentOS 7.1 e Oracle Linux 7.1](https://www.microsoft.com/net/core#linuxcentos)
+* [openSUSE 13.2](https://www.microsoft.com/net/core#linuxopensuse)
 
 Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais passo a passo.
 
@@ -53,7 +54,7 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 
 O .NET Core tem suporte nas distribuições e versões do Linux listadas acima nos links de instalação.
 
-## <a name="os-x-macos"></a>OS X / macOS
+## <a name="os-x--macos"></a>OS X / macOS
 
 Instalar o .NET Core para [macOS](https://www.microsoft.com/net/core#macos). Há suporte para o .NET Core no OS X El Capitan (versão 10.11) no macOS Sierra (versão 10.12).
 
@@ -65,6 +66,6 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

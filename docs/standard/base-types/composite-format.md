@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a01efc8f-c242-4535-bd32-acd0032d9590
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
+ms.sourcegitcommit: 90ade65e167770bdbcbbf79707fe48e6fbc030c0
+ms.openlocfilehash: 5b61b4736880d57f02070150d8613d860505b268
 
 ---
 
@@ -24,7 +24,7 @@ O recurso de formatação de composição tem suporte de métodos como:
 
 * [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)), que retorna uma cadeia de caracteres de resultado formatada. 
 
-* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider, System.String, System.Object), que acrescenta uma cadeia de caracteres de resultado formatada a um objeto [StringBuilder](xref:System.Text.StringBuilder).
+* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object)), que anexa uma cadeia de caracteres de resultado formatada a um objeto [StringBuilder](xref:System.Text.StringBuilder).
 
 * Algumas sobrecargas do método `WriteLine` do [Console](xref:System.Console),que exibem uma cadeia de caracteres de resultado formatada para o console.  
 
@@ -40,7 +40,7 @@ O recurso de formatação de composição tem suporte de métodos como:
 
 Uma cadeia de formato de composição e uma lista de objetos são usadas como argumentos dos métodos que dão suporte ao recurso de formatação de composição. Uma cadeia de formato de composição consiste em zero ou mais sequências de texto fixo intercaladas com um ou mais itens de formato. O texto fixo é qualquer cadeia de caracteres que você escolher e cada item de formato corresponde a um objeto ou a uma estrutura demarcada na lista. O recurso de formatação de composição retorna uma nova cadeia de caracteres de resultado em que cada item de formato é substituído pela representação de cadeia de caracteres do objeto correspondente na lista.
 
-Considere o seguinte fragmento de código [Format](xref:System.String.Format(System.String.Format(System.IFormatProvider,System.String,System.Object)).
+Considere o seguinte fragmento de código [Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)).
 
 ```csharp
 string name = "Fred";
@@ -229,9 +229,9 @@ Cada valor na lista de parâmetros que corresponder a um item de formato será c
 
 3. Se o valor implementar a interface [IFormattable](xref:System.IFormattable), o método [ToString(String,IFormatProvider)](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) da interface será chamado. O método recebe o valor *formatString*, se houver um presente no item de formato ou `null`, se não houver. O argumento [IFormatProvider](xref:System.IFormatProvider) é determinado da seguinte forma:
 
-    *   Para um valor numérico, se um método de formatação de composição com um argumento [IFormatProvider](xref:System.IFormatProvider) não nulo for chamado, o tempo de execução solicitará um objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) de seu método [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). Se ele não for capaz de fornecer um, se o valor do argumento for `null` ou se o método de formatação de composição não tiver um parâmetro [IFormatProvider](xref:System.IFormatProvider), o objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo para a cultura do thread atual será usado. 
+    *   Para um valor numérico, se um método de formatação de composição com um argumento [IFormatProvider](xref:System.IFormatProvider) não nulo for chamado, o tempo de execução solicitará um objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) de seu método [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). Se ele não for capaz de fornecer um, se o valor do argumento for `null` ou se o método de formatação de composição não tiver um parâmetro [IFormatProvider](xref:System.IFormatProvider), o objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) para a cultura do thread atual será usado. 
     
-    * Para um valor de data e hora, se um método de formatação de composição com um argumento [IFormatProvider](xref:System.IFormatProvider) não nulo for chamado, o tempo de execução solicitará um objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) de seu método [IFormatProvider.GetFormat](xref:System.IFormatProvider._GetFormat(System.Type). Se ele não for capaz de fornecer um, se o valor do argumento for `null` ou se o método de formatação de composição não tiver um parâmetro [IFormatProvider](xref:System.IFormatProvider), o objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) para a cultura do thread atual será usado. 
+    * Para um valor de data e hora, se um método de formatação de composição com um argumento [IFormatProvider](xref:System.IFormatProvider) não nulo for chamado, o tempo de execução solicitará um objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) de seu método [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)). Se ele não for capaz de fornecer um, se o valor do argumento for `null` ou se o método de formatação de composição não tiver um parâmetro [IFormatProvider](xref:System.IFormatProvider), o objeto [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) para a cultura do thread atual será usado. 
     
     * Para objetos de outros tipos, se uma formatação de composição for chamada com um argumento [IFormatProvider](xref:System.IFormatProvider), seu valor (incluindo `null`, se nenhum objeto [IFormatProvider](xref:System.IFormatProvider) for fornecido) será passado diretamente para a implementação de [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)). Caso contrário, um objeto [CultureInfo](xref:System.Globalization.CultureInfo) que representa a cultura atual do thread será passado para a implementação de [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)). 
     
@@ -376,6 +376,6 @@ Console.WriteLine(FormatPrice)
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 

@@ -10,14 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: 54da8aebd64e86c064214074bc261f72c3b0aedc
-ms.openlocfilehash: bf7bf944ebbf3c53ee6206f86e1a168111b54378
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 29019587d2d847c5184d07024fa763c8af805d50
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>Introdução ao .NET Core no Windows usando o Visual Studio 2015
 
-por [Bertrand Le Roy](https://github.com/bleroy) e [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core do Visual Studio 2015. Para a versão das Ferramentas do .NET Core RC4, veja o tópico [Introdução ao .NET Core no Windows usando o Visual Studio 2017](../preview3/tutorials/using-on-windows-vs-2017.md).
 
 O Visual Studio 2015 fornece um ambiente de desenvolvimento completo para desenvolver aplicativos .NET Core. Os procedimentos deste documento descrevem as etapas necessárias para criar uma série de soluções .NET Core típicas ou soluções que incluem componentes .NET Core, usando o Visual Studio. Os cenários incluem testes e o uso de bibliotecas de terceiros que não foram criadas explicitamente para a versão mais recente do .NET Core. 
 
@@ -228,11 +229,11 @@ Feche a solução anterior se ela estiver aberta: você começará um novo scrip
 -------------------------------------
 As ferramentas da Biblioteca de Classes Portátil podem modificar automaticamente sua PCL para direcionar .NET Standard. 
 
-1.  Clique duas vezes no nó “Propriedades” para abrir a página Propriedade do Projeto
+1.    Clique duas vezes no nó “Propriedades” para abrir a página Propriedade do Projeto
 
-2.  Em “Cabeçalho de direcionamento”, clique no hiperlink “Direcionar para .NET Platform Standard”
+2.    Em “Cabeçalho de direcionamento”, clique no hiperlink “Direcionar para .NET Platform Standard”
 
-3.  Clique em “Sim” quando a confirmação for solicitada
+3.    Clique em “Sim” quando a confirmação for solicitada
 
 As ferramentas selecionarão automaticamente a versão do .NET Standard que inclui todos os destinos originalmente direcionados pelo seu PCL. Você pode direcionar uma versão diferente do .NET Standard usando o menu suspenso .NET Standard na página de propriedades do projeto.
  
@@ -240,17 +241,17 @@ As ferramentas selecionarão automaticamente a versão do .NET Standard que incl
 
 ### <a name="manually-edit-projectjson-to-target-net-standard-from-an-existing-portable-class-library"></a>Edite manualmente o project.json para ser direcionado para o .NET Standard de uma Biblioteca de Classes Portátil existente
 
-1.  Se seu project.json contiver “dnxcore50” no elemento “supports”, remova-o.
+1.    Se seu project.json contiver “dnxcore50” no elemento “supports”, remova-o.
 
-2.  Remova a dependência em “Microsoft.NETCore”
+2.    Remova a dependência em “Microsoft.NETCore”
 
-3.  Modifique a dependência em “Microsoft.NETCore.Portable.Compatibility” versão “1.0.0” para a versão “1.0.1”
+3.    Modifique a dependência em “Microsoft.NETCore.Portable.Compatibility” versão “1.0.0” para a versão “1.0.1”
 
-4.  Adicione uma dependência em “NETStandard.Library” versão “1.6.0”
+4.    Adicione uma dependência em “NETStandard.Library” versão “1.6.0”
 
-5.  No elemento “frameworks”, remova a estrutura “dotnet” (e o elemento “imports” dentro dele)
+5.    No elemento “frameworks”, remova a estrutura “dotnet” (e o elemento “imports” dentro dele)
 
-6.  Adicione ` "netstandard1.x” : { } ` ao elemento de estruturas, no qual x é substituído pela versão do .NET Standard de destino
+6.    Adicione ` "netstandard1.x” : { } ` ao elemento de estruturas, no qual x é substituído pela versão do .NET Standard de destino
 
 ### <a name="example-projectjson"></a>Exemplo de project.json
 
@@ -275,6 +276,6 @@ Este project.json inclui cláusulas de suporte para UWP e .NET 4.6 e é direcion
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

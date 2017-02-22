@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet | SDK do .NET Core
+title: Comando dotnet | Microsoft Docs
 description: "Saiba mais sobre o comando dotnet (o driver genérico para as ferramentas da CLI do .NET Core) e seu uso."
 keywords: dotnet, CLI, comandos da CLI, .NET Core
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
+ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: bbc13c8cca82e660f0f8ccf7d88c0340d9c06e68
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c80b5e7e26366b5253816e81a8203f90690eec1e
 
 ---
 
-#<a name="dotnet-command"></a>Comando dotnet
+#<a name="dotnet-command-net-core-tools-rc4"></a>Comando dotnet (Ferramentas do .NET Core RC4)
+
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para a versão da Visualização 2 das Ferramentas do .NET Core, consulte o tópico [Comando dotnet](../../tools/dotnet.md).
 
 ## <a name="name"></a>Nome
 
@@ -70,9 +73,9 @@ Os comandos a seguir existem para dotnet:
 * [dotnet-pack](dotnet-pack.md)
    * Cria um pacote NuGet do seu código.
 * [dotnet-migrate](dotnet-migrate.md)
-   * Migra um projeto de Visualização 2 válido para um projeto de Visualização 3
+   * Migra um projeto de Visualização 2 válido para um projeto de RC4.
 * [dotnet-msbuild](dotnet-msbuild.md)
-   * Oferece acesso à linha de comando do MSBuild
+   * Oferece acesso à linha de comando do MSBuild.
 
 ## <a name="examples"></a>Exemplos
 
@@ -107,6 +110,6 @@ Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e env
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

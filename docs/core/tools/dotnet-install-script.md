@@ -1,5 +1,5 @@
 ---
-title: Scripts dotnet-install | SDK do .NET Core
+title: Scripts dotnet-install | Microsoft Docs
 description: "Saiba mais sobre os scripts dotnet-install para instalar as ferramentas da CLI do .NET Core e o tempo de execução compartilhado."
 keywords: dotnet-install, dotnet-install scripts, .NET Core
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: ae23d83d5ca03d1a9a248e375bc092e0d9d0cde0
-ms.openlocfilehash: d6a420fa29107952020ddfa58ce0256fd8829890
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
+
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Referência de scripts dotnet-install (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-install-script.md).
 
 ## <a name="name"></a>Nome
 `dotnet-install.ps1` | `dotnet-install.sh` – Script usado para instalar as ferramentas de CLI (Interface de Linha de Comando) e o tempo de execução compartilhado.
@@ -126,6 +129,6 @@ macOS/Linux:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

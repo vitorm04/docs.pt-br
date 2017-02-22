@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-test | SDK do .NET Core
-description: "O comando “dotnet test” é usado para executar testes de unidade em um determinado projeto."
+title: Comando dotnet-test | Microsoft Docs
+description: "O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto."
 keywords: dotnet-test, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: b12861f0ce3c40bf4db51994ea5d4a92b8ef0162
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 871a6f736272309f6fae74b06f437c7271df2321
 
 ---
 
 #<a name="dotnet-test"></a>dotnet-test
 
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [dotnet-test (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-test.md).
+
 ## <a name="name"></a>Nome
 
-`dotnet-test` - Executa testes de unidade usando o executor de teste configurado
+`dotnet-test` – Executa testes de unidade usando o executor de teste configurado.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -132,6 +135,6 @@ Execute os testes no projeto test1:
 [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

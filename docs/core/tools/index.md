@@ -1,5 +1,5 @@
 ---
-title: Ferramentas da CLI (Interface de Linha de Comando) do .NET Core
+title: Ferramentas da CLI (interface de linha de comando) do .NET Core | Microsoft Docs
 description: "Uma visão geral do que é a CLI (Interface de Linha de Comando) e seus principais recursos"
 keywords: CLI, ferramentas da CLI, .NET, .NET Core
 author: blackdwarf
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 96b7c02493d94b3c1d5fd112ca84ed25c35c4f90
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 
 ---
 
 # <a name="net-core-command-line-interface-tools"></a>Ferramentas da interface de linha de comando do .NET Core
+
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão de Ferramentas do .NET Core RC4, consulte o tópico [Ferramentas de interface de linha de comando do .NET Core (Ferramentas do .NET Core RC4)](../preview3/tools/index.md).
 
 A CLI (interface de linha de comando) do .NET Core é uma nova cadeia de ferramentas de plataforma cruzada fundamental para desenvolver aplicativos .NET Core. Ela é “fundamental”, pois é a camada principal sobre quais outras ferramentas de nível mais elevado, como IDEs (Ambientes de Desenvolvimento Integrado), editores e orquestradores de build, se baseiam. 
 
@@ -98,6 +101,6 @@ Essa foi uma breve visão geral dos recursos mais importantes da CLI. Você pode
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

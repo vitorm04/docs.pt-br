@@ -1,26 +1,29 @@
 ---
-title: Comando dotnet-pack | SDK do .NET Core
+title: Comando dotnet-pack | Microsoft Docs
 description: O comando dotnet-pack cria pacotes NuGet para seu projeto .NET Core.
 keywords: dotnet-pack, CLI, comando da CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: e83c8ad302590bcd77129c3ff325e498da751e69
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: d439dc83cc4538b44634197f3dce1bf7ad2ad6c7
 
 ---
 
 #<a name="dotnet-pack"></a>dotnet-pack
 
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão Ferramentas do .NET Core RC4, consulte o tópico [dotnet-pack (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-pack.md).
+
 ## <a name="name"></a>Nome
 
-`dotnet-pack` – Empacota o código em um pacote NuGet
+`dotnet-pack` – Empacota o código em um pacote NuGet.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -90,6 +93,6 @@ Empacote o projeto atual e atualize a versão dos pacotes resultantes com o sufi
 `dotnet pack --version-suffix "ci-1234"`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

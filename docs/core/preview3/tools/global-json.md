@@ -1,5 +1,5 @@
 ---
-title: "Referência global.json | .NET Core"
+title: "Referência global.json | Microsoft Docs"
 description: "Referência global.json"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
+ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 281f1b717a0e220e533078e973711977617a1401
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: b814bfc79c2fcd0fd15b9494c18c6d0443a70fb1
 
 ---
 
-# <a name="globaljson-reference"></a>Referência global.json
+# <a name="globaljson-reference-net-core-tools-rc4"></a>Referência global.json (Ferramentas do .NET Core RC4)
 
-O arquivo global.json ainda está presente na Linha de Comando da Visualização 3 do .NET Core. No entanto, sua finalidade principal não é definir metadados de solução, como nas versões anteriores, mas permitir a seleção da versão da CLI que está sendo usado por meio da propriedade `sdk`. 
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para a versão da Visualização 2 das Ferramentas do .NET Core, consulte o tópico [Referência global.json](../../tools/global-json.md).
+
+O arquivo global.json ainda está presente na Linha de Comando do RC4 do .NET Core. No entanto, sua finalidade principal não é definir metadados de solução, como nas versões anteriores, mas permitir a seleção da versão da CLI que está sendo usado por meio da propriedade `sdk`. 
 
 Esta referência reflete o fato acima. 
 
@@ -43,7 +46,6 @@ Por exemplo:
 ```
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

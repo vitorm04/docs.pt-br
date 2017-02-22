@@ -1,22 +1,25 @@
 ---
-title: dotnet-build command | .NET Core SDK
+title: Comando dotnet-build | Microsoft Docs
 description: "O comando dotnet-build compila um projeto e todas as suas dependências."
 keywords: dotnet-build, CLI, comando de CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04c4d77b31bf4a1bdb425d837c490440e7312e57
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
 
 ---
 
-#<a name="dotnet-build"></a>dotnet-build
+#<a name="dotnet-build-net-core-tools-rc4"></a>dotnet-build (Ferramentas do .NET Core RC4)
+
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para a versão da Visualização 2 das Ferramentas do .NET Core, consulte o tópico [dotnet-build](../../tools/dotnet-build.md).
 
 ## <a name="name"></a>Nome 
 dotnet-build – Compila um projeto e todas as suas dependências 
@@ -31,7 +34,7 @@ dotnet-build – Compila um projeto e todas as suas dependências
 ## <a name="description"></a>Descrição
 
 O comando `dotnet build` cria vários arquivos de origem de um projeto de origem e suas dependências em um binário. Por padrão, o binário resultante está em IL (linguagem intermediária) e tem uma extensão DLL. 
-`dotnet build` também remove um arquivo `\*.deps` que descreve o que o host precisa para executar o aplicativo.  
+`dotnet build` também remove um arquivo `*.deps` que descreve o que o host precisa para executar o aplicativo.  
 
 Compilar requer a existência de um arquivo de ativo (um arquivo que lista todas as dependências do aplicativo), o que significa que é necessário executar [`dotnet restore`](dotnet-restore.md) antes de compilar o código.
 
@@ -100,6 +103,6 @@ Compile um projeto e suas dependências para um tempo de execução específico 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

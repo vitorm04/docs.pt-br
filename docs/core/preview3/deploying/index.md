@@ -1,22 +1,24 @@
 ---
-title: "Implantação do .NET Core Application"
+title: "Implantação de aplicativos .NET Core | Microsoft Docs"
 description: "Implantação do .NET Core Application"
 keywords: "Implantação do .NET e .NET Core"
 author: rpetrusha
-manager: wpickett
-ms.date: 11/13/2016
+ms.author: ronpet
+ms.date: 07/02/2017
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8917a7639f042cb25a469ee9ba7fb7cd582c3821
 
 ---
 
-# <a name="net-core-application-deployment"></a>Implantação do .NET Core Application #
+# <a name="net-core-application-deployment-net-core-tools-rc4"></a>Implantação de aplicativos .NET Core (Ferramentas do .NET Core RC4)
+
+> [!WARNING]
+> Este tópico se aplica às Ferramentas do .NET Core RC4. Para consultar a documentação da Visualização 2 das Ferramentas do .NET Core, consulte o tópico [Implantação de aplicativos .NET Core](../../deploying/index.md).
 
 Você pode criar dois tipos de implantações de aplicativos do .NET Core: 
 
@@ -109,20 +111,11 @@ Implantar uma implantação dependentes de estrutura com uma ou mais dependênci
 
     ```xml
       <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-          <Version>9.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161102-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
       </ItemGroup>
     ```
 
-Observe que a dependência do SDK permanece no exemplo acima. Isso ocorre na concepção, pois essa dependência é primordial para restaurar todos os destinos necessários a fim de permitir que as ferramentas de linha de comando funcionem.  
+ Observe que a dependência do SDK permanece no exemplo acima. Isso ocorre na concepção, pois essa dependência é exigida para restaurar todos os destinos necessários a fim de permitir que as ferramentas de linha de comando funcionem.  
 
 2. Se você ainda não o fez, baixe o pacote NuGet contendo a dependência de terceiros. Para baixar o pacote, execute o comando `dotnet restore` depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
 
@@ -190,7 +183,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
     }
     ```
 
-3. Crie uma marca `<RuntimeIdentifiers>` na seção `<PropertyGroup>` em seu arquivo `csproj` que define as plataformas de destino do seu aplicativo e especifique o identificador de tempo de execução de cada plataforma que você selecionar. Consulte o [Catálogo de Identificador de Tempo de Execução](../../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. Por exemplo, a seção `runtimes` a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
+3. Crie uma marca `<RuntimeIdentifiers>` na seção `<PropertyGroup>` em seu arquivo `csproj` que define as plataformas de destino do seu aplicativo e especifique o identificador de tempo de execução de cada plataforma que você selecionar. Consulte o [Catálogo de Identificador de Tempo de Execução](../../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
     ```xml
         <PropertyGroup>
@@ -201,15 +194,7 @@ Observe que você também precisa adicionar um ponto e vírgula para separar os 
 
 4. Execute o comando `dotnet restore` para restaurar as dependências especificadas em seu projeto.
 
-5. Crie versões de depuração do seu aplicativo em cada uma das plataformas de destino usando o comando `dotnet build`. A menos que você especifique o identificador de tempo de execução que gostaria de criar, o comando `dotnet build` cria uma compilação apenas para a ID de tempo de execução do sistema atual. Você pode criar seu aplicativo para ambas as plataformas de destino com os comandos:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.11-x64
-    ```
-As versões de depuração do seu aplicativo para cada plataforma serão encontradas no subdiretório `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` do projeto.
-
-6. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
+5. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
 
    ```console
    dotnet publish -c release -r win10-x64
@@ -217,15 +202,14 @@ As versões de depuração do seu aplicativo para cada plataforma serão encontr
    ```
 Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netcoreapp1.0\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
-7. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
+6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
 Os arquivos publicados podem ser implantados como você desejar. Por exemplo, você pode empacotá-las em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. 
 
 Veja a seguir o arquivo `csproj` completo para este projeto.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -233,24 +217,6 @@ Veja a seguir o arquivo `csproj` completo para este projeto.
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -263,16 +229,7 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
 
     ```xml
       <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161102-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-          <Version>9.0.1</Version>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
       </ItemGroup>
     ```
 2. Se você ainda não o fez, baixe o pacote NuGet que contém a dependência de terceiros para seu sistema. Para disponibilizar a dependência para seu aplicativo, execute o comando `dotnet restore` depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
@@ -280,8 +237,7 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
 Veja a seguir o arquivo csproj completo para este projeto:
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -290,23 +246,8 @@ Veja a seguir o arquivo csproj completo para este projeto:
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -320,34 +261,21 @@ Se a disponibilidade de espaço de armazenamento adequado nos sistemas de destin
 
 Para criar uma implantação autocontida com uma superfície menor, comece seguindo as duas primeiras etapas para criar uma implantação autocontida. Após executar o comando `dotnet new` e adicionar o código-fonte C# ao aplicativo, faça o seguinte:
 
-1. Aba o arquivo `csproj` e substitua o código na seção `frameworks` pelo seguinte:
+1. Abra o arquivo `csproj` e substitua o elemento `<TargetFramework>` pelo seguinte:
 
     ```xml
-    <PropertyGroup>
       <TargetFramework>netstandard1.6</TargetFramework>
-  </PropertyGroup>
   ```
 Essa operação indica que, em vez de usar toda a estrutura `netcoreapp1.0`, que inclui o .NET Core CLR, a .NET Core Library e uma série de outros componentes do sistema, nosso aplicativo usa somente a .NET Standard Library.
 
-2. Substitua a seção `dependencies` pelo seguinte:
+2. Substitua o `<ItemGroup>` contendo referências do pacote pelo seguinte:
 
-    ```xml
-    <ItemGroup>
-      <PackageReference Include="NETSTandard.Library">
-        <Version>1.6.0</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
-        <Version>1.0.2</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
-        <Version>1.0.1</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NET.Sdk">
-        <Version>1.0.0-alpha-20161102-2</Version>
-        <PrivateAssets>All</PrivateAssets>
-      </PackageReference>
-    </ItemGroup>
-  ```
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+```
 
    Isso define os componentes do sistema usados pelo nosso aplicativo. Os componentes do sistema empacotados com nosso aplicativo incluem a .NET Standard Library, o tempo de execução do .NET Core e o host do .NET Core. Isso gera uma implantação autocontida com menor superfície.
 
@@ -360,18 +288,11 @@ Essa operação indica que, em vez de usar toda a estrutura `netcoreapp1.0`, que
     ```
     
 
-Um arquivo de exemplo completo `csproj` aparece mais adiante nesta seção.
+ Um arquivo de exemplo completo `csproj` aparece mais adiante nesta seção.
 
 4. Execute o comando `dotnet restore` para restaurar as dependências especificadas em seu projeto.
 
-5. Crie versões de depuração do seu aplicativo em cada uma das plataformas de destino usando o comando `dotnet build`. A menos que você especifique o identificador de tempo de execução que gostaria de criar, o comando `dotnet build` cria uma compilação apenas para a ID de tempo de execução do sistema atual. Você pode criar seu aplicativo para ambas as plataformas de destino com os comandos:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.11-x64
-    ```
-
-6. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
+5. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
 
    ```console
    dotnet publish -c release -r win10-x64
@@ -379,49 +300,31 @@ Um arquivo de exemplo completo `csproj` aparece mais adiante nesta seção.
    ```
 Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netstandard1.6\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
-7. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
+6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
 Os arquivos publicados podem ser implantados como você desejar. Por exemplo, você pode empacotá-las em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. 
 
 Veja a seguir o arquivo `csproj` completo para este projeto.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NETSTandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
-      <Version>1.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

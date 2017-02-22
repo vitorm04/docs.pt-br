@@ -1,25 +1,28 @@
 ---
-title: dotnet-build command | .NET Core SDK
+title: Comando dotnet-build | Microsoft Docs
 description: "O comando dotnet-build compila um projeto e todas as suas dependências."
 keywords: dotnet-build, CLI, comando de CLI, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bb64da75a2e7bc2d379bc1685b4187493792db78
 
 ---
 
 #<a name="dotnet-build"></a>dotnet-build
 
+> [!WARNING]
+> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [dotnet-build (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-build.md).
+
 ## <a name="name"></a>Nome 
-dotnet-build – Compila um projeto e todas as suas dependências 
+`dotnet-build` – Compila um projeto e todas as suas dependências. 
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -76,11 +79,11 @@ Compila para uma estrutura específica. A estrutura precisa ser definida no arqu
 
 Define uma configuração de build.  Se omitido, o padrão é `Debug`.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
 Tempo de execução de destino para a compilação. Para obter uma lista de RIDs (Identificadores de Tempo de Execução) que podem ser usados, consulte o [Catálogo de RIDs](../rid-catalog.md). 
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
 Define pelo que `*` deve ser substituído no campo de versão no arquivo [project.json](project-json.md#version). O formato segue as diretrizes de versão do NuGet. 
 
@@ -111,6 +114,6 @@ Compile um projeto e suas dependências para um tempo de execução específico 
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
