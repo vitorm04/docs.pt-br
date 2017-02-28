@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation
-ms.sourcegitcommit: c81b3b4785bff3bf8963e0ba1b917a5f797099ff
+ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
 ms.openlocfilehash: b5c088da7d1155414a08995ae0d72154af891190
+ms.lasthandoff: 02/28/2017
 
 ---
 
@@ -94,9 +95,4 @@ Para verificar se você está executando a versão mais recente do Visual Studio
 Você pode ler mais sobre as alterações no Visual Studio 2017 RC nas [notas de versão](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes).
 
 [sdk]: https://go.microsoft.com/fwlink/?LinkID=827546
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 
