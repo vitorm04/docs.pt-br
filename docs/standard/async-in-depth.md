@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
-ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4c66c1dc6fb1d51eb2a7d6566fbf62b5f19b556b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -44,7 +45,7 @@ O primeiro exemplo chama um método assíncrono e retorna uma tarefa ativa, prov
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-    // Execution is synchronous here
+     // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -146,8 +147,3 @@ Uma vez que `await` é encontrado, a execução de `CalculateResult()` é gerada
 ### <a name="why-does-async-help-here"></a>Por que a assincronia ajuda aqui?
 
 `async` e `await` são a melhor prática para gerenciar o trabalho vinculado à CPU quando você precisar de capacidade de resposta. Existem vários padrões para usar a assincronia com o trabalho vinculado à CPU. É importante observar que há um pequeno custo para usar a assincronia e não é recomendado para loops estreitos.  Cabe a você determinar como escrever seu código em torno dessa nova capacidade.
-
-
-<!--HONumber=Nov16_HO5-->
-
-

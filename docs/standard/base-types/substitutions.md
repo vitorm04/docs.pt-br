@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0fded615-1021-4468-a644-b491814305c6
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 4b2b547b6edd67590ad75851b8b287e55dc7d70c
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c8e82c2399916e5c17d1b54dd78a11ecfbc90bbf
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -156,7 +157,7 @@ Padrão | Descrição
 `\d*` | Corresponde a zero ou mais dígitos decimais.
 `(?<amount>\s?\d[.,]?\d*)` | Corresponde a um espaço em branco seguido por um ou mais dígitos decimais, seguidos por zero ou um ponto ou uma vírgula, seguidos por zero ou mais dígitos decimais. Este é o grupo de captura chamado quantidade. Como o padrão de substituição é `${amount}`, a chamada ao método [Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.String,System.Text.RegularExpressions.RegexOptions)) substitui a subcadeia de caracteres inteira correspondente a esse grupo capturado. 
  
-## <a name="substituting-a-character"></a>Substituindo um caractere $
+## <a name="substituting-a--character"></a>Substituindo um caractere $
 
 A substituição de **$$** insere um caractere literal "$" na cadeia de caracteres substituída. 
 
@@ -559,10 +560,5 @@ Corresponder a | Posição | Cadeia de caracteres antes da correspondência | Ca
 ## <a name="see-also"></a>Consulte também
 
 [Linguagem de expressão regular – referência rápida](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

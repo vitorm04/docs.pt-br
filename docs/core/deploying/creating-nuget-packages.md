@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
 translationtype: Human Translation
-ms.sourcegitcommit: 300a0304e316cfa265634a3faf74c81c7a8a5e08
-ms.openlocfilehash: d863587fbfee2bf713f8566a3e5b294d49ae50e9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 657981a05e831ffb849d0cd5b3ea25c079cb4fc1
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -64,9 +65,4 @@ E agora você tem os arquivos necessários para publicar um pacote NuGet.
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Não confunda `dotnet pack` com `dotnet publish`
 
 É importante observar que em nenhum momento o comando `dotnet publish` está envolvido.  O comando `dotnet publish` é usado para implantar aplicativos com todas as suas dependências no mesmo pacote, não para gerar um pacote NuGet para ser distribuído e consumidos por meio do NuGet.
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

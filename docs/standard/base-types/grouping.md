@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 05fcdadee5d932a53941386f97971c24cc912fd8
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -1160,9 +1161,4 @@ O primeiro grupo de captura corresponde a cada palavra da sentença. O segundo g
 [Linguagem de expressão regular – referência rápida](quick-ref.md)
 
 [Retrocesso em expressões regulares](backtracking.md)
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
 translationtype: Human Translation
-ms.sourcegitcommit: dd32f1dd4d17ab1bb01b5578237cc950b147898c
-ms.openlocfilehash: 676ffd19ac3e39b8260d626a81e9c1db8d58f19b
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cf6c9757ab451f88c80fedb2dfebf7f5e320f365
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -71,7 +72,7 @@ Nesse caso, você deve garantir que o metapacote de início seja corrigido para 
 
 Nesse caso, você precisa corrigir suas outras dependências para 1.0.  Consulte as versões do pacote correto e números de build no fim desse artigo.
 
-### <a name="a-note-on-using-a-splat-string-when-versioning"></a>Uma observação sobre o uso de uma cadeia de caracteres splat (\*) durante o controle de versão
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>Uma observação sobre o uso de uma cadeia de caracteres splat (\*) durante o controle de versão
 
 Você pode ter adotado um padrão de controle de versão que usa uma cadeia de caracteres splat (\*) como esta: `"System.Collections":"4.0.11-*"`.
 
@@ -84,9 +85,4 @@ Você pode ter adotado um padrão de controle de versão que usa uma cadeia de c
 [Lista de todos os pacotes de tempo de execução e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
 [Lista de todos os pacotes de aplicativo do .NET Core e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

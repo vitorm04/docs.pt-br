@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
 translationtype: Human Translation
-ms.sourcegitcommit: 46061efa8e33c6a73befa5181eb33b8deb2fa637
-ms.openlocfilehash: 7e4e96183484d102d102eeab97191f8be9b9be8a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 5b7bbc0718817365df63db4d8ca7e4cf8871abae
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -95,9 +96,4 @@ Você pode ter uma dependência que não é um pacote NuGet, tal como uma DLL no
 ## <a name="next-steps"></a>Próximas etapas
 
 Se você estiver portando uma biblioteca, consulte [Portando suas bibliotecas](libraries.md).
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

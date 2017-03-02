@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -320,10 +321,10 @@ O [Common Type System](common-type-system.md) do .NET inclui vários tipos inter
 
 Tipo compatível com CLS | Descrição
 ------------------ | -----------
-[Byte](xref:System.Byte) | Inteiro sem sinal de 8 bits 
-[Int16](xref:System.Int16) | Inteiro com sinal de 16 bits 
-[Int32](xref:System.Int32) | Inteiro com sinal de 32 bits 
-[Int64](xref:System.Int64) | Inteiro com sinal de 64 bits
+[Byte](xref:System.Byte) | Inteiro sem sinal de&8; bits 
+[Int16](xref:System.Int16) | Inteiro com sinal de&16; bits 
+[Int32](xref:System.Int32) | Inteiro com sinal de&32; bits 
+[Int64](xref:System.Int64) | Inteiro com sinal de&64; bits
 [Simples](xref:System.Single) | Valor do ponto flutuante de precisão simples
 [Duplo](xref:System.Double) | Valor do ponto flutuante de precisão dupla
 [Booliano](xref:System.Boolean) | tipo de valor verdadeiro ou falso 
@@ -337,10 +338,10 @@ Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS
 
 Tipo não compatível | Descrição | Alternativa compatível com CLS
 ------------------ | ----------- | -------------------------
-[SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de 8 bits | [Int16](xref:System.Int16)
-[UInt16](xref:System.UInt16) | Inteiro sem sinal de 16 bits | [Int32](xref:System.Int32)
-[UInt32](xref:System.UInt32) | Inteiro sem sinal de 32 bits | [Int64](xref:System.Int64)
-[UInt64](xref:System.UInt64) | Inteiro sem sinal de 64 bits | [Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)
+[SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de&8; bits | [Int16](xref:System.Int16)
+[UInt16](xref:System.UInt16) | Inteiro sem sinal de&16; bits | [Int32](xref:System.Int32)
+[UInt32](xref:System.UInt32) | Inteiro sem sinal de&32; bits | [Int64](xref:System.Int64)
+[UInt64](xref:System.UInt64) | Inteiro sem sinal de&64; bits | [Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | Ponteiro ou identificador sem sinal | [IntPtr](xref:System.IntPtr)
  
  A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo: 
@@ -781,7 +782,7 @@ Public Class [case]
 End Class
 ```
 
-O exemplo do C# a seguir pode criar uma instância da classe `case` usando o símbolo @ para remover a ambiguidade do identificador da palavras-chave da linguagem. Sem ele, o compilador do C# exibiria duas mensagens de erro, "Tipo esperado" e "'Maiúsculas e minúsculas' do termo de expressão inválido". 
+O exemplo do C# a seguir pode criar uma instância da classe `case` usando o símbolo @ para remover a ambiguidade do identificador da palavra-chave da linguagem. Sem ele, o compilador do C# exibiria duas mensagens de erro, "Tipo esperado" e "'Maiúsculas e minúsculas' do termo de expressão inválido". 
 
 ```csharp
 using System;
@@ -2951,10 +2952,5 @@ Para compilar usando C#, altere o nome do compilador de vbc para csc e altere a 
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
-
-
-
-<!--HONumber=Nov16_HO5-->
 
 

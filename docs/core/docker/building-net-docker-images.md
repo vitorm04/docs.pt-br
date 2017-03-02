@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 translationtype: Human Translation
-ms.sourcegitcommit: 1cb9e19ec9c9c0764244aeec5f62b812cbd91aef
-ms.openlocfilehash: 8cc784c267e9ca85ae110f8c92e0191f6fee6596
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
+ms.lasthandoff: 03/02/2017
 
 ---
  
@@ -219,10 +220,5 @@ api                 latest               ef17184c8de6        1 hour ago        2
 
 Usando o gerador de Docker para adicionar os arquivos necessários ao aplicativo da API Web simplificou o processo de criar as versões de desenvolvimento e produção das imagens.  As ferramentas são plataforma cruzada, fornecendo também um script do PowerShell para obter os mesmos resultados no Windows, enquanto a integração do Visual Studio Code fornece um passo a passo de depuração do aplicativo dentro do contêiner. Compreendendo as variantes de imagem e os cenários de destino, você pode otimizar seu processo de desenvolvimento de loop interno, obtendo imagens otimizadas para implantações de produção.  
 
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

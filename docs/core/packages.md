@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -116,7 +117,7 @@ Por exemplo, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.Fil
 
 - .NETFramework,Version=4.6
 - .NETStandard,Version=1.3
-- Plataformas 6 Xamarin (por exemplo, xamarinios10)
+- Plataformas&6; Xamarin (por exemplo, xamarinios10)
 
 É útil comparar essas duas primeiras estruturas, visto que elas são exemplos de duas formas diferentes de definir estruturas.
 
@@ -175,17 +176,12 @@ As referências de estrutura e metapacote no project.json não precisam correspo
 
 Pode parecer estranho apontar para `netstandard1.3`, mas use a versão 1.6.0 do `NETStandard.Library`. Esse é um caso de uso válido, pois o metapacote mantém o suporte para versões mais antigas do `netstandard`. Pode ser o caso de você já ter padronizado a versão 1.6.0 do metapacote e tê-la usado para todas as suas bibliotecas, que são voltadas para diversas versões do `netstandard`. Com essa abordagem, você só precisará restaurar a `NETStandard.Library` 1.6.0 e não versões anteriores. 
 
-O inverso não seria válido: direcionar `netstandard1.6` com a versão 1.3.0 do `NETStandard.Library`. Você não pode direcionar uma estrutura mais elevada com um metapacote menos elevado, visto que a versão do metapacote inferior não exporá os ativos para essa estrutura superior. O [esquema de controle de versão] para metapacotes assegura que os metapacotes correspondam à versão mais alta da estrutura por eles descrita. Devido a esse esquema de controle de versão, a primeira versão do `NETStandard.Library` é v1.6.0, já que ele contém ativos `netstandard1.6`. A versão 1.3.0 é usada no exemplo acima para fins de simetria, mas não existe na verdade.
+O inverso não seria válido: direcionar `netstandard1.6` com a versão 1.3.0 do `NETStandard.Library`. Você não pode direcionar uma estrutura mais elevada com um metapacote menos elevado, visto que a versão do metapacote inferior não exporá os ativos para essa estrutura superior. O [esquema de controle de versão] para metapacotes assegura que os metapacotes correspondam à versão mais alta da estrutura por eles descrita. Devido a esse esquema de controle de versão, a primeira versão do `NETStandard.Library` é v1.6.0, já que ele contém ativos `netstandard1.6`. A versão&1;.3.0 é usada no exemplo acima para fins de simetria, mas não existe na verdade.
 
 ### <a name="net-core-application"></a>.NET Core Application
 
 A estrutura .NET Core Application (TFM: `netcoreapp`) representa os pacotes e APIs associadas que são fornecidos com a distribuição do .NET Core e o modelo de aplicativo de console que ela fornece. Aplicativos .NET Core devem usar essa estrutura, devido ao direcionamento do modelo de aplicativo de console, assim como as bibliotecas que devem ser executados apenas em .NET Core. Usar essa estrutura restringe a bibliotecas à execução apenas no .NET Core. 
 
-O metapacote `Microsoft.NETCore.App` é direcionado para a estrutura `netcoreapp`. Ele fornece acesso a ~60 bibliotecas, ~ 40 fornecida pelo pacote `NETStandard.Library` e mais ~20 adicionais. Você pode referenciar outras bibliotecas direcionadas ao `netcoreapp` ou estruturas compatíveis, como o `netstandard`, para obter acesso a APIs adicionais. 
+O metapacote `Microsoft.NETCore.App` é direcionado para a estrutura `netcoreapp`. Ele fornece acesso a ~60 bibliotecas, ~&40; fornecida pelo pacote `NETStandard.Library` e mais ~20 adicionais. Você pode referenciar outras bibliotecas direcionadas ao `netcoreapp` ou estruturas compatíveis, como o `netstandard`, para obter acesso a APIs adicionais. 
 
 A maioria das bibliotecas adicionais fornecidas pelo `Microsoft.NETCore.App` também são direcionadas para `netstandard`, considerando que suas dependências foram atendidas por outras bibliotecas `netstandard`. Isso significa que bibliotecas `netstandard` também podem fazer referência a esses pacotes como dependências. 
-
-
-<!--HONumber=Nov16_HO4-->
-
-

@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 956a0766fe0171052983627f2cf2e8264d6b0365
-ms.openlocfilehash: f01c6521becb930923693a6b6867479f3b5d6df9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b752e23f37f83a68ef4a7a97108479f7736d53cd
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -53,17 +54,17 @@ Se você estivesse usando o DNX, teria usado comandos de uma das suas três part
 A tabela a seguir mostra o mapeamento entre os comandos DNX/DNU e seus equivalentes da CLI.
 
 
-| Comando do DNX                       | Comando da CLI       | Descrição                                                                                                       |
-|--------------------------------   |----------------   |-----------------------------------------------------------------------------------------------------------------  |
-| dnx run                           | dotnet run        | Execute o código da origem.                                                                                             |
-| dnu build                         | dotnet build      | Crie um binário IL do seu código.                                                                                  |
-| dnu pack                          | dotnet pack       | Empacote um pacote NuGet do seu código.                                                                          |
-| dnx \[comando] (por exemplo, "dnx web")   | N/D\*             | No mundo DNX, execute um comando conforme definido no project.json.                                                       |
-| dnu install                       | N/D\*             | No mundo DNX, instale um pacote como uma dependência.                                                              |
-| dnu restore                       | dotnet restore    | Restaure as dependências especificadas no seu project.json.                                                              |
-| dnu publish                       | dotnet publish    | Publica seu aplicativo para implantação em uma das três formas (portátil, portátil com nativo e autônomo).    |
-| dnu wrap                          | N/D\*             | No mundo DNX, encapsule um project.json em csproj.                                                                      |
-| dnu commands                      | N/D\*             | No mundo DNX, gerencie os comandos instalados globalmente.                                                             |
+| Comando do DNX                        | Comando da CLI        | Descrição                                                                                                         |
+|--------------------------------    |----------------    |-----------------------------------------------------------------------------------------------------------------    |
+| dnx run                            | dotnet run         | Execute o código da origem.                                                                                               |
+| dnu build                          | dotnet build       | Crie um binário IL do seu código.                                                                                    |
+| dnu pack                           | dotnet pack        | Empacote um pacote NuGet do seu código.                                                                            |
+| dnx \[comando] (por exemplo, "dnx web")     | N/D\*              | No mundo DNX, execute um comando conforme definido no project.json.                                                         |
+| dnu install                        | N/D\*              | No mundo DNX, instale um pacote como uma dependência.                                                                |
+| dnu restore                        | dotnet restore     | Restaure as dependências especificadas no seu project.json.                                                                |
+| dnu publish                        | dotnet publish     | Publica seu aplicativo para implantação em uma das três formas (portátil, portátil com nativo e autônomo).     |
+| dnu wrap                           | N/D\*              | No mundo DNX, encapsule um project.json em csproj.                                                                        |
+| dnu commands                       | N/D\*              | No mundo DNX, gerencie os comandos instalados globalmente.                                                               |
 
 (\*) – esses recursos não têm suporte na CLI por padrão. 
 
@@ -141,10 +142,5 @@ Quando estiver pronto, você pode tentar restaurar com `dotnet restore`. Depende
 
 Executar `dotnet build` mostrará os eventuais erros de build, porém não deve haver muitos. Depois de o código ser criado e executado corretamente, você poderá testá-lo com o executor. Execute `dotnet <path-to-your-assembly>` e observe a execução.
 
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

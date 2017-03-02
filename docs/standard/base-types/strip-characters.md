@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: f1df4967-7887-41d2-b60f-0da9be67c8fa
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 2d5b0756ab8c34cca0c4ca7c1eb73f81a7a10b70
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 59824a372405036c2ab6fac2730b67c9c2dfa7f4
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -22,7 +23,7 @@ O exemplo a seguir usa o método [Regex.Replace](xref:System.Text.RegularExpress
 
 ## <a name="example"></a>Exemplo
 
-Você pode usar o método `CleanInput` definido neste exemplo para retirar caracteres potencialmente prejudiciais que tenham sido inseridos em um campo de texto que aceita entrada do usuário. Nesse caso, o `CleanInput` remove todos os caracteres não alfanuméricos, exceto pontos (.), arrobas (@), e hifens (-) e retorna a cadeia de caracteres restante. No entanto, você pode modificar o padrão da expressão regular para que ela elimine qualquer caractere que não deve ser incluído em uma cadeia de caracteres de entrada.
+Você pode usar o método `CleanInput` definido neste exemplo para retirar caracteres potencialmente prejudiciais que tenham sido inseridos em um campo de texto que aceita entrada do usuário. Nesse caso, o `CleanInput` remove todos os caracteres não alfanuméricos, exceto pontos (.), arrobas (@) e hifens (-) e retorna a cadeia de caracteres restante. No entanto, você pode modificar o padrão da expressão regular para que ela elimine qualquer caractere que não deve ser incluído em uma cadeia de caracteres de entrada.
 
 ```csharp
 using System;
@@ -70,9 +71,4 @@ O padrão da expressão regular `[^\w\.@-]` corresponde a qualquer caractere que
 [Expressões regulares do .NET](regular-expressions.md)
 
 [Exemplos de expressões regulares](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO5-->
-
 

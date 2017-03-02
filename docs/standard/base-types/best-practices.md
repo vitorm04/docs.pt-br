@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: d92549bf46f1c7a728bc6e2ac7cb183251115084
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cf9c83de791fa4990a991689a26d4bbdd84cfe7d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -1101,10 +1102,5 @@ Título | Descrição
 [Retrocesso em expressões regulares](backtracking.md) | Explica o que é o retrocesso é como ele afeta o desempenho da expressão regular e examina os elementos de linguagem que fornecem alternativas ao retrocesso.
 [Linguagem de expressão regular – referência rápida](quick-ref.md) | Descreve os elementos de linguagem de expressões regulares do .NET e fornece links para a documentação detalhada de cada elemento da linguagem.
  
-
-
-
-
-<!--HONumber=Nov16_HO5-->
 
 

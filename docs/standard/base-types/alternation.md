@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 59ffac4d-fc6e-461f-8783-d9f8dc88ce2c
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2c31622ff97f30e565ed2cd82128518d04d5d1dc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fa2a880e5bcc36354bd59d3dc032180c89984f1d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -100,7 +101,7 @@ Padrão | Descrição
 `\b` | Iniciar em um limite de palavra.
 `gr` | Corresponder aos caracteres "gr".
 `(a|e)` | Corresponder a um "a" ou "e".
-`y\b` | Corresponder a um “y” em um limite de palavra.
+`y\b` |    Corresponder a um “y” em um limite de palavra.
 
 
 O caractere | também pode ser usado para executar uma correspondência do tipo um/ou outro com vários caracteres ou subexpressões, que podem incluir qualquer combinação de literais de caracteres e elementos de linguagem de expressão regular. (A classe de caracteres não fornece essa funcionalidade.) O exemplo a seguir usa o caractere | para extrair um SSN (cadastro de pessoas físicas) dos EUA, que é um número de 9 dígitos com o formato *ddd-dd-dddd* ou um EIN (Número de Identificação de Empregador) dos EUA, que é um número de 9 dígitos com o formato *dd-ddddddd*.
@@ -329,10 +330,5 @@ End Module
 Consulte também
 
 [Linguagem de expressão regular – referência rápida](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

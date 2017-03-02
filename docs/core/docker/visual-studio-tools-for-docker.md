@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 translationtype: Human Translation
-ms.sourcegitcommit: 03193513706967a46f74bccdba08a56946dd67df
-ms.openlocfilehash: 274402bbd254e97d88771675daf07995983914aa
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -123,9 +124,4 @@ microsoft/aspnetcore       1.0.1               189ad4312ce7        5 days ago   
 ```
 
 Pode haver uma expectativa para a imagem de produção ou de lançamento serem menores em comparação à imagem de **desenvolvimento**, no entanto, com o uso do mapeamento de volume, o depurador e o aplicativo realmente foram executados em seu computador local e não dentro do contêiner. A imagem **mais recente** empacotou todo o código de aplicativo necessário para executar o aplicativo em um computador host, portanto, o delta é do tamanho do código do aplicativo.
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 9b184114-6612-4c1a-a2db-2e24e65b0f77
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: bb62bdd03d4af4f764ac3bc8734c67902fffa798
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: fdea0fe76b1c5f1e9ae23582219c847fe80b317f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -44,7 +45,7 @@ Em alguns casos (como quando um aplicativo deve exibir um número de conta forma
 
     a. Opcionalmente, verifique se o método é legitimamente destinado a fornecer serviços de formatação examinando o parâmetro *provider*. Para formatar objetos que implementam [IFormatProvider](xref:System.IFormatProvider) e [ICustomFormatter](xref:System.ICustomFormatter), isso envolve testar o parâmetro *provider* para igualdade com o objeto de formatação atual.
     
-    b. Determine se o objeto de formatação deve dar suporte a especificadores de formato personalizado. (Por exemplo, um especificador de formato "N" pode indicar que um número de telefone dos EUA deve ser gerado no formato NANP e um "I" pode indicar a saída no formato E. 123 da Recomendação ITU-T.) Se especificadores de formato forem usados, o método deve tratar o especificador de formato específico. Ele é passado para o método no parâmetro de formato. Se nenhum especificador estiver presente, o valor do parâmetro *format* será [String.Empty](xref:System.String#System_String_Empty).
+    b. Determine se o objeto de formatação deve dar suporte a especificadores de formato personalizado. (Por exemplo, um especificador de formato "N" pode indicar que um número de telefone dos EUA deve ser gerado no formato NANP e um "I" pode indicar a saída no formato E.&123; da Recomendação ITU-T.) Se especificadores de formato forem usados, o método deve tratar o especificador de formato específico. Ele é passado para o método no parâmetro de formato. Se nenhum especificador estiver presente, o valor do parâmetro *format* será [String.Empty](xref:System.String#System_String_Empty).
     
     c. Recupere o valor numérico passado para o método como o parâmetro *arg*. Execute as manipulações que forem necessárias para convertê-lo em sua representação de cadeia de caracteres.
     
@@ -244,9 +245,4 @@ No caso deste exemplo, o método que implementa [ICustomFormatter.Format](xref:S
 ## <a name="see-also"></a>Consulte também
 
 [Executando operações de formatação](performing-formatting-operations.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

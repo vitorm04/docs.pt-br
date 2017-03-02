@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 9d5fce64-95a4-4609-8eee-b0ac70078cdb
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 78a2d593329f0703c71df2462cfea30b02adff85
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 02b0311559071147b38182076f60918b7351cc63
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -170,9 +171,4 @@ Quando é descoberto que um objeto finalizável está inativo, seu finalizador �
 ## <a name="see-also"></a>Consulte também
 
 [Coleta de lixo no .NET](gc.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

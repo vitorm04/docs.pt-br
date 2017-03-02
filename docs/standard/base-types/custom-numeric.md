@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b1c16ee-956f-4e9c-8502-c3dd6598c51d
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 2d5a051efd074d02f2a5e9ff03c11e1d9a202d7f
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 017ee2b6feb87841f31660fe6cb76ccbefd5c83b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -79,26 +80,26 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 // Displays 0.6
 
 value = 1234567890;
-Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture)); 
+Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0}", value)); 
+                                "{0:0,0}", value));    
 // Displays 1,234,567,890      
 
 CultureInfo elGR = CultureInfo.CreateSpecificCulture("el-GR");
-Console.WriteLine(value.ToString("0,0", elGR)); 
-Console.WriteLine(String.Format(elGR, "{0:0,0}", value));   
+Console.WriteLine(value.ToString("0,0", elGR));    
+Console.WriteLine(String.Format(elGR, "{0:0,0}", value));    
 // Displays 1.234.567.890
 
 value = 1234567890.123456;
-Console.WriteLine(value.ToString("0,0.0", CultureInfo.InvariantCulture));   
+Console.WriteLine(value.ToString("0,0.0", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.0}", value));   
+                                "{0:0,0.0}", value));    
 // Displays 1,234,567,890.1  
 
 value = 1234.567890;
-Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture));  
+Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.00}", value));  
+                                "{0:0,0.00}", value));    
 // Displays 1,234.57
 ```
 
@@ -131,9 +132,9 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 0.6
 
 value = 1234567890
-Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture))  
+Console.WriteLine(value.ToString("0,0", CultureInfo.InvariantCulture))    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0}", value))  
+                                "{0:0,0}", value))    
 ' Displays 1,234,567,890      
 Dim elGR As CultureInfo = CultureInfo.CreateSpecificCulture("el-GR")
 Console.WriteLine(value.ToString("0,0", elGR))
@@ -147,13 +148,13 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 1,234,567,890.1  
 
 value = 1234.567890
-Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture))   
+Console.WriteLine(value.ToString("0,0.00", CultureInfo.InvariantCulture))    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:0,0.00}", value))   
+                                "{0:0,0.00}", value))    
 ' Displays 1,234.57
 ```
 
-## <a name="the-custom-specifier"></a>Especificador personalizado "#"
+## <a name="the--custom-specifier"></a>Especificador personalizado "#"
 
 O especificador de formato personalizado “# " funciona como um símbolo de espaço reservado de dígito. Se o valor que está sendo formatado tem um dígito na posição onde o símbolo "#" aparece na cadeia de caracteres de formato, esse dígito é copiado para a cadeia de caracteres de resultado. Caso contrário, nada é armazenado nessa posição na cadeia de caracteres de resultado. 
 
@@ -251,7 +252,7 @@ End Module
 '      The value is: ' .324'
 ```
 
-## <a name="the-custom-specifier"></a>O "." Especificador Personalizado
+## <a name="the--custom-specifier"></a>O "." Especificador Personalizado
 
 O especificador de formato personalizado "." insere um separador decimal localizado na cadeia de caracteres resultante. O primeiro caractere de ponto na cadeia de caracteres de formato determina o local do separador decimal no valor formatado; quaisquer caracteres de ponto adicionais são ignorados. 
 
@@ -325,7 +326,7 @@ Dim value As Double
 ' Displays 8.6E+4
 ```
 
-## <a name="the-custom-specifier"></a>Especificador personalizado ","
+## <a name="the--custom-specifier"></a>Especificador personalizado ","
 
 O caractere "," funciona tanto como um separador de grupo quanto como um especificador de escala do número. 
 
@@ -335,7 +336,7 @@ O caractere "," funciona tanto como um separador de grupo quanto como um especif
   
 * Especificador de escala numérica: se uma ou mais vírgulas forem especificadas imediatamente à esquerda do ponto decimal explícito ou implícito, o número a ser formatado será dividido por 1000 para cada vírgula. Por exemplo, se a cadeia de caracteres "0,," for usada para formatar o número 100 milhões, a saída será "100". 
 
-Você pode usar os especificadores de separador de grupo e escala numérica na mesma cadeia de caracteres de formato. Por exemplo, se a cadeia de caracteres "#, 0,," e a cultura invariante forem usadas para formatar o número um bilhão, a saída será "1.000". 
+Você pode usar os especificadores de separador de grupo e escala numérica na mesma cadeia de caracteres de formato. Por exemplo, se a cadeia de caracteres "#,&0;,," e a cultura invariante forem usadas para formatar o número um bilhão, a saída será "1.000". 
 
 O exemplo a seguir ilustra o uso da vírgula como um separador de grupo.
 
@@ -369,9 +370,9 @@ O exemplo a seguir ilustra o uso da vírgula como um especificador de escala num
 
 ```csharp
 double value = 1234567890;
-Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture)); 
+Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture));    
 Console.WriteLine(String.Format(CultureInfo.InvariantCulture, 
-                                "{0:#,,}", value)); 
+                                "{0:#,,}", value));    
 // Displays 1235   
 
 Console.WriteLine(value.ToString("#,,,", CultureInfo.InvariantCulture));
@@ -388,7 +389,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ```vb
 Dim value As Double = 1234567890
   Console.WriteLine(value.ToString("#,,", CultureInfo.InvariantCulture))    
-  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#,,}", value))  
+  Console.WriteLine(String.Format(CultureInfo.InvariantCulture, "{0:#,,}", value))    
   ' Displays 1235   
 
   Console.WriteLine(value.ToString("#,,,", CultureInfo.InvariantCulture))
@@ -402,7 +403,7 @@ Dim value As Double = 1234567890
 ' Displays 1,235
 ```
 
-## <a name="the-custom-specifier"></a>Especificador personalizado "%"
+## <a name="the--custom-specifier"></a>Especificador personalizado "%"
 
 Um sinal de porcentagem (%) em uma cadeia de caracteres de formato faz com que um número seja multiplicado por 100 antes de ser formatado. O símbolo de porcentagem localizado é inserido no próprio número no local em que o % aparece na cadeia de caracteres de formato. O caractere de porcentagem usado é definido pela propriedade [PercentSymbol](xref:System.Globalization.NumberFormatInfo.PercentSymbol) do objeto [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) atual.
 
@@ -424,7 +425,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 8.6% 
 ```
 
-## <a name="the-custom-specifier"></a>Especificador personalizado "‰"
+## <a name="the--custom-specifier"></a>Especificador personalizado "‰"
 
 Um caractere de por mil sinal (‰ ou \u2030) em uma cadeia de caracteres de formato faz com que um número seja multiplicado por 1000 antes de ser formatado. O símbolo de por mil apropriado é inserido na cadeia de caracteres retornada no local em que o símbolo ‰ aparece na cadeia de caracteres de formato. O caractere de por mil usado é definido pela propriedade [NumberFormatInfo.PerMilleSymbol](xref:System.Globalization.NumberFormatInfo.PerMilleSymbol) do objeto que fornece informações de formatação específicas da cultura.
 
@@ -490,7 +491,7 @@ Console.WriteLine(String.Format(CultureInfo.InvariantCulture,
 ' Displays 8.6E004
 ```
 
-## <a name="the-escape-character"></a>Caractere de escape “\"”
+## <a name="the--escape-character"></a>Caractere de escape “\"”
 
 Os símbolos “#”, “0 ", “. ”, “,”, “% e "‰" em uma cadeia de caracteres de formato são interpretados como especificadores de formato e não como caracteres literais. Dependendo da sua posição em uma cadeia de caracteres de formato personalizado, o "E" em maiúscula e minúscula, bem como os símbolos + e -, também podem ser interpretados como especificadores de formato. 
 
@@ -539,7 +540,7 @@ Console.WriteLine(String.Format("{0:\\\\\\ ##0 dollars and \0\0 cents \\\\\\}",
 ' Displays \\\ 123 dollars and 00 cents \\\
 ```
 
-## <a name="the-section-separator"></a>Separador de seção ";"
+## <a name="the--section-separator"></a>Separador de seção ";"
 
 O ponto-e-vírgula (;) é um especificador de formato condicional que aplica formatação diferente a um número dependendo se o valor é positivo, negativo ou zero. Para produzir esse comportamento, uma cadeia de caracteres de formato personalizado pode conter até três seções separadas por ponto-e-vírgula. Essas seções são descritas na tabela a seguir. 
 
@@ -646,10 +647,5 @@ Console.WriteLine(value2)
 [Como preencher um número com zeros à esquerda](pad-number.md)
 
 [Formatação de composição](composite-format.md)
-
-
-
-
-<!--HONumber=Nov16_HO5-->
 
 

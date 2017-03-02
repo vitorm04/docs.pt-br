@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8a3e6298-26b7-4c99-bd97-c9892f6c9418
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 649dfd6752f0589eb396b00e7d0b5184bb65d488
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 58925ce755e995432f3ff205793a192f34999e12
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -227,7 +228,7 @@ Como a saída do exemplo mostra, o mecanismo de expressões regulares demora apr
 
 * Ele retorna à correspondência 4 salva anteriormente. Ele determina que há um caractere adicional “a” a ser atribuído a um grupo capturado adicional. Finalmente, ele testa o final da cadeia de caracteres. Como um caractere adicional permanece na cadeia de caracteres, a correspondência falha. Essa correspondência com falha requer 4 comparações. Até agora, foi executado um total de 13 comparações.
 
-* Ele retorna à correspondência 3 salva anteriormente. Ele determina que há dois caracteres adicionais “a” a serem atribuídos a um grupo capturado adicional. No entanto, o teste de fim da cadeia de caracteres falha. Ele então retorna para a correspondência 3 e tenta corresponder os dois caracteres adicionais “a” em dois grupos capturados adicionais. No entanto, o teste de fim da cadeia de caracteres continua a falhar. Essas correspondências com falha exigem 12 comparações. Até agora, foi executado um total de 25 comparações. 
+* Ele retorna à correspondência 3 salva anteriormente. Ele determina que há dois caracteres adicionais “a” a serem atribuídos a um grupo capturado adicional. No entanto, o teste de fim da cadeia de caracteres falha. Ele então retorna para a correspondência&3; e tenta corresponder os dois caracteres adicionais “a” em dois grupos capturados adicionais. No entanto, o teste de fim da cadeia de caracteres continua a falhar. Essas correspondências com falha exigem 12 comparações. Até agora, foi executado um total de 25 comparações. 
 
 A comparação de cadeia de caracteres de entrada com a expressão regular continuará dessa forma até que o mecanismo de expressão regular tente todas as combinações possíveis de correspondências e conclua que não há nenhuma correspondência. Devido aos quantificadores aninhados, essa comparação é O(2n) ou uma operação exponencial, em que n é o número de caracteres na cadeia de caracteres de entrada. Isso significa que, no pior caso, uma cadeia de caracteres de entrada com 30 caracteres requer aproximadamente 1.073.741.824 comparações e uma cadeia de caracteres de entrada com 40 caracteres requer aproximadamente 1.099.511.627.776 comparações. Se você usar cadeias de caracteres com esses tamanhos ou até mesmo com tamanhos maiores, os métodos de expressões regulares poderão demorar um tempo extremamente longo para terminar ao processarem uma entrada que não correspondam ao padrão de expressão regular.
 
@@ -682,10 +683,5 @@ Padrão | Descrição
 [Constructos de alternância em expressões regulares](alternation.md)
 
 [Constructos de agrupamento em expressões regulares](grouping.md)
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

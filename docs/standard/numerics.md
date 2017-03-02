@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
-ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 8e2aad830bdaccad6e8184fa462dd0d3157fd6c9
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -74,9 +75,4 @@ Os tipos de vetor habilitados para SMID no .NET Core incluem o seguinte:
 * Dois tipos de matriz, [System.Numerics.Matrix3x2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix3x2), que representa uma matriz 3x2; e [System.Numerics.Matrix4x4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix4x4), que representa uma matriz 4x4. 
 
 * O tipo [System.Numerics.Plane](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Plane), que representa um plano tridimensional e o tipo [System.Numerics.Quaternion](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Quaternion), que representa um vetor usado para codificar rotações físicas tridimensionais.
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

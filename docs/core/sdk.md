@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
 translationtype: Human Translation
-ms.sourcegitcommit: b7dbb80c16ca0d08ff6fe4c4f3a7b221f64c6608
-ms.openlocfilehash: f444cb6f8b102faba3fca702e592cf74d0ad192c
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 41093464c0dc2631217d89e2e715d05b78051284
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -36,8 +37,3 @@ Instaladores nativos destinam-se principalmente a computadores do desenvolvedor.
 Scripts de instalação, por outro lado, não exigem privilégios administrativos. No entanto, eles também não instalarão nenhum pré-requisito no computador. Você precisa instalar todos os pré-requisitos manualmente. Os scripts destinam-se principalmente a configurar servidores de build ou para quando você deseja instalar as ferramentas sem privilégios de administrador (observe as limitações dos pré-requisitos acima). Veja mais informações no [tópico de referência do script de instalação](tools/dotnet-install-script.md). Se você estiver interessado em como configurar o SDK no seu servidor de build de CI, leia o documento [SDK com servidores de CI](tools/using-ci-with-cli.md). 
 
 Por padrão, o SDK será instalado “lado a lado” (SxS). Isso significa que várias versões das ferramentas de CLI podem coexistir em um determinado momento em um único computador. A maneira como a versão correta é usada é explicada mais detalhadamente na [seção do driver](tools/index.md#driver) do tópico de Ferramentas de Linha de Comando do .NET Core.
-
-
-<!--HONumber=Nov16_HO4-->
-
-
