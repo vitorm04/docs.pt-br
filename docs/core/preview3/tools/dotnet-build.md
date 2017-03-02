@@ -13,6 +13,7 @@ ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
 ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
 ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
@@ -53,7 +54,7 @@ Para compilar um aplicativo executável em vez de uma biblioteca, é necessário
 
 `-h|--help`
 
-Imprime uma ajuda breve para o comando.  
+Imprime uma ajuda breve para o comando.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -69,11 +70,11 @@ Define uma configuração de build.  Se omitido, o padrão é `Debug`.
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-Tempo de execução de destino para a compilação. Para obter uma lista de RIDs (Identificadores de Tempo de Execução) que podem ser usados, consulte o [Catálogo de RIDs](../../rid-catalog.md). 
+Tempo de execução de destino para a compilação. Para obter uma lista de RIDs (Identificadores de Tempo de Execução) que podem ser usados, consulte o [Catálogo de RIDs](../../rid-catalog.md).
 
 `--version-suffix [VERSION_SUFFIX]`
 
-Define qual `*` deve ser substituído no campo de versão no arquivo de projeto. O formato segue as diretrizes de versão do NuGet. 
+Define qual `*` deve ser substituído no campo de versão no arquivo de projeto. O formato segue as diretrizes de versão do NuGet.
 
 `--build-profile`
 
@@ -100,9 +101,4 @@ Compile um projeto e suas dependências usando a configuração da Versão:
 Compile um projeto e suas dependências para um tempo de execução específico (nesse exemplo, Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
