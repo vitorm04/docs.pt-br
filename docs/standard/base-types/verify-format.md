@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6d735520-4059-4754-b34c-d117299d36f1
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: bedd1d281256545776c874a38ccb71ad594467c2
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 077a09152ac23c986a751f42c893e1dcca858291
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -141,13 +142,13 @@ Public Class RegexUtilities
 End Class
 ```
 
-Neste exemplo, o padrão de expressão regular `^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$` é interpretado como mostrado na tabela a seguir. Observe que a expressão regular é compilada usando o sinalizador [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase).
+Neste exemplo, o padrão de expressão regular`^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^` \{ \} \|~ \w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|( ([0-9a-z] [-\w]*[0-9a-z] *\.) + [a-z0-9] [\-a-z0-9]{0,22}[a-z0-9]))$` é interpretado como mostrado na tabela a seguir. Observe que a expressão regular é compilada usando o sinalizador [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase).
 
 Padrão | Descrição
 ------- | ----------- 
 `^` | Comece a correspondência no início da cadeia de caracteres.
 `(?(")` | Determine se o primeiro caractere é aspas. `(?(")` é o início de um construtor de alternância.
-`(?("")("".+?(?<!\\)""@)` | Se o primeiro caractere for aspas, coincida as aspas iniciais seguidas de pelo menos uma ocorrência de qualquer caractere, seguido de uma marca de aspas finais. As aspas finais não devem ser precedidas por um caractere de barra invertida `(\). (?<!` é o início de uma asserção lookbehind negativa de largura zero. A cadeia de caracteres deve terminar com um sinal (@).
+`(?("")("".+?(?<!\\)""@)` | Se o primeiro caractere for aspas, coincida as aspas iniciais seguidas de pelo menos uma ocorrência de qualquer caractere, seguido de uma marca de aspas finais. As aspas finais não devem ser precedidas por um caractere de barra invertida `(\). (?<!` é o início de uma asserção lookbehind negativa de largura zero. A cadeia de caracteres deve terminar com um sinal de arroba (@).
 `&#124;(([0-9a-z] | Se o primeiro caractere não for aspas, coincida qualquer caractere alfabético de a até z ou de A até Z (a comparação não diferencia maiúsculas de minúsculas) ou qualquer caractere numérico entre 0 e 9.
 `(\.(?!\.))` | Se o próximo caractere for um ponto final, coincida com ele. Se ele não for um ponto final, observe o próximo caractere e continue a correspondência. `(?!\.)` é uma asserção lookahead negativa de largura zero que impede dois pontos finais consecutivos de serem exibidos na parte local de um endereço de email.
 `&#124;[-!#\$%&'\*\+/=\?\^`\{\}\&#124;~\w] | Se o próximo caractere não for um ponto final, corresponda qualquer caractere da palavra ou um dos seguintes caracteres: -!#$%'*+=?^`{}&#124;~. 
@@ -244,9 +245,4 @@ End Class
 [Expressões regulares do .NET](regular-expressions.md)
 
 [Exemplos de expressões regulares](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO5-->
-
 
