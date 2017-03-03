@@ -4,16 +4,16 @@ description: Cadeias de caracteres de formato TimeSpan personalizado
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e79745eb-6ebd-4e62-85c4-4f2830c27285
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 168bd497891ead884413fad4542943a24de7a7f4
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: bec60437d4345decaf38f2bbb9434922ac889683
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -1711,43 +1711,43 @@ Há duas maneiras de incluir um caractere literal em uma cadeia de caracteres de
 
 * Coloque-o entre aspas simples (o delimitador de cadeia de caracteres literal). 
 
-* Preceda-o com uma barra invertida ("\"), que é interpretada como um caractere de escape. Isso significa que, em C#, a cadeia de caracteres de formato deve demarcado por @-quoted,, ou o caractere literal deve ser precedido por uma barra invertida adicional.
+* Preceda-o com uma barra invertida ("\"), que é interpretada como um caractere de escape. Isso significa que, em C#, a cadeia de caracteres de formato deve demarcado por @-quoted, ou o caractere literal deve ser precedido por uma barra invertida adicional.
 
   Em alguns casos, talvez você precise usar lógica condicional para incluir um literal de escape em uma cadeia de caracteres de formato. O exemplo a seguir usa lógica condicional para incluir um símbolo de sinal para intervalos de tempo negativos. 
   
-  ```csharp
-  using System;
+```csharp
+using System;
 
-  public class Example
-  {
-     public static void Main()
-     {
-        TimeSpan result = new DateTime(2010, 01, 01) - DateTime.Now; 
-        String fmt = (result < TimeSpan.Zero ?  "\\-" : "") + "dd\\.hh\\:mm";
+public class Example
+{
+   public static void Main()
+   {
+      TimeSpan result = new DateTime(2010, 01, 01) - DateTime.Now; 
+      String fmt = (result < TimeSpan.Zero ?  "\\-" : "") + "dd\\.hh\\:mm";
 
-        Console.WriteLine(result.ToString(fmt));
-        Console.WriteLine("Interval: {0:" + fmt + "}", result);
-     }
-  }
-  // The example displays output like the following:
-  //       -1291.10:54
-  //       Interval: -1291.10:54
-  ```
+      Console.WriteLine(result.ToString(fmt));
+      Console.WriteLine("Interval: {0:" + fmt + "}", result);
+   }
+}
+// The example displays output like the following:
+//       -1291.10:54
+//       Interval: -1291.10:54
+```
 
-  ```vb
-  Module Example
-     Public Sub Main()
-        Dim result As TimeSpan = New DateTime(2010, 01, 01) - Date.Now 
-        Dim fmt As String = If(result < TimeSpan.Zero, "\-", "") + "dd\.hh\:mm"
+```vb
+Module Example
+   Public Sub Main()
+      Dim result As TimeSpan = New DateTime(2010, 01, 01) - Date.Now 
+      Dim fmt As String = If(result < TimeSpan.Zero, "\-", "") + "dd\.hh\:mm"
 
-        Console.WriteLine(result.ToString(fmt))
-        Console.WriteLine("Interval: {0:" + fmt + "}", result)
-     End Sub
-  End Module
-  ' The example displays output like the following:
-  '       -1291.10:54
-  '       Interval: -1291.10:54
-  ```
+      Console.WriteLine(result.ToString(fmt))
+      Console.WriteLine("Interval: {0:" + fmt + "}", result)
+   End Sub
+End Module
+' The example displays output like the following:
+'       -1291.10:54
+'       Interval: -1291.10:54
+```
   
 O .NET não define uma gramática para separadores em intervalos de tempo. Isso significa que os separadores entre dias e horas, horas e minutos, minutos e segundos, e segundos e frações de segundo devem ser tratados como literais de caracteres em uma cadeia de caracteres de formato.
 
@@ -1784,10 +1784,5 @@ Console.WriteLine(interval.ToString(fmt))
 [Formatação de tipos](formatting-types.md)
 
 [Cadeias de caracteres de formato TimeSpan padrão](standard-timespan.md)  
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 
