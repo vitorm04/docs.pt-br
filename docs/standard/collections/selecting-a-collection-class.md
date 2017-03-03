@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0a60fca7-e082-48d4-9dda-30b0d3e67ec7
 translationtype: Human Translation
-ms.sourcegitcommit: cfe65fcba1b3fdc09ffcac704a760d8ce29ea60b
-ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
+ms.sourcegitcommit: 763433b00ae7d01cfa0c7fa250f51d23a95f6f15
+ms.openlocfilehash: d174d0cb910035340fb317521f3ad930d16853c2
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -70,7 +71,7 @@ Considere as perguntas a seguir:
     
 ## <a name="linq-to-objects"></a>Objetos LINQ to
 
-O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória desde que o tipo de objeto implemente [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) ou [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). As consultas LINQ fornecem um padrão comum para acessar dados. Em geral, elas são mais concisas e legíveis que os loops foreach padrão e fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [LINQ (Consulta Integrada à Linguagem)](../../csharp/linq.md).
+O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória desde que o tipo de objeto implemente [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) ou [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). As consultas LINQ fornecem um padrão comum para acessar dados. Em geral, elas são mais concisas e legíveis que os loops foreach padrão e fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [LINQ (Consulta Integrada à Linguagem)](../../csharp/linq/index.md).
 
 ## <a name="see-also"></a>Consulte também
 
@@ -81,9 +82,4 @@ O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessa
 [System.Collections.Generic](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
 
 [Coleções Thread-Safe](threadsafe/index.md)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 
