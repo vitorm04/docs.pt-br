@@ -3,22 +3,23 @@ title: Como adicionar e tirar itens individualmente de uma BlockingCollection
 description: Como adicionar e tirar itens individualmente de uma BlockingCollection
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2b9d39ab-0993-4453-b021-b04870098bf7
 translationtype: Human Translation
-ms.sourcegitcommit: c15f2da15c6448cf1c36dea2d5fd53e734bb6608
-ms.openlocfilehash: 4f73f3bf2000a0ff4cd600d72bb161206a58d23a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e560eb44f783aaa50ec335df4f3171090d238f32
+ms.lasthandoff: 03/03/2017
 
 ---
 
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Como adicionar e tirar itens individualmente de uma BlockingCollection
 
-Este exemplo mostra como adicionar e remover itens de uma [BlockingCollection&lt;T&gt;]( https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.BlockingCollection-1) tanto com bloqueio quanto sem bloqueio. Para obter mais informações sobre `BlockingCollection<T>`, veja [Visão geral de BlockingCollection](blockingcollection-overview.md). 
+Este exemplo mostra como adicionar e remover itens de uma [BlockingCollection&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.BlockingCollection-1) tanto com bloqueio quanto sem bloqueio. Para obter mais informações sobre `BlockingCollection<T>`, veja [Visão geral de BlockingCollection](blockingcollection-overview.md). 
 
 Para obter um exemplo de como enumerar um `BlockingCollection<T>` até que ele fique vazio e não existam mais elementos a adicionar, veja [Como usar ForEach para remover itens de uma BlockingCollection](how-to-use-foreach-to-remove.md).
 
@@ -218,12 +219,7 @@ class ProgramWithCancellation
 
 ## <a name="see-also"></a>Consulte também
 
-[System.Collections.Concurrent]( https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent)
+[System.Collections.Concurrent](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent)
 
 [Visão geral de BlockingCollection](blockingcollection-overview.md)
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

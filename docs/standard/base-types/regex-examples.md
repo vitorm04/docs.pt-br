@@ -3,16 +3,17 @@ title: "Exemplos de expressões regulares"
 description: "Exemplos de expressões regulares"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 232b9f8d-464b-4e40-98bb-d69c32059bc0
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 0a9d960a9a593890b184f6961a5980d53e817e70
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 630a5c9ebd1ca85980d8f64cfe755642aefdbb63
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -43,9 +44,4 @@ Esta seção contém exemplos de código que mostram o uso de expressões regula
 ## <a name="reference"></a>Referência
 
 [System.Text.RegularExpressions](xref:System.Text.RegularExpressions) – Fornece informações de referência de biblioteca de classes para o namespace `System.Text.RegularExpressions` do .NET.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
