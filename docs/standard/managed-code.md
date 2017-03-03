@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 translationtype: Human Translation
-ms.sourcegitcommit: 0013cf5604bfd1e8a16e5ca15577ac81fce49612
-ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
+ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
+ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
+ms.lasthandoff: 01/26/2017
 
 ---
 
@@ -26,7 +27,7 @@ Compare isso à maneira pela qual você executaria um programa C/C++, também ch
 
 Código gerenciado é gravado em uma das linguagens de alto nível que podem ser executadas na plataforma do .NET, como C#, Visual Basic, F# e outros. Quando você compila o código gravado nessas linguagens com seu respectivo compilador, não obtém o código do computador. Você obtém o código de **Linguagem intermediária** que o tempo de execução compila e executa. C++ é a única exceção a essa regra, já que também pode produzir binários nativos e não gerenciados que são executados no Windows.
 
-## <a name="intermediate-language-execution"></a>Linguagem intermediária e execução
+## <a name="intermediate-language--execution"></a>Linguagem intermediária e execução
 
 O que é "Linguagem Intermediária" (ou IL)? É um produto de compilação de código gravado em linguagens .NET de alto nível. Quando você compila o código gravado em uma dessas linguagens, obtém um binário composto de IL. É importante observar que a IL é independente de qualquer linguagem específica executada em tempo de execução; há até mesmo uma especificação separada para que você pode ler se desejar.
 
@@ -36,7 +37,7 @@ A Linguagem intermediária também é chamada CIL (Common Intermediate Language)
 
 ## <a name="unmanaged-code-interoperability"></a>Interoperabilidade de código não gerenciado
 
-Naturalmente, a CLR permite passar os limites entre o mundo gerenciado e o não gerenciado e há muitos códigos que fazem isso, mesmo nas [Bibliotecas de classes base](framework-libraries.md). Isso é chamado de **interoperabilidade** ou apenas **interop**. Essas condições permitiriam, por exemplo, resumir uma biblioteca não gerenciada e chamá-la. No entanto, é importante observar que quando você faz isso, quando o código passa os limites do tempo de execução, o gerenciamento real da execução está novamente em mãos do código não gerenciado e, portanto, se enquadra nas mesmas restrições.
+Naturalmente, a CLR permite passar os limites entre o mundo gerenciado e o não gerenciado e há muitos códigos que fazem isso, mesmo nas [Bibliotecas de classes base](framework-libraries.md). Isso é chamado de **interoperabilidade** ou apenas **interop**. Essas condições permitiriam, por exemplo, resumir uma biblioteca não gerenciada e chamá-la. No entanto, é importante observar que quando você faz isso, quando o código passa os limites do tempo de execução, o gerenciamento real da execução está novamente no código não gerenciado e, portanto, se enquadra nas mesmas restrições.
 
 Semelhante a isso, C# é uma linguagem que permite que você use construções não gerenciadas como ponteiros diretamente no código, utilizando o que é conhecido como **contexto inseguro** que designa um trecho de código para o qual a execução não é gerenciada pela CLR.
 
@@ -45,9 +46,4 @@ Semelhante a isso, C# é uma linguagem que permite que você use construções n
 *   [Visão geral conceitual do .NET Framework](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [Código não seguro e ponteiros](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [Interoperabilidade (Guia de Programação em C#)](https://msdn.microsoft.com/library/ms173184.aspx)
-
-
-
-<!--HONumber=Nov16_HO4-->
-
 

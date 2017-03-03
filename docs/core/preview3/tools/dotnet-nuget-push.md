@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-nuget-push | .NET Core SDK
+title: Comando dotnet-nuget-push | Microsoft Docs
 description: O comando dotnet-nuget-push envia um pacote ao servidor e os publica.
 keywords: dotnet-nuget-push, CLI, comando da CLI, .NET Core
 author: karann-msft
@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: dcc89fd24e23e624c4bcf90a8200b4e655af6dd6
+ms.lasthandoff: 01/21/2017
 
 ---
 
@@ -31,7 +32,7 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comando push usa o servidor e detalhes de credencial encontradas no arquivo de configuração do sistema NuGet ou uma cadeia de arquivos de configuração. Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior). A configuração de padrão do NuGet é obtida ao carregar *%AppData%\NuGet\NuGet.config* (Windows) ou *$HOME/.local/share* (Linux/macOS) e, em seguida, carregar qualquer *nuget.config* ou *.nuget\nuget.config* da raiz da unidade e terminar no diretório atual.
+O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comando push usa o servidor e detalhes de credencial encontradas no arquivo de configuração do sistema NuGet ou uma cadeia de arquivos de configuração. Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior). A configuração de padrão do NuGet é obtida ao carregar *%AppData%\NuGet\NuGet.config* (Windows) ou *$HOME/.local/share* (Linux/macOS) e, em seguida, carregar qualquer *nuget.config* ou *.nuget\nuget.config* da raiz da unidade e terminar no diretório atual.
 
 ## <a name="options"></a>Opções
 
@@ -74,7 +75,7 @@ Faz com que todas as saídas registradas estejam em inglês. Assim como a flexib
 `--config-file <FILE>`
 
 Um arquivo de configuração do NuGet usado especificamente para esse comando, substituindo outros arquivos de configuração localizados pela descoberta de arquivo de configuração padrão e o processo de encadeamento. O caminho pode ser absoluto ou relativo.
-Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior). 
+Para obter mais informações sobre arquivos de configuração, consulte [Configurando o comportamento do NuGet](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior). 
 
 `--verbosity <LEVEL>`
 
@@ -113,9 +114,4 @@ Envia por push todos os arquivos .nupkg no diretório atual à origem de push pa
 Envia por push todos os arquivos .nupkg no diretório atual à origem de push padrão, com detalhamento máximo:
 
 `dotnet nuget push *.nupkg --verbosity detailed`
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

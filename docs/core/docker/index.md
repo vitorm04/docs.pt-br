@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: cae32148-aef4-4e64-a7f0-88072bad4400
 translationtype: Human Translation
-ms.sourcegitcommit: 8eee2127f80736f6f2adb0924a4668f81c4285ad
-ms.openlocfilehash: bcfbe57cf366c599b7f1f8165c2a5169ecc2bd7b
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 7146e08095260361af1263cf79072476664eee23
+ms.lasthandoff: 01/21/2017
 
 ---
 
@@ -23,9 +24,4 @@ Os tutoriais a seguir estão disponíveis aprender mais sobre como usar o Docker
 - [Criando Imagens do Docker para .NET Core Applications](building-net-docker-images.md)
 - [Ferramentas do Visual Studio para Docker](visual-studio-tools-for-docker.md)
 
-Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, sugerimos que você acesse a [documentação do ASP.NET Core](https://docs.asp.net).
-
-
-<!--HONumber=Nov16_HO4-->
-
-
+Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](https://docs.microsoft.com/aspnet/core/).

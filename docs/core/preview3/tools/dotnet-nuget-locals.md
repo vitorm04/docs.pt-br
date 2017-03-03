@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-nuget-locals | .NET Core SDK
+title: Comando dotnet-nuget-locals | Microsoft Docs
 description: "O comando nuget-dotnet-locais limpa ou lista os recursos locais do NuGet, como cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador."
 keywords: dotnet-nuget-locals, CLI, comando da CLI, .NET Core
 author: karann-msft
@@ -11,8 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 08c51ecb4e042254c89f618d6baff1b407af0113
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 5f8c3be091b515553eb0db0ccfaee6bb8c620cff
+ms.lasthandoff: 01/21/2017
 
 ---
 
@@ -93,10 +94,5 @@ Limpa todos os arquivos no diretório local de cache temporário:
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Para obter informações sobre os problemas e erros mais comuns ao usar o comando `dotnet-nuget-locals`, consulte [Gerenciamento do cache do NuGet](https://docs.nuget.org/ndocs/consume-packages/managing-the-nuget-cache).
-
-
-
-<!--HONumber=Nov16_HO3-->
-
+Para obter informações sobre os problemas e erros mais comuns ao usar o comando `dotnet-nuget-locals`, consulte [Gerenciamento do cache do NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache).
 
