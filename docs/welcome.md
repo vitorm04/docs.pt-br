@@ -13,6 +13,7 @@ ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 translationtype: Human Translation
 ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
 ms.openlocfilehash: dac380e7c493abc733c136f022d3634b807d8836
+ms.lasthandoff: 11/05/2016
 
 ---
 
@@ -54,9 +55,4 @@ Muitas partes do .NET são criadas pelos colaboradores de software livre. Você 
 ## <a name="community"></a>Comunidade
 
 Bem-vindo à comunidade do .NET. Você pode juntar-se a outras pessoas que já estão ativas na [Comunidade do .NET](https://www.microsoft.com/net/community) para descobrir as novidades ou pedir ajuda.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
