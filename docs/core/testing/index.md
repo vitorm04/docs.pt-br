@@ -3,16 +3,16 @@ title: Teste de Unidade no .NET Core
 description: Teste de Unidade no .NET Core
 keywords: .NET, .NET Core
 author: ardalis
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 352d4a1fe96b701ebf9e0d60d006cfb9ed77977c
-ms.openlocfilehash: e055475200c55c2e2f890ac63b8b258aeacfae75
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -37,9 +37,4 @@ Saiba mais sobre testes de unidade em projetos do .NET Core:
 Experimente seguir o [passo a passo para criar testes de unidade com xunit e a CLI do .NET](unit-testing-with-dotnet-test.md).
 
 A equipe do XUnit criou um tutorial que mostra [como usar o xunit com o .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
