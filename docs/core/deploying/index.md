@@ -1,24 +1,22 @@
 ---
-title: "Implantação do .NET Core Application"
+title: "Implantação de aplicativos .NET Core | Microsoft Docs"
 description: "Implantação do .NET Core Application"
 keywords: "Implantação do .NET e .NET Core"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/08/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>Implantação do .NET Core Application #
-
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Implantação do Aplicativo .NET Core (Ferramentas do .NET Core RC4)](../preview3/deploying/index.md).
+# <a name="net-core-application-deployment"></a>Implantação do .NET Core Application
 
 Você pode criar dois tipos de implantações de aplicativos do .NET Core: 
 
@@ -50,7 +48,7 @@ Contudo, também há algumas desvantagens:
 
 Implantar uma implantação dependente de estrutura sem dependências de terceiros significa simplesmente compilar, testar e publicar o aplicativo. Um exemplo simples criado em C# ilustra o processo. O exemplo usa o [utilitário dotnet](../tools/dotnet.md) da linha de comando; no entanto, você também pode usar um ambiente de desenvolvimento, como o Visual Studio ou o Visual Studio Code, para compilar, testar e publicar o exemplo.
 
-1. Crie um diretório para seu projeto e, da linha de comando, digite [dotnet new](../tools/dotnet-new.md) para criar um novo projeto de console em C#.
+1. Crie um diretório para seu projeto e, da linha de comando, digite `[dotnet new console](../tools/dotnet-new.md)` para criar um novo projeto de console em C#.
 
 2. Abra o arquivo `Program.cs` em um editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
@@ -93,9 +91,9 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 4. Crie uma versão de depuração do seu aplicativo usando o comando [dotnet build](../tools/dotnet-build.md).
 
-5. Depois de ter depurado e testado o programa, você poderá criar os arquivos a serem implantados com seu aplicativo usando o comando `dotnet publish -f netcoreapp1.0 -c release`. Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo.
+5. Depois de ter depurado e testado o programa, você poderá criar os arquivos a serem implantados com seu aplicativo usando o comando `dotnet publish -f netcoreapp1.1 -c release`. Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo.
 
-   Os arquivos resultantes são colocados em um diretório chamado `publish` que está em um subdiretório `.\bin\release\netcoreapp1.0` do seu projeto.
+   Os arquivos resultantes são colocados em um diretório chamado `publish` que está em um subdiretório `.\bin\release\netcoreapp1.1` do seu projeto.
 
 6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
@@ -107,17 +105,15 @@ Além dos binários do aplicativo, o instalador deverá também agrupar o instal
 
 Implantar uma implantação dependentes de estrutura com uma ou mais dependências de terceiros envolve três etapas adicionais antes de executar o comando `dotnet restore`:
 
-1. Adicione referências a quaisquer bibliotecas de terceiros à seção `dependencies` de seu arquivo `project.json`. A seção `dependencies` a seguir usa Json.NET como uma biblioteca de terceiros.
+1. Adicione referências a quaisquer bibliotecas de terceiros à seção `<ItemGroup>` de seu arquivo `csproj`. A seção `<ItemGroup>` a seguir mostra o `<ItemGroup>` contendo as dependências no projeto padrão com Json.NET como uma biblioteca de terceiros.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": {
-        "type": "platform",
-        "version": "1.0.0"
-      },
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
+
+ Observe que a dependência do SDK permanece no exemplo acima. Isso ocorre na concepção, pois essa dependência é exigida para restaurar todos os destinos necessários a fim de permitir que as ferramentas de linha de comando funcionem.  
 
 2. Se você ainda não o fez, baixe o pacote NuGet contendo a dependência de terceiros. Para baixar o pacote, execute o comando `dotnet restore` depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
 
@@ -143,11 +139,11 @@ Ela também apresenta algumas desvantagens:
 
 - Implantar vários aplicativos .NET Core autocontidos em um sistema pode consumir um volume significativo de espaço em disco, visto que cada aplicativo duplica os arquivos do .NET Core.
 
-### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> Implantando uma implantação autocontida simples ###
+### <a name="simpleSelf"></a> Implantando uma implantação autocontida simples ###
 
-Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, modificação do arquivo project.json, compilação, testes e publicação do aplicativo.  Um exemplo simples criado em C# ilustra o processo. O exemplo usa o utilitário `dotnet` da linha de comando; no entanto, você também pode usar um ambiente de desenvolvimento, como o Visual Studio ou o Visual Studio Code, para compilar, testar e publicar o exemplo.
+Implantar uma implantação autocontida sem dependências de terceiros inclui a criação do projeto, modificação do arquivo csproj, compilação, testes e publicação do aplicativo.  Um exemplo simples criado em C# ilustra o processo. O exemplo usa o utilitário `dotnet` da linha de comando; no entanto, você também pode usar um ambiente de desenvolvimento, como o Visual Studio ou o Visual Studio Code, para compilar, testar e publicar o exemplo.
 
-1. Crie um diretório para seu projeto e, da linha de comando, digite `dotnet new` para criar um novo projeto de console em C#.
+1. Crie um diretório para seu projeto e, da linha de comando, digite `dotnet new console` para criar um novo projeto de console em C#.
 
 2. Abra o arquivo `Program.cs` em um editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
@@ -185,121 +181,72 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
     }
     ```
 
-3. Abra o arquivo `project.json` e, na seção `frameworks`, remova a linha a seguir:
+3. Crie uma marca `<RuntimeIdentifiers>` na seção `<PropertyGroup>` em seu arquivo `csproj` que define as plataformas de destino do seu aplicativo e especifique o identificador de tempo de execução de cada plataforma que você selecionar. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
-   ```json
-   "type": "platform",
-   ```
-A seção Estrutura deverá aparecer como mostrado a seguir depois de você modificá-la:
-
-    ```json
-    "frameworks": {
-      "netcoreapp1.0": {
-        "dependencies": {
-          "Microsoft.NETCore.App": {
-             "version": "1.0.0"
-          }
-        }
-      }
-    }
+    ```xml
+        <PropertyGroup>
+          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        </PropertyGroup>
     ```
-Remover o atributo `"type": "platform"` indica que a estrutura é fornecida como um conjunto de componentes locais para nosso aplicativo, em vez de um pacote da plataforma de todo o sistema.
+Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Além disso, observe que o elemento `<RuntimeIdentifier>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo `csproj`. Um arquivo de exemplo completo `csproj` aparece mais adiante nesta seção.
 
-4. Crie uma seção `runtimes` em seu arquivo `project.json` que define as plataformas de destino do seu aplicativo e especifique o identificador de tempo de execução de cada plataforma que você selecionar. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. Por exemplo, a seção `runtimes` a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.10 de 64 bits.
+4. Execute o comando `dotnet restore` para restaurar as dependências especificadas em seu projeto.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
-    ```
-Observe que você também precisa adicionar uma vírgula para separar a seção `runtimes` da seção anterior.
-Um arquivo de exemplo completo `project.json` aparece mais adiante nesta seção.
-
-6. Execute o comando `dotnet restore` para restaurar as dependências especificadas em seu projeto.
-
-7. Crie versões de depuração do seu aplicativo em cada uma das plataformas de destino usando o comando `dotnet build`. A menos que você especifique o identificador de tempo de execução que gostaria de criar, o comando `dotnet build` cria uma compilação apenas para a ID de tempo de execução do sistema atual. Você pode criar seu aplicativo para ambas as plataformas de destino com os comandos:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-As versões de depuração do seu aplicativo para cada plataforma serão encontradas no subdiretório `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` do projeto.
-
-8. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
+5. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
-Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netcoreapp1.0\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netcoreapp1.1\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
-9. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
+6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
 Os arquivos publicados podem ser implantados como você desejar. Por exemplo, você pode empacotá-las em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. 
 
-Veja a seguir o arquivo `project.json` completo para este projeto.
+Veja a seguir o arquivo `csproj` completo para este projeto.
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "version": "1.0.0"
-        }
-      }
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+</Project>
 ```
+
 
 ### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>Implantando uma implantação autocontida com dependências de terceiros ###
 
 Implantar uma implantação autocontida com uma ou mais dependências de terceiros requer adicionar a dependência de terceiros:
 
-1. Adicione referências a quaisquer bibliotecas de terceiros à seção `dependencies` de seu arquivo `project.json`. A seção `dependencies` a seguir usa Json.NET como uma biblioteca de terceiros.
+1. Adicione referências a quaisquer bibliotecas de terceiros à seção `<ItemGroup>` de seu arquivo `csproj`. A seção `<ItemGroup>` a seguir usa Json.NET como uma biblioteca de terceiros.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": "1.0.0",
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
 2. Se você ainda não o fez, baixe o pacote NuGet que contém a dependência de terceiros para seu sistema. Para disponibilizar a dependência para seu aplicativo, execute o comando `dotnet restore` depois de adicionar a dependência. Como a dependência é resolvida fora do cache local do NuGet no momento da publicação, ela deve estar disponível no seu sistema.
 
-Veja a seguir o arquivo project.json completo para este projeto:
+Veja a seguir o arquivo csproj completo para este projeto:
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0",
-    "Newtonsoft.Json": "9.0.1"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+</Project>
 ```
 
 Quando você implanta seu aplicativo, todas as dependências de terceiros usadas em seu aplicativo também contém os arquivos do aplicativo. Bibliotecas de terceiros não precisam existir anteriormente no sistema no qual o aplicativo está em execução.
@@ -308,92 +255,68 @@ Observe que você só pode implantar uma implantação autocontida com uma bibli
 
 ### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>Implantar uma implantação autocontida com menor superfície ###
 
-Se a disponibilidade de espaço de armazenamento adequado nos sistemas de destino for um problema em potencial, você poderá reduzir a superfície geral do seu aplicativo excluindo alguns componentes do sistema. Para fazer isso, você deve definir explicitamente os componentes do .NET Core que seu aplicativo inclui no arquivo project.json.
+Se a disponibilidade de espaço de armazenamento adequado nos sistemas de destino for um problema em potencial, você poderá reduzir a superfície geral do seu aplicativo excluindo alguns componentes do sistema. Para fazer isso, você deve definir explicitamente os componentes do .NET Core que seu aplicativo inclui no arquivo csproj.
 
-Para criar uma implantação autocontida com uma superfície menor, comece seguindo as duas primeiras etapas para criar uma implantação autocontida. Após executar o comando `dotnet new` e adicionar o código-fonte C# ao aplicativo, faça o seguinte:
+Para criar uma implantação autocontida com uma superfície menor, comece seguindo as duas primeiras etapas para criar uma implantação autocontida. Após executar o comando `dotnet new console` e adicionar o código-fonte C# ao aplicativo, faça o seguinte:
 
-1. Aba o arquivo `project.json` e substitua o código na seção `frameworks` pelo seguinte:
+1. Abra o arquivo `csproj` e substitua o elemento `<TargetFramework>` pelo seguinte:
 
-    ```json
-    "frameworks": {
-      "netstandard1.6": { }
-    }
-    ```
-Isso faz duas coisas:
+  ```xml
+  <TargetFramework>netstandard1.6</TargetFramework>
+  ```
+Essa operação indica que, em vez de usar toda a estrutura `netcoreapp1.0`, que inclui o .NET Core CLR, a .NET Core Library e uma série de outros componentes do sistema, nosso aplicativo usa somente a .NET Standard Library.
 
-    * Indica que, em vez de usar toda a estrutura `netcoreapp1.0`, que inclui o .NET Core CLR, a .NET Core Library e uma série de outros componentes do sistema, nosso aplicativo usa somente a .NET Standard Library.
+2. Substitua o `<ItemGroup>` contendo referências do pacote pelo seguinte:
 
-    * Remover o atributo `"type": "platform"` indica que a estrutura é fornecida como um conjunto de componentes locais para nosso aplicativo, em vez de um pacote da plataforma de todo o sistema.
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+  ```
 
-2. Substitua a seção `dependencies` pelo seguinte:
-
-    ```json
-    "dependencies": {
-      "NETStandard.Library": "1.6.0",
-      "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-      "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-    },
-    ```
    Isso define os componentes do sistema usados pelo nosso aplicativo. Os componentes do sistema empacotados com nosso aplicativo incluem a .NET Standard Library, o tempo de execução do .NET Core e o host do .NET Core. Isso gera uma implantação autocontida com menor superfície.
 
-3. Como feito no exemplo [Implantar uma implantação autocontida simples](#simpleSelf), crie uma seção `runtimes` no seu arquivo `project.json` que define as plataformas de destino do seu aplicativo e especifique o identificador de tempo de execução de cada plataforma de destino. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. Por exemplo, a seção `runtimes` a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.10 de 64 bits.
+3. Como feito no exemplo [Implantar uma implantação autocontida simples](#simpleSelf), crie um elemento `<RuntimeIdentifiers>` em uma `<PropertyGroup>` no seu arquivo `csproj` que define as plataformas de destino do seu aplicativo e especifique o identificador de tempo de execução de cada plataforma de destino. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução. Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
+    ```xml
+    <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+    </PropertyGroup>
     ```
-Observe que você também precisa adicionar uma vírgula para separar a seção `runtimes` da seção anterior.
-Um arquivo de exemplo completo `project.json` aparece mais adiante nesta seção.
+    
+   Um arquivo de exemplo completo `csproj` aparece mais adiante nesta seção.
 
 4. Execute o comando `dotnet restore` para restaurar as dependências especificadas em seu projeto.
 
-5. Crie versões de depuração do seu aplicativo em cada uma das plataformas de destino usando o comando `dotnet build`. A menos que você especifique o identificador de tempo de execução que gostaria de criar, o comando `dotnet build` cria uma compilação apenas para a ID de tempo de execução do sistema atual. Você pode criar seu aplicativo para ambas as plataformas de destino com os comandos:
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-
-6. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
+5. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
 Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netstandard1.6\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
-7. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
+6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
 Os arquivos publicados podem ser implantados como você desejar. Por exemplo, você pode empacotá-las em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. 
 
-Veja a seguir o arquivo `project.json` completo para este projeto.
+Veja a seguir o arquivo `csproj` completo para este projeto.
 
-```json
-   {
-     "version": "1.0.0-*",
-     "buildOptions": {
-       "debugType": "portable",
-       "emitEntryPoint": true
-     },
-     "dependencies": {
-       "NETStandard.Library": "1.6.0",
-       "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-       "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-     },
-     "frameworks": {
-       "netstandard1.6": { }
-     },
-     "runtimes": {
-       "win10-x64": {},
-       "osx.10.10-x64": {}
-     }
-   }
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+</Project>
 ```
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

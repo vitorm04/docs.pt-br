@@ -4,22 +4,20 @@ description: "Uma visão geral do que é a CLI (Interface de Linha de Comando) e
 keywords: CLI, ferramentas da CLI, .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/06/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 4e3137d8506342662d145481d5e9fde1d53b9ba3
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>Ferramentas da interface de linha de comando do .NET Core
-
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão de Ferramentas do .NET Core RC4, consulte o tópico [Ferramentas de interface de linha de comando do .NET Core (Ferramentas do .NET Core RC4)](../preview3/tools/index.md).
+# <a name="net-core-command-line-interface-tools-net-core-sdk-10-tools"></a>Ferramentas da interface de linha de comando do .NET Core (Ferramentas do SDK 1.0 do .NET CORE)
 
 A CLI (interface de linha de comando) do .NET Core é uma nova cadeia de ferramentas de plataforma cruzada fundamental para desenvolver aplicativos .NET Core. Ela é “fundamental”, pois é a camada principal sobre quais outras ferramentas de nível mais elevado, como IDEs (Ambientes de Desenvolvimento Integrado), editores e orquestradores de build, se baseiam. 
 
@@ -38,6 +36,7 @@ Por padrão, a CLI será instalada “lado a lado” (SxS). Isso significa que v
 Os comandos a seguir são instalados por padrão:
 
 * [new](dotnet-new.md)
+* [migrate](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -52,7 +51,7 @@ Também há uma maneira de importar mais comandos por projeto, bem como de adici
 Antes de entrarmos em mais detalhes, vejamos como é trabalhar com a CLI em uma exibição de 10.000 pés. O exemplo a seguir utiliza vários comandos da instalação padrão da CLI para inicializar um novo aplicativo de console simples, restaurar as dependências, compilar o aplicativo e executá-lo. 
 
 ```console
-dotnet new
+dotnet new console
 dotnet restore
 dotnet build --output /stuff
 dotnet /stuff/new.dll
@@ -88,8 +87,11 @@ A CLI habilita que os aplicativos sejam portáteis de duas maneiras principais:
 
 Você pode aprender mais sobre ambos os tipos no tópico [Implantação de aplicativos .NET Core](../deploying/index.md). 
 
-## <a name="migration-from-dnx"></a>Migração do DNX
-Se você usava o DNX no .NET Core 1.0 RC1, você deve estar imaginando o que aconteceu com ele e como essas novas ferramentas se relacionam com as ferramentas do DNX. Em resumo, as ferramentas do DNX foram substituídas pelas ferramentas do .NET Core. Se você tiver projetos existentes ou apenas imaginar qual seria o mapeamento dos comandos, veja o tópico [Migração de DNX para CLI](../migrating-from-dnx.md) para obter todos os detalhes. 
+## <a name="migration-from-projectjson"></a>Migração do project.json
+Se você tiver usado as ferramentas da Visualização 2 e os projetos *project.json*, será possível consultar os documentos de comando [dotnet migrate](dotnet-migrate.md) para se familiarizar com o comando e saber como migrar seu projeto. 
+
+> [!NOTE]
+> Atualmente, o comando `dotnet migrate` não migra os arquivos *project.json* da pré-visualização 2. 
 
 ## <a name="extensibility"></a>Extensibilidade
 É claro que nem todas as ferramentas que você podia usar no seu fluxo de trabalho fará parte das ferramentas principais da CLI. No entanto, a CLI do .NET Core tem um modelo de extensibilidade que permite especificar ferramentas adicionais para seus projetos. Você pode saber mais no tópico [Modelo de extensibilidade da CLI do .NET Core](extensibility.md).
@@ -98,9 +100,4 @@ Se você usava o DNX no .NET Core 1.0 RC1, você deve estar imaginando o que aco
 Essa foi uma breve visão geral dos recursos mais importantes da CLI. Você pode saber mais sobre isso acessando a referência e os tópicos conceituais neste site. Também há outros recursos que você pode usar:
 * Repositório do GitHub [dotnet/CLI](https://github.com/dotnet/cli/)
 * [Instruções de introdução](https://aka.ms/dotnetcoregs/)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
