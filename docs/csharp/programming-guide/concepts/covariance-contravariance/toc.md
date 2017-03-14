@@ -1,0 +1,7 @@
+# [Covariância e Contravariância](index.md)
+## [Variação em Interfaces Genéricas](variance-in-generic-interfaces.md)
+### [Criando Interfaces Genéricas Variáveis](creating-variant-generic-interfaces.md)
+### [Usando Variação em Interfaces para Coleções Genéricas](using-variance-in-interfaces-for-generic-collections.md)
+## [Variação em Delegações](variance-in-delegates.md)
+### [Usando Variação em Delegações](using-variance-in-delegates.md)
+### [Usando Variação para Delegações Genéricas Func e Action](using-variance-for-func-and-action-generic-delegates.md)
