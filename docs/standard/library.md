@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
-ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -110,7 +111,7 @@ O .NET Standard Library é compatível com um subconjunto de perfis de PCL. O .N
 
 Compatibilidade de PCL baseada em perfil é fornecida pelo pacote NuGet. [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility). Essa dependência é necessária ao referenciar pacotes NuGet que contêm PCLs baseadas em perfil.
 
-PCLs baseadas em perfil e empacotadas como `netstandard` são mais fáceis de consumir do que PCLs baseadas em perfil empacotadas normalmente em project.json. `netstandard` o empacotamento é compatível com os usuários existentes.
+PCLs baseadas em perfil e empacotadas como `netstandard` são mais fáceis de serem consumidas do que PCLs baseadas em perfil tipicamente empacotadas. `netstandard` o empacotamento é compatível com os usuários existentes.
 
 Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standard: 
 
@@ -131,9 +132,4 @@ Você pode ver o conjunto de perfis PCL que são compatíveis com o .NET Standar
 ## <a name="targeting-net-standard-library"></a>Direcionamento do .NET Standard Library
 
 Você pode [criar .NET Standard Libraries](../core/tutorials/libraries.md) usando uma combinação de `netstandard` estrutura e metapacote NETStandard.Library. Você pode ver exemplos de [direcionamento do .NET Standard Library com as ferramentas do .NET Core](../core/packages.md).
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

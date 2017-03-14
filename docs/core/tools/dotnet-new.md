@@ -4,68 +4,120 @@ description: "O comando dotnet-new cria novos projetos .NET Core no diretório a
 keywords: dotnet-new, CLI, comando da CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/12/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
+ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: a49fe94ca8f678c614fb7f58767693c73e34c737
+ms.sourcegitcommit: 99254f84873003496ee00214d55ff908f9fd47d3
+ms.openlocfilehash: f0df2efe732912abbdb2d63e918b7ee1a4178b07
+ms.lasthandoff: 03/07/2017
 
 ---
-
 #<a name="dotnet-new"></a>dotnet-new
 
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [dotnet-new (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-new.md).
-
 ## <a name="name"></a>Nome
-`dotnet-new` – Cria um novo projeto do .NET Core no diretório atual.
+`dotnet-new` – cria um novo projeto, arquivo de configuração ou solução com base no modelo especificado.
 
 ## <a name="synopsis"></a>Sinopse
-`dotnet new [--help] [--type] [--lang]`
+```
+dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template arguments]
+dotnet new <TEMPLATE> [-l|--list]
+dotnet new [-all|--show-all]
+dotnet new [-h|--help]
+```
 
 ## <a name="description"></a>Descrição
-O comando `dotnet new` fornece uma maneira conveniente de inicializar um projeto .NET Core válido código-fonte de exemplo para experimentar o conjunto de ferramentas da CLI (Interface de Linha de Comando). 
+O comando `dotnet new` fornece uma maneira conveniente de inicializar um projeto .NET Core válido código-fonte de exemplo para experimentar o conjunto de ferramentas da CLI (Interface de linha de comando). 
 
-Esse comando é invocado no contexto de um diretório. Quando invocado, o comando resultará na remoção de dois artefatos principais do diretório atual: 
+Quando invocado, o comando chama o [mecanismo de modelo](https://github.com/dotnet/templating) para criar os artefatos em disco com base no modelo e nas opções especificadas.
 
-1. Um arquivo `Program.cs` (ou `Program.fs`) arquivo que contém um programa de exemplo “Hello World”.
-2. Um arquivo `project.json` válido.
+## <a name="arguments"></a>Arguments
 
-Depois disso, o projeto estará pronto para ser compilado e/ou editado com mais detalhes. 
+`<TEMPLATE>`
+
+O modelo para o qual criar uma instância quando o comando é invocado. Cada modelo pode ter opções específicas que podem ser passadas. Para obter mais informações, consulte [Opções de modelo](#template-options).
+
+O comando contém uma lista padrão de modelos. Use `dotnet new -all` para ver todos eles.
+
+A tabela a seguir mostra os modelos que vêm pré-instalados com o SDK. O idioma padrão do modelo é mostrado entre parênteses, como `[C#]`.
+
+|Descrição do modelo  | Nome do modelo  | Linguagens |
+|----------------------|----------------|-----------|
+| Aplicativo de console  | console        | [C#], F#  |
+| Biblioteca de classes        | classlib       | [C#], F#  |
+| Projeto de teste de unidade    | mstest         | [C#], F#  |
+| Projeto de teste de xUnit   | xunit          | [C#], F#  |
+| ASP.NET Core vazio   | web            | [C#]      |
+| Aplicativo Web ASP.NET Core | mvc            | [C#], F#  |
+| API Web do ASP.NET Core | webapi         | [C#]      |
+| Configuração do NuGet         | nugetconfig    |           |
+| Configuração da Web           | webconfig      |           |
+| Arquivo de solução        | sln            |           |
 
 ## <a name="options"></a>Opções
 
 `-h|--help`
 
-Imprime uma ajuda breve para o comando.  
+Imprime uma ajuda para o comando. Ele pode ser invocado para o próprio comando `dotnet new` ou para qualquer modelo, como `dotnet new mvc --help`.
 
-`-l|--lang <C#|F#>`
+`-l|--list`
 
-Linguagem do projeto. Assume o padrão de `C#`. Outros valores válidos são `csharp`, `fsharp`, `cs` e `fs`.
+Lista os modelos que contêm o nome especificado. Se for invocado para o próprio comando `dotnet new`, listará os possíveis modelos a serem usados no diretório especificado.
+Por exemplo, se o diretório já contiver um projeto, ele não listará todos os modelos de projeto.
 
-`-t|--type`
+`-lang|--language <C#|F#>`
 
-Tipo do projeto. Os valores válidos para C# são `console`, `web`, `lib` e `xunittest`, e para F# apenas `console` é válido. 
+A linguagem do modelo a ser criada. A linguagem aceita varia de acordo com o modelo (consulte os padrões na seção [Argumentos](#arguments)). Não é válida para alguns modelos.
+
+`-n|--name <OUTPUT_NAME>`
+
+O nome da saída que está sendo criada. Se nenhum nome for especificado, o nome do diretório atual será usado.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Local para colocar a saída gerada. O padrão é o diretório atual.
+
+`-all|--show-all`
+
+Mostra todos os modelos de um tipo específico de projeto durante a execução no contexto do comando `dotnet new` isolado. Durante a execução no contexto de um modelo específico, como `dotnet new web -all`, `-all` é interpretado como um sinalizador de criação de força. Isso poderá ocorrer quando o diretório de saída já contiver um projeto.
+
+## <a name="template-options"></a>Opções de modelo
+Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais modelos têm as seguintes opções:
+
+**console, xunit, mstest, web, webapi **
+
+`-f|--framework` – especifica a qual estrutura se destina. Valores: netcoreapp1.0 ou netcoreapp1.1 (Padrão: netcoreapp1.0)
+
+**mvc**
+
+`-f|--framework` – especifica a qual estrutura se destina. Valores: netcoreapp1.0 ou netcoreapp1.1 (Padrão: netcoreapp1.0)
+
+`-au|--authentication` – o tipo de autenticação usado. Valores: Nenhum ou Individual (Padrão: Nenhum)
+
+`-uld|--use-local-db` – Se deve usar ou não o LocalDB em vez do SQLite. Valores: verdadeiro ou falso (Padrão: falso)
+
+**classlib**
+
+`-f|--framework` – especifica a qual estrutura se destina. Valores: netcoreapp1.0, netcoreapp1.1 e netstandard1.0 – 1.6 (Padrão: netstandard1.4).
 
 ## <a name="examples"></a>Exemplos
 
-Crie um projeto de aplicativo de console C# no diretório atual:
-
-`dotnet new` ou `dotnet new --lang c#` 
-   
 Crie um projeto de aplicativo de console F# no diretório atual:
 
-`dotnet new --lang f#`
-  
-Crie um novo projeto de aplicativo C# do ASP.NET Core no diretório atual:
+`dotnet new console -lang f#` 
+   
+Crie um novo projeto de aplicativo de MVC C# do ASP.NET Core no diretório atual sem autenticação destinado ao .NET Core 1.0:  
 
-`dotnet new -t web`
+`dotnet new mvc -au None -f netcoreapp1.0`
+ 
+Crie um novo aplicativo XUnit destinado ao .NET Core 1.1:
 
+`dotnet new xunit --Framework netcoreapp1.1`
 
-<!--HONumber=Feb17_HO2-->
+Lista todos os modelos disponíveis para o MVC:
 
+`dotnet new mvc -l`
 

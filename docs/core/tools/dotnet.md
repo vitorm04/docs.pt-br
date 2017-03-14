@@ -4,37 +4,38 @@ description: "Saiba mais sobre o comando dotnet (o driver genérico para as ferr
 keywords: dotnet, CLI, comandos da CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
+ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: a6a4bc5dad16bb1455fd8f7bc6a5c3609a06b88a
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: e3eedff7d98245bd63d758236840568eabd05445
+ms.lasthandoff: 03/07/2017
 
 ---
-
-#<a name="dotnet-command"></a>Comando dotnet
-
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Comando dotnet (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet.md).
+# <a name="dotnet-command"></a>Comando dotnet
 
 ## <a name="name"></a>Nome
 
-dotnet – Driver geral para executar os comandos da linha de comando
+`dotnet` – driver geral para executar os comandos da linha de comando
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet [--version] [--verbose] [--info] [command] [arguments] [--help]`
+```
+dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose]
+dotnet [-h|--help]
+```
 
 ## <a name="description"></a>Descrição
-`dotnet` é um driver genérico para a cadeia de ferramentas da CLI (Interface de Linha de Comando). Invocado por conta própria, ele fornecerá breve instruções de uso. 
 
-Cada recurso específico é implementado como um comando. Para usar o recurso, o comando é especificado após `dotnet`, como [`dotnet build`](dotnet-build.md). Todos os argumentos após o comando são seus próprios argumentos. 
+`dotnet` é um driver genérico para a cadeia de ferramentas da CLI (Interface de Linha de Comando). Invocado por conta própria, ele fornecerá breve instruções de uso.
 
-A única vez que `dotnet` é usado como um comando em si é ao executar aplicativos portáteis. Basta especificar um DLL de aplicativo portátil após o verbo `dotnet` para executar o aplicativo.    
+Cada recurso específico é implementado como um comando. Para usar o recurso, o comando é especificado após `dotnet`, como [`dotnet build`](dotnet-build.md). Todos os argumentos após o comando são seus próprios argumentos.
+
+A única vez que `dotnet` é usado como um comando em si é ao executar aplicativos portáteis. Basta especificar um DLL de aplicativo portátil após o verbo `dotnet` para executar o aplicativo.
 
 ## <a name="options"></a>Opções
 
@@ -42,56 +43,74 @@ A única vez que `dotnet` é usado como um comando em si é ao executar aplicati
 
 Habilita a saída detalhada.
 
+`-d|--diagnostics`
+
+Habilita a saída de diagnóstico.
+
 `--version`
 
 Imprime a versão das ferramentas de CLI.
 
 `--info`
 
-Imprime informações mais detalhadas sobre as ferramentas de CLI, como o sistema operacional atual, para confirmar SHA para a versão, etc. 
+Imprime informações mais detalhadas sobre as ferramentas de CLI, como o sistema operacional atual, para confirmar SHA para a versão, etc.
 
 `-h|--help`
 
-Imprime uma ajuda breve para o comando. Se estiver usando apenas `dotnet`, ele também imprimirá uma lista de comandos disponíveis.  
+Imprime uma ajuda breve para o comando. Se estiver usando apenas `dotnet`, ele também imprimirá uma lista de comandos disponíveis.
 
 ## <a name="dotnet-commands"></a>Comandos dotnet
 
 Os comandos a seguir existem para dotnet:
 
 * [dotnet-new](dotnet-new.md)
-   * Inicializa um projeto de aplicativo de console C# ou F#.
+  * Inicializa um projeto do C# ou F# de um modelo especificado.
 * [dotnet-restore](dotnet-restore.md)
-  * Restaura as dependências para um determinado aplicativo. 
+  * Restaura as dependências para um determinado aplicativo.
 * [dotnet-build](dotnet-build.md)
   * Compila um aplicativo .NET Core.
 * [dotnet-publish](dotnet-publish.md)
-   * Publica um aplicativo portátil ou autocontido .NET.
+  * Publica um aplicativo portátil ou autocontido .NET.
 * [dotnet-run](dotnet-run.md)
-   * Executa o aplicativo na origem.
+  * Executa o aplicativo na origem.
 * [dotnet-test](dotnet-test.md)
-   * Executa testes usando um executor de testes especificado no project.json.
+  * Executa testes usando um executor de testes especificado no project.json.
 * [dotnet-pack](dotnet-pack.md)
-   * Cria um pacote NuGet do seu código.
+  * Cria um pacote NuGet do seu código.
+* [dotnet-migrate](dotnet-migrate.md)
+  * Migra um projeto válido da Visualização 2 para um projeto do SDK 1.0 do .NET Core.
+* [dotnet-msbuild](dotnet-msbuild.md)
+  * Oferece acesso à linha de comando do MSBuild.
+* [dotnet-clean](dotnet-clean.md)
+  * Limpa as saídas do build.
+* [dotnet-sln](dotnet-sln.md)
+  * Opções para adicionar, remover e listar projetos em um arquivo de solução.
+* Comandos de modificação de projeto
+  * Referências – adicione, remova e liste as referências projeto a projeto.
+    * [Referência dotnet-add](dotnet-add-reference.md)
+    * [Referência dotnet-remove](dotnet-remove-reference.md)
+    * [Referência dotnet-list](dotnet-list-reference.md)
+  * Pacotes – adicione e remova pacotes NuGet de um projeto.
+    * [Pacote dotnet-add](dotnet-add-package.md)
+    * [Pacote dotnet-remove](dotnet-remove-package.md)
 
 ## <a name="examples"></a>Exemplos
 
 Inicialize um aplicativo de console .NET Core de exemplo que pode ser compilado e executado:
 
-`dotnet new`
+`dotnet new console`
 
 Restaure as dependências para um determinado aplicativo:
 
 `dotnet restore`
 
-Compile um projeto e suas dependências em um determinado diretório: 
+Compile um projeto e suas dependências em um determinado diretório:
 
 `dotnet build`
 
-Execute um aplicativo portátil chamado `myapp.dll`:
+Execute um aplicativo portátil chamado `myapp.dll`: `dotnet myapp.dll`
 
-`dotnet myapp.dll`
-
-## <a name="environment"></a>Ambiente 
+## <a name="environment"></a>Ambiente
 
 `DOTNET_PACKAGES`
 
@@ -104,8 +123,3 @@ Especifica o local do índice de manutenção a ser usado pelo host compartilhad
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e enviados para a Microsoft. `true` para recusar o recurso de telemetria (valores verdadeiro, 1 ou sim aceito); caso contrário, `false` (valores falso, 0 ou não aceito). Se não estiver definido, o padrão será `false`, ou seja, o recurso de telemetria é ativado.
-
-
-<!--HONumber=Feb17_HO2-->
-
-

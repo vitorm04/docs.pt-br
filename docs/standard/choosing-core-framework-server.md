@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
-ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
+ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
+ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
+ms.lasthandoff: 02/23/2017
 
 ---
 
@@ -53,7 +54,7 @@ Você pode usar muitas plataformas de infraestrutura. Para sistemas de microsser
 
 ### <a name="containers"></a>Contêineres
 
-Contêineres são usados em conjunto com uma arquitetura de microsserviços, embora também possam ser usados para colocar em contêineres aplicativos Web ou serviços que sigam qualquer padrão de arquitetura. Você poderá usar os contêineres do .NET Framework para Windows, mas a natureza leve e a modularidade do .NET Core o torna perfeito para contêineres.  Ao criar e implantar um contêiner, o tamanho da imagem é muito menor com o .NET Core do que com o .NET Framework.  Como ele é multiplataforma, é possível implantar aplicativos de servidor para contêineres do Docker do Linux, por exemplo.
+Contêineres são usados em conjunto com uma arquitetura de microsserviços, embora também possam ser usados para colocar em contêineres aplicativos Web ou serviços que sigam qualquer padrão de arquitetura. Você poderá usar os contêineres do .NET Framework para Windows, mas a natureza leve e a modularidade do .NET Core o torna perfeito para contêineres. Ao criar e implantar um contêiner, o tamanho de sua imagem é muito menor com o .NET Core do que com o .NET Framework. Como ele é multiplataforma, é possível implantar aplicativos de servidor para contêineres do Docker do Linux, por exemplo.
 
 Você pode hospedar contêineres de Docker em sua própria infraestrutura do Windows ou Linux, ou usar um serviço de nuvem como [Serviço de Contêiner do Azure](https://azure.microsoft.com/services/container-service/), que pode gerenciar, organizar e dimensionar seu aplicativo baseado em contêiner na nuvem.
 
@@ -107,9 +108,4 @@ Algumas plataformas de terceiros ou da Microsoft não oferecem suporte a .NET Co
 * [Portabilidade do .NET Framework para .NET Core](../core/porting/index.md)
 * [.NET Framework no Guia do Docker](../framework/index.md)
 * [Visão Geral dos Componentes .NET](components.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 
