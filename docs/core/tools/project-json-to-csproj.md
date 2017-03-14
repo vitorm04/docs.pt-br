@@ -97,8 +97,8 @@ Também é possível usar a propriedade `Version`, mas isso poderá substituir a
 
 ```xml
 <PropertyGroup>
-  <Authors>Anne;Bob<Authors>
-  <Company>Contoso<Company>
+  <Authors>Anne;Bob</Authors>
+  <Company>Contoso</Company>
   <NeutralLanguage>en-US</NeutralLanguage>
   <AssemblyTitle>My library</AssemblyTitle>
   <Description>This is my library.
