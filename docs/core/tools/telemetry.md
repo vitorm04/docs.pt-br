@@ -39,11 +39,11 @@ Comandos do .NET Core (telemetria desabilitada):
 - `dotnet restore`
 - `dotnet run`
 
-##<a name="behavior"></a>Comportamento
+## <a name="behavior"></a>Comportamento
 
 O recurso de telemetria das Ferramentas do .NET Core é habilitado por padrão. Você pode recusar o recurso de telemetria definindo uma variável de ambiente DOTNET_CLI_TELEMETRY_OPTOUT (por exemplo, `export` no macOS/Linux e `set` no Windows) como verdadeiro (por exemplo, “true” ou 1).
 
-##<a name="data-points"></a>Pontos de Dados
+## <a name="data-points"></a>Pontos de Dados
 
 O recurso coleta as seguintes partes de dados:
 
@@ -57,7 +57,7 @@ O recurso coleta as seguintes partes de dados:
 
 O recurso não coletará dados pessoais como nomes de usuário ou emails. Ele não verificará seu código e extrairá os dados de nível de projeto que podem ser considerados confidenciais, como nome, repositório ou autor (se forem definidos no seu project.json). Desejamos saber como as ferramentas são usadas, não o que você está criando com elas. Se você encontrar dados confidenciais que estão sendo coletados, isso será um bug. [Relate um problema](https://github.com/dotnet/cli/issues) e ele será corrigido.
 
-##<a name="license"></a>Licença
+## <a name="license"></a>Licença
 
 A distribuição da Microsoft do .NET Core é licenciada com o [EULA da MICROSOFT .NET LIBRARY](https://aka.ms/dotnet-core-eula). Isso inclui a seção “DADOS” impressa novamente abaixo para habilitar a telemetria.
 
@@ -97,3 +97,4 @@ A command is running to initially populate your local package cache, to
 improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
+
