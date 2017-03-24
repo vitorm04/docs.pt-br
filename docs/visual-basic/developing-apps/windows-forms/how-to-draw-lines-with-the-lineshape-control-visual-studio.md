@@ -62,7 +62,7 @@ Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.LineShape>controle para
 Imports Microsoft.VisualBasic.PowerPacks  
 ```  
   
-```cs  
+```csharp  
 using Microsoft.VisualBasic.PowerPacks;  
 ```  
   

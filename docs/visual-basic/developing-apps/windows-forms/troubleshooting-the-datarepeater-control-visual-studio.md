@@ -53,7 +53,7 @@ Este tópico lista problemas comuns que podem ocorrer quando você estiver traba
 DataRepeater1.Top = ProductsBindingNavigator.Height  
 ```  
   
-```cs  
+```csharp  
 dataRepeater1.Top = productsBindingNavigator.Height;  
 ```  
   

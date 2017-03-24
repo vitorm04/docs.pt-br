@@ -29,7 +29,7 @@ Genéricos também estão disponíveis em tempo de execução ou **reificados**.
 
 Aqui está um pequeno programa que ilustra a eficiência de saber o tipo da estrutura de dados em tempo de execução:
 
-```cs
+```csharp
   using System;
   using System.Collections;
   using System.Collections.Generic;
