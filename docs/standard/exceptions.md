@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
-ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7c9ccd455bf0d14122c0547177cc29ace6ebde42
+ms.lasthandoff: 02/17/2017
 
 ---
 
@@ -57,12 +58,12 @@ A classe @System.Exception tem as propriedades a seguir, que ajudam a facilitar 
 | ------------- | ----------- |
 | @System.Exception.Data | Um @System.Collections.IDictionary que contém dados arbitrários em pares chave-valor. |
 | @System.Exception.HelpLink | Pode conter uma URL (ou URN) para um arquivo de ajuda que fornece informações abrangentes sobre a causa de uma exceção. |
-| @System.Exception.InnerException | Essa propriedade pode ser usada para criar e manter uma série de exceções durante o tratamento de exceção. Você pode usá-lo para criar uma nova exceção contendo exceções previamente capturadas. A exceção original pode ser capturada pela segunda exceção na propriedade @System.Exception.InnerException, permitindo que o código que trata da segunda exceção examine as informações adicionais. Por exemplo, suponha que você tem um método que recebe um argumento que está formatado de modo inadequado.  O código tenta ler o argumento, mas uma exceção é gerada. O método captura a exceção e gera um @System.FormatException. Para melhorar a capacidade do chamador a fim de determinar o motivo pelo qual uma exceção é gerada, às vezes é desejável que um método capture uma exceção gerada por uma rotina auxiliar e, em seguida, gere uma exceção mais indicativa do erro que ocorreu. Uma exceção mais nova e mais significativa pode ser criada, na qual a referência à exceção interna pode ser definida para a exceção original. Essa exceção mais significativa pode, em seguida, ser gerada para o chamador. Observe que com essa funcionalidade você pode criar uma série de exceções vinculadas que termina com a primeira exceção gerada. |
+| @System.Exception.InnerException | Essa propriedade pode ser usada para criar e manter uma série de exceções durante o tratamento de exceção. Você pode usá-lo para criar uma nova exceção contendo exceções previamente capturadas. A exceção original pode ser capturada pela segunda exceção na propriedade @System.Exception.InnerException, permitindo que o código que trata da segunda exceção examine as informações adicionais. Por exemplo, suponha que você tem um método que recebe um argumento que está formatado de modo inadequado.  O código tenta ler o argumento, mas uma exceção é gerada. O método captura a exceção e gera um @System.FormatException. Para melhorar a capacidade do chamador para determinar o motivo pelo qual que uma exceção é gerada, às vezes é desejável que um método capture uma exceção gerada por uma rotina auxiliar e, em seguida, gere uma exceção mais indicativa do erro que ocorreu. Uma exceção mais nova e mais significativa pode ser criada, na qual a referência à exceção interna pode ser definida para a exceção original. Essa exceção mais significativa pode, em seguida, ser gerada para o chamador. Observe que com essa funcionalidade você pode criar uma série de exceções vinculadas que termina com a primeira exceção gerada. |
 | @System.Exception.Message | Fornece detalhes sobre a causa de uma exceção.
 | @System.Exception.Source | Obtém ou define o nome do aplicativo ou objeto que causa o erro. |
 | @System.Exception.StackTrace | Contém um rastreamento de pilha que pode ser usado para determinar onde um erro ocorreu. O rastreamento de pilha inclui o nome do arquivo de origem e o número de linha de programa se informações de depuração estiverem disponíveis. |
 
-A maioria das classes que herdam de @System.Exception não implementam membros adicionais ou fornecem funcionalidade adicional; elas simplesmente herdam de @System.Exception. Portanto, as informações mais importantes para uma exceção podem ser encontradas na hierarquia de classes de exceção, no nome da exceção e nas informações contidas na exceção.
+A maioria das classes que herdam de @System.Exception não implementa membros adicionais nem fornece funcionalidade adicional; apenas herdam de @System.Exception. Portanto, as informações mais importantes para uma exceção podem ser encontradas na hierarquia de classes de exceção, no nome da exceção e nas informações contidas na exceção.
 
 É recomendável gerar e capturar apenas objetos que derivam de @System.Exception,, mas é possível gerar como uma exceção qualquer objeto que derive da classe @System.Object. Observe que nem todas as linguagens dão suporte à geração e captura de objetos que não derivam de @System.Exception.
 
@@ -112,7 +113,7 @@ public class ProcessFile
 O Common Language Runtime captura exceções que não são capturadas por um bloco catch. Dependendo de como o tempo de execução estiver configurado, uma caixa de diálogo de depuração será exibida ou o programa interromperá a execução e será exibida uma caixa de diálogo com as informações de exceção ou, ainda, um erro será impresso para stderr.
 
 > [!NOTE] 
-> Quase qualquer linha de código pode causar uma exceção, especialmente exceções geradas pelo Common Language Runtime em si, como @System.OutOfMemoryException. A maioria dos aplicativos não precisa lidar com essas exceções, mas você deve estar ciente dessa possibilidade ao gravar bibliotecas para serem usadas por outros. Para obter sugestões sobre quando definir código em um bloco Try, veja [Práticas recomendadas para exceções](#best-practices-for-exceptions).
+> Praticamente qualquer linha de código pode causar uma exceção, especialmente exceções geradas pelo próprio Common Language Runtime, como @System.OutOfMemoryException. A maioria dos aplicativos não precisa lidar com essas exceções, mas você deve estar ciente dessa possibilidade ao gravar bibliotecas para serem usadas por outros. Para obter sugestões sobre quando definir código em um bloco Try, veja [Práticas recomendadas para exceções](#best-practices-for-exceptions).
  
 ## <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Como usar exceções específicas em um bloco Catch
 
@@ -120,7 +121,7 @@ O exemplo de código anterior ilustra uma instrução básica `catch` que captur
 
 Quando ocorre uma exceção, ela é passada para cima na pilha e, a cada bloco catch, é dada a oportunidade de tratá-la. A ordem das instruções catch é importante. Coloque blocos catch direcionados para exceções específicas antes que um bloco catch de exceção geral ou o compilador possa emitir um erro. O bloco catch adequado é determinado ao fazer a correspondência entre o tipo da exceção e o nome da exceção especificada no bloco catch. Se não houver nenhum bloco catch específico, a exceção será detectada por um bloco catch geral, se houver.
 
-O seguinte exemplo de código usa um bloco `try`/`catch` para capturar uma @System.InvalidCastException. O exemplo cria uma classe chamada `Employee` com uma única propriedade, nível do funcionário (`Emlevel`). Um método, `PromoteEmployee`, utiliza um objeto e incrementa o nível do funcionário. Um @System.InvalidCastException ocorre quando uma instância @System.DateTime é passada para o método `PromoteEmployee`.
+O exemplo de código a seguir usa um bloco `try`/`catch` para capturar uma @System.InvalidCastException. O exemplo cria uma classe chamada `Employee` com uma única propriedade, nível do funcionário (`Emlevel`). Um método, `PromoteEmployee`, utiliza um objeto e incrementa o nível do funcionário. Um @System.InvalidCastException ocorre quando uma instância @System.DateTime é passada para o método `PromoteEmployee`.
 
 C#
 ```
@@ -177,7 +178,7 @@ public class Ex13
 
 Quando ocorre uma exceção, a execução é interrompida e o controle é dado ao manipulador de exceção apropriado. Geralmente, isso significa que linhas de código que você espera que sejam executadas são ignoradas. A limpeza de alguns recursos, assim como o fechamento de um arquivo, precisará ser feita mesmo se uma exceção for gerada. Para fazer isso, você pode usar um bloco `finally`. Um bloco `finally` sempre é executado, independentemente de uma exceção ser ou não gerada.
 
-O seguinte exemplo de código usa um bloco `try`/`catch` para capturar uma @System.ArgumentOutOfRangeException. O método `Main` cria duas matrizes e tenta copiar uma para a outra. A ação gera um @System.ArgumentOutOfRangeException e o erro é gravado no console. Este bloco `finally` é executado independentemente resultado da ação de cópia.
+O exemplo de código a seguir usa um bloco `try`/`catch` para capturar uma @System.ArgumentOutOfRangeException. O método `Main` cria duas matrizes e tenta copiar uma para a outra. A ação gera um @System.ArgumentOutOfRangeException e o erro é gravado no console. Este bloco `finally` é executado independentemente resultado da ação de cópia.
 
 C#
 ```
@@ -210,7 +211,7 @@ class ArgumentOutOfRangeExample
 
 Você pode gerar uma exceção explicitamente usando a instrução `throw`. Você também pode lançar novamente uma exceção capturada usando a instrução `throw`. É uma boa prática adicionar informações a uma exceção que é lançada novamente para fornecer mais informações durante a depuração.
 
-O seguinte exemplo usa um bloco `try`/`catch` para capturar um possível @System.IO.FileNotFoundException. Após o bloco `try`, há um bloco `catch` que captura a @System.IO.FileNotFoundException e grava uma mensagem no console se o arquivo de dados não for encontrado. A próxima instrução é a instrução `throw`, que gera uma nova @System.IO.FileNotFoundException e adiciona informações de texto à exceção.
+O exemplo de código a seguir usa um bloco `try`/`catch` para capturar uma possível @System.IO.FileNotFoundException. Após o bloco `try`, há um bloco `catch` que captura a @System.IO.FileNotFoundException e grava uma mensagem no console se o arquivo de dados não é encontrado. A próxima instrução é a instrução `throw`, que gera uma nova @System.IO.FileNotFoundException e adiciona informações de texto à exceção.
 
 C#
 ```
@@ -249,7 +250,7 @@ public class ProcessFile
 
 ## <a name="how-to-create-user-defined-exceptions"></a>Como criar exceções definidas pelo usuário
 
-O .NET fornece uma hierarquia de classes de exceção derivada da classe base @System.Exception. No entanto, se nenhuma das exceções predefinidas atender às suas necessidades, é possível criar suas próprias classes de exceção derivando da classe @System.Exception.
+O .NET fornece uma hierarquia de classes de exceção derivada, em última análise, da classe base @System.Exception. No entanto, se nenhuma das exceções predefinidas atender às suas necessidades, será possível criar suas próprias classes de exceção derivando da classe @System.Exception.
 
 Ao criar suas próprias exceções, encerre o nome de classe de exceção definida pelo usuário com a palavra "Exception" e implemente os três construtores comuns, como mostrado no exemplo a seguir. O exemplo define uma nova classe de exceção chamada `EmployeeListNotFoundException`. A classe é derivada de @System.Exception e inclui três construtores.
 
@@ -506,9 +507,4 @@ catch (Exception ex)
 ## <a name="see-also"></a>Consulte também
 
 Para saber mais sobre o funcionamento de exceções no .NET, veja [O que todo desenvolvedor precisa saber sobre exceções no tempo de execução](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
-
-
-
-<!--HONumber=Dec16_HO1-->
-
 

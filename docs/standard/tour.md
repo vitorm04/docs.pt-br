@@ -56,7 +56,7 @@ Não há nenhuma palavra-chave análoga para desalocar memória, pois a desaloca
 
 Tipos em um determinado escopo normalmente saem do escopo depois que um método é concluído, momento no qual eles podem ser coletados. No entanto, é possível indicar ao GC que um determinado objeto está fora do escopo antes da saída do método usando a instrução `using`:
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L6-L9)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 Uma vez que o bloco `using` for concluído, o GC saberá que o objeto `stream` no exemplo acima está livre para ser coletado e ter sua memória recuperada.
 
@@ -68,7 +68,7 @@ O tempo de execução do .NET fornece serviços adicionais para cumprir a promes
 
 O exemplo a seguir gerará uma exceção como resultado de segurança da memória.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L11-L12)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="type-safety"></a>Segurança de tipos
 

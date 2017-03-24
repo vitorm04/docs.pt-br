@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -44,74 +44,44 @@ Veja a seguir uma lista dos principais pacotes NuGet para .NET Core:
 - [System.Linq](https://www.nuget.org/packages/System.Linq) – Um conjunto de tipos para consultar os objetos, inclusive Enumerable e [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2).
 - [System.Reflection](https://www.nuget.org/packages/System.Reflection) – Um conjunto de tipos para carregar, inspecionar e ativar tipos, incluindo [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly), [TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) e [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo).
 
-Os pacotes são referenciados no project.json. No exemplo abaixo, o [System.Runtime](https://www.nuget.org/packages/System.Runtime/) pacote é referenciado. 
+Normalmente, em vez de incluir um pacote de cada vez nos projetos, é muito mais fácil incluir um *metapacote*, que é um conjunto de pacotes que costumam ser usados juntos. (Para obter mais informações sobre metapacotes, consulte a seção a seguir.) No entanto, quando você precisa de um único pacote, é possível incluí-lo como no exemplo a seguir, que referencia o pacote [System.Runtime](https://www.nuget.org/packages/System.Runtime/). 
 
-```json
-{
-  "dependencies": {
-    "System.Runtime": "4.1.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+  </ItemGroup>
+</Project>
 ```
-
-Na maioria dos casos, você não fará referência a pacotes .NET Core de nível inferior diretamente, pois isso você acabaria com muitos pacotes para gerenciar. Em vez disso, você poderá fazer referência a um metapacote.
 
 ## <a name="metapackages"></a>Metapacotes
 
 Metapacotes são uma convenção de pacotes NuGet para descrever um conjunto de pacotes que são significativos juntos. Eles representam esse conjunto de pacotes tornando-os dependências. Opcionalmente, eles podem estabelecer uma estrutura para esse conjunto de pacotes especificando-a. 
 
-Ao referenciar um metapacote, você está efetivamente adicionando uma referência a cada um dos seus pacotes dependentes como um único gesto. Isso significa que todas as bibliotecas nesses pacotes (refs ou libs) estão disponíveis para o IntelliSense (ou experiência semelhante) e para publicação (somente libs) no seu aplicativo. 
+Por padrão, as versões anteriores das ferramentas do .NET Core (ferramentas baseadas em project.json e csproj) especificavam uma estrutura e um metapacote. Atualmente, no entanto, o metapacote é referenciado implicitamente pela estrutura de destino, para que cada metapacote seja vinculado a uma estrutura de destino. Por exemplo, a estrutura `netstandard1.6` referencia o metapacote NetStandard.Library versão 1.6.0. Da mesma forma, a estrutura `netcoreapp1.1` referencia o metapacote Microsoft.NETCore.App Versão 1.1.0. Para obter mais informações, consulte [Referência implícita de pacote de metapacote no SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md).
 
-Observação: os termos “lib” e “ref” referem-se a pastas em pacotes NuGet. Pastas “ref” descrevem a API pública de um pacote por meio de metadados do assembly. Pastas “lib” contêm a implementação dessa API pública para uma determinada estrutura. 
+Definir uma estrutura como destino e referenciar um metapacote implicitamente significa que você, na verdade, está adicionando uma referência a cada um de seus pacotes dependentes como um único gesto. Isso disponibiliza todas as bibliotecas nesses pacotes para o IntelliSense (ou uma experiência semelhante) e para publicação do aplicativo.  
 
 Há vantagens em usar metapacotes:
 
 - Fornece uma experiência de usuário conveniente para fazer referência a um grande conjunto de pacotes refinados. 
 - Define um conjunto de pacotes (incluindo versões específicas) que são testados e funcionam bem em conjunto.
 
-O metapacote da .NET Standard Library:
+O metapacote da Biblioteca Padrão do .NET é:
 
 - [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) – Descreve as bibliotecas que fazem parte da “.NET Standard Library”. Aplica-se a todas as implementações do .NET (por exemplo, .NET Framework, .NET Core e Mono) que dão suporte à .NET Standard Library. Estabelece a estrutura “netstandard”.
 
-Estes são os principais metapacotes .NET Core:
+Os principais metapacotes do .NET Core são:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – Descreve as bibliotecas que fazem parte da distribuição do .NET Core. Estabelece a estrutura [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Conta com o `NETStandard.Library` menor.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – Um conjunto de fachadas de compatibilidade que permitem que PCLs (Bibliotecas de Classes Portáteis) baseadas em mscorlib sejam executadas no .NET Core.
 
-Metapacotes são referenciados como qualquer outro pacote NuGet no project.json. 
-
-No exemplo a seguir, o metapacote `NETStandard.Library` é referenciado, sendo usado para criar bibliotecas que são portáteis entre os tempos de execução do .NET.
-
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
-```
-
-No exemplo a seguir, o metapacote `Microsoft.NETCore.App` é referenciado, sendo usado para criar aplicativos e bibliotecas que devem ser executados no .NET Core e aproveitar todas as vantagens dele. Ele fornece acesso a um conjunto maior de bibliotecas do que o fornecido por `NETStandard.Library`.
-
-```json
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {}
-  }
-}
-```
-
 ## <a name="frameworks"></a>Estruturas
 
-Cada pacote do .NET Core dá suporte a um conjunto de estruturas, declarado com as pastas da estrutura (dentro das pastas lib e ref mencionadas anteriormente). As estruturas descrevem um conjunto de APIs disponível (e possivelmente outras características) com os quais você pode contar ao direcionar uma determinada estrutura. Eles têm controle de versão à medida que novas APIs são adicionadas.
+Cada pacote do .NET Core dá suporte a um conjunto de estruturas de tempo de execução. As estruturas descrevem um conjunto de APIs disponível (e possivelmente outras características) com os quais você pode contar ao direcionar uma determinada estrutura. Eles têm controle de versão à medida que novas APIs são adicionadas.
 
 Por exemplo, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) dá suporte às seguintes estruturas:
 
@@ -135,8 +105,6 @@ A segunda parte da relação é a seleção de ativo. Pacotes podem conter ativo
 
 Você pode ver essa relação na imagem acima. A *API* é voltada para a *estrutura* e a define. A *estrutura* é usada para *seleção de ativo*. O *ativo* fornece a API.
 
-Uma questão interessante é imaginar onde a definição de uma estrutura baseada em pacote termina e onde começa o consumo dessa definição. Poderíamos considerar a exibição da estrutura como uma função de um determinado arquivo project.json. Suas dependências criam sua exibição da estrutura, independente dos fornecedores dessas dependências.
-
 As duas principais estruturas baseadas em pacote usadas com o .NET Core são:
 
 - `netstandard`
@@ -144,39 +112,34 @@ As duas principais estruturas baseadas em pacote usadas com o .NET Core são:
 
 ### <a name="net-standard"></a>.NET Standard
 
-A estrutura .NET Standard (TFM: `netstandard`) representa as APIs definidas pela [.NET Standard Library](../standard/library.md) e criadas com base nela. Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino. Elas terão suporte em qualquer tempo de execução compatível com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses tempos de execução dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam. 
+A estrutura Padrão do .NET (moniker de estrutura de destino: `netstandard`) representa as APIs definidas pela [Biblioteca Padrão do .NET](../standard/library.md) e criadas com base nela. Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino. Elas terão suporte em qualquer tempo de execução compatível com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses tempos de execução dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam. 
 
-O metapacote `NETStandard.Library` é direcionado para a estrutura `netstandard`. A maneira mais comum de direcionar para `netstandard` é fazer referência a esse metapacote. Ele descreve e fornece acesso às ~40 bibliotecas .NET e APIs associadas, que definem a .NET Standard Library. Você pode referenciar outros pacotes destinados a `netstandard` para obter acesso a APIs adicionais.
+A estrutura `netstandard` referencia implicitamente o metapacote `NETStandard.Library`. Por exemplo, o arquivo de projeto do MSBuild a seguir indica que o projeto tem `netstandard1.6` como destino, que referencia o metapacote da Biblioteca Padrão do .NET versão 1.6. 
 
-Uma determinada [versão de NETStandard.Library](versions/index.md) coincide com a versão mais recente do `netstandard` exposta (por meio de seu fechamento). A referência da estrutura no project.json é usada para selecionar os ativos corretos dos pacotes subjacentes. Nesse caso, os ativos `netstandard1.6` são necessários, em vez de `netstandard1.4` ou `net46`, por exemplo. 
-
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.6": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
-As referências de estrutura e metapacote no project.json não precisam corresponder. Por exemplo, o seguinte project.json é válido.
+No entanto, as referências de estrutura e de metapacote no arquivo de projeto não precisam ser correspondentes e é possível usar o elemento `<NetStandardImplicitPackageVersion>` no arquivo de projeto para especificar uma versão de estrutura inferior à versão do metapacote. Por exemplo, o arquivo de projeto a seguir é válido.
 
-```json
-{
-  "dependencies": {
-    "NETStandard.Library": "1.6.0"
-  },
-  "frameworks": {
-    "netstandard1.3": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <NetStandardImplicitPackageVersion Include="NetStandardLibrary" Version="1.6.0" />
+  </ItemGroup>
+</Project>
 ```
 
 Pode parecer estranho apontar para `netstandard1.3`, mas use a versão 1.6.0 do `NETStandard.Library`. Esse é um caso de uso válido, pois o metapacote mantém o suporte para versões mais antigas do `netstandard`. Pode ser o caso de você já ter padronizado a versão 1.6.0 do metapacote e tê-la usado para todas as suas bibliotecas, que são voltadas para diversas versões do `netstandard`. Com essa abordagem, você só precisará restaurar a `NETStandard.Library` 1.6.0 e não versões anteriores. 
 
-O inverso não seria válido: direcionar `netstandard1.6` com a versão 1.3.0 do `NETStandard.Library`. Você não pode direcionar uma estrutura mais elevada com um metapacote menos elevado, visto que a versão do metapacote inferior não exporá os ativos para essa estrutura superior. O [esquema de controle de versão] para metapacotes assegura que os metapacotes correspondam à versão mais alta da estrutura por eles descrita. Devido a esse esquema de controle de versão, a primeira versão do `NETStandard.Library` é v1.6.0, já que ele contém ativos `netstandard1.6`. A versão&1;.3.0 é usada no exemplo acima para fins de simetria, mas não existe na verdade.
+O inverso não seria válido: direcionar `netstandard1.6` com a versão 1.3.0 do `NETStandard.Library`. Você não pode direcionar uma estrutura mais elevada com um metapacote menos elevado, visto que a versão do metapacote inferior não exporá os ativos para essa estrutura superior. O esquema de controle de versão para metapacotes declara que os metapacotes correspondem à versão mais alta da estrutura descrita por eles. Devido a esse esquema de controle de versão, a primeira versão do `NETStandard.Library` é v1.6.0, já que ele contém ativos `netstandard1.6`. A versão&1;.3.0 é usada no exemplo acima para fins de simetria, mas não existe na verdade.
 
 ### <a name="net-core-application"></a>.NET Core Application
 
@@ -185,3 +148,4 @@ A estrutura .NET Core Application (TFM: `netcoreapp`) representa os pacotes e AP
 O metapacote `Microsoft.NETCore.App` é direcionado para a estrutura `netcoreapp`. Ele fornece acesso a ~60 bibliotecas, ~&40; fornecida pelo pacote `NETStandard.Library` e mais ~20 adicionais. Você pode referenciar outras bibliotecas direcionadas ao `netcoreapp` ou estruturas compatíveis, como o `netstandard`, para obter acesso a APIs adicionais. 
 
 A maioria das bibliotecas adicionais fornecidas pelo `Microsoft.NETCore.App` também são direcionadas para `netstandard`, considerando que suas dependências foram atendidas por outras bibliotecas `netstandard`. Isso significa que bibliotecas `netstandard` também podem fazer referência a esses pacotes como dependências. 
+

@@ -4,81 +4,69 @@ description: Modelo de extensibilidade da CLI do .NET Core
 keywords: CLI, extensibilidade, comandos personalizados, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 02/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
+ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 0a136e69e103994a69084b09f481489880d5df42
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 827b5567400fd8ed1f32e60ba593a3ae71a0d745
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-cli-extensibility-model"></a>Modelo de extensibilidade da CLI do .NET Core 
-
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Modelo de extensibilidade de CLI do .NET Core (Ferramentas do .NET Core RC4)](../preview3/tools/extensibility.md).
+# <a name="net-core-cli-extensibility-model"></a>Modelo de extensibilidade da CLI do .NET Core
 
 ## <a name="overview"></a>Visão Geral
 Este documento abordará as principais maneiras de estender as ferramentas da CLI e explica os cenários que orientam a cada uma delas. Ele descreverá como consumir as ferramentas, bem como fornecerá breves anotações sobre como compilar ambos os tipos de ferramentas. 
 
 ## <a name="how-to-extend-cli-tools"></a>Como estender as ferramentas da CLI
-As ferramentas da CLI podem ser estendidas de duas maneiras:
+As ferramentas da CLI podem ser estendidas de três maneiras principais:
 
 1. Por meio de pacotes NuGet por projeto
-2. Por meio do PATH do sistema
+2. Por meio de pacotes do NuGet com destinos personalizados  
+3. Por meio do PATH do sistema
 
-Os dois mecanismos de extensibilidade descritos acima não são exclusivos; você pode usar ambos ou apenas um deles. Qual deles escolher depende muito da meta que você está tentando alcançar com a extensão.
+Os três mecanismos de extensibilidade descritos acima não são exclusivos; você pode usar todos ou apenas um deles ou combiná-los. Qual deles escolher depende muito da meta que você está tentando alcançar com a extensão.
 
 ## <a name="per-project-based-extensibility"></a>Extensibilidade por projeto
-Ferramentas por projeto são [aplicativos de console portátil](../deploying/index.md) que são distribuídos como pacotes NuGet. Ferramentas só estão disponíveis no contexto do projeto que faz referência a eles e para os quais eles são restaurados; a invocação fora do contexto do projeto (por exemplo, fora do diretório que contém o projeto) falhará, pois o comando não poderá ser encontrado.
+Ferramentas por projeto são [implantações dependentes de estrutura](../deploying/index.md) distribuídas como pacotes NuGet. Ferramentas só estão disponíveis no contexto do projeto que faz referência a eles e para os quais eles são restaurados; a invocação fora do contexto do projeto (por exemplo, fora do diretório que contém o projeto) falhará, pois o comando não poderá ser encontrado.
 
-Essas ferramentas são perfeitas para criar servidores, desde que nada fora do `project.json` seja necessário. O processo de build executa a restauração para o projeto compilado e as ferramentas disponíveis. Projetos de linguagem, como F#, também estão nesta categoria, afinal, cada projeto só pode ser escrito em um idioma específico. 
+Essas ferramentas são perfeitas para criar servidores, desde que nada fora do arquivo de projeto seja necessário. O processo de build executa a restauração para o projeto compilado e as ferramentas disponíveis. Projetos de linguagem, como F#, também estão nesta categoria, afinal, cada projeto só pode ser escrito em um idioma específico. 
 
 Por fim, esse modelo de extensibilidade dá suporte à criação de ferramentas que precisam acessar a saída da compilação do projeto. Por exemplo, diversas ferramentas de exibição Razor em aplicativos [ASP.NET](https://www.asp.net/) MVC se enquadram nesta categoria. 
 
 ### <a name="consuming-per-project-tools"></a>Consumir ferramentas por projeto
-Consumir essas ferramentas requer que você adicione um nó `tools` ao `project.json`. Dentro do nó `tools`, você referenciar o pacote no qual a ferramenta reside. Após executar `dotnet restore`, a ferramenta e suas dependências são restauradas. 
+Consumir essas ferramentas requer a adição de um elemento `<DotNetCliToolReference>` para cada ferramenta que você deseja usar para o arquivo de projeto. Dentro do elemento `<DotNetCliToolReference>`, você referencia o pacote no qual a ferramenta reside e especifica a versão necessária. Após executar `dotnet restore`, a ferramenta e suas dependências são restauradas. 
 
-Para ferramentas que precisam carregar a saída do build do projeto para execução, geralmente há outra dependência listada nas dependências regulares no arquivo de projeto. Isso significa que as ferramentas que carregam o código do projeto têm dois componentes: 
+Para ferramentas que precisam carregar a saída do build do projeto para execução, geralmente há outra dependência listada nas dependências regulares no arquivo de projeto. Como a CLI usa o MSBuild como seu mecanismo de build, é recomendável que essas partes da ferramenta sejam gravadas como destinos e tarefas personalizadas do MSBuild, pois, dessa forma, elas podem participar do processo geral de build. Além disso, eles podem obter todos os dados produzido por meio de build facilmente, por exemplo, o local dos arquivos de saída, a configuração atual que está sendo compilada etc. Todas essas informações se tornam um conjunto de propriedades do MSBuild que pode ser lido em qualquer destino. Veremos como adicionar um destino personalizado usando o NuGet mais adiante neste documento. 
 
-1. O invocador principal “ferramentas”
-2. Qualquer número de outras ferramentas que contém a lógica para trabalhar com 
+Vamos examinar um exemplo de como adicionar uma ferramenta única simples a um projeto simples. Dado um exemplo de comando chamado `dotnet-api-search` que permite que você pesquise os pacotes NuGet para a API especificada, veja este arquivo de projeto do aplicativo de console que usa essa ferramenta:
 
-Por que as duas coisas? Ferramentas que precisam carregar a saída de build de um projeto precisam ter um gráfico de dependência unificado com o projeto no qual estão trabalhando. Ao adicionar o bit de dependência, permitimos que o NuGet resolva essas dependências como um gráfico unificado. O invocador existe porque ele precisa entender sobre o local, bem como sobre as estruturas da ferramenta de dependência. O invocador pode aceitar todos os argumentos de redirecionamento (`-c`, `-o`, `-b`) que o usuário especifica e localizar a ferramenta de dependência. Ele também pode implementar qualquer política para casos em que existem várias ferramentas de dependência para diversas estruturas (ou seja, ele executa todas elas ou apenas uma) Em geral, a lógica pode ser compartilhada entre essas duas ferramentas do modo que for necessário. 
 
-Vamos examinar um exemplo de como adicionar uma ferramenta única simples a um projeto simples. Dado um exemplo de comando chamado `dotnet-api-search` que permite que você pesquise os pacotes NuGet para a API especificada, veja este arquivo do aplicativo de console `project.json` que usa essa ferramenta:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1/TargetFramework>
+  </PropertyGroup>
 
-```json
-{
-    "version": "1.0.0",
-    "compilationOptions": {
-        "emitEntryPoint": true
-    },
-    "dependencies": {
-        "Microsoft.NETCore.App": {
-            "type": "platform",
-            "version": "1.0.0"
-        }
-    },
-    "tools": {
-        "dotnet-api-search": {
-            "version": "1.0.0",
-            "imports": ["dnxcore50"]
-        }
-    },
-    "frameworks": {
-        "netcoreapp1.0": {}
-    }
-}
+  <!-- The tools reference -->
+  <ItemGroup>
+    <DotNetCliToolReference Include="dotnet-api-search" Version="1.0.0" />
+  </ItemGroup>
+</Project>
 ```
 
-O nó `tools` é estruturado de forma semelhante ao nó `dependencies`. Ele precisa no mínimo da ID do pacote que contém a ferramenta e sua versão. No exemplo acima, podemos ver que há outra instrução, a `imports`. Isso influencia o processo de restauração da ferramenta e especifica que ela também é compatível, além de quaisquer estruturas de destino que as ferramentas tenham, com o destino `dnxcore50`. Para obter mais informações, você pode consultar a [referência project.json](project-json.md).
+O elemento `<DotNetCliToolReference>` é estruturado de forma semelhante ao elemento `<PackageReference>`. Ele precisa no mínimo da ID do pacote que contém a ferramenta e sua versão. 
 
 ### <a name="building-tools"></a>Compilando ferramentas
 Como mencionado anteriormente, ferramentas são apenas aplicativos de console portáteis. Você poderia compilar uma delas da mesma maneira que qualquer aplicativo de console. Depois de compilá-la, você usaria o comando [`dotnet pack`](dotnet-pack.md) para criar um pacote NuGet (nupkg) que contém o código, as informações sobre suas dependências e assim por diante. O nome do pacote pode ser o que o autor desejar, mas o aplicativo dentro dele, a real ferramenta binária, precisa estar em conformidade com a convenção de `dotnet-<command>` para que `dotnet` consiga invocá-lo. 
+
+> [!NOTE]
+> Em versões pré-RC3 das ferramentas de linha de comando do .NET Core, o comando `dotnet pack` tinha um bug que fazia com que o `runtime.config.json` não fosse adicionado ao pacote com a ferramenta. A falta desse arquivo resulta em erros em tempo de execução. Se você encontrar esse comportamento, certifique-se de atualizar para as ferramentas mais recentes e tente o `dotnet pack` novamente. 
 
 Como ferramentas são aplicativos portáteis, o usuário que a consume precisa ter a versão das bibliotecas do .NET Core para as quais a biblioteca foi criada para executar a ferramenta. Qualquer outra dependência que a ferramenta usa e que não está contida em bibliotecas do .NET Core é restaurada e colocada no cache do NuGet. Toda a ferramenta é, portanto, executada usando os assemblies de bibliotecas .NET Core, bem como assemblies do cache do NuGet. 
 
@@ -86,23 +74,54 @@ Esses tipos de ferramentas têm um gráfico de dependência completamente separa
 
 Você pode encontrar exemplos mais sofisticados e diferentes combinações disso no [repositório da CLI do .NET Core](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestProjects). Você também pode ver a [implementação das ferramentas utilizadas](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages) no mesmo repositório. 
 
-Compilar ferramentas que carregam as saídas de build do projeto para a execução é um processo ligeiramente diferente. Como mencionado, há dois componentes para esses tipos de ferramentas:
+### <a name="custom-targets"></a>Destinos personalizados
+O NuGet tem a capacidade de empacotar arquivos personalizados de destino e propriedade do MSBuild há algum tempo e é possível encontrar a documentação oficial sobre esse tema no [site de documentação do NuGet](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Com a mudança da CLI para o MSBuild, o mesmo mecanismo de extensibilidade se aplica a projetos do .NET Core. Esse tipo de extensibilidade seria usada se você desejasse estender o processo de build ou quando você quiser acessar os artefatos no processo de build, como arquivos gerados ou inspecionar a configuração pela qual o build é invocado etc. 
 
-1. Uma ferramenta de dispatcher que o usuário invoca
-2. Uma dependência específica de estrutura que contém a lógica sobre como localizar as saídas de build e o que fazer com elas
+O exemplo de arquivo de projeto de destino está incluído abaixo para referência. Ele mostra como usar a nova sintaxe `csproj` para instruir o comando `dotnet pack` sobre o que empacotar a fim de colocar os arquivos de destino e os assemblies na pasta `build` dentro do pacote. Anote o `<ItemGroup>` abaixo, que tem a propriedade `Label` definida como "instruções de pacote dotnet". 
 
-Um exemplo perfeito disso são os comandos da [EF (Entity Framework)](https://github.com/aspnet/EntityFramework), bem como o comando [`dotnet test`](dotnet-test.md). Em ambos os casos, há uma ferramenta que é referenciada no nó `tools` do `project.json` e é o dispatcher principal. O usuário invoca essa ferramenta na linha de comando. A segunda parte do quebra-cabeça é a dependência que é determinada nas dependências principais do projeto (na raiz ou naquelas específicas de estrutura). Este pacote contém a lógica real da ferramenta. O pacote é uma dependência normal, portanto, ele será restaurado como parte do processo de restauração para o projeto. 
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>Sample Packer</Description>
+    <VersionPrefix>0.1.0-preview</VersionPrefix>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <DebugType>portable</DebugType>
+    <AssemblyName>SampleTargets.PackerTarget</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Pkg\dist-template.xml;compiler\resources\**\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**" />
+    <None Include="build\SampleTargets.PackerTarget.targets" />
+  </ItemGroup>
+  <ItemGroup Label="dotnet pack instructions">
+    <Content Include="build\*.targets;$(OutputPath)\*.dll;$(OutputPath)\*.json">
+      <Pack>true</Pack>
+      <PackagePath>build\</PackagePath>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="1.0.1-beta-000933"/>
+    <PackageReference Include="Microsoft.Build.Framework" Version="0.1.0-preview-00028-160627" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="0.1.0-preview-00028-160627" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>463c66f0-921d-4d34-8bde-7c9d0bffaf7b</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
+    <DefineConstants>$(DefineConstants);NETSTANDARD1_3</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>$(DefineConstants);RELEASE</DefineConstants>
+  </PropertyGroup>
+</Project>
+```
 
-Ao contrário do tipo anterior de ferramentas, na verdade, essas fazem parte do gráfico do projeto que as consome. Isso ocorre porque elas precisam de acesso ao código do projeto e, potencialmente, a todas as suas dependências. Por exemplo, as ferramentas do EF precisam disso porque é necessário verificar os assemblies para encontrar o código exigido, como as migrações.  
+O consumo de destinos personalizados é realizado por meio de um `<PackageReference>` que aponta para o pacote e sua versão dentro do projeto que está sendo estendido. Diferentemente das ferramentas, o pacote de destinos personalizados será incluído no fechamento de dependência do projeto de consumo. 
 
-Outro motivo pelo qual essa solução dupla existe é para permitir um modelo de invocação mais limpo. A maioria dos comandos da CLI que removem determinados artefatos do disco (por exemplo, `dotnet build`, `dotnet publish`) permitem que os usuários redirecionem as saídas para um caminho diferente usando o argumento `--output`, `--build-base-path` ou `--configuration`. Por exemplo, para ferramentas do EF encontrarem a saída de build do seu projeto, você precisaria fornecer os mesmos argumentos com os mesmos valores para *ambos* o driver `dotnet` e para o comando `ef`. Com o modelo de invocação, os usuários passam argumentos para a ferramenta de dispatcher que pode usá-lo para localizar o binário necessário que contém a lógica nos diretórios de saída. 
+Usar o destino personalizado depende exclusivamente como você o configura. Como é o destino habitual do MSBuild, ele pode depender de um determinado destino, executar após outro destino e também pode ser invocado manualmente usando o comando `dotnet msbuild /t:<target-name>`. 
 
-Um bom exemplo dessa abordagem pode ser encontrado no [repositório da CLI do .NET Core](https://github.com/dotnet/cli):
-
-* [Arquivo project.json de exemplo](https://github.com/dotnet/cli/blob/rel/1.0.0-preview2/TestAssets/DesktopTestProjects/AppWithDirectDependencyDesktopAndPortable/project.json)
-* [Implementação do dispatcher](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages/dotnet-dependency-tool-invoker)
-* [Implementação da dependência específica de estrutura](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages/dotnet-desktop-and-portable)
-
+No entanto, se você quiser fornecer uma experiência melhor para seus usuários, será possível combinar ferramentas por projeto e destinos personalizados. Nesse cenário, a ferramenta por projeto apenas aceitaria os parâmetros necessários e os converteria para a invocação `dotnet msbuild` necessária, que executaria o destino. Veja um exemplo desse tipo de sinergia no repositório [Exemplos do MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) do projeto [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer). 
 
 ### <a name="path-based-extensibility"></a>Extensibilidade baseada em PATH
 A extensibilidade do PATH geralmente é usada para computadores de desenvolvimento em que você precisa de uma ferramenta que abrange conceitualmente mais de um único projeto. A principal desvantagem desse mecanismo de extensões é que ele está vinculado ao computador no qual a ferramenta existe. Se você precisar dela em outro computador, precisará implantá-la.
@@ -131,10 +150,6 @@ echo "Cleaning complete..."
 No macOS, podemos eliminar esse script como `dotnet-clean` e definir o bit executável com `chmod +x dotnet-clean`. Podemos então criar um link simbólico para ele em `/usr/local/bin` usando o comando `ln -s dotnet-clean /usr/local/bin/`. Isso tornará possível invocar o comando limpo usando a sintaxe `dotnet clean`. Você pode testar isso criando um aplicativo, executando o `dotnet build` nele e então executando `dotnet clean`. 
 
 ## <a name="conclusion"></a>Conclusão
-As ferramentas da CLI do .NET Core permitem dois pontos de extensibilidade principais. As ferramentas por projeto estão contidas no contexto do projeto, mas permitem uma fácil instalação por meio da restauração. Ferramentas baseadas em PATH são boas para ferramentas gerais de vários projetos que são usadas em um único computador. 
-
-
-
-<!--HONumber=Feb17_HO2-->
+As ferramentas da CLI do .NET Core permitem três pontos de extensibilidade principais. As ferramentas por projeto estão contidas no contexto do projeto, mas permitem uma fácil instalação por meio da restauração. Destinos personalizados permitem que você amplie facilmente o processo de build com tarefas personalizadas. Ferramentas baseadas em PATH são boas para ferramentas gerais de vários projetos que são usadas em um único computador. 
 
 

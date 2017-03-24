@@ -4,41 +4,42 @@ description: "Saiba mais sobre os scripts dotnet-install para instalar as ferram
 keywords: dotnet-install, dotnet-install scripts, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/12/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
+ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
+ms.sourcegitcommit: 99254f84873003496ee00214d55ff908f9fd47d3
+ms.openlocfilehash: 6301fb61be27d7dac6ead57159c0d9461b3eacb5
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Referência de scripts dotnet-install (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-install-script.md).
-
 ## <a name="name"></a>Nome
-`dotnet-install.ps1` | `dotnet-install.sh` – Script usado para instalar as ferramentas de CLI (Interface de Linha de Comando) e o tempo de execução compartilhado.
+
+`dotnet-install.ps1` | `dotnet-install.sh` – script usado para instalar as ferramentas da CLI (Interface de Linha de Comando) e o tempo de execução compartilhado do .NET Core.
 
 ## <a name="synopsis"></a>Sinopse
 Windows:
 
-`dotnet-install.ps1 [-Channel] [-Version]
-    [-InstallDir] [-Debug] [-NoPath] 
-    [-SharedRuntime]`
+```
+dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture]
+    [-SharedRuntime] [-DebugSymbols] [-DryRun] [-NoPath] [-AzureFeed] [-ProxyAddress]
+```
 
 macOS/Linux:
 
-`dotnet-install.sh [--channel] [--version]
-    [--install-dir] [--debug] [--no-path] 
-    [--shared-runtime]`
+```
+dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture]
+    [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]
+```
 
 ## <a name="description"></a>Descrição
-Os scripts `dotnet-install` são usados para executar uma instalação de não administrador da cadeia de ferramentas da CLI e o tempo de execução compartilhado. Você pode baixar os scripts do nosso [repositório GitHub da CLI](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/scripts/obtain). 
+Os scripts `dotnet-install` são usados para executar uma instalação de não administrador da cadeia de ferramentas da CLI e o tempo de execução compartilhado. Você pode baixar os scripts do nosso [repositório GitHub da CLI](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain). 
 
 O caso de uso principal é ajudar em cenários de automação e instalações de não administrador. Há dois scripts, um para PowerShell que funciona no Windows e um script bash que funciona no Linux/OS X. Ambos têm o mesmo comportamento. O script bash também “conhece” comutadores do PowerShell por isso você pode usá-los em todos os segmentos. 
 
@@ -62,48 +63,97 @@ Qual canal (por exemplo, `future`, `preview`, `production`) deve ser usado para 
 
 `-Version [VERSION]`
 
-Qual versão da CLI deve ser instalada. Você precisa especificar a versão de 3 partes (por exemplo, 1.0.0-13232). Se for omitido, o padrão será o primeiro [global.json](global-json.md) que contém a propriedade `version`; se isso não existir, a versão Mais Recente será usada.     
+A versão da CLI a ser instalada. É necessário especificar a versão como uma versão de 3 partes (por exemplo, 1.0.0-13232). Se isso for omitido, ela usará como padrão o primeiro [global.json](global-json.md) que contém a propriedade `version`. Se isso não existir, a versão Mais Recente será usada.
 
 `-InstallDir [DIR]`
 
-Caminho de instalação. O diretório será criado se não existir. O valor padrão é *%LocalAppData%\Microsoft\dotnet*.
+Caminho de instalação. O diretório será criado se não existir. O valor padrão é *%LocalAppData%\.dotnet*.
 
-`-Debug`
+`-Architecture [ARCH]`
 
-`true` para indicar que os pacotes grandes que contêm símbolos de depuração devem ser usados; caso contrário, `false`. O valor padrão é `false`.
-
-`-NoPath`
-
-`true` para indicar que o prefixo/installdir não são exportados para o caminho para a sessão atual; caso contrário, `false`. O valor padrão é `false`, ou seja, o PATH é modificado. Isso disponibiliza as ferramentas de CLI imediatamente após a instalação. 
+Arquitetura dos binários do .NET Core a ser instalada. Os possíveis valores são &lt;auto&gt;, x64 e x86. O valor padrão é &lt;auto&gt;, que representa a arquitetura do sistema operacional em execução no momento.
 
 `-SharedRuntime`
 
-`true` para instalar apenas os bits de tempo de execução compartilhado; `false` para instalar todo o SDK. O valor padrão é `false`.
+Se for definido, instala apenas os bits do tempo de execução compartilhado, não todo o SDK.
+
+`-DebugSymbols`
+
+Se for definido, o instalador incluirá símbolos de depuração na instalação.
+
+> [!NOTE]
+> Essa opção ainda não funciona.
+
+`-DryRun`
+
+Se for definido, o script não executará a instalação, mas exibirá qual linha de comando será usada para instalar de forma consistente a versão atualmente solicitada da CLI do .NET. Por exemplo, se você especificar a versão `latest`, ele exibirá um link com a versão específica, para que este comando possa ser usado de forma determinista em um script de build.
+Ele também exibirá o local dos binários, caso você prefira instalá-lo ou baixá-lo por conta própria.
+
+`-NoPath`
+
+Se for definido, o prefixo/installdir não será exportado para o caminho da sessão atual. Por padrão, o script modificará o PATH, o que torna as ferramentas da CLI disponíveis imediatamente após a instalação.
+
+`-AzureFeed`
+
+A URL para o feed do Azure a ser usada por esse instalador. Não recomendada a alteração. O padrão é `https://dotnetcli.azureedge.net/dotnet`.
+
+`-ProxyAddress`
+
+Se for definido, o instalador usará o proxy ao fazer solicitações da Web.
 
 ### <a name="bash-macoslinux"></a>Bash (macOS/Linux)
+
+`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture]
+    [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]
+`
+
 `--channel [CHANNEL]`
 
-Qual canal (por exemplo “futura”, “visualização”, “produção”) deve ser usado para instalação. O valor padrão é “Produção”.
+O canal (por exemplo “futura”, “desenvolvimento”, “produção”) do qual instalar. O valor padrão é “Produção”.
 
 `--version [VERSION]`
 
-Qual versão da CLI deve ser instalada. Você precisa especificar a versão de 3 partes (por exemplo, 1.0.0-13232). Se for omitido, o padrão será o primeiro [global.json](global-json.md) que contém a propriedade `version`; se isso não existir, a versão Mais Recente será usada.     
+A versão da CLI a ser instalada. É necessário especificar a versão como uma versão de 3 partes (por exemplo, 1.0.0-13232). Se isso for omitido, ela usará como padrão o primeiro [global.json](global-json.md) que contém a propriedade `version`. Se isso não existir, a versão Mais Recente será usada.
 
 `--install-dir [DIR]`
 
 Caminho de instalação. O diretório será criado se não existir. O valor padrão é `$HOME/.dotnet`.
 
-`--debug`
+`--architecture [ARCH]`
 
-`true` para indicar que os pacotes grandes que contêm símbolos de depuração devem ser usados; caso contrário, `false`. O valor padrão é `false`.
-
-`--no-path`
-
-`true` para indicar que o prefixo/installdir não são exportados para o caminho para a sessão atual; caso contrário, `false`. O valor padrão é `false`, ou seja, o PATH é modificado. Isso disponibiliza as ferramentas de CLI imediatamente após a instalação.  
+Arquitetura dos binários do .NET a ser instalada. Os possíveis valores são &lt;auto&gt;, x64 e amd64. O valor padrão é &lt;auto&gt;, que representa a arquitetura do sistema operacional em execução no momento.
 
 `--shared-runtime`
 
-`true` para instalar apenas os bits de tempo de execução compartilhado; `false` para instalar todo o SDK. O valor padrão é `false`.
+Se for definido, instala apenas os bits do tempo de execução compartilhado, não todo o SDK.
+
+`--debug-symbols`
+
+Se for definido, o instalador incluirá símbolos de depuração na instalação.
+
+> [!NOTE]
+> Essa opção ainda não funciona.
+
+`--dry-run`
+
+Se for definido, o script não executará a instalação, mas exibirá qual linha de comando será usada para instalar de forma consistente a versão atualmente solicitada da CLI do .NET. Por exemplo, se você especificar a versão `latest`, ele exibirá um link com a versão específica, para que este comando possa ser usado de forma determinista em um script de build.
+Ele também exibirá o local dos binários, caso você prefira instalá-lo ou baixá-lo por conta própria.
+
+`--no-path`
+
+Se for definido, o prefixo/installdir não será exportado para o caminho da sessão atual. Por padrão, o script modificará o PATH, o que torna as ferramentas da CLI disponíveis imediatamente após a instalação.
+
+`--verbose`
+
+Exiba informações de diagnóstico.
+
+`--azure-feed`
+
+A URL para o feed do Azure a ser usada por esse instalador. Não recomendada a alteração. O padrão é `https://dotnetcli.azureedge.net/dotnet`.
+
+`--help`
+
+Imprime a ajuda do script.
 
 ## <a name="examples"></a>Exemplos
 
@@ -126,9 +176,3 @@ Windows:
 macOS/Linux:
 
 `./dotnet-install.sh --channel preview --install-dir ~/cli`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -129,33 +129,28 @@ Você pode ver as atualizações de patch demonstradas nos exemplos de project.j
 
 Após o envio de uma versão estável do .NET Core v1.0.0, novas APIs são adicionadas às bibliotecas .NET Core para habilitar novos cenários. Os vários metapacotes são atualizados para referenciar os pacotes de biblioteca atualizados do .NET Core. Os metapacotes têm controle de versão como atualizações de patch (x.y) para coincidir com a maior versão da estrutura. As diversas estruturas são atualizadas para descrever as novas APIs. Uma nova distribuição .NET Core é lançada com um número de versão correspondente ao metapacote `Microsoft.NETCore.App`.
 
-Você pode ver as atualizações secundárias demonstradas nos exemplos de project.json abaixo.
+Você pode ver atualizações secundárias demonstradas no seguinte arquivo de projeto:
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
-  "frameworks": {
-    "netcoreapp1.1": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
 ### <a name="shipping-a-major-release"></a>Enviando uma versão principal
 
 Considerando uma versão estável .NET Core v1.y.z, novas APIs são adicionadas às bibliotecas do .NET Core para habilitar novos cenários principais. O suporte a uma plataforma pode ser removido. Os vários metapacotes são atualizados para referenciar os pacotes de biblioteca atualizados do .NET Core. O metapacote `Microsoft.NETCore.App` e a estrutura `netcore` têm controle de versão como uma atualização principal (x.). O metapacote `NETStandard.Library` normalmente tem controle de versão como uma atualização secundária (x.y), porque ele aplica-se a várias implementações do .NET. Uma nova distribuição do .NET Core é lançada com um número de versão correspondente ao metapacote `Microsoft.NETCore.App`.
 
-Você pode ver as atualizações principais demonstradas na referência do metapacote project.json no exemplo a seguir.
+Você pode ver as principais atualizações demonstradas no seguinte arquivo de projeto. (Observe que `netcoreapp2.0` não foi lançado.)
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "2.0.0"
-  },
-  "frameworks": {
-    "netcoreapp2.0": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
 ```
 

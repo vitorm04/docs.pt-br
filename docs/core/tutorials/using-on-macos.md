@@ -4,22 +4,19 @@ description: "Introdução ao .NET Core em macOS usando o Visual Studio Code"
 keywords: .NET, .NET Core
 author: bleroy
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 translationtype: Human Translation
-ms.sourcegitcommit: 7ac95fa4b2aac81b2e8d33cedf2faf36a0bbf210
-ms.openlocfilehash: 33d87c3236e5f592cd59eab77df1059ac089b88c
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: c4d1b7690ca87f2a1a9ced4d82e47aee2f7ecc9f
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-code"></a>Introdução ao .NET Core em macOS usando o Visual Studio Code
-
-por [Bertrand Le Roy](https://github.com/bleroy), [Phillip Carter](https://github.com/cartermp) e [Bill Wagner](https://github.com/billwagner)
-
-Contribuições de [Toni Solarin-Sodara](https://github.com/tsolarin)
 
 Este documento fornece um tour das etapas e fluxo de trabalho para criar uma Solução do .NET Core usando o [Visual Studio Code](http://code.visualstudio.com).
 Você aprenderá a criar projetos, criar testes de unidade, usar as ferramentas de depuração e incorporar bibliotecas de terceiros por meio do [NuGet](http://nuget.org).
@@ -28,12 +25,10 @@ Esse artigo usa o Visual Studio Code no Mac OS. Onde há diferenças, ele as des
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Antes de começar, você precisará instalar o [SDK do .NET Core](https://www.microsoft.com/net/core), atualmente versão de visualização. O SDK do .NET Core inclui a versão mais recente da estrutura do .NET Core e do tempo de execução.
+Antes de começar, você precisará instalar o [SDK do .NET Core](https://www.microsoft.com/net/core). O SDK do .NET Core inclui a versão mais recente da estrutura do .NET Core e do tempo de execução.
 
 Você também precisará instalar o [Visual Studio Code](http://code.visualstudio.com).
 No decorrer deste artigo, você também instalará as extensões que melhoram a experiência de desenvolvimento do .NET Core.
-
-Você poderá encontrar links para todas elas na [home page do .NET](http://dot.net).
 
 ## <a name="getting-started"></a>Guia de Introdução
 
@@ -41,73 +36,59 @@ A fonte deste tutorial está disponível no [GitHub](https://github.com/dotnet/d
 
 Inicie o Visual Studio Code. Pressione Ctrl + '\`' (o caractere de acento grave) para abrir um terminal inserido no VS Code. (Como alternativa, você pode usar uma janela de terminal separada, se preferir).
 
-Quando estiver pronto, você criará três projetos: um projeto de biblioteca, testes para esse projeto de biblioteca e um aplicativo de console que usa a biblioteca. Você seguirá uma estrutura de pasta padrão para os três projetos. Seguir essa estrutura de pasta padrão significa que as ferramentas do SDK do .NET Core entendem a relação entre seus projetos de código de produção e de teste. Isso torna sua experiência de desenvolvimento mais produtiva.
+Quando estiver pronto, você criará três projetos: um projeto de biblioteca, testes para esse projeto de biblioteca e um aplicativo de console que usa a biblioteca. 
 
-Vamos começar criando essas pastas. No terminal, crie um diretório “golden”. Nesse diretório, crie os diretórios `src` e `test`. Em `src`, criar os diretórios `app` e `library`. Em `test`, crie um diretório `test-library`. Você pode fazer isso usando o terminal no VS Code ou clicando na pasta pai do VS Code e selecionando o ícone “Nova pasta”.
-
-No VS Code, abra o diretório “golden”. Esse diretório é a raiz da sua solução.
-
-Em seguida, crie um arquivo `global.json` no diretório raiz para a solução.
-O conteúdo de `global.json` é:
-
-```json
-{
-    "projects": [
-        "src",
-        "test"
-    ]
-}
-```
-
-Neste ponto, sua árvore de diretório deve ser semelhante a:
-
+Vamos começar criando essas pastas. No terminal, crie um diretório “golden”. No VS Code, abra o diretório *golden*. Esse diretório é a raiz da sua solução. Execute o comando [`dotnet new`](../tools/dotnet-new.md) para criar uma nova solução:
 
 ```
-/golden
-|__global.json
-|__/src
-   |__/app
-   |__/library
-|__/test
-   |__/test-library
+dotnet new sln
 ```
 
-### <a name="writing-the-library"></a>Escrevendo a biblioteca
+Esse comando cria um arquivo *golden.sln* para toda a solução.
 
-Sua próxima tarefa é criar a biblioteca. Na janela do terminal (no terminal inserido no VS Code ou em outro terminal), use o cd para `golden/src/library` e digite o comando `dotnet new -t lib`.
-Isso cria um projeto de biblioteca com dois arquivos: `project.json` e `Library.cs`.
+Sua próxima tarefa é criar a biblioteca. Na janela do terminal (no terminal inserido no VS Code ou em outro terminal), execute o cd para *golden/* e digite o comando:
 
-`project.json` contém as seguintes informações:
-
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable"
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netstandard1.6": {
-      "dependencies": {
-        "NETStandard.Library": "1.6.0"
-      }
-    }
-  }
-}
+```
+dotnet new classlib -o library
 ```
 
+Isso cria um projeto de biblioteca com dois arquivos: *library.csproj* e *Class1.cs* no diretório *library*. Você deseja que o projeto de biblioteca seja incluído na solução. Execute o comando [`dotnet sln`](../tools/dotnet-sln.md) para adicionar o projeto *library.csproj* re-cém-criado à solução:
 
-Esse projeto de biblioteca usará a representação JSON de objetos, portanto, você deve adicionar uma referência ao pacote `Newtonsoft.Json` do NuGet. No`project.json`, adicione a versão pré-lançamento mais recente do pacote como uma dependência:
-
-```json
-"dependencies": {
-    "Newtonsoft.Json": "9.0.1-beta1"
-},
+```
+dotnet sln add library/library.csproj
 ```
 
-Depois de terminar de adicionar essas dependências, você precisa instalar os pacotes no espaço de trabalho. Execute o comando `dotnet restore` para atualizar todas as dependências e escrever um arquivo `project.lock.json` no diretório do projeto. Esse arquivo contém a árvore de dependência completa de todas as dependências em seu projeto. Você não precisa ler este arquivo, ele é usado pelas ferramentas do SDK do .NET Core.
+Vamos examinar o projeto criado. O arquivo *library.csproj* contém as seguintes informações:
 
-Agora, vamos atualizar o código C#. Vamos criar uma classe `Thing` que contém um método público. Este método retornará a soma de dois números, porém isso será feito ao converter esse número em uma cadeia de caracteres JSON e então desserializando-o. Renomeie o arquivo `Library.cs` para `Thing.cs`. Em seguida, substitua o código existente (para a Class1 gerada pelo modelo) pelo seguinte:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+</Project>
+```
+
+Esse projeto de biblioteca usará a representação JSON de objetos, portanto, você deve adicionar uma referência ao pacote `Newtonsoft.Json` do NuGet. O comando `dotnet add` adiciona novos itens a um projeto. Para adicionar uma referência a um pacote NuGet, use o comando `package` e especifique o nome do pacote. 
+
+```
+dotnet add library package Newtonsoft.Json
+```
+
+Isso adiciona `Newtonsoft.Json` e suas dependências ao projeto de Biblioteca. Como alternativa, é possível editar manualmente o arquivo *library.csproj* e adicionar o seguinte nó:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Newtonsoft.Json">
+    <Version>9.0.1</Version>
+  </PackageReference>
+</ItemGroup>
+```
+
+Depois de terminar de adicionar essas dependências, você precisa instalar os pacotes no espaço de trabalho. Execute o comando `dotnet restore` para atualizar todas as dependências e grave um arquivo *obj/project.assets.json* no diretório do projeto. Esse arquivo contém a árvore de dependência completa de todas as dependências em seu projeto. Você não precisa ler este arquivo, ele é usado pelas ferramentas do SDK do .NET Core.
+
+Agora, vamos atualizar o código C#. Vamos criar uma classe `Thing` que contém um método público. Este método retornará a soma de dois números, porém isso será feito ao converter esse número em uma cadeia de caracteres JSON e então desserializando-o. Renomeie o arquivo *Class1.cs* como *Thing.cs*. Em seguida, substitua o código existente (para a Class1 gerada pelo modelo) pelo seguinte:
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -126,28 +107,29 @@ Isso utiliza diversos recursos modernos de C#, tais como usos estáticos, membro
 
 Agora que você atualizou o código, poderá criar a biblioteca usando `dotnet build`.
 
-Agora você tem um arquivo `library.dll` de compilação em `golden/src/library/bin/Debug/netstandard1.6`.
+Agora você criou um arquivo *library.dll* em *golden/library/bin/Debug/netstandard1.4*.
 
 ### <a name="writing-the-test-project"></a>Escrevendo o projeto de teste
 
-Vamos criar um projeto de teste para esta biblioteca que você compilou. Execute cd no diretório `test/test-library`. Execute `dotnet new -t xunittest` para criar um projeto de teste. 
+Vamos criar um projeto de teste para esta biblioteca que você compilou. Mude para o diretório *golden*. Execute `dotnet new xunit -o test-library` para criar um projeto de teste. É recomendável adicionar esse projeto à solução também executando `dotnet sln add test-library/test-library.csproj`.
 
-Você precisará adicionar um nó de dependência para a biblioteca que você escreveu nas etapas acima. Abra `project.json` e atualize a seção de dependências para o seguinte (incluindo o nó `library`, que é o último nó abaixo):
+Você precisará adicionar um nó de dependência para a biblioteca que você escreveu nas etapas acima. O comando `dotnet add reference` faz o seguinte:
 
-```json
-"dependencies": {
-  "System.Runtime.Serialization.Primitives": "4.1.1",
-  "xunit": "2.1.0",
-  "dotnet-test-xunit": "1.0.0-rc2-192208-24",
-  "library": {
-    "target": "project"
-  }
-}
+```
+dotnet add test-library/test-library.csproj reference library/library.csproj
+```
+
+Se preferir, é possível editar manualmente o arquivo *test-library.csproj* e adicionar o seguinte nó:
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\library\library.csproj" />
+</ItemGroup>
 ```
 
 O nó `library` especifica que essa dependência deve ser resolvida para um projeto no espaço de trabalho atual. Sem especificar isso explicitamente, é possível que o projeto de teste seria compilado em um pacote NuGet de mesmo nome.
 
-Agora que as dependências foram devidamente configuradas, vamos criar os testes para sua biblioteca. Abra `Tests.cs` e substitua seu conteúdo pelo seguinte código:
+Agora que as dependências foram devidamente configuradas, vamos criar os testes para sua biblioteca. Abra *UnitTest1.cs* e substitua o conteúdo pelo seguinte código:
 
 ```csharp
 using Library;
@@ -165,26 +147,21 @@ namespace TestApp
 }
 ```
 
-Agora, execute `dotnet restore`, `dotnet build` e `dotnet test`.
+Agora, execute `dotnet restore` e `dotnet build`. Esses comandos localizarão todos os projetos recursivamente para restaurar as dependências e compilá-las.
+Por fim, execute `dotnet test test-library/test-library.csproj` para executar os testes.
 O executor de teste de console xUnit executará um teste e relatará que ele foi aprovado. 
 
 ### <a name="writing-the-console-app"></a>Escrevendo o aplicativo de console
 
-No seu terminal, execute cd para o diretório `golden/src/app`. Execute `dotnet new` para criar um novo aplicativo de console.
+No terminal, execute `dotnet new console -o app` para criar um novo aplicativo de console. Este projeto também faz parte da solução; portanto, execute `dotnet sln add app/app.csproj` para adicioná-lo à solução.
 
-Seu aplicativo de console depende da biblioteca criada e testada nas etapas anteriores. Você precisa indicar isso editando `project.json` para adicionar essa dependência.  No nó `dependencies`, adicione o nó `library` da seguinte maneira:
+Seu aplicativo de console depende da biblioteca criada e testada nas etapas anteriores. É necessário indicar isso executando `dotnet add reference` novamente:
 
-```json
-"dependencies": {
-  "library": {
-    "target": "project"
-  }
-}
+```
+dotnet add app/app.csproj reference library/library.csproj
 ```
 
-O nó `project` é importante aqui, assim como era na biblioteca de teste. Ele indica que se trata de um projeto na solução atual e não um pacote NuGet.
-
-Execute `dotnet restore` para restaurar todas as dependências. Abra `program.cs` e substitua o conteúdo do método `Main` por essa linha:
+Execute `dotnet restore` para restaurar todas as dependências. Abra *program.cs* e substitua o conteúdo do método `Main` por esta linha:
 
 ```csharp
 WriteLine($"The answer is {new Thing().Get(19, 23)}");
@@ -197,7 +174,8 @@ using static System.Console;
 using Library;
 ```
 
-Em seguida, execute `dotnet build`. Isso cria os assemblies e você pode digitar `dotnet run` para ativar o executável.
+Em seguida, execute `dotnet build`. Isso cria os assemblies e você pode digitar `dotnet run -p app/app.csproj` para ativar o executável.
+O argumento `-p` para `dotnet run` especifica o projeto do aplicativo principal.
 
 ### <a name="debugging-your-application"></a>Depurando seu aplicativo
 
@@ -208,45 +186,7 @@ Depois de instalar a extensão, o VS Code solicitará que você reinicie o aplic
 
 ![Depurador do VS Code](./media/using-on-macos/vscodedebugger.png)
 
-
-Quando iniciar o depurador, o VS Code instruirá você a configurar o depurador. Quando fizer isso, ele criará um diretório `.vscode` com dois arquivos: `tasks.json` e `launch.json`. Esses dois arquivos controlam a configuração do depurador. Na maioria dos projetos, esse diretório não está incluído no controle do código-fonte.
-Ele está incluído no exemplo associado a este passo a passo para ver as edições que você precisa fazer.
-
-Sua solução contém vários projetos, portanto, você deve modificar cada um desses arquivos para executar os comandos corretos. Primeiramente, abra `tasks.json`. A tarefa é executada de build padrão executa `dotnet build` no diretório de origem do espaço de trabalho. Em vez disso, você deve executá-lo no diretório `src/app`. Você precisa adicionar um nó `options` para definir o diretório de trabalho atual para:
-
-```json
-"options": {
-    "cwd": "${workspaceRoot}/src/app"
-}
-```
-
-Em seguida, você precisará abrir `launch.json` e atualizar o caminho do programa. Você verá um nó em “configurações” que descreve o programa. Você verá:
-
-```json
-"program": "${workspaceRoot}/bin/Debug/<target-framework>/<project-name.dll>",
-```
-
-Você alterará isso para:
-
-```json
-"program": "${workspaceRoot}/src/app/bin/Debug/netcoreapp1.0/app.dll",
-```
-
-Se estiver executando no Windows, será necessário atualizar o `project.json` do Aplicativo (no diretório `src/app`) para gerar arquivos PDB portáteis (isso acontece por padrão no Mac OSX e no Linux).
-Adicione o nó `debugType` dentro de `buildOptions`. Você precisará adicionar o nó `debugType` em `project.json` para ambas as pastas `src/app` e `src/library`.
-
-```json
-  "buildOptions": {
-    "debugType": "portable"
-  },
-```
-
 Defina um ponto de interrupção na instrução `WriteLine` em `Main`. Você pode fazer isso pressionando a tecla `F9` ou clicando com o mouse na margem esquerda na linha escolhida para ser o ponto de interrupção. Abra o depurador pressionando o ícone de depuração à esquerda da tela do VS Code (veja a figura). Em seguida, pressione o botão Play para iniciar o aplicativo no depurador.
 
 Você deverá atingir o ponto de interrupção. Inspecione o método `Get` e verifique se você transmitiu os argumentos corretos. Verifique se a resposta é, na verdade, 42.
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

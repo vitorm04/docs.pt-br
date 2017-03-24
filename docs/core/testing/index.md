@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
+ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -34,7 +34,9 @@ Ao escrever testes de unidade, tenha cuidado para não apresentar dependências 
 
 Saiba mais sobre testes de unidade em projetos do .NET Core:
 
-Experimente seguir o [passo a passo para criar testes de unidade com xunit e a CLI do .NET](unit-testing-with-dotnet-test.md).
+Experimente seguir o [passo a passo para criar testes de unidade com xUnit e a CLI do .NET](unit-testing-with-dotnet-test.md). 
 
-A equipe do XUnit criou um tutorial que mostra [como usar o xunit com o .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+A equipe do XUnit criou um tutorial que mostra [como usar o xUnit com o .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+
+Se você preferir usar o MSTest, tente as [instruções passo a passo para criar testes de unidade com o MSTest e a CLI do .NET](unit-testing-with-mstest.md).
 

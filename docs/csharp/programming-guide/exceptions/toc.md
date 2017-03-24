@@ -1,0 +1,8 @@
+# [Exceções e manipulação de exceções](index.md)
+## [Usando exceções](using-exceptions.md)
+## [Tratamento de Exceção](exception-handling.md)
+## [Criando e lançando exceções](creating-and-throwing-exceptions.md)
+## [Exceções geradas pelo compilador](compiler-generated-exceptions.md)
+## [Como manipular uma exceção usando try/catch](how-to-handle-an-exception-using-try-catch.md)
+## [Como executar código de limpeza usando finally](how-to-execute-cleanup-code-using-finally.md)
+## [Como capturar uma exceção não compatível com CLS](how-to-catch-a-non-cls-exception.md)

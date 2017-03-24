@@ -4,117 +4,93 @@ description: "O comando `dotnet test` é usado para executar testes de unidade e
 keywords: dotnet-test, CLI, comando da CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
+ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 871a6f736272309f6fae74b06f437c7271df2321
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-test"></a>dotnet-test
 
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [dotnet-test (Ferramentas do .NET Core RC4)](../preview3/tools/dotnet-test.md).
-
 ## <a name="name"></a>Nome
 
-`dotnet-test` – Executa testes de unidade usando o executor de teste configurado.
+`dotnet-test` – Driver de teste .NET
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet test [project] [--help] 
-    [--parentProcessId] [--port] [--configuration]   
-    [--output] [--build-base-path] [--framework] [--runtime]
-    [--no-build]`  
+```
+dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
+dotnet test [-h|--help]
+```
 
 ## <a name="description"></a>Descrição
 
 O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. Testes de unidade são projetos de biblioteca de classes que têm dependências na estrutura de teste da unidade (por exemplo, NUnit ou xUnit) e o executor de teste dotnet dessa estrutura de teste de unidade. Eles são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
-Projetos de teste também precisam especificar uma propriedade de executor de teste no project.json usando o nó “testRunner”. Esse valor deve conter o nome da estrutura de teste de unidade.
+Projetos de teste também precisam especificar o executor de teste. Isso é especificado usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
 
-O project.json de exemplo a seguir mostra as propriedades necessárias:
-
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable"
-  },
-  "dependencies": {
-    "System.Runtime.Serialization.Primitives": "4.1.1",
-    "xunit": "2.1.0",
-    "dotnet-test-xunit": "1.0.0-rc2-192208-24"
-  },
-  "testRunner": "xunit",
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "type": "platform",
-          "version": "1.0.0"
-        }
-      },
-      "imports": [
-        "dotnet5.4",
-        "portable-net451+win8"
-      ]
-    }
-  }
-}
-```
-
-`dotnet test` dá suporte a dois modos de execução:
-
-1. Console: no modo de console, o `dotnet test` apenas executa totalmente qualquer comando passado para ele e gera os resultados. Sempre que você invocar `dotnet test` sem passar --port, ele é executado no modo de console, que por sua vez fará com que o executor seja executado no modo de console.
-2. Tempo de design: usado no contexto de outras ferramentas, como editores ou IDEs (ambientes de desenvolvimento integrado). Você pode encontrar mais informações sobre esse modo no documento [protocolo dotnet-test](test-protocol.md). 
+[!code-xml[Modelo Básico do XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>Opções
 
-`[project]`
+`project`
     
 Especifica um caminho para o projeto de teste. Se for omitido, o padrão será o diretório atual.
 
-`-?|-h|--help`
+`-h|--help`
 
 Imprime uma ajuda breve para o comando.
 
-`--parentProcessId`
+`-s|--settings <SETTINGS_FILE>`
 
-Usado pelos IDEs para especificar sua ID de processo. O teste será fechado se o processo-pai também o for.
+Configurações para usar ao executar testes. 
 
-`--port`
+`-t|--list-tests`
 
-Usado pelos IDEs para especificar um número da porta para escutar uma conexão.
+Lista todos os testes descobertos no projeto atual. 
+
+`--filter <EXPRESSION>`
+
+Filtra os testes no projeto atual usando a expressão especificada. Para saber mais sobre o suporte à filtragem, consulte [Executar testes seletivos de unidade no Visual Studio usando o TestCaseFilter](https://aka.ms/vstest-filtering).
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Usa os adaptadores de teste personalizado do caminho especificado na execução de teste. 
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Especifica um agente para resultados do teste. 
 
 `-c|--configuration <Debug|Release>`
 
-Configuração de build. O valor padrão é `Release`. 
+Configuração de build. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
 
-`-o|--output [OUTPUT_DIRECTORY]`
-
-Diretório no qual encontram-se os binários para execução.
-
-`-b|--build-base-path <OUTPUT_DIRECTORY>`
-
-Diretório no qual as saídas temporárias são colocadas.
-
-`-f|--framework [FRAMEWORK]`
+`-f|--framework <FRAMEWORK>`
 
 Procura os binários de teste para uma estrutura específica.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Procure os binários de teste para o tempo de execução especificado.
+Diretório no qual encontram-se os binários para execução.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico para o arquivo especificado. 
 
 `--no-build` 
 
-Não compila o projeto de teste antes de executá-lo. 
+Não compila o projeto de teste antes de executá-lo.
+
+`-v|--verbosity <LEVEL>`
+
+Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
 ## <a name="examples"></a>Exemplos
 
@@ -124,17 +100,10 @@ Execute os testes no projeto no diretório atual:
 
 Execute os testes no projeto test1:
 
-`dotnet test /projects/test1/project.json` 
+`dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>Consulte também
-
-[Protocolo de comunicação dotnet-test](test-protocol.md)
 
 [Estruturas](../../standard/frameworks.md)
 
 [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
-
-
-<!--HONumber=Feb17_HO2-->
-
-

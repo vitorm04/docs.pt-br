@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
+ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 0363bdfcb75f51789393e1459d23fcb644c7fb11
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)
-
-> [!WARNING]
-> Este tópico se aplica à Visualização 2 das Ferramentas do .NET Core. Para a versão do Ferramentas do .NET Core RC4, consulte o tópico [Usando ferramentas e SDK do .NET Core na CI (Integração Contínua) (Ferramentas do .NET Core RC4)](../preview3/tools/using-ci-with-cli.md).
 
 ## <a name="overview"></a>Visão Geral
 Este documento descreve o uso do SDK do .NET Core e suas ferramentas no servidor de build. Em geral, em um servidor de build de CI, você deseja automatizar a instalação de alguma forma. O ideal é que a automação não exija privilégios administrativos, se possível. 
@@ -89,10 +87,3 @@ install:
   - ps: $url = "https://dotnetcli.blob.core.windows.net/dotnet/preview/Binaries/$($env:CLI_VERSION)/dotnet-dev-win-x64.$($env:CLI_VERSION.ToLower()).zip"
   # follow normal installation from binaries
 ```
-
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-
