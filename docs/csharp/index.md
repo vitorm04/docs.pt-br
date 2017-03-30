@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d9efc2b1b8ad38a6444e7362da13ce3838476abd
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
+ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
+ms.lasthandoff: 03/28/2017
 
 ---
 
@@ -27,7 +27,7 @@ O guia do C# fornece uma grande quantidade de informações sobre a linguagem C#
     - Se você já tiver trabalhado desenvolvimento antes, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Você aprenderá a sintaxe e a estrutura básicas da linguagem, e poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também é possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#. Ou confira [Conceitos do C#](concepts.md) para aprender sobre os recursos da linguagem C# em detalhes.
 
 * Desenvolvedores em C# experientes:
-    - Se você já tiver usado o C# antes, comece lendo as novidades da versão mais recente da linguagem. Confira [Novidades no C# 6](csharp-6.md) para conhecer os novos recursos da versão atual. Em seguida, explore os [Conceitos do C#](concepts.md) dos quais deseja saber mais detalhes.
+    - Se você já tiver usado o C# antes, comece lendo as novidades da versão mais recente da linguagem. Confira [Novidades no C#](whats-new/index.md) para conhecer os novos recursos da versão atual. Em seguida, explore os [Conceitos do C#](concepts.md) dos quais deseja saber mais detalhes.
  
 ## <a name="how-the-c-guide-is-organized"></a>Como o guia do C# está organizado
 
@@ -42,7 +42,7 @@ Há sete seções no Guia do C#. Você pode lê-los em ordem ou ir diretamente p
 * [Um tour do C#](tour-of-csharp/index.md): 
     - Esta seção fornece uma visão geral da linguagem. Você aprenderá os elementos que compõem os programas em C# e os recursos da linguagem. Você verá pequenos exemplos de todos os elementos da sintaxe do C# e discussões dos principais tópicos de linguagem C#. 
 
-* [Recursos mais recentes](whats-new.md):
+* [Recursos mais recentes](whats-new/index.md):
     - Conheça os novos recursos na linguagem. Saiba mais sobre novas ferramentas como C# Interativo (REPL do C#) e o SDK de Plataforma do Compilador .NET. Você aprenderá como o idioma está evoluindo. Você verá como as novas ferramentas podem aumentar sua produtividade na exploração da linguagem e na automatização de tarefas. 
 
 * [C# Interativo](interactive/index.md):
