@@ -30,9 +30,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1ea6969d314d66286e4e7c3e63c7952df28e2a44
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -59,7 +59,7 @@ O Visual Basic foi desenvolvido para compilar aplicativos fortemente tipados e o
  Contém as informações de linguagem e compilador do Visual Basic.  
 
  [Desenvolvendo aplicativos com o Visual Basic](../visual-basic/developing-apps/index.md)  
- Discute vários aspectos de desenvolvimento em Visual Basic, como editor de código, segurança, manipuladores de exceção, depuração e uso da biblioteca de classes [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)].
+ Discute vários aspectos de desenvolvimento em Visual Basic, segurança, manipuladores de exceção, e uso da biblioteca de classes [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)].
 
  [Interoperabilidade COM](../visual-basic/programming-guide/com-interop/index.md)  
  Explica os problemas de interoperabilidade associados à criação e ao uso de objetos COM (Component Object Model) com o Visual Basic.  
