@@ -36,7 +36,7 @@ ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Passo a passo: Programação do Office (C# e Visual Basic)
-[!INCLUDE[vs_dev10_long](../../../csharp/programming-guide/interop/includes/vs_dev10_long_md.md)] apresenta novos recursos no C# e no Visual Basic que melhoram a programação do Microsoft Office. Cada linguagem adicionou recursos que já existiam na outra linguagem.  
+Visual Studio apresenta novos recursos no C# e no Visual Basic que melhoram a programação do Microsoft Office. Cada linguagem adicionou recursos que já existiam na outra linguagem.  
   
  Os novos recursos em C# incluem argumentos nomeados e opcionais, retornam valores que possuem o tipo `dynamic` e, em programação COM, a capacidade de omitir a palavra-chave `ref` e acessar propriedades indexadas. Os novos recursos do Visual Basic incluem propriedades implementadas automaticamente, instruções em expressões lambda e inicializadores de coleção.  
   
