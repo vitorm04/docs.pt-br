@@ -39,8 +39,7 @@ ms.lasthandoff: 03/13/2017
 `#region` permite que você especifique um bloco de código que pode ser expandido ou recolhido ao usar o recurso de [estrutura de tópicos](https://docs.microsoft.com/visualstudio/ide/outlining) do editor do Visual Studio Code. Em arquivos de código mais longos, é conveniente recolher ou ocultar uma ou mais regiões para que você possa se concentrar na parte do arquivo que está trabalhando no momento. O exemplo a seguir mostra como definir uma região:  
   
 ```  
-  
-      #region MyClass definition  
+#region MyClass definition  
 public class MyClass   
 {  
     static void Main()   
@@ -59,3 +58,4 @@ public class MyClass
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
