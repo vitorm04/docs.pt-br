@@ -1,0 +1,95 @@
+---
+title: "Usando delegados (Guia de Programação em C#) | Microsoft Docs"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- delegates [C#], how to use
+ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
+caps.latest.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6ecdd8701c8c7c2e674d70bcfd0eb72109987e35
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="using-delegates-c-programming-guide"></a>Usando delegados (Guia de Programação em C#)
+Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tipo que encapsula com segurança um método, semelhante a um ponteiro de função em C e C++. No entanto, ao contrário dos ponteiros de função de C, delegados são orientados a objeto, fortemente tipados e seguros. O tipo de um delegado é definido pelo nome do delegado. O exemplo a seguir declara um delegado chamado `Del` que pode encapsular um método que usa uma [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md) como um argumento e retorna [nulo](../../../csharp/language-reference/keywords/void.md):  
+  
+ [!code-cs[csProgGuideDelegates#21](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_1.cs)]  
+  
+ Um objeto delegado é normalmente construído fornecendo-se o nome do método que o delegado encapsulará ou com um [método anônimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md). Quando um delegado é instanciado, uma chamada de método feita ao delegado será passada pelo delegado para esse método. Os parâmetros passados para o delegado pelo chamador são passados para o método e o valor de retorno, se houver, do método é retornado ao chamador pelo delegado. Isso é conhecido como invocar o delegado. Um delegado instanciado pode ser invocado como se fosse o método encapsulado em si. Por exemplo:  
+  
+ [!code-cs[csProgGuideDelegates#22](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_2.cs)]  
+  
+ [!code-cs[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
+  
+ Tipos delegados são derivados da classe <xref:System.Delegate> no .NET Framework. Tipos delegados são [selados](../../../csharp/language-reference/keywords/sealed.md) — não podem ser derivados — e não é possível derivar classes personalizadas de <xref:System.Delegate>. Como o delegado instanciado é um objeto, ele pode ser passado como um parâmetro ou atribuído a uma propriedade. Isso permite que um método aceite um delegado como um parâmetro e chame o delegado posteriormente. Isso é conhecido como um retorno de chamada assíncrono e é um método comum de notificação de um chamador quando um processo longo for concluído. Quando um delegado é usado dessa maneira, o código que usa o delegado não precisa de conhecimento algum da implementação do método que está sendo usado. A funcionalidade é semelhante ao encapsulamento que as interfaces fornecem.  
+  
+ Outro uso comum de chamadas de retorno é definir um método de comparação personalizada e passar esse delegado para um método de classificação. Ele permite que o código do chamador se torne parte do algoritmo de classificação. O método de exemplo a seguir usa o tipo `Del` como um parâmetro:  
+  
+ [!code-cs[csProgGuideDelegates#24](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_4.cs)]  
+  
+ Em seguida, você pode passar o delegado criado acima para esse método:  
+  
+ [!code-cs[csProgGuideDelegates#25](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_5.cs)]  
+  
+ e receber a seguinte saída para o console:  
+  
+ `The number is: 3`  
+  
+ Usando o delegado como uma abstração, `MethodWithCallback` não precisa chamar o console diretamente — ele não precisa ser criado com um console em mente. O que `MethodWithCallback` faz é simplesmente preparar uma cadeia de caracteres e passá-la para outro método. Isso é especialmente poderoso, uma vez que um método delegado pode usar qualquer número de parâmetros.  
+  
+ Quando um delegado é construído para encapsular um método de instância, o delegado faz referência à instância e ao método. Um delegado não tem conhecimento do tipo de instância além do método que ele encapsula, de modo que um delegado pode se referir a qualquer tipo de objeto desde que haja um método nesse objeto que corresponda à assinatura do delegado. Quando um delegado é construído para encapsular um método estático, ele só faz referência ao método. Considere as seguintes declarações:  
+  
+ [!code-cs[csProgGuideDelegates#26](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_6.cs)]  
+  
+ Além do `DelegateMethod` estático mostrado anteriormente, agora temos três métodos que podem ser encapsulados por uma instância `Del`.  
+  
+ Um delegado pode chamar mais de um método quando invocado. Isso é chamado de multicast. Para adicionar um método extra à lista de métodos do delegado — a lista de invocação — basta adicionar dois delegados usando os operadores de adição ou de atribuição de adição ('+' ou '+ ='). Por exemplo:  
+  
+ [!code-cs[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
+  
+ Nesse ponto, `allMethodsDelegate` contém três métodos em sua lista de invocação —`Method1`, `Method2` e `DelegateMethod`. Os três delegados originais, `d1`, `d2` e `d3`, permanecem inalterados. Quando `allMethodsDelegate` é invocado, os três métodos são chamados na ordem. Se o delegado usar parâmetros de referência, a referência será passada em sequência para cada um dos três métodos por vez, e quaisquer alterações em um método serão visíveis no próximo método. Quando algum dos métodos gerar uma exceção que não foi detectada dentro do método, essa exceção será passada ao chamador do delegado e nenhum método subsequente na lista de invocação será chamado. Se o delegado tiver um valor de retorno e/ou parâmetros de saída, ele retornará o valor de retorno e os parâmetros do último método invocado. Para remover um método da lista de invocação, use operador a decremento ou de atribuição de decremento ('-' ou ' '-=''). Por exemplo:  
+  
+ [!code-cs[csProgGuideDelegates#28](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_8.cs)]  
+  
+ Como os tipos de delegados são derivados de `System.Delegate`, os métodos e as propriedades definidos por essa classe podem ser chamados no delegado. Por exemplo, para localizar o número de métodos na lista de invocação do delegado, é possível escrever:  
+  
+ [!code-cs[csProgGuideDelegates#29](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_9.cs)]  
+  
+ Delegados com mais de um método em sua lista de invocação derivam de <xref:System.MulticastDelegate>, que é uma subclasse de `System.Delegate`. O código acima funciona em ambos os casos, pois as classes oferecem suporte à `GetInvocationList`.  
+  
+ Delegados multicast são amplamente usados na manipulação de eventos. Objetos de origem do evento enviam notificações de eventos aos objetos de destinatário que se registraram para receber esse evento. Para se registrar para um evento, o destinatário cria um método projetado para lidar com o evento, em seguida, cria um delegado para esse método e passa o delegado para a origem do evento. A origem chama o delegado quando o evento ocorre. O delegado chama então o método de manipulação de eventos no destinatário, fornecendo os dados do evento. O tipo de delegado de um determinado evento é definido pela origem do evento. Para saber mais, consulte [Eventos](../../../csharp/programming-guide/events/index.md).  
+  
+ A comparação de delegados de dois tipos diferentes atribuídos no tempo de compilação resultará em um erro de compilação. Se as instâncias de delegado forem estaticamente do tipo `System.Delegate`, então a comparação será permitida, mas retornará false no tempo de execução. Por exemplo:  
+  
+ [!code-cs[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
+  
+## <a name="see-also"></a>Consulte também  
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+ [Delegados](../../../csharp/programming-guide/delegates/index.md)   
+ [Usando variação em delegados](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)   
+ [Variação em delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)   
+ [Usando variação para delegados genéricos Func e Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)   
+ [Eventos](../../../csharp/programming-guide/events/index.md)

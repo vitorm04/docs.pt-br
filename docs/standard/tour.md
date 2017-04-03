@@ -3,17 +3,17 @@ title: Tour do .NET
 description: Um tour guiado por alguns dos recursos-chave da plataforma .NET.
 keywords: ".NET, .NET Core, Tour, Linguagens de Programação, Não Seguro, Gerenciamento de Memória, Segurança de Tipos, Async"
 author: cartermp
-manager: wpickett
-ms.author: phcart
-ms.date: 11/16/2016
+ms.author: wiwagn
+ms.date: 02/09/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 2c57b5cebd63b1d94b127cd269e3b319fb24dd97
-ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
+ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
+ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -34,7 +34,7 @@ No futuro, este site de documentação terá a capacidade de executar esses exem
 
 ## <a name="programming-languages"></a>Linguagens de programação
 
-O .NET dá suporte a várias linguagens de programação.  Os tempos de execução do .NET implementam o [Common Language Infrastructure (CLI)](https://www.visualstudio.com/en-us/mt639507), que (entre outras coisas) especifica um tempo de execução independente de linguagem e interoperabilidade de linguagem.  Isso significa que você pode escolher qualquer linguagem .NET para criar aplicativos e serviços no .NET.
+O .NET dá suporte a várias linguagens de programação.  Os tempos de execução do .NET implementam o [Common Language Infrastructure (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), que (entre outras coisas) especifica um tempo de execução independente de linguagem e interoperabilidade de linguagem.  Isso significa que você pode escolher qualquer linguagem .NET para criar aplicativos e serviços no .NET.
 
 A Microsoft desenvolve ativamente e oferece suporte a três linguagens .NET: C#, F# e Visual Basic .NET. 
 
@@ -54,21 +54,27 @@ As duas linhas a seguir alocam memória:
 
 Não há nenhuma palavra-chave análoga para desalocar memória, pois a desalocação ocorre automaticamente quando o coletor de lixo recupera a memória por meio de sua execução agendada.
 
-Tipos em um determinado escopo normalmente saem do escopo depois que um método é concluído, momento no qual eles podem ser coletados. No entanto, é possível indicar ao GC que um determinado objeto está fora do escopo antes da saída do método usando a instrução `using`:
+O coletor de lixo é apenas um dos serviços que ajudam a garantir a *segurança da memória*.  O que não varia quanto à segurança da memória é muito simples: a memória de um programa está segura se ele acessa somente a memória que foi alocada (e não liberada).  Por exemplo, o tempo de execução garante que programas não façam indexação após o final de uma matriz nem acessem um campo fantasma após o fim de um objeto.
+
+No exemplo a seguir, o tempo de execução gerará uma exceção `InvalidIndexException`, para impor a segurança da memória.
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
-Uma vez que o bloco `using` for concluído, o GC saberá que o objeto `stream` no exemplo acima está livre para ser coletado e ter sua memória recuperada.
+## <a name="working-with-unmanaged-resources"></a>Trabalhando com recursos não gerenciados
 
-Essas regras têm uma semântica ligeiramente diferente no F#.  Para saber mais sobre o gerenciamento de recursos no F#, confira [Gerenciamento de Recursos: A`use` Palavra-Chave](../fsharp/language-reference/resource-management-the-use-keyword.md)
+Alguns objetos fazem referência a *recursos não gerenciados*. Recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET.  Por exemplo, um identificador de arquivo é um recurso não gerenciado.  Um objeto @System.IO.FileStreamé um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado.  Quando você termina de usar o fluxo de arquivos, é necessário liberar o identificador de arquivo.
 
-Um dos recursos menos óbvios, mas muito abrangente que é habilitado por um coletor de lixo é a segurança da memória. O que não varia quanto à segurança da memória é muito simples: a memória de um programa está segura se ele acessa somente a memória que foi alocada (e não liberada). Ponteiros pendentes são sempre bugs e rastreá-los é muitas vezes difícil.
+No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface @System.IDisposable.  Quando você termina de usar o objeto, você chama o método @System.IDisposable.Dispose do objeto, responsável por liberar quaisquer recursos não gerenciados.  Linguagens .NET fornecem uma sintaxe `using` conveniente para esses objetos, como no exemplo a seguir:
 
-O tempo de execução do .NET fornece serviços adicionais para cumprir a promessa de segurança da memória, normalmente não oferecida por um GC. Isso garante que programas não façam indexação após o final de uma matriz nem acessem um campo fantasma após o fim de um objeto.
+[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-O exemplo a seguir gerará uma exceção como resultado de segurança da memória.
+Uma vez que o bloco `using` é concluído, o tempo de execução .NET automaticamente chama o método @System.IDisposable.Dispose do objeto `stream`, que libera o identificador de arquivo.  O tempo de execução também faz isso se uma exceção faz com que o controle deixe o bloco.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+Para obter mais detalhes, consulte as seguintes páginas:
+
+* Para C#, [Instrução using](../csharp/language-reference/keywords/using-statement.md)
+* Para F#, [Gerenciamento de recursos: a palavra-chave `use`](../fsharp/language-reference/resource-management-the-use-keyword.md)
+* Para o Visual Basic, [Instrução Using](../visual-basic/language-reference/statements/using-statement.md)
 
 ## <a name="type-safety"></a>Segurança de tipos
 
@@ -102,7 +108,7 @@ Genéricos são um recurso adicionado no .NET Framework 2.0. Em resumo, os gené
 
 Os genéricos foram adicionados para ajudar os programadores a implementar estruturas de dados genéricos. Antes de sua chegada, para que um tipo de, digamos, `List` fosse genérico, seria necessário que ele trabalhasse com elementos do tipo `object`. Isso implicaria em diversos problemas de desempenho e semântica, além de possíveis erros de tempo de execução sutis. O mais notório deles é quando uma estrutura de dados contém, por exemplo, inteiros e cadeias de caracteres e uma `InvalidCastException` é gerada ao trabalhar com os membros da lista.
 
-O exemplo a seguir mostra uma execução de programa básico usando uma instância de tipos @System.Collections.Generic.List%601.
+O exemplo a seguir mostra a execução de um programa básico usando uma instância de @System.Collections.Generic.List%601 tipos.
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
@@ -147,8 +153,4 @@ Se você estiver interessado em um tour pelos recursos do F#, confira [Tour do F
 Se você deseja começar a gravar códigos, confira [Introdução](getting-started.md).
 
 Para saber mais sobre componentes importantes do .NET, confira [Componentes de Arquitetura do .NET](components.md).
-
-
-<!--HONumber=Nov16_HO3-->
-
 

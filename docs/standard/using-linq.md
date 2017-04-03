@@ -25,7 +25,7 @@ A LINQ fornece funcionalidades de consulta no nível da linguagem e uma API de [
 
 Sintaxe de consulta de nível de linguagem:
 
-```cs
+```csharp
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
@@ -34,7 +34,7 @@ var linqExperts = from p in programmers
 
 Mesmo exemplo usando a API `IEnumerable<T>`:
 
-```cs
+```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
 
@@ -46,7 +46,7 @@ Imagine que você tem uma lista de animais de estimação, mas deseja convertê-
 
 Código imperativo tradicional:
 
-```cs
+```csharp
 var petLookup = new Dictionary<int, Pet>();
 
 foreach (var pet in pets)
@@ -60,7 +60,7 @@ A intenção por trás do código não é criar um novo `Dictionary<int, Pet>` e
 
 Expressão LINQ equivalente:
 
-```cs
+```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
 
 ```
@@ -73,7 +73,7 @@ Para uma parte significativa do software em uso, tudo gira em torno de lidar com
 
 Considere o seguinte: localizar todos os elementos XML com um valor de atributo específico.
 
-```cs
+```csharp
 public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement documentRoot, string elementName,
                                            string attributeName, string value)
 {
@@ -92,14 +92,14 @@ Interagir com o XML não é a única coisa que você pode fazer com provedores L
 
 Essa é uma pergunta que surge bastante. Afinal, isso
 
-```cs
+```csharp
 var filteredItems = myItems.Where(item => item.Foo);
 
 ```
 
 é muito mais conciso que isso:
 
-```cs
+```csharp
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
@@ -132,7 +132,7 @@ A seguir está uma rápida demonstração de algumas das partes essenciais da LI
 
 *   O básico: `Where`, `Select` e `Aggregate`:
 
-```cs
+```csharp
 // Filtering a list
 var germanShepards = dogs.Where(dog => dog.Breed == DogBreed.GermanShepard);
 
@@ -156,7 +156,7 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 
 *   Nivelar uma lista de listas:
 
-```cs
+```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 
@@ -164,7 +164,7 @@ var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 
 *   União entre dois conjuntos (com o comparador personalizado):
 
-```cs
+```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
 {
     public bool Equals(Dog a, Dog b)
@@ -200,7 +200,7 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 
 *   Interseção entre dois conjuntos:
 
-```cs
+```csharp
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
@@ -209,7 +209,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 
 *   Ordenar:
 
-```cs
+```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
@@ -219,7 +219,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
 
 *   Por fim, um exemplo mais avançado: determinar se os valores das propriedades de duas instâncias do mesmo tipo são iguais (emprestados e modificados [dessa postagem do StackOverflow](http://stackoverflow.com/a/844855)):
 
-```cs
+```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
 {
     if (self != null && to != null)
@@ -248,7 +248,7 @@ PLINQ, ou LINQ Paralela, é um mecanismo de execução paralelo para expressões
 
 Considere o seguinte:
 
-```cs
+```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
 {
     var seed = default(UInt64);

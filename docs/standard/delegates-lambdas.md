@@ -21,7 +21,7 @@ ms.lasthandoff: 03/02/2017
 
 Os delegados definem um tipo, que especifica uma assinatura de método específica. Um método (estático ou instância) que satisfaz essa assinatura pode ser atribuído a uma variável desse tipo, que então é chamada diretamente (com os argumentos apropriados) ou passada como um argumento para outro método e, então, chamada. O exemplo a seguir demonstra o uso de um delegado.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -55,7 +55,7 @@ Para simplificar o processo de desenvolvimento, o .NET inclui um conjunto de tip
 
 Agora, podemos pegar nosso exemplo acima e reescrevê-lo usando o delegado `Func<>` em vez de um tipo personalizado. O programa continuará sendo executado exatamente da mesma forma.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -78,7 +78,7 @@ Para este exemplo simples, ter um método definido fora do método Main() parece
 
 Para dar um exemplo, vamos trocá-lo e usar nosso delegado anônimo para filtrar uma lista com apenas os números pares e, em seguida, imprimi-los no console.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -115,7 +115,7 @@ As expressões lambda ou apenas "lambdas" para abreviar, foram introduzidas pela
 
 Como uma expressão lambda é apenas outra maneira de especificar um delegado, nós podemos reescrever o exemplo acima para usar uma expressão lambda em vez de um delegado anônimo.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -143,7 +143,7 @@ Se observar as linhas realçadas, você pode ver qual é a aparência de uma exp
 
 Novamente, as lambdas são apenas delegados, o que significa que podem ser usadas como um manipulador de eventos sem problemas, como o trecho de código a seguir ilustra.
 
-```cs
+```csharp
 public MainWindow()
 {
     InitializeComponent();

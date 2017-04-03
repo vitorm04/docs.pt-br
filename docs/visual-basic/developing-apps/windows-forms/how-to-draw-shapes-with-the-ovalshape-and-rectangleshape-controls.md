@@ -65,7 +65,7 @@ Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>controle para
 Imports Microsoft.VisualBasic.PowerPacks  
 ```  
   
-```cs  
+```csharp  
 using Microsoft.VisualBasic.PowerPacks;  
 ```  
   

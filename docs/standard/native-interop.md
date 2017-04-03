@@ -38,7 +38,7 @@ P/Invoke é uma tecnologia que permite acessar structs, retornos de chamada e fu
 
 Vamos começar com exemplo mais comum, que é chamar funções não gerenciadas no seu código gerenciado. Vamos mostrar uma caixa de mensagem de um aplicativo de linha de comando:
 
-```cs
+```csharp
 using System.Runtime.InteropServices;
 
 public class Program {
@@ -66,7 +66,7 @@ O restante do exemplo é simplesmente chamar o método como você faria com qual
 
 A amostra é semelhante para macOS. Uma coisa que precisa ser alterada é, obviamente, o nome da biblioteca no atributo `DllImport`, pois o macOS tem um esquema diferente de nomenclatura de bibliotecas dinâmicas. O exemplo abaixo usa a função `getpid(2)` para obter a identificação do processo do aplicativo e imprimi-la para o console.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -89,7 +89,7 @@ namespace PInvokeSamples {
 
 É semelhante no Linux, evidentemente. O nome da função é o mesmo, já que `getpid(2)` é uma chamada do sistema [POSIX](https://en.wikipedia.org/wiki/POSIX).
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -116,7 +116,7 @@ Naturalmente, o tempo de execução possibilita que a comunicação aconteça em
 
 A maneira de usar esse recurso é semelhante ao processo gerenciado para nativo, descrito acima. Para um retorno de chamada específico, você define um delegado que corresponda à assinatura e o passa para o método externo. O tempo de execução cuidará do resto.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -160,7 +160,7 @@ Com isso em mente, vamos analisar o exemplo:
 
 Os exemplos de Linux e macOS são mostrados abaixo. Para eles, usamos a função `ftw` que pode ser encontrada em `libc`, a biblioteca C. Essa função é usada para percorrer as hierarquias de diretório e leva um ponteiro para uma função como um dos seus parâmetros. Essa função tem a seguinte assinatura: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -213,7 +213,7 @@ namespace PInvokeSamples {
 
 O exemplo do macOS usa a mesma função; a única diferença é o argumento para o atributo `DllImport`, pois o macOS mantém `libc` em um local diferente.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -272,7 +272,7 @@ Os exemplos acima dependem de parâmetros e, em ambos os casos, os parâmetros s
 
 O marshalling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem um `String`; no mundo não gerenciado, as cadeias de caracteres podem ser Unicode (“horizontais”), não Unicode, finalizadas com null, ASCII, etc. Por padrão, o subsistema do P/Invoke tentará fazer a coisa certa com base no comportamento padrão que você pode ver no [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo `MarshalAs` para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se quisermos que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI finalizada com null, poderemos fazer o seguinte:
 
-```cs
+```csharp
 [DllImport("somenativelibrary.dll"]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
@@ -282,7 +282,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 Outro aspecto do marshalling de tipos é como passar um struct para um método não gerenciado. Por exemplo, alguns dos métodos não gerenciados requerem um struct como parâmetro. Nesses casos, precisamos criar um struct correspondente ou uma classe na parte gerenciada do mundo para usar como parâmetro. No entanto, definir a classe não é suficiente; também precisamos ensinar o marshaler como mapear campos na classe para o struct não gerenciado. É aí que o atributo `StructLayout` entra em cena.
 
-```cs
+```csharp
 [DllImport("kernel32.dll")]
 static extern void GetSystemTime(SystemTime systemTime);
 
@@ -324,7 +324,7 @@ typedef struct _SYSTEMTIME {
 
 Já vimos o exemplo de Linux e macOS no exemplo anterior. Ele é mostrado novamente abaixo.
 
-```cs
+```csharp
 [StructLayout(LayoutKind.Sequential)]
 public class StatClass {
         public uint DeviceID;
