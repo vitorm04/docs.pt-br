@@ -4,16 +4,16 @@ description: "Um tutorial passo a passo que mostra como começar a usar o .NET C
 keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 240061d2515c14ba7ab733f4cc9e7e38fb2a5c7c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: e30414ac3dd48bbb060ad6f2a33a0a124cba0fa3
+ms.openlocfilehash: 6ffca900d5649823e6aa2e28486a64a2f7844efc
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -25,7 +25,7 @@ Se não estiver familiarizado com o conjunto de ferramentas da CLI do .NET Core,
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [SDK 1.0.0 do .NET Core](https://www.microsoft.com/net/download/core).
+- [SDK 1.0 do .NET Core](https://www.microsoft.com/net/download/core).
 - Um editor de texto ou de código de sua escolha.
 
 ## <a name="hello-console-app"></a>Olá, Aplicativo de Console.
@@ -163,3 +163,4 @@ Observe que os comandos e as etapas mostradas neste tutorial para executar o apl
 ## <a name="see-also"></a>Consulte também
 
 [Organizando e testando projetos com as ferramentas da CLI do .NET Core](testing-with-cli.md)
+

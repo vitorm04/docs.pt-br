@@ -4,16 +4,16 @@ description: Veja um mapeamento entre os elementos project.json e csproj.
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
 ms.author: mairaw
-ms.date: 03/02/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: beaae03add6f90692189325c0e1cff5ab761abb5
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -612,7 +612,7 @@ No MSBuild, isso é feito com [itens](https://docs.microsoft.com/visualstudio/ms
 ```
 
 > [!NOTE]
-> Muitos dos padrões glob padrão são adicionados automaticamente pelo SDK do .NET Core.
+> Muitos dos [padrões de recurso de curinga](https://en.wikipedia.org/wiki/Glob_(programming)) são adicionados automaticamente pelo SDK do .NET Core.
 > Para obter mais informações, consulte [Valores de item de compilação padrão](https://aka.ms/sdkimplicititems).
 
 Todos os elementos `ItemGroup` do MSBuild dão suporte a `Include`, `Exclude` e `Remove`.

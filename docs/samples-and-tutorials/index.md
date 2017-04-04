@@ -10,8 +10,9 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: c10736e81d4f43d6ba70b71c25878dc4068a4a10
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -86,6 +87,14 @@ Este tutorial demonstra muitos dos recursos do LINQ e os elementos de linguagem 
 
 Este tutorial demonstra a criação de um microsserviço do ASP.NET Core e a sua hospedagem no Docker. Uma versão concluída do código que você criará está localizada [no repositório de documentos principais no GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice).
 
+**[Introdução ao .NET Core em macOS usando o Visual Studio para Mac](../core/tutorials/using-on-mac-vs.md)**
+
+Este tutorial mostra como compilar um aplicativo de console simples do .NET Core usando o Visual Studio para Mac.
+
+**[Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
+
+Este tutorial mostra como compilar uma solução completa do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
+
 ## <a name="deploying-to-containers"></a>Implantação em contêineres
 
 **[Executando aplicativos ASP.NET MVC em contêineres do Windows Docker](../framework/docker/aspnetmvc.md)**
@@ -96,8 +105,3 @@ Uma versão concluída do código que você criará está localizada [no reposit
 **[Executando aplicativos de console do .NET Framework em contêineres do Windows](../framework/docker/console.md)**
 
 Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. Uma versão concluída do código que você criará está localizada [no repositório de documentos principais no GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
-
-
-<!--HONumber=Jan17_HO3-->
-
-

@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: a6f90a43b5f129cd246546f2cc36c4b97c3fb15c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
+ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -74,7 +74,7 @@ Como mostrado na tabela acima, há recursos do mundo DNX aos quais decidimos nã
 ### <a name="global-commands"></a>Comandos globais
 O DNU vinha com um conceito chamado "comandos globais". Eles eram, essencialmente, aplicativos de console empacotados como NuGet com um script de shell que invocaria o DNX especificado para executar o aplicativo. 
 
-A CLI não dá suporte a esse conceito. Contudo, ela dá suporte ao conceito de adição de comandos por projeto, os quais podem ser invocados usando a sintaxe familiar do `dotnet <command>`. Veja mais sobre isso na [visão geral de extensibilidade](../tools/index.md#extensibility). 
+A CLI não dá suporte a esse conceito. Contudo, ela dá suporte ao conceito de adição de comandos por projeto, os quais podem ser invocados usando a sintaxe familiar do `dotnet <command>`.
 
 ### <a name="installing-dependencies"></a>Instalando dependências
 A partir do v1, as ferramentas da CLI do .NET Core não têm um comando `install` para instalar dependências. Para instalar um pacote NuGet, você precisaria adicioná-lo como uma dependência ao seu arquivo `project.json` e então executar `dotnet restore`. 
@@ -117,7 +117,7 @@ Se você estiver criando um aplicativo de console, precisará adicionar o trecho
 
 Isso instrui o `dotnet build` a emitir um ponto de entrada para seu aplicativo, tornando o código efetivamente executável. Se você estiver criando uma biblioteca de classes, basta omita a seção acima. É claro que, uma vez adicionado o trecho de código acima ao `project.json` arquivo, você precisa adicionar um ponto de entrada estático. Ao deixar de usar o DNX, os serviços de DI fornecidos por ele não estão mais disponíveis e, portanto, esse deve ser um ponto de entrada .NET básico: `static void Main()`.
 
-Se você tiver uma seção "commands" em seu `project.json`, poderá removê-la. Alguns dos comandos que existiam como comandos DNU, como comandos da CLI do Entity Framework, estão sendo portados para extensões por projeto para a CLI. Se você compilou seus próprios comandos que estão sendo usados em seus projetos, será necessário substituí-los por extensões CLI. Nesse caso, o nó `commands` em `project.json` precisa ser substituído pelo nó `tools` e ele precisa listar as dependências de ferramentas conforme explicado na [seção de extensibilidade da CLI](../tools/index.md#extensibility). 
+Se você tiver uma seção "commands" em seu `project.json`, poderá removê-la. Alguns dos comandos que existiam como comandos DNU, como comandos da CLI do Entity Framework, estão sendo portados para extensões por projeto para a CLI. Se você compilou seus próprios comandos que estão sendo usados em seus projetos, será necessário substituí-los por extensões CLI. Nesse caso, o nó `commands` em `project.json` precisa ser substituído pelo nó `tools` e ele precisa listar as dependências de ferramentas. 
 
 Depois de concluir essas coisas, você precisará decidir qual tipo de portabilidade deseja para seu aplicativo. Com o .NET Core, investimos em fornecer uma variedade de opções de portabilidade à sua escolha. Por exemplo, você pode escolher um aplicativo totalmente *portátil* ou *autocontido*. A opção de aplicativo portátil parece-se com a maneira como os aplicativos do .NET Framework funcionam: ele precisa de um componente compartilhado para executá-lo no computador de destino (.NET Core). O aplicativo autocontido não requer que o .NET Core seja instalado no destino, mas você deve produzir um aplicativo para cada sistema operacional ao qual você deseja dar suporte. Esses tipos de portabilidade e muito mais é discutido no documento  [tipo de portabilidade do aplicativo](../deploying/index.md). 
 
