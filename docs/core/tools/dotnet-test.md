@@ -1,19 +1,19 @@
 ---
-title: Comando dotnet-test | Microsoft Docs
+title: Comando dotnet-test - CLI do .NET Core | Microsoft Docs
 description: "O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto."
 keywords: dotnet-test, CLI, comando da CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 21f3850520b922f16c77f831a045ec58bdf1b5c1
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -21,18 +21,15 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="name"></a>Nome
 
-`dotnet-test` – Driver de teste .NET
+`dotnet-test` - driver de teste do .NET usado para executar testes de unidade.
 
 ## <a name="synopsis"></a>Sinopse
 
-```
-dotnet test [project] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity]
-dotnet test [-h|--help]
-```
+`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. Testes de unidade são projetos de biblioteca de classes que têm dependências na estrutura de teste da unidade (por exemplo, NUnit ou xUnit) e o executor de teste dotnet dessa estrutura de teste de unidade. Eles são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
+O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. Testes de unidade são projetos de biblioteca de classes que têm dependências na estrutura de teste da unidade (por exemplo, MSText, NUnit ou xUnit) e o executor de dotnet test da estrutura de teste de unidade. Eles são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
 Projetos de teste também precisam especificar o executor de teste. Isso é especificado usando um elemento comum `<PackageReference>`, conforme mostrado no exemplo de arquivo de projeto a seguir:
 
@@ -40,7 +37,7 @@ Projetos de teste também precisam especificar o executor de teste. Isso é espe
 
 ## <a name="options"></a>Opções
 
-`project`
+`PROJECT`
     
 Especifica um caminho para o projeto de teste. Se for omitido, o padrão será o diretório atual.
 
@@ -68,13 +65,13 @@ Usa os adaptadores de teste personalizado do caminho especificado na execução 
 
 Especifica um agente para resultados do teste. 
 
-`-c|--configuration <Debug|Release>`
+`-c|--configuration <CONFIGURATION>`
 
 Configuração de build. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
 
 `-f|--framework <FRAMEWORK>`
 
-Procura os binários de teste para uma estrutura específica.
+Procura os binários de teste para uma [estrutura](../../standard/frameworks.md) específica.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -98,12 +95,11 @@ Execute os testes no projeto no diretório atual:
 
 `dotnet test` 
 
-Execute os testes no projeto test1:
+Execute os testes no projeto `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj` 
 
 ## <a name="see-also"></a>Consulte também
 
-[Estruturas](../../standard/frameworks.md)
-
-[Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
+* [Estruturas de destino](../../standard/frameworks.md)
+* [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)

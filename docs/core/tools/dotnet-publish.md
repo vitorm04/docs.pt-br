@@ -1,50 +1,48 @@
 ---
-title: Comando dotnet-publish | Microsoft Docs
+title: Comando dotnet-publish - CLI do .NET Core | Microsoft Docs
 description: "O comando dotnet-publish publica seu projeto .NET Core em um diretório."
 keywords: dotnet-publish, CLI, comando da CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 78487673d8fa07286605fb806f30083747b17386
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 48bfe6c77ee6c5d905069f47da5512ac63a24b2a
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-publish"></a>dotnet-publish
+
+# <a name="dotnet-publish"></a>dotnet-publish
 
 ## <a name="name"></a>Nome
 
-`dotnet-publish` – Empacota o aplicativo e todas as suas dependências em uma pasta, preparando-o para publicação.
+`dotnet-publish`- Empacota o aplicativo e suas dependências em uma pasta para implantação em um sistema de hospedagem.
 
 ## <a name="synopsis"></a>Sinopse
 
-```
-dotnet publish [project] [-f|--framework] [-r|--runtime] [-o|--output] [-c|--configuration] [--version-suffix] [-v|--verbosity]
-dotnet publish [-h|--help]
-```
+`dotnet publish [<PROJECT>] [-f|--framework] [-r|--runtime] [-o|--output] [-c|--configuration] [--version-suffix] [-v|--verbosity] [-h|--help]`
 
 ## <a name="description"></a>Descrição
 
 `dotnet publish` compila o aplicativo, lê suas dependências especificadas no arquivo de projeto e publica o conjunto de arquivos resultantes em um diretório. A saída conterá o seguinte:
 
-1. Código IL (Linguagem Intermediária) em um assembly com uma extensão `*.dll`.
-2. Arquivo *deps.json* que contém todas as dependências do projeto. 
-3. Arquivo *Runtime.config.json* que especifica o tempo de execução compartilhado esperado pelo aplicativo, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
-4. Todas as dependências do aplicativo. Elas são copiadas do cache NuGet para a pasta de saída. 
+* Código IL (Linguagem Intermediária) em um assembly com uma extensão `*.dll`.
+* Arquivo *\*deps.json* que contém todas as dependências do projeto.
+* Arquivo *\*.runtime.config.json* que especifica o tempo de execução compartilhado esperado pelo aplicativo, bem como outras opções de configuração para o tempo de execução (por exemplo, tipo de coleta de lixo).
+* As dependências do aplicativo. Elas são copiadas do cache NuGet para a pasta de saída.
 
-A saída do comando `dotnet publish` está pronta para ser implantada em um computador remoto para execução e é a única forma oficialmente com suporte para preparar o aplicativo para ser implantado em outro computador (por exemplo, um servidor) para execução. Dependendo do tipo de implantação especificado pelo projeto, o computador remoto precisará ter o tempo de execução compartilhado do .NET Core instalado. Para obter mais informações, consulte o tópico [Implantação de Aplicativos .NET Core](../deploying/index.md).
+A saída do comando `dotnet publish` está pronta para implantação em um sistema de hospedagem (por exemplo, um servidor, PC, Mac, laptop) para execução, e é a única maneira com suporte oficial para preparar o aplicativo para implantação. Dependendo do tipo de implantação especificado pelo projeto, talvez o sistema de hospedagem não tenha o tempo de execução compartilhado do .NET Core instalado. Para saber mais, confira [Implantação de aplicativos .NET Core](../deploying/index.md). Para a estrutura de diretórios de um aplicativo publicado, veja [Estrutura do diretório](https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure).
 
 ## <a name="arguments"></a>Arguments
 
-`project` 
+`PROJECT` 
 
-O projeto a ser publicado, cujo padrão retorna para o diretório atual se `project` não for especificado. 
+O projeto a ser publicado, cujo padrão será o diretório atual se não for especificado. 
 
 ## <a name="options"></a>Opções
 
@@ -54,23 +52,23 @@ Imprime uma ajuda breve para o comando.
 
 `-f|--framework <FRAMEWORK>`
 
-Publica o aplicativo para a estrutura de destino especificada. A estrutura de destino deve ser especificada no arquivo de projeto.
+Publica o aplicativo para a [estrutura de destino](../../standard/frameworks.md) especificada. Especifique a estrutura de destino no arquivo de projeto.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Publica o aplicativo para um determinado tempo de execução. Isso é usado ao criar uma [implantação independente](../deploying/index.md#self-contained-deployments-scd). Para obter uma lista de RIDs (Identificadores de Tempo de Execução) que podem ser usados, consulte o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar um [aplicativo dependente de estrutura](../deploying/index.md#framework-dependent-deployments-fdd).
+Publica o aplicativo para um determinado tempo de execução. Isso é usado ao criar uma [implantação autocontida (SCD)](../deploying/index.md#self-contained-deployments-scd). Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). O padrão é publicar uma [implantação dependente da estrutura (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).
 
-`-o|--output <OUTPUT_PATH>`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-Especifique o caminho em que o diretório será colocado. Se não for especificado, o padrão será a *_./bin/[configuração]/[estrutura]/_* para aplicativos portáteis ou *_./bin/[configuração]/[estrutura]/[tempo de execução]_* para implantações autocontidas.
+Especifica o caminho para o diretório de saída. Se não for especificado, o padrão será *./bin/[configuração]/[estrutura]/* para uma implantação dependente da estrutura, ou *./bin/[configuração]/[estrutura]/[tempo de execução]* para implantações autocontidas.
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
 Configuração a ser usada ao compilar o projeto. O valor padrão é `Debug`.
 
 `--version-suffix <VERSION_SUFFIX>`
 
-Define qual `*` deve ser substituído no campo de versão no arquivo de projeto.
+Define o sufixo da versão para substituir o asterisco (`*`) no campo de versão do arquivo de projeto.
 
 `-v|--verbosity <LEVEL>`
 
@@ -78,7 +76,7 @@ Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m
 
 ## <a name="examples"></a>Exemplos
 
-Publicar o projeto encontrado no diretório atual:
+Publique o projeto no diretório atual:
 
 `dotnet publish`
 
@@ -86,14 +84,15 @@ Publicar o aplicativo usando o arquivo de projeto especificado:
 
 `dotnet publish ~/projects/app1/app1.csproj`
     
-Publicar o projeto encontrado no diretório atual usando a estrutura `netcoreapp1.1`:
+Publique o projeto no diretório atual usando a estrutura `netcoreapp1.1`:
 
 `dotnet publish --framework netcoreapp1.1`
     
-Publique o aplicativo atual usando a estrutura `netcoreapp1.1` e o tempo de execução para `OS X 10.10` (este RID deve existir no arquivo de projeto).
+Publique o aplicativo atual usando a estrutura `netcoreapp1.1` e o tempo de execução para `OS X 10.10` (liste este RID no arquivo de projeto).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
 ## <a name="see-also"></a>Consulte também
-* [Estruturas](../../standard/frameworks.md)
+
+* [Estruturas de destino](../../standard/frameworks.md)
 * [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)

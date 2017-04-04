@@ -4,15 +4,15 @@ description: "Implantação do .NET Core Application"
 keywords: "Implantação do .NET e .NET Core"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 03/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 24bca179bc153a6bb469e38067e457fa61a9d2b3
+ms.openlocfilehash: ef742b932a3a76359e3f06129dce0bf127a1977e
+ms.lasthandoff: 03/14/2017
 
 ---
 
@@ -48,11 +48,11 @@ Contudo, também há algumas desvantagens:
 
 Implantar uma implantação dependente de estrutura sem dependências de terceiros significa simplesmente compilar, testar e publicar o aplicativo. Um exemplo simples criado em C# ilustra o processo. O exemplo usa o [utilitário dotnet](../tools/dotnet.md) da linha de comando; no entanto, você também pode usar um ambiente de desenvolvimento, como o Visual Studio ou o Visual Studio Code, para compilar, testar e publicar o exemplo.
 
-1. Crie um diretório para seu projeto e, da linha de comando, digite `[dotnet new console](../tools/dotnet-new.md)` para criar um novo projeto de console em C#.
+1. Crie um diretório para seu projeto e, da linha de comando, digite [`dotnet new console`](../tools/dotnet-new.md) para criar um novo projeto de console em C#.
 
 2. Abra o arquivo `Program.cs` em um editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -89,11 +89,11 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 3. Execute o comando [dotnet restore](../tools/dotnet-restore.md) para restaurar as dependências especificadas em seu projeto.
 
-4. Crie uma versão de depuração do seu aplicativo usando o comando [dotnet build](../tools/dotnet-build.md).
+4. Crie uma compilação de Depuração do seu aplicativo usando o comando [dotnet build](../tools/dotnet-build.md).
 
-5. Depois de ter depurado e testado o programa, você poderá criar os arquivos a serem implantados com seu aplicativo usando o comando `dotnet publish -f netcoreapp1.1 -c release`. Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo.
+5. Depois de ter depurado e testado o programa, você poderá criar os arquivos a serem implantados com seu aplicativo usando o comando `dotnet publish -f netcoreapp1.1 -c Release`. Isso cria uma versão de Lançamento (em vez de Depuração) de seu aplicativo.
 
-   Os arquivos resultantes são colocados em um diretório chamado `publish` que está em um subdiretório `.\bin\release\netcoreapp1.1` do seu projeto.
+   Os arquivos resultantes são colocados em um diretório chamado `publish` que está em um subdiretório `.\bin\Release\netcoreapp1.1` do seu projeto.
 
 6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
@@ -103,7 +103,7 @@ Além dos binários do aplicativo, o instalador deverá também agrupar o instal
 
 ### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>Implantando uma implantação dependente de estrutura com dependências de terceiros ###
 
-Implantar uma implantação dependentes de estrutura com uma ou mais dependências de terceiros envolve três etapas adicionais antes de executar o comando `dotnet restore`:
+Implantar uma implantação dependentes de estrutura com uma ou mais dependências de terceiros envolve duas etapas adicionais antes de executar o comando `dotnet restore`:
 
 1. Adicione referências a quaisquer bibliotecas de terceiros à seção `<ItemGroup>` de seu arquivo `csproj`. A seção `<ItemGroup>` a seguir mostra o `<ItemGroup>` contendo as dependências no projeto padrão com Json.NET como uma biblioteca de terceiros.
 
@@ -147,7 +147,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 2. Abra o arquivo `Program.cs` em um editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -195,24 +195,22 @@ Observe que você também precisa adicionar um ponto e vírgula para separar os 
 5. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netcoreapp1.1\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+Isso cria uma versão de Lançamento (em vez de Depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\Release\netcoreapp1.1\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
 6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
 Os arquivos publicados podem ser implantados como você desejar. Por exemplo, você pode empacotá-las em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. 
 
-Veja a seguir o arquivo `csproj` completo para este projeto.
+Veja a seguir o arquivo `csproj` completo para este projeto:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -239,8 +237,6 @@ Veja a seguir o arquivo csproj completo para este projeto:
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -292,24 +288,22 @@ Essa operação indica que, em vez de usar toda a estrutura `netcoreapp1.0`, que
 5. Depois de ter depurado e testado o programa, você pode criar os arquivos a serem implantados com o aplicativo para cada plataforma de destino usando o comando `dotnet publish` para ambas as plataformas de destino da seguinte maneira:
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-Isso cria uma versão de lançamento (em vez de depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\release\netstandard1.6\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+Isso cria uma versão de Lançamento (em vez de Depuração) do seu aplicativo para cada plataforma de destino. Os arquivos resultantes são colocados em um subdiretório chamado `publish` que está no subdiretório `.\bin\Release\netstandard1.6\<runtime_identifier>` do seu projeto. Observe que cada subdiretório contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
 6. Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para depurar exceções. Você pode optar por não empacotá-lo com arquivos do aplicativo.
 
 Os arquivos publicados podem ser implantados como você desejar. Por exemplo, você pode empacotá-las em um arquivo zip, usar um simples comando `copy` ou implantá-los com qualquer pacote de instalação de sua escolha. 
 
-Veja a seguir o arquivo `csproj` completo para este projeto.
+Veja a seguir o arquivo `csproj` completo para este projeto:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e67270cf713857a5fea16ebdd0abab774f555808
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -38,7 +38,7 @@ Com a mudança para o formato *csproj* nas últimas versões do SDK, mudamos as 
 
 O principal motivo disso é reduzir a desordem no arquivo de projeto. Os padrões presentes no SDK devem abranger os casos de uso mais comuns e, portanto, não há necessidade de repeti-los em cada projeto criado. Isso resulta em arquivos de projeto menores que são mais fáceis de serem entendidos, bem como editados manualmente, se necessário. 
 
-A seguinte tabela mostra qual elemento e quais globs são incluídos e excluídos do SDK: 
+A seguinte tabela mostra qual elemento e quais [globs](https://en.wikipedia.org/wiki/Glob_(programming)) são incluídos e excluídos do SDK: 
 
 | Elemento              | Incluir glob                               | Excluir glob                                                     | Remover glob                  |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
@@ -62,7 +62,7 @@ A configuração dessa propriedade como `false` substituirá a inclusão implíc
 Essa alteração não modifica a mecânica principal de outras inclusões. No entanto, se desejar especificar, por exemplo, alguns arquivos para serem publicados com o aplicativo, ainda poderá usar os mecanismos conhecidos em *csproj* para fazer isso (por exemplo, o elemento `<Content>`).
 
 ### <a name="recommendation"></a>Recomendação
-Com csproj, recomendamos a remoção dos globs padrão do projeto e a adição de apenas caminhos de arquivo de globs desses artefatos necessários para o aplicativo ou a biblioteca para vários cenários (tempo de execução, pacotes NuGet, etc.)
+Com csproj, recomendamos a remoção dos globs padrão do projeto e a adição apenas de caminhos de arquivo com globs para esses artefatos necessários para o aplicativo ou a biblioteca para vários cenários (tempo de execução, pacotes NuGet, etc.)
 
 
 ## <a name="additions"></a>Adições
@@ -109,11 +109,11 @@ Como alternativa, o atributo pode conter:
 * `None` – nenhum dos ativos é usado.
 * `All` – todos os ativos são usados.
 
-### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
-O elemento do item `<DotnetCliToolReference>` especifica a ferramenta da CLI que o usuário deseja restaurar no contexto do projeto. É uma substituição do nó `tools` em *project.json*. 
+### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+O elemento do item `<DotNetCliToolReference>` especifica a ferramenta da CLI que o usuário deseja restaurar no contexto do projeto. É uma substituição do nó `tools` em *project.json*. 
 
 ```xml
-<DotnetCliToolReference Include="<package-id>" Version="" />
+<DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>Versão
@@ -243,3 +243,4 @@ O caminho base para o arquivo *.nuspec*.
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Lista separada por ponto e vírgula de pares chave-valor.
+

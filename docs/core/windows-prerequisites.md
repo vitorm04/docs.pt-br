@@ -4,15 +4,15 @@ description: "Saiba quais dependências você precisa em seu computador Windows 
 keywords: ".NET Core, Windows, pré-requisitos, dependências, Visual Studio"
 author: mairaw
 ms.author: mairaw
-ms.date: 01/05/2017
+ms.date: 03/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation
-ms.sourcegitcommit: e374b924bf78d62227cb9607641130dfd9128186
-ms.openlocfilehash: 6383a0ce253f6f7000ed8a81b29b9e1d58914acc
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: 13947fd81940c1ccb606cb4cd765dc230fe95c0f
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -32,7 +32,7 @@ O .NET Core é compatível com as seguintes versões do Windows:
 * Windows Server 2012 R2 SP1 (Servidor Completo ou Server Core)
 * Windows Server 2016 (Servidor Completo, Server Core ou Nano Server)
 
-Você pode ver o conjunto completo de [sistemas operacionais com suporte](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md#rtm-platform-support) nas [Notas de Versão do .NET Core 1.0.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0.md).
+Veja a lista completa de sistemas operacionais com suporte nas [Notas de Versão do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md).
 
 ## <a name="net-core-dependencies"></a>Dependências do .NET Core
 
@@ -46,9 +46,17 @@ O .NET Core requer os Pacotes Redistribuíveis do Visual C++ durante a execuçã
 
 Você pode usar qualquer editor de sua preferência para desenvolver aplicativos .NET Core usando o SDK do .NET Core. No entanto, se você desejar desenvolver aplicativos .NET Core no Windows em um ambiente de desenvolvimento integrado, será possível usar o [Visual Studio 2017](#visual-studio-2017).
 
-Para usar o Visual Studio 2017 para desenvolver aplicativos .NET Core, será necessário ter a última versão do Visual Studio instalada com o conjunto de ferramentas **desenvolvimento de plataforma cruzada do .NET Core** (na seção **Outros Conjuntos de Ferramentas**) selecionado.
+> [!IMPORTANT]
+> Embora seja possível usar o Visual Studio 2015 com uma versão prévia das ferramentas do .NET Core, esses projetos terão base em *project.json*, que agora está obsoleto. O Visual Studio 2017 usa arquivos de projeto com base em MSBuild. Para mais informações sobre as alterações de formato, confira [Visão geral de alto nível das alterações](./tools/cli-msbuild-architecture.md).
 
-Há diferentes edições do Visual Studio 2017. É possível baixar o [Visual Studio Community 2017](https://www.visualstudio.com/vs/visual-studio-2017/#downloadvs) gratuitamente para começar.  Para saber mais sobre o processo de instalação do Visual Studio, consulte [Instalar o Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio).
+Para usar o Visual Studio 2017 para desenvolver aplicativos .NET Core, será necessário ter a última versão do Visual Studio instalada com o conjunto de ferramentas **desenvolvimento de plataforma cruzada do .NET Core** (na seção **Outros Conjuntos de Ferramentas**) selecionado.
+![Captura de tela da instalação do Visual Studio 2017 com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" selecionada](./media/windows-prerequisites/vs_workloads.jpg)
+
+Há diferentes edições do Visual Studio 2017. É possível baixar o [Visual Studio Community 2017](https://www.visualstudio.com/downloads/) gratuitamente para começar.  Para saber mais sobre o processo de instalação do Visual Studio, consulte [Instalar o Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio).
+
+Para verificar se você está executando a versão mais recente do Visual Studio 2017, faça o seguinte:
+ +
+ +*No menu**Ajuda**, escolha**Sobre o Microsoft Visual Studio**. +*Na caixa de diálogo **Sobre o Microsoft Visual Studio**, o número de versão deve ser 15.0.26228.4 ou superior.
 
 Leia mais sobre as alterações no Visual Studio 2017 nas [notas de versão](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes).
 

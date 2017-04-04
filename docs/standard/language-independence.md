@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -195,7 +195,7 @@ Sobrecarga | [Sobrecargas](#overloads) |As propriedades e os métodos só podem 
 Sobrecarga | -- | Se dois ou mais métodos compatíveis com CLS declarados em um tipo tiverem o mesmo nome e, para um conjunto específico de instanciações de tipo, tiverem os mesmos tipos de parâmetro e retorno, esses métodos deverão ser semanticamente equivalentes nessas instanciações de tipo. | 48
 Propriedades | [Propriedades](#properties) | Os métodos que implementam os métodos getter e setter de uma propriedade deverão ser marcados como `SpecialName` nos metadados. | 24
 Propriedades | [Propriedades](#properties) | Os acessadores de uma propriedade deverão ser todos estáticos, virtuais ou de instância. | 26
-Propriedades | [Propriedades](#properties) | O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter. Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter. Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (por exemplo, não deverão ser passados por referência). | 27
+Propriedades | [Propriedades](#properties) | O tipo de uma propriedade deverá ser o tipo de retorno do getter e o tipo do último argumento do setter. Os tipos dos parâmetros da propriedade deverão ser os tipos dos parâmetros do getter e os tipos de todos os parâmetros, menos o parâmetro final do setter. Todos esses tipos deverão ser compatíveis com CLS e não deverão ser ponteiros gerenciados (ou seja, não deverão ser passados por referência). | 27
 Propriedades | [Propriedades](#properties) | As propriedades deverão seguir um padrão de nomenclatura específico. O atributo `SpecialName` mencionado na regra 24 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador. Uma propriedade deverá ter um método getter, um método setter ou ambos. | 28
 Conversão de tipos | [Conversão de tipos](#type-conversion) | Se op_Implicit ou op_Explicit for fornecido, um meio alternativo de coerção deverá ser fornecido. | 39
 Tipos | [Tipos e assinaturas de membro de tipo](#types-and-type-member-signatures) | Tipos de valor demarcado não são compatíveis com CLS. | 3
@@ -321,10 +321,10 @@ O [Common Type System](common-type-system.md) do .NET inclui vários tipos inter
 
 Tipo compatível com CLS | Descrição
 ------------------ | -----------
-[Byte](xref:System.Byte) | Inteiro sem sinal de&8; bits 
-[Int16](xref:System.Int16) | Inteiro com sinal de&16; bits 
-[Int32](xref:System.Int32) | Inteiro com sinal de&32; bits 
-[Int64](xref:System.Int64) | Inteiro com sinal de&64; bits
+[Byte](xref:System.Byte) | Inteiro sem sinal de 8 bits 
+[Int16](xref:System.Int16) | Inteiro com sinal de 16 bits 
+[Int32](xref:System.Int32) | Inteiro com sinal de 32 bits 
+[Int64](xref:System.Int64) | Inteiro com sinal de 64 bits
 [Simples](xref:System.Single) | Valor do ponto flutuante de precisão simples
 [Duplo](xref:System.Double) | Valor do ponto flutuante de precisão dupla
 [Booliano](xref:System.Boolean) | tipo de valor verdadeiro ou falso 
@@ -338,15 +338,15 @@ Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS
 
 Tipo não compatível | Descrição | Alternativa compatível com CLS
 ------------------ | ----------- | -------------------------
-[SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de&8; bits | [Int16](xref:System.Int16)
-[UInt16](xref:System.UInt16) | Inteiro sem sinal de&16; bits | [Int32](xref:System.Int32)
-[UInt32](xref:System.UInt32) | Inteiro sem sinal de&32; bits | [Int64](xref:System.Int64)
-[UInt64](xref:System.UInt64) | Inteiro sem sinal de&64; bits | [Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)
+[SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de 8 bits | [Int16](xref:System.Int16)
+[UInt16](xref:System.UInt16) | Inteiro sem sinal de 16 bits | [Int32](xref:System.Int32)
+[UInt32](xref:System.UInt32) | Inteiro sem sinal de 32 bits | [Int64](xref:System.Int64)
+[UInt64](xref:System.UInt64) | Inteiro sem sinal de 64 bits | [Int64](xref:System.Int64) (pode estourar), [BigInteger](xref:System.Numerics.BigInteger), ou[Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | Ponteiro ou identificador sem sinal | [IntPtr](xref:System.IntPtr)
  
  A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo: 
  
- * Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`* named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como não compatível com CLS.
+ * Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`*named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como não compatível com CLS.
 
   ```csharp
   using System;
