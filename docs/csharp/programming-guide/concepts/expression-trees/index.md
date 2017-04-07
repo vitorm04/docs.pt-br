@@ -20,9 +20,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e7ffa63a7002b63de871f0458d2f02d543a17f5c
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 87195c8936aba485919d6c717fcbfaa1b282bddc
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="expression-trees-c"></a>Árvores de expressão (C#)
@@ -41,22 +41,98 @@ ms.lasthandoff: 03/13/2017
   
  Os exemplos de código a seguir demonstram como fazer os compiladores do C# criarem uma árvore de expressão que representa a expressão lambda `num => num < 5`.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+Expression<Func<int, bool>> lambda = num => num < 5;  
+```  
+  
 ## <a name="creating-expression-trees-by-using-the-api"></a>Criando árvores de expressão usando a API  
  Para criar árvores de expressão usando a API, use a classe <xref:System.Linq.Expressions.Expression>. Essa classe contém métodos de fábrica estáticos que criam nós de árvore de expressão de tipos específicos, por exemplo, <xref:System.Linq.Expressions.ParameterExpression>, que representa uma variável ou parâmetro, ou <xref:System.Linq.Expressions.MethodCallExpression>, que representa uma chamada de método. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression>, e outros tipos específicos de expressão também são definidos no namespace <xref:System.Linq.Expressions>. Esses tipos derivam do tipo abstrato <xref:System.Linq.Expressions.Expression>.  
   
  O exemplo de código a seguir demonstra como criar uma árvore de expressão que representa a expressão lambda `num => num < 5` usando a API.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+// Add the following using directive to your code file:  
+// using System.Linq.Expressions;  
+  
+// Manually build the expression tree for   
+// the lambda expression num => num < 5.  
+ParameterExpression numParam = Expression.Parameter(typeof(int), "num");  
+ConstantExpression five = Expression.Constant(5, typeof(int));  
+BinaryExpression numLessThanFive = Expression.LessThan(numParam, five);  
+Expression<Func<int, bool>> lambda1 =  
+    Expression.Lambda<Func<int, bool>>(  
+        numLessThanFive,  
+        new ParameterExpression[] { numParam });  
+```  
+  
  No .NET Framework 4 ou posterior, a API de árvores de expressão também dá suporte a atribuições e expressões de fluxo de controle, como loops, blocos condicionais e blocos `try-catch`. Usando a API, você pode criar árvores de expressão mais complexas do que aquelas que podem ser criadas por meio de expressões lambda pelos compiladores do C#. O exemplo a seguir demonstra como criar uma árvore de expressão que calcula o fatorial de um número.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
- Para obter mais informações, consulte [Gerar métodos dinâmicos com árvores de expressão no Visual Studio 2010 (ou posterior)](http://go.microsoft.com/fwlink/?LinkId=169513).  
+```csharp  
+// Creating a parameter expression.  
+ParameterExpression value = Expression.Parameter(typeof(int), "value");  
+  
+// Creating an expression to hold a local variable.   
+ParameterExpression result = Expression.Parameter(typeof(int), "result");  
+  
+// Creating a label to jump to from a loop.  
+LabelTarget label = Expression.Label(typeof(int));  
+  
+// Creating a method body.  
+BlockExpression block = Expression.Block(  
+    // Adding a local variable.  
+    new[] { result },  
+    // Assigning a constant to a local variable: result = 1  
+    Expression.Assign(result, Expression.Constant(1)),  
+    // Adding a loop.  
+        Expression.Loop(  
+    // Adding a conditional block into the loop.  
+           Expression.IfThenElse(  
+    // Condition: value > 1  
+               Expression.GreaterThan(value, Expression.Constant(1)),  
+    // If true: result *= value --  
+               Expression.MultiplyAssign(result,  
+                   Expression.PostDecrementAssign(value)),  
+    // If false, exit the loop and go to the label.  
+               Expression.Break(label, result)  
+           ),  
+    // Label to jump to.  
+       label  
+    )  
+);  
+  
+// Compile and execute an expression tree.  
+int factorial = Expression.Lambda<Func<int, int>>(block, value).Compile()(5);  
+  
+Console.WriteLine(factorial);  
+// Prints 120.  
+```
+
+Para saber mais, confira [Gerar métodos dinâmicos com árvores de expressão no Visual Studio 2010](http://go.microsoft.com/fwlink/p/?LinkId=169513), que também se aplica a versões mais recentes do Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analisando árvores de expressão  
  O exemplo de código a seguir demonstra como a árvore de expressão que representa a expressão lambda `num => num < 5` pode ser decomposta em suas partes.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+```csharp  
+// Add the following using directive to your code file:  
+// using System.Linq.Expressions;  
+  
+// Create an expression tree.  
+Expression<Func<int, bool>> exprTree = num => num < 5;  
+  
+// Decompose the expression tree.  
+ParameterExpression param = (ParameterExpression)exprTree.Parameters[0];  
+BinaryExpression operation = (BinaryExpression)exprTree.Body;  
+ParameterExpression left = (ParameterExpression)operation.Left;  
+ConstantExpression right = (ConstantExpression)operation.Right;  
+  
+Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",  
+                  param.Name, left.Name, operation.NodeType, right.Value);  
+  
+// This code produces the following output:  
+  
+// Decomposed expression: num => num LessThan 5  
+```  
+  
 ## <a name="immutability-of-expression-trees"></a>Imutabilidade das árvores de expressão  
  Árvores de expressão devem ser imutáveis. Isso significa que se você deseja modificar uma árvore de expressão, deverá criar uma nova árvore de expressão, copiando a existente e substituindo seus nós. Você pode usar um visitantes de árvore expressão para percorrer a árvore de expressão existente. Para obter mais informações, consulte [Como modificar árvores de expressão (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
   
@@ -65,7 +141,7 @@ ms.lasthandoff: 03/13/2017
   
  O exemplo de código a seguir demonstra como compilar uma árvore de expressão e executar o código resultante.  
   
-```cs  
+```csharp  
 // Creating an expression tree.  
 Expression<Func<int, bool>> expr = num => num < 5;  
   
