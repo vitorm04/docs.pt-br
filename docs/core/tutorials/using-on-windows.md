@@ -12,3 +12,4 @@ ms.lasthandoff: 03/08/2017
 ## <a name="content-retired"></a>Conteúdo desativado!
 
 Para obter um tutorial de introdução sobre o .NET Core e o Visual Studio 2017, consulte [Compilando um aplicativo C# Olá, Mundo com o .NET Core no Visual Studio 2017](../../csharp/getting-started/with-visual-studio.md).
+
