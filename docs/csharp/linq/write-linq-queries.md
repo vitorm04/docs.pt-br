@@ -2,7 +2,7 @@
 title: Escrever consultas LINQ em C#
 description: Como gravar consultas.
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

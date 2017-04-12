@@ -22,8 +22,8 @@ helpviewer_keywords:
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
 caps.latest.revision: 36
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de

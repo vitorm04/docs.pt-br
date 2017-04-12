@@ -2,8 +2,8 @@
 title: "Depurando um aplicativo Olá, Mundo em C# com o Visual Studio 2017"
 description: "Saiba como depurar um aplicativo Olá, Mundo escrito em C# com o Visual Studio 2017"
 keywords: ".NET Core, aplicativo do console do .NET Core, depuração do .NET Core"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

@@ -2,8 +2,8 @@
 title: "Tipos básicos | Guia de C#"
 description: "Saiba mais sobre os tipos principais (numéricos, cadeias de caracteres e objetos) em todos os programas em C#"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net

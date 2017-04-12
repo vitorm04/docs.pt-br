@@ -2,8 +2,8 @@
 title: Publicar um aplicativo Hello World com o Visual Studio 2017
 description: Publicar um aplicativo Hello World com o Visual Studio 2017
 keywords: ".NET, .NET core, aplicativo de console .NET Core, publicação (.NET Core), implantação (.NET Core)"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core
