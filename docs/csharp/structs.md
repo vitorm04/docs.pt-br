@@ -2,8 +2,8 @@
 title: Structs | Guia de C#
 description: "Saiba mais sobre os tipos de struct e como criá-los"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net

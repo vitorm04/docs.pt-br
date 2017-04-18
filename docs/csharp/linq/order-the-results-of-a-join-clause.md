@@ -2,7 +2,7 @@
 title: "Ordenar os resultados de uma cláusula join"
 description: "Como ordenar os resultados de uma cláusula join."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

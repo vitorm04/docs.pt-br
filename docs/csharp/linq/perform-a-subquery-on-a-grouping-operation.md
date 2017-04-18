@@ -2,7 +2,7 @@
 title: "Executar uma subconsulta em uma operação de agrupamento"
 description: "Como executar uma subconsulta em uma operação de agrupamento."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

@@ -2,7 +2,7 @@
 title: Agrupar resultados de consultas
 description: Como agrupar resultados.
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

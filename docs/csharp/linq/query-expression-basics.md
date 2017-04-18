@@ -2,7 +2,7 @@
 title: "Noções básicas sobre expressões de consulta"
 description: "Apresenta os conceitos relacionados a expressões de consulta"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

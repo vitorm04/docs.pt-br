@@ -2,7 +2,7 @@
 title: "Armazenar os resultados de uma consulta na memória"
 description: Como armazenar os resultados.
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

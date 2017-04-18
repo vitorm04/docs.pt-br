@@ -2,7 +2,7 @@
 title: "Executar operações de junção personalizadas"
 description: "Como executar operações de junção personalizadas."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

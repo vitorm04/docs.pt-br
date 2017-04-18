@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 26210b19de4f7bf70c085735771b0175945f38d4
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 132551673f97142a90513d43d7690867c3d00295
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -25,10 +25,10 @@ O .NET Core é uma plataforma de desenvolvimento de uso geral mantida pela Micro
 As seguintes características são as que melhor definem o .NET Core:
 
 - **Implantação flexível:** pode ser incluído no seu aplicativo ou ser instalado lado a lado no usuário ou em todos os computadores.
-- **Várias plataformas:** é executado no Windows, macOS e Linux, e pode ser compatibilizado com outros sistemas operacionais. Os [sistemas operacionais com suporte](https://github.com/dotnet/core/blob/master/roadmap.md), CPUs e cenários de aplicação serão ampliados com os passar do tempo, fornecidos pela Microsoft, outras empresas e outros indivíduos.
+- **Plataforma cruzada:** executa em Windows, macOS e Linux e pode ser transferida para outros sistemas operacionais. Os [sistemas operacionais com suporte](https://github.com/dotnet/core/blob/master/roadmap.md), CPUs e cenários de aplicação serão ampliados com os passar do tempo, fornecidos pela Microsoft, outras empresas e outros indivíduos.
 - **Ferramentas de linha de comando:** todos os cenários de produto podem ser exercidos na linha de comando. 
 - **Compatível com:** o .NET Core é compatível com o .NET Framework, Xamarin e Mono por meio da [.NET Standard Library](../standard/library.md).
-- **Código-fonte aberto:** a plataforma do .NET Core é um software livre que usa licenças do MIT e Apache 2. A documentação é licenciada por [CC-BY](http://creativecommons.org/licenses/by/4.0/). O .NET Core é um projeto do [.NET Foundation](http://www.dotnetfoundation.org/).
+- **Código-fonte aberto:** a plataforma do .NET Core é um software livre que usa licenças do MIT e Apache 2. A documentação é licenciada por [CC-BY](https://creativecommons.org/licenses/by/4.0/). O .NET Core é um projeto do [.NET Foundation](https://dotnetfoundation.org/).
 - **Suporte da Microsoft:** .NET Core tem suporte pela Microsoft, pelo [Suporte do .NET Core](https://www.microsoft.com/net/core/support/)
 
 ## <a name="composition"></a>Composição
@@ -62,13 +62,13 @@ O .NET Core implementa a .NET Standard Library e, portanto, dá suporte a biblio
 
 Por si só, o .NET Core inclui um modelo de aplicativo único, os aplicativos de console, que são úteis para ferramentas, serviços locais e os jogos baseados em texto. Modelos de aplicativo adicionais foram criados junto ao .NET Core para estender sua funcionalidade, como:
 
-- [ASP.NET Core](http://asp.net)
+- [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
 - [Plataforma Universal do Windows (UWP) do Windows 10](https://developer.microsoft.com/windows)
 - [Xamarin.Forms](https://www.xamarin.com/forms)
 
 ### <a name="open-source"></a>Software Livre
 
-O [.NET Core](https://github.com/dotnet/core) é um software livre (licença MIT) e foi concedido ao [.NET Foundation](http://dotnetfoundation.org) pela Microsoft em 2014. Agora ele é um dos projetos mais ativos do .NET Foundation. Ele pode ser adotado livremente por pessoas e empresas, incluindo para fins pessoais, comerciais ou acadêmicos. Várias empresas usam o .NET Core como parte de aplicativos, ferramentas, novas plataformas e serviços de hospedagem. Algumas dessas empresas fazer contribuições significativas para o .NET Core no GitHub e fornecem diretrizes sobre a direção de produto como parte do [.NET Foundation Technical Steering Group](http://www.dotnetfoundation.org/blog/tsg-welcome).
+O [.NET Core](https://github.com/dotnet/core) é um software livre (licença MIT) e foi concedido ao [.NET Foundation](https://dotnetfoundation.org) pela Microsoft em 2014. Agora ele é um dos projetos mais ativos do .NET Foundation. Ele pode ser adotado livremente por pessoas e empresas, incluindo para fins pessoais, comerciais ou acadêmicos. Várias empresas usam o .NET Core como parte de aplicativos, ferramentas, novas plataformas e serviços de hospedagem. Algumas dessas empresas fazer contribuições significativas para o .NET Core no GitHub e fornecem diretrizes sobre a direção de produto como parte do [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome).
 
 ## <a name="acquisition"></a>Aquisição
 
