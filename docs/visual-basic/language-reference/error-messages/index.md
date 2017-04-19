@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e22d81efef735f4b6619054cb15f21790efabf5e
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
+ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Mensagens de erro (Visual Basic)
@@ -57,6 +57,7 @@ Quando você escreve, compila ou executa um aplicativo do Visual Basic, os segui
 ## <a name="compile-time-errors"></a>Erros no tempo de compilação  
  Se o compilador do Visual Basic encontrar um problema no código, ocorrerá um erro em tempo de compilação. No Editor de Código, você pode identificar facilmente qual linha de código causou o erro, pois uma linha ondulada aparece sob essa linha de código. A mensagem de erro será exibida se você apontar para a linha ondulada ou abrir a **Lista de Erros**, que também mostra outras mensagens.  
   
- Se um identificador tiver uma linha ondulada e um sublinhado curto exibidos abaixo do caractere mais à direita, você poderá gerar um stub para a classe, construtor, método, propriedade, campo ou enum. Para obter mais informações, consulte [Gerar do uso](https://docs.microsoft.com/cpp/misc/generate-from-usage).  
+ Se um identificador tiver uma linha ondulada e um sublinhado curto exibidos abaixo do caractere mais à direita, você poderá gerar um stub para a classe, construtor, método, propriedade, campo ou enum. Para obter mais informações, consulte [Gerar do uso](https://docs.microsoft.com/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
   
  Ao resolver os avisos do compilador do Visual Basic, você poderá escrever um código que é executado mais rápido e com menos erros. Esses avisos identificam códigos que podem causar erros quando o aplicativo é executado. Por exemplo, o compilador avisará se você tentar invocar um membro de uma variável de objeto não atribuída, retornar de uma função sem definir o valor retornado ou executar um bloco `Try` com erros na lógica para capturar exceções. Para obter mais informações sobre avisos, incluindo como ativar e desativar, consulte [Configurando avisos no Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).
+
