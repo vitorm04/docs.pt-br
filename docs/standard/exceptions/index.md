@@ -1,0 +1,81 @@
+---
+title: "Tratando e gerando exceções | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- exceptions [.NET Framework], handling
+- runtime, exceptions
+- filtering exceptions
+- errors [.NET Framework], exceptions
+- exceptions [.NET Framework], throwing
+- exceptions [.NET Framework]
+- common language runtime, exceptions
+ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
+caps.latest.revision: 16
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c8c5962db342dba6ff22c409d145af5e628eed3d
+ms.lasthandoff: 04/12/2017
+
+---
+# <a name="handling-and-throwing-exceptions-in-net"></a>Tratando e gerando exceções no .NET
+
+Aplicativos devem ser capazes de tratar de erros que ocorrem durante a execução de uma maneira consistente. O .NET fornece um modelo para notificar aplicativos sobre erros de maneira uniforme: operações do .NET indicam falhas por meio da geração de exceções.
+
+## <a name="exceptions"></a>Exceções
+
+Uma exceção é qualquer condição de erro ou comportamento inesperado encontrado por um programa em execução. Exceções podem ser geradas devido a uma falha em seu código ou no código que você chama (como uma biblioteca compartilhada), recursos do sistema operacional não disponíveis, condições inesperadas encontradas pelo tempo de execução (como código que não pode ser verificado) e assim por diante. Seu aplicativo pode se recuperar de algumas dessas condições, mas não de outras. Embora você possa se recuperar da maioria das exceções de aplicativo, não é possível recuperar-se da maioria das exceções de tempo de execução.
+
+No .NET, uma exceção é um objeto que herda da classe [System.Exception](xref:System.Exception). Uma exceção é lançada de uma área do código em que ocorreu um problema. A exceção é passada pilha acima até que o aplicativo trate dela ou o programa seja encerrado.
+
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Métodos de tratamento de exceção vs. tratamento de erro tradicional
+
+Tradicionalmente, o modelo de tratamento de erro da linguagem confiava na forma exclusiva da linguagem de detectar erros e localizar manipuladores para eles ou no mecanismo de tratamento de erro fornecido pelo sistema operacional. A maneira como o .NET implementa o tratamento de exceção oferece as seguintes vantagens:
+
+- O lançamento e tratamento de exceção funciona da mesma maneira para linguagens de programação .NET.
+
+- Não requer nenhuma sintaxe de linguagem específica para tratamento de exceção, mas permite que cada linguagem defina sua própria sintaxe.
+
+- Exceções podem ser geradas pelos limites de processo e até mesmo de computador.
+
+- O código de tratamento de exceção pode ser adicionado a um aplicativo para aumentar a confiabilidade do programa.
+
+As exceções oferecem vantagens sobre outros métodos de notificação de erro, como códigos de retorno. Falhas não passam despercebidas porque se uma exceção for lançada e você não tratar dela, o tempo de execução encerra o aplicativo. Valores inválidos não continuam a se propagar através do sistema como resultado do código que não consegue verificar se há um código de retorno de falha. 
+
+## <a name="common-exceptions"></a>Exceções comuns
+
+A tabela a seguir lista algumas exceções comuns com exemplos do que pode causá-las.
+
+| Tipo de exceção | Tipo base | Descrição | Exemplo |
+| -------------- | --------- | ----------- | ------- |
+| @System.Exception | @System.Object | A classe base para todas as exceções. | Nenhuma (use uma classe derivada dessa exceção). |
+| @System.IndexOutOfRangeException | @System.Exception | Gerada pelo tempo de execução somente quando uma matriz é indexada incorretamente. | Indexar uma matriz fora do intervalo válido: `arr[arr.Length+1]` |
+| @System.NullReferenceException | @System.Exception | Gerada pelo tempo de execução somente quando um objeto nulo é referenciado. | `object o = null; o.ToString();` |
+| @System.InvalidOperationException | @System.Exception | Gerada por métodos quando em um estado inválido. | Chamar `Enumerator.GetNext()` após a remoção de um item da coleção subjacente. |
+| @System.ArgumentException | @System.Exception | A classe base para todas as exceções de argumento. | Nenhuma (use uma classe derivada dessa exceção). |
+| @System.ArgumentNullException | @System.Exception | Gerada por métodos que não permitem que um argumento seja nulo. | `String s = null; "Calculate".IndexOf (s);` |
+| @System.ArgumentOutOfRangeException | @System.Exception | Gerada por métodos que verificam se os argumentos estão em um determinado intervalo. | `String s = "string"; s.Substring(s.Length+1);` |
+
+## <a name="see-also"></a>Consulte também
+
+* [Classe e propriedades da exceção](exception-class-and-properties.md)
+* [Como usar o bloco try-catch para capturar exceções](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+* [Como usar exceções específicas em um bloco catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+* [Como gerar exceções explicitamente](how-to-explicitly-throw-exceptions.md)
+* [Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)
+* [Usando manipuladores de exceção filtrados por usuário](using-user-filtered-exception-handlers.md)
+* [Como usar blocos finally](how-to-use-finally-blocks.md)
+* [Manipulando exceções de interoperabilidade COM](handling-com-interop-exceptions.md)
+* [Práticas recomendadas para exceções](best-practices-for-exceptions.md)
+
+Para saber mais sobre o funcionamento de exceções no .NET, veja [O que todo desenvolvedor precisa saber sobre exceções no tempo de execução](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).
+
