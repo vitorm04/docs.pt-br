@@ -1,60 +1,62 @@
 ---
-title: "Tipos de coleção Sorted"
-description: "Tipos de coleção Sorted"
-keywords: .NET, .NET Core
+title: "Tipos de coleção de classificada | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SortedDictionary collection type
+- SortedList class, grouping data in collections
+- grouping data in collections, SortedList collection type
+- SortedList collection type
+- collections [.NET Framework], SortedList collection type
+ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
+caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: bdc9c13e-e56a-433b-a293-c92364f6e9cb
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 28d5024f759b3a7474aef1fa344d39f9933b6322
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2ac1552dba8756d033ee02651142476c4a15a485
+ms.lasthandoff: 04/18/2017
 
 ---
-
-# <a name="sorted-collection-types"></a>Tipos de coleção Sorted  
- 
- A classe [System.Collections.SortedList](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList), a classe genérica [System.Collections.Generic.SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) e a classe genérica [System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) são semelhantes à classe [Hashtable](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) e à classe genérica [Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) nas quais elas implementam a interface [IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary), mas elas mantêm seus elementos em ordem de classificação por chave e não têm as características de inserção e recuperação de O(1) das tabelas de hash. As três classes têm várias funcionalidades em comum:  
-
- *   As três classes implementam a interface [System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary). As duas classes genéricas também implementam a interface genérica [System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2).  
- 
- *   Cada elemento é um par chave/valor para fins de enumeração.   
+# <a name="sorted-collection-types"></a>Tipos de coleção Sorted
+A classe <xref:System.Collections.SortedList?displayProperty=fullName>, a classe genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> e a classe genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> são semelhantes à classe <xref:System.Collections.Hashtable> e à classe genérica <xref:System.Collections.Generic.Dictionary%602> em que implementam a interface <xref:System.Collections.IDictionary>, mas mantêm seus elementos em ordem de classificação por chave e não têm a característica de inserção e remoção de O(1) das tabelas de hash. As três classes têm várias funcionalidades em comum:  
   
-> [!NOTE]  
-> A classe não genérica [SortedList](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) retorna objetos [DictionaryEntry](https://docs.microsoft.com/dotnet/core/api/System.Collections.DictionaryEntry) quando é enumerada, embora os dois tipos genéricos retornem objetos [KeyValuePair&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.KeyValuePair-2).  
-   
-*   Os elementos são classificados de acordo com uma implementação de [System.Collections.IComparer](https://docs.microsoft.com/dotnet/core/api/System.Collections.IComparer) (para `SortedList` não genérica) ou uma implementação de [System.Collections.Generic.IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1) (para as duas classes genéricas).  
-   
- *   Cada classe fornece propriedades que retornam coleções contendo apenas as chaves ou apenas os valores.  
-   
-A tabela a seguir lista algumas das diferenças entre as duas classes de listas classificadas e a classe [SortedDictionary<TKey, TValue>](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2).  
-   
- `SortedList` classe não genérica e `SortedList<TKey, TValue>` classe genérica | `SortedDictionary<TKey, TValue>` classe genérica  
- --------------------------------------------------------------------------------- | ------------------------------  
- As propriedades que retornam chaves e valores são indexadas, permitindo uma recuperação indexada eficiente. | Recuperação não indexada.  
- A recuperação é O(log n). | A recuperação é O(log n).  
- A inserção e a remoção geralmente são O(n). No entanto, a inserção é O(1) para dados que já estão na ordem de classificação, para que cada elemento seja adicionado ao final da lista. (Isso pressupõe que um redimensionamento não é necessário.) | A inserção e a remoção são O(log n).  
- Usa menos memória do que um `SortedDictionary<TKey, TValue>`. | Usa mais memória do que a classe não genérica `SortedList` e a classe genérica `SortedList<TKey, TValue>`.  
+-   As três classes implementam a interface <xref:System.Collections.IDictionary?displayProperty=fullName>. As duas classes genéricas também implementam a interface genérica <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>.  
   
- Para listas ou dicionários classificados que precisam estar acessíveis simultaneamente de vários threads, você pode adicionar a lógica de classificação em uma classe derivada de [ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2).  
+-   Cada elemento é um par chave/valor para fins de enumeração.  
   
- > [!NOTE]  
- > Para valores que contêm suas próprias chaves (por exemplo, registros de funcionários que contêm um número de ID do funcionário), você pode criar uma coleção com chave que tenha algumas características de uma lista e algumas características de um dicionário, derivando de uma classe genérica [KeyedCollection&lt;TKey, TItem&gt;]().  
-   
- A classe [SortedSet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedSet-1) fornece uma árvore de balanceamento automático que mantém os dados em ordem classificada após inserções, exclusões e pesquisas. Essa classe e a classe [HashSet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.HashSet-1) implementam a interface [ISet&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.ISet-1).  
-   
+    > [!NOTE]
+    >  A classe não genérica <xref:System.Collections.SortedList> retorna os objetos <xref:System.Collections.DictionaryEntry> quando enumerada, embora os dois tipos genéricos retornem objetos <xref:System.Collections.Generic.KeyValuePair%602>.  
+  
+-   Os elementos são classificados de acordo com uma implementação de <xref:System.Collections.IComparer?displayProperty=fullName> (para <xref:System.Collections.SortedList> não genérica) ou uma implementação de <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> (para as duas classes genéricas).  
+  
+-   Cada classe fornece propriedades que retornam coleções contendo apenas as chaves ou apenas os valores.  
+  
+ A tabela a seguir lista algumas das diferenças entre as duas classes de listas classificadas e a classe <xref:System.Collections.Generic.SortedDictionary%602>.  
+  
+|A classe não genérica <xref:System.Collections.SortedList> e a classe genérica <xref:System.Collections.Generic.SortedList%602>|A classe genérica <xref:System.Collections.Generic.SortedDictionary%602>|  
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
+|As propriedades que retornam chaves e valores são indexadas, permitindo uma recuperação indexada eficiente.|Recuperação não indexada.|  
+|A recuperação é O(log `n`).|A recuperação é O(log `n`).|  
+|A inserção e a remoção são geralmente O(`n`). No entanto, a inserção é O(1) para dados que já estão em ordem de classificação, para que cada elemento seja adicionado ao final da lista. (Isso pressupõe que um redimensionamento não é necessário.)|A inserção e a remoção são O(log `n`).|  
+|Usa menos memória do que <xref:System.Collections.Generic.SortedDictionary%602>.|Usa mais memória do que a classe não genérica <xref:System.Collections.SortedList> e a classe genérica <xref:System.Collections.Generic.SortedList%602>.|  
+  
+ Para listas ou dicionários classificados que devem ser acessíveis simultaneamente de vários threads, você pode adicionar a lógica de classificação em uma classe que se deriva de <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  
+  
+> [!NOTE]
+>  Para valores que contenham suas próprias chaves (por exemplo, registros de funcionários que contêm um número de ID do funcionário), você pode criar uma coleção com chave que tenha algumas características de uma lista e algumas características de um dicionário, derivando da classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
+  
+ A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a classe <xref:System.Collections.Generic.SortedSet%601> fornece uma árvore de balanceamento automático que mantém os dados em ordem classificada após inserções, exclusões e pesquisas. Essa classe e a classe <xref:System.Collections.Generic.HashSet%601> implementam a interface <xref:System.Collections.Generic.ISet%601>.  
+  
 ## <a name="see-also"></a>Consulte também  
-  
-[System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)  
-   
-[System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2)  
-   
-[ConcurrentDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2)  
- 
-[Tipos de Coleção de Uso Comum](commonly-used-collection-types.md) 
-
+ <xref:System.Collections.IDictionary?displayProperty=fullName>   
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   
+ [Tipos de Coleção de Uso Comum](../../../docs/standard/collections/commonly-used-collection-types.md)

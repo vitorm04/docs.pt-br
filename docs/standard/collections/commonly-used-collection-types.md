@@ -1,59 +1,66 @@
 ---
-title: "Tipos de coleção de uso comum"
-description: "Tipos de coleção de uso comum"
-keywords: .NET, .NET Core
+title: "Tipos de coleção de uso comum | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [.NET Framework], generic
+- objects [.NET Framework], grouping in collections
+- generics [.NET Framework], collections
+- IList interface, grouping data in collections
+- IDictionary interface, grouping data in collections
+- grouping data in collections, generic collection types
+- Collections classes
+- generic collections
+ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 55861611-1e40-4cc2-9ec5-0b2df4ba6c0c
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: f44b8a87bf263032b991fc1bbc70712136910106
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1f8d938d61492b4da4b35a56fba169a12ed4787e
+ms.lasthandoff: 04/18/2017
 
 ---
-
 # <a name="commonly-used-collection-types"></a>Tipos de coleção de uso comum
-
-Tipos de coleção são as variações comuns de coleções de dados, como tabelas de hash, filas, pilhas, pacotes, dicionários e listas.
-
-Coleções são baseadas nas interfaces [`ICollection`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ICollection), [`IList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IList), [`IDictionary`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary) ou em seus equivalentes genéricos. As interfaces `IList` e `IDictionary` são ambas derivadas da interface `ICollection`; portanto, todas as coleções são baseadas na interface `ICollection` direta ou indiretamente. Em coleções baseadas na interface `IList` (como, [`Array`](https://docs.microsoft.com/dotnet/core/api/System.Array), [`ArrayList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ArrayList) ou [`List<T>)`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1)) ou diretamente na interface `ICollection` (como [`Queue`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Queue), [`ConcurrentQueue<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentQueue-1), [`Stack`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Stack), [`ConcurrentStack<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentStack-1) ou [`LinkedList<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.LinkedList-1)), cada elemento contém apenas um valor. Em coleções baseadas na interface `IDictionary` (como as classes [`Hashtable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) e [`SortedList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList), as classes genéricas [`Dictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) e [`SortedList<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2)) ou as classes [`ConcurrentDictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentDictionary-2), cada elemento contém uma chave e um valor. A classe [`KeyedCollection<TKey, TItem>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) é exclusiva, pois ela é uma lista de valores com chaves incorporadas aos valores e, portanto, se comporta como uma lista e como um dicionário.
-
-Coleções genéricas são a melhor solução para tipagem forte. No entanto, se o idioma não der suporte a genéricos, o namespace [`System.Collections`](https://docs.microsoft.com/dotnet/core/api/System.Collections) incluirá coleções base, como [`CollectionBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.CollectionBase), [`ReadOnlyCollectionBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ReadOnlyCollectionBase) e [`DictionaryBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.DictionaryBase), que são classes base abstratas que podem ser estendidas para criar classes de coleção que são fortemente tipadas. Quando for necessário acesso de coleção com multithread eficiente, use as coleções genéricas no namespace [`System.Collections.Concurrent`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent).
-
-As coleções podem variar, dependendo de como os elementos são armazenados, como são classificados, como as pesquisas são executadas e como são feitas comparações. A classe [`Queue`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Queue) e a classe genérica [`Queue<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1) fornecem listas primeiro a entrar, primeiro a sair, enquanto a classe [`Stack`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Stack) e a classe genérica [`Stack<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1) fornecem listas último a entrar, primeiro a sair. A classe [`SortedList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) e a classe genérica [`SortedList<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) fornecem versões classificadas da classe [`Hashtable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) e da classe genérica [`Dictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2). Os elementos de uma `Hashtable` ou uma `Dictionary<TKey, TValue>` são acessíveis somente pela chave do elemento, mas os elementos de uma `SortedList` ou uma [`KeyedCollection<TKey, TItem>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) são acessíveis pela chave ou pelo índice do elemento. Os índices em todas as coleções são baseados em zero, exceto [`Array`](https://docs.microsoft.com/dotnet/core/api/System.Array), que permite matrizes que não sejam baseadas em zero.
-
-O recurso LINQ to Objects permite que você use consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente [`IEnumerable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) ou [`IEnumerable<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). Consultas LINQ fornecem um padrão comum para acessar dados. Elas são, geralmente, mais concisas e legíveis que os loops foreach padrão e fornecem recursos de filtragem, classificação e agrupamento. Consultas LINQ também podem melhorar o desempenho.
-
-## <a name="related-topics"></a>Tópicos relacionados
-
-Título | Descrição
------ | -----------
-[`Collections and Data Structures`](index.md) | Discute os vários tipos de coleção disponíveis no .NET Framework, incluindo pilhas, filas, listas, matrizes e dicionários.
-[`Hashtable and Dictionary Collection Types`](hashtable-and-dictionary-collection-types.md) | Descreve os recursos de tipos de dicionário baseado em hash genérico e não genérico.
-[`Sorted Collection Types`](sorted-collection-types.md) | Descreve as características e o desempenho de coleções classificadas.
-
-## <a name="reference"></a>Referência
-
-[`System.Collections`](https://docs.microsoft.com/dotnet/core/api/System.Collections)
-
-[`System.Collections.Generic`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
-
-[`System.Collections.ICollection`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ICollection)
-
-[`System.Collections.Generic.ICollection<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.ICollection-1)
-
-[`System.Collections.IList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IList)
-
-[`System.Collections.Generic.IList<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1)
-
-[`System.Collections.IDictionary`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)
-
-[`System.Collections.Generic.IDictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2)
-
-[`System.Linq`](https://docs.microsoft.com/dotnet/core/api/System.Linq)
-
+Tipos de coleção são as variações comuns de coleções de dados, como tabelas de hash, filas, pilhas, pacotes, dicionários e listas.  
+  
+ As coleções são baseadas na interface <xref:System.Collections.ICollection>, na interface <xref:System.Collections.IList> na interface <xref:System.Collections.IDictionary> ou em suas contrapartes genéricas. A interface <xref:System.Collections.IList>interface e a interface <xref:System.Collections.IDictionary> são derivadas da interface <xref:System.Collections.ICollection>, portanto, todas as coleções são baseadas na interface <xref:System.Collections.ICollection> direta ou indiretamente. Em coleções baseadas na interface <xref:System.Collections.IList> (como <xref:System.Array>, <xref:System.Collections.ArrayList> ou <xref:System.Collections.Generic.List%601>) ou diretamente na interface <xref:System.Collections.ICollection> (como <xref:System.Collections.Queue>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Stack>, <xref:System.Collections.Concurrent.ConcurrentStack%601> ou <xref:System.Collections.Generic.LinkedList%601>), cada elemento contém apenas um valor. Nas coleções baseadas na interface <xref:System.Collections.IDictionary>interface (como as classes <xref:System.Collections.Hashtable> e <xref:System.Collections.SortedList>, as classes genéricas <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Generic.SortedList%602>), ou as classes <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, cada elemento contém uma chave e um valor.  A classe <xref:System.Collections.ObjectModel.KeyedCollection%602> é exclusiva porque é uma lista de valores com chaves inseridas nos valores e, portanto, se comporta como uma lista e como um dicionário.  
+  
+ Coleções genéricas são a melhor solução para tipagem forte. No entanto, se sua linguagem não oferecer suporte a genéricos, o namespace <xref:System.Collections> incluirá coleções base, como <xref:System.Collections.CollectionBase>, <xref:System.Collections.ReadOnlyCollectionBase> e <xref:System.Collections.DictionaryBase>, que são classes base abstratas que podem ser estendidas para criar classes de coleção fortemente tipadas. Quando for necessário acesso de coleção multi-threaded eficiente, use as coleções genéricas no namespace <xref:System.Collections.Concurrent>.  
+  
+ As coleções podem variar, dependendo de como os elementos são armazenados, como são classificados, como as pesquisas são executadas e como são feitas comparações. A classe <xref:System.Collections.Queue>classe e a classe genérica <xref:System.Collections.Generic.Queue%601> fornecem listas de primeiro a entrar, primeiro a sair, enquanto a classe <xref:System.Collections.Stack> e a classe genérica <xref:System.Collections.Generic.Stack%601> fornecem listas de último a entrar, primeiro a sair. A classe <xref:System.Collections.SortedList> e a classe genérica <xref:System.Collections.Generic.SortedList%602> fornecem versões classificadas da classe <xref:System.Collections.Hashtable> e da classe genérica <xref:System.Collections.Generic.Dictionary%602>. Os elementos de uma <xref:System.Collections.Hashtable> ou de um <xref:System.Collections.Generic.Dictionary%602> são acessíveis somente pela chave do elemento, mas os elementos de um <xref:System.Collections.SortedList> ou de um <xref:System.Collections.ObjectModel.KeyedCollection%602> são acessíveis tanto pela chave quanto pelo índice do elemento. Os índices em todas as coleções são baseados em zero, exceto <xref:System.Array>, que permite matrizes que não sejam baseadas em zero.  
+  
+ O recurso LINQ to Objects permite que você use consultas LINQ para acessar objetos na memória desde que o tipo de objeto implemente a interface <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. Consultas LINQ fornecem um padrão comum para acessar dados; são geralmente mais concisas e legíveis que os loops `foreach` padrão; e fornecem recursos de filtragem, classificação e agrupamento. Consultas LINQ também podem melhorar o desempenho. Para obter mais informações, consulte [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) e [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+  
+## <a name="related-topics"></a>Tópicos relacionados  
+  
+|Título|Descrição|  
+|-----------|-----------------|  
+|[Coleções e Estruturas de Dados](../../../docs/standard/collections/index.md)|Discute os diversos tipos de coleção disponíveis no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], incluindo pilhas, filas, listas, matrizes e dicionários.|  
+|[Tipos de Coleção de Tabela de Hash e Dicionário](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Descreve os recursos de tipos de dicionário baseados em hash genérico e não genérico.|  
+|[Tipos de Coleção Sorted](../../../docs/standard/collections/sorted-collection-types.md)|Descreve as classes que fornecem funcionalidade de classificação para listas e conjuntos.|  
+|[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso Genéricos, incluindo coleções, delegados e interfaces genéricos fornecidos pelo [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e para oferecer suporte a tecnologias, tais como a de reflexão.|  
+  
+## <a name="reference"></a>Referência  
+ <xref:System.Collections?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic?displayProperty=fullName>  
+  
+ <xref:System.Collections.ICollection?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+  
+ <xref:System.Collections.IList?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+  
+ <xref:System.Collections.IDictionary?displayProperty=fullName>  
+  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>

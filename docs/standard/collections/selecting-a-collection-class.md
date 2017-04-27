@@ -1,85 +1,93 @@
 ---
-title: "Selecionando uma classe de coleção"
-description: "Selecionando uma classe de coleção"
-keywords: .NET, .NET Core
+title: "Selecionando uma classe de coleção | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- last-in-first-out collections
+- first-in-first-out collections
+- collections [.NET Framework], selecting collection class
+- indexed collections
+- Collections classes
+- grouping data in collections, selecting collection class
+ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 0a60fca7-e082-48d4-9dda-30b0d3e67ec7
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 763433b00ae7d01cfa0c7fa250f51d23a95f6f15
-ms.openlocfilehash: d174d0cb910035340fb317521f3ad930d16853c2
-ms.lasthandoff: 01/18/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 403a78e3fc1496b91403b3c42494e34d12607b70
+ms.lasthandoff: 04/18/2017
 
 ---
-
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
-
-Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias. Em geral, evite usar os tipos no namespace System.Collections a menos que se direcione especificamente para o .NET Framework versão 1.1. 
-
-Considere as perguntas a seguir:
-
-* Você precisa de uma lista sequencial em que o elemento normalmente será descartado após seu valor ser recuperado? 
-
-    * Em caso afirmativo, considere a possibilidade de usar a classe genérica [System.Collections.Generic.Queue&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1) caso precise do comportamento PEPS (primeiro a entrar, primeiro a sair). Considere a possibilidade de usar a classe genérica [System.Collections.Generic.Stack&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1) caso precise do comportamento LIFO (último a entrar, primeiro a sair). Para obter acesso seguro de vários threads, use as versões simultâneas [System.Collections.Concurrent.ConcurrentQueue&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentQueue-1) e [System.Collections.Concurrent.ConcurrentStack&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentStack-1).
-    
-    * Caso contrário, considere a possibilidade de usar outras coleções.
-    
-* Você precisa acessar os elementos em uma ordem específica, como PEPS, UEPS ou aleatória?
-
-    * O [System.Collections.Generic.Queue&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1) ou a classe genérica [System.Collections.Concurrent.ConcurrentQueue&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentQueue-1) oferecem acesso PEPS. Para obter mais informações, consulte [Quando usar uma coleção thread-safe](threadsafe/when-to-use-a-thread-safe-collection.md).
-    
-    * O [System.Collections.Generic.Stack&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1) ou a classe genérica [System.Collections.Concurrent.ConcurrentStack&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent.ConcurrentStack-1) oferecem acesso LIFO. Para obter mais informações, consulte [Quando usar uma coleção thread-safe](threadsafe/when-to-use-a-thread-safe-collection.md).
-    
-    * A classe genérica [System.Collections.Generic.LinkedList&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.LinkedList-1) possibilita acesso sequencial do início ao fim ou do fim ao início.
-    
-* Você precisa acessar cada elemento pelo índice? 
-
-    * A classe [System.Collections.Specialized.StringCollection](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.StringCollection) e a classe genérica [System.Collections.Generic.List&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) oferecem acesso aos seus elementos pelo índice com base zero do elemento. 
-    
-    * As classes [System.Collections.Specialized.ListDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.ListDictionary) e [System.Collections.Specialized.StringDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.StringDictionary) e as classes genéricas [System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) e [System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) oferecem acesso aos seus elementos pela chave do elemento.
-    
-    * As classes [System.Collections.Specialized.NameObjectCollectionBase](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.NameObjectCollectionBase) e [System.Collections.Specialized.NameValueCollection](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.NameValueCollection) e as classes genéricas [System.Collections.ObjectModel.KeyedCollection&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) e [System.Collections.Generic.SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) oferecem acesso aos seus elementos pelo índice com base zero ou a chave do elemento.
-    
-* Cada elemento conterá um valor, uma combinação de uma chave e um valor ou uma combinação de uma chave e diversos valores? 
-
-    * Um valor: use qualquer uma das coleções com base na interface genérica [System.Collections.Generic.IList&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1).
-    
-    * Uma chave e um valor: use qualquer uma das coleções com base na interface genérica [System.Collections.Generic.IDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2).
-    
-    * Um valor com chave embutida: use a classe genérica [System.Collections.ObjectModel.KeyedCollection&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2).
-    
-    * Uma chave e diversos valores: use a classe [System.Collections.Specialized.NameValueCollection](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.NameValueCollection).
-    
-* Você precisa classificar os elementos de forma diferente de como foram inseridos? 
-
-    * A classe [System.Collections.Hashtable](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) classifica seus elementos pelos códigos hash.
-    
-    * As classes genéricas [System.Collections.Generic.SortedDictionary&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedDictionary-2) e [System.Collections.Generic.SortedList&lt;TKey, TValue&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) classificam seus elementos pela chave, com base nas implementações da interface [System.Collections.IComparer](https://docs.microsoft.com/dotnet/core/api/System.Collections.IComparer) e da interface genérica [System.Collections.Generic.IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1).
-    
-    * A classe genérica [System.Collections.Generic.List&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) fornece um método `Sort` que pega uma implementação da interface genérica `IComparer<T>` como parâmetro.
-    
-* Você precisa de coleções que aceitem apenas cadeias de caracteres? 
-
-    * [StringCollection](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.StringCollection) (com base em [System.Collections.IList](https://docs.microsoft.com/dotnet/core/api/System.Collections.IList)) e [StringDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized.StringDictionary) (com base em [System.Collections.IDictionary](https://docs.microsoft.com/dotnet/core/api/System.Collections.IDictionary)) estão no namespace [System.Collections.Specialized](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized). 
-    
-    * Além disso, é possível usar qualquer uma das classes genéricas de coleção no namespace [System.Collections.Generic](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic) como coleções de cadeias de caracteres fortemente tipadas especificando a classe `String` para seus argumentos de tipo genérico.
-    
-## <a name="linq-to-objects"></a>Objetos LINQ to
-
-O LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória desde que o tipo de objeto implemente [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) ou [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1). As consultas LINQ fornecem um padrão comum para acessar dados. Em geral, elas são mais concisas e legíveis que os loops foreach padrão e fornecem recursos de filtragem, classificação e agrupamento. Para obter mais informações, consulte [LINQ (Consulta Integrada à Linguagem)](../../csharp/linq/index.md).
-
-## <a name="see-also"></a>Consulte também
-
-[System.Collections](https://docs.microsoft.com/dotnet/core/api/System.Collections)
-
-[System.Collections.Specialized](https://docs.microsoft.com/dotnet/core/api/System.Collections.Specialized)
-
-[System.Collections.Generic](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
-
-[Coleções Thread-Safe](threadsafe/index.md)
-
+Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. Em geral, evite usar os tipos no namespace <xref:System.Collections>, a menos que você esteja destinando especificamente ao .NET Framework versão 1.1. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias.  
+  
+ Considere as perguntas a seguir:  
+  
+-   Você precisa de uma lista sequencial em que o elemento normalmente será descartado após seu valor ser recuperado?  
+  
+    -   Se sim, considere o uso da classe <xref:System.Collections.Queue> ou da classe genérica <xref:System.Collections.Generic.Queue%601> caso precise do comportamento PEPS (primeiro a entrar, primeiro a sair). Considere o uso da classe <xref:System.Collections.Stack> ou da classe genérica <xref:System.Collections.Generic.Stack%601>, se você precisar do comportamento UEPS (último a entrar, primeiro a sair). Para obter acesso seguro de vários threads, use as versões simultâneas <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+  
+    -   Caso contrário, considere a possibilidade de usar outras coleções.  
+  
+-   Você precisa acessar os elementos em uma ordem específica, como PEPS, UEPS ou aleatória?  
+  
+    -   A classe <xref:System.Collections.Queue> e o <xref:System.Collections.Generic.Queue%601> ou a classe genérica <xref:System.Collections.Concurrent.ConcurrentQueue%601> oferecem acesso PEPS. Para obter mais informações, consulte [Quando usar uma coleção thread-safe](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+  
+    -   A classe <xref:System.Collections.Stack> e a classe genérica <xref:System.Collections.Generic.Stack%601> ou <xref:System.Collections.Concurrent.ConcurrentStack%601> oferecem acesso UEPS. Para obter mais informações, consulte [Quando usar uma coleção thread-safe](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+  
+    -   A classe genérica <xref:System.Collections.Generic.LinkedList%601> permite acesso sequencial do início ao final ou do final ao início.  
+  
+-   Você precisa acessar cada elemento pelo índice?  
+  
+    -   As classes <xref:System.Collections.ArrayList> e <xref:System.Collections.Specialized.StringCollection> e a classe genérica <xref:System.Collections.Generic.List%601> oferecem acesso aos seus elementos pelo índice baseado em zero do elemento.  
+  
+    -   As classes <xref:System.Collections.Hashtable>, <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary> e <xref:System.Collections.Specialized.StringDictionary> e as classes genéricas <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Generic.SortedDictionary%602> oferecem acesso a seus elementos pela chave do elemento.  
+  
+    -   As classes <xref:System.Collections.Specialized.NameObjectCollectionBase> e <xref:System.Collections.Specialized.NameValueCollection> e as classes genéricas <xref:System.Collections.ObjectModel.KeyedCollection%602> e <xref:System.Collections.Generic.SortedList%602> oferecem acesso a seus elementos tanto o índice baseado em zero ou pela chave do elemento.  
+  
+-   Cada elemento conterá um valor, uma combinação de uma chave e um valor ou uma combinação de uma chave e diversos valores?  
+  
+    -   Um valor: use qualquer uma das coleções baseadas na interface <xref:System.Collections.IList> ou na interface genérica <xref:System.Collections.Generic.IList%601>.  
+  
+    -   Uma chave e um valor: use qualquer uma das coleções baseadas na interface <xref:System.Collections.IDictionary> ou na interface genérica <xref:System.Collections.Generic.IDictionary%602>.  
+  
+    -   Um valor com chave inserida: use a classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
+  
+    -   Uma chave e vários valores: use a classe <xref:System.Collections.Specialized.NameValueCollection>.  
+  
+-   Você precisa classificar os elementos de forma diferente de como foram inseridos?  
+  
+    -   A classe <xref:System.Collections.Hashtable> classifica seus elementos por seus códigos hash.  
+  
+    -   A classe <xref:System.Collections.SortedList> e as classes genéricas <xref:System.Collections.Generic.SortedDictionary%602> e <xref:System.Collections.Generic.SortedList%602> classificam seus elementos pela chave, com base em implementações da interface <xref:System.Collections.IComparer> e da interface genérica <xref:System.Collections.Generic.IComparer%601>.  
+  
+    -   <xref:System.Collections.ArrayList> fornece um método <xref:System.Collections.ArrayList.Sort%2A> que usa uma implementação de <xref:System.Collections.IComparer> como um parâmetro. Sua contraparte genérica, a classe genérica <xref:System.Collections.Generic.List%601>, fornece um método <xref:System.Collections.Generic.List%601.Sort%2A> que usa uma implementação da interface genérica <xref:System.Collections.Generic.IComparer%601> como um parâmetro.  
+  
+-   Você precisa de rapidez para pesquisas e recuperação de informações?  
+  
+    -   <xref:System.Collections.Specialized.ListDictionary> é mais rápido que <xref:System.Collections.Hashtable> para coleções pequenas (10 itens ou menos). A classe genérica <xref:System.Collections.Generic.Dictionary%602> fornece uma pesquisa mais rápida do que a classe genérica <xref:System.Collections.Generic.SortedDictionary%602>. A implementação multi-threaded é <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> fornece rápida inserção multi-threaded para dados não ordenados. Para obter mais informações sobre os dois tipos de multi-threaded, consulte [Quando usar uma coleção thread-safe](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+  
+-   Você precisa de coleções que aceitem apenas cadeias de caracteres?  
+  
+    -   <xref:System.Collections.Specialized.StringCollection> (com base em <xref:System.Collections.IList>) e <xref:System.Collections.Specialized.StringDictionary> (com base em <xref:System.Collections.IDictionary>) estão no namespace <xref:System.Collections.Specialized>.  
+  
+    -   Além disso, você pode usar qualquer uma das classes de coleção genéricas no namespace <xref:System.Collections.Generic> como coleções de cadeia de caracteres fortemente tipadas, especificando a classe <xref:System.String> para seus argumentos de tipo genérico.  
+  
+## <a name="linq-to-objects-and-plinq"></a>LINQ to Objects e PLINQ  
+ LINQ to Objects permite que os desenvolvedores usem consultas LINQ para acessar objetos na memória, desde que o tipo de objeto implemente <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>. As consultas LINQ fornecem um padrão comum para acessar dados, são geralmente mais concisas e legíveis que os loops padrão `foreach` e fornecem capacidades de filtragem, ordenação e agrupamento. Para obter mais informações, consulte [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+  
+ PLINQ fornece uma implementação paralela de LINQ to Objects que pode oferecer uma execução de consulta mais rápida em muitos cenários, por meio do uso mais eficiente dos computadores de vários núcleos. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Collections>   
+ <xref:System.Collections.Specialized>   
+ <xref:System.Collections.Generic>   
+ [Coleções Thread-Safe](../../../docs/standard/collections/thread-safe/index.md)
