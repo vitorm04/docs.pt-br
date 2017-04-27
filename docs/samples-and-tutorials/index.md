@@ -1,49 +1,46 @@
 ---
-title: Exemplos e Tutoriais
-description: Exemplos e Tutoriais
-keywords: .NET
+title: Exemplos e tutoriais
+description: "Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Core e a linguagem C# que ajudam você a saber mais sobre .NET."
+keywords: .NET, .NET Core, ASP.NET, C#, exemplo, tutorial
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/25/2016
+ms.date: 04/11/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: e9d2ecc6da01a394ab794032f5bd42840311edec
-ms.lasthandoff: 04/10/2017
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 977dd60bb21b466a6bec357a6dec73aa9a931ead
+ms.lasthandoff: 04/12/2017
 
 ---
 
-# <a name="samples-and-tutorials"></a>Exemplos e Tutoriais
+# <a name="samples-and-tutorials"></a>Exemplos e tutoriais
 
-Temos um catálogo avançado de exemplos e tutoriais que você pode usar para aprender mais sobre o .NET. Esta área contém exemplos e tutoriais para .NET Core e Linguagem C#.
+A documentação do .NET contém um conjunto de exemplos e tutoriais que ensinam sobre o .NET. Este tópico descreve como localizar, exibir e baixar exemplos e tutoriais do .NET Core, ASP.NET Core e C#. Encontre recursos para aprender sobre a linguagem de programação F# no [site de fundamentos do F#](http://fsharp.org/learn.html). Se estiver interessado em explorar o C# usando um editor de código online, veja esses [tutoriais interativos](http://go.microsoft.com/fwlink/p/?LinkId=817234). Para obter instruções sobre como exibir e baixar o código de exemplo, confira a seção [Exibindo e baixando exemplos](#viewing-and-downloading-samples).
 
-Você pode encontrar ótimos recursos para aprender a linguagem de programação F# no [site da F# Foundation](http://fsharp.org/learn.html). 
-
-Você pode encontrar ótimos recursos para aprender ASP.NET Core no [site do ASP.NET](https://docs.microsoft.com/aspnet/core/tutorials/).
-
-Além disso, se você estiver interessado em explorar C# usando um espaço online, experimente estes [tutoriais interativos](http://go.microsoft.com/fwlink/?LinkId=817234).
-
-## <a name="general"></a>Geral
+## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>Exemplos
 
 **[Testes de unidade no .NET Core usando o teste dotnet](../core/testing/unit-testing-with-dotnet-test.md)**
 
-Este guia mostra como criar um aplicativo Web do ASP.NET Core e os testes de unidade associados. Ele começa criando um aplicativo de serviço Web simples e, em seguida, adiciona testes e continua criando mais testes para orientar a implementação de novos recursos. O código completo está disponível [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test).
+Este guia mostra como criar um aplicativo Web do ASP.NET Core e testes de unidade associados. Ele começa criando um aplicativo de serviço Web simples e, em seguida, adiciona testes. Ele continua com a criação de mais testes para orientar a implementação de novos recursos. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) está disponível no repositório dotnet/docs no GitHub.
 
 ### <a name="tutorials"></a>Tutoriais
 
 **[Gravando aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/using-with-xplat-cli.md)**
 
-Este guia mostrará como usar as ferramentas de CLI do .NET Core para criar aplicativos de console de plataforma cruzada.  Ele começará com o aplicativo de console mais básico e eventualmente abrangerá vários projetos, incluindo testes. Você adicionará esses recursos passo a passo, avançando com base no que você já viu e criou. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/core/console-apps).
+Este guia mostra como usar as ferramentas de CLI do .NET Core para criar aplicativos de console de plataforma cruzada. Ele começa com o aplicativo de console básico e, por fim, abrange vários projetos, incluindo testes. Você adiciona recursos passo a passo, ampliando seu conhecimento durante o processo. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) está disponível no repositório dotnet/docs no GitHub.
 
 **[Gravando Bibliotecas com Ferramentas de Plataforma Cruzada](../core/tutorials/libraries.md)**
 
-Este exemplo aborda como você pode gravar bibliotecas para .NET usando as ferramentas de CLI de plataforma cruzada.  Elas fornecem uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte.
-O código completo está disponível [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library).
+Esse exemplo aborda como escrever bibliotecas para .NET usando ferramentas de CLI de plataforma cruzada. Essas ferramentas proporcionam uma experiência eficiente e de nível baixo que funciona em qualquer sistema operacional com suporte. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) está disponível no repositório dotnet/docs no GitHub.
+
+## <a name="aspnet-core"></a>ASP.NET Core
+
+Confira os [tutoriais do ASP.NET Core](https://docs.microsoft.com/aspnet/core/tutorials/). Muitos artigos na documentação do ASP.NET Core têm links para exemplos escritos para eles.
 
 ## <a name="c-language"></a>Linguagem C#
 
@@ -51,41 +48,41 @@ O código completo está disponível [no repositório de documentos do GitHub](h
 
 **[Iteradores](../csharp/iterators.md)**
 
-Este exemplo demonstra a sintaxe e os recursos para criar e consumir iteradores C#. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators).
+Este exemplo demonstra a sintaxe e os recursos para criar e consumir iteradores C#. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) está disponível no repositório dotnet/docs no GitHub.
 
 **[Indexadores](../csharp/indexers.md)**
 
-Este exemplo demonstra o uso de muitos recursos de indexadores C#. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers).
+Este exemplo demonstra o uso de muitos recursos de indexadores C#. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) está disponível no repositório dotnet/docs no GitHub.
 
 **[Delegados e Eventos](../csharp/delegates-events.md)**
 
-Este exemplo demonstra a sintaxe e os recursos para eventos e delegados C#. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events). Um segundo exemplo, voltado para eventos, também está no [mesmo repositório](https://github.com/dotnet/docs/tree/master/samples/csharp/events).
+Este exemplo demonstra a sintaxe e os recursos para eventos e delegados C#. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) está disponível no repositório dotnet/docs no GitHub. Um [segundo exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/events), voltado para eventos, também está no mesmo repositório.
 
 **[Árvores de Expressão](../csharp/expression-trees.md)**
 
-Este exemplo demonstra vários dos problemas que podem ser resolvidos usando árvores de expressão. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees).
+Este exemplo demonstra vários dos problemas que podem ser resolvidos usando árvores de expressão. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) está disponível no repositório dotnet/docs no GitHub.
 
 **Exemplos LINQ**
 
-Essas séries de amostras demonstram muitos dos recursos da consulta integrada à linguagem.  Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp).
+Essa série de exemplos demonstra muitos dos recursos da LINQ (Consulta Integrada à Linguagem). O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) está disponível no repositório dotnet/docs no GitHub.
 
 ### <a name="tutorials"></a>Tutoriais
 
 **[Aplicativo de Console](../csharp/tutorials/console-teleprompter.md)**
 
-Este tutorial demonstra a E/S de console, a estrutura de um aplicativo de console e os conceitos básicos da tarefa com base em um modelo de programação assíncrono. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter).
+Este tutorial demonstra a E/S do Console, a estrutura de um aplicativo de console e os conceitos básicos do modelo de programação assíncrono baseado em tarefa. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) está disponível no repositório dotnet/docs no GitHub.
 
 **[Cliente REST](../csharp/tutorials/console-webapiclient.md)**
 
-Este tutorial demonstra as comunicações da Web, serialização JSON e recursos orientados a objeto na linguagem C#. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+Este tutorial demonstra comunicações da Web, serialização JSON e recursos orientados a objeto na linguagem C#. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) está disponível no repositório dotnet/docs no GitHub.
 
 **[Trabalhando com LINQ](../csharp/tutorials/working-with-linq.md)**
 
-Este tutorial demonstra muitos dos recursos do LINQ e os elementos de linguagem que dão suporte a ele. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq).
+Este tutorial demonstra muitos dos recursos do LINQ e os elementos de linguagem que dão suporte a ele. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) está disponível no repositório dotnet/docs no GitHub.
 
 **[Microsserviços hospedados no Docker](../csharp/tutorials/microservices.md)**
 
-Este tutorial demonstra a criação de um microsserviço do ASP.NET Core e a sua hospedagem no Docker. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice).
+Este tutorial demonstra a criação de um microsserviço do ASP.NET Core e a sua hospedagem no Docker. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) está disponível no repositório dotnet/docs no GitHub.
 
 **[Introdução ao .NET Core em macOS usando o Visual Studio para Mac](../core/tutorials/using-on-mac-vs.md)**
 
@@ -99,9 +96,24 @@ Este tutorial mostra como compilar uma solução completa do .NET Core que inclu
 
 **[Executando aplicativos ASP.NET MVC em contêineres do Windows Docker](../framework/docker/aspnetmvc.md)**
 
-Este tutorial demonstra como implantar um aplicativo ASP.NET MVC existente em um contêiner do Windows Docker.
-Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator).
+Este tutorial demonstra como implantar um aplicativo ASP.NET MVC existente em um contêiner do Windows Docker. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) está disponível no repositório dotnet/docs no GitHub.
 
 **[Executando aplicativos de console do .NET Framework em contêineres do Windows](../framework/docker/console.md)**
 
-Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. Uma versão concluída do código que você criará pode ser encontrada [no repositório de documentos do GitHub](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator).
+Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. O [exemplo completo](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) está disponível no repositório dotnet/docs no GitHub.
+
+## <a name="viewing-and-downloading-samples"></a>Exibição e download de exemplos
+
+Muitos tópicos mostram código-fonte e exemplos que estão disponíveis para exibição ou download no GitHub. Para ver um exemplo, basta seguir o link de exemplo. Para baixar o código, siga estas instruções:
+
+1. Baixe o repositório que contém o código de exemplo executando um dos seguintes procedimentos:
+   * Baixe um ZIP do repositório para o sistema local. Descompacte o arquivamento compactado.
+   * [Bifurque](https://help.github.com/articles/fork-a-repo/) o repositório e [clone](https://help.github.com/articles/cloning-a-repository/) a bifurcação no sistema local. A bifurcação e a clonagem permitem que você colabore com a documentação confirmando alterações na sua bifurcação e criando uma solicitação pull para o repositório de documentos oficiais. Para saber mais, confira o [Guia de colaboração na documentação do .NET](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) e o [Guia de colaboração nos documentos do ASP.NET](https://github.com/aspnet/Docs/blob/master/CONTRIBUTING.md).
+   * Clone o repositório localmente. Se você clonar um repositório de documentos diretamente em seu sistema local, não será possível confirmar diretamente no repositório oficial, de modo que não será possível colaborar na documentação posteriormente. Use o procedimento de bifurcação e clonagem anteriormente descrito se quiser preservar a oportunidade de colaborar na documentação posteriormente.
+1. Navegue nas pastas do repositório para o local do exemplo. O caminho relativo até o local do exemplo aparece na barra de endereços do navegador quando você segue o link para o exemplo.
+1. Há várias opções para executar um exemplo:
+   * Usar as [ferramentas da CLI dotnet](../core/tools/index.md): em uma janela de console, navegue até a pasta do exemplo e use comandos da CLI dotnet.
+   * Usar o [Visual Studio](https://www.visualstudio.com/) ou [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/): abra o exemplo selecionando **Arquivo > Abrir > Projeto/Solução** na barra de menus, navegue até a pasta do projeto de exemplo e selecione o arquivo de projeto (*.csproj* ou *.fsproj*).
+   * Usar o [Visual Studio Code](https://code.visualstudio.com/): abra o exemplo selecionando **Arquivo > Abrir Pasta** na barra de menus e selecionando a pasta do projeto de exemplo.
+   * Usar um IDE diferente que dê suporte a projetos do .NET Core.
+
