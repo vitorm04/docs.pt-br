@@ -46,8 +46,7 @@ O tipo `string` representa uma sequência de zero ou mais caracteres Unicode. `s
  Embora `string` seja um tipo de referência, os operadores de igualdade (`==` e `!=`) são definidos para comparar os valores dos objetos `string`, não referências. Isso torna o teste de igualdade de cadeia de caracteres mais intuitivo. Por exemplo:  
   
 ```csharp  
-  
-      string a = "hello";  
+string a = "hello";  
 string b = "h";  
 // Append to contents of 'b'  
 b += "ello";  
@@ -60,7 +59,6 @@ Console.WriteLine((object)a == (object)b);
  O operador + concatena as cadeias de caracteres:  
   
 ```csharp  
-  
 string a = "good " + "morning";  
 ```  
   
@@ -68,17 +66,15 @@ string a = "good " + "morning";
   
  Cadeias de caracteres são *imutável* – o conteúdo de um objeto de cadeia de caracteres não pode ser alterado depois que o objeto é criado, embora a sintaxe faça com que pareça que você pode fazer isso. Por exemplo, quando você escreve esse código, o compilador na verdade cria um novo objeto de cadeia de caracteres para manter a nova sequência de caracteres e esse novo objeto é atribuído a b. A cadeia de caracteres "h" é então qualificada para coleta de lixo.  
   
-```csharp  
-  
-      string b = "h";  
+```csharp
+string b = "h";  
 b += "ello";  
 ```  
   
  O operador [] pode ser usado para o acesso somente leitura a caracteres individuais de uma `string`:  
   
 ```csharp  
-  
-      string str = "test";  
+string str = "test";  
 char x = str[2];  // x = 's';  
 ```  
   
@@ -91,8 +87,7 @@ char x = str[2];  // x = 's';
  Os literais de cadeia de caracteres podem conter qualquer literal de caractere. Sequências de escape são incluídas. O exemplo a seguir usa a sequência de escape `\\` de barra invertida, `\u0066` para a letra f e `\n` para a nova linha.  
   
 ```  
-  
-      string a = "\\\u0066\n";  
+string a = "\\\u0066\n";  
 Console.WriteLine(a);  
 ```  
   
@@ -138,3 +133,4 @@ Console.WriteLine(a);
  [Operações básicas de cadeias de caracteres](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
  [Criando novas cadeias de caracteres](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
  [Tabela de formatação de resultados numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+
