@@ -2,11 +2,10 @@
 title: Coleta de lixo | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-4.6
+ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,13 +29,13 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 114ed6917fc4bde5090df88848552cceb79d3192
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: e6c68eb589ce80fa6154c77840c8d4fdee4d8a81
+ms.openlocfilehash: b48c375c86b435e880e9ad9650941ab0f2329c3a
+ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="garbage-collection"></a>Coleta de Lixo
-O coletor de lixo do .NET Framework gerencia a alocação e a liberação de memória para seu aplicativo. Toda vez que você cria um novo objeto, o Common Language Runtime aloca memória para o objeto do heap gerenciado. Desde que exista espaço de endereço disponível no heap gerenciado, o tempo de execução continua alocando espaço para novos objetos. No entanto, a memória não é infinita. No fim das contas, o coletor de lixo deve realizar uma coleta para liberar algum espaço na memória. O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele verifica se há objetos no heap gerenciado que não estão mais sendo usados pelo aplicativo e realiza as operações necessárias para recuperar sua memória.  
+O coletor de lixo do .NET gerencia a alocação e a liberação de memória para seu aplicativo. Toda vez que você cria um novo objeto, o Common Language Runtime aloca memória para o objeto do heap gerenciado. Desde que exista espaço de endereço disponível no heap gerenciado, o tempo de execução continua alocando espaço para novos objetos. No entanto, a memória não é infinita. No fim das contas, o coletor de lixo deve realizar uma coleta para liberar algum espaço na memória. O mecanismo de otimização do coletor de lixo determina o melhor momento para executar uma coleta com base nas alocações que estão sendo feitas. Quando o coletor de lixo executa uma coleta, ele verifica se há objetos no heap gerenciado que não estão mais sendo usados pelo aplicativo e realiza as operações necessárias para recuperar sua memória.  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Tópicos relacionados  
