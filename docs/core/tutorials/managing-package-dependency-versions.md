@@ -64,7 +64,7 @@ Se assim, você deve corrigir o pacote `NETStandard.Library` para a versão `1.6
 
 Se assim, você deve corrigir o pacote `Microsoft.NETCore.App` para a versão `1.0.0`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
 
-**Você está [cortando](../deploying/reducing-dependencies.md) as dependências do seu metapacote** `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
+**Você está [cortando](../deploying/reducing-dependencies.md) as dependências do seu metapacote**  `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
 
 Nesse caso, você deve garantir que o metapacote de início seja corrigido para 1.0.  Os pacotes individuais dos quais você depende após o corte também são corrigidos para 1.0.
 
