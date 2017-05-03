@@ -2,6 +2,7 @@
 title: "Mitigação: alocação de espaço do controle de grade para colunas de estrela | Microsoft Docs"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
