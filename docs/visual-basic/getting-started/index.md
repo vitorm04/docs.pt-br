@@ -30,16 +30,16 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d94b01f24ea1c45ecbf6b14ecfdf164d8b8b10c
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
+ms.lasthandoff: 05/01/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Introdução ao Visual Basic
 Esta seção da documentação ajuda você a começar o desenvolvimento de aplicativos do Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Alterações Significativas do Visual Basic no Visual Studio 2015](../../visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)  
+ [Alterações Significativas do Visual Basic no Visual Studio ](breaking-changes-in-visual-studio.md)  
  Lista as alterações nesta versão podem evitar que um aplicativo compile ou altere seu comportamento no tempo de execução.  
   
  [Recursos Adicionais para Programadores do Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
@@ -48,7 +48,7 @@ Esta seção da documentação ajuda você a começar o desenvolvimento de aplic
  [Saiba mais sobre o Visual Basic](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  Fornece links para recursos para aprender a programar em Visual Basic.  
   
- [Obtenha o Visual Basic](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)  
+ [Obtenha o Visual Basic](https://www.visualstudio.com/downloads/)  
  Fornece links de download para versões do Visual Studio que incluem o suporte ao Visual Basic, incluindo versões gratuitas.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -64,7 +64,7 @@ Esta seção da documentação ajuda você a começar o desenvolvimento de aplic
  [Fale conosco](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  Aborda como receber suporte e fornecer comentários.  
   
- [Visual Studio](http://msdn.microsoft.com/en-us/06ddebea-2c83-4a45-bb48-6264c797ed93)  
+ [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  Fornece links para a documentação do [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
   
  [C#](../../csharp/csharp.md)  
