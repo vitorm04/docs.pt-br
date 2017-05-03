@@ -40,7 +40,7 @@
 ### [Teste de unidade com dotnet test e MSTest](core/testing/unit-testing-with-mstest.md)
 ## [Controle de versão](core/versions/index.md)
 ### [Suporte do .NET Core](core/versions/lts-current.md)
-### [🔧 Manutenção](core/versions/servicing.md)
+<!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Catálogo de Identificador de Tempo de Execução](core/rid-catalog.md)
 ## [Ferramentas da CLI do .NET Core](core/tools/index.md)
 ### [Telemetria](core/tools/telemetry.md)
@@ -76,7 +76,7 @@
 ### [Organizando projetos para o .NET Core](core/porting/project-structure.md)
 ### [Analisando dependências de terceiros](core/porting/third-party-deps.md)
 ### [Portabilidade de bibliotecas](core/porting/libraries.md)
-### [🔧 Pacotes NuGet](core/porting/nuget-packages.md)
+<!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [Documentos do VS 2015/project.json](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -130,9 +130,8 @@
 ### [Novidades no C# 7](csharp/whats-new/csharp-7.md)
 ### [Novidades no C# 6](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
-## [🔧 C# Interativo](csharp/interactive/)
+<!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
-## [Conceitos de C#](csharp/concepts.md)
 ### [Sistemas do tipo C#](csharp/programming-guide/types/index.md)
 ### [Namespaces](csharp/programming-guide/namespaces/index.md)
 ### [Tipos Básicos](csharp/basic-types.md)
@@ -140,7 +139,7 @@
 ### [Estruturas](csharp/structs.md)
 ### [Tuplas](csharp/tuples.md)
 ### [Interfaces](csharp/programming-guide/interfaces/index.md)
-### [Métodos e Expressões Lambda](csharp/methods-lambda-expressions.md)
+<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
 #### [Métodos](csharp/methods.md)
 #### [Expressões Lambda](csharp/lambda-expressions.md)
 ### [Propriedades](csharp/properties.md)
@@ -158,7 +157,7 @@
 #### [Distinção entre Delegados e Eventos](csharp/distinguish-delegates-events.md)
 ### [LINQ (Consulta Integrada à Linguagem)](csharp/linq/)
 ### [Programação assíncrona](csharp/async.md)
-### [🔧 Programação paralela](csharp/parallel.md)
+<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [Correspondência Padrão](csharp/pattern-matching.md)
 ### [Árvores de Expressão](csharp/expression-trees.md)
 #### [Árvores de Expressão Explicadas](csharp/expression-trees-explained.md)
@@ -169,11 +168,11 @@
 #### [Traduzindo Expressões](csharp/expression-trees-translating.md)
 #### [Resumo](csharp/expression-trees-summary.md)
 ### [Interoperabilidade nativa](csharp/programming-guide/interop/index.md)
-### [🔧 Reflexão e geração de código](csharp/reflection.md)
+<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [Documentando seu código](csharp/codedoc.md)
 ### [Controle de versão](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-## [🔧 Usando o .NET Compiler Platform](csharp/roslyn/index.md)
+<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
 ## [Guia de Programação em C#](csharp/programming-guide/)
 ## [Referência de Linguagem](csharp/language-reference/)
 ## [Explicações Passo a Passo](csharp/walkthroughs.md)
@@ -184,10 +183,10 @@
 
 ## [Tour do F#](fsharp/tour.md)
 
-## [Introdução à Programação Funcional](fsharp/introduction-to-functional-programming/index.md)
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
 ### [Funções como Valores de Primeira Classe](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
-## [Tutoriais](fsharp/tutorials/index.md)
+<!--## [Tutorials](fsharp/tutorials/index.md)-->
 ### [Introdução](fsharp/tutorials/getting-started/index.md)
 #### [Introdução ao Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
 #### [Introdução ao Visual Studio Code e Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
@@ -204,10 +203,10 @@
 #### [Criando um Provedor de Tipos](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Segurança do provedor de Tipos](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Solução de problemas de Provedores de Tipos](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-### [Programação Assíncrona e Simultânea](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)
+<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
 #### [Programação Assíncrona](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
-## [Usando F# no Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)
+<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
 ### [Recursos do Ambiente de Desenvolvimento em Visual F#](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
 ### [Configurando Projetos](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
 ### [Direcionamento de Versões Mais Antigas do .NET](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
@@ -217,7 +216,7 @@
 ### [Introdução ao armazenamento de Arquivos do Azure usando F#](fsharp/using-fsharp-on-azure/file-storage.md)
 ### [Introdução ao armazenamento de Filas do Azure usando F#](fsharp/using-fsharp-on-azure/queue-storage.md)
 ### [Introdução ao armazenamento de Tabelas do Azure usando F#](fsharp/using-fsharp-on-azure/table-storage.md)
-### [Usando F# no Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)
+<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
 ### [Pacote de Gerenciamento para Dependências F# do Azure](fsharp/using-fsharp-on-azure/package-management.md)
 
 ## [Referência da Linguagem F#](fsharp/language-reference/index.md)

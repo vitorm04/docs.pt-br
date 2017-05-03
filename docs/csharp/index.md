@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
-ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
+ms.openlocfilehash: 2ebb4a32d7898f38596ccc526a721c8f811a5951
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,10 +24,10 @@ O guia do C# fornece uma grande quantidade de informações sobre a linguagem C#
     - Comece com nossa seção de [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Você aprenderá os conceitos da linguagem e como criar programas em C#. Se você preferir ler primeiro as informações da visão geral, experimente nosso [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
 
 * Para os desenvolvedores que não conhecem o C#: 
-    - Se você já tiver trabalhado desenvolvimento antes, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Você aprenderá a sintaxe e a estrutura básicas da linguagem, e poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também é possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#. Ou confira [Conceitos do C#](concepts.md) para aprender sobre os recursos da linguagem C# em detalhes.
+    - Se você já tiver trabalhado desenvolvimento antes, mas ainda não conhece o C#, leia o [tour da linguagem C#](tour-of-csharp/index.md). Você aprenderá a sintaxe e a estrutura básicas da linguagem, e poderá usar o tour de linguagem para comparar o C# a outras linguagens que já usou. Também é possível pesquisar nos [tutoriais](tutorials/index.md) para experimentar programas básicos em C#.
 
 * Desenvolvedores em C# experientes:
-    - Se você já tiver usado o C# antes, comece lendo as novidades da versão mais recente da linguagem. Confira [Novidades no C#](whats-new/index.md) para conhecer os novos recursos da versão atual. Em seguida, explore os [Conceitos do C#](concepts.md) dos quais deseja saber mais detalhes.
+    - Se você já tiver usado o C# antes, comece lendo as novidades da versão mais recente da linguagem. Confira [Novidades no C#](whats-new/index.md) para conhecer os novos recursos da versão atual.
  
 ## <a name="how-the-c-guide-is-organized"></a>Como o guia do C# está organizado
 
@@ -45,15 +45,12 @@ Há sete seções no Guia do C#. Você pode lê-los em ordem ou ir diretamente p
 * [Recursos mais recentes](whats-new/index.md):
     - Conheça os novos recursos na linguagem. Saiba mais sobre novas ferramentas como C# Interativo (REPL do C#) e o SDK de Plataforma do Compilador .NET. Você aprenderá como o idioma está evoluindo. Você verá como as novas ferramentas podem aumentar sua produtividade na exploração da linguagem e na automatização de tarefas. 
 
-* [C# Interativo](interactive/index.md):
-    - O C# Interativo é uma REPL (Read-Eval-Print Loop) que você pode usar para explorar interativamente a linguagem. Ele também pode ser usado para explorar diferentes bibliotecas e estruturas experimentando ações diferentes e usando uma abordagem interativa. Nesta seção, você aprenderá a instalar e iniciar o C# Interativo e a explorar APIs com ele. Você também aprenderá a usar o C# Interativo para exportar classes testadas para uso posterior.  
-
-* [Conceitos do C#](concepts.md):
-    - Aprenda os conceitos mais úteis para programadores em C#. Esta seção contém vários cenários de ponta a ponta que mostram técnicas diferentes para desenvolvimento em C#. Ela se concentra na linguagem, mas a natureza dos cenários de ponta a ponta é que esta seção também inclui vários programas que demonstram estruturas e bibliotecas diferentes que fazem parte do ecossistema do .NET.
-
-* [SDK da Plataforma do Compilador .NET](roslyn/index.md):
-    - O SDK da Plataforma do Compilador .NET permite que você escreva componentes que analisam, sugerem e fazem melhorias no código. Nesta seção, você aprenderá como as APIs são organizadas e como você pode criar um código que habilite regras e práticas para sua equipe. Você também verá exemplos de cenários de ponta a ponta e links para outras bibliotecas com mais exemplos de uso dessas APIs.
-
+<!--* [C# Interactive](interactive/index.md):
+    - C# Interactive is a Read-Eval-Print Loop (REPL) that you can use to interactively explore the language. It can also be used to explore different libraries and frameworks by trying different actions using an interactive approach. In this section you'll learn how to install and start C# interactive, and how to explore APIs with it. You'll also learn how to use C# interactive to export tested classes for later use.  
+-->
+<!--* [.NET Compiler Platform SDK](roslyn/index.md):
+    - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
+-->
 * [Referência de linguagem](language-reference/index.md):
     - Esta seção contém o material de referência sobre a linguagem C#. Este material ajudará você a entender a sintaxe e a semântica do C#. 
 
