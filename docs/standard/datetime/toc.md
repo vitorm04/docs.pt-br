@@ -1,5 +1,5 @@
 # [Datas, horas e fusos horários](index.md)
-## [Visão geral de fuso horário](time-zone-overview.md)
+## [Visão geral de fusos horários](time-zone-overview.md)
 ## [Escolhendo entre DateTime, DateTimeOffset, TimeSpan e TimeZoneInfo](choosing-between-datetime.md)
 ## [Encontrando os fusos horários definidos em um sistema local](finding-the-time-zones-on-local-system.md)
 ## [Como enumerar os fusos horários presentes em um computador](enumerate-time-zones.md)
