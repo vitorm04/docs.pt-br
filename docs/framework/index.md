@@ -19,10 +19,11 @@ caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
+ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -56,7 +57,8 @@ Descreve novos recursos e alterações principais nas versões mais recentes do 
 [Introdução](../../docs/framework/get-started/index.md)  
 Fornece uma visão geral abrangente do .NET Framework e links para recursos adicionais.  
   
-[Guia de migração](../../docs/framework/migration-guide/index.md) Fornece recursos e uma lista de alterações que você precisa considerar se estiver migrando seu aplicativo para uma nova versão do .NET Framework.  
+[Guia de migração](../../docs/framework/migration-guide/index.md)   
+Fornece recursos e uma lista de alterações que você precisa para considerar se está migrando seu aplicativo para uma nova versão do .NET Framework.  
   
 [Guia de desenvolvimento](../../docs/framework/development-guide.md)  
 Fornece um guia para todas as principais áreas de tecnologia e tarefas para o desenvolvimento de aplicativos, incluindo a criação, a configuração, a depuração, a proteção e a implantação de seu aplicativo, bem como informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e threading.  
@@ -64,7 +66,8 @@ Fornece um guia para todas as principais áreas de tecnologia e tarefas para o d
 [Ferramentas](../../docs/framework/tools/index.md)  
 Descreve as ferramentas que ajudam você a desenvolver, configurar e implantar aplicativos usando tecnologias do .NET Framework.  
   
-[Biblioteca de Classes .NET Framework](/dotnet/api/?view=netframework-4.7) Fornece sintaxe, exemplos de códigos e informações relacionadas a cada classe contida nos namespaces do .NET Framework.  
+[Biblioteca de classes .NET Framework](/dotnet/api/?view=netframework-4.7)   
+Fornece sintaxe, exemplos de códigos e informações relacionadas a cada classe contida nos namespaces do .NET Framework.  
   
 [APIs e bibliotecas de classes adicionais](../../docs/framework/additional-apis/index.md)  
 Fornece a documentação para classes contidas em versões OOB (fora da banda), bem como para classes direcionadas a plataforma específicas ou implementações do .NET Framework.
