@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
 ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
-ms.lasthandoff: 03/22/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -62,7 +63,7 @@ No exemplo a seguir, o tempo de execução gerará uma exceção `InvalidIndexEx
 
 ## <a name="working-with-unmanaged-resources"></a>Trabalhando com recursos não gerenciados
 
-Alguns objetos fazem referência a *recursos não gerenciados*. Recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET.  Por exemplo, um identificador de arquivo é um recurso não gerenciado.  Um objeto @System.IO.FileStreamé um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado.  Quando você termina de usar o fluxo de arquivos, é necessário liberar o identificador de arquivo.
+Alguns objetos fazem referência a *recursos não gerenciados*. Recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET.  Por exemplo, um identificador de arquivo é um recurso não gerenciado.  Um objeto @System.IO.FileStream é um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado.  Quando você termina de usar o fluxo de arquivos, é necessário liberar o identificador de arquivo.
 
 No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface @System.IDisposable.  Quando você termina de usar o objeto, você chama o método @System.IDisposable.Dispose do objeto, responsável por liberar quaisquer recursos não gerenciados.  Linguagens .NET fornecem uma sintaxe `using` conveniente para esses objetos, como no exemplo a seguir:
 
