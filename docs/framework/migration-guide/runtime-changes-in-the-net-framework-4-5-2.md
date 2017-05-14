@@ -14,9 +14,10 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 247fbf574f13985fc941f252c0a6e7268194c079
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -32,7 +33,7 @@ Em casos raros, as alterações em tempo de execução podem afetar aplicativos 
   
 |Recurso|Alteração|Impacto|Escopo|  
 |-------------|------------|------------|-----------|  
-|Atributo `enableViewStateMac` dos elementos da página [ ](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458)|O ASP.NET não permite mais que os desenvolvedores especifiquem:<br /><br /> `<pages enableViewStateMac="false" />`<br /><br /> ou:<br /><br /> `<@Page EnableViewStateMac="false" %>`|O MAC (Message Authentication Code) de estado da exibição agora é obrigatório em todas as solicitações com estado de exibição embutido. Apenas aplicativos que definiram explicitamente a propriedade <xref:System.Web.UI.Page.EnableViewStateMac%2A> como `false` são afetados.<br /><br /> Para saber mais, veja [Resolvendo erros do código de autenticação da mensagem (MAC) no estado de exibição](http://support.microsoft.com/kb/2915218).|Principal|  
+|Atributo `enableViewStateMac` dos [elementos da página](http://msdn.microsoft.com/en-us/4123bb66-3fe4-4d62-b70e-33758656b458)|O ASP.NET não permite mais que os desenvolvedores especifiquem:<br /><br /> `<pages enableViewStateMac="false" />`<br /><br /> ou:<br /><br /> `<@Page EnableViewStateMac="false" %>`|O MAC (Message Authentication Code) de estado da exibição agora é obrigatório em todas as solicitações com estado de exibição embutido. Apenas aplicativos que definiram explicitamente a propriedade <xref:System.Web.UI.Page.EnableViewStateMac%2A> como `false` são afetados.<br /><br /> Para saber mais, veja [Resolvendo erros do código de autenticação da mensagem (MAC) no estado de exibição](http://support.microsoft.com/kb/2915218).|Principal|  
   
 <a name="EF"></a>   
 ## <a name="entity-framework-runtime-changes"></a>Alterações de tempo de execução do Entity Framework  
