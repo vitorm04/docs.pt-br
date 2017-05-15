@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 32e1c6bff0bc1df34407e21053c9b973710550ec
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -139,3 +140,4 @@ End Structure
  [Instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)   
  [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)   
  [Estruturas e Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+

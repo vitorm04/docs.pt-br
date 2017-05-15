@@ -38,9 +38,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 67350d57fa7faf0da1f44320cd1a26dfa0ae793a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -127,3 +128,4 @@ End Module
  [Instrução interface](../../../visual-basic/language-reference/statements/interface-statement.md)   
  [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)   
  [Tipo de promoção](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+

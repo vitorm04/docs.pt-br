@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3a2e21b5edde8c889ff8f3250898fcfa5ddfacbf
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -116,3 +117,4 @@ End Set
  [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)   
  [Instrução sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
  [Procedimentos de Propriedade](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
+

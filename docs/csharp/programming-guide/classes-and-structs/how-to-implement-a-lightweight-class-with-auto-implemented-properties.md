@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: bf00658c2510cc8717c926cfe434a3eec8f05ade
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -140,3 +141,4 @@ Este exemplo mostra como criar uma classe leve imutável que serve apenas para e
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [Inicializadores de objeto e coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+

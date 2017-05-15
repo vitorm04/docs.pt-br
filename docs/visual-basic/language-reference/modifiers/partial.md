@@ -38,9 +38,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b42752438e4f603029859d34031074f9e52c20d3
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -123,3 +124,4 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)   
  [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
  [Métodos Parciais](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+

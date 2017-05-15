@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8dbefcca3a83214997fd6bccdb5ef2788319899f
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -112,3 +113,4 @@ End Get
  [Instrução Exit](../../../visual-basic/language-reference/statements/exit-statement.md)   
  [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
  [Instruções passo a passo: definindo classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)
+

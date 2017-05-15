@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 38fb1ad5c00fa3be9850292f737ab24a392a446b
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -114,3 +115,4 @@ Exit { Do | For | Function | Property | Select | Sub | Try | While }
  [Instrução Stop](../../../visual-basic/language-reference/statements/stop-statement.md)   
  [Instrução sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
  [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+

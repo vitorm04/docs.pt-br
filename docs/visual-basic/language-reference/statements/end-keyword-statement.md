@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 0cdeee6c37e4a71f8b887f552756117f89cde4d9
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -159,3 +160,4 @@ End With
   
 ## <a name="see-also"></a>Consulte também  
  [Instrução End](../../../visual-basic/language-reference/statements/end-statement.md)
+
