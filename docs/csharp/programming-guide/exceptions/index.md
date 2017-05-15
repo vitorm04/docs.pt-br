@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95563b84f633789fb35eed64c510a11c44b3492b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 561113241f7433d8e0f7f1f1f96f0338ebe81ae3
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Exceções e manipulação de exceções (Guia de Programação em C#)
@@ -87,13 +88,13 @@ Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar c
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.SystemException>   
- [Guia de programação em C#](../../../csharp/programming-guide/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)   
- [Exceções](http://msdn.microsoft.com/library/f99a1d29-a2a8-47af-9707-9909f9010735)   
+ [Exceções](../../../standard/exceptions/index.md)   
  [Hierarquia de exceções](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Gravando código .NET confiável](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [Minidespejos para exceções específicas](http://go.microsoft.com/fwlink/?LinkId=112408)
