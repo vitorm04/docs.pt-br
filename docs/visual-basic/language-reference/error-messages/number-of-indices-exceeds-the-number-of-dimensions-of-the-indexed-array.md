@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ca359e81adb8e3676ade31164b691cf098b69e80
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -47,8 +48,7 @@ O número de índices usado para acessar um elemento de matriz deve ser exatamen
   
 -   Remova subscrições da referência de matriz até que o número total de subscrições é igual a classificação da matriz. Por exemplo:  
   
-    ```  
-    [Visual Basic]  
+    ```vb  
     Dim gameBoard(3, 3) As String  
   
     ' Incorrect code. The array has two dimensions.  
