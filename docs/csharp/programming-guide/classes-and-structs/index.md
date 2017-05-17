@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6023f09a9a355c9ab00252f9e2ac6cc45abf42ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classes e structs (Guia de Programação em C#)
@@ -76,9 +77,9 @@ Classes e structs são duas das construções básicas do Common Type System no 
   
 -   [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [Eventos](../../../csharp/programming-guide/events/index.md)  
+  
+-   [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [Indexadores](../../../csharp/programming-guide/indexers/index.md)  
   
@@ -90,7 +91,7 @@ Classes e structs são duas das construções básicas do Common Type System no 
  Alguns métodos e propriedades devem ser chamados ou acessado pelo código fora de sua classe ou struct, também conhecido como *código de cliente*. Outros métodos e propriedades podem ser usados apenas na classe ou struct em si. É importante limitar o acessibilidade do código para que somente o código do cliente desejado possa fazer contato. É possível especificar quão acessível seus tipos e seus membros são para o código do cliente usando os modificadores de acesso [público](../../../csharp/language-reference/keywords/public.md), [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), `protected internal` e [particular](../../../csharp/language-reference/keywords/private.md). A acessibilidade padrão é `private`. Para obter mais informações, consulte [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
 ### <a name="inheritance"></a>Herança  
- Classes (mas não structs) dão suporte ao conceito de herança. Uma classe que deriva de outra classe (a *classe base*) contém automaticamente todos os membros públicos, protegidos e internos da classe base, exceto seus construtores e destruidores. Para obter mais informações, consulte [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md) e [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
+ Classes (mas não structs) dão suporte ao conceito de herança. Uma classe que deriva de outra classe (a *classe base*) contém automaticamente todos os membros públicos, protegidos e internos da classe base, exceto seus construtores e finalizadores. Para obter mais informações, consulte [Herança](../../../csharp/programming-guide/classes-and-structs/inheritance.md) e [Polimorfismo](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
  As classes podem ser declaradas como [abstratas](../../../csharp/language-reference/keywords/abstract.md), o que significa que um ou mais dos seus métodos não têm nenhuma implementação. Embora as classes abstratas não possam ser instanciadas diretamente, elas servem como classes base para outras classes que fornecem a implementação ausente. As classes também podem ser declaradas como [lacradas](../../../csharp/language-reference/keywords/sealed.md) para impedir que outras classes herdem delas. Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -98,7 +99,7 @@ Classes e structs são duas das construções básicas do Common Type System no 
  Classes e estruturas podem herdar várias interfaces. Herdar de uma interface significa que o tipo implementa todos os métodos definidos na interface. Para obter mais informações, consulte [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
   
 ### <a name="generic-types"></a>Tipos genéricos  
- Classes e estruturas podem ser definidas com um ou mais parâmetros de tipo. O código do cliente fornece o tipo quando ele cria uma instância do tipo. Por exemplo a classe <xref:System.Collections.Generic.List%601> no namespace <xref:System.Collections.Generic> é definida como um parâmetro de tipo. O código do cliente cria uma instância de um `List<string>` ou `List<int>` para especificar o tipo que a lista conterá. Para obter mais informações, consulte [Genéricos](../../../csharp/programming-guide/generics/index.md).  
+ Classes e estruturas podem ser definidas com um ou mais parâmetros de tipo. O código do cliente fornece o tipo quando ele cria uma instância do tipo. Por exemplo a classe <xref:System.Collections.Generic.List%601> no namespace <xref:System.Collections.Generic> é definida com um parâmetro de tipo. O código do cliente cria uma instância de um `List<string>` ou `List<int>` para especificar o tipo que a lista conterá. Para obter mais informações, consulte [Genéricos](../../../csharp/programming-guide/generics/index.md).  
   
 ### <a name="static-types"></a>Tipos estáticos  
  As classes (mas não structs) podem ser declaradas como [estáticas](../../../csharp/language-reference/keywords/static.md). Uma classe estática pode conter apenas membros estáticos e não pode ser instanciada com a nova palavra-chave. Uma cópia da classe é carregada na memória quando o programa é carregado e seus membros são acessados pelo nome da classe. Classes e structs podem conter membros estáticos. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  

@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25c2bf8830d80f0f41855d0fa9e292b0edcbe052
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 9a580d0426038036f2e64167de8c540041c0a6b4
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
@@ -49,7 +50,7 @@ Uma interface contém definições para um grupo de funcionalidades relacionadas
   
  Para obter mais informações sobre classes abstratas, consulte [Classes e membros de classes abstratos e lacrados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
- As interfaces podem conter métodos, propriedades, eventos, indexadores ou qualquer combinação desses quatro tipos de membro. Para obter links para exemplos, consulte as [seções relacionadas](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Uma interface não pode conter constantes, campos, operadores, construtores de instância, destruidores ou tipos. Os membros da interface são automaticamente públicos e eles não podem incluir nenhum modificador de acesso. Os membros também não podem ser [estáticos](../../../csharp/language-reference/keywords/static.md).  
+ As interfaces podem conter métodos, propriedades, eventos, indexadores ou qualquer combinação desses quatro tipos de membro. Para obter links para exemplos, consulte as [seções relacionadas](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections). Uma interface não pode conter constantes, campos, operadores, construtores de instância, finalizadores ou tipos. Os membros da interface são automaticamente públicos e eles não podem incluir nenhum modificador de acesso. Os membros também não podem ser [estáticos](../../../csharp/language-reference/keywords/static.md).  
   
  Para implementar um membro de interface, o membro correspondente da classe de implementação deve ser público, não estático e ter o mesmo nome e assinatura do membro de interface.  
   
