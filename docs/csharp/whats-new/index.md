@@ -32,6 +32,7 @@ ms.lasthandoff: 05/14/2017
 -->
 * [Suporte de plataforma cruzada](../../core/index.md):
     - O C#, por meio do suporte do .NET Core, é executado em várias plataformas. Se você estiver interessado em testar o C# no macOS ou em uma das várias distribuições do Linux com suporte, saiba mais sobre o .NET Core.
+
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.
