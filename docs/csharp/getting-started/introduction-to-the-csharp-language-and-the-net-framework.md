@@ -28,17 +28,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfd3c08f69461d65140ef948672774a7435c326d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: a2c5986dfb9ed4f80e15e8e3ddf061ef858a1e93
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
 C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permite que os desenvolvedores criem uma variedade de aplicativos robustos e seguros executados no [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]. Você pode usar C# para criar aplicativos de cliente do Windows, serviços Web XML, componentes distribuídos, aplicativos cliente-servidor, aplicativos de banco de dados e muito, muito mais. O Visual C# fornece um editor de código avançado, designers de interface de usuário convenientes, depurador integrado e muitas outras ferramentas para facilitar o desenvolvimento de aplicativos com base na linguagem C# e no [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)].  
   
 > [!NOTE]
->  A documentação do [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] pressupõe que você tem uma compreensão dos conceitos básicos de programação. Se você for principiante, convém explorar [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)], que está disponível na Web. Você também pode tirar proveito de livros e recursos da Web sobre C# para aprender técnicas de programação práticas.  
+> A documentação do [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] pressupõe que você tem uma compreensão dos conceitos básicos de programação. Se você for principiante, convém explorar [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)], que está disponível na Web. Você também pode tirar proveito de livros e recursos da Web sobre C# para aprender técnicas de programação práticas.  
   
 ## <a name="c-language"></a>Linguagem C#  
  A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de chaves de C# será instantaneamente reconhecível para qualquer pessoa familiarizada com C, C++ ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. A sintaxe de C# simplifica muitas complexidades de C++ e fornece recursos poderosos como tipos de valor anulável, enumerações, delegados, expressões lambda e acesso direto à memória, que não existem em Java. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)] tornam a consulta fortemente tipada uma construção de linguagem de primeira classe.  
@@ -85,15 +86,6 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
  Além dos serviços de tempo de execução, o [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] também inclui uma biblioteca abrangente de mais de 4000 classes organizadas em namespaces, fornecendo uma ampla variedade de funcionalidades úteis para tudo, desde entrada e saída de arquivo para manipulação de cadeia de caracteres até análise XML, e controles do Windows Forms. O aplicativo típico em C# usa bastante a biblioteca de classes [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] para lidar com tarefas comuns de "encanamento".  
   
  Para saber mais sobre o .NET Framework, confira [Visão geral do Microsoft .NET Framework](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355).  
-  
-## <a name="featured-book-chapters"></a>Capítulos do Livro em Destaque  
- [Fundamentos da linguagem C#](http://go.microsoft.com/fwlink/?LinkId=195416) em [Learning C# 3.0: Master the fundamentals of C# 3.0 (Aprendendo C# 3.0: dominando os conceitos básicos do C# 3.0)](http://go.microsoft.com/fwlink/?LinkId=195412)  
-  
- [Programação em C# e .NET](http://go.microsoft.com/fwlink/?LinkId=195413) em [Learning C# 3.0: Master the fundamentals of C# 3.0 (Aprendendo C# 3.0: dominando os conceitos básicos do C# 3.0)](http://go.microsoft.com/fwlink/?LinkId=195412)  
-  
- [Apresentação de C#](http://go.microsoft.com/fwlink/?LinkId=221226) em [Beginning Visual C# 2010 (Conhecendo o Visual C# 2010)](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
- [Visual Studio 2008 e C# Express 2008](http://go.microsoft.com/fwlink/?LinkId=195414) em [Learning C# 3.0: Master the fundamentals of C# 3.0 (Aprendendo C# 3.0: dominando os conceitos básicos do C# 3.0)](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
 ## <a name="see-also"></a>Consulte também  
  [C#](../../csharp/csharp.md)   
