@@ -6,7 +6,7 @@
 
 <!-- .NET Core Content -->
 # [Guia do .NET Core](core/index.md)
-## [Introdução](core/getting-started.md)
+## [Introdução](core/get-started.md)
 ## [Pré-requisitos do Windows](core/windows-prerequisites.md)
 ## [Pré-requisitos do macOS](core/macos-prerequisites.md)
 ## [Tutoriais](core/tutorials/index.md)

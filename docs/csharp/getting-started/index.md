@@ -1,23 +1,24 @@
 ---
+
 title: "Guia de introdução | Guia do C#"
-description: Tutoriais simples que permitem compilar rapidamente um aplicativo usando o C# e o .NET Core.
+description: "Introdução ao C#"
 keywords: "C#, Introdução, Aquisição, Instalação"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/17/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
-translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 9728e449abbac2530faba84516b8591b178180ee
-ms.lasthandoff: 05/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 0e3341434ef8ac354e8bc47a4c2a72cf019bd2ab
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
-
-# <a name="getting-started-with-c"></a>Introdução ao C#
+# <a name="get-started-with-c"></a>Introdução ao C# #
 
 Esta seção fornece breves tutoriais simples que permitem que você compile rapidamente um aplicativo usando C# e .NET Core. Há tópicos com introdução ao Visual Studio 2017 e ao Visual Studio Code. Você poderá compilar um aplicativo Olá, Mundo simples ou, se você tiver o Visual Studio 2017, uma biblioteca de classes simples que pode ser usada por outros aplicativos.
 
@@ -33,7 +34,7 @@ Os seguintes tópicos estão disponíveis:
 
    Uma biblioteca de classes permite definir tipos e membros de tipo que podem ser chamados de outro aplicativo. Este tópico permite criar uma biblioteca de classes com um único método que determina se uma cadeia de caracteres começa com um caractere maiúsculo. Após criar a biblioteca, você pode desenvolver um [teste de unidade](testing-library-with-visual-studio.md) para garantir que ela funciona conforme o esperado e, em seguida, você pode torná-la disponível para [aplicativos que desejam consumi-la](consuming-library-with-visual-studio.md).
 
-* [Introdução ao Visual Studio Code](with-visual-studio-code.md)
+- [Introdução ao Código do Visual Studio](with-visual-studio-code.md)
 
    O Visual Studio Code é um editor de código gratuito e otimizado para compilação e depuração de aplicativos Web e de nuvem modernos. Ele dá suporte ao IntelliSense e está disponível para Windows, Linux e macOS.
 
