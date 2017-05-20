@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 254be4e7da1edc42ff4851c72f240deebed05c27
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 0db5a86fee1ed2139ae5046ada66121ffe8210b1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="define-c-reference"></a>#define (Referência de C#)
@@ -88,6 +89,6 @@ public class TestDefine
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas de pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)   
  [const](../../../csharp/language-reference/keywords/const.md)   
- [Como compilar condicionalmente com Trace e Debug](http://msdn.microsoft.com/library/56d051c3-012c-42c1-9a58-7270edc624aa)   
+ [Como compilar condicionalmente com Trace e Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
  [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)   
  [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

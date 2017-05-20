@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b83dda363729b73907e2e16056f53ec9cfc089a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: b9d6f93a92b48fcbdd70475ae4c1b8a62ddd9125
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Como usar ponteiros para copiar uma matriz de bytes (Guia de Programação em C#)
@@ -49,4 +50,4 @@ O exemplo a seguir usa ponteiros para copiar bytes de uma matriz para outra.
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Código Não Seguro e Ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [/unsafe (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)   
- [Coleta de lixo](../../../standard/garbagecollection/index.md)
+ [Coleta de lixo](../../../standard/garbage-collection/index.md)

@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e85ae13a35f838ebe14ba5bcccfc2c09520a13c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: cc3022ec31f93f894f639699cef2a788101bff7b
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iteration-statements-c-reference"></a>Instruções de iteração (Referência de C#)
@@ -48,9 +49,6 @@ ms.lasthandoff: 03/13/2017
 -   [in](../../../csharp/language-reference/keywords/foreach-in.md)  
   
 -   [while](../../../csharp/language-reference/keywords/while.md)  
-  
-## <a name="featured-book-chapter"></a>Capítulo do Livro em Destaque  
- [Controle de fluxo](http://go.microsoft.com/fwlink/?LinkId=221229) em [a partir do Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   

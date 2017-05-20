@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9891c4dd5bbdfe0cbeec3da89ea329ebfd262354
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 91582d214c2f8a72d383a0ac17e409167fda5065
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opções do compilador de C# listadas em ordem alfabética
@@ -100,4 +101,4 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
  [Opções do Compilador do C# Listadas por Categoria](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
  [Como Configurar Variáveis de Ambiente para a Linha de Comando do Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
- [\<compiler> Element](http://msdn.microsoft.com/library/7a151659-b803-4c27-b5ce-1c4aa0d5a823)
+ [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

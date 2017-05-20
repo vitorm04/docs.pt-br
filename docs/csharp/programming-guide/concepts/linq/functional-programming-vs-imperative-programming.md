@@ -14,10 +14,11 @@ ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f15f1b6b55a4cb7d036a89d1636aab166740037d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9e16daec1c830f4541229beaa10b079e683914fe
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -40,7 +41,7 @@ Este tópico compara e contrasta programação funcional com programação (proc
  Embora a maioria das linguagens sejam criados para oferecer suporte a um paradigma específico de programação, vários idiomas gerais é flexível o suficiente para suportar várias paradigma. Por exemplo, a maioria das linguagens que contêm ponteiros de função podem ser usados para oferecer suporte digna de crédito programação funcional. Além disso, o C# inclui extensões de linguagem explícitas para dar suporte à programação funcional, incluindo expressões lambda e inferência de tipos. A tecnologia LINQ é um formulário de programação declarativa, funcional.  
   
 ## <a name="functional-programming-using-xslt"></a>Programação funcional usando XSLT  
- Muitos desenvolvedores XSLT estão familiarizados com a abordagem funcional pura. A maioria de modo eficiente desenvolver uma folha de estilos XSLT é manipular cada modelo como uma transformação isolado, passível de composição. A ordem de execução de- é completamente sublinhado. XSLT não permite efeitos colaterais (exceto mecanismos de escape para executar o código procedural pode gerar os efeitos colaterais que resultam na impureza funcional). No entanto, embora XSLT é uma ferramenta eficaz, algumas de suas características não são ótimas. Por exemplo, expressar construções de programação em XML torna o código relativamente detalhado, e portanto difícil manter. Além disso, confiança pesada na recursão para o controle de fluxo pode resultar em código que é difícil de ler. Para obter mais informações sobre XSLT, consulte [Transformações XSLT](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03).  
+ Muitos desenvolvedores XSLT estão familiarizados com a abordagem funcional pura. A maioria de modo eficiente desenvolver uma folha de estilos XSLT é manipular cada modelo como uma transformação isolado, passível de composição. A ordem de execução de- é completamente sublinhado. XSLT não permite efeitos colaterais (exceto mecanismos de escape para executar o código procedural pode gerar os efeitos colaterais que resultam na impureza funcional). No entanto, embora XSLT é uma ferramenta eficaz, algumas de suas características não são ótimas. Por exemplo, expressar construções de programação em XML torna o código relativamente detalhado, e portanto difícil manter. Além disso, confiança pesada na recursão para o controle de fluxo pode resultar em código que é difícil de ler. Para obter mais informações sobre XSLT, consulte [Transformações XSLT](../../../../standard/data/xml/xslt-transformations.md).  
   
  No entanto, XSLT provou o valor de usar uma abordagem funcional pura para transformar XML de uma forma para outra. Programação funcional pura com LINQ to XML é semelhante de várias maneiras a fonte. No entanto, os constructos de programação introduzidos pelo LINQ to XML e pelo C# permitem escrever transformações funcionais puras que são mais legíveis e sustentáveis que o XSLT.  
   
@@ -64,5 +65,5 @@ Este tópico compara e contrasta programação funcional com programação (proc
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução às transformações funcionais puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT Transformations](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
+ [XSLT Transformations](../../../../standard/data/xml/xslt-transformations.md)   
  [Refatoração em funções puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

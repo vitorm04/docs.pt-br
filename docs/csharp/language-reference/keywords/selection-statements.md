@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 444482e2b50a95f5a1077dfd87d14d1d35d84a3c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 937406b347d8f7c99a60d88440ef7382b2987222
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="selection-statements-c-reference"></a>Instruções de seleção (Referência de C#)
@@ -47,10 +48,7 @@ Uma instrução de seleção faz com que o controle do programa seja transferido
 -   [case](../../../csharp/language-reference/keywords/switch.md)  
   
 -   [default](../../../csharp/language-reference/keywords/switch.md)  
-  
-## <a name="featured-book-chapter"></a>Capítulo do Livro em Destaque  
- [Controle de fluxo](http://go.microsoft.com/fwlink/?LinkId=221229) em [a partir do Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214)  
-  
+
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   

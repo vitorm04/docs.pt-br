@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28bba748ca285c33140152008d5d6bd8951e05a7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 841132b5181c5e17d1eabae11d3550811aa959ec
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>Como acessar uma classe de coleção com foreach (Guia de Programação em C#)
@@ -52,10 +53,38 @@ O exemplo de código a seguir ilustra como gravar uma classe de coleção não g
   
  Por exemplo, altere as seguintes linhas no exemplo anterior.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+  
+// Change the Tokens class so that it no longer implements IEnumerable.  
+public class Tokens  
+{  
+    // . . .  
+  
+    // Change the return type for the GetEnumerator method.  
+    public TokenEnumerator GetEnumerator()  
+    {   }  
+  
+    // Change TokenEnumerator so that it no longer implements IEnumerator.  
+    public class TokenEnumerator  
+    {  
+        // . . .  
+  
+        // Change the return type of method Current to string.  
+        public string Current  
+        {   }  
+    }  
+ }  
+  
+```  
+  
  Como `Current` retorna uma cadeia de caracteres, o compilador pode detectar quando um tipo incompatível for usado em uma instrução `foreach`, conforme mostrado no código a seguir.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+  
+// Error: Cannot convert type string to int.  
+foreach (int item in f)    
+```  
+  
  A desvantagem de omitir <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> é que a classe de coleção já não é interoperável com as instruções `foreach` ou instruções equivalentes de outras linguagens Common Language Runtime.  
   
 ## <a name="see-also"></a>Consulte também  

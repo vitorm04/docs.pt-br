@@ -29,19 +29,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4232502be64f0908761e51d0dce2344ed50ab376
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: e4ff2e8a31ca5a59494f80597460e90107e78c8a
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Executando a conversão boxing de tipos anuláveis (Guia de Programação em C#)
 Objetos baseados em tipos que permitem valor nulo serão convertidos somente se o objeto não for nulo. Se <xref:System.Nullable%601.HasValue%2A> for `false`, a referência do objeto será atribuída a `null`, em vez da conversão boxing. Por exemplo:  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+bool? b = null;  
+object o = b;  
+// Now o is null.  
+```  
+  
  Se o objeto for não nulo – se <xref:System.Nullable%601.HasValue%2A> for `true` –, então, a conversão boxing ocorrerá, mas somente o tipo subjacente no qual o objeto anulável é baseado será convertido. A conversão boxing de um tipo de valor anulável não nulo demarca o próprio tipo de valor e não o <xref:System.Nullable%601?displayProperty=fullName> que encapsula o tipo de valor. Por exemplo:  
   
-```  
+```csharp  
 bool? b = false;  
 int? i = 44;  
 object bBoxed = b; // bBoxed contains a boxed bool.  
@@ -50,7 +56,7 @@ object iBoxed = i; // iBoxed contains a boxed int.
   
  Os dois objetos convertidos são idênticos àqueles criados por meio da conversão boxing de tipos tipo que não permitem valor nulo. Assim como os tipos que não permitem valor nulo convertidos, eles podem ser desconvertidos para tipos que permitem valor nulo, conforme o exemplo a seguir:  
   
-```  
+```csharp  
 bool? b2 = (bool?)bBoxed;  
 int? i2 = (int?)iBoxed;  
 ```  
@@ -60,7 +66,7 @@ int? i2 = (int?)iBoxed;
   
 1.  Objetos anuláveis e seus correspondentes convertidos podem ser testados como nulos:  
   
-    ```  
+    ```csharp  
     bool? b = null;  
     object boxedB = b;  
     if (b == null)  
@@ -75,7 +81,7 @@ int? i2 = (int?)iBoxed;
   
 2.  Tipos convertidos que permitem valor nulo oferecem suporte total à funcionalidade do tipo subjacente:  
   
-    ```  
+    ```csharp  
     double? d = 44.4;  
     object iBoxed = d;  
     // Access IConvertible interface implemented by double.  
