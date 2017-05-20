@@ -20,23 +20,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
+ms.openlocfilehash: 50f027408357a5d98ef1bfe305ab675fc97abba8
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 
 # <a name="net-framework-guide"></a>Guia do .NET Framework
 
 > [!NOTE]
->  Este conjunto de conteúdo .NET Framework inclui informações para o .NET Framework versões 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 e 4.7. Para baixar o .NET Framework, confira [Instalando o .NET Framework](../../docs/framework/install/guide-for-developers.md). Para obter uma lista dos novos recursos e alterações no NET Framework 4.5, no [!INCLUDE[net_v46](../../includes/net-v46-md.md)], suas versões pontuais, e no .NET Framework 4.7, confira [Novidades no .NET Framework](../../docs/framework/whats-new/index.md). Para obter uma lista de plataformas com suporte, confira [Requisitos do sistema .NET Framework](../../docs/framework/get-started/system-requirements.md).  
+>  Este conjunto de conteúdo .NET Framework inclui informações para o .NET Framework versões 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 e 4.7. Para baixar o .NET Framework, confira [Instalando o .NET Framework](../../docs/framework/install/guide-for-developers.md). Para obter uma lista dos novos recursos e alterações no NET Framework 4.5, no [!INCLUDE[net_v46](../../includes/net-v46-md.md)], suas versões pontuais, e no .NET Framework 4.7, confira [Novidades no .NET Framework](../../docs/framework/whats-new/index.md). Para obter uma lista de plataformas com suporte, confira [Requisitos do sistema .NET Framework](../../docs/framework/get-started/system-requirements.md). 
 
-O .NET Framework fornece vários serviços, incluindo gerenciamento de memória, memória e tipo de segurança, funcionalidade de segurança e redes e implantação de aplicativos de segurança. Ele fornece APIs e estruturas de dados fáceis de usam que abstraem o sistema operacional do Windows. Você pode usar uma variedade de linguagens de programação com o .NET Framework, incluindo C#, F# e Visual Basic.
+ O .NET Framework é uma plataforma de desenvolvimento para criar aplicativos para web, Windows, Windows Phone, Windows Server e Microsoft Azure. Ele consiste no Common Language Runtime (CLR) e na biblioteca de classes do .NET Framework, que inclui uma ampla gama de recursos e suporte para muitos padrões do setor.
 
- O .NET Framework é uma plataforma de desenvolvimento para criação de aplicativos para Windows, Windows Phone, Windows Server e Microsoft Azure. Ele consiste no CLR (Common Language Runtime) e na biblioteca de classes .NET Framework, que inclui uma ampla gama de funcionalidades e suporte para muitos padrões do setor.  
-
-O .NET Framework fornece vários serviços, incluindo gerenciamento de memória, memória e tipo de segurança, funcionalidade de segurança e redes e implantação de aplicativos de segurança. Ele fornece APIs e estruturas de dados fáceis de usam que abstraem o sistema operacional do Windows. Você pode usar uma variedade de linguagens de programação com o .NET Framework, incluindo C#, F# e Visual Basic.
+O .NET Framework fornece vários serviços, incluindo gerenciamento de memória, segurança de tipo e memória, segurança, redes e implantação de aplicativos. Ele fornece APIs e estruturas de dados fáceis de usam que abstraem o sistema operacional do Windows. Você pode usar diversas linguagens de programação com o .NET Framework, incluindo C#, F# e Visual Basic.  
 
 Para obter uma introdução geral ao .NET Framework para usuários e desenvolvedores, confira [Introdução](../../docs/framework/get-started/index.md). Para obter uma introdução à arquitetura e aos recursos principais do .NET Framework, confira a [visão geral](../../docs/framework/get-started/overview.md).  
 
@@ -71,3 +69,4 @@ Fornece sintaxe, exemplos de códigos e informações relacionadas a cada classe
   
 [APIs e bibliotecas de classes adicionais](../../docs/framework/additional-apis/index.md)  
 Fornece a documentação para classes contidas em versões OOB (fora da banda), bem como para classes direcionadas a plataforma específicas ou implementações do .NET Framework.
+
