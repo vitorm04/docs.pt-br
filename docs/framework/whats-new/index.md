@@ -17,22 +17,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: 3b6835c2e2c8ae590c642d5534cd1bae5645db6f
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: e36d3523a52def454e7ed0233f2179ab88ab3bcb
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 <a name="introduction"></a> Este artigo resume os principais recursos novos e aprimoramentos nas seguintes versões do .NET Framework:
 
- [.NET Framework 4.7](#v47) 
- [.NET Framework 4.6.2](#v462) 
- [.NET Framework 4.6.1](#v461) 
- [.NET 2015 e.NET Framework 4.6](#v46) 
- [.NET Framework 4.5.2](#v452) 
- [.NET Framework 4.5.1](#v451) 
- [.NET Framework 4.5](#core)
+ [.NET Framework 4.7](#v47)   
+ [.NET Framework 4.6.2](#v462)   
+ [.NET Framework 4.6.1](#v461)   
+ [.NET 2015 e .NET Framework 4.6](#v46)   
+ [.NET Framework 4.5.2](#v452)   
+ [.NET Framework 4.5.1](#v451)   
+ [.NET Framework 4.5](#core)   
 
  Este artigo não fornece informações abrangentes sobre cada recurso novo e está sujeito a alterações. Para obter informações gerais sobre o .NET Framework, confira [Introdução](../../../docs/framework/get-started/index.md). Para conhecer as plataformas compatíveis, confira [Requisitos do sistema](~/docs/framework/get-started/system-requirements.md). Para obter links de download e instruções de instalação, confira [Guia de instalação](../../../docs/framework/install/guide-for-developers.md).
 
@@ -75,7 +75,7 @@ O .NET Framework 4.7 melhora a serialização do <xref:System.Runtime.Serializat
 
 **Funcionalidade aprimorada com ECC (Criptografia de curva elíptica)***
 
-No .NET Framework 4.7, os métodos `ImportParameters(ECParameters)` foram adicionados às classes <xref:System.Security.Cryptography.ECDsa> e <xref:System.Security.Cryptography.ECDiffieHellman> a fim de permitir a um objeto representar uma chave já estabelecida. Também foi adicionado um método `ExportParameters(Boolean)` à exportação da chave usando parâmetros de curva explícita.
+No .NET Framework 4.7, os métodos `ImportParameters(ECParameters)` foram adicionados às classes <xref:System.Security.Cryptography.ECDsa> e <xref:System.Security.Cryptography.ECDiffieHellman> para permitir que um objeto represente uma chave já estabelecida. Também foi adicionado um método `ExportParameters(Boolean)` à exportação da chave usando parâmetros de curva explícita.
 
 O .NET Framework 4.7 também adiciona suporte para curvas adicionais (incluindo o pacote de curvas Brainpool) e adicionou definições predefinidas para facilitar a criação por meio dos novos métodos de fábrica <xref:System.Security.Cryptography.ECDsa.Create%2A> e <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A>.
 
@@ -83,7 +83,7 @@ Veja um [exemplo dos aprimoramentos de criptografia do .NET Framework 4.7](https
 
 **Suporte aprimorado para caracteres de controle do DataContractJsonSerializer**
 
-No .NET Framework 4.7, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializa os caracteres de controle de acordo com o padrão ECMAScript 6. Esse comportamento está habilitado por padrão para aplicativos direcionados ao .NET Framework 4.7 e é um recurso baseado no consentimento para aplicativos que estejam executando no .NET Framework 4.7, mas que são direcionados a uma versão anterior do .NET Framework. Para saber mais, confira [Alterações de redirecionamento no .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+No Framework .NET 4.7, o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializa os caracteres de controle de acordo com o padrão ECMAScript 6. Esse comportamento está habilitado por padrão para aplicativos direcionados ao .NET Framework 4.7 e é um recurso baseado no consentimento para aplicativos que estejam executando no .NET Framework 4.7, mas que são direcionados a uma versão anterior do .NET Framework. Para saber mais, confira [Alterações de redirecionamento no .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
 #### <a name="networking"></a>Rede
@@ -92,7 +92,7 @@ O .NET Framework 4.7 adiciona os seguintes recursos de rede:
 
 **Suporte do sistema operacional padrão para protocolos TLS***
 
-A pilha de TLS, que é usada pelo <xref:System.Net.Security.SslStream?displayProperty=fullName> e por componentes de início de pilha, como HTTP, FTP e SMTP, permite que os desenvolvedores usem protocolos TLS padrão com suporte do sistema operacional. Os desenvolvedores não precisam mais codificar uma versão de TLS.
+A pilha de TLS, que é usada por <xref:System.Net.Security.SslStream?displayProperty=fullName> e por componentes de início de pilha, como HTTP, FTP e SMTP, permite que os desenvolvedores usem protocolos TLS padrão com suporte do sistema operacional. Os desenvolvedores não precisam mais codificar uma versão de TLS.
 
 <a name="ASP-NET47" />
 #### <a name="aspnet"></a>ASP.NET
@@ -105,7 +105,7 @@ A partir do .NET Framework 4.7, o ASP.NET adiciona um novo conjunto de APIs que 
 
 - **Armazenamento de cache de objeto**. Na nova seção de configuração de provedores de cache, os desenvolvedores podem conectar novas implementações de um cache de objeto para um aplicativo ASP.NET usando a nova interface **ICacheStoreProvider**.
  
-- **Monitoramento da memória**. O monitor de memória padrão no ASP.NET notifica os aplicativos quando eles estiverem se aproximando do limite configurado de bytes particulares para o processo, ou quando o computador estiver com pouca RAM física total disponível. Quando esses limites estiverem próximos, as notificações serão disparadas. Para alguns aplicativos, as notificações são disparadas muito próximas aos limites configurados a fim de permitir reações úteis. Agora, os desenvolvedores podem criar seus próprios monitores de memória e substituir o padrão usando a propriedade <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=fullName>.
+- **Monitoramento da memória**. O monitor de memória padrão no ASP.NET notifica os aplicativos quando eles estiverem se aproximando do limite configurado de bytes particulares para o processo, ou quando o computador estiver com pouca RAM física total disponível. Quando esses limites estiverem próximos, as notificações serão disparadas. Para alguns aplicativos, as notificações são disparadas muito próximas aos limites configurados a fim de permitir reações úteis. Agora, os desenvolvedores podem criar seus próprios monitores de memória para substituir o padrão usando a propriedade <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=fullName>.
 
 - **Reações de limite de memória**. Por padrão, o ASP.NET tenta aparar o cache de objetos e chamar periodicamente <xref:System.GC.Collect%2A?displayProperty=fullName> quando o limite do processo de bytes particulares está próximo. Para alguns aplicativos, a frequência de chamadas para <xref:System.GC.Collect%2A?displayProperty=fullName> ou a quantidade aparada do cache é ineficaz. Agora, os desenvolvedores podem substituir ou complementar o comportamento padrão incluindo implementações do **IObserver** no monitor de memória do aplicativo.
 
@@ -130,7 +130,7 @@ O WCF inclui diversas alterações de código que eliminam as condições de cor
 
 - Suporte aprimorado para combinação de código síncrono e assíncrono em chamadas para **SocketConnection.BeginRead** e **SocketConnection.Read**.
 - Confiabilidade aprimorada ao anular uma conexão com **SharedConnectionListener** e **DuplexChannelBinder**.
-- Confiabilidade aprimorada das operações de serialização ao chamar o método <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=fullName>.
+- Aumento da confiabilidade das operações de serialização ao chamar o método <xref:System.Runtime.Serialization.FormatterServices.GetSerializableMembers%28System.Type%29?displayProperty=fullName>.
 - Confiabilidade aprimorada ao remover um waiter chamando o método **ChannelSynchronizer.RemoveWaiter**.
 
 <a name="wf47" />
@@ -155,7 +155,7 @@ Agora você tem a opção de usar uma pilha de toque/caneta com base em [mensage
 
 **Nova implementação para APIs de impressão do WPF**
 
-As APIs de impressão do WPF na classe <xref:System.Printing.PrintQueue?displayProperty=fullName> chamam a [API de impressão de pacote de documentos](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) do Windows em vez da [API de impressão XPS](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx) preterida. Para saber o impacto dessa alteração na compatibilidade do aplicativo, consulte [Alterações de redirecionamento do .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md). 
+As APIs de impressão do WPF na classe <xref:System.Printing.PrintQueue?displayProperty=fullName> chamam a [Print Document Package API (API de Impressão pacote de documentos)](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) do Windows em vez da [XPS Print API (API de impressão XPS)](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx), que foi preterida. Para saber o impacto dessa alteração na compatibilidade do aplicativo, consulte [Alterações de redirecionamento do .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md). 
 
 <a name="v462"></a> 
 ## <a name="whats-new-in-the-net-framework-462"></a>Novidades no .NET Framework 4.6.2
@@ -239,28 +239,28 @@ public interface ISessionStateModule : IHttpModule {
 
 ```
 
- Além disso, a classe <xref:System.Web.SessionState.SessionStateUtility> inclui dois métodos novos, <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> e <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, que podem ser usados para dar suporte às operações assíncronas.
+ Além disso, a classe <xref:System.Web.SessionState.SessionStateUtility> inclui dois métodos novos, <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> e <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>, que podem ser usados para oferecer suporte a operações assíncronas.
 
  **Suporte assíncrono para provedores de cache de saída**
  A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], os métodos de retorno de tarefa podem ser usados com provedores de cache de saída a fim de oferecer os benefícios de escalabilidade do modo assíncrono.  Provedores que implementam esses métodos reduzem o bloqueio de thread em um servidor Web e melhoram a escalabilidade de um serviço ASP.NET.
 
  As seguintes APIs foram adicionadas para oferecer suporte a provedores de cache de saída assíncronos:
 
-- A classe <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=fullName>, que herda de <xref:System.Web.Caching.OutputCacheProvider?displayProperty=fullName> e permite que os desenvolvedores implementem um provedor de cachê de saída assíncrono.
+- A classe <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=fullName>, que herda de <xref:System.Web.Caching.OutputCacheProvider?displayProperty=fullName> e permite aos desenvolvedores implementar um provedor de cache de saída assíncrono.
 
 - A classe <xref:System.Web.Caching.OutputCacheUtility>, que fornece métodos auxiliares para configuração do cache de saída.
 
-- 18 novos métodos na classe <xref:System.Web.HttpCachePolicy?displayProperty=fullName>. These include <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetRevalidation%2A>, <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>, <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>, <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> e <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>.
+- 18 métodos novos na classe <xref:System.Web.HttpCachePolicy?displayProperty=fullName>. Entre eles <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetRevalidation%2A>, <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>, <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>, <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> e <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>.
 
-- 2 novos métodos na classe <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=fullName>: <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> e <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>.
+- 2 métodos novos na classe <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=fullName>: <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> e <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>.
 
-- 2 novos métodos na classe <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=fullName>: <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> e <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>.
+- 2 métodos novos na classe <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=fullName>: <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> e <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>.
 
-- 2 novos métodos na classe <xref:System.Web.HttpCacheVaryByParams?displayProperty=fullName>: <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> e <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>.
+- 2 métodos novos na classe <xref:System.Web.HttpCacheVaryByParams?displayProperty=fullName>: <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> e <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>.
 
 - Na classe <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=fullName>, o método <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A>.
 
-- Na classe <xref:System.Web.Caching.CacheDependency>, o método <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A>.
+- Na <xref:System.Web.Caching.CacheDependency>, o método <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A>.
 
 <a name="Strings"></a> 
 ### <a name="character-categories"></a>Categorias de caractere
@@ -275,7 +275,7 @@ public interface ISessionStateModule : IHttpModule {
  **Suporte para certificados X509 que contêm FIPS 186-3 DSA**
  O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] adiciona suporte para certificados DSA (Algoritmo de Assinatura Digital) X509 cujas chaves ultrapassam o limite de 1024 bits do FIPS 186-2.
 
- Além de oferecer suporte a chaves maiores de FIPS 186-3, o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] permite assinaturas de computação com a família SHA-2 de algoritmos de hash (SHA256, SHA384 e SHA512). O suporte ao FIPS 186-3 é fornecido pela nova classe <xref:System.Security.Cryptography.DSACng?displayProperty=fullName>.
+ Além de oferecer suporte a chaves maiores de FIPS 186-3, o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] permite assinaturas de computação com a família SHA-2 de algoritmos de hash (SHA256, SHA384 e SHA512). O suporte a FIPS 186-3 é fornecido pela nova classe <xref:System.Security.Cryptography.DSACng?displayProperty=fullName>.
 
  Para acompanhar as alterações recentes na classe <xref:System.Security.Cryptography.RSA> no .NET Framework 4.6, e na classe <xref:System.Security.Cryptography.ECDsa> no .NET Framework 4.6.1, a classe base abstrata <xref:System.Security.Cryptography.DSA> no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] tem métodos adicionais que permitem aos chamadores usar essa funcionalidade sem conversão. Você pode chamar o método de extensão <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=fullName> para assinar dados, como mostra o exemplo a seguir.
 
@@ -331,7 +331,7 @@ End Function
  **Suporte para criptografia simétrica de chave persistida**
  A biblioteca de criptografia do Windows (CNG) adicionou suporte para o armazenamento de chaves simétricas persistidas e para o uso de chaves simétricas armazenadas em hardware e o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] possibilita aos desenvolvedores o uso desse recurso.  Como a noção de nomes e provedores de chave é específica à implementação, o uso desse recurso exige a utilização do construtor dos tipos de implementação concreta em vez da abordagem preferencial de fábrica (por exemplo, chamar `Aes.Create`).
 
- O suporte para criptografia simétrica de chave persistida existe para os algoritmos AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Por exemplo:
+ O suporte à criptografia simétrica de chave persistente existe para os algoritmos AES (<xref:System.Security.Cryptography.AesCng>) e 3DES (<xref:System.Security.Cryptography.TripleDESCng>). Por exemplo:
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -370,7 +370,7 @@ Public Shared Function EncryptDataWithPersistedKey(data As Byte(), iv As Byte())
 End Function
 ```
 
- **Suporte do SignedXml para o hash SHA-2**
+ **Suporte a SignedXml para o hash SHA-2**
  O [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] adiciona o suporte à classe <xref:System.Security.Cryptography.Xml.SignedXml> para os métodos de assinatura PKCS#1 RSA-SHA256, RSA-SHA384 e RSA-SHA512, e os algoritmos de resumo de referência SHA256, SHA384 e SHA512.
 
  As constantes de URI são expostas em <xref:System.Security.Cryptography.Xml.SignedXml>:
@@ -388,7 +388,7 @@ End Function
 
 <a name="SQLClient"></a> 
 ### <a name="sqlclient"></a>SqlClient
- O provedor de dados do .NET Framework para SQL Server (<xref:System.Data.SqlClient?displayProperty=fullName>) inclui os seguintes recursos novos no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
+ O provedor de dados .NET Framework para SQL Server (<xref:System.Data.SqlClient?displayProperty=fullName>) inclui os seguintes recursos novos no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
 
  **Pooling e tempos limite de conexão com bancos de dados SQL do Azure**
  Quando o pooling de conexão estiver habilitado e ocorrer um tempo limite ou outro erro de logon, uma exceção será armazenada em cache e a exceção em cache será lançada em qualquer tentativa de conexão subsequentes nos próximos cinco segundos a um minuto.  Para obter mais detalhes, confira [Pooling de conexão do SQL Server (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
@@ -454,11 +454,11 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-Quando esse recurso estiver habilitado, um objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usará o tipo <xref:System.TimeZoneInfo>em vez do <xref:System.TimeZone> para desserializar dados de data e hora. O <xref:System.TimeZoneInfo> oferece suporte a várias regras de ajuste, o que possibilita o trabalho com dados históricos fuso horário; o <xref:System.TimeZone> não oferece.
+Quando esse recurso estiver habilitado, um objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usará o tipo <xref:System.TimeZoneInfo> em vez do <xref:System.TimeZone> para desserializar dados de data e hora. O <xref:System.TimeZoneInfo> oferece suporte a várias regras de ajuste, o que possibilita o trabalho com dados históricos fuso horário; o <xref:System.TimeZone> não oferece.
 
 Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso horário, confira [Visão geral do fuso horário](../../../docs/standard/datetime/time-zone-overview.md).
 
-**Suporte para preservar um horário UTC ao serializar e desserializar a classe do XMLSerializer** Normalmente, quando a classe <xref:System.Xml.Serialization.XmlSerializer> é usada para serializar um valor <xref:System.DateTime> de UTC, ela cria uma cadeia de caracteres serializada de tempo que preserva a data e hora, mas pressupõe que o horário seja local.  Por exemplo, se você criar uma instância de uma data e hora UTC chamando o código a seguir:
+**Suporte para preservar um horário UTC ao serializar e desserializar a classe do XMLSerializer Normalmente**, quando a classe <xref:System.Xml.Serialization.XmlSerializer> é usada para serializar um valor <xref:System.DateTime> de UTC, ela cria uma cadeia de caracteres serializada de tempo que preserva a data e hora, mas pressupõe que o horário seja local.  Por exemplo, se você criar uma instância de uma data e hora UTC chamando o código a seguir:
 
 ```csharp
 DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
@@ -479,7 +479,7 @@ O resultado será a cadeia de caracteres de tempo serializado "03:00:00.0000000-
 </runtime>
 ```
 
-Quando esse recurso estiver habilitado, um objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usará o tipo <xref:System.TimeZoneInfo>em vez do <xref:System.TimeZone> para desserializar dados de data e hora. O <xref:System.TimeZoneInfo> oferece suporte a várias regras de ajuste, o que possibilita o trabalho com dados históricos fuso horário; o <xref:System.TimeZone> não oferece.
+Quando esse recurso estiver habilitado, um objeto <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> usará o tipo <xref:System.TimeZoneInfo> em vez do <xref:System.TimeZone> para desserializar dados de data e hora. O <xref:System.TimeZoneInfo> oferece suporte a várias regras de ajuste, o que possibilita o trabalho com dados históricos fuso horário; o <xref:System.TimeZone> não oferece.
 
 Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso horário, confira [Visão geral do fuso horário](../../../docs/standard/datetime/time-zone-overview.md).
 
@@ -521,21 +521,21 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
  Para oferecer suporte à classificação de grupo, as novas propriedades <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=fullName> e <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=fullName> descrevem como classificar a coleção de grupos produzida pelo objeto <xref:System.ComponentModel.GroupDescription>. Isso é semelhante à forma como as propriedades <xref:System.Windows.Data.ListCollectionView> de nome idêntico descrevem como classificar os itens de dados.
 
- Duas novas propriedades estáticas da classe <xref:System.Windows.Data.PropertyGroupDescription>, <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> e <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, podem ser usadas para os casos mais comuns.
+ As duas novas propriedades estáticas da classe <xref:System.Windows.Data.PropertyGroupDescription>, <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> e <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, podem ser usadas para os casos mais comuns.
 
  Por exemplo, os seguintes dados de grupos XAML por idade, classificam as faixas etárias em ordem crescente, e agrupam os itens dentro de cada faixa etária por sobrenome.
 
 ```xaml
 <GroupDescriptions>
      <PropertyGroupDescription 
-         PropertyName=”Age” 
+         PropertyName="Age" 
          CustomSort= 
-              ”{x:Static PropertyGroupDescription.CompareNamesAscending}”/>
+              "{x:Static PropertyGroupDescription.CompareNamesAscending}"/>
      </PropertyGroupDescription>
 </GroupDescriptions>
 
 <SortDescriptions>
-     <SortDescription PropertyName=”LastName”/>
+     <SortDescription PropertyName="LastName"/>
 </SortDescriptions>
 ```
 
@@ -553,7 +553,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 ```xml
 <runtime>
-   <AppContextSwitchOverrides value=”Switch.System.Windows.DoNotScaleForDpiChanges=false”/>
+   <AppContextSwitchOverrides value="Switch.System.Windows.DoNotScaleForDpiChanges=false"/>
 </runtime>
 ```
 
@@ -579,7 +579,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
  **Aprimoramentos do Fluxo de Trabalho ao usar uma Atualização Dinâmica com o Designer de Fluxo de Trabalho do Visual Studio**
  Agora, o Designer de Fluxo de Trabalho, o Designer de Atividade do Fluxograma e outros Designers de Atividade de Fluxo de Trabalho carregam e exibem com êxito os fluxos de trabalho que foram salvos depois de chamar o método <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>. Nas versões do .NET Framework anteriores ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], carregar um arquivo XAML no Visual Studio para um fluxo de trabalho que foi salvo após chamar <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> pode resultar nos seguintes problemas:
 
-- O Designer de Fluxo de Trabalho não consegue carregar o arquivo XAML corretamente (quando <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName> estiver no final da linha).
+- O Designer de Fluxo de Trabalho não consegue carregar o arquivo XAML corretamente (quando <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName> está no final da linha).
 
 - O Designer de Atividades do Fluxograma ou outros Designers de Atividade de Fluxo de Trabalho podem exibir todos os objetos em seus locais padrão em vez de valores de propriedade anexados.
 
@@ -597,7 +597,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 ### <a name="debugging-improvements"></a>Melhorias na depuração
  A *API de depuração não gerenciada* foi aprimorada no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] para executar análises adicionais quando um <xref:System.NullReferenceException> for gerada, para que seja possível determinar qual variável em uma única linha do código-fonte é `null`.   Para oferecer suporte a esse cenário, as seguintes APIs foram adicionadas à API de depuração não gerenciada.
 
-- As interfaces [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) e [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), que expõem os locais nativos das variáveis gerenciadas. Isso permite que os depuradores façam algumas análises de fluxo de código quando um <xref:System.NullReferenceException> ocorrer e trabalhem com versões anteriores para determinar a variável gerenciada que corresponde ao local nativo no qual estava `null`.
+- As interfaces [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) e [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md), que expõem os locais nativos das variáveis gerenciadas. Isso permite que os depuradores façam algumas análises de fluxo de código quando uma <xref:System.NullReferenceException> ocorrer e trabalhem com versões anteriores para determinar a variável gerenciada que corresponde ao local nativo no qual estava `null`.
 
 - O método [ICorDebugType2::GetTypeID](../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) fornece um mapeamento para ICorDebugType para [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), que permite que o depurador obtenha um [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) sem uma instância do ICorDebugType. APIs existentes em [COR_TYPEID](../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) podem ser usadas para determinar o layout de classe do tipo.
 
@@ -633,13 +633,11 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
  O exemplo de código a seguir mostra como é fácil gerar uma assinatura para um fluxo de bytes usando o novo suporte para certificados X509 ECDSA incluídos no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  Isso oferece um contraste evidente ao código necessário para gerar uma assinatura no .NET Framework 4.6.
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -649,7 +647,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
  Os clientes precisam instalar o provedor de CSP fornecido pelo fornecedor de HSM ou provedores de armazenamento de chaves CNG em servidores de aplicativos ou computadores cliente para acessar dados do Always Encrypted protegidos com chaves mestras de coluna armazenadas em um HSM.
 
- Melhorar o comportamento da conexão <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> para AlwaysOn Agora, o SqlClient fornece automaticamente conexão mais rápida para um Grupo de Disponibilidade do AlwaysOn (AG). Ele detecta de forma transparente se o seu aplicativo está se conectando a um grupo de disponibilidade (AG) do AlwaysOn em uma sub-rede diferente e descobre rapidamente o servidor ativo atual e fornece uma conexão ao servidor. Antes dessa versão, um aplicativo tinha que definir a cadeia de conexão para incluir `“MultisubnetFailover=true”` a fim de indicar que ele estava se conectando a um Grupo de disponibilidade do AlwaysOn. Sem definir a palavra-chave de conexão como `true`, um aplicativo pode enfrentar um tempo limite ao se conectar a um Grupo de disponibilidade AlwaysOn. Com esta versão, um aplicativo *não* precisa mais definir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> como `true`. Para saber mais sobre o suporte ao SqlClient para Grupos de Disponibilidade AlwaysOn, confira [Suporte do SqlClient para alta disponibilidade e recuperação de desastres](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+ Aprimore o comportamento de conexão de <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> para o AlwaysOn. Agora, o SqlClient fornece automaticamente uma conexão mais rápida para um Grupo de disponibilidade (AG) do AlwaysOn. Ele detecta de forma transparente se o seu aplicativo está se conectando a um grupo de disponibilidade (AG) do AlwaysOn em uma sub-rede diferente e descobre rapidamente o servidor ativo atual e fornece uma conexão ao servidor. Antes dessa versão, um aplicativo tinha que definir a cadeia de conexão para incluir `"MultisubnetFailover=true"` a fim de indicar que ele estava se conectando a um Grupo de disponibilidade do AlwaysOn. Sem definir a palavra-chave de conexão como `true`, um aplicativo pode enfrentar um tempo limite ao se conectar a um Grupo de disponibilidade AlwaysOn. Com esta versão, um aplicativo *não* precisa mais definir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> como `true`. Para saber mais sobre o suporte ao SqlClient para Grupos de Disponibilidade AlwaysOn, confira [Suporte do SqlClient para alta disponibilidade e recuperação de desastres](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461"></a> 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
@@ -659,7 +657,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
  Aprimoramentos na verificação de ortografia O verificador ortográfico do WPF foi atualizado no Windows 8.1 e em versões posteriores para aproveitar o suporte ao sistema operacional para verificação ortográfica de outros idiomas.  Não há nenhuma alteração na funcionalidade em versões do Windows anteriores ao Windows 8.1.
 
- Como nas versões anteriores do .NET Framework, o idioma para um controle <xref:System.Windows.Controls.TextBox> ou um bloco <xref:System.Windows.Controls.RichTextBox> é detectado procurando pelas informações na seguinte ordem:
+ Como nas versões anteriores do .NET Framework, o idioma para um controle <xref:System.Windows.Controls.TextBox> ou um bloco <xref:System.Windows.Controls.RichTextBox> é detectado procurando por informações na seguinte ordem:
 
 - `xml:lang`, se estiver presente.
 
@@ -686,11 +684,11 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
  Exemplos Há uma série de [Exemplos de WPF](https://msdn.microsoft.com/library/ms771633.aspx) no MSDN. Mais de 200 dos exemplos mais populares (com base no uso) serão movidos para um [repositório do GitHub de código-fonte aberto](https://github.com/Microsoft/WPF-Samples). Ajude-nos a melhorar nossos exemplos enviando-nos uma solicitação pull ou abrindo um [problema no GitHub](https://github.com/Microsoft/WPF-Samples/issues).
 
- Extensões do DirectX O WPF inclui um [pacote do NuGet](http://go.microsoft.com/fwlink/?LinkID=691342) que fornece novas implementações de <xref:System.Windows.Interop.D3DImage> que facilitam a interoperação com o conteúdo do DX10 e Dx11. O código para esse pacote foi aberto e está disponível [no GitHub](https://github.com/Microsoft/WPFDXInterop).
+ O WPF de extensões DirectX inclui um [pacote do NuGet](http://go.microsoft.com/fwlink/?LinkID=691342) que fornece novas implementações de <xref:System.Windows.Interop.D3DImage> que facilitam a interoperação com o conteúdo do Dx10 e Dx11. O código para esse pacote foi aberto e está disponível [no GitHub](https://github.com/Microsoft/WPFDXInterop).
 
 <a name="WWF461"></a> 
 ### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: Transações
- Agora, o método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> pode usar um gerenciador de transação distribuída diferente do MSDTC para promover a transação. Faça isso especificando um identificador de promotor de transação GUID para a nova sobrecarga <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName>. Se essa operação for bem-sucedida, haverá limitações nos recursos da transação. Após a inscrição do um promotor de transação não MSDTC, os métodos a seguir geram uma <xref:System.Transactions.TransactionPromotionException>, pois esses métodos exigem promoção para MSDTC:
+ Agora, o método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> pode usar um gerenciador de transação distribuída diferente do MSDTC para promover a transação. Você pode fazer isso especificando um identificador de promotor de transação de GUID para a nova sobrecarga <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName>. Se essa operação for bem-sucedida, haverá limitações nos recursos da transação. Após a inscrição do um promotor de transação não MSDTC, os métodos a seguir geram uma <xref:System.Transactions.TransactionPromotionException>, pois esses métodos exigem promoção para MSDTC:
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>
 
@@ -702,7 +700,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
  Após a inscrição do um promotor de transação não MSDTC, ele deverá ser usado para futuras inscrições duráveis usando os protocolos que definidos por ele. O <xref:System.Guid> do promotor de transação pode ser obtido usando a propriedade <xref:System.Transactions.Transaction.PromoterType%2A>. Quando transação promove, o promotor da transação fornece uma matriz <xref:System.Byte> que representa o token promovido. Um aplicativo pode obter o token promovido para uma transação promovida não MSDTC com o método <xref:System.Transactions.Transaction.GetPromotedToken%2A>.
 
- Os usuários da nova sobrecarga <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> devem seguir uma sequência de chamada específica para que a operação de promoção seja concluída com êxito. Essas regras estão na documentação do método.
+ Os usuários da nova sobrecarga <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> devem seguir uma sequência de chamadas específica para que a operação de promoção seja concluída com êxito. Essas regras estão na documentação do método.
 
 <a name="Profile461"></a> 
 ### <a name="profiling"></a>Criação de perfil
@@ -756,7 +754,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          O HTTP/2 também é compatível e ativado por padrão em aplicativos UWP (Plataforma Universal do Windows) do Windows 10 que usam a API <xref:System.Net.Http.HttpClient?displayProperty=fullName>.
 
-         Para fornecer uma maneira de usar o recurso [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) em aplicativos ASP.NET, um novo método com duas sobrecargas <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29> foi adicionado à classe <xref:System.Web.HttpResponse>.
+         Para fornecer uma maneira de usar o recurso [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) em aplicativos ASP.NET, um novo método com duas sobrecargas, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> e <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>, foi adicionado à classe <xref:System.Web.HttpResponse>.
 
         > [!NOTE]
         >  Embora o ASP.NET 5 ofereça suporte ao HTTP/2, o suporte para o recurso PUSH PROMISE ainda não foi adicionado.
@@ -805,7 +803,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
     - **CultureInfo.CurrentCulture e CultureInfo.CurrentUICulture**
 
-         As propriedades <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> agora são de leitura e gravação em vez de somente leitura. Se você atribuir um novo objeto <xref:System.Globalization.CultureInfo> a essas propriedades, a cultura do thread atual definida pela propriedade `Thread.CurrentThread.CurrentCulture`, e a cultura do thread de interface do usuário atual definida pela propriedade `Thread.CurrentThread.CurrentUICulture` também mudarão.
+         Agora, as propriedades <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> são leitura / gravação em vez de somente leitura. Se você atribuir um novo objeto <xref:System.Globalization.CultureInfo> a essas propriedades, a cultura do thread atual definida pela propriedade `Thread.CurrentThread.CurrentCulture`, e a cultura do thread de interface do usuário atual definida pela propriedade `Thread.CurrentThread.CurrentUICulture` também mudarão.
 
     - **Aprimoramentos na coleta de lixo (GC)**
 
@@ -815,13 +813,13 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
     - **Tipos habilitados para SIMD**
 
-         Agora, o namespace <xref:System.Numerics> inclui uma série de tipos habilitados para SIMD, como <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> e <xref:System.Numerics.Vector4>.
+         O namespace <xref:System.Numerics> agora inclui uma série de tipos habilitados para SIMD, como <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> e <xref:System.Numerics.Vector4>.
 
          Como o novo compilador JIT de 64 bits também inclui recursos de aceleração de hardware SIMD, há melhorias de desempenho consideráveis, especialmente ao usar os tipos habilitados para SIMD com o novo compilador JIT de 64 bits.
 
     - **Atualizações de criptografia**
 
-         A API <xref:System.Security.Cryptography?displayProperty=fullName> está sendo atualizada para oferecer suporte às [APIs de criptografia CNG do Windows](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx). Versões anteriores do .NET Framework dependiam inteiramente de uma [versão anterior das APIs de criptografia do Windows](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx) como a base para a implementação de <xref:System.Security.Cryptography?displayProperty=fullName>. Recebemos solicitações para o suporte a API de CNG, uma vez que ela dá suporte a [algoritmos de criptografia modernos](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support), que são importantes para determinadas categorias de aplicativos.
+         A API <xref:System.Security.Cryptography?displayProperty=fullName> está sendo atualizada para oferecer suporte às [APIs de criptografia CNG do Windows](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx). As versões anteriores do .NET Framework dependiam inteiramente de uma [versão anterior das APIs de criptografia do Windows](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx) como a base para a implementação de <xref:System.Security.Cryptography?displayProperty=fullName>. Recebemos solicitações para o suporte a API de CNG, uma vez que ela dá suporte a [algoritmos de criptografia modernos](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support), que são importantes para determinadas categorias de aplicativos.
 
          O .NET Framework 4.6 inclui os seguintes aprimoramentos novos a fim de oferecer suporte às APIs de criptografia CNG do Windows:
 
@@ -831,13 +829,11 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
         - Aprimoramentos à API do RSA para que as ações comuns não exijam mais a conversão. Por exemplo, a criptografia de dados usando um objeto <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> exige um código semelhante ao seguinte em versões anteriores do .NET Framework.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              O código que usa as novas APIs de criptografia no .NET Framework 4.6 podem ser reescritos da seguinte maneira para evitar a conversão.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **Suporte para conversão de datas e horas para ou do horário Unix**
 
@@ -894,13 +890,13 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
     - **Mudanças no TAP (padrão assíncrono baseado em tarefas)**
 
-         Para aplicativos direcionados ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], os objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> herdam a cultura e cultura da interface do usuário do thread de chamada. O comportamento de aplicativos direcionados a versões anteriores do .NET Framework, ou que não são direcionados a uma versão específica do .NET Framework, não é afetado. Para saber mais, confira a seção "Cultura e operações assíncronas baseadas em tarefas" do tópico da classe <xref:System.Globalization.CultureInfo>.
+         Para aplicativos direcionados aos objetos [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601> herdam a cultura e cultura da interface do usuário do thread de chamada. O comportamento de aplicativos direcionados a versões anteriores do .NET Framework, ou que não são direcionados a uma versão específica do .NET Framework, não é afetado. Para saber mais, confira a seção "Cultura e operações assíncronas baseadas em tarefas" do tópico da classe <xref:System.Globalization.CultureInfo>.
 
          A classe <xref:System.Threading.AsyncLocal%601?displayProperty=fullName> permite a representação dos dados do ambiente que sejam locais a um fluxo determinado de controle assíncrono, como um método `async`. Ele pode ser usado para persistir dados entre threads. Você também pode definir um método de retorno de chamada que será notificado sempre que os dados do ambiente mudarem, pois a propriedade <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=fullName> foi alterada explicitamente, ou porque o thread encontrou uma transição de contexto.
 
-         Três métodos de conveniência, <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=fullName>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=fullName> e <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=fullName> foram adicionados ao TAP (padrão assíncrono baseado em tarefa) para retornar tarefas concluídas em um estado específico.
+         Os três métodos de conveniência, <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=fullName>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=fullName> e <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=fullName>, foram adicionados ao TAP (padrão assíncrono baseado em tarefa) para retornar as tarefas concluídas em um estado específico.
 
-         Agora, a classe <xref:System.IO.Pipes.NamedPipeClientStream> oferece suporte à comunicação assíncrona com seu novo <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>. método.
+         Agora, a classe <xref:System.IO.Pipes.NamedPipeClientStream> dá suporte à comunicação assíncrona com seu novo <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>. método.
 
     - **O EventSource agora oferece suporte à gravação no Log de eventos**
 
@@ -940,7 +936,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
-         O suporte ao carregamento automático do cursor à direita com base na configuração de DPI foi adicionado para <xref:System.Windows.Input.Cursor?displayProperty=fullName>.
+         O suporte ao carregamento automático do cursor à direita com base na configuração de DPI foi adicionado a <xref:System.Windows.Input.Cursor?displayProperty=fullName>.
 
     - **O toque está melhor**
 
@@ -948,7 +944,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
     - **Suporte para janela filho transparente**
 
-         O WPF no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] oferece suporte a janelas filho transparente no Windows 8.1 e versões posteriores. Isso permite a criação de janelas filho não retangulares e janelas filho transparente em suas janelas de nível superior. Você pode ativar esse recurso definindo a propriedade <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=fullName> como `true`.
+         O WPF no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] oferece suporte a janelas filho transparente no Windows 8.1 e versões posteriores. Isso permite a criação de janelas filho não retangulares e janelas filho transparente em suas janelas de nível superior. Você pode habilitar esse recurso configurando a propriedade <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=fullName> como `true`.
 
 - **Windows Communication Foundation (WCF)**
 
@@ -975,7 +971,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
         - **Usar um prefixo de nome de grupo de conexão**
 
-             Os usuários podem especificar uma cadeia de caracteres que o WCF usará como obtenção de prefixo para o nome do grupo de conexão. Duas mensagens com prefixos diferentes são enviadas usando conexões HTTP subjacentes diferentes. Defina o prefixo adicionando um par chave/valor à propriedade <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=fullName> da mensagem. A chave é "HttpTransportConnectionGroupNamePrefix"; o valor é o prefixo desejado.
+             Os usuários podem especificar uma cadeia de caracteres que o WCF usará como obtenção de prefixo para o nome do grupo de conexão. Duas mensagens com prefixos diferentes são enviadas usando conexões HTTP subjacentes diferentes. Defina o prefixo adicionando um par de chave/valor à propriedade <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=fullName> da mensagem. A chave é "HttpTransportConnectionGroupNamePrefix"; o valor é o prefixo desejado.
 
         - **Usar fábricas de canal diferente**
 
@@ -1023,11 +1019,11 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], duas novas APIs foram adicionadas para permitir a reutilização de porta, o que remove efetivamente o limite de 64 mil conexões simultâneas:
 
-        - O valor da enumeração <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName>.
+        - O valor de enumeração <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName>.
 
-        - A propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName>.
+        - A propriedade de <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> .
 
-         Por padrão, a propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> é `false` a menos que o valor `HWRPortReuseOnSocketBind` da chave do Registro `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` seja definido como 0x1. Para habilitar a reutilização de porta local em conexões HTTP, defina a propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> como `true`. Isso faz com que todas as conexões de soquete TCP externa do <xref:System.Net.Http.HttpClient>e <xref:System.Net.HttpWebRequest> usem uma nova opção de soquete do Windows 10 [SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx), que permite a reutilização de porta local.
+         Por padrão, a propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> é `false`, a menos que o valor `HWRPortReuseOnSocketBind` da chave do Registro `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` seja definido como 0x1. Para habilitar a reutilização de porta local em conexões HTTP, defina a propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> como `true`. Isso faz com que todas as conexões de soquete TCP externa do <xref:System.Net.Http.HttpClient> e <xref:System.Net.HttpWebRequest> usem uma nova opção de soquete do Windows 10 [SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx), que permite a reutilização de porta local.
 
          Os desenvolvedores que criam um aplicativo somente para soquetes podem especificar a opção <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> ao chamar um método, como <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=fullName>, para que os soquetes de saídas reutilizem portas locais durante a associação.
 
@@ -1037,7 +1033,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - **Redimensionamento em controles do Windows Forms.**
 
-     Esse recurso foi expandido no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para incluir os tipos <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> e <xref:System.Windows.Forms.ToolStripSplitButton> e o retângulo especificado pela propriedade <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> usada ao desenhar um <xref:System.Drawing.Design.UITypeEditor>.
+     Esse recurso foi expandido no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para incluir os tipos <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> e <xref:System.Windows.Forms.ToolStripSplitButton>, e o retângulo especificado pela propriedade <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> usada ao desenhar um <xref:System.Drawing.Design.UITypeEditor>.
 
      Esse é um recurso de opção de aceitação. Para habilitá-lo, defina o elemento `EnableWindowsFormsHighDpiAutoResizing` como `true` no arquivo de configuração do aplicativo (app.config):
 
@@ -1049,7 +1045,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - **Suporte para codificações de página de código**
 
-     O [!INCLUDE[net_core](../../../includes/net-core-md.md)] oferece suporte principalmente a codificações Unicode, e por padrão fornece suporte limitado a codificações de página de código. É possível adicionar suporte a codificações de página de código que estejam disponíveis no .NET Framework, mas sem suporte no [!INCLUDE[net_core](../../../includes/net-core-md.md)] ao registrar codificações de página de código com o método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=fullName>. Para obter mais informações, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=fullName>.
+     O [!INCLUDE[net_core](../../../includes/net-core-md.md)] oferece suporte principalmente a codificações Unicode, e por padrão fornece suporte limitado a codificações de página de código. É possível adicionar suporte a codificações de página de código disponíveis no .NET Framework, mas não sejam suportados no [!INCLUDE[net_core](../../../includes/net-core-md.md)], ao registrar codificações de página de código com o método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=fullName>. Para obter mais informações, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=fullName>.
 
 - **.NET Nativo**
 
@@ -1061,16 +1057,16 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - **Pacotes do código-fonte aberto do .NET Framework**
 
-     Pacotes [!INCLUDE[net_core](../../../includes/net-core-md.md)],como coleções imutáveis, [APIs SIMD](http://go.microsoft.com/fwlink/?LinkID=518639) e APIs de rede, como aquelas encontrados no namespace <xref:System.Net.Http> agora estão disponíveis como pacotes de código-fonte aberto no [GitHub](https://github.com/). Para acessar o código, confira [NetFx no GitHub](http://go.microsoft.com/fwlink/?LinkID=518634). Para saber mais e saber como contribuir com esses pacotes, confira [.NET Core e código-fonte aberto](../../../docs/framework/get-started/net-core-and-open-source.md), [Home Page do .NET no GitHub](http://go.microsoft.com/fwlink/?LinkID=518635).
+     Os pacotes [!INCLUDE[net_core](../../../includes/net-core-md.md)], como as coleções imutáveis, as [APIs SIMD](http://go.microsoft.com/fwlink/?LinkID=518639) e as APIs de rede, como aquelas encontrados no namespace <xref:System.Net.Http>, agora estão disponíveis como pacotes de código-fonte aberto no [GitHub](https://github.com/). Para acessar o código, confira [NetFx no GitHub](http://go.microsoft.com/fwlink/?LinkID=518634). Para saber mais e saber como contribuir com esses pacotes, confira [.NET Core e código-fonte aberto](../../../docs/framework/get-started/net-core-and-open-source.md), [Home Page do .NET no GitHub](http://go.microsoft.com/fwlink/?LinkID=518635).
 
  [Voltar ao início](#introduction)
 
 <a name="v452"></a> 
 ## <a name="whats-new-in-the-net-framework-452"></a>Novidades no .NET Framework 4.5.2
 
-- **Novas APIs para aplicativos do ASP.NET.** Os novos métodos <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=fullName> e <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=fullName> permitem a inspeção e a modificação de cabeçalhos de resposta e do código de status à medida que a resposta é liberada ao aplicativo cliente. Considere o uso desses métodos, em vez dos eventos <xref:System.Web.HttpApplication.PreSendRequestHeaders> e <xref:System.Web.HttpApplication.PreSendRequestContent>; eles são mais eficientes e confiáveis.
+- **Novas APIs para aplicativos do ASP.NET.** Os novos métodos <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=fullName> e <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=fullName> permitem inspecionar e modificar os cabeçalhos de resposta e o código de status à medida que a resposta é liberada para o aplicativo do cliente. Sugerimos usar esses métodos ao invés dos eventos <xref:System.Web.HttpApplication.PreSendRequestHeaders> e <xref:System.Web.HttpApplication.PreSendRequestContent>; eles são mais eficientes e confiáveis.
 
-     O método <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=fullName> permite que você agende a itens de trabalho menores em segundo plano. ASP.NET rastreia esses itens e evita que IIS termine abruptamente o processo de trabalho até que todos os itens de trabalho em segundo plano tenham sido concluídos. Esse método não pode ser chamado fora de um domínio de aplicativo gerenciado pelo ASP.NET.
+     O método <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=fullName> permite agendar pequenos itens de trabalho em segundo plano. ASP.NET rastreia esses itens e evita que IIS termine abruptamente o processo de trabalho até que todos os itens de trabalho em segundo plano tenham sido concluídos. Esse método não pode ser chamado fora de um domínio de aplicativo gerenciado pelo ASP.NET.
 
      As novas propriedades <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=fullName> e <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=fullName> retornam valores boolianos que indicam se os cabeçalhos de resposta foram gravados. É possível usar essas propriedades para certificar-se de que as chamadas para APIs como <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=fullName> (que geram exceções se os cabeçalhos foram gravados) tiveram êxito.
 
@@ -1086,13 +1082,13 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
     </appSettings>
     ```
 
-- **Novo recurso de fluxo de trabalho.** Um gerenciador de recursos que está usando o método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (e, portanto, implementando a interface <xref:System.Transactions.IPromotableSinglePhaseNotification>) pode usar o novo método <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> para solicitar o seguinte:
+- **Novo recurso de fluxo de trabalho.** Um gerenciador de recursos que usa o método <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (e, portanto, implementa a interface <xref:System.Transactions.IPromotableSinglePhaseNotification>) pode usar o novo método <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> para requisitar o seguinte:
 
     - Promover a transação para um Coordenador de transações distribuídas da Microsoft (MSDTC).
 
-    - Substitua <xref:System.Transactions.IPromotableSinglePhaseNotification> por um <xref:System.Transactions.ISinglePhaseNotification>, que é uma distribuição durável que oferece suporte a confirmações de fase única.
+    - Substitua <xref:System.Transactions.IPromotableSinglePhaseNotification> por <xref:System.Transactions.ISinglePhaseNotification>, que é uma inscrição durável que é compatível com a confirmação de uma única fase.
 
-     Isso pode ser feito dentro do mesmo domínio do aplicativo e não requer nenhum código extra não gerado para interagir com o MSDTC para executar a promoção. O novo método pode ser chamado somente quando houver uma chamada pendente do <xref:System.Transactions?displayProperty=fullName> para o método <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote` que é implementado pela inscrição passível de promoção.
+     Isso pode ser feito dentro do mesmo domínio do aplicativo e não requer nenhum código extra não gerado para interagir com o MSDTC para executar a promoção. O novo método pode ser chamado apenas quando há uma chamada pendente do método <xref:System.Transactions?displayProperty=fullName> para o <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` implementado por uma inscrição que pode ser promovida.
 
 - **Melhorias na criação de perfis** As seguintes novas APIs não gerenciadas de criação de perfis fornecem uma criação de perfil mais robusta:
 
@@ -1118,7 +1114,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - **Promover uma transação e convertê-la em uma inscrição durável**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> uma nova API é adicionada ao .NET Framework 4.5.2 e 4.6:
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> é uma nova API é adicionada ao .NET Framework 4.5.2 e 4.6:
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1128,7 +1124,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
                                               EnlistmentOptions enlistmentOptions)
     ```
 
-     O método pode ser usado por uma inscrição criada anteriormente por <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> em resposta ao método <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName>. Ele pede que `System.Transactions` promova a transação a uma transação MSDTC e "converta" a inscrição passível de promoção em uma inscrição durável. Após a conclusão desse método, a interface <xref:System.Transactions.IPromotableSinglePhaseNotification> não será mais referenciada por `System.Transactions`, e quaisquer notificações futuras chegarão na interface <xref:System.Transactions.ISinglePhaseNotification> fornecida. A inscrição em questão deve agir como uma inscrição durável, oferecendo suporte à ao registro em log e recuperação da transação. Confira <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName> para obter detalhes. Além disso, a inscrição deve oferecer suporte a <xref:System.Transactions.ISinglePhaseNotification>.  Esse método pode ser chamado *somente* durante o processamento de uma chamada a <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName>. Se esse não for o caso, uma exceção <xref:System.Transactions.TransactionException> será gerada.
+     O método pode ser usado por uma inscrição criada anteriormente por <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> em resposta ao método <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName>. Ele pede que `System.Transactions` promova a transação a uma transação MSDTC e "converta" a inscrição passível de promoção em uma inscrição durável. Após a conclusão desse método, a interface <xref:System.Transactions.IPromotableSinglePhaseNotification> não será mais referenciada por `System.Transactions`, e quaisquer notificações futuras chegarão na interface <xref:System.Transactions.ISinglePhaseNotification> fornecida. A inscrição em questão deve agir como uma inscrição durável, oferecendo suporte à ao registro em log e recuperação da transação. Veja <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName> para obter detalhes. Além disso, a inscrição deve oferecer suporte a <xref:System.Transactions.ISinglePhaseNotification>.  Esse método *só* pode ser chamado durante o processamento de uma chamada <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName>. Se esse não for o caso, uma exceção <xref:System.Transactions.TransactionException> será gerada.
 
  [Voltar ao início](#introduction)
 
@@ -1156,9 +1152,9 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - Redirecionamento de associação automático de assemblies. Desde o [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], quando você compilar um aplicativo destinado ao [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], os redirecionamentos de associação poderão ser adicionados ao arquivo de configuração do aplicativo se o aplicativo ou seus componentes referenciarem várias versões do mesmo assembly. Você também pode habilitar esse recurso para projetos que se destinam a versões anteriores do .NET Framework. Para saber mais, confira [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
-- Capacidade de coletar informações de diagnóstico para ajudar desenvolvedores na melhoria do desempenho dos aplicativos de servidor e de nuvem. Para saber mais, confira os métodos <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> e <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> na classe <xref:System.Diagnostics.Tracing.EventSource>.
+- Capacidade de coletar informações de diagnóstico para ajudar desenvolvedores na melhoria do desempenho dos aplicativos de servidor e de nuvem. Para obter mais informações, consulte os métodos <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> e <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> na classe <xref:System.Diagnostics.Tracing.EventSource>.
 
-- Capacidade de compactar explicitamente a LOH (pilha de objetos grandes) durante a coleta de lixo. Para saber mais, confira a propriedade <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>.
+- Capacidade de compactar explicitamente a LOH (pilha de objetos grandes) durante a coleta de lixo. Para obter mais informações, consulte a propriedade <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>.
 
 - Aperfeiçoamentos de desempenho adicionais como a suspensão do aplicativo ASP.NET, aperfeiçoamentos JIT multicore e inicialização mais rápida do aplicativo após uma atualização do .NET Framework. Para obter detalhes, confira o [Comunicado do .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/) e a postagem de blog [Suspensão de aplicativos ASP.NET](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/).
 
@@ -1166,7 +1162,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - Redimensionamento em controles do Windows Forms. É possível usar a configuração do sistema DPI para redimensionar os componentes de controle (por exemplo, os ícones que aparecem na grade de propriedade) optando por uma entrada no arquivo de configuração de aplicativo (app.config) do seu aplicativo. Atualmente, esse recurso é compatível com os seguintes controles do Windows Forms:
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    Alguns aspectos do <xref:System.Windows.Forms.DataGridView> (consulte [novos recursos em 4.5.2](#v452) para obter controles adicionais com suporte)
+     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    Alguns aspectos do <xref:System.Windows.Forms.DataGridView> (consulte [novos recursos em 4.5.2](#v452) para obter os controles adicionais compatíveis)
 
      Para habilitar esse recurso, adicione um novo elemento \<appSettings> ao arquivo de configuração (app.config) e defina o elemento `EnableWindowsFormsHighDpiAutoResizing` como `true`:
 
@@ -1203,29 +1199,29 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - Melhor desempenho por meio de coleta de lixo em segundo plano para servidores. Quando você usa a coleta de lixo do servidor no [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a coleta de lixo em segundo plano é automaticamente ativada. Confira a seção Coleta de lixo de servidor em segundo plano do tópico [Noções básicas da coleta de lixo](../../../docs/standard/garbage-collection/fundamentals.md).
 
-- Compilação JIT (just-in-time) em segundo plano, disponível como opção em vários processadores multicore para melhorar o desempenho do aplicativo. Confira <xref:System.Runtime.ProfileOptimization>.
+- Compilação JIT (just-in-time) em segundo plano, disponível como opção em vários processadores multicore para melhorar o desempenho do aplicativo. Consulte <xref:System.Runtime.ProfileOptimization>.
 
-- Capacidade de limitar por quanto tempo o mecanismo de expressões regulares tentará resolver uma expressão regular antes de expirar. Confira a propriedade <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName>.
+- Capacidade de limitar por quanto tempo o mecanismo de expressões regulares tentará resolver uma expressão regular antes de expirar. Consulte a propriedade <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName>.
 
-- Capacidade de definir a cultura padrão para um domínio de aplicativo. Confira a classe <xref:System.Globalization.CultureInfo>.
+- Capacidade de definir a cultura padrão para um domínio de aplicativo. Consulte a classe <xref:System.Globalization.CultureInfo>.
 
-- Suporte de console para a codificação Unicode (UTF-16). Confira a classe <xref:System.Console>.
+- Suporte de console para a codificação Unicode (UTF-16). Consulte a classe <xref:System.Console>.
 
-- Suporte para controle de versão da ordenação de cadeia de caracteres culturais e dados de comparação. Confira a classe <xref:System.Globalization.SortVersion>.
+- Suporte para controle de versão da ordenação de cadeia de caracteres culturais e dados de comparação. Consulte a classe <xref:System.Globalization.SortVersion>.
 
 - Melhor desempenho durante a recuperação de recursos. Confira [Empacotar e implantar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
-- Aperfeiçoamentos na compactação para reduzir o tamanho de um arquivo compactado. Confira o namespace <xref:System.IO.Compression?displayProperty=fullName>.
+- Aperfeiçoamentos na compactação para reduzir o tamanho de um arquivo compactado. Consulte o namespace <xref:System.IO.Compression?displayProperty=fullName>.
 
 - Capacidade de personalizar um contexto de reflexão para substituir o comportamento de reflexão padrão por meio da classe <xref:System.Reflection.Context.CustomReflectionContext>.
 
 - Suporte para a versão 2008 do padrão IDNA (Internationalized Domain Names in Applications) quando a classe <xref:System.Globalization.IdnMapping?displayProperty=fullName> é usada no [!INCLUDE[win8](../../../includes/win8-md.md)].
 
-- A delegação da comparação de cadeia de caracteres para o sistema operacional, que implementa o Unicode 6.0, quando o .NET Framework é usado no [!INCLUDE[win8](../../../includes/win8-md.md)]. Ao executar em outras plataformas, o .NET Framework inclui seus próprios dados de comparação da cadeia de caracteres, o que implementa o Unicode 5.x. Confira a classe <xref:System.String> e a seção Comentários da classe <xref:System.Globalization.SortVersion>.
+- A delegação da comparação de cadeia de caracteres para o sistema operacional, que implementa o Unicode 6.0, quando o .NET Framework é usado no [!INCLUDE[win8](../../../includes/win8-md.md)]. Ao executar em outras plataformas, o .NET Framework inclui seus próprios dados de comparação da cadeia de caracteres, o que implementa o Unicode 5.x. Consulte a classe <xref:System.String> e a seção Comentários da classe <xref:System.Globalization.SortVersion>.
 
 - Capacidade de computar os códigos de hash para cadeias de caracteres com base no domínio do aplicativo. Confira o elemento [\<UseRandomizedStringHashAlgorithm>](../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
-- Divisão de suporte de reflexão de tipo entre as classes <xref:System.Type> e <xref:System.Reflection.TypeInfo>. Confira [Reflexão no .NET Framework para aplicativos da Windows Store](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md).
+- Suporte à reflexão de tipo dividido entre as classes <xref:System.Type> e <xref:System.Reflection.TypeInfo>. Confira [Reflexão no .NET Framework para aplicativos da Windows Store](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
  No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], a MEF fornece os seguintes recursos novos:
@@ -1263,21 +1259,21 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 <a name="networking"></a> 
 ### <a name="networking"></a>Rede
- O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] fornece uma nova interface de programação para aplicativos HTTP. Para saber mais, confira os novos namespaces <xref:System.Net.Http?displayProperty=fullName> e <xref:System.Net.Http.Headers?displayProperty=fullName>.
+ O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] fornece uma nova interface de programação para aplicativos HTTP. Para obter mais informações, consulte os novos namespaces <xref:System.Net.Http?displayProperty=fullName> e <xref:System.Net.Http.Headers?displayProperty=fullName>.
 
- O suporte também está incluído para uma nova interface de programação para aceitar e interagir com uma conexão WebSocket usando-se a classe <xref:System.Net.HttpListener> existente e as classes relacionadas. Para saber mais, confira o novo namespace <xref:System.Net.WebSockets> e a classe <xref:System.Net.HttpListener>.
+ O suporte também está incluído para uma nova interface de programação para aceitar e interagir com uma conexão WebSocket usando-se a classe <xref:System.Net.HttpListener> existente e as classes relacionadas. Para obter mais informações, consulte o novo namespace <xref:System.Net.WebSockets> e a classe <xref:System.Net.HttpListener>.
 
  Além disso, o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] inclui os seguintes aperfeiçoamentos de rede:
 
-- Suporte ao URI compatível com RFC. Para saber mais, confira <xref:System.Uri> e as classes relacionadas.
+- Suporte ao URI compatível com RFC. Para obter mais informações, consulte <xref:System.Uri> e as classes relacionadas.
 
-- Suporte para análise IDN. Para saber mais, confira <xref:System.Uri> e as classes relacionadas.
+- Suporte para análise IDN. Para obter mais informações, consulte <xref:System.Uri> e as classes relacionadas.
 
-- Suporte para EAI (Email Address Internationalization). Para saber mais, confira o namespace <xref:System.Net.Mail>.
+- Suporte para EAI (Email Address Internationalization). Para obter mais informações, consulte o namespace de <xref:System.Net.Mail>.
 
-- Suporte a IPv6 melhorado. Para saber mais, confira o namespace <xref:System.Net.NetworkInformation>.
+- Suporte a IPv6 melhorado. Para obter mais informações, consulte o namespace de <xref:System.Net.NetworkInformation>.
 
-- Suporte a soquete de modo duplo. Para saber mais, confira as classes <xref:System.Net.Sockets.Socket> e <xref:System.Net.Sockets.TcpListener>.
+- Suporte a soquete de modo duplo. Para obter mais informações, consulte as classes <xref:System.Net.Sockets.Socket> e <xref:System.Net.Sockets.TcpListener>.
 
 <a name="client"></a> 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
@@ -1285,7 +1281,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - O novo controle <xref:System.Windows.Controls.Ribbon.Ribbon>, que permite que você implemente uma interface de usuário da faixa de opções que hospeda uma Barra de Ferramentas de Acesso Rápido, um menu do aplicativo e guias.
 
-- A nova interface <xref:System.ComponentModel.INotifyDataErrorInfo>, que oferece suporte à validação de dados síncrona e assíncrona.
+- A nova interface <xref:System.ComponentModel.INotifyDataErrorInfo>, que dá suporte à validação de dados síncronos e assíncronos.
 
 - Novos recursos para as classes <xref:System.Windows.Controls.VirtualizingPanel> e <xref:System.Windows.Threading.Dispatcher>.
 
@@ -1329,7 +1325,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - Dicas de ferramenta do Editor de XML
 
-- Suporte ao armazenamento em cache de <xref:System.ServiceModel.ChannelFactory>.
+- Suporte ao armazenamento em cache <xref:System.ServiceModel.ChannelFactory>.
 
 - Suporte à compactação de codificador binário.
 
@@ -1353,7 +1349,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
     - Suporte de designer para criação de transição do disparador compartilhado.
 
-    - Atividades para criação de fluxos de trabalho de máquina de estado, incluindo: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> e <xref:System.Activities.Statements.Transition>.
+    - Atividades para criar fluxos de trabalho de computador de estado, incluindo: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> e <xref:System.Activities.Statements.Transition>.
 
 - Recursos do Designer de Fluxo de Trabalho aperfeiçoados, como o seguinte:
 
@@ -1406,3 +1402,4 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
  [Novidades no Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)   
  [ASP.NET](/aspnet)   
  [Novidades no Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 
+
