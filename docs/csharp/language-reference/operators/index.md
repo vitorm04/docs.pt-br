@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>Operadores em C#
@@ -66,9 +67,7 @@ O C# fornece muitos operadores, que são símbolos que especificam as operaçõe
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) – invocação de função.  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) – indexação de objeto de agregação.  
-  
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md) – indexação condicional nula.  Retornará `null` se o operando esquerdo for `null`.  
-  
+   
  [x++](../../../csharp/language-reference/operators/increment-operator.md) – incremento de sufixo.  Retorna o valor de x e, em seguida, atualiza o local de armazenamento com o valor de x que é um número maior (normalmente adiciona o inteiro 1).  
   
  [x--](../../../csharp/language-reference/operators/decrement-operator.md) – decremento de sufixo.  Retorna o valor de x e, em seguida, atualiza o local de armazenamento com o valor de x que é um número menor (normalmente subtrai o inteiro 1).  
@@ -222,15 +221,15 @@ O C# fornece muitos operadores, que são símbolos que especificam as operaçõe
 ## <a name="arithmetic-overflow"></a>Estouro aritmético  
  Os operadores aritméticos ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) podem produzir resultados que estão fora do intervalo de valores possíveis para o tipo numérico envolvido. Consulte a seção sobre um operador específico para obter detalhes, mas, em geral:  
   
-- O estouro aritmético de inteiros lança um <xref:System.OverflowException> ou descarta os bits mais significativos do resultado. A divisão de inteiro por zero sempre lança um @System.DivideByZeroException.  
+- O estouro aritmético de inteiros lança uma <xref:System.OverflowException> ou descarta os bits mais significativos do resultado. A divisão de inteiro por zero sempre lança um @System.DivideByZeroException.  
 
-   Quando ocorre um estouro de inteiro, o que acontece depende do contexto de execução, que pode ser [verificação ou não verificado](../../../csharp/language-reference/keywords/checked-and-unchecked.md). Em um contexto verificado, um <xref:System.OverflowException> é lançado. Em um contexto não verificado, os bits mais significativos do resultado são descartados e a execução continua. Assim, C# oferece a opção para tratar ou ignorar o estouro. Por padrão, as operações aritméticas ocorrem em um contexto *não verificado*. 
+   Quando ocorre um estouro de inteiro, o que acontece depende do contexto de execução, que pode ser [verificação ou não verificado](../../../csharp/language-reference/keywords/checked-and-unchecked.md). Em um contexto marcado, uma <xref:System.OverflowException> é lançada. Em um contexto não verificado, os bits mais significativos do resultado são descartados e a execução continua. Assim, C# oferece a opção para tratar ou ignorar o estouro. Por padrão, as operações aritméticas ocorrem em um contexto *não verificado*. 
 
    Além das operações aritméticas, as conversões de tipo integral para integral tipo podem causar estouro (como quando você converte um [longo](../../../csharp/language-reference/keywords/long.md) para um [int](../../../csharp/language-reference/keywords/int.md)) e estão sujeitas à execução verificada ou não verificada. No entanto, operadores bit a bit e operadores de deslocamento nunca causam estouro.  
    
 -   O estouro aritmético de ponto flutuante ou a divisão por zero nunca gera uma exceção, pois os tipos de ponto flutuante são baseados em IEEE 754 e têm provisões para representar o infinito e NaN (não um número).  
   
--   O estouro aritmético [decimal](../../../csharp/language-reference/keywords/decimal.md) sempre lança um <xref:System.OverflowException>. A divisão decimal por zero sempre lança um <xref:System.DivideByZeroException>.  
+-   Um estouro aritmético[Decimal](../../../csharp/language-reference/keywords/decimal.md) sempre lança uma <xref:System.OverflowException>. A divisão decimal por zero sempre lança uma <xref:System.DivideByZeroException>.  
   
   
 ## <a name="see-also"></a>Consulte também  
