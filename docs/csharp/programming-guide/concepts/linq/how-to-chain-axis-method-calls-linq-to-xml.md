@@ -14,20 +14,21 @@ ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a47129d3c84d7bfb49929529a50b064c8424b4c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: bcd325d72ac14f2b33860fbc9e2662c33ca2703d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Como encadear chamadas de método de eixo (LINQ to XML) (C#)
 Um padrão comum que você usar em seu código é chamar um método do eixo, então chama um dos eixos do método de extensão.  
   
- Há dois eixos com o nome de `Elements` que retornam uma coleção de elementos: o método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> e o método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>. Você pode combinar esses dois eixos para localizar todos os elementos de um nome especificado em uma determinada profundidade na árvore.  
+ Há dois eixos com o nome de `Elements` que retornam uma coleção de elementos: o método de <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> e o método de <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> . Você pode combinar esses dois eixos para localizar todos os elementos de um nome especificado em uma determinada profundidade na árvore.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> e <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> para localizar todos os elementos `Name` em todos os elementos `Address` em todos os elementos `PurchaseOrder`.  
+ Este exemplo usa <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> e <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> para localizar todos os elementos de `Name` em todos os elementos de `Address` em todos os elementos de `PurchaseOrder` .  
   
  Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
@@ -54,7 +55,7 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- Isso funciona porque uma das implementações do eixo `Elements` é como um método de extensão em <xref:System.Collections.Generic.IEnumerable%601> da <xref:System.Xml.Linq.XContainer>. A <xref:System.Xml.Linq.XElement> deriva da <xref:System.Xml.Linq.XContainer>, portanto, você pode chamar o método <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> nos resultados de uma chamada ao método <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>.  
+ Isto funciona porque uma das implementações do eixo de `Elements` é como um método de extensão em <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XContainer>. <xref:System.Xml.Linq.XElement> deriva de <xref:System.Xml.Linq.XContainer>, então você pode chamar o método de <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> nos resultados de uma chamada para o método de <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> .  
   
 ## <a name="example"></a>Exemplo  
  Às vezes você deseja recuperar todos os elementos em uma profundidade específico do elemento quando pode ou não pode haver ancestrais interveniente. Por exemplo, o seguinte documento, você pode desejar recuperar todos os elementos de `ConfigParameter` que são filhos do elemento de `Customer` , mas não `ConfigParameter` que é um filho do elemento de `Root` .  
@@ -81,7 +82,7 @@ foreach (XElement e in names)
 </Root>  
 ```  
   
- Para fazer isso, você pode usar o eixo <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> da seguinte maneira:  
+ Para fazer isso, você pode usar o eixo de <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> , como segue:  
   
 ```csharp  
 XElement root = XElement.Load("Irregular.xml");  

@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 937406b347d8f7c99a60d88440ef7382b2987222
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="selection-statements-c-reference"></a>Instruções de seleção (Referência de C#)
