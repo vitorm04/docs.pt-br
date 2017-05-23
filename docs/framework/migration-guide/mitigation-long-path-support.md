@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 40b4b94ac3058dda88b44c82110d4c749566e2b2
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-long-path-support"></a>Mitigação: suporte ao caminho longo
@@ -37,22 +38,19 @@ A partir dos aplicativos destinados ao [!INCLUDE[net_v462](../../../includes/net
  Para aplicativos destinados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], você pode recusar o suporte ao caminho longo, se ele não for desejável, adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:  
   
 ```xml  
-  
 <runtime>   
    <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=true" />   
 </runtime>  
-  
 ```  
   
  Para aplicativos destinados a versões anteriores do .NET Framework mas executados no [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou versão posterior, você pode aceitar o suporte ao caminho longo adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:  
   
 ```xml  
-  
 <runtime>   
    <AppContextSwitchOverrides value="Switch.System.IO.BlockLongPaths=false" />   
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+

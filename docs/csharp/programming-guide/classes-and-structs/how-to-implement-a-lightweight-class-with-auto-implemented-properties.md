@@ -132,7 +132,6 @@ Este exemplo mostra como criar uma classe leve imutável que serve apenas para e
     Cesar Garcia, 12 108th St.  
     Debra Garcia, 89 E. 42nd St.  
 */  
-  
 ```  
   
  O compilador cria campos de suporte para cada propriedade autoimplementada. Os campos não são acessíveis diretamente do código-fonte.  

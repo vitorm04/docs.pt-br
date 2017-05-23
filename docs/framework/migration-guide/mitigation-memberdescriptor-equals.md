@@ -36,17 +36,14 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
 -   Você pode recusar essa alteração sem modificar seu código-fonte adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:  
   
     ```xml  
-  
     <runtime>  
         <AppContextSwitchOverrides value = "Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />  
      </runtime>  
-  
     ```  
   
 -   Modifique seu código-fonte para restaurar o comportamento anterior comparando manualmente as propriedades <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> e <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> depois de chamar o método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, como faz o seguinte fragmento de código.  
   
     ```csharp  
-  
     if (memberDescriptor1.Equals(memberDescriptor2) &   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)) {  
           // Code to execute if true.  
@@ -54,28 +51,23 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
     else {  
           // Code to execute if false.     
     }  
-  
     ```  
   
     ```  
-  
     If memberDescriptor1.Equals(memberDescriptor2) And   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)  
           // Code to execute if True.  
     Else  
           // Code to execute if False.     
     End If  
-  
     ```  
   
  Para aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e em versões anteriores, você pode habilitar essa alteração adicionando o seguinte valor ao seu arquivo app.config:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  

@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: fc247ef2ed1073cae2a78e2d2bc2d40d59adeccb
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -47,7 +48,6 @@ Adiciona dois números ou retorna o valor positivo de uma expressão numérica. 
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
       expression1 + expression2  
 - or -  
 + expression1  
@@ -141,3 +141,4 @@ Adiciona dois números ou retorna o valor positivo de uma expressão numérica. 
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Operadores aritméticos em Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
  [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+

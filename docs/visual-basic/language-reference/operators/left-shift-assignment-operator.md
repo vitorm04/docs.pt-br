@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: d67cfe0f339e0b696eaf57817494f1baf1686135
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -48,7 +49,6 @@ Executa um deslocamento aritmético à esquerda no valor de uma variável ou pro
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 variableorproperty <<= amount  
 ```  
   
@@ -81,3 +81,4 @@ variableorproperty <<= amount
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
  [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
+

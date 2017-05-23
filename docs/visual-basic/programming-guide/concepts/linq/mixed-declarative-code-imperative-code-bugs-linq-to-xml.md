@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,7 +62,6 @@ Dim root As XElement = _
 For Each e As XElement In root.Elements()  
     root.Add(New XElement(e.Name, e.Value))  
 Next  
-  
 ```  
   
  Esse código entra em um loop infinito. A declaração de `foreach` itera através do eixo de `Elements()` , adicionando novos elementos para o elemento de `doc` . Acaba também iterar através dos elementos que acabou de adicionar. E como atribuir novos objetos com cada iteração do loop, consumirá se houver qualquer memória disponível.  
@@ -79,7 +79,6 @@ For Each e As XElement In root.Elements().ToList()
     root.Add(New XElement(e.Name, e.Value))  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Agora o código. A árvore XML resultante é a seguinte:  
@@ -109,7 +108,6 @@ For Each e As XElement In root.Elements()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  No entanto, isso não faz o que você deseja. Nesta situação, depois que você removesse o primeiro elemento, A, é removido da árvore XML contida na raiz, e o código no método dos elementos que está fazendo iterar não pode localizar o elemento seguir.  
@@ -136,7 +134,6 @@ For Each e As XElement In root.Elements().ToList()
     e.Remove()  
 Next  
 Console.WriteLine(root)  
-  
 ```  
   
  Isso gerencia a saída a seguir:  
@@ -156,7 +153,6 @@ Dim root As XElement = _
     </Root>  
 root.RemoveAll()  
 Console.WriteLine(root)  
-  
 ```  
   
 ## <a name="why-cant-linq-automatically-handle-this"></a>Por que não pode automaticamente LINQ manipular esse?  
@@ -169,7 +165,6 @@ Dim z = _
     From e In root.Elements() _  
     Where (TestSomeCondition(e)) _  
     Select DoMyProjection(e)  
-  
 ```  
   
  Esse código de análise precisaria analisar métodos TestSomeCondition e DoMyProjection, e todos os métodos que esses métodos chamados a partir, para determinar se qualquer código tinha efeitos colaterais. Mas o código de análise não pode apenas procurar qualquer código que tem efeitos colaterais. Precisaria para selecionar apenas o código que tinha efeitos colaterais em elementos filho de `root` nesta situação.  
@@ -197,8 +192,8 @@ Dim root As XElement = _
 Dim newRoot As XElement = New XElement("Root", _  
     root.Elements(), root.Elements())  
 Console.WriteLine(newRoot)  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Avançada LINQ to XML programação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

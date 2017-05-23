@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 42db515849ac14c513187bdb543ea8cdf03da8e5
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -47,7 +48,6 @@ Adiciona o valor de uma expressão numérica para o valor de uma variável numé
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 variableorproperty += expression  
 ```  
   
@@ -90,3 +90,4 @@ variableorproperty += expression
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
  [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
+

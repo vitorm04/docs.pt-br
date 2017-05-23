@@ -456,7 +456,6 @@ public class MethodCallVisitor : Visitor
         }
     }
 }
-
 ```
 
 E a saída da árvore de expressão seria:

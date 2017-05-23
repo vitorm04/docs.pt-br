@@ -38,9 +38,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 47365799fea95273874b581646b24757eeb9d718
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -65,7 +66,6 @@ Sub sub name(ByVal parameter1 As datatype1, Optional ByVal parameter2 As datatyp
  Ao omitir um ou mais argumentos opcionais no lista de argumentos, você use sucessivas vírgulas para marcar as posições. A chamada de exemplo a seguir fornece o primeiro e o quarto argumentos, mas não o segundo ou terceiro:  
   
 ```  
-  
 sub name(argument 1, , , argument 4)  
 ```  
   
@@ -94,3 +94,4 @@ sub name(argument 1, , , argument 4)
  [Sobrecarga de procedimento](./procedure-overloading.md)   
  [Opcional](../../../../visual-basic/language-reference/modifiers/optional.md)   
  [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+

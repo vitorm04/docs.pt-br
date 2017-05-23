@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c911513551e9629a4a6975762c1952c73c50f733
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Mitigação: renderização de janela WPF
@@ -35,11 +35,9 @@ No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows
 -   Ao adicionar o elemento `<EnableMultiMonitorDisplayClipping>` à seção `<appSettings>` do seu arquivo de configuração de aplicativo, você pode desabilitar ou habilitar esse comportamento em aplicativos que são executados no Windows 8 ou posterior. Por exemplo, a seguinte seção de configuração desabilita a renderização sem distorção:  
   
     ```  
-  
     <appSettings>  
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>  
       </appSettings>  
-  
     ```  
   
      A definição de configuração do `<EnableMultiMonitorDisplayClipping>` pode ter um dos dois valores:  
@@ -52,3 +50,4 @@ No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+

@@ -15,9 +15,10 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c2dbf60cacf47be3c448b5683b771840ef85ddaf
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -35,13 +36,11 @@ Para aplicativos direcionados ao [!INCLUDE[net_v46](../../../includes/net-v46-md
 -   Aceitando o antigo comportamento de não deixar fluir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> adicionando o seguinte elemento `AppContextSwitchOverrides` ao arquivo de configuração do aplicativo:  
   
     ```xml  
-  
     <configuration>  
         <runtime>  
             <AppContextSwitchOverrides value="Switch.System.Globalization.NoAsyncCurrentCulture=true" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   Aceitando o antigo comportamento de não deixar fluir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> configurando a seguinte opção de compatibilidade de forma programática:  
@@ -56,3 +55,4 @@ Para aplicativos direcionados ao [!INCLUDE[net_v46](../../../includes/net-v46-md
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

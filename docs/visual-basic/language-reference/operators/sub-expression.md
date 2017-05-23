@@ -47,7 +47,6 @@ Sub ( [ parameterlist ] ) statement
 Sub ( [ parameterlist ] )  
   [ statements ]  
 End Sub  
-  
 ```  
   
 ## <a name="parts"></a>Partes  

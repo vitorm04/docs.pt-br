@@ -15,9 +15,10 @@ ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2ea8e71acf861b93a21296c74254b3ca4d977d0a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 
@@ -43,7 +44,6 @@ Dim list1 = From el In po.Descendants("Address")
 For Each el In list1  
     Console.WriteLine(el)  
 Next  
-  
 ```  
   
  A expressão de consulta nesse exemplo é reescrita pelo compilador a sintaxe da consulta com base em método. O exemplo a seguir, que é escrito na sintaxe da consulta com base em método, gerenciar os mesmos resultados que anterior:  
@@ -87,7 +87,6 @@ For Each n As Xml.XmlNode In nl
     Console.WriteLine(n.OuterXml)  
 Next  
 reader.Close()  
-  
 ```  
   
  Esta consulta retorna o mesmo resultado que os exemplos que usam LINQ para XML; a única diferença é que o LINQ to XML recua XML impresso, enquanto <xref:System.Xml.XmlDocument>não.</xref:System.Xml.XmlDocument>  
@@ -106,3 +105,4 @@ reader.Close()
   
 ## <a name="see-also"></a>Consulte também  
  [Desempenho (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

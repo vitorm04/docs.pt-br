@@ -14,9 +14,10 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c234d6ddeda50dfefff8c49a2e14d623cdd8d861
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -32,22 +33,19 @@ Começando com aplicativos que se destinam ao [!INCLUDE[net_v461](../../../inclu
  Se essa alteração for indesejável, os aplicativos que se destinam às versões do .NET Framework, começando com o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], poderão recusá-la adicionando a seguinte definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:  
   
 ```xml  
-  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=true" />   
 </runtime>  
-  
 ```  
   
  Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versões posteriores, podem aceitar esse comportamento adicionando a seguinte definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.IdentityModel.DisableMultipleDNSEntriesInSANCertificate=false" />   
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+

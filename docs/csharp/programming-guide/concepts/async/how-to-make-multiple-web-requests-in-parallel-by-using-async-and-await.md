@@ -19,9 +19,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: eb358daf212b171acd998a1aa74fe2ecd82a239a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,7 +45,6 @@ var myTask = someWebAccessMethodAsync(url);
   
 // The application of await suspends the rest of this method until the task is complete.  
 var result = await myTask;  
-  
 ```  
   
  Entre o início de uma tarefa e a espera por ela, você pode iniciar outras tarefas. As tarefas adicionais são executadas implicitamente em paralelo, mas não são criados threads adicionais.  
@@ -247,3 +247,4 @@ namespace AsyncExample_MultipleTasks
  [Passo a passo: acessando a Web usando async e await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+

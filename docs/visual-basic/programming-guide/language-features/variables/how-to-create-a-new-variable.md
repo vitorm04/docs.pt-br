@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2856fe19ddc48a14385aaae7b1c331fcb96c0554
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ Crie uma variável com um [instrução Dim](../../../../visual-basic/language-re
 1.  Declare a variável em uma `Dim` instrução.  
   
     ```  
-  
     Dim newCustomer  
     ```  
   
@@ -91,3 +91,4 @@ Crie uma variável com um [instrução Dim](../../../../visual-basic/language-re
  [Instruções](../../../../visual-basic/language-reference/statements/index.md)   
  [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+

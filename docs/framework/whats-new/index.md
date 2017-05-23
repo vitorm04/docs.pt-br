@@ -880,7 +880,6 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
               // new code
            }
         }
-
         ```
 
          É útil usar um formato consistente para opções, já que elas são um contrato formal exposto por uma biblioteca. Veja a seguir dois formatos óbvios.

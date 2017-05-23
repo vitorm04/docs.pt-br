@@ -59,7 +59,6 @@ public static Complex operator +(Complex c1, Complex c2)
     {  
         Return new Complex(c1.real + c2.real, c1.imaginary + c2.imaginary);  
     }  
-  
 ```  
   
  É comum ter definições que simplesmente retornam imediatamente com o resultado de uma expressão.  Há um atalho de sintaxe que usa `=>` para essas situações.  
@@ -71,7 +70,6 @@ public static Complex operator +(Complex c1, Complex c2) =>
     // Override ToString() to display a complex number   
     // in the traditional format:  
     public override string ToString() => $"{this.real} + {this.imaginary}";  
-  
 ```  
   
  Para obter mais informações, consulte [Como usar sobrecarga de operador para criar uma classe de número complexo](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md).  

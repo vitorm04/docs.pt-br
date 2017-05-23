@@ -35,14 +35,12 @@ Compatibilidade com versões anteriores significa que um aplicativo desenvolvido
  Para definir as versões específicas nas quais seu aplicativo é executado, adicione um ou mais elementos [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) ao arquivo de configuração de aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do tempo de execução, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.  
   
 ```xml  
-  
 <configuration>  
    <startup>  
       <supportedRuntime version="v2.0.50727" />  
       <supportedRuntime version="v4.0" />  
    </startup>  
 </configuration>  
-  
 ```  
   
  Para saber mais, confira [How to: Configure an App to Support .NET Framework 4 or 4.x](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md) (Como configurar um aplicativo para dar suporte ao .NET Framework 4 ou 4.x).  
@@ -98,3 +96,4 @@ Compatibilidade com versões anteriores significa que um aplicativo desenvolvido
  [Compatibilidade de aplicativos](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Política de ciclo de vida de suporte do Microsoft .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
  [Problemas de migração do .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=248212)
+

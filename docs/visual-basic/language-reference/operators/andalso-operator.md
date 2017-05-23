@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 120636e599742ef48f5c5d8cebf0f338edb7c24a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -48,7 +49,6 @@ Executa uma conjunção lógica em duas expressões.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 result = expression1 AndAlso expression2  
 ```  
   
@@ -96,3 +96,4 @@ result = expression1 AndAlso expression2
  [Operador and](../../../visual-basic/language-reference/operators/and-operator.md)   
  [Operador IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)   
  [Operadores lógicos e bit a bit no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+

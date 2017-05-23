@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 92370a44ed8c54ad8c2c2a4d48c77d4f8963f2de
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -54,7 +55,6 @@ A noção de uma variável que não altera seu valor pode parecer contraditório
 1.  No nível de módulo, declare uma variável de membro com o [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)e incluem o [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) palavra-chave.  
   
     ```  
-  
     Dim ReadOnly timeStarted  
     ```  
   
@@ -73,3 +73,4 @@ A noção de uma variável que não altera seu valor pode parecer contraditório
 ## <a name="see-also"></a>Consulte também  
  [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)   
  [Instrução Const](../../../../visual-basic/language-reference/statements/const-statement.md)
+

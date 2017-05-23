@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b3bc00ba8b3e1509567813dbb2cba63f90e15bb4
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -56,7 +57,6 @@ class DerivedClass : BaseClass
         Console.WriteLine("Derived - Method2");  
     }  
 }  
-  
 ```  
   
  No método `Main`, declare as variáveis `bc`, `dc` e `bcdc`.  
@@ -89,7 +89,6 @@ class Program
     // Derived - Method2  
     // Base - Method1  
 }  
-  
 ```  
   
  Em seguida, adicione o seguinte método `Method2` a `BaseClass`. A assinatura desse método corresponde à assinatura do método `Method2` em `DerivedClass`.  
@@ -99,7 +98,6 @@ public void Method2()
 {  
     Console.WriteLine("Base - Method2");  
 }  
-  
 ```  
   
  Como `BaseClass` agora tem um método `Method2`, uma segunda instrução de chamada pode ser adicionada para variáveis de `BaseClass` `bc` e `bcdc`, conforme mostrado no código a seguir.  
@@ -111,7 +109,6 @@ dc.Method1();
 dc.Method2();  
 bcdc.Method1();  
 bcdc.Method2();  
-  
 ```  
   
  Quando você compilar o projeto, verá que a adição do método `Method2` gera um aviso `BaseClass`. O aviso informa que o método `Method2` em `DerivedClass` oculta o método `Method2` em `BaseClass`. É recomendável usar a palavra-chave `new` na definição `Method2` se você pretende gerar esse resultado. Como alternativa, seria possível renomear um dos métodos `Method2` para resolver o aviso, mas isso nem sempre é prático.  
@@ -126,7 +123,6 @@ bcdc.Method2();
 // Derived - Method2  
 // Base - Method1  
 // Base - Method2  
-  
 ```  
   
  A palavra-chave `new` preserva as relações que produzem essa saída, mas suprime o aviso. As variáveis que têm o tipo `BaseClass` continuam acessando os membros de `BaseClass` e a variável que tem o tipo `DerivedClass` continua acessando os membros em `DerivedClass` primeiro e, em seguida, considera os membros herdados de `BaseClass`.  
@@ -138,7 +134,6 @@ public new void Method2()
 {  
     Console.WriteLine("Derived - Method2");  
 }  
-  
 ```  
   
  Execute o programa novamente para verificar se a saída não foi alterada. Verifique também se o aviso não é mais exibido. Usando `new`, você está declarando que está ciente de que o membro que ele modifica oculta um membro herdado da classe base. Para obter mais informações sobre a ocultação de nome por meio de herança, consulte [Novo modificador](../../../csharp/language-reference/keywords/new-modifier.md).  
@@ -150,7 +145,6 @@ public override void Method1()
 {  
     Console.WriteLine("Derived - Method1");  
 }  
-  
 ```  
   
  Adicione o modificador `virtual` à definição de `Method1` em `BaseClass`. O modificador `virtual` pode ser adicionado antes ou depois de `public`.  
@@ -160,7 +154,6 @@ public virtual void Method1()
 {  
     Console.WriteLine("Base - Method1");  
 }  
-  
 ```  
   
  Execute o projeto novamente. Observe principalmente as duas últimas linhas da saída a seguir.  
@@ -173,7 +166,6 @@ public virtual void Method1()
 // Derived - Method2  
 // Derived - Method1  
 // Base - Method2  
-  
 ```  
   
  O uso do modificador `override` permite que `bcdc` acesse o método `Method1` definido em `DerivedClass`. Normalmente, esse é o comportamento desejado em hierarquias de herança. Você quer objetos com valores criados da classe derivada para usar os métodos definidos na classe derivada. Obtenha esse comportamento usando `override` para estender o método da classe base.  
@@ -246,7 +238,6 @@ namespace OverrideAndNew
         }  
     }  
 }  
-  
 ```  
   
  O exemplo a seguir ilustra um comportamento semelhante em um contexto diferente. O exemplo define três classes: uma classe base chamada `Car` e duas classes derivadas dela, `ConvertibleCar` e `Minivan`. A classe base contém um método `DescribeCar`. O método exibe uma descrição básica de um carro e, em seguida, chama `ShowDetails` para fornecer mais informações. Cada uma das três classes define um método `ShowDetails`. O modificador `new` é usado para definir `ShowDetails` na classe `ConvertibleCar`. O modificador `override` é usado para definir `ShowDetails` na classe `Minivan`.  
@@ -291,7 +282,6 @@ class Minivan : Car
         System.Console.WriteLine("Carries seven people.");  
     }  
 }  
-  
 ```  
   
  O exemplo testa qual versão do `ShowDetails` é chamada. O método a seguir, `TestCars1`, declara uma instância de cada classe e, em seguida, chama `DescribeCar` em cada instância.  
@@ -318,13 +308,11 @@ public static void TestCars1()
     car3.DescribeCar();  
     System.Console.WriteLine("----------");  
 }  
-  
 ```  
   
  `TestCars1` produz a saída a seguir. Observe principalmente os resultados para `car2`, que provavelmente não são o que você espera. O tipo do objeto é `ConvertibleCar`, mas `DescribeCar` não acessa a versão de `ShowDetails` definida na classe `ConvertibleCar`, porque esse método é declarado com o modificador `new`, não o modificador `override`. Em decorrência disso, um objeto `ConvertibleCar` exibe a mesma descrição que um objeto `Car`. Compare os resultados de `car3`, que é um objeto `Minivan`. Nesse caso, o método `ShowDetails` declarado na classe `Minivan` substitui o método `ShowDetails` declarado na classe `Car` e a descrição exibida descreve uma minivan.  
   
 ```csharp  
-  
 // TestCars1  
 // ----------  
 // Four wheels and an engine.  
@@ -336,7 +324,6 @@ public static void TestCars1()
 // Four wheels and an engine.  
 // Carries seven people.  
 // ----------  
-  
 ```  
   
  `TestCars2` cria uma lista de objetos que têm tipo `Car`. Os valores dos objetos são instanciados com base nas classes `Car`, `ConvertibleCar` e `Minivan`. `DescribeCar` é chamado em cada elemento da lista. O código a seguir mostra a definição de `TestCars2`.  
@@ -356,7 +343,6 @@ public static void TestCars2()
         System.Console.WriteLine("----------");  
     }  
 }  
-  
 ```  
   
  É exibida a saída a seguir. Observe que é a mesma que a saída exibida por `TestCars1`. O método `ShowDetails` da classe `ConvertibleCar` não é chamado, independentemente se o tipo do objeto é `ConvertibleCar`, como em `TestCars1` ou `Car`, como em `TestCars2`. Por outro lado, `car3` chama o método `ShowDetails` com base na classe `Minivan` nos dois casos, tendo ele o tipo `Minivan` ou o tipo `Car`.  
@@ -373,13 +359,11 @@ public static void TestCars2()
 // Four wheels and an engine.  
 // Carries seven people.  
 // ----------  
-  
 ```  
   
  Os métodos `TestCars3` e `TestCars4` completam o exemplo. Esses métodos chamam `ShowDetails` diretamente, primeiro com base nos objetos declarados para ter o tipo `ConvertibleCar` e `Minivan` (`TestCars3`), em seguida, com base nos objetos declarados para ter o tipo `Car` (`TestCars4`). O código a seguir define esses dois métodos.  
   
 ```csharp  
-  
 public static void TestCars3()  
 {  
     System.Console.WriteLine("\nTestCars3");  
@@ -399,7 +383,6 @@ public static void TestCars4()
     car2.ShowDetails();  
     car3.ShowDetails();  
 }  
-  
 ```  
   
  Os métodos produzem a saída a seguir, que corresponde aos resultados do primeiro exemplo neste tópico.  
@@ -414,7 +397,6 @@ public static void TestCars4()
 // ----------  
 // Standard transportation.  
 // Carries seven people.  
-  
 ```  
   
  O código a seguir mostra o projeto completo e sua saída.  
@@ -580,7 +562,6 @@ namespace OverrideAndNew2
     }  
   
 }  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
@@ -589,3 +570,4 @@ namespace OverrideAndNew2
  [Controle de versão com as palavras-chave override e new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)   
  [base](../../../csharp/language-reference/keywords/base.md)   
  [abstract](../../../csharp/language-reference/keywords/abstract.md)
+

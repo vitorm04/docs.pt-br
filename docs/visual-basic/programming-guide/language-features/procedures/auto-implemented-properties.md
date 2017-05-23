@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 812ef1d54e5f574dbb136f14718aa7a193a299df
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -68,7 +69,6 @@ Class Customer
       Me.File = file  
    End Sub  
 End Class  
-  
 ```  
   
  Você pode atribuir a propriedade com expressões de inicialização conforme mostrado no exemplo, ou você pode atribuir às propriedades no construtor do tipo recipiente.  Você pode atribuir aos campos de apoio de propriedades somente leitura a qualquer momento.  
@@ -126,3 +126,4 @@ End Class
  [Somente leitura](../../../../visual-basic/language-reference/modifiers/readonly.md)   
  [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)   
  [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+

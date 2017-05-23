@@ -39,9 +39,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a8bc4735536444c7e3b361f2eaf1c43f7ca6584c
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -51,7 +52,6 @@ Executa uma exclusão lógica em duas `Boolean` expressões ou uma exclusão bit
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 result = expression1 Xor expression2  
 ```  
   
@@ -119,3 +119,4 @@ result = expression1 Xor expression2
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
  [Operadores lógicos e bit a bit no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+

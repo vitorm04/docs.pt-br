@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,6 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
     /**   
      * <summary>text</summary>   
     */  
-  
     ```  
   
 -   O compilador identifica um padrão comum de " * " no início da segunda e terceira linhas. O padrão não é incluído na saída.  
@@ -105,3 +105,4 @@ O uso de comentários do documento XML requer delimitadores, que indicam ao comp
  [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [/doc (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [Comentários da documentação XML](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

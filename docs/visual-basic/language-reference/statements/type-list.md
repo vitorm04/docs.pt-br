@@ -62,7 +62,6 @@ Especifica o *parâmetros de tipo* para um *genérico* elemento de programação
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 [genericmodifier] typename [ As constraintlist ]  
 ```  
   

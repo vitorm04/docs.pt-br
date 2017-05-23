@@ -15,9 +15,10 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 84016664708b9b7fc61a9535e5f7910417caa6f1
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -31,14 +32,13 @@ A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], há uma muda
  Se esse comportamento for indesejável, restaure o comportamento anterior definindo a opção `Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity` no arquivo de configuração do aplicativo como `true`. Isso exige a adição do seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo web.config:  
   
 ```  
-  
 <configuration>  
    <runtime>  
       <AppContextSwitchOverrides value="Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity=true" />  
    </runtime>  
 </configuration>  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de redirecionamento](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

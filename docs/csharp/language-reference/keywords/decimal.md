@@ -48,7 +48,6 @@ A palavra-chave `decimal` indica um tipo de dados de 128 bits. Comparado aos tip
  Se você desejar tratar um literal numérico como `decimal`, use o sufixo m ou M, por exemplo:  
   
 ```  
-  
 decimal myMoney = 300.5m;  
 ```  
   
@@ -58,14 +57,12 @@ decimal myMoney = 300.5m;
  Os tipos integrais são convertidos implicitamente em `decimal` e o resultado é avaliado como `decimal`. Portanto, você pode inicializar uma variável decimal com um literal inteiro sem o sufixo como a seguir:  
   
 ```  
-  
 decimal myMoney = 300;  
 ```  
   
  Não há nenhuma conversão implícita entre os tipos de pontos flutuantes e o tipo `decimal`. Portanto, uma conversão deve ser usada para converter entre esses dois tipos. Por exemplo:  
   
 ```  
-  
       decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
@@ -92,7 +89,6 @@ Console.WriteLine(dec + dub);
 // You can fix the error by using explicit casting of either operand.  
 Console.WriteLine(dec + (decimal)dub);  
 Console.WriteLine((double)dec + dub);  
-  
 ```  
   
  O resultado é o seguinte erro:  
@@ -121,3 +117,4 @@ Console.WriteLine((double)dec + dub);
  [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)
+
