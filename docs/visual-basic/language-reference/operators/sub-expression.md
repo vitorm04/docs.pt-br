@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 57202c0781ee62d1ac8855f4e20277feb7edef72
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ Sub ( [ parameterlist ] ) statement
 Sub ( [ parameterlist ] )  
   [ statements ]  
 End Sub  
-  
 ```  
   
 ## <a name="parts"></a>Partes  
@@ -86,3 +86,4 @@ End Sub
  [Operadores e expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
  [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)   
  [Conversão de Delegado Reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+

@@ -31,17 +31,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92750040466914389abc3e8bf1de84c44bb0987c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 02491e64813f84d031debdca09161d88aab1b94c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 Classes são declaradas usando a palavra-chave `class`, conforme mostrado no exemplo a seguir:  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -71,12 +71,12 @@ Classes são declaradas usando a palavra-chave `class`, conforme mostrado no exe
   
 -   [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
 -   [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
+-   [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+
 -   [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
 -   [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)  
@@ -121,3 +121,4 @@ Console.Write(child1.name);   // Error
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)
+

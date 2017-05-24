@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 0d53580353390cd8b2575288fe57b5dac44aa810
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -68,3 +69,4 @@ Continue { Do | For | While }
  [Para... Próxima instrução](../../../visual-basic/language-reference/statements/for-next-statement.md)   
  [While... End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
  [Instrução Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+

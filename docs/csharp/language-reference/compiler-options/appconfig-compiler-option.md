@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 349dbdde7e5f375621ead184c6022709cbd8cf83
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: ced4927526d86d29c502a898c60c528df497bb56
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="appconfig-c-compiler-options"></a>/appconfig (opções do compilador C#)
@@ -76,5 +77,5 @@ A opção do compilador **/appconfig** habilita um aplicativo em C# a especifica
   
 ## <a name="see-also"></a>Consulte também  
  [Visão Geral da Unificação de Assemblies no .NET Framework](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
- [\<supportPortability> Element](http://msdn.microsoft.com/library/6453ef66-19b4-41f3-b712-52d0c2abc9ca)   
+ [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
  [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)

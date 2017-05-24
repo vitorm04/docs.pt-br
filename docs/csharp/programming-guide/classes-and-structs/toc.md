@@ -41,7 +41,7 @@
 ### [Construtores particulares](private-constructors.md)
 ### [Construtores estáticos](static-constructors.md)
 ### [Como escrever um construtor de cópia](how-to-write-a-copy-constructor.md)
-## [Destruidores](destructors.md)
+## [Finalizadores](destructors.md)
 ## [Inicializadores de objeto e coleção](object-and-collection-initializers.md)
 ### [Como inicializar objetos usando um inicializador de objeto](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [Como inicializar um dicionário com um inicializador de coleção](how-to-initialize-a-dictionary-with-a-collection-initializer.md)

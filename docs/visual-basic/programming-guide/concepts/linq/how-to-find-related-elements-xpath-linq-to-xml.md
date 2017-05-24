@@ -15,9 +15,10 @@ ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3dfb4e7f41e484e99292a2883f8f0fe91ed2c57b
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 
@@ -64,7 +65,6 @@ Else
     Console.WriteLine("Results differ")  
 End If  
 Console.WriteLine(customer1)  
-  
 ```  
   
  Este exemplo gera a seguinte saída:  
@@ -89,3 +89,4 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também  
  [LINQ to XML para XPath usuários (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

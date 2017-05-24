@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a246df995d34308c0d5bc06aacd2a07b2e296201
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -45,7 +46,6 @@ Declare uma variável do [tipo de dados Object](../../../../visual-basic/languag
  O exemplo a seguir declara um `Object` variável e atribui a instância atual para ele.  
   
 ```  
-  
       Dim thisObject As Object  
 thisObject = "This is an Object"  
 ```  
@@ -73,3 +73,4 @@ Dim thisObject As Object= "This is an Object"
  [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)   
  [Inferência de tipo local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
  [Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+

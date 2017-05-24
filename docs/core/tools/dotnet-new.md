@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 14e6b4a2ffe5145a6d5d856c2149569b9ae39ff9
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/05/2017
 
 ---
 
@@ -89,7 +90,7 @@ Mostra todos os modelos de um tipo específico de projeto durante a execução n
 
 Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais modelos têm as seguintes opções:
 
-**console, xunit, mstest, web, webapi**
+**console, xunit, mstest, web, webapi** 
 
 `-f|--framework` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1` (Padrão: `netcoreapp1.0`)
 
@@ -97,7 +98,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 `-f|--framework` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1` (`Default: netcoreapp1.0`)
 
-`-au|--authentication` – O tipo de autenticação usado. Valores: `None` ou `Individual` (Padrão: `None`)
+`-au|--auth` – O tipo de autenticação usado. Valores: `None` ou `Individual` (Padrão: `None`)
 
 `-uld|--use-local-db` – Especifica se deve usar ou não o LocalDB em vez do SQLite. Valores: `true` ou `false` (Padrão: `false`)
 

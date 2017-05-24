@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 998925e423d0f642115b202486936c35378e2976
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -47,7 +48,6 @@ Multiplica dois números.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 number1 * number2  
 ```  
   
@@ -90,3 +90,4 @@ number1 * number2
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
  [Operadores aritméticos em Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+

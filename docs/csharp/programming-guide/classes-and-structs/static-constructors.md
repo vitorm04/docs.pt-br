@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10e66253bbf6249c8c08095983c539892ddb29d2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 728c3170cd14db4cbbd747ec8c7bbf5341681ade
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="static-constructors-c-programming-guide"></a>Construtores estáticos (Guia de Programação em C#)
@@ -65,4 +66,4 @@ Um construtor estático é usado para inicializar quaisquer dados [estáticos](.
  [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [Classes estáticas e membros de classes estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
- [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)

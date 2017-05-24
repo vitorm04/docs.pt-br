@@ -1,12 +1,11 @@
 ---
-title: Trabalhando com tipos de base no .NET Framework | Microsoft Docs
+title: Trabalhando com tipos de base no .NET | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-4.6
+ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,15 @@ caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 57d672e45e5b316f155f4bdb05320a4a6c4129db
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e1451f41b463e28a5fa305f23f3790bcfc066c30
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="working-with-base-types-in-the-net-framework"></a>Trabalhando com tipos de base no .NET Framework
-Esta seção descreve as operações de tipo base do .NET Framework, incluindo formatação, conversão e operações comuns.  
+# <a name="working-with-base-types-in-net"></a>Trabalhando com tipos base no .NET
+Esta seção descreve as operações de tipo base .NET, incluindo formatação, conversão e operações comuns.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conversão de tipos no .NET Framework](../../../docs/standard/base-types/type-conversion.md)  

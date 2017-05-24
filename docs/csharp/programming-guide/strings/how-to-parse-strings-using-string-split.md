@@ -31,9 +31,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c6d5ecb30efcff6051dc5ec6330938828d1ecae1
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -80,10 +81,10 @@ class TestStringSplit
     two  
     three<four  
 */  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)   
  [Expressões regulares do .NET Framework](https://msdn.microsoft.com/library/hs600312)
+

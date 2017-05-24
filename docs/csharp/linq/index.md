@@ -1,6 +1,6 @@
 ---
 title: "LINQ (Consulta Integrada à Linguagem)"
-description: "Introduz o LINQ (Consulta Integrada à Linguagem) em C#"
+description: "Introduz a LINQ (Consulta Integrada à Linguagem) em C#"
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 099775f5849eefca98a83d2986c5ecbb92b88782
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f63580ba16c2b776ec6f791001cdd48687ce41be
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -41,16 +42,16 @@ O exemplo a seguir mostra a operação de consulta completa. A operação comple
   
 -   Como uma regra ao escrever consultas LINQ, recomendamos que você use a sintaxe de consulta sempre que possível e a sintaxe de método sempre que necessário. Não há semântica ou diferença de desempenho entre as duas formas. As expressões de consulta são geralmente mais legíveis do que as expressões equivalentes escritas na sintaxe de método.  
   
--   Algumas operações de consulta, como <xref:System.Linq.Enumerable.Count%2A> ou <xref:System.Linq.Enumerable.Max%2A>, não têm nenhuma cláusula de expressão de consulta equivalente e, portanto, devem ser expressas como uma chamada de método. A sintaxe de método pode ser combinada com a sintaxe de consulta de várias maneiras. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
+-   Algumas operações de consulta, como <xref:System.Linq.Enumerable.Count%2A> ou <xref:System.Linq.Enumerable.Max%2A>, não apresentam cláusulas de expressão de consulta equivalentes e, portanto, devem ser expressas como chamadas de método. A sintaxe de método pode ser combinada com a sintaxe de consulta de várias maneiras. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
--   As expressões de consulta podem ser compiladas para árvores de expressão ou delegados, dependendo do tipo ao qual a consulta é aplicada. As consultas <xref:System.Collections.Generic.IEnumerable%601> são compiladas em delegados. As consultas <xref:System.Linq.IQueryable> e <xref:System.Linq.IQueryable%601> são compiladas nas árvores de expressão. Para obter mais informações, consulte [Árvores de expressão](../expression-trees.md).  
+-   As expressões de consulta podem ser compiladas para árvores de expressão ou delegados, dependendo do tipo ao qual a consulta é aplicada. As consultas <xref:System.Collections.Generic.IEnumerable%601> são compiladas para representantes. As consultas <xref:System.Linq.IQueryable> e <xref:System.Linq.IQueryable%601> são compiladas para árvores de expressão. Para obter mais informações, consulte [Árvores de expressão](../expression-trees.md).  
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Para obter mais detalhes sobre o LINQ, comece se familiarizando com alguns conceitos básicos em [Noções básicas sobre expressões de consulta](query-expression-basics.md), e, em seguida, leia a documentação para a tecnologia LINQ na qual você está interessado:   
 -   Documentos XML: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d)  
+-   ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
 -   Coleções do .NET, arquivos, cadeias de caracteres, etc.: [LINQ to Objects](../programming-guide/concepts/linq/linq-to-objects.md)
 

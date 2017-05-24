@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f43a0a635db938b273b9334b2982bace89159b25
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 1f137b21ff66a2acb58427ccd234c48e2d1b9aff
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Como escrever um construtor de cópia (Guia de Programação em C#)
@@ -47,4 +48,4 @@ O C# não fornece um construtor de cópia para objetos, mas é possível escreve
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a7faf0eb36fee114d5fed914484c7c5cda0ae399
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -53,7 +54,6 @@ Module StringExtensions
     End Sub  
   
 End Module  
-  
 ```  
   
  O método deve estar no escopo quando ele é chamado.  
@@ -124,3 +124,4 @@ End Module
  [Como: gravar um método de extensão](./how-to-write-an-extension-method.md)   
  [Métodos de extensão](./extension-methods.md)   
  [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+

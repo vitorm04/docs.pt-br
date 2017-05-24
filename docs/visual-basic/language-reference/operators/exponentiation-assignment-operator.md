@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a2a1bc2f9b5989f69caa6a19a953a0db39961312
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ Eleva o valor de uma variável ou propriedade à potência de uma expressão e a
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 variableorproperty ^= expression  
 ```  
   
@@ -81,3 +81,4 @@ variableorproperty ^= expression
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
  [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
+

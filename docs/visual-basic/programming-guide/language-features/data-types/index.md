@@ -36,9 +36,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5e73be9d9336a07cf4c5bf236dd69dbb28ce7940
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: c86e1bfacbe06d10915bd476a5c6f528fcebe70d
+ms.openlocfilehash: 2642145e496469eb8bcb382408fda2147f48b0d5
+ms.lasthandoff: 04/30/2017
 
 ---
 # <a name="data-types-in-visual-basic"></a>Tipos de dados no Visual Basic
@@ -68,6 +68,7 @@ O *tipo de dados* de um elemento de programação se refere a que tipo de dados 
  [Tipos de valor e tipos de referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
  [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
  [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+ [Tuplas](tuples.md)     
  [Solução de problemas de tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
  [Tipos de Dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
  [Uso Eficiente de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

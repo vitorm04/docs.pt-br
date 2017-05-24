@@ -12,10 +12,11 @@ caps.latest.revision: 7
 author: twsouthwick
 ms.author: tasou
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
 ms.openlocfilehash: 06ebf87e02c8fd745d9c2f3a55eca329323a7d91
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-compatibility-diagnostics"></a>Diagnóstico de Compatibilidade do .NET
@@ -478,7 +479,7 @@ O Diagnóstico de Compatibilidade do .NET são analisadores capacitados pelo Ros
 |Escopo|Edge|  
 |Versão|4.5|  
 |Tipo|Tempo de execução|  
-|APIs afetadas|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|APIs afetadas|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |Analisadores|CD0043|  
   
 <a name="diagnostic44"></a>   

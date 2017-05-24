@@ -36,9 +36,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: bd67ba46145fb20327f3a5f32dbd7d73c9117ff4
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -48,7 +49,6 @@ Executa a disjunção lógica em duas expressões do curto-circuito.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 result = expression1 OrElse expression2  
 ```  
   
@@ -98,3 +98,4 @@ result = expression1 OrElse expression2
  [Operador or](../../../visual-basic/language-reference/operators/or-operator.md)   
  [Operador IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)   
  [Operadores lógicos e bit a bit no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+

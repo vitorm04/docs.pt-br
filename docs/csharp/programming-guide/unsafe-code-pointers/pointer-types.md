@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 100fa20e69c9a1cd6133437c29d1d5955e871656
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ Console.ReadLine();
 //12  
 //--------  
 //12  
-  
 ```  
   
  Você não pode aplicar o operador de indireção para um ponteiro do tipo `void*`. No entanto, você pode usar uma conversão para converter um ponteiro nulo em qualquer outro tipo de ponteiro e vice-versa.  
@@ -160,3 +160,4 @@ Console.ReadLine();
  [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
  [Conversão boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+

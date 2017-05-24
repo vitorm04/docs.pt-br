@@ -2,6 +2,7 @@
 title: "Mitigação: suporte a toque e caneta com base em ponteiro | Microsoft Docs"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 

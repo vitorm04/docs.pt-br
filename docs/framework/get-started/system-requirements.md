@@ -20,84 +20,83 @@ caps.latest.revision: 95
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b550e69dfdf0db47b22c89dee4bc3a98d2beac16
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
+ms.openlocfilehash: ec4594343c5a78649d7d7a4d151545612da9138b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/11/2017
 
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos do sistema do .NET Framework
-As tabelas nesse tópico fornecem o hardware, o sistema operacional e os requisitos de software para o .NET Framework 4.5 e lançamentos pontuais (4.5.1 e 4.5.2), e o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e seus lançamentos pontuais (4.6.1 e 4.6.2) e o .NET Framework 4.7. Os ambientes de desenvolvimento que permitem desenvolver aplicativos para o .NET Framework possuem um conjunto separado de requisitos.  
-  
- Para saber mais e links de download, confira [Guia de instalação](../../../docs/framework/install/guide-for-developers.md).  
-  
- Para saber mais sobre o ciclo de vida de suporte de versões do .NET Framework, veja [Ciclo de vida do Suporte da Microsoft](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).  
-  
-## <a name="hardware-requirements"></a>Requisitos de hardware  
-  
-|||  
-|-|-|  
-|**Processador**|1 GHz|  
-|**RAM**|512 MB|  
-|**Espaço em disco (mínimo)**||  
-|32 bits|4,5 GB|  
-|64 bits|4,5 GB|  
-  
-## <a name="installation-requirements"></a>Requisitos de instalação  
-  
--   O .NET Framework exige privilégios de administrador para sua instalação. Se você não tiver direitos de administrador no computador no qual deseja instalar o .NET Framework, entre em contato com o administrador da rede.  
-  
-## <a name="supported-client-operating-systems"></a>Sistemas operacionais cliente compatíveis  
-  
-|Sistema operacional|Edições com suporte|Pré-instalado com o sistema operacional|Instalado separadamente|  
-|----------------------|------------------------|------------------------------|----------------------------|  
-| Atualização do Windows 10 para Criadores|32 bits e 64 bits|.NET Framework 4.7|| 
-|Atualização de Aniversário do Windows 10|32 bits e 64 bits|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]||  
-|Atualização de novembro do Windows 10|32 bits e 64 bits|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]||  
-|Windows 10|32 bits e 64 bits|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|  
-|[!INCLUDE[win81](../../../includes/win81-md.md)]|32 bits, 64 bits e ARM|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|  
-|[!INCLUDE[win8](../../../includes/win8-md.md)]|32 bits, 64 bits e ARM|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|  
-|Windows 7 SP1|32 bits e 64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|  
-|Windows Vista SP2|32 bits e 64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|  
-|Windows XP|32 bits e 64 bits|--|.NET Framework 4|  
-  
- **Observações:**  
-  
-- O .NET Framework 4.7 vem pré-instalado no Atualização do Windows 10 para Criadores. Ele não está disponível para instalação em outros sistemas operacionais Windows.
+As tabelas nesse tópico fornecem o hardware, o sistema operacional e os requisitos de software para o .NET Framework 4.5 e lançamentos pontuais (4.5.1 e 4.5.2), e o [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e seus lançamentos pontuais (4.6.1 e 4.6.2) e o .NET Framework 4.7. Os ambientes de desenvolvimento que permitem desenvolver aplicativos para o .NET Framework possuem um conjunto separado de requisitos.
 
--   Em sistemas com Windows 7, o .NET Framework exige o Windows 7 SP1. Se você estiver no Windows 7 e ainda não tiver instalado o Service Pack 1, faça isso antes de instalar o .NET Framework.  
-  
--   O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é compatível no Windows PE (Ambiente de Pré-Instalação do Windows). Nem todos os recursos são compatíveis com o Windows PE.  
-  
--   O .NET Framework 4 também oferece suporte à plataforma IA64.  
-  
--   Para todas as plataformas, recomendamos que você atualize para o Service Pack mais recente do Windows e instale as atualizações críticas disponíveis no [site Windows Update](http://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança.  
-  
--   Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.  
-  
-## <a name="supported-server-operating-systems"></a>Sistemas operacionais de servidor compatíveis  
-  
-|Sistema operacional|Edições com suporte|Pré-instalado com o sistema operacional|Instalado separadamente|  
-|----------------------|------------------------|------------------------------|----------------------------|  
-|Windows Server 2016|64 bits|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]||  
-|[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]|64 bits|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|  
-|[!INCLUDE[winserver8](../../../includes/winserver8-md.md)] (edição de 64 bits)|64 bits|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|  
-|Windows Server 2008 R2 SP1|64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|  
-|Windows Server 2008 SP2|32 bits e 64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|  
-  
- **Observações:**  
-  
--   [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] inclui o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], para que você não precise instalá-lo separadamente. Da mesma forma, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclui o [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].  
-  
--   O .NET Framework é compatível na Função Núcleo do Servidor com Windows Server 2008 R2 SP1 ou posterior, mas não é compatível no Windows Server 2008 R2 para sistemas baseados em Itanium.  
-  
--   Windows Server 2008 SP2, o .NET Framework não é compatível na Função Server Core.  
-  
--   Para todas as plataformas, recomendamos que você atualize para o Service Pack e as atualizações críticas disponíveis mais recentes do Windows no [site Windows Update](http://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança. A instalação do Windows Service Pack mais recente pode ser necessária em alguns sistemas operacionais.  
-  
--   Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.  
-  
-## <a name="see-also"></a>Consulte também  
+ Para saber mais e links de download, confira [Guia de instalação](../../../docs/framework/install/guide-for-developers.md).
+
+ Para saber mais sobre o ciclo de vida de suporte de versões do .NET Framework, veja [Ciclo de vida do Suporte da Microsoft](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO).
+
+## <a name="hardware-requirements"></a>Requisitos de hardware
+
+|||
+|-|-|
+|**Processador**|1 GHz|
+|**RAM**|512 MB|
+|**Espaço em disco (mínimo)**||
+|32 bits|4,5 GB|
+|64 bits|4,5 GB|
+
+## <a name="installation-requirements"></a>Requisitos de instalação
+
+- O .NET Framework exige privilégios de administrador para sua instalação. Se você não tiver direitos de administrador no computador no qual deseja instalar o .NET Framework, entre em contato com o administrador da rede.
+
+## <a name="supported-client-operating-systems"></a>Sistemas operacionais cliente compatíveis
+
+|Sistema operacional|Edições com suporte|Pré-instalado com o sistema operacional|Instalado separadamente|
+|----------------------|------------------------|------------------------------|----------------------------|
+| Atualização do Windows 10 para Criadores|32 bits e 64 bits|.NET Framework 4.7|| 
+|Atualização de Aniversário do Windows 10|32 bits e 64 bits|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET Framework 4.7|
+|Atualização de novembro do Windows 10|32 bits e 64 bits|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]||
+|Windows 10|32 bits e 64 bits|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+|[!INCLUDE[win81](../../../includes/win81-md.md)]|32 bits, 64 bits e ARM|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
+|[!INCLUDE[win8](../../../includes/win8-md.md)]|32 bits, 64 bits e ARM|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+|Windows 7 SP1|32 bits e 64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|
+|Windows Vista SP2|32 bits e 64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+|Windows XP|32 bits e 64 bits|--|.NET Framework 4|
+
+ **Observações:**
+
+- Em sistemas com Windows 7, o .NET Framework exige o Windows 7 SP1. Se você estiver no Windows 7 e ainda não tiver instalado o Service Pack 1, faça isso antes de instalar o .NET Framework.
+
+- O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é compatível no Windows PE (Ambiente de Pré-Instalação do Windows). Nem todos os recursos são compatíveis com o Windows PE.
+
+- O .NET Framework 4 também oferece suporte à plataforma IA64.
+
+- Para todas as plataformas, recomendamos que você atualize para o Service Pack mais recente do Windows e instale as atualizações críticas disponíveis no [site Windows Update](http://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança.
+
+- Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.
+
+## <a name="supported-server-operating-systems"></a>Sistemas operacionais de servidor compatíveis
+
+|Sistema operacional|Edições com suporte|Pré-instalado com o sistema operacional|Instalado separadamente|
+|----------------------|------------------------|------------------------------|----------------------------|
+|Windows Server 2016|64 bits|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET Framework 4.7|
+|[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)]|64 bits|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
+|[!INCLUDE[winserver8](../../../includes/winserver8-md.md)] (edição de 64 bits)|64 bits|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
+|Windows Server 2008 R2 SP1|64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
+|Windows Server 2008 SP2|32 bits e 64 bits|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+
+ **Observações:**
+
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] inclui o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], para que você não precise instalá-lo separadamente. Da mesma forma, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclui o [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+
+- O .NET Framework é compatível na Função Núcleo do Servidor com Windows Server 2008 R2 SP1 ou posterior, mas não é compatível no Windows Server 2008 R2 para sistemas baseados em Itanium.
+
+- Windows Server 2008 SP2, o .NET Framework não é compatível na Função Server Core.
+
+- Para todas as plataformas, recomendamos que você atualize para o Service Pack e as atualizações críticas disponíveis mais recentes do Windows no [site Windows Update](http://go.microsoft.com/fwlink/?LinkId=168461) para garantir a melhor compatibilidade e segurança. A instalação do Windows Service Pack mais recente pode ser necessária em alguns sistemas operacionais.
+
+- Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.
+
+## <a name="see-also"></a>Consulte também
  [Guia de instalação](../../../docs/framework/install/guide-for-developers.md)   
  [Introdução](../../../docs/framework/get-started/index.md)   
  [Solução de problemas](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

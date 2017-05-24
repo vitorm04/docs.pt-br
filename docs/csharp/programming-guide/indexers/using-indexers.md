@@ -27,9 +27,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e9e8612e12354cfc6808e2a6ddda3594988c548b
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -43,7 +44,6 @@ public int this[int index]    // Indexer declaration
 {  
     // get and set accessors  
 }  
-  
 ```  
   
 ## <a name="remarks"></a>Comentários  
@@ -98,3 +98,4 @@ public int this [int index]   // Indexer declaration
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+

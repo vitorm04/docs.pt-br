@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 7a5ad8422f133c0bb5da875deaeab6c1dab13028
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -72,3 +73,4 @@ Transfere o controle para uma `Function`, `Sub`, ou um procedimento de bibliotec
  [Instrução sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
  [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   
  [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+

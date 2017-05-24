@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c727064b1c24752e9f8c6e9cd4472a6c1bdf1f29
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,13 +43,11 @@ Os tipos anônimos fornecem um modo conveniente de encapsular um conjunto de pro
  O exemplo a seguir mostra um tipo anônimo que é inicializado com duas propriedades chamadas `Amount` e `Message`.  
   
 ```csharp  
-  
 var v = new { Amount = 108, Message = "Hello" };  
   
 // Rest the mouse pointer over v.Amount and v.Message in the following  
 // statement to verify that their inferred types are int and string.  
 Console.WriteLine(v.Amount + v.Message);  
-  
 ```  
   
  Os tipos anônimos são normalmente usados na cláusula [select](../../../csharp/language-reference/keywords/select-clause.md) de uma expressão de consulta para retornar um subconjunto das propriedades de cada objeto na sequência de origem. Para obter mais informações sobre consultas, consulte [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md).  
@@ -83,3 +82,4 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
  [Inicializadores de Objeto e Coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
  [Introdução ao LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

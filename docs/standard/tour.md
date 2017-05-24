@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-translationtype: Human Translation
-ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
-ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: 50e5b333f892cf469e9f3fe57a0325ac6d8e641f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -27,7 +28,7 @@ Consulte [Componentes de arquitetura do .NET](components.md) para saber mais sob
 
 ## <a name="how-to-run-the-code-samples"></a>Como executar os exemplos de código
 
-Para saber como configurar um ambiente de desenvolvimento para executar os exemplos de código, consulte [Introdução](getting-started.md).  É possível copiar e colar os exemplos de código desta página no seu ambiente para executá-los. 
+Para saber como configurar um ambiente de desenvolvimento para executar os exemplos de código, consulte [Introdução](get-started.md).  É possível copiar e colar os exemplos de código desta página no seu ambiente para executá-los. 
 
 > [!NOTE]
 No futuro, este site de documentação terá a capacidade de executar esses exemplos de código no seu navegador.
@@ -62,7 +63,7 @@ No exemplo a seguir, o tempo de execução gerará uma exceção `InvalidIndexEx
 
 ## <a name="working-with-unmanaged-resources"></a>Trabalhando com recursos não gerenciados
 
-Alguns objetos fazem referência a *recursos não gerenciados*. Recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET.  Por exemplo, um identificador de arquivo é um recurso não gerenciado.  Um objeto @System.IO.FileStreamé um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado.  Quando você termina de usar o fluxo de arquivos, é necessário liberar o identificador de arquivo.
+Alguns objetos fazem referência a *recursos não gerenciados*. Recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET.  Por exemplo, um identificador de arquivo é um recurso não gerenciado.  Um objeto @System.IO.FileStream é um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado.  Quando você termina de usar o fluxo de arquivos, é necessário liberar o identificador de arquivo.
 
 No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface @System.IDisposable.  Quando você termina de usar o objeto, você chama o método @System.IDisposable.Dispose do objeto, responsável por liberar quaisquer recursos não gerenciados.  Linguagens .NET fornecem uma sintaxe `using` conveniente para esses objetos, como no exemplo a seguir:
 
@@ -150,7 +151,7 @@ Se você estiver interessado em um tour pelos recursos do C#, confira [Tour do C
 
 Se você estiver interessado em um tour pelos recursos do F#, confira [Tour do F#](../fsharp/tour.md).
 
-Se você deseja começar a gravar códigos, confira [Introdução](getting-started.md).
+Se você deseja começar a gravar códigos, confira [Introdução](get-started.md).
 
 Para saber mais sobre componentes importantes do .NET, confira [Componentes de Arquitetura do .NET](components.md).
 

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 49687cfcf77ae4aba2df7c612d6fd430669ab6da
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -61,9 +62,9 @@ event EventHandler IDrawingObject.OnDraw
                 }  
             }  
         }  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [Eventos](../../../csharp/programming-guide/events/index.md)   
  [event](../../../csharp/language-reference/keywords/event.md)
+

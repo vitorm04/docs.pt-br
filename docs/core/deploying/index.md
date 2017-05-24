@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-translationtype: Human Translation
-ms.sourcegitcommit: 7cb3ed91b4dd80286035f8f445e7bbb43641e4e9
-ms.openlocfilehash: b0fd29de1879990dada25cd50df83f6675bf85d9
-ms.lasthandoff: 04/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
+ms.openlocfilehash: 31503e39d8a96092dbce03c17397e1adfec6421e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/13/2017
 
 ---
 
@@ -22,7 +23,7 @@ Você pode criar dois tipos de implantações de aplicativos do .NET Core:
 
 - Implantação dependente de estrutura. Como o nome indica, a FDD (implantação dependente de estrutura) se baseia na presença de uma versão compartilhada em todo o sistema do .NET Core no sistema de destino. Como o .NET Core já está presente, seu aplicativo também é portátil entre instalações do .NET Core. Seu aplicativo conterá somente seu próprio código e as dependências de terceiros que estiverem fora de bibliotecas .NET Core. As FDDs contêm arquivos *.dll* que podem ser iniciados por meio do [utilitário dotnet](../tools/dotnet.md) na linha de comando. Por exemplo, `dotnet app.dll` executa um aplicativo chamado `app`.
 
-- Implantação autocontida. Ao contrário da FDD, a SDC (implantação autocontida) não se baseia na presença de componentes compartilhados no sistema de destino. Todos os componentes, inclusive as bibliotecas e o tempo de execução do .NET Core, são incluídos com o aplicativo e isolados de outros aplicativos .NET Core. As SCDs incluem um arquivo executável (como o *app.exe* em plataformas Windows para um aplicativo chamado `app`), que é uma versão renomeada do host específico da plataforma .NET Core, e um arquivo *.dll* (como *app.dll*), que é o aplicativo real.
+- Implantação autocontida. Ao contrário da FDD, a SCD (implantação autocontida) não se baseia na presença de componentes compartilhados no sistema de destino. Todos os componentes, inclusive as bibliotecas e o tempo de execução do .NET Core, são incluídos com o aplicativo e isolados de outros aplicativos .NET Core. As SCDs incluem um arquivo executável (como o *app.exe* em plataformas Windows para um aplicativo chamado `app`), que é uma versão renomeada do host específico da plataforma .NET Core, e um arquivo *.dll* (como *app.dll*), que é o aplicativo real.
 
 ## <a name="framework-dependent-deployments-fdd"></a>FDD (implantação dependente de estrutura)
 
@@ -72,7 +73,6 @@ Para obter exemplos passo a passo de como implantar aplicativos .NET Core com fe
 - Implantação dependente de estrutura com dependências de terceiros
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
-- Implantação autocontida de baixo volume
 
 # <a name="see-also"></a>Consulte também
 
@@ -80,3 +80,4 @@ Para obter exemplos passo a passo de como implantar aplicativos .NET Core com fe
 [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)   
 [Pacotes, metapacotes e estruturas](../packages.md)   
 [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+

@@ -10,9 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
 ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -42,7 +44,7 @@ O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáv
 
 ## <a name="data-structures"></a>Estruturas de dados
 
-O .NET inclui um conjunto de estruturas de dados que são burros de carga de quase todos os aplicativos .NET. Elas são em sua maioria coleções, mas também incluem outros tipos.
+O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET.  Elas são em sua maioria coleções, mas também incluem outros tipos.
 
 *   [Matriz](https://msdn.microsoft.com/library/system.array.aspx) – representa uma matriz de objetos fortemente tipados que podem ser acessados por índice. Tem um tamanho fixo, de acordo com sua construção.
 *   [Lista](https://msdn.microsoft.com/library/6sh2ey19.aspx) – representa uma lista fortemente tipada de objetos que podem ser acessados por índice. É redimensionado automaticamente conforme necessário.
@@ -63,9 +65,4 @@ O .NET inclui um conjunto de APIs utilitárias que fornecem funcionalidade para 
 Há muitos modelos de aplicativo que podem ser usados com o .NET, fornecidos por várias empresas.
 
 *   [ASP.NET](http://asp.net) – fornece uma estrutura da Web para a criação de sites e serviços. Suporte para Windows, Linux e macOS (depende de versão do ASP.NET).
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

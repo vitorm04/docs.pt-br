@@ -45,9 +45,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 96254ef47f1455f89df0e683dbd589d77af58c35
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -137,3 +138,4 @@ Loop { While | Until } condition
  [Estruturas de controle aninhadas](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
  [Instrução Exit](../../../visual-basic/language-reference/statements/exit-statement.md)   
  [Instrução While...End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: a15a60f6c04c19e34447f6b9e19f7bb484a61d29
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -43,7 +44,6 @@ Compara duas variáveis de referência de objeto.
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
-  
 result = object1 IsNot object2  
 ```  
   
@@ -77,3 +77,4 @@ result = object1 IsNot object2
  [Operador TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)   
  [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
  [Como testar se dois objetos são iguais](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+

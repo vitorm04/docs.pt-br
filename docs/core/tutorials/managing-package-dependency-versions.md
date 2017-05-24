@@ -56,19 +56,19 @@ Asseguramos que, se você corrigir suas dependências para aquelas fornecidas ju
 
 Embora haja uma grande lista de todos os pacotes e suas versões lançadas com o .NET Core 1.0, você pode não precisar examiná-la se seu código estiver em determinados cenários.
 
-**Você tem somente dependências de ** `NETStandard.Library`**?**
+**Você tem somente dependências de** `NETStandard.Library`**?**
 
 Se assim, você deve corrigir o pacote `NETStandard.Library` para a versão `1.6`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
 
-**Você tem somente dependências de ** `Microsoft.NETCore.App`**?**
+**Você tem somente dependências de** `Microsoft.NETCore.App`**?**
 
 Se assim, você deve corrigir o pacote `Microsoft.NETCore.App` para a versão `1.0.0`.  Como esse é um metapacote auxiliar, o fechamento do seu pacote também é corrigido para 1.0.
 
-**Você está [cortando](../deploying/reducing-dependencies.md) as dependências do seu metapacote ** `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
+**Você está [cortando](../deploying/reducing-dependencies.md) as dependências do seu metapacote**  `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
 
 Nesse caso, você deve garantir que o metapacote de início seja corrigido para 1.0.  Os pacotes individuais dos quais você depende após o corte também são corrigidos para 1.0.
 
-**Você tem dependências de pacotes fora dos metapacotes ** `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
+**Você tem dependências de pacotes fora dos metapacotes** `NETStandard.Library` **ou** `Microsoft.NETCore.App` **?**
 
 Nesse caso, você precisa corrigir suas outras dependências para 1.0.  Consulte as versões do pacote correto e números de build no fim desse artigo.
 

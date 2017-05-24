@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: f22ffc11ba3bce4c568c67459995842c3c103b6b
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mitigação: desserialização de objetos em domínios de aplicativos
@@ -28,7 +29,7 @@ Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo c
   
 1.  Um aplicativo usa dois ou mais domínios de aplicativo com bases de aplicativo diferentes.  
   
-2.  Alguns tipos são adicionados explicitamente a <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> chamando um método como <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> ou <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Esses tipos não são marcados como serializáveis e não são armazenados no cache de assembly global.  
+2.  Alguns tipos são adicionados explicitamente a <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> chamando-se um método como <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName> ou <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>. Esses tipos não são marcados como serializáveis e não são armazenados no cache de assembly global.  
   
 3.  Mais tarde, a execução do código no domínio de aplicativo não padrão tenta ler um valor de um arquivo de configuração ou usar XML para desserializar um objeto.  
   
@@ -49,7 +50,7 @@ Em alguns casos, quando um aplicativo usa dois ou mais domínios de aplicativo c
 ## <a name="mitigation"></a>Redução  
  Para resolver esse problema, faça o seguinte  
   
-1.  Procure a chamada para `get_Evidence` na pilha de chamadas quando a exceção for acionada. A exceção pode ser qualquer uma de um grande subconjunto de exceções, incluindo <xref:System.IO.FileNotFoundException> e <xref:System.Runtime.Serialization.SerializationException>.  
+1.  Procure a chamada para `get_Evidence` na pilha de chamadas quando a exceção for acionada. A exceção pode ser qualquer uma do grande subconjunto de exceções, incluindo <xref:System.IO.FileNotFoundException> e <xref:System.Runtime.Serialization.SerializationException>.  
   
 2.  Identifique o local no aplicativo em que nenhum objeto é adicionado ao contexto de chamada lógica e adicione o seguinte código:  
   
