@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1eeccc9b4f1cb00d434b1af61656b64bb860dbb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 324055a730b977faad637a14362b5c906931c721
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Matrizes no Visual Basic
@@ -50,7 +51,6 @@ Uma matriz é um conjunto de valores que são logicamente relacionados uns aos o
  Alguns exemplos rápidos antes da explicação:  
   
 ```vb  
-  
 'Declare a single-dimension array of 5 values  
 Dim numbers(4) As Integer   
   
@@ -261,11 +261,11 @@ Dim prices(3, 4, 5) As Long
   
  Você pode descobrir o tipo de dados de uma matriz ou seus elementos de várias maneiras.  
   
--   Você pode chamar o método <xref:System.Object.GetType%2A?displayProperty=fullName> na variável para receber um objeto <xref:System.Type> para o tipo da variável de tempo de execução. O objeto <xref:System.Type> mantém informações abrangentes em suas propriedades e métodos.  
+-   Você pode chamar o método <xref:System.Object.GetType%2A?displayProperty=fullName> na variável para receber um objeto <xref:System.Type> para o tipo de tempo de execução da variável. O objeto <xref:System.Type> mantém informações abrangentes em suas propriedades e métodos.  
   
 -   Você pode passar a variável para o a função <xref:Microsoft.VisualBasic.Information.TypeName%2A> para receber um `String` que contém o nome do tipo de tempo de execução.  
   
--   Você pode passar a variável para a função <xref:Microsoft.VisualBasic.Information.VarType%2A> para receber um valor `VariantType` que contém a classificação de tipo da variável.  
+-   Você pode passar a variável para a função <xref:Microsoft.VisualBasic.Information.VarType%2A> para receber um valor `VariantType` que representa a classificação de tipo da variável.  
   
  O exemplo a seguir chama a função `TypeName` para determinar o tipo da matriz e o tipo dos elementos na matriz. O tipo de matriz é `Integer(,)` e os elementos na matriz são do tipo `Integer`.  
   
@@ -276,9 +276,9 @@ Dim prices(3, 4, 5) As Long
   
  Se precisar alterar o tamanho de uma matriz, você deverá usar a [instrução ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md). Ao fazer isso, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] cria uma nova matriz e libera a matriz anterior para descarte. Isso leva o tempo da execução. Portanto, se o número de itens com o qual você está trabalhando for alterado com frequência ou se você não puder prever o número máximo de itens que precisa, você poderá obter melhor desempenho usando uma coleção.  
   
- Para algumas coleções, você pode atribuir uma chave para qualquer objeto que coloque na coleção para que você possa recuperar rapidamente o objeto usando a chave.  
+ Para algumas coleções, você pode atribuir uma chave para qualquer objeto que colocar na coleção para que você possa recuperar rapidamente o objeto, usando a chave.  
   
- Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=fullName>. Uma coleção genérica impõe segurança de tipo para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.  
+ Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=fullName>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela. Ao recuperar um elemento de uma coleção genérica, você não precisa determinar seu tipo de dados ou convertê-lo.  
   
  Para obter mais informações sobre coleções, consulte [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
   
@@ -303,3 +303,4 @@ Dim prices(3, 4, 5) As Long
  <xref:System.Array>   
  [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)   
  [Instrução ReDim](../../../../visual-basic/language-reference/statements/redim-statement.md)
+

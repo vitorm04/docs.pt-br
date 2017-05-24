@@ -1,5 +1,5 @@
 ---
-title: Um tour pelo C# | Guia do C#
+title: "Um Tour no C# – Guia do C# | Microsoft Docs"
 description: "Novato em C#? Conheça os fundamentos da linguagem."
 keywords: .NET, .NET Core, C#, C# Primer, Guia do C#
 author: BillWagner
@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: d09d4c8696447ff83fe66f9376413345f369ca99
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: f122f59dd6f194facd98f4c6fa7f84c658c02a90
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
