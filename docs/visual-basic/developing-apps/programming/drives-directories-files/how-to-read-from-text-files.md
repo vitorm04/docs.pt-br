@@ -34,19 +34,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 362745101d1a8f7dd61b5e3aabe1c27190c46c07
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4ea4f6ebfaf06a8b2b5d161d9986eebd28f50d5b
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Como ler a partir de arquivos de texto no Visual Basic
-O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> do objeto `My.Computer.FileSystem` permite que você leia em um arquivo de texto. A codificação do arquivo pode ser especificada se o conteúdo do arquivo usar uma codificação, como ASCII ou UTF-8.  
+O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> do objeto `My.Computer.FileSystem` permite que você leia um arquivo de texto. A codificação do arquivo pode ser especificada se o conteúdo do arquivo usar uma codificação, como ASCII ou UTF-8.  
   
  Se você estiver lendo um arquivo com caracteres estendidos, será necessário especificar a codificação do arquivo.  
   
 > [!NOTE]
->  Para ler uma linha de texto por vez em um arquivo, use o método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> do objeto `My.Computer.FileSystem`. O método `OpenTextFileReader` retorna um objeto <xref:System.IO.StreamReader>. Você pode usar o método <xref:System.IO.StreamReader.ReadLine%2A> do objeto `StreamReader` para ler um arquivo, uma linha por vez. Você pode testar para o final do arquivo usando o método <xref:System.IO.StreamReader.EndOfStream%2A> do objeto `StreamReader`.  
+>  Para ler em um arquivo uma linha de texto por vez, use o método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> do objeto `My.Computer.FileSystem`. O método `OpenTextFileReader` retorna um objeto <xref:System.IO.StreamReader>. Você pode usar o método <xref:System.IO.StreamReader.ReadLine%2A> do objeto `StreamReader` para ler o arquivo uma linha por vez. Você pode testar o final do arquivo usando o método <xref:System.IO.StreamReader.EndOfStream%2A> do objeto `StreamReader`.  
   
 ### <a name="to-read-from-a-text-file"></a>Para ler um arquivo de texto  
   
@@ -63,13 +64,13 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de caracteres de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).  
+-   O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero, contém somente espaço em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).  
   
--   O caminho não é válido, porque é `Nothing` (<xref:System.ArgumentNullException>).  
+-   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   O arquivo não existe (<xref:System.IO.FileNotFoundException>).  
   
--   O arquivo está sendo usado por outro processo ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
+-   O arquivo está em uso por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
   
 -   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
@@ -77,7 +78,7 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A>
   
 -   Não há memória suficiente para gravar a cadeia de caracteres no buffer (<xref:System.OutOfMemoryException>).  
   
--   O usuário não tiver as permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+-   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
  Não tome decisões sobre o conteúdo do arquivo com base no nome do arquivo. Por exemplo, o arquivo Form1.vb pode não ser um arquivo de código-fonte do [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
   

@@ -32,7 +32,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: cc3022ec31f93f894f639699cef2a788101bff7b
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="iteration-statements-c-reference"></a>Instruções de iteração (Referência de C#)
