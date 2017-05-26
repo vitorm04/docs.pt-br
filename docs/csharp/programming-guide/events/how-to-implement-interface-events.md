@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4a5b5b862a88d7008049e411e6dc0f020952cc5c
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (Guia de Programação em C#)

@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3cc29c37879a3edafb05b482698393f521b6c3b3
-ms.openlocfilehash: b4b0ac5a58fa37e5b39bcba262ba0fac443725e6
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/26/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 
@@ -56,7 +56,7 @@ Lista todos os testes descobertos no projeto atual.
 
 `--filter <EXPRESSION>`
 
-Filtra os testes no projeto atual usando a expressão especificada. Para saber mais sobre o suporte à filtragem, consulte [Executar testes seletivos de unidade no Visual Studio usando o TestCaseFilter](https://aka.ms/vstest-filtering).
+Filtra os testes no projeto atual usando a expressão especificada. Para saber mais, confira a seção [Filtrar detalhes da opção](#filter-option-details). Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -98,10 +98,46 @@ Execute os testes no projeto no diretório atual:
 
 Execute os testes no projeto `test1`:
 
-`dotnet test ~/projects/test1/test1.csproj` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>Filtrar detalhes da opção
+
+`--filter <EXPRESSION>`
+
+`<Expression>` tem o formato `<property><operator><value>[|&<Expression>]`.
+
+`<property>` é um atributo de `Test Case`. A seguir estão as propriedades com suporte nas estruturas populares de teste de unidade:
+
+| Estrutura de teste | Propriedades com suporte                                                                                      |
+| :------------: | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nome</li><li>ClassName</li><li>Prioridade</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Características</li></ul>                                   |
+
+O `<operator>` descreve a relação entre a propriedade o valor:
+
+| Operador | Função        |
+| :------: | --------------- |
+| `=`      | Correspondência exata     |
+| `!=`     | Sem correspondência exata |
+| `~`      | Contém        |
+
+`<value>` é uma cadeia de caracteres. As pesquisas não diferenciam maiúsculas de minúsculas.
+
+Uma expressão sem um `<operator>` é automaticamente considerada como um `contains` na propriedade `FullyQualifiedName` (por exemplo, `dotnet test --filter xyz` é o mesmo que `dotnet test --filter FullyQualifiedName~xyz`).
+
+As expressões podem ser associadas a operadores condicionais:
+
+| Operador | Função |
+| :------: | :------: |
+| `|`      | OU       |
+| `&`      | AND      |
+
+Você pode incluir expressões em parênteses ao usar operadores condicionais (por exemplo: `(Name~TestMethod1) | (Name~TestMethod2)`).
+
+Para obter informações e exemplos adicionais sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
 
 ## <a name="see-also"></a>Consulte também
 
-* [Estruturas de destino](../../standard/frameworks.md)
-* [Catálogo de RID (Identificador de Tempo de Execução)](../rid-catalog.md)
+[Estruturas e Destinos](../../standard/frameworks.md)   
+[Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
 

@@ -37,7 +37,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
 ms.openlocfilehash: 848f7c3eac56f85d2af4c613645d54b70061d072
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Como gravar texto em arquivos no diretório Meus Documentos no Visual Basic

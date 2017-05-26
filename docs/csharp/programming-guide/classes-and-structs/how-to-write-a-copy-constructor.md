@@ -32,7 +32,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
 ms.openlocfilehash: 1f137b21ff66a2acb58427ccd234c48e2d1b9aff
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>Como escrever um construtor de cópia (Guia de Programação em C#)
