@@ -18,7 +18,7 @@ ms.lasthandoff: 04/08/2017
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img data-hoverimage="/dotnet/articles/images/hub/featured-1.svg" src="/dotnet/articles/images/hub/featured-1.png" alt="" />
+                                        <img data-hoverimage="/dotnet/images/hub/featured-1.svg" src="/dotnet/images/hub/featured-1.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="cardText">
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/08/2017
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img data-hoverimage="/dotnet/articles/images/hub/featured-2.svg" src="/dotnet/articles/images/hub/featured-2.png" alt="" />
+                                        <img data-hoverimage="/dotnet/images/hub/featured-2.svg" src="/dotnet/images/hub/featured-2.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="cardText">
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/08/2017
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img data-hoverimage="/dotnet/articles/images/hub/featured-3.svg" src="/dotnet/articles/images/hub/featured-3.png" alt="" />
+                                        <img data-hoverimage="/dotnet/images/hub/featured-3.svg" src="/dotnet/images/hub/featured-3.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="cardText">
@@ -82,14 +82,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/net.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/welcome">O que é o .NET?</a></h3>
-                                                <p><a href="/dotnet/articles/standard/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/standard/tour">Tour do .NET</a></p>
-                                                <p><a href="/dotnet/articles/standard/components">Conceitos de arquitetura do .NET</a></p>
+                                                <h3><a href="/dotnet/welcome">O que é o .NET?</a></h3>
+                                                <p><a href="/dotnet/standard/getting-started">Introdução</a></p>
+                                                <p><a href="/dotnet/standard/tour">Tour do .NET</a></p>
+                                                <p><a href="/dotnet/standard/components">Conceitos de arquitetura do .NET</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -101,14 +101,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/netcore.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netcore.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/core">Guia do .NET Core</a></h3>
-                                                <p><a href="/dotnet/articles/core/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/core/tutorials">Tutoriais</a></p>
-                                                <p><a href="/dotnet/articles/core/porting">Portabilidade do .NET Framework</a></p>
+                                                <h3><a href="/dotnet/core">Guia do .NET Core</a></h3>
+                                                <p><a href="/dotnet/core/getting-started">Introdução</a></p>
+                                                <p><a href="/dotnet/core/tutorials">Tutoriais</a></p>
+                                                <p><a href="/dotnet/core/porting">Portabilidade do .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                             </div>
                                         </div>
@@ -121,14 +121,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/netframework.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netframework.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/framework/">Guia do .NET Framework</a></h3>
-                                                <p><a href="/dotnet/articles/framework/get-started/">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/framework/development-guide">Tutoriais</a></p>
-                                                <p><a href="/dotnet/articles/framework/develop-client-apps">Desenvolvimento do cliente</a></p>
+                                                <h3><a href="/dotnet/framework/">Guia do .NET Framework</a></h3>
+                                                <p><a href="/dotnet/framework/get-started/">Introdução</a></p>
+                                                <p><a href="/dotnet/framework/development-guide">Tutoriais</a></p>
+                                                <p><a href="/dotnet/framework/develop-client-apps">Desenvolvimento do cliente</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/xamarin.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/xamarin.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -161,14 +161,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/csharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/csharp.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/csharp">Guia do C#</a></h3>
-                                                <p><a href="/dotnet/articles/csharp/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/csharp/tour-of-csharp">Tour do C#</a></p>
-                                                <p><a href="/dotnet/articles/csharp/language-reference">Referência da linguagem C#</a></p>
+                                                <h3><a href="/dotnet/csharp">Guia do C#</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started">Introdução</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp">Tour do C#</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference">Referência da linguagem C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,14 +180,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/fsharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/fsharp.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/fsharp">Guia do F#</a></h3>
-                                                <p><a href="/dotnet/articles/fsharp/tutorials/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/tour">Tour do F#</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/language-reference">Referência da Linguagem F#</a></p>
+                                                <h3><a href="/dotnet/fsharp">Guia do F#</a></h3>
+                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Introdução</a></p>
+                                                <p><a href="/dotnet/fsharp/tour">Tour do F#</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference">Referência da Linguagem F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -199,14 +199,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/vb.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/vb.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/visual-basic">Guia do Visual Basic</a></h3>
-                                                <p><a href="/dotnet/articles/visual-basic/getting-started">Introdução</a></p>
-                                                <p><a href="/dotnet/articles/visual-basic/walkthroughs">Tour do Visual Basic</a></p>
-                                                <p><a href="/dotnet/articles/visual-basic/language-reference">Referência da linguagem Visual Basic</a></p>
+                                                <h3><a href="/dotnet/visual-basic">Guia do Visual Basic</a></h3>
+                                                <p><a href="/dotnet/visual-basic/getting-started">Introdução</a></p>
+                                                <p><a href="/dotnet/visual-basic/walkthroughs">Tour do Visual Basic</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Referência da linguagem Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +215,7 @@ ms.lasthandoff: 04/08/2017
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribuir com exemplos e documentação do .NET</a></p>
-                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/project-json">Localizar a versão da documentação para Visual Studio 2015/project.json</a></p>
+                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/project-json">Localizar a versão da documentação para Visual Studio 2015/project.json</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -229,7 +229,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -248,7 +248,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -286,7 +286,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -305,11 +305,11 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-5.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/articles/framework/docker/aspnetmvc">
+                                                <a href="/dotnet/framework/docker/aspnetmvc">
                                                     <h3>Aplicativos ASP.NET em contêineres</h3>
                                                     <p>Aprenda a implantar aplicativos ASP.NET com o Docker.</p>
                                                 </a>
@@ -324,7 +324,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-6.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -348,7 +348,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -367,7 +367,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -386,11 +386,11 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/articles/fsharp/using-fsharp-on-azure">
+                                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Usando F# no Azure</h3>
                                                     <p>Saiba como usar vários serviços do Azure em F # como o Armazenamento do Azure, Serviços de Nuvem e o Azure Functions.</p>
                                                 </a>
@@ -405,7 +405,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -429,7 +429,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-mobile-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-mobile-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -448,7 +448,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-mobile-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-mobile-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -467,7 +467,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-mobile-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-mobile-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -491,7 +491,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -511,7 +511,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -530,7 +530,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -549,7 +549,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -573,7 +573,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -593,7 +593,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -612,7 +612,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -631,7 +631,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
