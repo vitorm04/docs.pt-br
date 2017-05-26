@@ -67,7 +67,7 @@ O código C# que compõe um aplicativo consiste em instruções compostas por pa
 -   [Comparações de igualdade](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de programação em C#](../../../csharp/programming-guide/index.md)   

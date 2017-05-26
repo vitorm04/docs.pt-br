@@ -34,7 +34,7 @@ Os diversos tempos de execução do .NET implementam versões específicas do .N
 
 A tabela a seguir lista todas as versões do .NET Standard e as plataformas com suporte:
 
-[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 Para localizar a versão mais recente do .NET Standard para a qual você pode direcionar, faça o seguinte:
 1. Localize a linha que indicam a plataforma .NET na qual você deseja executar.

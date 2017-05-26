@@ -49,9 +49,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 401d0feb85fccf94a25308d38c3c75198ef9294c
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -62,7 +63,7 @@ Você usa o `Const` instrução para declarar uma constante e definir seu valor.
   
  A constante deve ter um nome simbólico válido (as regras são os mesmos para a criação de nomes de variáveis) e uma expressão composta de numérico ou cadeia de caracteres constantes e operadores (mas nenhuma chamada de função).  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-declare-a-constant"></a>Para declarar uma constante  
   
