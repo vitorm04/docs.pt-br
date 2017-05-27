@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 5e1e95d92123b2874aace0c36005a8a07a6203fc
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Guia de Programação (LINQ to XML) (C#)
@@ -39,8 +40,8 @@ Esta seção fornece informações e instruções conceituais sobre como program
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Fornece uma visão geral das classes [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] e informações detalhadas sobre três das classes mais importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.|  
-|[Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Fornece informações conceituais e baseadas em tarefas sobre como criar árvores XML. Você pode criar árvores XML usando construção funcional ou analisando o texto XML de uma cadeia de caracteres ou de um arquivo. Você também pode usar um <xref:System.Xml.XmlReader> para preencher uma árvore XML.|  
+|[Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Fornece uma visão geral das classes do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] e informações detalhadas sobre três das classes mais importantes: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> e <xref:System.Xml.Linq.XDocument>.|  
+|[Criando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Fornece informações conceituais e baseadas em tarefas sobre como criar árvores XML. Você pode criar árvores XML usando construção funcional ou analisando o texto XML de uma cadeia de caracteres ou de um arquivo. Você também pode usar um <xref:System.Xml.XmlReader> para popular uma árvore XML.|  
 |[Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Fornece informações detalhadas sobre como criar árvores XML que usam namespaces.|  
 |[Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|Descreve várias abordagens para serializar uma árvore XML e fornece orientações sobre qual abordagem usar.|  
 |[Eixos do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|Enumera e descreve os métodos de eixo do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], que você deve compreender antes de escrever consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
