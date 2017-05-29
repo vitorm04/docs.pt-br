@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 3611c8d4808c4c8096ee700d68407ed8b9fd2cfc
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 5c6382ee0de3cba950b4585b05f10b4682f9a797
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="unit-testing-with-mstest-and-net-core"></a>Teste de unidade com o MSTest e .NET Core
 
-Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-mstest/) antes de começar.
+Este tutorial apresenta uma experiência interativa de compilação de uma solução de exemplo passo a passo para aprender os conceitos do teste de unidade. Se você preferir acompanhar o tutorial usando uma solução interna, [veja ou baixe o exemplo de código](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-mstest/) antes de começar. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="creating-the-source-project"></a>Criando o projeto de origem
 
@@ -48,7 +49,7 @@ namespace Prime.Services
 
 ### <a name="creating-the-test-project"></a>Criando o projeto de teste
 
-Altere o diretório de volta para o diretório *unit-testing-using-mstest* e crie o diretório *PrimeServices.Tests*. A estrutura do diretório é mostrada abaixo:
+Altere o diretório de volta para o diretório *unit-testing-using-mstest* e crie o diretório *PrimeService.Tests*. A estrutura do diretório é mostrada abaixo:
 
 ```
 /unit-testing-using-mstest

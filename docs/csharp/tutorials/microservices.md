@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57c49b555d7989a27fb4a2943b72cd2c4849694b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed747cf589e1f4731d78af7cc206ff3674d666b2
+ms.openlocfilehash: b2ce10b3c079ff2c881f6dbe297ead33b8254476
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -35,7 +36,7 @@ Ao longo do caminho, você também verá alguns recursos da linguagem C#:
 * Como processar solicitações HTTP de entrada e gerar a resposta HTTP
 * Como trabalhar com tipos de valor anulável
 
-Você pode obter o código em nosso [repositório GitHub.](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)
+Você pode [exibir ou baixar o aplicativo de exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) deste tópico. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Por que o Docker?
 
@@ -145,7 +146,7 @@ Os valores de dicionário de Consulta são do tipo `StringValue`. Esse tipo pode
 
 Em seguida, você precisa converter as cadeias de caracteres em doubles. O método que você usará para converter a cadeia de caracteres em um double é `double.TryParse()`:
 
-```cs
+```csharp
 bool TryParse(string s, out double result);
 ```
 
@@ -173,7 +174,7 @@ Neste ponto, você pode executar o aplicativo Web e verificar se o código de an
 
 A próxima tarefa é compilar uma previsão do tempo aleatória. Vamos começar com um contêiner de dados com os valores que você gostaria para uma previsão do tempo:
 
-```cs
+```csharp
 public class WeatherReport
 {
     private static readonly string[] PossibleConditions = new string[]
@@ -285,10 +286,6 @@ docker build -t weather-microservice .
 
 Esse comando compila a imagem do contêiner com base em todas as informações de seu Dockerfile. O argumento `-t` fornece uma marca, ou nome, para essa imagem de contêiner. Na linha de comando acima, a marca usada para o contêiner do Docker é `weather-microservice`. Quando esse comando for concluído, você terá um contêiner pronto para executar seu novo serviço. 
 
-> [!Note]
-> O comando copy copiará todos os ativos compilados, bem como a origem de seu aplicativo.
-> Remova os diretórios `obj`, `bin` e `out` de sua máquina local antes de compilar sua imagem do Docker.
-
 Execute o seguinte comando para iniciar o contêiner e também o serviço:
 
 ```console
@@ -343,7 +340,7 @@ docker rm hello-docker
 Se você quiser remover imagens não usadas do seu computador, use este comando:
 
 ```console
-docker rmi hello-docker
+docker rmi weather-microservice
 ```
 
 ## <a name="conclusion"></a>Conclusão 

@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c14a2ecfa4b9c9522278098d54aad258b5feb1dc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET #
@@ -53,13 +54,13 @@ Nem todos os membros de uma classe base são herdados por classes derivadas. Os 
 
 - [Construtores de instância](../programming-guide/classes-and-structs/constructors.md), que você chama para criar uma nova instância da classe. Cada classe deve definir seus próprios construtores.
 
-- [Destruidores](../programming-guide/classes-and-structs/destructors.md), que são chamados pelo coletor de lixo do tempo de execução para destruir as instâncias de uma classe.
+- [Finalizadores](../programming-guide/classes-and-structs/destructors.md), que são chamados pelo coletor de lixo do tempo de execução para destruir as instâncias de uma classe.
 
 Enquanto todos os outros membros de uma classe base são herdados por classes derivadas, o fato de serem visíveis ou não depende de sua acessibilidade. A acessibilidade de um membro afeta sua visibilidade para classes derivadas da seguinte maneira:
 
 - Membros [Privados](../language-reference/keywords/private.md) são visíveis apenas em classes derivadas que estão aninhadas em sua classe base. Caso contrário, eles não são visíveis em classes derivadas. No exemplo a seguir, `A.B` é uma classe aninhada derivada de `A`, e `C` deriva de `A`. O campo `A.value` privado fica visível em A.B. No entanto, se você remover os comentários do método `C.GetValue` e tentar compilar o exemplo, ele produzirá um erro do compilador CS0122: "'A.value' está inacessível devido ao seu nível de proteção".
 
-   [!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+   [!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
 - Membros [Protegidos](../language-reference/keywords/protected.md) são visíveis apenas em classes derivadas.
 
@@ -67,7 +68,7 @@ Enquanto todos os outros membros de uma classe base são herdados por classes de
 
 - Membros [Públicos] (../language-reference/keywords/protected.md) são visíveis em classes derivadas e fazem parte da interface pública da classe derivada. Membros herdados público podem ser chamados como se tivessem sido definidos na classe derivada. No exemplo a seguir, a classe `A` define um método chamado `Method1`, e a classe `B` herda da classe `A`. Depois, o exemplo chama `Method1` como se fosse um método de instância em `B`.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
 Classes derivadas também podem *substituir* membros herdados fornecendo uma implementação alternativa. Para poder substituir um membro, o membro na classe base deve ser marcado com a palavra-chave [virtual](../language-reference/keywords/virtual.md). Por padrão, os membros da classe base não são marcados como `virtual` e não podem ser substituídos. A tentativa de substituir um membro não virtual, como faz o exemplo a seguir, gera o erro do compilador CS0506: "<member> não consegue substituir o membro herdado <member>, pois ele não está marcado como virtual, abstrato ou de substituição.
 
@@ -122,11 +123,11 @@ Apesar dos tipos possíveis de herança por meio de herança única, todos os ti
 
 Para ver o que significa herança implícita, vamos definir uma nova classe, `SimpleClass`, que é simplesmente uma definição de classe vazia:
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
 Podemos usar reflexão (o que nos permite inspecionar os metadados de um tipo para obter informações sobre o tipo) para obter uma lista dos membros que pertencem ao tipo `SimpleClass`. Embora não tenhamos definido membros em nossa classe `SimpleClass`, a saída do exemplo indica que ele tem nove membros na verdade. Um deles é um construtor sem parâmetros (ou padrão) fornecido automaticamente para o tipo `SimpleClass` pelo compilador em C#. Os membros sete e oito são membros de @System.Object, o tipo do qual todas as classes e interfaces no sistema do tipo .NET herdam implicitamente.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 A herança implícita da classe @System.Object torna esses métodos disponíveis para a classe `SimpleClass`:
 
@@ -144,7 +145,7 @@ A herança implícita da classe @System.Object torna esses métodos disponíveis
 
 Devido à herança implícita, podemos chamar qualquer membro herdado de um objeto `SimpleClass` como se fosse um membro definido na classe `SimpleClass`. Por exemplo, o exemplo a seguir chama o método `SimpleClass.ToString`, que `SimpleClass` herda de @System.Object.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
 A tabela a seguir lista as categorias de tipos que você pode criar em C#, e os tipos de onde eles herdam implicitamente. Cada tipo base disponibiliza um conjunto diferente de membros por meio de herança para tipos derivados implicitamente.
 
@@ -163,11 +164,11 @@ Normalmente, a herança é usada para expressar um relacionamento "é um(a)" ent
 
 Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Moke`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. Nossa classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método @System.Object.ToString para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
 Nesse caso, não devemos depender da herança para representar marcas e modelos de carro específicos. Por exemplo, não precisamos definir um tipo `Packard` para representar automóveis fabricados pela empresa Packard Motor Car Company. Em vez disso, podemos representá-los criando um objeto `Automobile` com os valores apropriados passados ao construtor de classe, como o exemplo a seguir.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
 Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe base e em classes derivadas que adicionam outros membros à classe base, ou que exigem funcionalidades adicionais não incluídas na classe base.
 
@@ -205,7 +206,7 @@ Ao criar nossa classe `Publication`, precisamos tomar várias decisões de desig
 
 O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como uma enumeração `PublicationType` que é retornada pela propriedade `Publication.PublicationType`. Além dos membros herdados de @System.Object, a classe `Publication` define os seguintes membros exclusivos e substituições de membro:
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - Um construtor
 
@@ -248,7 +249,7 @@ A figura a seguir ilustra o relacionamento entre nossa classe base `Publication`
 
 A classe `Book` representa um livro como tipo especializado de publicação. O exemplo a seguir mostra o código-fonte para a classe `Book`.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
 Além dos membros herdados de `Publication`, a classe `Book` define os seguintes membros exclusivos e substituições de membro:
 
@@ -280,7 +281,7 @@ A figura a seguir ilustra o relacionamento entre a classe `Book` e `Publication`
 
 Agora podemos instanciar um objeto `Book`, chamar seus membros exclusivos e herdados e passá-lo como um argumento para um método que espera um parâmetro do tipo `Publication` ou do tipo `Book`, como mostra o exemplo a seguir.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="abstract"></a> Criação de classes base abstratas e suas classes derivadas ##
 
@@ -290,15 +291,15 @@ Por exemplo, cada forma geométrica bidimensional fechada inclui duas propriedad
 
 O exemplo a seguir define uma classe base abstrata denominada `Shape` que define duas propriedades: `Area` e `Perimeter`. Observe que, além de marcar a classe com a palavra-chave [abstract](../language-reference/keywords/abstract.md), cada membro de instância também é marcado com a palavra-chave [abstract](../language-reference/keywords/abstract.md). Nesse caso, o `Shape` também substitui o método @System.Object.ToString para retornar o nome do tipo, em vez de seu nome totalmente qualificado. E define dois membros estáticos, `GetArea` e `GetPerimeter`, que permitem a recuperação fácil da área e do perímetro de uma instância de qualquer classe derivada. Quando passamos uma instância de uma classe derivada para qualquer um desses métodos, o tempo de execução chama a substituição do método da classe derivada.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
 Em seguida, podemos derivar algumas classes de `Shape` que representam formas específicas. O exemplo a seguir define três classes, `Triangle`, `Rectangle` e `Circle`. Cada uma usa uma fórmula exclusiva para essa forma específica para calcular a área e o perímetro. Algumas das classes derivadas também definem propriedades, como `Rectangle.Diagonal` e `Circle.Diameter`, que são exclusivas para a forma que representam.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
 O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de objetos derivados de `Shape` e chama os métodos estáticos da classe `Shape`, que retorna valores de propriedade `Shape`. Observe que o tempo de execução recupera os valores das propriedades substituídas dos tipos derivados. O exemplo também converte cada objeto `Shape` na matriz ao seu tipo derivado e, se a conversão for bem-sucedida, recupera as propriedades dessa subclasse específica de `Shape`. 
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>Consulte também ##
 

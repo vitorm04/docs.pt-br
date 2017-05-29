@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 24d405ad33cb4f11dd9e7ba7edb39f10db8041a1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -89,7 +90,7 @@ Um tipo `interface` define um contrato como um conjunto nomeado de membros da fu
 
 Um tipo `delegate` representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são análogos aos tipos de função fornecidos pelas linguagens funcionais. Eles também são parecidos com o conceito de ponteiros de função em outras linguagens, mas, ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
 
-Classe `struct`, `interface` e tipos `delegate` dão suporte a genéricos e podem ser parametrizados com outros tipos.
+Os tipos `class`, `struct`, `interface` e `delegate` dão suporte a genéricos e podem ser parametrizados com outros tipos.
 
 Um tipo `enum` é um tipo distinto com constantes nomeadas. Cada tipo `enum` tem um tipo subjacente, que deve ser um dos oito tipos integrais. O conjunto de valores de um tipo `enum` é o mesmo que o conjunto de valores do tipo subjacente.
 
@@ -103,7 +104,7 @@ O sistema de tipos do C# é unificado, de modo que um valor de qualquer tipo pod
 
 Quando um valor de um tipo de valor é convertido para o tipo `object`, uma instância `object`, também chamada de "caixa", é alocada para armazenar o valor e o valor é copiado na caixa. Por outro lado, quando uma referência `object` é convertida em um tipo de valor, é verificado se o `object` referenciado é uma caixa do tipo de valor correto e, se a verificação for bem-sucedida, o valor na caixa será copiado.
 
-O sistema de tipo unificado do C# significa que os tipos de valor podem se tornar objetos "sob demanda”. Devido à unificação, as bibliotecas de finalidade geral que usam o tipo `object` podem ser usadas com os tipos de referência e os tipos de valor.
+O sistema de tipo unificado do C# significa que os tipos de valor podem se tornar objetos “sob demanda”. Devido à unificação, as bibliotecas de finalidade geral que usam o tipo `object` podem ser usadas com os tipos de referência e os tipos de valor.
 
 Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matriz, variáveis locais e parâmetros. As variáveis representam os locais de armazenamento e cada variável tem um tipo que determina quais valores podem ser armazenados na variável, conforme mostrado abaixo.
 
@@ -120,7 +121,7 @@ Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matr
 * Tipo de matriz
     - Uma referência `null`, uma referência a uma instância desse tipo de matriz ou uma referência a uma instância de um tipo de matriz compatível
 * Tipo delegado
-    - Uma referência `null` ou uma referência a uma instância compatível do tipo delegado
+    - Uma referência `null` ou uma referência a uma instância de um tipo de delegado compatível
 
 >[!div class="step-by-step"]
 [Anterior](program-structure.md)

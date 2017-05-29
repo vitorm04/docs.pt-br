@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-translationtype: Human Translation
-ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
-ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
-ms.lasthandoff: 03/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
+ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/26/2017
 
 ---
 
@@ -22,7 +23,7 @@ Como todo código gerenciado, os aplicativos .NET Core são executados por um ho
 
 Hospedar o tempo de execução do .NET Core é um cenário avançado e, na maioria dos casos, os desenvolvedores do .NET Core não precisam se preocupar com a hospedagem, pois os processos de build do .NET Core fornecem um host padrão para executar aplicativos .NET Core. No entanto, em algumas circunstâncias especializadas, pode ser útil hospedar explicitamente o tempo de execução do .NET Core, como uma maneira de invocar o código gerenciado em um processo nativo ou para ter mais controle sobre o funcionamento do tempo de execução.
 
-Este artigo fornece uma visão geral das etapas necessárias para iniciar o tempo de execução do .NET Core com base no código nativo, criar um domínio do aplicativo inicial (@System.AppDomain) e executar o código gerenciado nele.
+Este artigo fornece uma visão geral das etapas necessárias para iniciar o tempo de execução do .NET Core com base no código nativo, criar um domínio do aplicativo inicial (<xref:System.AppDomain>) e executar o código gerenciado nele.
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -30,11 +31,11 @@ Como os hosts são aplicativos nativos, este tutorial abordará a construção d
 
 Você também desejará ter um aplicativo .NET Core simples com o qual testará o host e, portanto, deverá instalar o [SDK do .NET Core](https://www.microsoft.com/net/core) e [compilar um aplicativo .NET Core de teste pequeno](../../csharp/getting-started/with-visual-studio.md) (como um aplicativo “Olá, Mundo”). O aplicativo “Olá, Mundo” criado pelo novo modelo de projeto de console do .NET Core é suficiente.
 
-Este tutorial e sua [amostra associada](https://github.com/dotnet/docs/tree/master/samples/core/hosting) criam um host do Windows, mas não deixe de consultar as notas ao final deste artigo sobre a hospedagem no Unix.
+Este tutorial e seu exemplo associado criam um host do Windows, consulte as notas ao final deste artigo sobre a hospedagem no UNIX.
 
 ## <a name="creating-the-host"></a>Criando o host
 
-Um host de exemplo que demonstra as etapas descritas neste artigo está disponível em nosso repositório de [amostras do .NET Core](https://github.com/dotnet/docs/tree/master/samples/core/hosting). Os comentários no arquivo host.cpp da amostra associam claramente as etapas numeradas deste tutorial aos pontos em que são executadas na amostra.
+Um [host de exemplo](https://github.com/dotnet/docs/tree/master/samples/core/hosting) que demonstra as etapas descritas neste artigo está disponível no repositório dotnet/docs do GitHub. Os comentários no arquivo *host.cpp* do exemplo associam claramente as etapas numeradas deste tutorial aos pontos em que são executadas no exemplo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Lembre-se de que o host de exemplo destina-se a ser usado para fins de aprendizado e, portanto, não leva a sério a verificação de erros e é projetado para enfatizar a legibilidade em detrimento da eficiência. Mais amostras de host do mundo real estão disponíveis no repositório [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts). O [host CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), em particular, é um bom host de uso geral para ser estudado depois de ler toda a amostra mais simples.
 
@@ -146,3 +147,4 @@ Depois de compilar o host, é possível testá-lo executando-o por meio da linha
 Se as coisas não funcionarem no começo, verifique novamente se *coreclr.dll* está disponível no local esperado pelo host, se todas as bibliotecas do Framework necessárias estão na lista de TPA e se o número de bit de CoreCLR (32 ou 64 bits) corresponde a como o host foi compilado.
 
 A hospedagem do tempo de execução do .NET Core é um cenário avançado do qual muitos desenvolvedores não precisarão. No entanto, para aqueles que precisam inicializar o código gerenciado de um processo nativo ou que precisam de mais controle sobre o comportamento do tempo de execução do .NET Core, ela pode ser muito útil. Como o .NET Core pode ser executado lado a lado consigo mesmo, é possível até mesmo criar hosts que inicializam e iniciam várias versões do tempo de execução do .NET Core e executam aplicativos em todos eles no mesmo processo. 
+

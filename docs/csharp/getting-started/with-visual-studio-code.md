@@ -4,20 +4,21 @@ description: Saiba como criar e depurar seu primeiro aplicativo .NET Core em C# 
 keywords: "C#, Introdução, Aquisição, Instalação, Visual Studio Code, Plataforma Cruzada"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 5/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4550129f4e6f1eeb3521ad7fe3233f2bda49e5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="getting-started-with-visual-studio-code"></a>Introdução ao Visual Studio Code
+# <a name="get-started-with-visual-studio-code"></a>Introdução ao Visual Studio Code
 
 O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos de servidor que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
 
@@ -94,6 +95,6 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 > Para obter mais informações e dicas sobre solução de problemas de depuração do .NET Core com OmniSharp no VS Code, consulte [Instruções para configurar o depurador .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
 ## <a name="see-also"></a>Consulte também
-- [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+[Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
+[Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
 

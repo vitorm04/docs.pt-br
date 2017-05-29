@@ -2,48 +2,47 @@
 title: "Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017"
 description: Saiba como compilar um aplicativo de console simples do .NET Core usando o Visual Studio 2017.
 keywords: .NET Core, aplicativo do console do .NET Core, Visual Studio 2017
-author: stevehoag
-ms.author: shoag
-ms.date: 03/07/2017
+author: BillWagner
+ms.author: wiwagn
+ms.date: 05/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f1a20f399b4ab34986d700622ff3bf3859b001bd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
+ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/16/2017
 
 ---
 
-# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017 #
+# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017
 
-Este tópico fornece uma introdução passo a passo para compilação, depuração e publicação de um aplicativo de console simples do .NET Core usando o Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha quaisquer dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tem como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
+Este tópico fornece uma introdução passo a passo para compilação, depuração e publicação de um aplicativo de console simples do .NET Core usando o Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tenha como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
 
-## <a name="prerequisites"></a>Pré-requisitos ##
+## <a name="prerequisites"></a>Pré-requisitos
 
-- O [Visual Studio 2017](https://www.visualstudio.com/downloads/) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. 
+O [Visual Studio 2017](https://www.visualstudio.com/downloads/) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. 
 
-Para obter mais informações, consulte a seção [Visual Studio 2017](../../core/windows-prerequisites.md) no tópico de pré-requisitos do Windows.
+Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Core no Windows](../../core/windows-prerequisites.md).
 
-## <a name="a-simple-hello-world-application"></a>Um simples aplicativo “Olá, Mundo” ##
+## <a name="a-simple-hello-world-application"></a>Um aplicativo simples Olá, Mundo
 
-Vamos começar criando um aplicativo de console simples "Olá, Mundo". Aqui estão as etapas:
+Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas:
 
-1. Inicie o Visual Studio e, no menu **Arquivo**, escolha **Novo** > **Projeto**. Na caixa de diálogo **Novo Projeto**, expanda o nó **Visual C#** no painel à esquerda e escolha o nó **.NET Core**.
+1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Adicionar Novo Projeto**, selecione o nó **.NET Core** seguido pelo modelo de projeto **Aplicativo do Console (.NET Core)**. Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
 
-2. No painel direito, escolha **Aplicativo de Console (.NET Core)**. Insira o nome do projeto, `HelloWorld`, e certifique-se de que a caixa **Criar diretório para solução** esteja marcada, como mostra a figura a seguir.
-
-   ![Captura de tela mostrando a caixa de diálogo Novo Projeto com o aplicativo de console selecionado](./media/with-visual-studio/vs_newproject.jpg)
+   ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/with-visual-studio/newproject.png)
    
-3. Selecione o botão **OK**. O Visual Studio exibe seu ambiente de desenvolvimento com sua janela de código, como mostra a figura a seguir. O modelo de aplicativo do console C# para o .NET Core automaticamente define uma classe, `Program`, com um único método, `Main`, que usa uma matriz @System.String como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo tempo de execução quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
+1. O Visual Studio carrega o ambiente de desenvolvimento. O modelo de aplicativo do console C# para o .NET Core automaticamente define uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo tempo de execução quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
 
-   ![O Visual Studio e o novo projeto HelloWorld](./media/with-visual-studio/vs_devenv.jpg)
+   ![O Visual Studio e o novo projeto HelloWorld](./media/with-visual-studio/devenv.png)
 
-   O modelo cria um aplicativo muito simples "Olá, Mundo" – ele chama o método @System.Console.WriteLine(System.String) para exibir a cadeia de caracteres literal "Olá, Mundo!" na janela do console. Ao selecionar o botão "HelloWorld" com a seta verde na barra de ferramentas, você pode executar o programa no modo de depuração. Se fizer isso, no entanto, a janela do console será visível somente em um breve intervalo de tempo antes de ser fechada. Isso ocorre porque o `Main` é encerrado e o aplicativo é fechado assim que a única instrução no método `Main` for executada.
+   O modelo cria um simples aplicativo “Olá, Mundo”. Ele chama o método <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> para exibir a cadeia de caracteres literal "Hello World!" na janela do console. Ao selecionar o botão **HelloWorld** com a seta verde na barra de ferramentas, você pode executar o programa no modo de depuração. Se fizer isso, a janela do console será visível somente por um breve intervalo antes de ser fechada. Isso ocorre porque o método `Main` é encerrado e o aplicativo é fechado assim que a única instrução no método `Main` é executada.
 
-4. Vamos pausar o aplicativo existente antes de ele fechar a janela do console. Adicione o seguinte código imediatamente após a chamada para o método @System.Console.WriteLine(System.String):
+1. Para fazer com que o aplicativo pausar antes de fechar a janela do console, adicione o seguinte código imediatamente após a chamada para o método <xref:System.Console.WriteLine(System.String)?displayProperty=fullName>:
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -51,45 +50,43 @@ Vamos começar criando um aplicativo de console simples "Olá, Mundo". Aqui est�
    ```
    Esse código solicita que o usuário pressione qualquer tecla e, em seguida, pausa o programa até que uma tecla seja pressionada.
 
-5. Na barra de menus, escolha **Compilar**, **Compilar Solução**. Isso compila seu programa para IL, uma linguagem intermediária que é convertida em código binário por um compilador do JIT (Just-In-Time).
+1. Na barra de menus, selecione **Compilar** > **Compilar Solução**. Isso compila seu programa em uma IL (linguagem intermediária) que é convertida em um código binário por um compilador JIT (Just-In-Time).
 
-6. Execute o programa selecionando o botão "HelloWorld" com a seta verde na barra de ferramentas. O resultado é mostrado na figura a seguir.
+1. Execute o programa selecionando o botão **HelloWorld** com a seta verde na barra de ferramentas.
 
-   ![Image](./media/with-visual-studio/simple_hello.jpg)
+   ![Janela de console mostrando Hello World Press any key to continue](./media/with-visual-studio/helloworld1.png)
 
-7. Pressione qualquer tecla para fechar a janela.
+1. Pressione qualquer tecla para fechar a janela de console.
 
-## <a name="enhancing-the-hello-world-application"></a>Aprimorando o aplicativo “Olá, Mundo” ##
+## <a name="enhancing-the-hello-world-application"></a>Aprimorando o aplicativo Olá, Mundo
 
-Vamos melhorar nosso aplicativo para solicitar ao usuário seu nome e, em seguida, exibi-lo junto com a data e a hora na janela do console. Para modificar e testar o programa, faça o seguinte:
+Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora. Para modificar e testar o programa, faça o seguinte:
 
-1. Insira o código C# a seguir na janela de código imediatamente após o colchete de abertura que segue a linha `public static void Main(string[] args)` e antes do primeiro colchete de fechamento.
+1. Insira o código C# a seguir na janela de código imediatamente após o colchete de abertura que segue a linha `public static void Main(string[] args)` e antes do primeiro colchete de fechamento:
 
-   [!CODE [GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   A figura a seguir mostra a janela de código resultante.
+   ![Arquivo C-Sharp do programa do Visual Studio com o método Main atualizado](./media/with-visual-studio/codewindow.png)
 
-   ![A execução do programa modificado](./media/with-visual-studio/codewindow.jpg)
+   Esse código exibe "Qual é o seu nome?" na janela do console e aguarda até que o usuário insira uma cadeia de caracteres seguida da tecla Enter. Ele armazena essa cadeia de caracteres a uma variável chamada `name`. Ele também recupera o valor da propriedade <xref:System.DateTime.Now?displayProperty=fullName>, que contém a hora local atual e o atribui a uma variável chamada `date`. Por fim, ele usa uma [cadeia de caracteres de formato composto](../../standard/base-types/composite-format.md) para exibir esses valores na janela de console.
 
-   Esse código exibe "Qual é o seu nome?" ao console e aguarda até que o usuário insira uma cadeia de caracteres seguida da tecla Enter. Ele armazena essa cadeia de caracteres a uma variável chamada `name`. Ele também recupera o valor da propriedade @System.DateTime.Now, que contém a hora local atual e o atribui a uma variável chamada `date`. Ele usa uma [cadeia de caracteres de formato composto](../../standard/base-types/composite-format.md) para exibir esses valores ao console.
+1. Compile o programa selecionando **Compilar** > **Compilar Solução**.
 
-2. Compile o programa selecionando **Compilar** > **Compilar Solução**. Isso compila seu programa para IL, uma linguagem intermediária que é convertida em código binário por um compilador do JIT (Just-In-Time).
+1. Execute o programa no modo de Depuração no Visual Studio selecionando a seta verde na barra de ferramentas, pressionando F5 ou escolhendo o item de menu **Depurar** > **Iniciar Depuração**. Responda à solicitação inserindo um nome e pressionando a tecla Enter.
 
-3. Execute o programa no modo de depuração no Visual Studio selecionando a seta verde na barra de ferramentas, pressionando F5 ou escolhendo o item de menu **Depurar** > **Iniciar Depuração**. Após responder às solicitações ao inserir um nome e pressionar a tecla Enter, a janela de console deverá ser semelhante à seguinte:
+   ![Janela de console com saída de programa modificada](./media/with-visual-studio/helloworld2.png)
 
-   ![A execução do programa modificado](./media/with-visual-studio/console.jpg)
+1. Pressione qualquer tecla para fechar a janela de console.
 
-4. Pressione qualquer tecla para fechar a janela de console. Isso encerra o modo de depuração.
+Você criou e executou seu aplicativo. Para desenvolver um aplicativo profissional, realize algumas etapas adicionais para deixar seu aplicativo pronto para a liberação:
 
-Agora você criou e executou seu aplicativo simples. Para desenvolver um aplicativo profissional, ainda há algumas etapas adicionais que você pode realizar para deixar seu aplicativo pronto para liberação:
+- Para obter informações sobre a depuração do aplicativo, consulte [Depurando um aplicativo Olá, Mundo em C# com o Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Para obter informações sobre como depurar seu aplicativo, consulte [Depurando o aplicativo Olá, Mundo](debugging-with-visual-studio-2017.md)
+- Para obter informações sobre o desenvolvimento e a publicação de uma versão distribuível do seu aplicativo, consulte [Publishing your Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicando um aplicativo Olá, Mundo com o Visual Studio 2017).
 
-- Para obter informações sobre o desenvolvimento de uma publicação de uma versão distribuível do seu aplicativo, consulte [Publicar o aplicativo Olá, Mundo](publishing-with-visual-studio-2017.md).
+## <a name="related-topics"></a>Tópicos relacionados
 
-## <a name="related-topics"></a>Tópicos relacionados ##
+Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes com o .NET Core e o Visual Studio 2017. Para obter uma introdução passo a passo, consulte [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md).
 
-Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes com o .NET Core e o Visual Studio 2017. Para obter uma introdução passo a passo, consulte [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio-2017.md).
-
-Você também pode desenvolver um aplicativo de console .NET Core no Mac, Linux e Windows usando o código do Visual Studio, um editor de código que pode ser baixado gratuitamente. Para obter um tutorial passo a passo, consulte [Introdução ao Visual Studio Code](with-visual-studio-code.md).
+Você também pode desenvolver um aplicativo de console .NET Core no Mac, Linux e Windows usando o [Visual Studio Code](https://code.visualstudio.com/), um editor de código que pode ser baixado. Para obter um tutorial passo a passo, consulte [Introdução ao Visual Studio Code](with-visual-studio-code.md).
 

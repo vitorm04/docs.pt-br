@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc931fe2c87620ddb073f53f7e8edccaa1e3b987
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -30,11 +31,14 @@ Este tutorial ensina vários recursos no .NET Core e da linguagem C#. Você apre
 
 Você compilará um aplicativo que emite solicitações HTTP para um serviço REST no GitHub. Você lerá informações no formato JSON e converterá esse pacote JSON em objetos C#. Por fim, você verá como trabalhar com objetos C#.
 
-Há vários recursos neste tutorial. Vamos compilá-los individualmente. 
+Há vários recursos neste tutorial. Vamos compilá-los individualmente.
+
+Se preferir acompanhar com o [exemplo final](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) para esse tópico, você poderá baixá-lo. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
 ## <a name="prerequisites"></a>Pré-requisitos
 Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core). Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 ## <a name="create-the-application"></a>Criar o aplicativo
-A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Hello World" básico.
+A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
 
 Antes de começar as modificações, vamos percorrer as etapas para execução do aplicativo simples Hello World. Depois de criar o aplicativo, digite `dotnet restore` no prompt de comando. Esse comando executa o processo de restauração do pacote NuGet. O NuGet é um gerenciador de pacotes do .NET. Esse comando baixa qualquer uma das dependências ausentes para seu projeto. Como esse é um novo projeto, nenhuma das dependências foram aplicadas, portanto, a primeira execução baixará a estrutura do .NET Core. Após essa etapa inicial, você só precisará executar o `dotnet restore` ao adicionar novos pacotes dependentes, ou atualizar as versões de qualquer uma de suas dependências.  
 
@@ -121,7 +125,7 @@ using System.Net.Http.Headers;
 A primeira versão faz uma solicitação da Web para ler a lista de todos os repositórios na organização dotnet foundation. (A ID do gitHub para o .NET Foundation é 'dotnet'). Primeiro, crie um novo @System.Net.Http.HttpClient. Esse objeto manipula a solicitação e as respostas. As próximas linhas configuram o @System.Net.Http.HttpClient para essa solicitação. Primeiro, ele é configurado para aceitar as respostas JSON do GitHub.
 Esse formato é simplesmente JSON. A próxima linha adiciona um cabeçalho de agente do usuário para todas as solicitações deste objeto. Esses dois cabeçalhos são verificados pelo código do servidor GitHub e são necessários para recuperar informações do GitHub.
 
-Depois de configurar o @System.Net.Http.HttpClient, faça uma solicitação da Web e recupere a resposta. Nesta primeira versão, use o método prático <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname>. Este método prático inicia uma tarefa que faz a solicitação da Web e, depois, quando a solicitação retornar, ele lê o fluxo de resposta e extrai o conteúdo do fluxo. O corpo da resposta retorna como um @System.String. A cadeia de caracteres fica disponível após a conclusão da tarefa. 
+Depois de configurar o @System.Net.Http.HttpClient, faça uma solicitação da Web e recupere a resposta. Nesta primeira versão, você usa o método de conveniência <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname>. Este método prático inicia uma tarefa que faz a solicitação da Web e, depois, quando a solicitação retornar, ele lê o fluxo de resposta e extrai o conteúdo do fluxo. O corpo da resposta retorna como um @System.String. A cadeia de caracteres fica disponível após a conclusão da tarefa. 
 
 As duas últimas linhas desse método aguardam a tarefa e, depois, imprimem a resposta no console.
 Compilar o aplicativo e executá-lo. O aviso de compilação desapareceu, pois agora o `ProcessRepositories` contêm um operador `await`. Você verá uma longa exibição do texto formatado em JSON.   
@@ -360,7 +364,7 @@ Por fim, adicione mais uma instrução de saída no console, e você estará pro
 Console.WriteLine(repo.LastPush);
 ```
 
-Agora, sua versão deve corresponder à versão acabada localizada [aqui](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+Agora, sua versão deve corresponder ao [exemplo finalizado](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
  
 ## <a name="conclusion"></a>Conclusão
 
