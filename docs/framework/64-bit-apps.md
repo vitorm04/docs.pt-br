@@ -18,10 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d1ddfa9842909a491af2541c9ac770989fc2164
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="64-bit-applications"></a>Aplicativos de 64 bits
@@ -67,9 +68,9 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/platform (Opções de compilador do C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Você pode criar aplicativos MSIL (Microsoft Intermediate Language) independentes de plataforma usando **/clr:safe**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](http://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c).<br /><br /> O Visual C++ inclui um compilador separado para cada sistema operacional de 64 bits. Para saber mais sobre como usar o Visual C++ para criar aplicativos nativos que são executados em um sistema operacional Windows de 64 bits, confira [Programação de 64 bits](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Você pode criar aplicativos MSIL (Microsoft Intermediate Language) independentes de plataforma usando **/clr:safe**. Para obter mais informações, consulte [/clr (compilação de Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> O Visual C++ inclui um compilador separado para cada sistema operacional de 64 bits. Para saber mais sobre como usar o Visual C++ para criar aplicativos nativos que são executados em um sistema operacional Windows de 64 bits, confira [Programação de 64 bits](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinando o Status de um Arquivo .exe ou .dll  
  Para determinar se um arquivo .exe ou .dll deve ser executado apenas em uma plataforma específica ou no WOW64, use [CorFlags.exe (Ferramenta de Conversão CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) sem opções. Você também pode usar CorFlags.exe para alterar o status da plataforma de um arquivo .exe ou .dll. O cabeçalho CLR de um assembly do Visual Studio tem o número de versão principal do tempo de execução definido como 2 e o número de versão secundário do tempo de execução definido como 5. Os aplicativos que têm a versão secundária do tempo de execução definida como 0 são tratados como aplicativos herdados e são sempre executados no WOW64.  
   
- Para consultar de modo programático um .exe ou .dll para saber se ele deve ser executado somente em uma plataforma específica ou no WOW64, use o método <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName>.
+ Para consultar programaticamente um .exe ou .dll para saber se ele deve ser executado somente em uma plataforma específica ou no WOW64, use o método <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName>.

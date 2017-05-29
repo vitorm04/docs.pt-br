@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 321ec8f8293afad0f3da7fb6f907f45d404394cc
+ms.sourcegitcommit: fccd83571b47e3c2a6f995893c6260ae91eae517
+ms.openlocfilehash: e114f15adb9ed18d7ee2ba857013959b2710e70c
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-47"></a>Alterações de tempo de execução no .NET Framework 4.7
@@ -41,7 +41,7 @@ A coluna Escopo nas tabelas a seguir especifica o significado de cada alteraçã
 
 ## <a name="a-namewpf--windows-presentation-foundation-wpf"></a><a name="WPF" /> WPF (Windows Presentation Foundation)
 
-assetId:///M:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)?qualifyHint=False&autoUpgrade=True
+<xref:System.Windows.Controls.DataGridCellsPanel.BringIndexIntoView(System.Int32)>
 
 | Recurso | Alteração | Impacto | Escopo |
 |---|---|---|---|

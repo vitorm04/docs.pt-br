@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 994da1622246d09930fa9b74d6debac4f7a24b5b
+ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
+ms.openlocfilehash: f5bab95cc5a4ff49a0ff81e209f0a71c78914976
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigação: novo compilador JIT de 64 bits
@@ -63,17 +63,15 @@ A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador 
 ## <a name="mitigation-of-other-issues"></a>Mitigação de outros problemas  
  Se você encontrar qualquer outra diferença de comportamento entre o código compilado com o compilador de 64 bits mais antigo e o novo compilador JIT de 64 bits, ou entre as versões de depuração e de versão de seu aplicativo, ambas compiladas com o novo compilador JIT de 64 bits, faça o seguinte para compilar seu aplicativo com o compilador JIT de 64 bits mais antigo:  
   
--   Adicione a cada aplicativo o elemento [\<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) ao arquivo de configuração do aplicativo. Veja a seguir como desabilitar a compilação com o novo compilador JIT de 64 bits e usar, em vez disso, o compilador JIT de 64 bits herdado.  
+-   Adicione a cada aplicativo o elemento [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) ao arquivo de configuração do aplicativo. Veja a seguir como desabilitar a compilação com o novo compilador JIT de 64 bits e usar, em vez disso, o compilador JIT de 64 bits herdado.  
   
     ```xml  
-  
     <?xml version ="1.0"?>  
     <configuration>  
         <runtime>  
-           <useLegacyJIT enabled="1" />  
+           <useLegacyJit enabled="1" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   Adicione a cada usuário um valor `REG_DWORD` denominado `useLegacyJit` para a chave `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` do Registro. Um valor 1 habilita o compilador JIT de 64 bits herdado; um valor 0 o desabilita e habilita o novo compilador JIT de 64 bits.  
@@ -84,4 +82,5 @@ A partir do .NET Framework 4.6, o tempo de execução inclui um novo compilador 
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
- [\<Elemento useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+ [Elemento \<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+

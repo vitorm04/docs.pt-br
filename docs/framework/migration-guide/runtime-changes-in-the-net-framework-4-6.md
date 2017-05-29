@@ -19,10 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 77002c3d1b6553156c225b3efba9a2f29009915a
+ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
+ms.openlocfilehash: 140579db3c30221815167857466e7e7cfea95bd5
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-46"></a>Alterações de tempo de execução do .NET Framework 4.6
@@ -104,4 +104,4 @@ Em casos raros, as alterações de tempo de execução podem afetar aplicativos 
 |Recurso|Alteração|Impacto|Escopo|  
 |-------------|------------|------------|-----------|  
 |Compilação JIT de 64 bits|A partir do .NET Framework 4.6, um novo compilador JIT de 64 bits é usado para compilação Just-In-Time. Essa alteração não afeta o compilador JIT de 32 bits.|Em alguns casos, será gerada uma exceção inesperada ou um comportamento diferente será observado se um aplicativo for executado usando o compilador de 32 bits ou o compilador JIT de 64 bits antigo. **Observação:** todos esses problemas foram resolvidos no novo compilador de 64 bits lançado com o .NET Framework 4.6.2. A maioria também foi resolvida nas versões de serviço do .NET Framework 4.6 e 4.6.1, incluídos com o Windows Update. <br /><br /> Para saber mais, confira [Atenuação: Novo compilador JIT de 64 bits](../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md).|Edge|  
-|Tratamento de exceção (retornar de uma região `try`)|Ao contrário do compilador Just-In-Time JIT64 mais antigo, o novo compilador JIT de 64 bits não permite uma instrução IL `ret` em uma região `try`.|Retornar de uma região `try` não é permitido pela especificação ECAM-335, e nenhum compilador gerenciado conhecido gera tal IL. No entanto, o compilador JIT64 executará essa IL se ela for gerada usando emissão de reflexo.<br /><br /> Se seu aplicativo gera uma IL que inclui um opcode `ret` em uma região `try`, você pode:<br /><br /> - Direcionar o .NET Framework 4.5 ou adicionar o elemento [\<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) ao arquivo de configuração de aplicativo que usa o compilador JIT antigo e evitar a alteração.<br />- Atualizar a IL gerada a ser retornada após a região `try`.<br />-|Edge|
+|Tratamento de exceção (retornar de uma região `try`)|Ao contrário do compilador Just-In-Time JIT64 mais antigo, o novo compilador JIT de 64 bits não permite uma instrução IL `ret` em uma região `try`.|Retornar de uma região `try` não é permitido pela especificação ECAM-335, e nenhum compilador gerenciado conhecido gera tal IL. No entanto, o compilador JIT64 executará essa IL se ela for gerada usando emissão de reflexo.<br /><br /> Se seu aplicativo gera uma IL que inclui um opcode `ret` em uma região `try`, você pode:<br /><br /> – Direcionar o .NET Framework 4.5 ou adicionar o elemento [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) ao arquivo de configuração de aplicativo para usar o compilador JIT antigo e evitar a alteração.<br />- Atualizar a IL gerada a ser retornada após a região `try`.<br />-|Edge|
