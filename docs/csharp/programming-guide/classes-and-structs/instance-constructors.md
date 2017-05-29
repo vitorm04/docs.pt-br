@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8875c179ea2ebca37a53e0ae70e53d20942c111f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 5c579c28c6b298cc0aefe0cb9eb41993b84a23d8
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Construtores de instâncias (Guia de Programação em C#)
@@ -83,5 +84,5 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)

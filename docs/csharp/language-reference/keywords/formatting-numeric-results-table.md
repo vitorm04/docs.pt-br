@@ -31,14 +31,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7e6feae4b0d03bb8570106d37868462d12d937cf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: a3e5d2eef3f0a76fc8e3faa52feca827070a9cab
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabela de formatação de resultados numéricos (Referência de C#)
-É possível formatar resultados numéricos usando o método <xref:System.String.Format%2A?displayProperty=fullName> ou por meio do <xref:System.Console.Write%2A?displayProperty=fullName> ou do método <xref:System.Console.WriteLine%2A?displayProperty=fullName>, que chama `String.Format`. O formato é especificado usando cadeias de caracteres de formato. A tabela a seguir contém as cadeias de caracteres de formato padrão com suporte. A cadeia de caracteres de formato usa o seguinte formato: `Axx`, em que `A` é o especificador de formato e `xx` é o especificador de precisão. O especificador de formato controla o tipo de formatação aplicada ao valor numérico e o especificador de precisão controla o número de dígitos significativos ou casas decimais do resultado formatado. O valor do especificador de precisão varia de 0 a 99.  
+Você pode formatar resultados numéricos usando o método <xref:System.String.Format%2A?displayProperty=fullName>, ou pelo método <xref:System.Console.Write%2A?displayProperty=fullName> ou <xref:System.Console.WriteLine%2A?displayProperty=fullName>, que chama `String.Format`. O formato é especificado usando cadeias de caracteres de formato. A tabela a seguir contém as cadeias de caracteres de formato padrão com suporte. A cadeia de caracteres de formato usa o seguinte formato: `Axx`, em que `A` é o especificador de formato e `xx` é o especificador de precisão. O especificador de formato controla o tipo de formatação aplicada ao valor numérico e o especificador de precisão controla o número de dígitos significativos ou casas decimais do resultado formatado. O valor do especificador de precisão varia de 0 a 99.  
   
  Para obter mais informações sobre cadeias de caracteres de formatação padrão e personalizadas, consulte [Tipos de Formatação](../../../standard/base-types/formatting-types.md). Para obter mais informações sobre o método `String.Format`, consulte <xref:System.String.Format%2A?displayProperty=fullName>.  
   
@@ -55,6 +56,6 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Cadeias de Caracteres de Formato Numérico Padrão](http://msdn.microsoft.com/library/580e57eb-ac47-4ffd-bccd-3a1637c2f467)   
+ [Cadeias de Caracteres de Formato Numérico Padrão](../../../standard/base-types/standard-numeric-format-strings.md)   
  [Tabelas de Referência de Tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
  [string](../../../csharp/language-reference/keywords/string.md)

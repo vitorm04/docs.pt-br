@@ -26,17 +26,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>Cadeias de caracteres interpoladas (Referência de C#)
 
 Usado para construir cadeias de caracteres.  Uma cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém *expressões interpoladas*.  Uma cadeia de caracteres interpolada retorna uma cadeia de caracteres que substitui as expressões interpoladas que ela contém por suas representações de cadeia de caracteres.  
 
-Os argumentos de uma cadeia de caracteres interpolada são mais fáceis de entender do que uma [cadeia de caracteres de formato composto](../../../standard/base-types/composite-format.md#composite-format-string).  Por exemplo, a cadeia de caracteres interpolada  
+Os argumentos de uma cadeia de caracteres interpolada são mais fáceis de entender do que uma [cadeia de caracteres de formato composto](../../../standard/base-types/composite-formatting.md#composite-format-string).  Por exemplo, a cadeia de caracteres interpolada  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 
@@ -79,13 +80,13 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
 
 2. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.IFormattable> que permite criar várias cadeias de caracteres de resultado com conteúdo específico da cultura de uma única instância <xref:System.IFormattable>. Isso é útil para incluir itens como os formatos de número e data corretos para culturas individuais.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas até que você formate a cadeia de caracteres explícita ou implicitamente chamando o método @System.Object.ToString.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
 
-   O exemplo a seguir usa reflexão para exibir os membros, bem como os valores de campo e propriedade, de uma variável <xref:System.IFormattable> criada de uma cadeia de caracteres interpolada. Ela também passa a variável <xref:System.IFormattable> para o método @System.Console(System.String).
+   O exemplo a seguir usa reflexão para exibir os membros, bem como os valores de campo e propriedade de uma variável <xref:System.IFormattable> criada de uma cadeia de caracteres interpolada. Ela também passa a variável <xref:System.IFormattable> para o método @System.Console(System.String).
 
    [!code-cs[interpolated-strings2](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings2.cs#1)]  
 
    Observe que a cadeia de caracteres interpolada pode ser inspecionada somente usando a reflexão. Se ela for passada para um método de formatação de cadeia de caracteres, como @System.Console.WriteLine(System.String), seus itens de formato serão resolvidos e a cadeia de caracteres de resultado será retornada. 
 
-3. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.FormattableString> que representa uma cadeia de caracteres de formato composto. Inspecionar a cadeia de caracteres de formato composto e como ela é renderizada como uma cadeia de caracteres de resultado pode, por exemplo, ajudar a proteger contra um ataque de injeção se você estiver criando uma consulta.  <xref:System.FormattableString> também inclui sobrecargas de <xref:System.FormattableString.ToString> que permitem que você gere cadeias de caracteres de resultado para o @System.Globalization.InvariantCulture e o @System.Globalization.CurrentCulture.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas, até você formatar.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
+3. Conversão de uma cadeia de caracteres interpolada em uma variável <xref:System.FormattableString> que representa uma cadeia de caracteres de formato composto. Inspecionar a cadeia de caracteres de formato composto e como ela é renderizada como uma cadeia de caracteres de resultado pode, por exemplo, ajudar a proteger contra um ataque de injeção se você estiver criando uma consulta.  <xref:System.FormattableString> também inclui sobrecargas <xref:System.FormattableString.ToString> que permitem que você gere cadeias de caracteres de resultado para a @System.Globalization.InvariantCulture e a @System.Globalization.CurrentCulture.  Todas as ocorrências de chaves duplas ("{{" e "}}") permanecem como chaves duplas, até você formatar.  Todas as expressões de interpolação contidas são convertidas em {0}, {1} e assim por diante.  
 
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 

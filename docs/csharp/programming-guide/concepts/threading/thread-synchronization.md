@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31b206eb01d778b67acc1a25d3c69e2e1dfd553d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f8d51aa1c50c097577a575be9b5da4b9e0effc55
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="thread-synchronization-c"></a>Sincronização de thread (C#)
@@ -36,11 +37,11 @@ As seções a seguir descrevem recursos e classes que podem ser usados para sinc
   
  Para obter informações gerais sobre a programação multi-threaded, consulte:  
   
--   [Noções básicas de threading gerenciado](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [Noções básicas de threading gerenciado](../../../../standard/threading/managed-threading-basics.md)  
   
--   [Usando threads e threading](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [Usando threads e threading](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [Práticas recomendadas de threading gerenciado](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [Práticas recomendadas de threading gerenciado](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-keyword"></a>A palavra-chave lock  
  A instrução `lock` de C# pode ser usada para garantir que um bloco de código seja executado até a conclusão sem interrupção por outros threads. Isso é feito obtendo um bloqueio de exclusão mútua para um determinado objeto pela duração do bloco de código.  
@@ -75,7 +76,7 @@ public class TestThreading
 -   @System.Threading.Monitor  
   
 ## <a name="monitors"></a>Monitores  
- Assim como a palavra-chave `lock`, os monitores impedem que blocos de código sejam executados simultaneamente por vários threads. O método <xref:System.Threading.Monitor.Enter%2A> permite que apenas um thread prossiga para as instruções seguintes; todos os outros threads são bloqueados até que a execução do thread chame <xref:System.Threading.Monitor.Exit%2A>. É como usar a palavra-chave `lock`. Por exemplo:  
+ Assim como a palavra-chave `lock`, os monitores impedem que blocos de código sejam executados simultaneamente por vários threads. O método <xref:System.Threading.Monitor.Enter%2A> permite que apenas um thread prossiga para as instruções seguintes, todos os outros threads são bloqueados até que o thread em execução chame <xref:System.Threading.Monitor.Exit%2A>. É como usar a palavra-chave `lock`. Por exemplo:  
   
 ```csharp  
 lock (x)  
@@ -104,11 +105,11 @@ finally
 ## <a name="synchronization-events-and-wait-handles"></a>Eventos de sincronização e identificadores de espera  
  Usar um monitor ou um bloqueio é útil para evitar a execução simultânea de blocos de código sensíveis ao thread, mas esses constructos não permitem que um thread comunique um evento a outro. Isso requer *eventos de sincronização*, que são objetos que têm um de dois estados, sinalizado e não sinalizado, que podem ser usados para ativar e suspender os threads. Threads podem ser suspensos tendo que aguardar um evento de sincronização não sinalizado e podem ser ativados alterando o estado do evento para sinalizado. Se um thread tentar aguardar um evento que já é sinalizado, então o thread continua sendo executado sem atraso.  
   
- Há dois tipos de eventos de sincronização: <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent>. A única diferença entre eles é que <xref:System.Threading.AutoResetEvent> muda de sinalizado para não sinalizado automaticamente sempre que ele ativar um thread. Por outro lado, um <xref:System.Threading.ManualResetEvent> permite que qualquer quantidade de threads sejam ativados por sei estado de sinalização e só será revertido para um estado não sinalizado quando seu método <xref:System.Threading.EventWaitHandle.Reset%2A> for chamado.  
+ Há dois tipos de eventos de sincronização: <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent>. A única diferença entre eles é que <xref:System.Threading.AutoResetEvent> muda de sinalizado para não sinalizado automaticamente sempre que ele ativar um thread. Por outro lado, um <xref:System.Threading.ManualResetEvent> permite que qualquer número de threads seja ativado por seu estado sinalizado e será revertido apenas para estado não sinalizado quando seu método <xref:System.Threading.EventWaitHandle.Reset%2A> for chamado.  
   
- É possível fazer com que os threads esperem eventos chamando um dos métodos de espera, como <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> ou <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> faz com que o thread aguarde até que um único evento seja sinalizado, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> bloqueia um thread até que um ou mais eventos indicados seja sinalizado e <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> bloqueia o thread até que todos os eventos indicados sejam sinalizados. Um evento é sinalizado quando seu método <xref:System.Threading.EventWaitHandle.Set%2A> é chamado.  
+ É possível fazer os threads esperarem por eventos chamando um dos métodos de espera, como <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> ou <xref:System.Threading.WaitHandle.WaitAll%2A>. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName> faz com que o thread espere até que um único evento se torne sinalizado, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName> bloqueia um thread até que um ou mais eventos indicados se tornem sinalizados e <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName> bloqueia o thread até que todos os eventos indicados ser tornem sinalizados. Um evento se torna sinalizado quando seu método <xref:System.Threading.EventWaitHandle.Set%2A> é chamado.  
   
- No exemplo a seguir, um thread é criado e iniciado pela função `Main`. O novo thread espera um evento usando o método <xref:System.Threading.WaitHandle.WaitOne%2A>. O thread é suspenso até que o evento seja sinalizado pelo thread principal que está executando a função `Main`. Após o evento ser sinalizado, o thread auxiliar é retornado. Nesse caso, como o evento só é usado para ativação de um thread, as classes <xref:System.Threading.AutoResetEvent> ou <xref:System.Threading.ManualResetEvent> podem ser usadas.  
+ No exemplo a seguir, um thread é criado e iniciado pela função `Main`. O novo thread aguarda um evento usando o método <xref:System.Threading.WaitHandle.WaitOne%2A>. O thread é suspenso até que o evento seja sinalizado pelo thread principal que está executando a função `Main`. Após o evento ser sinalizado, o thread auxiliar é retornado. Nesse caso, como o evento é usado apenas para uma ativação de thread, as classes <xref:System.Threading.AutoResetEvent> ou <xref:System.Threading.ManualResetEvent> podem ser usadas.  
   
 ```csharp  
 using System;  
@@ -147,7 +148,7 @@ class ThreadingExample
   
  Quando usado para sincronização entre processos, um mutex é chamado de *mutex nomeado* porque deve ser usado em outro aplicativo e, portanto, não pode ser compartilhado por meio de uma variável global ou estática. Ele deve receber um nome para que ambos os aplicativos possam acessar o mesmo objeto de mutex.  
   
- Embora um mutex possa ser usado para sincronização de threads dentro do processo, o uso de <xref:System.Threading.Monitor> normalmente é preferível, pois os monitores foram criados especificamente para o .NET Framework e, portanto, fazem melhor uso dos recursos. Por outro lado, a classe <xref:System.Threading.Mutex> é um wrapper para um constructo de Win32. Embora seja mais eficiente do que um monitor, um mutex requer transições de interoperabilidade que são mais dispendiosas em termos computacionais do que aquelas necessárias para a classe <xref:System.Threading.Monitor>. Para obter um exemplo de como usar um mutex, consulte [Mutexes](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2).  
+ Embora um mutex possa ser usado para sincronização de threads dentro do processo, o uso de <xref:System.Threading.Monitor> normalmente é preferível, pois os monitores foram criados especificamente para o .NET Framework e, portanto, utilizam melhor os recursos. Por outro lado, a classe <xref:System.Threading.Mutex> é um wrapper para um constructo de Win32. Embora seja mais eficiente do que um monitor, um mutex requer transições de interoperabilidade que são mais dispendiosas em termos computacionais do que aquelas necessárias para a classe <xref:System.Threading.Monitor>. Para obter um exemplo de como usar um mutex, consulte [Mutexes](../../../../standard/threading/mutexes.md).  
   
 ## <a name="interlocked-class"></a>Classe Interlocked  
  É possível usar os métodos da classe <xref:System.Threading.Interlocked> para evitar problemas que podem ocorrer quando vários threads tentam atualizar ou comparar simultaneamente o mesmo valor. Os métodos dessa classe permitem incrementar, decrementar, trocar e comparar de forma segura os valores de qualquer thread.  
@@ -177,8 +178,8 @@ class ThreadingExample
  <xref:System.Threading.EventWaitHandle.Set%2A>   
  [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Instrução lock](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [Mutexes](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
+ [Mutexes](../../../../standard/threading/mutexes.md)   
  @System.Threading.Monitor   
- [Operações interconectadas](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [Sincronizando dados para multithreading](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ [Operações interconectadas](../../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ [Sincronizando dados para multithreading](../../../../standard/threading/synchronizing-data-for-multithreading.md)

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c12dd3c94d52a7303879e36c8cc2d62b869484de
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
+ms.openlocfilehash: d054a0824e9f072d38c01c2894606c5c492a2481
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
@@ -76,8 +77,11 @@ A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGroupin
 ### <a name="grouping-by-composite-keys"></a>Agrupar por Chaves Compostas  
  Use uma chave composta para agrupar elementos de acordo com mais de uma chave. Uma chave composta é criada usando um tipo anônimo ou nomeado para armazenar o elemento-chave. No exemplo a seguir, suponha que uma classe `Person` foi declarada com membros nomeados `surname` e `city`. A cláusula `group` faz com que um grupo separado seja criado para cada conjunto de pessoas com o mesmo sobrenome e a mesma cidade.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
- Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos @System.Object.Equals(System.Object) e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [Como Implementar uma Classe Leve com Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como Consultar Arquivos Duplicados em uma Árvore de Diretório (LINQ)](../../../csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último tópico apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.  
+```csharp  
+group person by new {name = person.surname, city = person.city};  
+```  
+  
+ Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [Como implementar uma classe leve com propriedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último tópico apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra a norma padrão para ordenar dados de origem em grupos quando nenhuma lógica de consulta adicional for aplicada aos grupos. Isso é chamado de “agrupamento sem uma continuação”. Os elementos em uma matriz de cadeias de caracteres são agrupados de acordo com a primeira letra. O resultado da consulta é um tipo <xref:System.Linq.IGrouping%602> que contém uma propriedade pública `Key` do tipo `char` e uma coleção <xref:System.Collections.Generic.IEnumerable%601> que contém cada item no agrupamento.  
@@ -104,3 +108,4 @@ A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGroupin
  [Como Criar um Grupo Aninhado](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
  [Como Agrupar Resultados de Consulta](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
  [Como executar uma subconsulta em uma operação de agrupamento](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+

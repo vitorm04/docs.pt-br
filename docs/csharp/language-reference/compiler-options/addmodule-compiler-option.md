@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ae0bdd5a73ca30f3310c219581bf9e576897153b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 614dbefbb472ef2cd03fcb1ba7a44f08c450bf4a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="addmodule-c-compiler-options"></a>/addmodule (opções do compilador C#)
@@ -69,5 +70,5 @@ csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
  [NIB: Como Modificar as Propriedades do Projeto e as Definições de Configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
- [Assemblies de Vários Arquivos](http://msdn.microsoft.com/library/13509e73-db77-4645-8165-aad8dfaedff6)   
- [Como Compilar um Assembly de Vários Arquivos](http://msdn.microsoft.com/library/261c5583-8a76-412d-bda7-9b8ee3b131e5)
+ [Assemblies de Vários Arquivos](../../../framework/app-domains/multifile-assemblies.md)   
+ [Como Compilar um Assembly de Vários Arquivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

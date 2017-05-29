@@ -1,6 +1,6 @@
 ---
 title: "ushort (Referência de C#) | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort (Referência de C#)
+
 A palavra-chave `ushort` indica um tipo de dados integrais que armazena valores de acordo com o tamanho e o intervalo mostrados na tabela a seguir.  
   
 |Tipo|Intervalo|Tamanho|Tipo do .NET Framework|  
@@ -44,25 +46,32 @@ A palavra-chave `ushort` indica um tipo de dados integrais que armazena valores 
 |`ushort`|0 a 65.535|Inteiro de 16 bits sem sinal|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>Literais  
- É possível declarar e inicializar uma variável `ushort` como neste exemplo:  
+
+Você pode declarar e inicializar uma variável `ushort` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. Se o literal inteiro estiver fora do intervalo de `ushort` (ou seja, se ele for menor que <xref:System.UInt16.MinValue?displayProperty=fullName> ou maior que <xref:System.UInt16.MaxValue?displayProperty=fullName>, ocorrerá um erro de compilação.
+
+No exemplo a seguir, inteiros iguais a 65.034 representados como literais decimais, hexadecimais e binários são implicitamente convertidos de valores [int](../../../csharp/language-reference/keywords/int.md) para `ushort`.    
   
-```  
-  
-ushort myShort = 65535;  
-```  
-  
- Na declaração anterior, o literal de inteiro `65535` é convertido implicitamente de [int](../../../csharp/language-reference/keywords/int.md) para `ushort`. Se o literal de inteiro exceder o intervalo de `ushort`, ocorrerá um erro de compilação.  
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+
+> [!NOTE] 
+> Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo.
+
+Começando com o C# 7, você também pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como o exemplo a seguir mostra.
+
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>Resolução de sobrecarga do compilador
   
  Uma conversão deve ser usada ao chamar métodos sobrecarregados. Considere, por exemplo, os seguintes métodos sobrecarregados que usam os parâmetros `ushort` e [int](../../../csharp/language-reference/keywords/int.md):  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
-  
+ 
  O uso da conversão `ushort` garante que o tipo correto será chamado, por exemplo:  
   
-```  
+```csharp  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -74,35 +83,32 @@ SampleMethod((ushort)5);
   
  Há uma conversão implícita predefinida de [byte](../../../csharp/language-reference/keywords/byte.md) ou [char](../../../csharp/language-reference/keywords/char.md) para `ushort`. Caso contrário, uma conversão deve ser usada para executar uma conversão explícita. Considere, por exemplo, as duas variáveis `ushort` `x` e `y` a seguir:  
   
-```  
-  
+```csharp 
 ushort x = 5, y = 12;  
 ```  
   
  A seguinte instrução de atribuição produzirá um erro de compilação, porque a expressão aritmética no lado direito do operador de atribuição é avaliada como `int` por padrão.  
   
-```  
-  
+```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  Para corrigir esse problema, use uma conversão:  
   
-```  
-  
+```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  No entanto, é possível usar as instruções a seguir, em que a variável de destino tem o mesmo tamanho de armazenamento ou um tamanho de armazenamento maior:  
   
-```  
+```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
  Observe também que não há conversão implícita de tipos de ponto flutuante em `ushort`. Por exemplo, a instrução a seguir gerará um erro de compilador, a menos que uma conversão explícita seja usada:  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  

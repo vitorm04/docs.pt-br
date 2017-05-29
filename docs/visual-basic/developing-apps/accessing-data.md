@@ -12,8 +12,8 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -28,20 +28,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 01c5dfdd118d1db9adfd1c8e83c3ed63348e4c43
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 227aaf74dff0ae16fc5030ac8031ffa0f9ddf632
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Acessando dados em aplicativos do Visual Basic
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] inclui vários novos recursos para ajudar no desenvolvimento de aplicativos que acessam dados. Formulários de associação de dados para aplicativos do Windows são criados arrastando itens da janela [Fontes de Dados](https://docs.microsoft.com/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) para um formulário. Associe controles a dados arrastando itens da janela **Fontes de Dados** para os controles existentes.  
+[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] inclui vários novos recursos para ajudar no desenvolvimento de aplicativos que acessam dados. Formulários de associação de dados para aplicativos do Windows são criados arrastando itens da janela [Fontes de Dados](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources) para um formulário. Associe controles a dados arrastando itens da janela **Fontes de Dados** para os controles existentes.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Criando aplicativos de dados](https://docs.microsoft.com/visualstudio/data-tools/creating-data-applications)  
+ [Acessando dados no Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/)  
  Fornece links para páginas que discutem a incorporação da funcionalidade de acesso a dados aos seus aplicativos.
 
- [Visão geral de aplicativos de dados no Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/overview-of-data-applications-in-visual-studio)  
+ [Ferramentas de dados do Visual Studio para .NET](https://docs.microsoft.com/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
  Fornece links para páginas sobre como criar aplicativos que funcionam com os dados, usando [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
@@ -56,22 +57,22 @@ ms.lasthandoff: 03/13/2017
  [Trabalhando com conjuntos de dados em aplicativos de N camadas](https://docs.microsoft.com/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Fornece links para tópicos sobre como criar aplicativos de dados multicamadas.  
      
- [Conectando-se a dados no Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/connecting-to-data-in-visual-studio)  
+ [Adicionar novas conexões](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)  
  Fornece links para páginas sobre como conectar seu aplicativo a dados com ferramentas de tempo de design e objetos de conexão ADO.NET, usando [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
 
- [Buscando dados no aplicativo](https://docs.microsoft.com/visualstudio/data-tools/fetching-data-into-your-application)  
+ [Ferramentas de conjunto de dados no Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Fornece links para páginas que descrevem como carregar dados em conjuntos de dados e como executar instruções SQL e procedimentos armazenados.  
   
  [Associar controles a dados no Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
  Fornece links para páginas que explicam como exibir dados no Windows Forms através de controles associados a dados.  
   
- [Editando dados no aplicativo](https://docs.microsoft.com/visualstudio/data-tools/editing-data-in-your-application)  
+ [Editar dados em conjuntos de dados](https://docs.microsoft.com/visualstudio/data-tools/edit-data-in-datasets)  
  Fornece links para páginas que descrevem como manipular os dados nas tabelas de dados de um conjunto de dados.  
   
  [Validando dados em conjuntos de dados](https://docs.microsoft.com/visualstudio/data-tools/validate-data-in-datasets)  
  Fornece links para páginas que descrevem como adicionar validação a um conjunto de dados durante alterações de coluna e linha.  
   
- [Salvando dados](https://docs.microsoft.com/visualstudio/data-tools/saving-data)  
+ [Salvar dados de volta no banco de dados](https://docs.microsoft.com/visualstudio/data-tools/save-data-back-to-the-database)  
  Fornece links para páginas que explicam como enviar dados atualizados de um aplicativo para o banco de dados.  
   
  [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
@@ -79,3 +80,4 @@ ms.lasthandoff: 03/13/2017
 
  [Dados em soluções do Office](https://msdn.microsoft.com/library/xx069ybh)  
  Contém links para páginas que explicam como os dados funcionam em soluções do Office, incluindo informações sobre programação orientada a esquemas, cache de dados e acesso a dados no lado do servidor.
+

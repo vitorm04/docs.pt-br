@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4573a19cdb435a65b33aaa895059576d23489322
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 11bb7fc9490879714542bfbd77a81d58e7d8e8ed
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="reference-c-compiler-options"></a>/reference (opções do compilador C#)
@@ -83,7 +84,7 @@ A opção **/reference** opção faz com que o compilador importe informações 
  O arquivo de resposta csc (.rsp), que referencia assemblies .NET Framework usados com frequência, é usado por padrão. Use [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se você não desejar que o compilador use csc.rsp.  
   
 > [!NOTE]
->  No Visual Studio, use a caixa de diálogo **Adicionar Referência**. Para obter mais informações, consulte [NIB: Como adicionar ou remover referências usando a caixa de diálogo Adicionar Referência](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9). No Visual Studio 2010 e em versões posteriores, para garantir o comportamento equivalente entre adicionar referências usando `/reference` e usando a caixa de diálogo **Adicionar referência**, a propriedade **Inserir tipos de interoperabilidade** deve ser definida como **False** para o assembly que você está adicionando. **True** é o valor padrão para essa propriedade.  
+> No Visual Studio, use a caixa de diálogo **Adicionar Referência**. Para obter mais informações, consulte [Como adicionar ou remover referências usando o Gerenciador de Referências](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager). Para garantir o comportamento equivalente entre adicionar referências usando `/reference` e usando a caixa de diálogo **Adicionar Referência**, defina a propriedade **Inserir Tipos de Interoperabilidade** como **False** para o assembly que você está adicionando. **True** é o valor padrão para a propriedade.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como usar o recurso [alias externo](../../../csharp/language-reference/keywords/extern-alias.md).  

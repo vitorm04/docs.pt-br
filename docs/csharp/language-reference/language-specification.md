@@ -30,17 +30,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aff05c1d60c71ac1399f5f1a323b669bd1f1be58
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 9f86ce4ab50825a9eb46b8d9cd8cb364f8e6fbea
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/01/2017
 
 ---
 # <a name="c-language-specification"></a>Especificação da Linguagem C#
-A Especificação da Linguagem C# é a origem definitiva da sintaxe e do uso de C#. Essa especificação contém informações detalhadas sobre todos os aspectos da linguagem, incluindo vários pontos que a documentação do Visual C# não abrange.  
-  
- É possível baixar essa especificação no [Centro de Download da Microsoft](http://www.microsoft.com/download/details.aspx?id=7029). Se você instalou o Visual Studio 2013, poderá também encontrar a especificação em seu computador na pasta Arquivos de Programas (x86)/Microsoft Visual Studio 12.0/VC#/Specifications/1033. No entanto, as instalações do Visual Studio Express 2013 não incluem esse arquivo.  
+A Especificação da Linguagem C# é a origem definitiva da sintaxe e do uso de C#. Essa especificação contém informações detalhadas sobre todos os aspectos da linguagem, incluindo vários pontos que a documentação do Visual C# não abrange.
+
+É possível baixar a versão 5.0 dessa especificação do [Centro de Download da Microsoft](http://www.microsoft.com/download/details.aspx?id=7029). Se você instalou o Visual Studio 2015, poderá também encontrar a especificação em seu computador na pasta Arquivos de Programas (x86)/Microsoft Visual Studio 14.0/VC#/Specifications/1033. Se você tiver outra versão do Visual Studio instalada ou se você instalou o Visual Studio em um idioma diferente do inglês, altere o caminho conforme apropriado.
+
+A versão 6.0 da especificação não está disponível no momento, mas existe um rascunho não oficial no [repositório dotnet/csharplang do GitHub](https://github.com/dotnet/csharplang/blob/master/spec/README.md).
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../csharp/programming-guide/index.md)
+

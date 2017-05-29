@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e48341a08e13c0f94f78f1712b35c02432f344f8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 229955400c0c16cdc0069d6e45148d91d6253f9d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
-Classes e structs têm membros que representam seus dados e comportamento. Os membros de uma classe incluem todos os membros declarados na classe, juntamente com todos os membros (exceto construtores de destruidores) declarados em todas as classes em sua hierarquia de herança. Os membros privados em classes base são herdados, mas não podem ser acessados de classes derivadas.  
+Classes e structs têm membros que representam seus dados e comportamento. Os membros de uma classe incluem todos os membros declarados na classe, juntamente com todos os membros (exceto construtores e finalizadores) declarados em todas as classes em sua hierarquia de herança. Os membros privados em classes base são herdados, mas não podem ser acessados de classes derivadas.  
   
  A tabela a seguir lista os tipos de membros que uma classe ou struct pode conter:  
   
@@ -49,7 +50,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
 |[Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Os operadores sobrecarregados são considerados membros de classe. Ao sobrecarregar um operador, ele é definido como um método estático público em uma classe. Os operadores predefinidos (`+`, `*`, `<` e assim por diante) não são considerados membros. Para obter mais informações, consulte [Operadores Sobrecarregáveis](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).|  
 |[Indexadores](../../../csharp/programming-guide/indexers/index.md)|Os indexadores permitem que um objeto seja indexado de maneira semelhante às matrizes.|  
 |[Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Os construtores são os métodos chamados quando o objeto é criado pela primeira vez. Geralmente, eles são usados para inicializar os dados de um objeto.|  
-|[Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Os destruidores raramente são usados no C#. Eles são métodos chamados pelo mecanismo de tempo de execução quando o objeto está prestes a ser removido da memória. Geralmente, eles são usados para garantir que recursos que devem ser liberados sejam manipulados corretamente.|  
+|[Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Os finalizadores raramente são usados no C#. Eles são métodos chamados pelo mecanismo de tempo de execução quando o objeto está prestes a ser removido da memória. Geralmente, eles são usados para garantir que recursos que devem ser liberados sejam manipulados corretamente.|  
 |[Tipos aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Os tipos aninhados são tipos declarados dentro de outro tipo. Geralmente, eles são usados para descrever objetos utilizados somente pelos tipos que os contêm.|  
   
 ## <a name="see-also"></a>Consulte também  
@@ -57,7 +58,7 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
  [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)   
  [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)   
  [Indexadores](../../../csharp/programming-guide/indexers/index.md)   

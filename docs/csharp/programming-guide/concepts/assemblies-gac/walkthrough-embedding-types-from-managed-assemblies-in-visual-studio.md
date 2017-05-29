@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c821afbbe8571d9573321b9d11b069aa0f7cd342
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3bb7e2c9665cf98fe48e1445dfcf8009b329a39a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)
@@ -62,7 +63,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 -   Executará o programa cliente para ver se a nova versão do assembly de tempo de execução está sendo usado sem a necessidade de recompilar o programa cliente.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-an-interface"></a>Criando uma interface  
   
@@ -80,14 +81,32 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 6.  Abra o arquivo ISampleInterface.cs. Adicione o seguinte código ao arquivo de classe ISampleInterface para criar a interface ISampleInterface.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Runtime.InteropServices;  
+  
+    namespace TypeEquivalenceInterface  
+    {  
+        [ComImport]  
+        [Guid("8DA56996-A151-4136-B474-32784559F6DF")]  
+        public interface ISampleInterface  
+        {  
+            void GetUserInput();  
+            string UserInput { get; }  
+        }  
+    }  
+    ```  
+  
 7.  No menu **Ferramentas**, clique em **Criar GUID**. Na caixa de diálogo **Criar GUID**, clique em **Formato do Registro** e clique em **Copiar**. Clique em **Sair**.  
   
 8.  No atributo `Guid`, exclua o GUID de exemplo e cole o GUID que você copiou da caixa de diálogo **Criar GUID**. Remova as chaves ({}) do GUID copiado.  
   
 9. No **Gerenciador de Soluções**, expanda a pasta **Propriedades**. Clique duas vezes no arquivo AssemblyInfo.cs. Adicione o seguinte atributo ao arquivo.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    [assembly: ImportedFromTypeLib("")]  
+    ```  
+  
      Salve o arquivo.  
   
 10. Salvar o projeto.  
@@ -114,7 +133,29 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 8.  Adicione o código a seguir ao arquivo de classe SampleClass para criar a classe SampleClass.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+  
+    namespace TypeEquivalenceRuntime  
+    {  
+        public class SampleClass : ISampleInterface  
+        {  
+            private string p_UserInput;  
+            public string UserInput { get { return p_UserInput; } }  
+  
+            public void GetUserInput()  
+            {  
+                Console.WriteLine("Please enter a value:");  
+                p_UserInput = Console.ReadLine();  
+            }  
+        }  
+    )  
+    ```  
+  
 9. Salvar o projeto.  
   
 10. Clique com o botão direito do mouse no projeto TypeEquivalenceRuntime e clique em **Compilar**. O arquivo .dll da biblioteca de classes é compilado e salvo no caminho de saída de build especificado (por exemplo, C:\TypeEquivalenceSample).  
@@ -135,7 +176,32 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 6.  Adicione o seguinte código ao arquivo Program.cs para criar o programa cliente.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+    using System.Reflection;  
+  
+    namespace TypeEquivalenceClient  
+    {  
+        class Program  
+        {  
+            static void Main(string[] args)  
+            {  
+                Assembly sampleAssembly = Assembly.Load("TypeEquivalenceRuntime");  
+                ISampleInterface sampleClass =   
+                    (ISampleInterface)sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass");  
+                sampleClass.GetUserInput();  
+                Console.WriteLine(sampleClass.UserInput);  
+                Console.WriteLine(sampleAssembly.GetName().Version.ToString());  
+                Console.ReadLine();  
+            }  
+        }  
+    }  
+    ```  
+  
 7.  Pressione CTRL+F5 para compilar e executar o programa.  
   
 ## <a name="modifying-the-interface"></a>Modificando a interface  
@@ -148,7 +214,10 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 3.  Abra o arquivo SampleInterface.cs. Adicione a linha de código a seguir à interface ISampleInterface.  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+    ```csharp  
+    DateTime GetDate();  
+    ```  
+  
      Salve o arquivo.  
   
 4.  Salvar o projeto.  
@@ -165,7 +234,7 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
   
 3.  Abra o arquivo SampleClass.cs. Adicione as seguintes linhas de código à classe SampleClass.  
   
-    ```cs  
+    ```csharp  
     public DateTime GetDate()  
     {  
         return DateTime.Now;  
@@ -183,6 +252,6 @@ Se você inserir informações de um assembly gerenciado de nome forte, você po
 ## <a name="see-also"></a>Consulte também  
  [/link (opções do compilador C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
  [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)   
- [Programação com assemblies](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
+ [Programação com assemblies](../../../../framework/app-domains/programming-with-assemblies.md)   
  [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 

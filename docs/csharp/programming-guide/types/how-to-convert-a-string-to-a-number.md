@@ -30,21 +30,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ebc67300a1f4456ae031a7962f4cd1f5306dd5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: d406f1731db1e0979be8bba8d10301e57a2281e9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (Guia de Programação em C#)
-É possível converter uma [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md) em um número por meio dos métodos na classe <xref:System.Convert> ou usando o método `TryParse` encontrado nos diversos tipos numéricos (int, long, float etc.).  
+É possível converter uma [string](../../../csharp/language-reference/keywords/string.md) em um número usando os métodos na classe <xref:System.Convert> ou usando o método `TryParse` encontrado nos diversos tipos numéricos (int, long, float, etc.).  
   
- Caso haja uma cadeia de caracteres, é um pouco mais eficiente e simples chamar um método `TryParse` (por exemplo, `int.TryParse(“11”)`).  Usar um método `Convert` é mais útil para objetos gerais que implementam <xref:System.IConvertible>.  
+ Caso haja uma cadeia de caracteres, é um pouco mais eficiente e simples chamar um método `TryParse` (por exemplo, `int.TryParse("11")`).  Usar um método `Convert` é mais útil para objetos gerais que implementam <xref:System.IConvertible>.  
   
  É possível usar métodos `Parse` ou `TryParse` no tipo numérico que se espera que a cadeia de caracteres contenha, como o tipo <xref:System.Int32?displayProperty=fullName>.  O método <xref:System.Convert.ToUInt32%2A?displayProperty=fullName> usa <xref:System.Int32.Parse%2A> internamente.  Se a cadeia de caracteres não estiver em um formato válido, `Parse` lançará uma exceção, ao passo que `TryParse` retornará [false](../../../csharp/language-reference/keywords/false.md).  
   
 ## <a name="example"></a>Exemplo  
- Os métodos `Parse` e `TryParse` ignoram o espaço em branco no início e no final da cadeia de caracteres, porém, todos os outros caracteres devem formar o tipo numérico correto (int, long, ulong, float, decimal etc.).  Os espaços em branco dentro dos caracteres que formam o número causam um erro.  Por exemplo, é possível usar `decimal.TryParse` para analisar “10”, “10.3”, “  10  “, mas não é possível utilizar esse método para analisar 10 de “10X”, “1 0” (observe o espaço), “10 .3” (observe o espaço), “10e1” (`float.TryParse` funcionará neste caso) e assim por diante.  
+ Os métodos `Parse` e `TryParse` ignoram o espaço em branco no início e no final da cadeia de caracteres, porém, todos os outros caracteres devem formar o tipo numérico correto (int, long, ulong, float, decimal etc.).  Os espaços em branco dentro dos caracteres que formam o número causam um erro.  Por exemplo, é possível usar `decimal.TryParse` para analisar "10", "10.3", "  10  ", mas não é possível usar esse método para analisar 10 de "10X", "1 0" (observe o espaço), "10 .3" (observe o espaço), "10e1" (`float.TryParse` funcionará neste caso) e assim por diante.  
   
  Os exemplos abaixo demonstram chamadas com e sem êxito a `Parse` e `TryParse`.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/13/2017
 [!code-cs[csProgGuideTypes#100](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_6.cs)]  
   
 ## <a name="example"></a>Exemplo  
- A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que podem ser utilizados.  
+ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que você pode usar.  
   
 |Tipo numérico|Método|  
 |------------------|------------|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 03/13/2017
 |`uint`|<xref:System.Convert.ToUInt32%28System.String%29>|  
 |`ulong`|<xref:System.Convert.ToUInt64%28System.String%29>|  
   
- Este exemplo chama o método <xref:System.Convert.ToInt32%28System.String%29?displayProperty=fullName> para converter uma [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md) de entrada em um [int](../../../csharp/language-reference/keywords/int.md). O código captura as duas exceções mais comuns que podem ser lançadas por esse método, <xref:System.FormatException> e <xref:System.OverflowException>. Se o número pode ser incrementado sem estourar o local de armazenamento de inteiros, o programa adiciona 1 ao resultado e imprime a saída.  
+ Este exemplo chama o método <xref:System.Convert.ToInt32%28System.String%29?displayProperty=fullName> para converter uma entrada [string](../../../csharp/language-reference/keywords/string.md) em [int](../../../csharp/language-reference/keywords/int.md). O código captura as duas exceções mais comuns que podem ser geradas por esse método, <xref:System.FormatException> e <xref:System.OverflowException>. Se o número pode ser incrementado sem estourar o local de armazenamento de inteiros, o programa adiciona 1 ao resultado e imprime a saída.  
   
  [!code-cs[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-cs[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  

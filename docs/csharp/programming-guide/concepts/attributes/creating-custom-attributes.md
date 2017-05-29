@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b71bf8fe1f4d448bf373fcab4bccd89bca4672b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 346a5311a100e75adacea6100d6e5f1f893812ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="creating-custom-attributes-c"></a>Criando atributos personalizados (C#)
-Você pode criar seus próprios atributos personalizados definindo uma classe de atributos, uma classe que deriva diretamente ou indiretamente de <xref:System.Attribute>, fazendo com que a identificação das definições de atributo nos metadados seja rápida e fácil. Suponha que você queira marcar tipos com o nome do programador que escreveu o tipo. Você pode definir uma classe de atributos `Author` personalizada:  
+Você pode criar seus próprios atributos personalizados definindo uma classe de atributos, uma classe que deriva direta ou indiretamente de <xref:System.Attribute>, o que faz com que a identificação das definições de atributo nos metadados seja rápida e fácil. Suponha que você queira marcar tipos com o nome do programador que escreveu o tipo. Você pode definir uma classe de atributos `Author` personalizada:  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.Class |  
@@ -84,8 +85,8 @@ class SampleClass
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Reflection>   
- [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)   
- [Escrevendo atributos personalizados](http://msdn.microsoft.com/library/97216f69-bde8-49fd-ac40-f18c500ef5dc)   
+ [Guia de programação em C#](../../../../csharp/programming-guide/index.md)   
+ [Escrevendo atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)   
  [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [Acessando atributos usando reflexão (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
