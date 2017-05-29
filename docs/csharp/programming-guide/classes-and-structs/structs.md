@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0def21f856754b361ab890233f64bd1e92931d87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 41574404f923695b3ba065d3c22f102bd2843e68
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="structs-c-programming-guide"></a>Structs (Guia de Programação em C#)
@@ -43,7 +44,7 @@ Structs são definidos usando a palavra-chave [struct](../../../csharp/language-
   
 -   Dentro de uma declaração de struct, os campos não podem ser inicializados, a menos que sejam declarados como const ou estáticos.  
   
--   Um struct não pode declarar um construtor padrão (um construtor sem parâmetros) ou um destruidor.  
+-   Um struct não pode declarar um construtor padrão (um construtor sem parâmetros) ou um finalizador.  
   
 -   Os structs são copiados na atribuição. Quando um struct recebe uma nova variável, todos os dados são copiados e qualquer modificação na nova cópia não altera os dados da cópia original. É importante se lembrar disso ao trabalhar com coleções de tipos de valor como dicionário\<string, myStruct>.  
   
@@ -71,8 +72,6 @@ Structs são definidos usando a palavra-chave [struct](../../../csharp/language-
 -   [Como saber a diferença entre passar um struct e passar uma referência de classe para um método](../../../csharp/programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)  
   
 -   [Como implementar conversões definidas pelo usuário entre structs](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-  
--   [Mais informações sobre variáveis](http://go.microsoft.com/fwlink/?LinkId=221230) em [Beginning Visual C# 2010](http://go.microsoft.com/fwlink/?LinkId=221214) (Introdução ao Visual C# 2010)  
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
