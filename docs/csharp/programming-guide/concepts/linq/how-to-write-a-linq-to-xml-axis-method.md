@@ -14,10 +14,11 @@ ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d85a92fc4d9f1d2ed53ff01e23c20877b3952b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: afaaaa497a16c1dbf0f3e0e81351f5c614732d44
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
 Você pode escrever seus próprios métodos do eixo para recuperar coleções de uma árvore XML. Uma das melhores maneiras de fazer isso é gravar um método de extensão que retorna uma coleção de elementos ou atributos. Você pode escrever seu método de extensão para subconjuntos específicos de retorno de elementos ou atributos, com base nos requisitos do seu aplicativo.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa dois métodos de extensão. O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject> e retorna uma expressão XPath que, quando avaliada, retornará o nó ou o atributo. O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>. Ele retorna uma coleção de objetos <xref:System.Xml.Linq.XAttribute> e objetos <xref:System.Xml.Linq.XElement> que contenham algum texto especificado.  
+ O exemplo a seguir usa dois métodos de extensão. O primeiro método de extensão, `GetXPath`, opera em <xref:System.Xml.Linq.XObject>, e retorna uma expressão XPath que quando avaliada retorna o nó ou do atributo. O segundo método de extensão, `Find`, opera em <xref:System.Xml.Linq.XElement>. Retorna uma coleção de objetos <xref:System.Xml.Linq.XAttribute> e objetos de <xref:System.Xml.Linq.XElement> que contêm texto especificado.  
   
  Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   

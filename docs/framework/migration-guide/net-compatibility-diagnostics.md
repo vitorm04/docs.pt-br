@@ -200,7 +200,7 @@ O Diagnóstico de Compatibilidade do .NET são analisadores capacitados pelo Ros
 |Escopo|Edge|  
 |Versão|4.5|  
 |Tipo|Tempo de execução|  
-|APIs afetadas|<xref:System.Xml.Linq.LoadOptions?displayProperty=fullName>|  
+|APIs afetadas|<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=fullName>|  
 |Analisadores|CD0019|  
   
 <a name="diagnostic20"></a>   
