@@ -16,17 +16,18 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: a8fd9da79e8b8e44d4f4f67c1bbba77b785c22be
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="managed-threading"></a>Threading gerenciado
 Quer você esteja desenvolvendo para computadores com um processador, quer para com vários, é conveniente que seu aplicativo forneça uma interação mais dinâmica com o usuário, mesmo se o aplicativo, no momento, estiver realizando outro trabalho. Usar vários threads de execução é uma das maneiras mais eficazes de manter seu aplicativo responsivo ao usuário e, ao mesmo tempo, usar o processador entre ou, até mesmo, durante os eventos do usuário. Embora esta seção introduza os conceitos básicos de threading, ele se concentra nos conceitos de threading gerenciado e em como usá-lo.  
   
 > [!NOTE]
->  A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a programação multi-threaded foi consideravelmente simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> e <xref:System.Threading.Tasks.Task?displayProperty=fullName>, a [PLINQ (LINQ Paralela)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), novas classes de coleção simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=fullName> e um novo modelo de programação que é baseado no conceito de tarefas, e não em threads. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
+>  A partir do [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a programação multi-threaded é bastante simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> e <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [PLINQ (LINQ Paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), novas classes de coleta simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=fullName> e um novo modelo de programação com base no conceito de tarefas em vez de threads. Para obter mais informações, consulte [Programação paralela](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Noções básicas de threading gerenciado](../../../docs/standard/threading/managed-threading-basics.md)  

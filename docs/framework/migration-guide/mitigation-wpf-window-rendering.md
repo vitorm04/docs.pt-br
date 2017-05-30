@@ -46,7 +46,7 @@ No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] em execução no Windows
   
     -   `false`, para desabilitar a distorção das janelas e monitorar limites durante a renderização.  
   
--   Ao definir a propriedade <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> como `true` na inicialização do aplicativo.  
+-   Definindo a propriedade <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> como `true` na inicialização do aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

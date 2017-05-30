@@ -41,16 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89137b3c927a7ac8ed126f2be3695c4aa72a85fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic
 Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Ele descreve como criar um pequeno aplicativo que lista e examina os arquivos de texto em um diretório. Para cada arquivo de texto selecionado, o aplicativo fornece atributos de arquivo e a primeira linha do conteúdo. Há uma opção para gravar as informações em um arquivo de log.  
   
- Este passo a passo usa os membros de `My.Computer.FileSystem Object`, que estão disponível em [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obter mais informações. No final do passo a passo será fornecido um exemplo equivalente que usa classes do namespace <xref:System.IO>.  
+ Este passo a passo usa os membros de `My.Computer.FileSystem Object`, que estão disponível em [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obter mais informações. No final do passo a passo, será fornecido um exemplo equivalente que usa classes do namespace <xref:System.IO>.  
   
 [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
@@ -84,7 +85,7 @@ Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     A chamada `FolderBrowserDialog1.ShowDialog` abre a caixa de diálogo **Procurar Pasta**. Depois que o usuário clicar em **OK**, a propriedade <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> será enviada como um argumento para o método `ListFiles`, que será adicionado na próxima etapa.  
+     A chamada `FolderBrowserDialog1.ShowDialog` abre a caixa de diálogo **Procurar Pasta**. Após o usuário clicar em **OK**, a propriedade <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> será enviada como um argumento para o método `ListFiles`, que será adicionado na próxima etapa.  
   
 3.  Adicione o seguinte método `ListFiles`.  
   
@@ -92,7 +93,7 @@ Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no
   
      Primeiro, esse código limpa a **ListBox**.  
   
-     Em seguida, o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> recupera uma coleção de cadeias de caracteres, uma para cada arquivo no diretório. O método `GetFiles` aceita um argumento de padrão de pesquisa para recuperar os arquivos que correspondem a um padrão específico. Neste exemplo, somente os arquivos que têm a extensão .txt serão retornados.  
+     Depois, o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> recupera uma coleção de cadeias de caracteres, uma para cada arquivo do diretório. O método `GetFiles` aceita um argumento de padrão de pesquisa para recuperar os arquivos que correspondem a um padrão específico. Neste exemplo, somente os arquivos que têm a extensão .txt serão retornados.  
   
      As cadeias de caracteres retornadas pelo método `GetFiles` serão adicionadas à **ListBox**.  
   
@@ -118,7 +119,7 @@ Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no
   
      [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
-     O código usa o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> para obter os parâmetros de arquivo. Os parâmetros do arquivo são adicionados a um <xref:System.Text.StringBuilder>.  
+     O código usa o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> para obter parâmetros do arquivo. Os parâmetros do arquivo são adicionados a um <xref:System.Text.StringBuilder>.  
   
      O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> lê o conteúdo do arquivo em um <xref:System.IO.StreamReader>. A primeira linha do conteúdo é obtida de `StreamReader` e é adicionada no `StringBuilder`.  
   

@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3ef53fb9439159c94bb3894c233977088edc8872
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: determinando onde My.Application.Log grava informações (Visual Basic)
@@ -78,9 +79,9 @@ O objeto `My.Application.Log` pode gravar informações em vários ouvintes de l
   
 5.  Para muitos tipos de ouvintes compartilhados, os dados de inicialização do ouvinte incluem uma descrição de onde o ouvinte direciona os dados:  
   
-    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> grava em um log de arquivo, como descrito na introdução.  
+    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> grava em um arquivo de log, conforme descrito na introdução.  
   
-    -   Um ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`. Para exibir um log de eventos, é possível usar o **Gerenciador de Servidores** ou o **Visualizador de Eventos do Windows**. Para obter mais informações, consulte [Eventos ETW no .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`. Para exibir um log de eventos, é possível usar o **Gerenciador de Servidores** ou o **Visualizador de Eventos do Windows**. Para obter mais informações, consulte [Eventos ETW no .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
   
     -   Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> gravam no arquivo especificado no parâmetro `initializeData`.  
   

@@ -32,19 +32,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b64cc16647b4efa131310b6465b0570278e145b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bb86918d68f40a2279a1a2729da33f9cd9e9e66e
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>Como localizar arquivos com um padrão específico no Visual Basic
-O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho dos arquivos. É possível usar o parâmetro `wildCards` para especificar um padrão específico. Para incluir subdiretórios na pesquisa, configure o parâmetro `searchType` para `SearchOption.SearchAllSubDirectories`.  
+O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho para os arquivos. É possível usar o parâmetro `wildCards` para especificar um padrão específico. Para incluir subdiretórios na pesquisa, configure o parâmetro `searchType` para `SearchOption.SearchAllSubDirectories`.  
   
  Uma coleção vazia é retornada se nenhum arquivo correspondente ao padrão especificado for encontrado.  
   
 > [!NOTE]
->  Para obter mais informações sobre como retornar uma lista de arquivos usando a classe `DirectoryInfo` do namespace `System.IO`, consulte <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
+>  Para saber mais sobre como retornar uma lista de arquivos usando a classe `DirectoryInfo` do namespace `System.IO`, confira <xref:System.IO.DirectoryInfo.GetFiles%2A>.  
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>Localizar arquivos com um padrão específico  
   
@@ -55,21 +56,21 @@ O método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> re
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de caracteres de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
+-   O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido, porque é `Nothing` (<xref:System.ArgumentNullException>).  
+-   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   O `directory` não existe (<xref:System.IO.DirectoryNotFoundException>).  
+-   `directory` não existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   O `directory` aponta para um arquivo existente (<xref:System.IO.IOException>).  
+-   `directory` aponta para um arquivo existente (<xref:System.IO.IOException>).  
   
 -   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de arquivo ou de pasta no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+-   Um nome de pasta no caminho contém dois pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não tiver as permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+-   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
--   O usuário não tem as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
+-   O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>   

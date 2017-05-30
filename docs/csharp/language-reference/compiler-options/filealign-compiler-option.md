@@ -39,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 83569fa264ba3ed6e271281885940a70a5354840
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="filealign-c-compiler-options"></a>/filealign (opções do compilador C#)
@@ -75,7 +76,7 @@ A opção **/filealign** permite que você especifique o tamanho das seções em
   
 4.  Modifique a propriedade **Alinhamento de Arquivo**.  
   
- Para obter informações sobre como definir essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
+ Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   

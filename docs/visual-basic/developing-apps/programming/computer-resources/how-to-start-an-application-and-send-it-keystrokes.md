@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 03ec02de6b85d9d36b41b506196843833cd64ee5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 314d62ae0699e63aab2dff25cce2ce37552e2a20
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Como iniciar um aplicativo e enviar pressionamentos de tecla (Visual Basic)
@@ -49,7 +50,7 @@ Este exemplo usa a função `Shell` para iniciar o aplicativo Calculadora e, em 
  Uma exceção <xref:System.ArgumentException> será gerada se um aplicativo com o identificador do processo solicitado não for localizado.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- A chamada para a função `Shell` requer confiança total (<xref:System.Security.SecurityException> class).  
+ A chamada para a função `Shell` exige confiança total (classe <xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   

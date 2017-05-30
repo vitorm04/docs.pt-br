@@ -37,14 +37,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2df377b28babf10dea33111296bf57e1265df680
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6df284f7204b0731063db10cf026aed863f99fa9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Como ler a partir de arquivos de texto com vários formatos no Visual Basic
-O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira de analisar de forma fácil e eficiente arquivos de texto estruturados, como logs. É possível processar um arquivo com vários formatos usando o método `PeekChars` para determinar o formato de cada linha conforme você analisa por meio do arquivo.  
+O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira fácil e eficiente de analisar arquivos de texto estruturados, como logs. É possível processar um arquivo com vários formatos usando o método `PeekChars` para determinar o formato de cada linha conforme você analisa por meio do arquivo.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Para analisar um arquivo de texto com vários formatos  
   
@@ -83,7 +84,7 @@ O objeto <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> fornece uma maneira
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   Não foi possível analisar uma linha usando o formato especificado (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). A mensagem de exceção especifica a linha que causou a exceção, enquanto a propriedade <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> é atribuída ao texto contido na linha.  
+-   Não é possível analisar uma linha usando o formato especificado (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). A mensagem de exceção especifica a linha que está causando a exceção, enquanto a propriedade <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> é atribuída ao texto contido na linha.  
   
 -   O arquivo especificado não existe (<xref:System.IO.FileNotFoundException>).  
   

@@ -31,14 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 427c6bdafdcdabdb9abab4d10e2736323d0e208a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3fc7683c6629e2d94f3acb670810c6632efec094
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Como localizar subdiretórios com um padrão específico no Visual Basic
-O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho dos subdiretórios em um diretório. É possível usar o parâmetro `wildCards` para especificar um padrão específico. Caso deseje incluir os conteúdos dos subdiretórios na pesquisa, defina o parâmetro `searchType` para `SearchOption.SearchAllSubDirectories`.  
+O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> retorna uma coleção somente leitura de cadeias de caracteres que representam os nomes de caminho para os subdiretórios em um diretório. É possível usar o parâmetro `wildCards` para especificar um padrão específico. Caso deseje incluir os conteúdos dos subdiretórios na pesquisa, defina o parâmetro `searchType` para `SearchOption.SearchAllSubDirectories`.  
   
  Uma coleção vazia será retornada se nenhum diretório correspondente ao padrão especificado for encontrado.  
   
@@ -51,23 +52,23 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> retor
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de caracteres de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
+-   O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido, porque é `Nothing` (<xref:System.ArgumentNullException>).  
+-   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   Um ou mais dos caracteres curinga especificados é `Nothing`, uma cadeia de caracteres vazia ou contém somente espaços (<xref:System.ArgumentNullException>).  
   
--   O `directory` não existe (<xref:System.IO.DirectoryNotFoundException>).  
+-   `directory` não existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   O `directory` aponta para um arquivo existente (<xref:System.IO.IOException>).  
+-   `directory` aponta para um arquivo existente (<xref:System.IO.IOException>).  
   
 -   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de arquivo ou de pasta no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+-   Um nome de pasta no caminho contém dois pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não tiver as permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+-   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
--   O usuário não tem as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
+-   O usuário não possui as permissões necessárias (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>   

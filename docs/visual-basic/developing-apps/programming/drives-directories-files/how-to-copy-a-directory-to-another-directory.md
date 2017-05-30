@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b2d59f347df075e3f8c4f952b62e8ad7fa1643f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 59efea23743d126e9b1d5a842fc7655ad3350acd
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Como copiar um diretório para outro diretório no Visual Basic
@@ -55,13 +56,13 @@ Use o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> pa
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O novo nome especificado para o diretório contém dois pontos (:) ou uma barra (\ ou /) (<xref:System.ArgumentException>).  
+-   O novo nome especificado para o diretório contém dois pontos (:) ou barra (\ ou /) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de caracteres de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
+-   O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido, porque é `Nothing` (<xref:System.ArgumentNullException>).  
+-   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` é `Nothing` ou uma cadeia de caracteres vazia (<xref:System.ArgumentNullException>)  
+-   `destinationDirectoryName` é `Nothing` ou é uma cadeia de caracteres vazia (<xref:System.ArgumentNullException>)  
   
 -   O diretório de origem não existe (<xref:System.IO.DirectoryNotFoundException>).  
   
@@ -71,19 +72,19 @@ Use o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> pa
   
 -   O caminho de origem e o caminho de destino são os mesmos (<xref:System.IO.IOException>).  
   
--   `ShowUI` está definido como `UIOption.AllDialogs` e o usuário cancela a operação ou um ou mais arquivos no diretório não podem ser copiados (<xref:System.OperationCanceledException>).  
+-   `ShowUI` está definido como `UIOption.AllDialogs` e o usuário cancelou a operação ou um ou mais arquivos no diretório não podem ser copiados (<xref:System.OperationCanceledException>).  
   
 -   A operação é cíclica (<xref:System.InvalidOperationException>).  
   
--   O caminho contém dois-pontos (<xref:System.NotSupportedException>).  
+-   O caminho contém dois pontos (:) (<xref:System.NotSupportedException>).  
   
 -   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
--   Um nome de arquivo ou de pasta no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
+-   Um nome de pasta no caminho contém dois pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não tiver as permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+-   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
--   Existe um arquivo de destino, mas não pode ser acessado (<xref:System.UnauthorizedAccessException>).  
+-   Um arquivo de destino existe, mas não pode ser acessado (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   

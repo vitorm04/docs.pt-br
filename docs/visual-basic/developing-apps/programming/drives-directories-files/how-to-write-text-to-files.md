@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28b80f45669355c07cc49b66ed5fe9ab618d3cc1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8febfbb5d4fb9042f2d9153a81aa18bd279cf3dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>Como gravar texto em arquivos no Visual Basic
@@ -61,21 +62,21 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> pode se
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
--   O caminho não é válido por um dos seguintes motivos: é uma cadeia de caracteres de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
+-   O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
   
--   O caminho não é válido, porque é `Nothing` (<xref:System.ArgumentNullException>).  
+-   O caminho não é válido porque é `Nothing` (<xref:System.ArgumentNullException>).  
   
 -   `File` aponta para um caminho que não existe (<xref:System.IO.FileNotFoundException> ou <xref:System.IO.DirectoryNotFoundException>).  
   
--   O arquivo está sendo usado por outro processo ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
+-   O arquivo está sendo usado por outro processo, ou ocorre um erro de E/S (<xref:System.IO.IOException>).  
   
 -   O caminho excede o comprimento máximo definido pelo sistema (<xref:System.IO.PathTooLongException>).  
   
 -   Um nome de arquivo ou de diretório no caminho contém dois-pontos (:) ou está em um formato inválido (<xref:System.NotSupportedException>).  
   
--   O usuário não tiver as permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
+-   O usuário não possui permissões necessárias para exibir o caminho (<xref:System.Security.SecurityException>).  
   
--   O disco está cheio e houve uma falha na chamada para `WriteAllText` (<xref:System.IO.IOException>).  
+-   O disco está cheio e a chamada a `WriteAllText` falha (<xref:System.IO.IOException>).  
   
  Se você estiver executando em um contexto de confiança parcial, o código pode gerar uma exceção devido a privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8).  
   

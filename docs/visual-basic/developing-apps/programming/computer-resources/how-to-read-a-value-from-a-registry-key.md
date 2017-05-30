@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e68cde6d56d4de584861b8bcf29e072a5fc18928
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Como ler um valor a partir de uma chave do Registro no Visual Basic
@@ -70,12 +71,12 @@ O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler va
   
 -   O nome da chave é `Nothing` (<xref:System.ArgumentNullException>).  
   
--   O usuário não tem permissões para ler chaves do Registro (<xref:System.Security.SecurityException>).  
+-   O usuário não tem permissões para ler nas chaves do Registro (<xref:System.Security.SecurityException>).  
   
 -   O nome da chave excede o limite de 255 caracteres (<xref:System.ArgumentException>).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Para executar esse processo, o assembly requer um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8).  
+ Para executar esse processo, seu assembly exige um nível de privilégio concedido pela classe <xref:System.Security.Permissions.RegistryPermission>. Se você estiver executando em um contexto de confiança parcial, o processo poderá gerar uma exceção em razão dos privilégios insuficientes. Da mesma forma, o usuário deve ter as ACLs corretas para criar ou gravar nas configurações. Por exemplo, um aplicativo local que tem a permissão de segurança de acesso do código pode não ter permissão do sistema operacional. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   

@@ -112,7 +112,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
  [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
- Para obter mais informações sobre os métodos de entrada/saída, consulte <xref:System.IO>.  
+ Para saber mais sobre os métodos de entrada/saída, veja <xref:System.IO>.  
   
 ## <a name="command-line-compilation-and-execution"></a>Compilação e Execução da Linha de Comando  
  Você pode compilar o programa "Hello World!" usando a linha de comando em vez do IDE (ambiente de desenvolvimento integrado) do Visual Studio.  

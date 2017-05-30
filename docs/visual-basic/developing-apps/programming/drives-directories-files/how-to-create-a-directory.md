@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0886b370b90afd4c5ef0f338786b637a08bfcf3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 81afe64204fda468f452f86171b15080f9c3d948
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>Como criar um diretório no Visual Basic
@@ -59,11 +60,11 @@ Use o método `CreateDirectory` do objeto `My.Computer.FileSystem` para criar di
   
 -   O nome do diretório é muito longo (<xref:System.IO.PathTooLongException>).  
   
--   O nome do diretório é dois-pontos “:” (<xref:System.NotSupportedException>).  
+-   O nome do diretório é um sinal de dois pontos ":" (<xref:System.NotSupportedException>).  
   
 -   O usuário não tem permissão para criar o diretório (<xref:System.UnauthorizedAccessException>).  
   
--   O usuário não tem permissões em uma situação de confiança parcial (<xref:System.Security.SecurityException>).  
+-   O usuário não possui permissões em uma situação de confiança parcial (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   

@@ -35,17 +35,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8580acf6fd23f9de264d3fed47d268898d498a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 06a97ffe88fdae344b07d04b6ce560d4c163d431
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>Armazenando dados e lendo na Área de Transferência (Visual Basic)
 A Área de Transferência pode ser usada para armazenar dados, como texto e imagens. Como a Área de Transferência é compartilhada por todos os processos ativos, ela pode ser usada para transferir dados entre eles. O objeto `My.Computer.Clipboard` permite que você acesse facilmente a Área de Transferência e leia e grave nela.  
   
 ## <a name="reading-from-the-clipboard"></a>Lendo da Área de Transferência  
- Use o método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> para ler o texto na Área de Transferência. O código a seguir lê o texto e o mostra em uma caixa de mensagem. Deve haver texto armazenado na Área de Transferência para que o exemplo seja executado corretamente.  
+ Use o método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> para ler o texto da Área de Transferência. O código a seguir lê o texto e o mostra em uma caixa de mensagem. Deve haver texto armazenado na Área de Transferência para que o exemplo seja executado corretamente.  
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
@@ -60,7 +61,7 @@ A Área de Transferência pode ser usada para armazenar dados, como texto e imag
  Itens colocados na Área de Transferência persistirão mesmo após o aplicativo ser encerrado.  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>Determinando o tipo de arquivo armazenado na Área de Transferência  
- Os dados na área de transferência podem ter várias formas diferentes, como texto, um arquivo de áudio ou uma imagem. Para determinar que tipo de arquivo está na Área de Trabalho, você pode usar métodos como <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> e <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. O método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> poderá ser usado se você tiver um formato personalizado que deseja verificar.  
+ Os dados na área de transferência podem ter várias formas diferentes, como texto, um arquivo de áudio ou uma imagem. Para determinar que tipo de arquivo está na Área de Transferência, você pode usar métodos como <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A> e <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A>. Você poderá usar o método <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> se quiser verificar um formato personalizado.  
   
  Use a função `ContainsImage` para determinar se os dados contidos na Área de Transferência são uma imagem. O código a seguir verifica se os dados são uma imagem e relata de acordo.  
   
