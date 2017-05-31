@@ -48,7 +48,7 @@ A opção **/reference** opção faz com que o compilador importe informações 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ A opção **/reference** opção faz com que o compilador importe informações 
   
  Isso configura os aliases externos "GridV1" e "GridV2", que podem ser usados em seu programa por meio de uma instrução externa:  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  Quando isso for feito, será possível consultar o controle de grade de grid.dll, prefixando o nome do controle com GridV1, assim:  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  Além disso, será possível consultar o controle de grade de grid20.dll, prefixando o nome do controle com GridV2, assim:  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

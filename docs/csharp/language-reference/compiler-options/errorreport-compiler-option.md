@@ -46,7 +46,7 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   

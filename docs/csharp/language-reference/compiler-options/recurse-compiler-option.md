@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 0d369df996fe1442933a7f21d17af1f4f72cdacb
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção /recurse permite compilar arquivos de código-fonte em todos os diret�
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /recurse:[dir\]file  
 ```  
   
@@ -63,13 +64,13 @@ A opção /recurse permite compilar arquivos de código-fonte em todos os diret�
 ## <a name="example"></a>Exemplo  
  Compila todos os arquivos C# no diretório atual:  
   
-```  
+```console  
 csc *.cs  
 ```  
   
  Compila todos os arquivos C# no diretório dir1\dir2 e quaisquer diretórios abaixo dele e gera dir2.dll:  
   
-```  
+```console  
 csc /target:library /out:dir2.dll /recurse:dir1\dir2\*.cs  
 ```  
   

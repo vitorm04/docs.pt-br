@@ -43,7 +43,7 @@ Essa opção adiciona um módulo criado com a opção target:module para a compi
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /addmodule:file[;file2]  
 ```  
   
@@ -63,7 +63,7 @@ Essa opção adiciona um módulo criado com a opção target:module para a compi
 ## <a name="example"></a>Exemplo  
  Compile o arquivo de origem `input.cs` e adicione metadados de `metad1.netmodule` e `metad2.netmodule` para produzir `out.exe`:  
   
-```  
+```console  
 csc /addmodule:metad1.netmodule;metad2.netmodule /out:out.exe input.cs  
 ```  
   

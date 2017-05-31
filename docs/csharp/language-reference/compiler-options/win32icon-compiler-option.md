@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c2ea7aaae78816b93fcba62799cd7fd1fe62a3ea
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção **/win32icon** insere um arquivo .ico no arquivo de saída, que fornec
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /win32icon:filename  
 ```  
   
@@ -68,7 +69,7 @@ A opção **/win32icon** insere um arquivo .ico no arquivo de saída, que fornec
 ## <a name="example"></a>Exemplo  
  Compilar `in.cs` e anexar um arquivo .ico `rf.ico` para produzir `in.exe`:  
   
-```  
+```console  
 csc /win32icon:rf.ico in.cs  
 ```  
   

@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e8c27b8cfca42c6f84dec95824c6611ff5ccc577
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -45,7 +46,7 @@ Insere o recurso especificado no arquivo de saída.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /resource:filename[,identifier[,accessibility-modifier]]  
 ```  
   
@@ -85,7 +86,7 @@ Insere o recurso especificado no arquivo de saída.
 ## <a name="example"></a>Exemplo  
  Compile `in.cs` e anexe ao arquivo de recurso `rf.resource`:  
   
-```  
+```console  
 csc /resource:rf.resource in.cs  
 ```  
   

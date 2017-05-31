@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 17ec8f708485b52f82b797e90dc64f7d90914ad9
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica que as informações de depuração devem ser colocadas em um arquivo
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /bugreport:file  
 ```  
   

@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f739d778e7bada7f34e42ecfd05364e8cae5d453
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção **/target:library** faz com que o compilador crie uma DLL (biblioteca 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /target:library  
 ```  
   
@@ -68,7 +69,7 @@ A opção **/target:library** faz com que o compilador crie uma DLL (biblioteca 
 ## <a name="example"></a>Exemplo  
  Compile `in.cs`, criando `in.dll`:  
   
-```  
+```console  
 csc /target:library in.cs  
 ```  
   

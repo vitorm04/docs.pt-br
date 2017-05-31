@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 9d5784186f564241c896333d518e297c3c094f28
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção **/target:exe** faz com que o compilador crie um aplicativo de console
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /target:exe  
 ```  
   
@@ -70,7 +71,7 @@ A opção **/target:exe** faz com que o compilador crie um aplicativo de console
 ## <a name="example"></a>Exemplo  
  Cada uma das seguintes linhas de comando compilará `in.cs`, criando `in.exe`:  
   
-```  
+```console  
 csc /target:exe in.cs  
 csc in.cs  
 ```  

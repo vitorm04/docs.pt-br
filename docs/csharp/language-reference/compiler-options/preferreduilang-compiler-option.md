@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 30585b6df0a7acbc109d386efe0e311b1625342d
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Usando a opção do compilador `/preferreduilang`, é possível especificar o id
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /preferreduilang: language  
 ```  
   

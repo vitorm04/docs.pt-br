@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f326179e2159f5a6c78dff8bf972b15fd730746c
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,7 +45,7 @@ A opção **/fullpaths** faz com que o compilador especifique o caminho completo
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /fullpaths  
 ```  
   

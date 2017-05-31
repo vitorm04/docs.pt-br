@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 49941b764b283687ce56e551563b71b988557e76
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção **/out** especifica o nome do arquivo de saída.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /out:filename  
 ```  
   
@@ -82,7 +83,7 @@ A opção **/out** especifica o nome do arquivo de saída.
 ## <a name="example"></a>Exemplo  
  Compile `t.cs` e crie o arquivo de saída `t.exe`, bem como compile `t2.cs` e crie o arquivo de saída de módulo `mymodule.netmodule`:  
   
-```  
+```console  
 csc t.cs /out:mymodule.netmodule /target:module t2.cs  
 ```  
   

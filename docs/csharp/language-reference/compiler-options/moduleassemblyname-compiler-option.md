@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: d8c65394374ce3360461ad64b9cfc3353b79e0a7
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /moduleassemblyname:assembly_name  
 ```  
   
@@ -70,7 +71,7 @@ Especifica um assembly cujos tipos não públicos podem ser acessados por um .ne
 ## <a name="example"></a>Exemplo  
  Este exemplo compila um assembly com um tipo privado que concede acesso de assembly amigável a um assembly denominado csman_an_assembly.  
   
-```  
+```csharp  
 // moduleassemblyname_1.cs  
 // compile with: /target:library  
 using System;  
@@ -90,7 +91,7 @@ class An_Internal_Class
 ## <a name="example"></a>Exemplo  
  Este exemplo compila um .netmodule que acessa um tipo não público no assembly moduleassemblyname_1.dll. Sabendo que esse .netmodule será compilado dentro de um assembly chamado csman_an_assembly, é possível especificar **/moduleassemblyname**, permitindo que o .netmodule acesse tipos não públicos em um assembly que tenha concedido acesso de assembly amigável ao csman_an_assembly.  
   
-```  
+```csharp  
 // moduleassemblyname_2.cs  
 // compile with: /moduleassemblyname:csman_an_assembly /target:module /reference:moduleassemblyname_1.dll  
 class B {  
@@ -104,7 +105,7 @@ class B {
 ## <a name="example"></a>Exemplo  
  Este exemplo de código compila o assembly csman_an_assembly, referenciando o assembly compilado anteriormente e o .netmodule.  
   
-```  
+```csharp  
 // csman_an_assembly.cs  
 // compile with: /addmodule:moduleassemblyname_2.netmodule /reference:moduleassemblyname_1.dll  
 class A {  

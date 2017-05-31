@@ -43,7 +43,7 @@ A opção **/debug** faz o compilador gerar informações de depuração e coloc
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
@@ -82,7 +82,7 @@ A opção **/debug** faz o compilador gerar informações de depuração e coloc
 ## <a name="example"></a>Exemplo  
  Coloque as informações de depuração no arquivo de saída `app.pdb`:  
   
-```  
+```console  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   

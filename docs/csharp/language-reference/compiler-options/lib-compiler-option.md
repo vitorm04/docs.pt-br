@@ -43,7 +43,7 @@ A opção **/lib** especifica o local dos assemblies referenciados por meio da o
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
@@ -86,7 +86,7 @@ A opção **/lib** especifica o local dos assemblies referenciados por meio da o
 ## <a name="example"></a>Exemplo  
  Compile t2.cs para criar um arquivo .exe. O compilador examinará referências de assembly no diretório de trabalho e no diretório raiz da unidade C.  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   

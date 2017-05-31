@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 483a3237b7be820d49139b853aaf1dd581056f0e
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,7 @@ A opção **/warn** especifica o nível de aviso a ser exibido pelo compilador.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /warn:option  
 ```  
   
@@ -82,7 +83,7 @@ A opção **/warn** especifica o nível de aviso a ser exibido pelo compilador.
 ## <a name="example"></a>Exemplo  
  Compilar `in.cs` e fazer com que o compilador exiba somente avisos de nível 1:  
   
-```  
+```console  
 csc /warn:1 in.cs  
 ```  
   

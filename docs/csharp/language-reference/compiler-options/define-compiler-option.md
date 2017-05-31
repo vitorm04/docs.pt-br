@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1576be60e37272d8e8f9f0e532459707b47b3f78
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -45,7 +46,7 @@ A opção **/define** define `name` como um símbolo em todos os arquivos de có
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /define:name[;name2]  
 ```  
   
@@ -62,7 +63,7 @@ A opção **/define** define `name` como um símbolo em todos os arquivos de có
   
  Você pode definir vários símbolos com **/define**, usando um ponto e vírgula ou uma vírgula para separar os nomes dos símbolos. Por exemplo:  
   
-```  
+```console  
 /define:DEBUG;TUESDAY  
 ```  
   
@@ -81,7 +82,7 @@ A opção **/define** define `name` como um símbolo em todos os arquivos de có
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```csharp  
 // preprocessor_define.cs  
 // compile with: /define:xx  
 // or uncomment the next line  
