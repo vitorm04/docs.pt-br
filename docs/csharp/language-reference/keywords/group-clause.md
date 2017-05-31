@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
-A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGrouping%602> que contêm zero ou mais itens que correspondem ao valor de chave do grupo. Por exemplo, é possível agrupar uma sequência de cadeias de caracteres de acordo com a primeira letra de cada cadeia de caracteres. Nesse caso, a primeira letra será a chave, terá um tipo [char](../../../csharp/language-reference/keywords/char.md) e será armazenada na propriedade `Key` de cada objeto <xref:System.Linq.IGrouping%602>. O compilador infere o tipo da chave.  
+A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGrouping%602> que contêm zero ou mais itens que correspondem ao valor de chave do grupo. Por exemplo, é possível agrupar uma sequência de cadeias de caracteres de acordo com a primeira letra de cada cadeia de caracteres. Nesse caso, a primeira letra é a chave, tem um tipo [char](../../../csharp/language-reference/keywords/char.md) e é armazenada na propriedade `Key` de cada objeto <xref:System.Linq.IGrouping%602>. O compilador infere o tipo da chave.  
   
  É possível finalizar uma expressão de consulta com uma cláusula `group`, conforme mostrado no exemplo a seguir:  
   
@@ -52,7 +52,7 @@ A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGroupin
  Exemplos mais completos do uso de `group` com e sem `into` serão apresentados na seção Exemplo deste tópico.  
   
 ## <a name="enumerating-the-results-of-a-group-query"></a>Enumerando os Resultados de uma Consulta de Grupo  
- Como os objetos <xref:System.Linq.IGrouping%602> produzidos por uma consulta `group` são essencialmente uma lista de listas, é necessário usar um loop aninhado [foreach](../../../csharp/language-reference/keywords/foreach-in.md) para acessar os itens em cada grupo. O loop externo itera nas chaves de grupo e o loop interno itera em cada item do grupo em si. Um grupo pode ter uma chave sem nenhum elemento. Este é o loop `foreach` que executa a consulta nos exemplos de código anteriores:  
+ Como os objetos <xref:System.Linq.IGrouping%602> produzidos por uma consulta `group` são essencialmente uma lista de listas, você deve usar um loop aninhado [foreach](../../../csharp/language-reference/keywords/foreach-in.md) para acessar os itens em cada grupo. O loop externo itera nas chaves de grupo e o loop interno itera em cada item do grupo em si. Um grupo pode ter uma chave sem nenhum elemento. Este é o loop `foreach` que executa a consulta nos exemplos de código anteriores:  
   
  [!code-cs[cscsrefQueryKeywords#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_3.cs)]  
   
@@ -84,7 +84,7 @@ group person by new {name = person.surname, city = person.city};
  Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [Como implementar uma classe leve com propriedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último tópico apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra a norma padrão para ordenar dados de origem em grupos quando nenhuma lógica de consulta adicional for aplicada aos grupos. Isso é chamado de “agrupamento sem uma continuação”. Os elementos em uma matriz de cadeias de caracteres são agrupados de acordo com a primeira letra. O resultado da consulta é um tipo <xref:System.Linq.IGrouping%602> que contém uma propriedade pública `Key` do tipo `char` e uma coleção <xref:System.Collections.Generic.IEnumerable%601> que contém cada item no agrupamento.  
+ O exemplo a seguir mostra a norma padrão para ordenar dados de origem em grupos quando nenhuma lógica de consulta adicional for aplicada aos grupos. Isso é chamado de “agrupamento sem uma continuação”. Os elementos em uma matriz de cadeias de caracteres são agrupados de acordo com a primeira letra. O resultado da consulta é um tipo <xref:System.Linq.IGrouping%602> que contém uma propriedade `Key` pública do tipo `char` e uma coleção <xref:System.Collections.Generic.IEnumerable%601> que contém cada item no agrupamento.  
   
  O resultado de uma cláusula `group` é uma sequência de sequências. Portanto, para acessar os elementos individuais dentro de cada grupo retornado, use um loop aninhado `foreach` dentro do loop que itera as chaves de grupo, conforme mostrado no exemplo a seguir.  
   
@@ -96,7 +96,7 @@ group person by new {name = person.surname, city = person.city};
  [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## <a name="remarks"></a>Comentários  
- No tempo de compilação, as cláusulas `group` são movidas para chamadas para o método <xref:System.Linq.Enumerable.GroupBy%2A>.  
+ No tempo de compilação, as cláusulas `group` são convertidas em chamadas para o método <xref:System.Linq.Enumerable.GroupBy%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq.IGrouping%602>   

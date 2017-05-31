@@ -92,7 +92,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Demonstra como verificar se há características de senha forte e atualizar um parâmetro de cadeia de caracteres com informações sobre em quais verificações uma senha falha.  
   
  [Criptografando e descriptografando cadeias de caracteres no Visual Basic](../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- Mostra como usar a classe <xref:System.Security.Cryptography.DESCryptoServiceProvider> para criptografar ou descriptografar cadeias de caracteres.  
+ Mostra como usar a classe <xref:System.Security.Cryptography.DESCryptoServiceProvider> para criptografar e descriptografar cadeias de caracteres.  
   
  [Manipulando arquivos e pastas no Visual Basic](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Demonstra como usar funções [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] para determinar informações sobre um arquivo, pesquisar uma cadeia de caracteres em um arquivo e gravar em um arquivo.  

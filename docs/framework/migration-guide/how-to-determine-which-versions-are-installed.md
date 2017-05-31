@@ -18,47 +18,48 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 64f5f4cb54990c3090ec5e755bbab6de34d40959
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 24a8d7b017160d5cb28b7478200b8623a1dc4818
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
-Você pode instalar e executar várias versões do .NET Framework em seus computadores. Quando você desenvolve ou implanta um aplicativo, é necessário saber qual versão do .NET Framework está instalada no computador do usuário. Observe que o .NET Framework consiste em dois componentes, que são versões separadas:
-
-- Um conjunto de assemblies que são coleções de tipos e recursos que fornecem a funcionalidade para os aplicativos. O .NET Framework e assemblies que compartilham o mesmo número de versão.
-
-- O Common Language Runtime (CLR) que gerencia e executa o código dos aplicativos. O CLR é identificado pelo seu próprio número de versão (confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md)).
-
- Para obter uma lista precisa nas versões do .NET Framework instaladas no computador, você pode ver o Registro ou consultar o Registro em código:
-
- [Exibindo o Registro (versões 1 a 4)](#net_a)
- [Exibindo o Registro (versão 4.5 e posterior)](#net_b)
- [Usando código para consultar o Registro (versões 1 a 4)](#net_c)
- [Usando código para consultar o Registro (versão 4.5 e posterior)](#net_d)
-
- Para encontrar a versão CLR, é possível usar uma ferramenta ou código:
-
- [Usando a ferramenta Clrver](#clr_a)
- [Usando o código para consultar a classe System.Environment](#clr_b)
-
- Para saber mais sobre como detectar as atualizações instaladas para cada versão do .NET Framework, veja [Como determinar quais atualizações do .NET Framework estão instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Para saber mais sobre como instalar o .NET Framework, veja o [Guia de instalação](../../../docs/framework/install/guide-for-developers.md).
-
-<a name="net_a"></a> 
-#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Para encontrar versões do .NET Framework visualizando o Registro (.NET Framework 1 a 4)
-
-1. No menu **Iniciar**, escolha **Executar**.
-
-2. Na caixa **Abrir**, insira **regedit.exe**.
-
-     Você deve ter credenciais administrativas para executar o regedit.exe.
-
-3. No Editor do Registro, abrir a seguinte subchave:
-
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`
-
-     As versões instaladas estão listadas abaixo da subchave NDP. O número de versão é armazenado na entrada **Version**. Para o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a entrada **Version** está sob a subchave Client ou Full (em NDP) ou em ambas as subchaves.
+Você pode instalar e executar várias versões do .NET Framework em seus computadores. Quando você desenvolve ou implanta um aplicativo, é necessário saber qual versão do .NET Framework está instalada no computador do usuário. Observe que o .NET Framework consiste em dois componentes, que são versões separadas:  
+  
+-   Um conjunto de assemblies que são coleções de tipos e recursos que fornecem a funcionalidade para os aplicativos. O .NET Framework e assemblies que compartilham o mesmo número de versão.  
+  
+-   O Common Language Runtime (CLR) que gerencia e executa o código dos aplicativos. O CLR é identificado pelo seu próprio número de versão (confira [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md)).  
+  
+ Para obter uma lista precisa nas versões do .NET Framework instaladas no computador, você pode ver o Registro ou consultar o Registro em código:  
+  
+ [Visualizar o Registro (versões 1 a 4)](#net_a)  
+ [Visualizar o Registro (versões 4.5 e posteriores)](#net_b)  
+ [Usar o código para consultar o Registro (versões 1 a 4)](#net_c)  
+ [Usar o código para consultar o Registro (versões 4.5 e posteriores)](#net_d)  
+  
+ Para encontrar a versão CLR, é possível usar uma ferramenta ou código:  
+  
+ [Usar a ferramenta Clrver](#clr_a)  
+ [Usar o código para consultar a classe System.Environment](#clr_b)  
+  
+ Para saber mais sobre como detectar as atualizações instaladas para cada versão do .NET Framework, veja [Como determinar quais atualizações do .NET Framework estão instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Para obter mais informações sobre como instalar o .NET Framework, consulte [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md).  
+  
+<a name="net_a"></a>   
+#### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Para encontrar versões do .NET Framework visualizando o Registro (.NET Framework 1 a 4)  
+  
+1.  No menu **Iniciar**, escolha **Executar**.  
+  
+2.  Na caixa **Abrir**, insira **regedit.exe**.  
+  
+     Você deve ter credenciais administrativas para executar o regedit.exe.  
+  
+3.  No Editor do Registro, abrir a seguinte subchave:  
+  
+     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`  
+  
+     As versões instaladas estão listadas abaixo da subchave NDP. O número de versão é armazenado na entrada **Version**. Para o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], a entrada **Version** está sob a subchave Client ou Full (em NDP) ou em ambas as subchaves.  
+  
 
     > [!NOTE]
     > A pasta "NET Framework Setup” no Registro não começa por um ponto.
@@ -101,15 +102,14 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Para encontrar versões do .NET Framework consultando o Registro em código (.NET Framework 1 a 4)
 
-- Use a classe <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> para acessar a subchave Software\Microsoft\NET Framework Setup\NDP\ no Registro do Windows HKEY_LOCAL_MACHINE.
+- Use a classe <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> para acessar a subchave Software\Microsoft\NET Framework Setup\NDP\ em HKEY_LOCAL_MACHINE no registro do Windows.
 
      O código a seguir mostra um exemplo dessa consulta.
 
     > [!NOTE]
     > Este código não mostra como detectar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou posterior. Verifique a DWORD `Release` para detectar as versões, conforme descrito na seção anterior. Para saber o código que detecta o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou versões posteriores, veja a próxima seção deste artigo.
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
      O exemplo produz uma saída semelhante à seguinte:
 
@@ -125,7 +125,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 <a name="net_d"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>Para encontrar versões do .NET Framework consultando o Registro em código (.NET Framework 4.5 e posteriores)
 
-1. A existência de DWORD `Release` indica que o .NET Framework 4.5 ou posteriores foi instalado no computador. O valor da palavra-chave indica a versão instalada. Para verificar essa palavra-chave, use os métodos <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> e <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> da classe <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> para acessar a subchave Software\Microsoft\NET Framework Setup\NDP\v4\Full em HKEY_LOCAL_MACHINE no Registro do Windows.
+1. A existência de DWORD `Release` indica que o .NET Framework 4.5 ou posteriores foi instalado no computador. O valor da palavra-chave indica a versão instalada. Para verificar a palavra-chave, use os métodos <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> e <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> da classe <xref:Microsoft.Win32.RegistryKey?displayProperty=fullName> para acessar a subchave Software\Microsoft\NET Framework Setup\NDP\v4\Full em HKEY_LOCAL_MACHINE no registro do Windows.
 
 2. Verifique o valor da palavra-chave `Release` para determinar a versão instalada. Para ser compatível direto, você pode verificar se há um valor maior ou igual aos valores listados na tabela. Veja a seguir as versões e palavras-chave `Release` associadas do .NET Framework.
 
@@ -146,8 +146,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 
      A exemplo a seguir verifica o valor `Release` no Registro para determinar se o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou uma versão posterior do .NET Framework está instalada.
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
-     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]   [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
      Este exemplo segue a prática recomendada para a verificação de versão:
 
@@ -173,17 +172,16 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 <a name="clr_b"></a> 
 #### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Localizar a versão do tempo de execução atual ao consultar a classe Environment no código
 
-- Confira a propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> para recuperar um objeto <xref:System.Version> que identifica a versão do tempo de execução que está executando o código. Você pode usar a propriedade <xref:System.Version.Major%2A?displayProperty=fullName> para obter o identificador de versão principal (por exemplo, "4" para a versão 4.0), a propriedade <xref:System.Version.Minor%2A?displayProperty=fullName> para obter o identificador de versão secundária (por exemplo, "0" para a versão 4.0), ou o método <xref:System.Object.ToString%2A?displayProperty=fullName> para obter a cadeia de caracteres de versão inteira (por exemplo, "4.0.30319.18010", conforme mostra o código a seguir). Essa propriedade retorna um valor único que reflete a versão do tempo de execução que está executando o código; ela não retorna versões do assembly ou outras versões de tempo de execução que podem ter sido instaladas no computador.
+- Consulte a propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> para recuperar um objeto <xref:System.Version> que identifica a versão do tempo de execução que está executando o código. Você pode usar a propriedade <xref:System.Version.Major%2A?displayProperty=fullName> para obter o identificador de versão principal (por exemplo, "4" para a versão 4,0), a propriedade <xref:System.Version.Minor%2A?displayProperty=fullName> para obter o identificador de versão secundária (por exemplo, "0" para a versão 4,0), ou o método <xref:System.Object.ToString%2A?displayProperty=fullName> para obter a cadeia de caracteres de versão inteira (por exemplo, "4.0.30319.18010", conforme mostrado no código a seguir). Essa propriedade retorna um valor único que reflete a versão do tempo de execução que está executando o código; ela não retorna versões do assembly ou outras versões de tempo de execução que podem ter sido instaladas no computador.
 
-     Para as versões do .NET Framework 4, 4.5, 4.5.1 e 4.5.2, a propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> retorna um objeto <xref:System.Version> cuja representação de cadeia de caracteres tem a forma `4.0.30319.xxxxx`. Para o .NET Framework 4.6 e posterior, ela tem a forma `4.0.30319.42000`.
+     Para as versões do .NET Framework 4, 4.5, 4.5.1 e 4.5.2, a propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> retorna um objeto <xref:System.Version> cuja representação da cadeia de caracteres tem a forma `4.0.30319.xxxxx`. Para o .NET Framework 4.6 e posterior, ela tem a forma `4.0.30319.42000`.
 
     > [!IMPORTANT]
-    > Para o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e posterior, não recomendamos o uso da propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> para detectar a versão do tempo de execução. Em vez disso, recomendamos a consulta do Registro, conforme descrito na seção [Para encontrar versões do .NET Framework consultando o Registro no código (.NET Framework 4.5 e posterior)](#net_d) neste artigo.
+    > Para o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e posterior, não é recomendado o uso da propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> para detectar a versão do tempo de execução. Em vez disso, recomendamos a consulta do Registro, conforme descrito na seção [Para encontrar versões do .NET Framework consultando o Registro no código (.NET Framework 4.5 e posterior)](#net_d) neste artigo.
 
-     Confira um exemplo de consulta da propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> para obter informações de versão de tempo de execução:
+     Veja um exemplo de consulta da propriedade <xref:System.Environment.Version%2A?displayProperty=fullName> para obtenção de informações de versão do tempo de execução:
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
      O exemplo produz uma saída semelhante à seguinte:
 
@@ -193,5 +191,5 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 
 ## <a name="see-also"></a>Consulte também
  [Como determinar quais atualizações do .NET Framework estão instaladas](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)   
- [Guia de instalação](../../../docs/framework/install/guide-for-developers.md)   
+ [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)   
  [Versões e dependências](~/docs/framework/migration-guide/versions-and-dependencies.md)

@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="literals"></a>Literais  
 
- Você pode declarar e inicializar uma variável `byte` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. Se o literal inteiro estiver fora do intervalo de `byte` (ou seja, se ele for menor que <xref:System.Byte.MinValue?displayProperty=fullName> ou maior que <xref:System.Byte.MaxValue?displayProperty=fullName>, ocorrerá um erro de compilação.
+ Você pode declarar e inicializar uma variável `byte` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. Se o literal inteiro estiver fora do intervalo de `byte` (ou seja, se for menor que <xref:System.Byte.MinValue?displayProperty=fullName> ou maior que <xref:System.Byte.MaxValue?displayProperty=fullName>, ocorrerá um erro de compilação.
 
 No exemplo a seguir, inteiros iguais a 201 representados como literais decimais, hexadecimais e binários são implicitamente convertidos de valores [int](../../../csharp/language-reference/keywords/int.md) para `byte`.    
   
@@ -66,7 +66,6 @@ Começando com o C# 7, você também pode usar o caractere de sublinhado, `_`, c
  Você não pode converter implicitamente para `byte` os tipos numéricos não literais de tamanho de armazenamento maior. Para obter mais informações sobre os tamanhos de armazenamento de tipos integrais, consulte [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md). Considere, por exemplo, as duas variáveis `byte` `x` e `y` a seguir:  
   
 ```  
-  
 byte x = 10, y = 20;  
 ```  
   
@@ -133,3 +132,4 @@ SampleMethod((byte)5);
  [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+
