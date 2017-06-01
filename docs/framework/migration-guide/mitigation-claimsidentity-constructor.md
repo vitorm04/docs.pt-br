@@ -31,7 +31,7 @@ A partir do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], há uma muda
 ## <a name="mitigation"></a>Redução  
  Se esse comportamento for indesejável, restaure o comportamento anterior definindo a opção `Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity` no arquivo de configuração do aplicativo como `true`. Isso exige a adição do seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo web.config:  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <AppContextSwitchOverrides value="Switch.System.Security.ClaimsIdentity.SetActorAsReferenceWhenCopyingClaimsIdentity=true" />  

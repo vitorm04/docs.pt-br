@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: cc8980875a8e956f884cf7f71c48f1b9eb359dff
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica um link para outro membro.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <see cref="member"/>  
 ```  
   

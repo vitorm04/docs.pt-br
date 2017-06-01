@@ -32,14 +32,14 @@ A partir do .NET Framework 4.6, o método <xref:System.Drawing.Icon.ToBitmap%2A?
 ### <a name="mitigation"></a>Redução  
  Se esse comportamento for indesejável, será possível reter o comportamento anterior adicionando o seguinte elemento à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:  
   
-```  
+```xml  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true" />  
 ```  
   
  Se o arquivo app.config já contiver o elemento `AppContextSwitchOverrides`, o novo valor deverá ser mesclado ao atributo `value`, da seguinte forma:  
   
-```  
+```xml  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
 ```  

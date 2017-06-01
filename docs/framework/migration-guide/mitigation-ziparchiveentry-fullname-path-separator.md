@@ -41,7 +41,7 @@ A partir dos aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/n
 ## <a name="mitigation"></a>Redução  
  Se esse comportamento for indesejável, você poderá recusar adicionando uma definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do seu arquivo de configuração de aplicativo. Veja a seguir a seção `<runtime>` e a opção de recusa.  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=true" />  
 </runtime>  
@@ -49,7 +49,7 @@ A partir dos aplicativos direcionados ao [!INCLUDE[net_v461](../../../includes/n
   
  Além disso, os aplicativos destinados a versões anteriores do .NET Framework, mas estão sendo executados no [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] e versões posteriores, podem aceitar esse comportamento adicionando uma definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo. Veja a seguir a seção `<runtime>` e a opção de aceitação.  
   
-```  
+```xml  
 <runtime>  
    <AppContextSwitchOverrides value="Switch.System.IO.Compression.ZipFile.UseBackslash=false" />  
 </runtime>  

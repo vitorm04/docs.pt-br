@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 951703c3a174a1f33108f37809071d0f8f1dc3a8
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="ltcodegt-c-programming-guide"></a>&lt;code&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <code>content</code>  
 ```  
   

@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f2563a334248740ff1bd4fc49662229d8f3bf27e
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: alterando onde My.Application.Log grava informações (Visual Basic)
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  Adicione esses elementos a essa seção `<listeners>`.  
   
-    ```  
+    ```xml  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/22/2017
   
 6.  Adicione esses elementos a essa seção `<sharedListeners>`.  
   
-    ```  
+    ```xml  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/22/2017
   
 7.  O conteúdo do arquivo app.config deve ser semelhante ao XML a seguir:  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  
@@ -180,9 +180,9 @@ ms.lasthandoff: 05/22/2017
   
      Alguns tipos que você pode usar são:  
   
-    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que grava em um arquivo de log.  
+    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que grava um log de arquivo.  
   
-    -   O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
+    -   Um ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
   
     -   Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, que gravam no arquivo especificado no parâmetro `initializeData`.  
   

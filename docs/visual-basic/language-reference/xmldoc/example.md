@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 279b9e675e358ce8d5aa2171984c0e48afe66558
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica um exemplo para o membro.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <example>description</example>  
 ```  
   

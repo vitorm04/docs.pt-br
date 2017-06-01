@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 89f8d321505b528d07fd04780cec06fb65b0e05e
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica uma seção de comentários para o membro.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <remarks>description</remarks>  
 ```  
   

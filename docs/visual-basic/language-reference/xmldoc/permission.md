@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 117b631aed1020465ca49e6577b5c435be0815d4
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica uma permissão necessária para o membro.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <permission cref="member">description</permission>  
 ```  
   

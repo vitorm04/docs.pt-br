@@ -741,7 +741,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          A associação de modelo assíncrono é controlada pela configuração `aspnet:EnableAsyncModelBinding`.
 
-        ```
+        ```xml
         <appSettings>
            <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
         </appSettings>
@@ -774,7 +774,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          O .NET Framework 4.5 apresentou um [algoritmo de hash de cadeia de caracteres aleatória](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). No entanto, ele não tinha suporte do ASP.NET porque alguns recursos do ASP.NET dependem de um código hash estável. No [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], já há suporte para os algoritmos de hash da cadeia de caracteres aleatória. Para habilitar esse recurso, use a configuração `aspnet:UseRandomizedStringHashAlgorithm`.
 
-        ```
+        ```xml
         <appSettings>
            <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
         </appSettings>
@@ -924,7 +924,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          Agora, o suporte ao HDPI no WPF é melhor no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Foram feitas alterações no layout para reduzir as ocorrências de distorção em controles com bordas. Por padrão, esse recurso será habilitado somente se <xref:System.Runtime.Versioning.TargetFrameworkAttribute> estiver definido para o .NET 4.6.  Aplicativos direcionados a versões anteriores do Framework, mas que são executados no [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] podem aceitar o novo comportamento adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:
 
-        ```
+        ```xml
         <AppContextSwitchOverrides
         value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
         />
@@ -932,7 +932,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          Janelas do WPF invadindo vários monitores com configurações de DPI diferentes (configuração de DPI múltiplo) agora são renderizadas completamente sem regiões escurecidas. Você pode desativar esse comportamento adicionando a seguinte linha à seção `<appSettings>` do arquivo app.config:
 
-        ```
+        ```xml
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
@@ -952,7 +952,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
          Agora, o WCF oferece suporte ao TLS 1.1 e TLS 1.2 versão SSL, além do SSL 3.0 e TLS 1.0, ao usar o NetTcp com autenticação de cliente e segurança de transporte. Agora é possível selecionar qual protocolo usar, ou desabilitar protocolos antigos e menos seguros. Isso pode ser feito definindo a propriedade <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> ou adicionando o seguinte ao arquivo de configuração.
 
-        ```
+        ```xml
         <netTcpBinding>
            <binding>
               <security mode= "None|Transport|Message|TransportWithMessageCredential" >
@@ -977,7 +977,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
              Os usuários também podem habilitar um recurso que garante que as mensagens enviadas usando canais criados por fábricas de canal diferentes usarão conexões HTTP subjacentes diferentes. Para habilitar esse recurso, os usuários devem definir o seguinte `appSetting` como `true`:
 
-            ```
+            ```xml
             <appSettings>
                <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
             </appSettings>
@@ -987,7 +987,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
      Agora você pode especificar o número de segundos que um serviço de fluxo de trabalho manterá uma solicitação de operação fora de ordem quando houver um indicador de "não protocolo" pendentes antes do tempo limite da solicitação. Um indicador de "não protocolo" é um indicador que não está relacionado a atividades de Recebimento pendentes. Algumas atividades criam indicadores de não protocolo dentro de sua implementação, portanto, talvez a existência de um indicador não protocolo não seja óbvia. Entre elas estão Estado e Seleção. Então, se você tiver um serviço de fluxo de trabalho implementado com uma máquina de estado, ou que contenha uma atividade de Seleção, provavelmente você terá indicadores de não protocolo. Especifique o intervalo adicionando uma linha semelhante à seguinte à seção `appSettings` do arquivo app.config:
 
-    ```
+    ```xml
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
     ```
 
@@ -1005,7 +1005,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
      Agora você pode incluir o identificador de transação distribuída para a transação que causou uma exceção derivada de <xref:System.Transactions.TransactionException>. Faça isso adicionando a seguinte chave à seção `appSettings` do arquivo app.config:
 
-    ```
+    ```xml
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
     ```
 
@@ -1037,7 +1037,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
      Esse é um recurso de opção de aceitação. Para habilitá-lo, defina o elemento `EnableWindowsFormsHighDpiAutoResizing` como `true` no arquivo de configuração do aplicativo (app.config):
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1076,7 +1076,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
      Esse é um recurso de opção de aceitação. Para habilitá-lo, defina o elemento `EnableWindowsFormsHighDpiAutoResizing` como `true` no arquivo de configuração do aplicativo (app.config):
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1166,7 +1166,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
      Para habilitar esse recurso, adicione um novo elemento \<appSettings> ao arquivo de configuração (app.config) e defina o elemento `EnableWindowsFormsHighDpiAutoResizing` como `true`:
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>

@@ -38,9 +38,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2e879fa04eba5c01e383d53bf390f64b0cda49f7
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -49,7 +50,7 @@ Define uma lista ou tabela.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <list type="type">  
    <listheader>  
       <term>term</term>  

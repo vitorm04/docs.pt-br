@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 6f3a4c4b4d7ff5bdb0325a3a2f52b4c5c9cbc525
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica quais exceções podem ser geradas.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <exception cref="member">description</exception>  
 ```  
   

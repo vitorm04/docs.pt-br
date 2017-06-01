@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 98ffc0635c3fcd97b5e5aa3ed6b573d15f7e79ef
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica que o conteúdo é formatado como um parágrafo.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <para>content</para>  
 ```  
   
