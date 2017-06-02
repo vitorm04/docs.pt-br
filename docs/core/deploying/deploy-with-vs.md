@@ -102,11 +102,11 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
-       ```xml
-        <PropertyGroup>
-          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-        </PropertyGroup>
-       ```
+```xml
+<PropertyGroup>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+</PropertyGroup>
+```
    Observe que o elemento `<RuntimeIdentifiers>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo *csproj*. Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
 
 1. Crie um build de depuração do seu aplicativo.
