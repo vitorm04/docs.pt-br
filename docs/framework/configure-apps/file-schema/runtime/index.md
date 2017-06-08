@@ -23,11 +23,11 @@ caps.latest.revision: 49
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
-ms.openlocfilehash: 8ee3d5f4ed691793298e8042ac681434b6135072
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: 84935c04856e9d72a8305d9d215acbab5090234a
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/27/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="runtime-settings-schema"></a>Esquema de configurações do tempo de execução
