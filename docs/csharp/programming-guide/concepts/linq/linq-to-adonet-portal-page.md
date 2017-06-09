@@ -26,7 +26,7 @@ ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (página do portal)
-O [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)] permite que você realize consultas em qualquer objeto enumerável em [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] usando o modelo de programação [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)].  
+O [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)] permite que você realize consultas em qualquer objeto enumerável em [!INCLUDE[vstecado](~/includes/vstecado-md.md)] usando o modelo de programação [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)].  
   
 > [!NOTE]
 >  A documentação do [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)] está localizada na seção ADO.NET do SDK do .NET Framework: [LINQ e o ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec).  
@@ -34,7 +34,7 @@ O [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/incl
  Há três tecnologias separadas do [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] do ADO.NET: [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)], [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] e [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)]. O [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)] fornece consultas mais sofisticadas e otimizadas em <xref:System.Data.DataSet>, o [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)] permite que você consulte diretamente os esquemas de banco de dados de [!INCLUDE[ssNoVersion](../../../../csharp/programming-guide/concepts/linq/includes/ssnoversion_md.md)] e [!INCLUDE[linq_entities](../../../../csharp/programming-guide/concepts/linq/includes/linq_entities_md.md)] permite que você consulte um [!INCLUDE[adonet_edm](../../../../csharp/programming-guide/concepts/linq/includes/adonet_edm_md.md)].  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados em [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] e é um elemento fundamental do modelo de programação desconectada na qual o [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado_md.md)] se baseia. Apesar dessa importância, no entanto, o <xref:System.Data.DataSet> tem recursos de consulta limitados.  
+ O <xref:System.Data.DataSet> é um dos componentes mais amplamente usados em [!INCLUDE[vstecado](~/includes/vstecado-md.md)] e é um elemento fundamental do modelo de programação desconectada na qual o [!INCLUDE[vstecado](~/includes/vstecado-md.md)] se baseia. Apesar dessa importância, no entanto, o <xref:System.Data.DataSet> tem recursos de consulta limitados.  
   
  O [!INCLUDE[linq_dataset](../../../../csharp/programming-guide/concepts/linq/includes/linq_dataset_md.md)] permite que você crie mais recursos sofisticados de consulta no <xref:System.Data.DataSet> usando a mesma funcionalidade de consultas que está disponível para muitas outras fontes de dados.  
   
