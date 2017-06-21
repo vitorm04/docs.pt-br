@@ -1,5 +1,5 @@
 ---
-title: "#soma de verificação pragma (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"pragma-checksum-c-reference--microsoft-docs\"></a>soma de verificação pragma (Referência de C#) | Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -41,7 +41,7 @@ Gera somas de verificação para os arquivos de origem para ajudar na depuraçã
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```csharp
 #pragma checksum "filename" "{guid}" "checksum bytes"  
 ```  
   
@@ -66,7 +66,7 @@ Gera somas de verificação para os arquivos de origem para ajudar na depuraçã
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```csharp
 class TestClass  
 {  
     static int Main()  
@@ -80,3 +80,4 @@ class TestClass
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+
