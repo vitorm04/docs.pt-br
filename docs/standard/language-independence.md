@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
 ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/10/2017
 
 ---
@@ -346,7 +347,7 @@ Tipo não compatível | Descrição | Alternativa compatível com CLS
  
  A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo: 
  
- * Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`*named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como não compatível com CLS.
+ * Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int` *named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como não compatível com CLS.
 
   ```csharp
   using System;
