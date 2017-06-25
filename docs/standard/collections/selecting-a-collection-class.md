@@ -28,15 +28,15 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
-Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. Em geral, evite usar os tipos no namespace <xref:System.Collections> a menos que se direcione especificamente para o .NET Framework versão 1.1. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias.  
+Certifique-se de escolher sua classe de coleção com cuidado. A utilização do tipo errado pode restringir o uso da coleção. Em geral, evite usar os tipos no namespace <xref:System.Collections>, a menos que o seu foco seja especificamente o .NET Framework versão 1.1. As versões genéricas e simultâneas das coleções são as preferíveis devido à maior segurança de tipo e outras melhorias.  
   
  Considere as perguntas a seguir:  
   
 -   Você precisa de uma lista sequencial em que o elemento normalmente será descartado após seu valor ser recuperado?  
   
-    -   Em caso afirmativo, considere a possibilidade de usar a classe <xref:System.Collections.Queue> ou a classe genérica <xref:System.Collections.Generic.Queue%601> caso precise do comportamento PEPS (primeiro a entrar, primeiro a sair). Considere a possibilidade de usar a classe <xref:System.Collections.Stack> ou a classe genérica <xref:System.Collections.Generic.Stack%601> caso precise do comportamento UEPS (último a entrar, primeiro a sair). Para obter acesso seguro a partir de vários threads, use as versões simultâneas <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+    -   Em caso afirmativo, considere usar a classe <xref:System.Collections.Queue> ou a classe genérica <xref:System.Collections.Generic.Queue%601> caso precise do comportamento PEPS (primeiro a entrar, primeiro a sair). Considere usar a classe <xref:System.Collections.Stack> ou a classe genérica <xref:System.Collections.Generic.Stack%601> caso precise do comportamento UEPS (último a entrar, primeiro a sair). Para obter acesso seguro a partir de vários threads, use as versões simultâneas <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
-    -   Caso contrário, considere a possibilidade de usar outras coleções.  
+    -   Caso contrário, considere usar outras coleções.  
   
 -   Você precisa acessar os elementos em uma ordem específica, como PEPS, UEPS ou aleatória?  
   
@@ -48,7 +48,7 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
 -   Você precisa acessar cada elemento pelo índice?  
   
-    -   As classes <xref:System.Collections.ArrayList> e <xref:System.Collections.Specialized.StringCollection> e a classe genérica <xref:System.Collections.Generic.List%601> oferecem acesso aos seus elementos pelo índice baseado no zero do elemento.  
+    -   As classes <xref:System.Collections.ArrayList> e <xref:System.Collections.Specialized.StringCollection> e a classe genérica <xref:System.Collections.Generic.List%601> oferecem acesso aos seus elementos pelo índice baseado em zero do elemento.  
   
     -   As classes <xref:System.Collections.Hashtable>, <xref:System.Collections.SortedList>, <xref:System.Collections.Specialized.ListDictionary> e <xref:System.Collections.Specialized.StringDictionary>, e as classes genéricas <xref:System.Collections.Generic.Dictionary%602> e <xref:System.Collections.Generic.SortedDictionary%602>, oferecem acesso aos seus elementos pela chave do elemento.  
   
@@ -66,11 +66,11 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
 -   Você precisa classificar os elementos de forma diferente de como foram inseridos?  
   
-    -   O <xref:System.Collections.Hashtable> classifica seus elementos por seus códigos hash.  
+    -   O <xref:System.Collections.Hashtable> classifica os elementos dele pelos próprios códigos hash.  
   
     -   A classe <xref:System.Collections.SortedList> e as classes genéricas <xref:System.Collections.Generic.SortedDictionary%602> e <xref:System.Collections.Generic.SortedList%602> classificam seus elementos pela chave, com base nas implementações da interface <xref:System.Collections.IComparer> e da interface genérica <xref:System.Collections.Generic.IComparer%601>.  
   
-    -   O <xref:System.Collections.ArrayList> oferece um método <xref:System.Collections.ArrayList.Sort%2A> que usa uma implementação <xref:System.Collections.IComparer> como parâmetro. Seu equivalente genérico, a classe genérica <xref:System.Collections.Generic.List%601>, fornece um método <xref:System.Collections.Generic.List%601.Sort%2A> que pega uma implementação da interface genérica <xref:System.Collections.Generic.IComparer%601> como parâmetro.  
+    -   O <xref:System.Collections.ArrayList> oferece um método <xref:System.Collections.ArrayList.Sort%2A> que usa uma implementação <xref:System.Collections.IComparer> como parâmetro. Seu equivalente genérico, a classe genérica <xref:System.Collections.Generic.List%601>, fornece um método <xref:System.Collections.Generic.List%601.Sort%2A> que usa uma implementação da interface genérica <xref:System.Collections.Generic.IComparer%601> como parâmetro.  
   
 -   Você precisa de rapidez para pesquisas e recuperação de informações?  
   
