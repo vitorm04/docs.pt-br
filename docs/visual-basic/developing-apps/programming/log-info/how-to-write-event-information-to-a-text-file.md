@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52c8739c0493275fc84274a295c2464a6cf9a580
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: ac7256c333c375a0deb8ffe5c31c02fdca09f9b6
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/26/2017
 
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Como gravar informações de evento em um arquivo de texto (Visual Basic)
