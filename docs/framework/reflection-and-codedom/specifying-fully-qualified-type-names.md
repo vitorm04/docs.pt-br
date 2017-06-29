@@ -1,0 +1,162 @@
+---
+title: Especificando nomes de tipo totalmente qualificados | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [.NET Framework], fully qualified type names
+- reflection, fully qualified type names
+- names [.NET Framework], assemblies
+- tokens
+- BNF
+- assemblies [.NET Framework], names
+- Backus-Naur form
+- languages, BNF grammar
+- fully qualified type names
+- type names
+- special characters
+- IDENTIFIER
+ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
+caps.latest.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e1bceed0f95170f9dc11ebc28217b9e8a7dc891c
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/02/2017
+
+---
+# <a name="specifying-fully-qualified-type-names"></a>Especificando nomes de tipo totalmente qualificados
+Você deve especificar nomes de tipo para ter uma entrada válida para várias operações de reflexão. Um nome de tipo totalmente qualificado consiste em uma especificação de nome de assembly, uma especificação de namespace e um nome de tipo. Especificações de nome de tipo são usadas por métodos como <xref:System.Type.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName> e <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>.  
+  
+## <a name="backus-naur-form-grammar-for-type-names"></a>Gramática da forma de Backus-Naur para nomes de tipo  
+ A BNF (forma de Backus-Naur) define a sintaxe das linguagens formais. A tabela a seguir lista regras lexicais BNF que descrevem como reconhecer uma entrada válida. Terminais (elementos que não poder ser mais reduzidos) são mostrados em letras maiúsculas. Não terminais (elementos que ainda podem ser reduzidos) são mostrados em cadeias de caracteres combinando maiúsculas e minúsculas ou entre aspas simples, porém a aspa simples (') não faz parte da sintaxe em si. O caractere de barra vertical (&#124;) indica que as regras que têm sub-regras.  
+  
+|Gramática BNF ou nomes de tipo totalmente qualificados|  
+|-----------------------------------------------|  
+|TypeSpec                          :=   ReferenceTypeSpec<br /><br /> &#124;     SimpleTypeSpec|  
+|ReferenceTypeSpec            :=   SimpleTypeSpec '&'|  
+|SimpleTypeSpec                :=   PointerTypeSpec<br /><br /> &#124;     ArrayTypeSpec<br /><br /> &#124;     TypeName|  
+|PointerTypeSpec                :=   SimpleTypeSpec '*'|  
+|ArrayTypeSpec                  :=   SimpleTypeSpec '[ReflectionDimension]'<br /><br /> &#124;     SimpleTypeSpec '[ReflectionEmitDimension]'|  
+|ReflectionDimension           :=   '*'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
+|ReflectionEmitDimension    :=   '*'<br /><br /> &#124;     Number '..' Número<br /><br /> &#124;     Number '…'<br /><br /> &#124;     ReflectionDimension ',' ReflectionDimension<br /><br /> &#124;     NOTOKEN|  
+|Number                            :=   [0-9]+|  
+|TypeName                         :=   NamespaceTypeName<br /><br /> &#124;     NamespaceTypeName ',' AssemblyNameSpec|  
+|NamespaceTypeName        :=   NestedTypeName<br /><br /> &#124;     NamespaceSpec '.' NestedTypeName|  
+|NestedTypeName               :=   IDENTIFIER<br /><br /> &#124;     NestedTypeName '+' IDENTIFIER|  
+|NamespaceSpec                 :=   IDENTIFIER<br /><br /> &#124;     NamespaceSpec '.' IDENTIFICADOR|  
+|AssemblyNameSpec           :=   IDENTIFIER<br /><br /> &#124;     IDENTIFIER ',' AssemblyProperties|  
+|AssemblyProperties            :=   AssemblyProperty<br /><br /> &#124;     AssemblyProperties ',' AssemblyProperty|  
+|AssemblyProperty              :=   AssemblyPropertyName '=' AssemblyPropertyValue|  
+  
+## <a name="specifying-special-characters"></a>Especificando caracteres especiais  
+ Em um nome de tipo, IDENTIFIER é qualquer nome válido determinado pelas regras de uma linguagem.  
+  
+ Use a barra invertida (\\) como um caractere de escape para separar os seguintes tokens quando usados como parte do IDENTIFIER.  
+  
+|Token|Significado|  
+|-----------|-------------|  
+|\\,|Separador de assembly.|  
+|\\+|Separador de tipo aninhado.|  
+|\\&|Tipo de referência.|  
+|\\*|Tipo do ponteiro.|  
+|\\[|Delimitador de dimensão da matriz.|  
+|\\]|Delimitador de dimensão da matriz.|  
+|\\.|Use a barra invertida antes de um ponto somente se ele for usado em uma especificação de matriz. Os pontos em NamespaceSpec não usam a barra invertida.|  
+|\\\|Barra invertida quando necessário como uma cadeia de caracteres literal.|  
+  
+ Observe que, em todos os componentes de TypeSpec, exceto AssemblyNameSpec, os espaços são relevantes. No AssemblyNameSpec, os espaços antes do separador ',' são relevantes, mas espaços depois do separador ',' são ignorados.  
+  
+ Classes de reflexão, como <xref:System.Type.FullName%2A?displayProperty=fullName>, retornam o nome danificado, de forma que o nome retornado pode ser usado em uma chamada para <xref:System.Type.GetType%2A>, como em `MyType.GetType(myType.FullName)`.  
+  
+ Por exemplo, o nome totalmente qualificado para um tipo pode ser `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`.  
+  
+ Se o namespace fosse `Ozzy.Out+Back`, o sinal de adição deve ser precedido por uma barra invertida. Caso contrário, o analisador o interpretaria como um separador de aninhamento. A reflexão emite essa cadeia de caracteres como `Ozzy.Out\+Back.Kangaroo+Wallaby,MyAssembly`.  
+  
+## <a name="specifying-assembly-names"></a>Especificando nomes de assembly  
+ A informação mínima necessária em uma especificação de nome do assembly é o nome textual (IDENTIFIER) do assembly. Você pode seguir o IDENTIFIER de uma lista separada por vírgulas de pares propriedade/valor, conforme descrito na tabela a seguir. A nomenclatura do IDENTIFIER deve seguir as regras de nomenclatura de arquivo. O IDENTIFIER não diferencia maiúsculas de minúsculas.  
+  
+|Property name|Descrição|Valores permitidos|  
+|-------------------|-----------------|----------------------|  
+|**Versão**|Número de versão do assembly|*Major.Minor.Build.Revision*, em que *Major*, *Minor*, *Build* e *Revision* são inteiro entre 0 e 65535, inclusive.|  
+|**PublicKey**|Chave pública completa|O valor da cadeia de caracteres da chave pública completa em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|  
+|**PublicKeyToken**|Token de chave pública (hash de 8 bytes da chave pública completa)|Valor da cadeia de caracteres do token de chave pública em formato hexadecimal. Especifique uma referência nula (**Nothing** no Visual Basic) para indicar explicitamente um assembly particular.|  
+|**Cultura**|Cultura do assembly|A cultura do assembly no formato RFC-1766 ou “neutra” para assemblies independente de linguagem (não satélite).|  
+|**Personalizado**|BLOB (objeto binário grande) personalizado. No momento, isso é usado apenas em assemblies gerados pelo [Ngen (Gerador de Imagens Nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|A cadeia de caracteres personalizada usada pela ferramenta do Gerador de Imagens Nativas para notificar o cache de assembly que o assembly que está sendo instalado é uma imagem nativa e, portanto, deve ser instalada no cache de imagens nativas. Também chamado de cadeia de caracteres zap.|  
+  
+ A exemplo a seguir mostra um **AssemblyName** para um assembly de nome simples com cultura padrão.  
+  
+```csharp  
+com.microsoft.crypto, Culture=""   
+```  
+  
+ O exemplo a seguir mostra uma referência totalmente especificada para um assembly de nome forte com a cultura “en”.  
+  
+```csharp  
+com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
+    Version=1.0.0.0   
+```  
+  
+ Todos os exemplos a seguir mostram **AssemblyName** parcialmente especificado, que pode ser atendido por um assembly de nome forte ou simples.  
+  
+```csharp  
+com.microsoft.crypto  
+com.microsoft.crypto, Culture=""  
+com.microsoft.crypto, Culture=en   
+```  
+  
+ Todos os exemplos a seguir mostram um **AssemblyName** parcialmente especificado, que deve ser atendido por um assembly de nome simples.  
+  
+```csharp  
+com.microsoft.crypto, Culture="", PublicKeyToken=null   
+com.microsoft.crypto, Culture=en, PublicKeyToken=null  
+```  
+  
+ Todos os exemplos a seguir mostram um **AssemblyName** parcialmente especificado, que deve ser atendido por um assembly de nome forte.  
+  
+```csharp  
+com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012  
+com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
+    Version=1.0.0.0  
+```  
+  
+## <a name="specifying-pointers"></a>Especificando ponteiros  
+ SimpleTypeSpec* representa um ponteiro não gerenciado. Por exemplo, para obter um ponteiro para o tipo MyType, use `Type.GetType("MyType*")`. Para obter um ponteiro para o tipo MyType, use `Type.GetType("MyType**")`.  
+  
+## <a name="specifying-references"></a>Especificando referências  
+ SimpleTypeSpec & representa um ponteiro ou referência gerenciado. Por exemplo, para obter uma referência ao tipo MyType, use `Type.GetType("MyType &")`. Observe que, ao contrário dos ponteiros, as referências são limitadas a um nível.  
+  
+## <a name="specifying-arrays"></a>Especificando matrizes  
+ Na Gramática BNF, ReflectionEmitDimension só se aplica às definições de tipo incompletas recuperadas usando <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName>. As definições de tipo incompletas são objetos <xref:System.Reflection.Emit.TypeBuilder> construídos usando <xref:System.Reflection.Emit?displayProperty=fullName>, mas no qual <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=fullName> não foi chamado. É possível usar ReflectionDimension para recuperar qualquer definição de tipo que foi concluída, ou seja, um tipo que foi carregado.  
+  
+ Matrizes são acessadas na reflexão ao especificar a classificação da matriz:  
+  
+-   `Type.GetType("MyArray[]")` obtém uma matriz de dimensão única com o limite inferior 0.  
+  
+-   `Type.GetType("MyArray[*]")` obtém uma matriz de dimensão única com limite inferior desconhecido.  
+  
+-   `Type.GetType("MyArray[][]")` recebe uma matriz bidimensional.  
+  
+-   `Type.GetType("MyArray[*,*]")` e `Type.GetType("MyArray[,]")` obtém uma matriz bidimensional retangular com limites inferiores desconhecidos.  
+  
+ Observe que, do ponto de vista do tempo de execução, `MyArray[] != MyArray[*]`, mas para matrizes multidimensionais, as duas notações são equivalentes. Ou seja, `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` é avaliada como **true**.  
+  
+ Para **ModuleBuilder.GetType**, `MyArray[0..5]` indica uma matriz de dimensão única com tamanho 6 e limite inferior 0. `MyArray[4…]` indica uma matriz de dimensão única de tamanho desconhecido e limite inferior 4.  
+  
+## <a name="see-also"></a>Consulte também  
+ <xref:System.Reflection.AssemblyName>   
+ <xref:System.Reflection.Emit.ModuleBuilder>   
+ <xref:System.Reflection.Emit.TypeBuilder>   
+ <xref:System.Type.FullName%2A?displayProperty=fullName>   
+ <xref:System.Type.GetType%2A?displayProperty=fullName>   
+ <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
+ [Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

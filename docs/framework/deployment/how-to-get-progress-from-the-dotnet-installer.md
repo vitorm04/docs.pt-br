@@ -1,0 +1,328 @@
+---
+title: Como acompanhar o progresso do instalador do .NET Framework 4.5 | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- progress information, .NET Framework installer
+- .NET Framework, installing
+ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
+caps.latest.revision: 30
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: c13c924bd20efdbfa43ef12c727554dc1af4e590
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/02/2017
+
+---
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
+O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] é um tempo de execução redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e acompanhar seu progresso enquanto mostra o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o inspetor ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
+  
+-   **Invocação**.  Para chamar a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] e receber informações sobre o progresso da seção MMIO, seu programa de instalação deve fazer o seguinte:  
+  
+    1.  Chamar o programa redistribuível [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:  
+  
+        ```  
+        dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name  
+        ```  
+  
+         em que *nome da seção* é qualquer nome que você deseja usar para identificar seu aplicativo. A instalação do .NET Framework lê e grava na seção MMIO assincronamente, portanto, talvez seja conveniente usar eventos e mensagens durante esse período. No exemplo, o processo de instalação do .NET Framework é criado por um construtor que aloca a seção MMIO (`TheSectionName`) e define um evento (`TheEventName`):  
+  
+        ```  
+        Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")  
+        ```  
+  
+         Substitua esses nomes por nomes que são exclusivos para seu programa de instalação.  
+  
+    2.  Leia a seção MMIO. No [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], as operações de download e instalação são simultâneas: uma parte do .NET Framework pode ser instalada enquanto outra parte está baixando. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.  
+  
+-   **Códigos de saída**. Os códigos de saída a seguir do comando para chamar o programa redistribuível [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indicam se a instalação teve êxito ou falhou:  
+  
+    -   0 – Instalação concluída com êxito.  
+  
+    -   3010 – Instalação concluída com êxito. É necessário reiniciar o sistema.  
+  
+    -   1602 – A instalação foi cancelada.  
+  
+    -   Todos os outros códigos – A instalação encontrou erros. Examine os arquivos de log criados em %temp% para obter detalhes.  
+  
+-   **Cancelando a instalação**. Você pode cancelar a instalação a qualquer momento usando o método `Abort` para definir os sinalizadores `m_downloadAbort` e `m_ installAbort` na seção MMIO.  
+  
+## <a name="chainer-sample"></a>Exemplo de encadeador  
+ O exemplo de encadeador inicializa e controla silenciosamente a instalação do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] enquanto mostra o progresso. Este exemplo é semelhante ao exemplo de encadeador fornecido para o .NET Framework 4. No entanto, além disso, ele pode evitar reinicializações do sistema processando a caixa de mensagem para fechar os aplicativos do .NET Framework 4. Para obter informações sobre essa caixa de mensagens, consulte [Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md). Você pode usar este exemplo com o instalador do .NET Framework 4. Nesse cenário, a mensagem simplesmente não é enviada.  
+  
+> [!WARNING]
+>  Você deve executar o exemplo como um administrador.  
+  
+ Você pode baixar a solução completa do Visual Studio para o [.NET Framework 4.5 Chainer Sample](http://go.microsoft.com/fwlink/?LinkId=231345) na Galeria de Exemplos do MSDN.  
+  
+ As seções a seguir descrevem os arquivos significativos neste exemplo: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.  
+  
+#### <a name="mmiochainerh"></a>MMIOChainer.h  
+  
+-   O arquivo MMIOChainer.h (consulte o [código completo](http://go.microsoft.com/fwlink/?LinkId=231369)) contém a definição da estrutura de dados e a classe base da qual a classe do encadeador deve ser derivada. O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] estende a estrutura de dados MMIO para lidar com os dados que instalador do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] precisa. As alterações na estrutura MMIO têm compatibilidade com versões anteriores, portanto, um encadeador do .NET Framework 4 pode funcionar com a instalação do .NET Framework 4.5 sem a necessidade de recompilação. No entanto, esse cenário não dá suporte ao recurso para reduzir as reinicializações do sistema.  
+  
+     Um campo de versão fornece um meio de identificar as revisões do formato de mensagem e de estrutura.  A instalação do .NET Framework determina a versão da interface do encadeador chamando a função `VirtualQuery` para determinar o tamanho do mapeamento de arquivo.  Se o tamanho for grande o suficiente para acomodar o campo de versão, a instalação do .NET Framework usa o valor especificado. Se o mapeamento de arquivo for muito pequeno para conter um campo de versão, que é o caso com o .NET Framework 4, o processo de instalação assume a versão 0 (4). Se o encadeador não dá suporte à versão da mensagem que o instalador do .NET Framework deseja enviar, a instalação do .NET Framework assume uma resposta de ignorar.  
+  
+     A estrutura de dados MMIO é definida da seguinte maneira:  
+  
+    ```cpp  
+    // MMIO data structure for interprocess communication  
+        struct MmioDataStructure  
+        {  
+            bool m_downloadFinished;               // Is download complete?  
+            bool m_installFinished;                // Is installation complete?  
+            bool m_downloadAbort;                  // Set to cause downloader to abort.  
+            bool m_installAbort;                   // Set to cause installer to abort.  
+            HRESULT m_hrDownloadFinished;          // Resulting HRESULT for download.  
+            HRESULT m_hrInstallFinished;           // Resulting HRESULT for installation.  
+            HRESULT m_hrInternalError;  
+            WCHAR m_szCurrentItemStep[MAX_PATH];  
+            unsigned char m_downloadSoFar;         // Download progress 0-255 (0-100% done).   
+            unsigned char m_installSoFar;          // Installation progress 0-255 (0-100% done).  
+            WCHAR m_szEventName[MAX_PATH];         // Event that chainer creates and chainee opens to sync communications.  
+  
+            BYTE m_version;                        // Version of the data structure, set by chainer:  
+                                                   // 0x0: .NET Framework 4   
+                                                   // 0x1: .NET Framework 4.5  
+  
+            DWORD m_messageCode;                   // Current message sent by the chainee; 0 if no message is active.  
+            DWORD m_messageResponse;               // Chainer's response to current message; 0 if not yet handled.  
+            DWORD m_messageDataLength;             // Length of the m_messageData field, in bytes.  
+            BYTE m_messageData[1];                 // Variable-length buffer; content depends on m_messageCode.  
+        };  
+    ```  
+  
+-   A estrutura de dados `MmioDataStructure` não deve ser usada diretamente, use a classe `MmioChainer` em vez disso para implementar o encadeador. Derive da classe `MmioChainer` para encadear o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] redistribuível.  
+  
+#### <a name="iprogressobserverh"></a>IProgressObserver.h  
+  
+-   O arquivo IProgressObserver.h implementa um observador de progresso ([veja o código completo](http://go.microsoft.com/fwlink/?LinkId=231370)). Este observador é notificado sobre o progresso do download e da instalação (especificado como um `char` sem sinal, 0 a 255, que indica 1 a 100% concluído). O observador também é notificado quando o encadeador envia uma mensagem e o observador deve enviar uma resposta.  
+  
+    ```cpp  
+        class IProgressObserver  
+        {  
+        public:  
+            virtual void OnProgress(unsigned char) = 0; // 0 - 255:  255 == 100%  
+            virtual void Finished(HRESULT) = 0;         // Called when operation is complete    
+            virtual DWORD Send(DWORD dwMessage, LPVOID pData, DWORD dwDataLength) = 0; // Called when a message is sent  
+        };  
+    ```  
+  
+#### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp  
+  
+-   O arquivo [ChainingdotNet4.5.cpp](http://go.microsoft.com/fwlink/?LinkId=231368) implementa a classe `Server`, que deriva da classe `MmioChainer` e substitui os métodos apropriados para exibir informações sobre o progresso. O MmioChainer cria uma seção com o nome da seção especificado e inicializa o encadeador com o nome do evento especificado. O nome do evento é salvo na estrutura de dados mapeada. Você deve tornar os nomes da seção e do evento exclusivos. A classe `Server` no código a seguir inicia o programa de instalação especificado, monitora o progresso e retorna um código de saída.  
+  
+    ```cpp  
+    class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver  
+    {  
+    public:  
+        …………….  
+        Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName") //customize for your event names  
+        {}  
+    ```  
+  
+     A instalação é iniciada no método Main.  
+  
+    ```cpp  
+    // Main entry point for program  
+    int __cdecl main(int argc, _In_count_(argc) char **_argv)  
+    {  
+        int result = 0;  
+        CString args;  
+        if (argc > 1)  
+        {  
+            args = CString(_argv[1]);  
+        }  
+  
+        if (IsNetFx4Present(NETFX45_RC_REVISION))  
+        {  
+            printf(".NET Framework 4.5 is already installed");  
+        }  
+        else  
+        {  
+            result = Server().Launch(args);  
+        }  
+  
+        return result;  
+    }  
+    ```  
+  
+-   Antes de iniciar a instalação, o encadeador verifica se o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] já está instalado chamando `IsNetFx4Present`:  
+  
+    ```cpp  
+    ///  Checks for presence of the .NET Framework 4.  
+    ///    A value of 0 for dwMinimumRelease indicates a check for the .NET Framework 4 full  
+    ///    Any other value indicates a check for a specific compatible release of the .NET Framework 4.  
+    #define NETFX40_FULL_REVISION 0  
+    // TODO: Replace with released revision number  
+    #define NETFX45_RC_REVISION MAKELONG(50309, 5)   // .NET Framework 4.5   
+    bool IsNetFx4Present(DWORD dwMinimumRelease)  
+    {  
+        DWORD dwError = ERROR_SUCCESS;  
+        HKEY hKey = NULL;  
+        DWORD dwData = 0;  
+        DWORD dwType = 0;  
+        DWORD dwSize = sizeof(dwData);  
+  
+        dwError = ::RegOpenKeyExW(HKEY_LOCAL_MACHINE, L"SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full", 0, KEY_READ, &hKey);  
+        if (ERROR_SUCCESS == dwError)  
+        {  
+            dwError = ::RegQueryValueExW(hKey, L"Release", 0, &dwType, (LPBYTE)&dwData, &dwSize);  
+  
+            if ((ERROR_SUCCESS == dwError) && (REG_DWORD != dwType))  
+            {  
+                dwError = ERROR_INVALID_DATA;  
+            }  
+            else if (ERROR_FILE_NOT_FOUND == dwError)  
+            {  
+                // Release value was not found, let's check for 4.0.  
+                dwError = ::RegQueryValueExW(hKey, L"Install", 0, &dwType, (LPBYTE)&dwData, &dwSize);  
+  
+                // Install = (REG_DWORD)1;  
+                if ((ERROR_SUCCESS == dwError) && (REG_DWORD == dwType) && (dwData == 1))  
+                {  
+                    // treat 4.0 as Release = 0  
+                    dwData = 0;  
+                }  
+                else  
+                {  
+                    dwError = ERROR_INVALID_DATA;  
+                }  
+            }  
+        }  
+  
+        if (hKey != NULL)  
+        {  
+            ::RegCloseKey(hKey);  
+        }  
+  
+        return ((ERROR_SUCCESS == dwError) && (dwData >= dwMinimumRelease));  
+    }  
+    ```  
+  
+-   Você pode alterar o caminho do executável (Setup.exe no exemplo) no método `Launch` para apontar para o local correto ou personalizar o código para determinar o local. A classe base `MmioChainer` fornece um método `Run()` de bloqueio que a classe derivada chama.  
+  
+    ```cpp  
+    bool Launch(const CString& args)  
+    {  
+    CString cmdline = L"dotNetFx45_Full_x86_x64.exe -pipe TheSectionName " + args; // Customize with name and location of setup .exe that you want to run  
+    STARTUPINFO si = {0};  
+    si.cb = sizeof(si);  
+    PROCESS_INFORMATION pi = {0};  
+  
+    // Launch the Setup.exe that installs the .NET Framework 4.5  
+    BOOL bLaunchedSetup = ::CreateProcess(NULL,   
+     cmdline.GetBuffer(),  
+     NULL, NULL, FALSE, 0, NULL, NULL,   
+     &si,  
+     &pi);  
+  
+    // If successful   
+    if (bLaunchedSetup != 0)  
+    {  
+    IProgressObserver& observer = dynamic_cast<IProgressObserver&>(*this);  
+    Run(pi.hProcess, observer);  
+  
+    ……………………..   
+    return (bLaunchedSetup != 0);  
+    }  
+    ```  
+  
+-   O método `Send` intercepta e processa as mensagens.  Nesta versão do .NET Framework, a única mensagem com suporte é a mensagem de fechar o aplicativo.  
+  
+    ```cpp  
+            // SendMessage  
+            //  
+            // Send a message and wait for the response.  
+            // dwMessage: Message to send  
+            // pData: The buffer to copy the data to  
+            // dwDataLength: Initially a pointer to the size of pBuffer.  Upon successful call, the number of bytes copied to pBuffer.  
+            //--------------------------------------------------------------  
+        virtual DWORD Send(DWORD dwMessage, LPVOID pData, DWORD dwDataLength)  
+        {  
+            DWORD dwResult = 0;  
+            printf("recieved message: %d\n", dwMessage);  
+            // Handle message  
+            switch (dwMessage)  
+            {  
+            case MMIO_CLOSE_APPS:  
+                {  
+                    printf("    applications are holding files in use:\n");  
+                    IronMan::MmioCloseApplications* applications = reinterpret_cast<IronMan::MmioCloseApplications*>(pData);  
+                    for(DWORD i = 0; i < applications->m_dwApplicationsSize; i++)  
+                    {  
+                        printf("      %ls (%d)\n", applications->m_applications[i].m_szName, applications->m_applications[i].m_dwPid);  
+                    }  
+  
+                    printf("    should appliations be closed? (Y)es, (N)o, (R)efresh : ");  
+                    while (dwResult == 0)  
+                    {  
+                        switch (toupper(getwchar()))  
+                        {  
+                        case 'Y':  
+                            dwResult = IDYES;  // Close apps  
+                            break;  
+                        case 'N':  
+                            dwResult = IDNO;  
+                            break;  
+                        case 'R':  
+                            dwResult = IDRETRY;  
+                            break;  
+                        }  
+                    }  
+                    printf("\n");  
+                    break;  
+                }  
+            default:  
+                break;  
+            }  
+            printf("  response: %d\n  ", dwResult);  
+            return dwResult;  
+        }  
+    };  
+    ```  
+  
+-   Os dados de progresso são um `char` sem sinal entre 0 (0%) e 255 (100%).  
+  
+    ```cpp  
+    private: // IProgressObserver  
+        virtual void OnProgress(unsigned char ubProgressSoFar)  
+        {…………  
+       }  
+    ```  
+  
+-   O HRESULT é passado para o método `Finished`.  
+  
+    ```cpp  
+    virtual void Finished(HRESULT hr)  
+    {  
+    // This HRESULT is communicated over MMIO and may be different than process  
+    // Exit code of the Chainee Setup.exe itself  
+    printf("\r\nFinished HRESULT: 0x%08X\r\n", hr);  
+    }  
+    ```  
+  
+    > [!IMPORTANT]
+    >  O [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] redistribuível normalmente grava muitas mensagens de progresso e uma única mensagem que indica a conclusão (no lado do encadeador). Ele também lê assincronamente, procurando registros `Abort`. Se receber um registro `Abort`, ele cancelará a instalação e gravará um registro concluído com E_ABORT como seus dados depois que a instalação tiver sido cancelada e as operações de instalação tiverem sido revertidas.  
+  
+ Um servidor típico cria um nome de arquivo MMIO aleatório, cria o arquivo (conforme mostrado no exemplo de código anterior, na `Server::CreateSection`) e inicia o redistribuível usando o método `CreateProcess` e passando o nome do pipe com a opção `-pipe someFileSectionName`. O servidor deve implementar os métodos `OnProgress`, `Send` e `Finished` com código específico da interface do usuário do aplicativo.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [Implantação](../../../docs/framework/deployment/index.md)
+
