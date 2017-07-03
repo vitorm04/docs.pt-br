@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
-ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,7 +42,7 @@ Além disso, se você quiser dar suporte a destinos do .NET Framework mais antig
 
 ## <a name="how-to-target-the-net-standard"></a>Como direcionar para o .NET Standard
 
-Se você não estiver bem familiarizada com o .NET Standard, consulte a [.NET Standard Library](../../standard/library.md) para saber mais.
+Se você não estiver bem familiarizada com o .NET Standard, consulte a [.NET Standard Library](../../standard/net-standard.md) para saber mais.
 
 Nesse artigo, há uma tabela que mapeia as versões do .NET Standard para várias implementações:
 
