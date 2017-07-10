@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-c"></a>Introdução ao C#
@@ -48,7 +48,7 @@ Os tópicos a seguir o ajudarão a começar a desenvolver aplicativos usando o C
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Fornece um guia para usar o ambiente de desenvolvimento integrado [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Fornece um guia para usar o ambiente de desenvolvimento integrado [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Guia de Programação em C#](../../csharp/programming-guide/index.md)  
  Fornece informações sobre conceitos de programação C# e descreve como executar várias tarefas no C#.  
