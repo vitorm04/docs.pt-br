@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
+ms.sourcegitcommit: 9fc099a7ec490250204c7d7d3ddce37b62c3165e
+ms.openlocfilehash: 0c6ce1020dbd1488f4abd51e13b887eab0068521
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 
@@ -68,7 +68,7 @@ O .NET Framework 4.7 inclui novos recursos nas seguintes áreas:
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-Para obter uma lista das novas APIs adicionadas ao .NET Framework 4.7, confira o artigo [Alterações na API do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) do GitHub. Para obter uma lista de aprimoramentos de recursos e correções de bug no .NET Framework 4.7, confira o artigo [Lista de alterações do .NET Framework 4.7](http://gutithub.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) do GitHub.  Para saber mais, confira o artigo [Anunciando o .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) no blog do .NET.
+Para obter uma lista das novas APIs adicionadas ao .NET Framework 4.7, confira o artigo [Alterações na API do .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) do GitHub. Para obter uma lista de aprimoramentos de recursos e correções de bug no .NET Framework 4.7, confira o artigo [Lista de alterações do .NET Framework 4.7](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) do GitHub.  Para saber mais, confira o artigo [Anunciando o .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) no blog do .NET.
 
 <a name="Core47" />
 #### <a name="core"></a>Núcleo

@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>Mitigação: CspParameters.ParentWindowHandle espera um HWND
@@ -46,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>Redução
 
-Os desenvolvedores que identificaram que o valor correto era o endereço do local da memória que mantinha o valor de `form.Handle` podem optar por não aceitar essa alteração de comportamento, definindo a opção de <xref:System.Security.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` para `true`:
+Os desenvolvedores que identificaram que o valor correto era o endereço do local da memória que mantinha o valor de `form.Handle` podem optar por não aceitar essa alteração de comportamento, definindo a opção de <xref:System.AppContext> `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle` para `true`:
 
-- Configurando de forma programática as opções de compatibilidade na instância <xref:System.Security.AppContext>.
+- Configurando de forma programática as opções de compatibilidade na instância <xref:System.AppContext>.
 
 - Adicionando a seguinte linha na seção `<runtime>` do arquivo app.config:
    
@@ -58,7 +58,7 @@ Os desenvolvedores que identificaram que o valor correto era o endereço do loca
    </runtime>
    ```
 
-Por outro lado, os usuários que desejam aceitar o novo comportamento para aplicativos que são executados no .NET Framework 4.7, mas que se destinam a uma versão anterior do .NET Framework, podem definir a opção de <xref:System.Security.AppContext> para `false`.
+Por outro lado, os usuários que desejam aceitar o novo comportamento para aplicativos que são executados no .NET Framework 4.7, mas que se destinam a uma versão anterior do .NET Framework, podem definir a opção de <xref:System.AppContext> para `false`.
  
 ## <a name="see-also"></a>Consulte também
 

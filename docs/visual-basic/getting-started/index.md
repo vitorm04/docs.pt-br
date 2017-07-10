@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Introdução ao Visual Basic
@@ -61,22 +61,22 @@ Lista os novos recursos em cada uma das versões do Visual Basic .NET.
  Fornece links para páginas que apresentam a programação orientada a objeto e descrevem como criar seus próprios objetos e usar objetos para simplificar a codificação.  
   
  [Amostras](../../visual-basic/sample-applications.md)  
- Fornece links para código de exemplo no [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Fornece links para código de exemplo no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Explicações Passo a Passo](../../visual-basic/walkthroughs.md)  
- Fornece uma lista de páginas da Ajuda que demonstram aspectos da linguagem [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ Fornece uma lista de páginas da Ajuda que demonstram aspectos da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Fale conosco](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  Aborda como receber suporte e fornecer comentários.  
   
  [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
- Fornece links para a documentação do [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].  
+ Fornece links para a documentação do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [C#](../../csharp/csharp.md)  
- Fornece links para a documentação sobre desenvolvimento de aplicativos com o [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].  
+ Fornece links para a documentação sobre desenvolvimento de aplicativos com o [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Visual C++](https://docs.microsoft.com/cpp/)  
  Fornece links para a documentação do Visual C++.  
   
  [Desenvolvimento do Office e do SharePoint](https://msdn.microsoft.com/library/d2tx7z6d)  
- Fornece informações sobre como usar o Microsoft Office e o [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] como parte de um aplicativo de negócios.
+ Fornece informações sobre como usar o Microsoft Office e o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] como parte de um aplicativo de negócios.

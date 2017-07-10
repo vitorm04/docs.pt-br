@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>Mensagens de erro (Visual Basic)
@@ -50,7 +51,7 @@ Quando você escreve, compila ou executa um aplicativo do Visual Basic, os segui
  Para obter informações sobre como solucionar um erro específico, consulte [Recursos adicionais para programadores do Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Erros em tempo de execução  
- Se um aplicativo do Visual Basic tenta executar uma ação que o sistema não pode executar, ocorrerá um erro em tempo de execução, e [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] lançará um objeto `Exception`. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] pode gerar erros personalizados de qualquer tipo de dados, incluindo objetos `Exception` usando a instrução `Throw`. Um aplicativo pode identificar o erro exibindo o número do erro e a mensagem de uma exceção capturada. Se não for detectado um erro, o aplicativo será encerrado.  
+ Se um aplicativo do Visual Basic tenta executar uma ação que o sistema não pode executar, ocorrerá um erro em tempo de execução, e [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] lançará um objeto `Exception`. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pode gerar erros personalizados de qualquer tipo de dados, incluindo objetos `Exception` usando a instrução `Throw`. Um aplicativo pode identificar o erro exibindo o número do erro e a mensagem de uma exceção capturada. Se não for detectado um erro, o aplicativo será encerrado.  
   
  O código pode interceptar e examine os erros em tempo de execução. Se você colocar o código que produz o erro em um bloco `Try`, você poderá capturar qualquer erro gerado em um bloco `Catch` correspondente. Para obter informações sobre como interceptar erros em tempo de execução e responder a eles em seu código, consulte [Instrução Try... Catch... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

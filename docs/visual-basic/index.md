@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -59,7 +60,7 @@ O Visual Basic foi desenvolvido para compilar aplicativos fortemente tipados e o
  Contém as informações de linguagem e compilador do Visual Basic.  
 
  [Desenvolvendo aplicativos com o Visual Basic](../visual-basic/developing-apps/index.md)  
- Discute vários aspectos de desenvolvimento em Visual Basic, segurança, manipuladores de exceção, e uso da biblioteca de classes [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)].
+ Discute vários aspectos de desenvolvimento em Visual Basic, segurança, manipuladores de exceção, e uso da biblioteca de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].
 
  [Interoperabilidade COM](../visual-basic/programming-guide/com-interop/index.md)  
  Explica os problemas de interoperabilidade associados à criação e ao uso de objetos COM (Component Object Model) com o Visual Basic.  
@@ -75,4 +76,4 @@ O Visual Basic foi desenvolvido para compilar aplicativos fortemente tipados e o
  Fornece links para tópicos que ajudam você a saber mais sobre os conceitos básicos do Visual Studio.  
   
  [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Fornece entrada para a biblioteca de classes, interfaces e tipos de valor que estão incluídos no SDK [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] da Microsoft.
+ Fornece entrada para a biblioteca de classes, interfaces e tipos de valor que estão incluídos no SDK [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] da Microsoft.

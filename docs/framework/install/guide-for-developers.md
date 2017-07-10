@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 348ef65fdb6c1a54abf379278d79ed1a9f626780
+ms.sourcegitcommit: 0248602661b93eb0372e12fbea1055515a9abca3
+ms.openlocfilehash: b7b7cb8d8f10d8d7f437b7bcf91f99237003ca74
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 
@@ -151,7 +151,7 @@ Os instaladores offline e da Web são projetados para computadores baseados em x
 <a name="standalone_language_packs"></a>   
 ## <a name="to-install-language-packs"></a>Para instalar pacotes de idiomas
 
- Pacotes de idiomas são arquivos executáveis que contêm os recursos localizados (como mensagens de erro e textos de interface do usuário traduzidos) para idiomas compatíveis. Se você não instalar um pacote de idiomas, as mensagens de erro do .NET Framework e outros textos serão exibidos em inglês.  Observe que o instalador da Web instala automaticamente o pacote de idiomas correspondente ao seu sistema operacional, mas você pode baixar pacotes de idiomas adicionais em seu computador. Os instaladores offline não incluem pacotes de idiomas. Além disso, os pacotes de idiomas não estão disponíveis para o .NET Framework 4.7.
+ Pacotes de idiomas são arquivos executáveis que contêm os recursos localizados (como mensagens de erro e textos de interface do usuário traduzidos) para idiomas compatíveis. Se você não instalar um pacote de idiomas, as mensagens de erro do .NET Framework e outros textos serão exibidos em inglês.  Observe que o instalador da Web instala automaticamente o pacote de idiomas correspondente ao seu sistema operacional, mas você pode baixar pacotes de idiomas adicionais em seu computador. Os instaladores offline não incluem pacotes de idiomas. 
   
 > [!IMPORTANT]
 > Como os pacotes de idiomas não contêm os componentes do .NET Framework que são necessários para executar um aplicativo, você deve executar o instalador offline ou da Web antes de instalar um pacote de idiomas. Se você já tiver instalado um pacote de idiomas, desinstale-o, instale o .NET Framework e reinstale o pacote de idiomas.  

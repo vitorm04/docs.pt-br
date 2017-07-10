@@ -32,21 +32,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4892ed6dcfb3843bd6cb2de2d3e032bfeb1efdf9
-ms.openlocfilehash: 2c2db6fcbbd3d3736d9ab0e1e9190c2516a17937
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 Um *objeto* é uma combinação de código e dados que podem ser tratados como uma unidade. Um objeto pode ser uma parte de um aplicativo, como um controle ou um formulário. Todo o aplicativo também pode ser um objeto.
 
-Ao criar um aplicativo em [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], você constantemente trabalha com objetos. Você pode usar os objetos fornecidos pelo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], como controles, formulários e objetos de acesso a dados. Você também pode usar objetos de outros aplicativos em seu aplicativo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Você pode até mesmo criar seus próprios objetos e definir propriedades e métodos adicionais para eles. Os objetos atuam como blocos de construção pré-fabricados para programas. Eles permitem que você escreva um trecho de código uma vez e reutilize repetidamente.  
+Ao criar um aplicativo em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], você constantemente trabalha com objetos. Você pode usar os objetos fornecidos pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], como controles, formulários e objetos de acesso a dados. Você também pode usar objetos de outros aplicativos em seu aplicativo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Você pode até mesmo criar seus próprios objetos e definir propriedades e métodos adicionais para eles. Os objetos atuam como blocos de construção pré-fabricados para programas. Eles permitem que você escreva um trecho de código uma vez e reutilize repetidamente.  
   
 Este tópico discute os objetos em detalhes.  
 
 ## <a name="objects-and-classes"></a>Objetos e classes
-Cada objeto no [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] é definido por uma *classe*. Uma classe descreve as variáveis, as propriedades, os procedimentos e os eventos de um objeto. Os objetos são instâncias de classes. Você pode criar a quantidade de objetos que precisar após ter definido uma classe.
+Cada objeto no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é definido por uma *classe*. Uma classe descreve as variáveis, as propriedades, os procedimentos e os eventos de um objeto. Os objetos são instâncias de classes. Você pode criar a quantidade de objetos que precisar após ter definido uma classe.
 
 Para entender a relação entre um objeto e sua classe, pense em cookies e cortadores de cookie. O cortador de cookie é a classe. Ele define as características de cada cookie, por exemplo, tamanho e forma. A classe é usada para criar objetos. Os objetos são os cookies.
 
@@ -190,7 +190,7 @@ Por outro lado, os membros declarados dentro de um módulo são acessíveis publ
 ## <a name="reusing-classes-and-objects"></a>Reutilização de classes e objetos  
 Os objetos permitem que você declare variáveis e procedimentos uma vez e reutilize-os quando necessário. Por exemplo, se desejar adicionar um verificador ortográfico a um aplicativo, defina todas as variáveis e funções de suporte para fornecer a funcionalidade de verificação ortográfica. Se criar o verificador de ortografia como uma classe, você poderá reutilizá-lo em outros aplicativos adicionando uma referência ao assembly compilado. Melhor ainda, você poderá diminuir seu trabalho usando uma classe de verificador ortográfico que alguém já desenvolveu.
 
-O [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] fornece vários exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
+O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] fornece vários exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
 
 ```vb
 Public Sub examineTimeZone()
@@ -258,7 +258,7 @@ Certifique-se de que o compilador pode acessar a classe da qual você pretende d
 Outro modo de relação dos objetos é a *relação de confinamento*. Os objetos de contêiner encapsulam logicamente outros objetos. Por exemplo, o objeto <xref:System.OperatingSystem> logicamente contém um objeto <xref:System.Version>, que ele retorna por intermédio de sua propriedade <xref:System.OperatingSystem.Version%2A>. Observe que o objeto de contêiner não contém fisicamente qualquer outro objeto.
 
 #### <a name="collections"></a>Coleções
-Um tipo específico de confinamento de objeto é representado pelas *coleções*. As coleções são grupos de objetos semelhantes que podem ser enumerados. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] dá suporte a uma sintaxe específica no [Para cada...Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que permite que você itere pelos itens de uma coleção. Além disso, as coleções permitem, com frequência, que você use um <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos pelo índice ou associando-os com uma cadeia de caracteres exclusiva. As coleções podem ser mais fáceis de usar que matrizes porque elas permitem que você adicione ou remova itens sem usar índices. Devido à facilidade de uso, as coleções geralmente são usadas para armazenar formulários e controles.
+Um tipo específico de confinamento de objeto é representado pelas *coleções*. As coleções são grupos de objetos semelhantes que podem ser enumerados. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] dá suporte a uma sintaxe específica no [Para cada...Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que permite que você itere pelos itens de uma coleção. Além disso, as coleções permitem, com frequência, que você use um <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos pelo índice ou associando-os com uma cadeia de caracteres exclusiva. As coleções podem ser mais fáceis de usar que matrizes porque elas permitem que você adicione ou remova itens sem usar índices. Devido à facilidade de uso, as coleções geralmente são usadas para armazenar formulários e controles.
 
 ## <a name="related-topics"></a>Tópicos relacionados  
  [Instruções passo a passo: definindo classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
@@ -281,4 +281,3 @@ Um tipo específico de confinamento de objeto é representado pelas *coleções*
 
  [Como inferir nomes e tipos de propriedade na declaração de tipo anônimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Explica como inferir nomes e tipos de propriedade em declarações de tipo anônimo. Fornece exemplos de inferência de tipos com e sem êxito.
-

@@ -35,14 +35,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75fa7f3dd7af9af3cf2127c63fa25db125b9ff74
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
-As tabelas seguintes listam todas as palavras-chave da linguagem [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+As tabelas seguintes listam todas as palavras-chave da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 ## <a name="reserved-keywords"></a>Palavras-chave reservadas  
  As seguintes palavras-chave são *reservadas*, o que significa que elas não podem ser usadas como nomes para elementos de programação, como variáveis ou procedimentos. Você pode evitar essa restrição colocando o nome entre colchetes (`[``]`). Para obter mais informações, consulte "Nomes de escape" em [Nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -101,7 +102,7 @@ As tabelas seguintes listam todas as palavras-chave da linguagem [!INCLUDE[vbprv
 |[Operador >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operador >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant` e `Wend` são mantidos como palavras-chave reservadas, embora não sejam mais usados em [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../../../visual-basic/language-reference/queries/let-clause.md).  
+>  `EndIf`, `GoSub`, `Variant` e `Wend` são mantidos como palavras-chave reservadas, embora não sejam mais usados em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Palavras-chave não reservadas  
  As seguintes palavras-chave não são reservadas, o que significa que elas podem ser usadas como nomes de elementos de programação. No entanto, isso não é recomendado, pois pode tornar o código difícil de ler e pode levar a erros sutis que podem ser difíceis de encontrar.  
