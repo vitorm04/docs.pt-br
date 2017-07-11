@@ -4,20 +4,22 @@ description: "Este tópico explica como compilar uma solução do .NET Core que 
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 03/16/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: a54100a4eda6997b73b60d88b583e290973acb8e
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
+<a id="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac" class="xliff"></a>
+
+# Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
 O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este tópico explica como compilar uma solução do .NET Core que inclui uma biblioteca reutilizável e testes de unidade.
 
@@ -28,21 +30,23 @@ Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa
 > * No Visual Studio para Mac, escolha **Ajuda > Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bug.
 > * Para fazer uma sugestão, escolha **Ajuda > Forneça uma Sugestão** no menu, ou **Forneça uma Sugestão** na tela de boas-vindas. Isso leva você até a [página de UserVoice do Visual Studio para Mac](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac).
 
-## <a name="prerequisites"></a>Pré-requisitos
+<a id="prerequisites" class="xliff"></a>
 
-[.NET Core e OpenSSL](https://www.microsoft.com/net/core#macos)
+## Pré-requisitos
 
 Para saber mais sobre pré-requisitos, confira os [Pré-requisitos para .NET Core no Mac](../../core/macos-prerequisites.md).
 
-## <a name="getting-started"></a>Introdução
+<a id="getting-started" class="xliff"></a>
+
+## Introdução
 
 Se você já tiver instalado os pré-requisitos e o Visual Studio para Mac, ignore esta seção e vá até [Compilar uma biblioteca](#building-a-library). Execute estas etapas para instalar os pré-requisitos e o Visual Studio para Mac:
 
-1. Baixe e instale o [.NET Core e o OpenSSL](https://www.microsoft.com/net/core#macos).
+Baixe o [Instalador do Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Execute o instalador. Leia e aceite o contrato de licença. Durante a instalação, você tem a oportunidade de instalar o Xamarin, uma tecnologia de desenvolvimento de aplicativo móvel multiplataforma. A instalação do Xamarin e de seus componentes relacionados é opcional para o desenvolvimento em .NET Core. Para conferir um passo a passo do processo de instalação do Visual Studio para Mac, veja [Introdução ao Visual Studio para Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). Após a conclusão da instalação, inicie o IDE do Visual Studio para Mac.
 
-1. Baixe o [Instalador do Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/). Execute o instalador. Leia e aceite o contrato de licença. Durante a instalação, você tem a oportunidade de instalar o Xamarin, uma tecnologia de desenvolvimento de aplicativo móvel multiplataforma. A instalação do Xamarin e de seus componentes relacionados é opcional para o desenvolvimento em .NET Core. Para conferir um passo a passo do processo de instalação do Visual Studio para Mac, veja [Introdução ao Visual Studio para Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/). Após a conclusão da instalação, inicie o IDE do Visual Studio para Mac.
+<a id="building-a-library" class="xliff"></a>
 
-## <a name="building-a-library"></a>Compilar uma biblioteca
+## Compilar uma biblioteca
 
 1. Na tela de boas-vindas, escolha **Novo Projeto**. Na caixa de diálogo **Novo Projeto**, sob o nó **Multiplataforma**, selecione o modelo **Biblioteca .NET Padrão**. Selecione **Avançar**.
 
@@ -70,7 +74,9 @@ Se você já tiver instalado os pré-requisitos e o Visual Studio para Mac, igno
 
    ![Painel de saída da compilação do painel Erros exibindo a mensagem Compilação bem-sucedida](./media/using-on-mac-vs-full-solution/vsmacfull04.png)
 
-## <a name="creating-a-test-project"></a>Criar um projeto de teste
+<a id="creating-a-test-project" class="xliff"></a>
+
+## Criar um projeto de teste
 
 As unidade de teste fornecem testes de software automatizados durante o desenvolvimento e a publicação. A estrutura de teste usada neste tutorial é a [xUnit](https://xunit.github.io/).
 
@@ -158,7 +164,9 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
    ![Aprovação do teste na janela do console. Total de testes: 4 Aprovado: 4 Reprovado: 0. Execução de teste aprovada.](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
 
-## <a name="adding-a-console-app"></a>Adicionar um aplicativo do console
+<a id="adding-a-console-app" class="xliff"></a>
+
+## Adicionar um aplicativo do console
 
 1. Na barra lateral **Solução**, clique com o botão direito do mouse na solução `WordCounter`. Adicione um novo projeto de **Aplicativo de Console** selecionando o modelo em **.NET Core > Aplicativo**. Selecione **Avançar**. Nomeie o projeto **WordCounterApp**. Selecione **Criar** para criar o projeto na solução.
 
@@ -194,7 +202,9 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
    ![A contagem de palavras de pesquisa é alterada para um valor de 999 na saída do aplicativo](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
 
-## <a name="next-steps"></a>Próximas etapas
+<a id="next-steps" class="xliff"></a>
+
+## Próximas etapas
 
 * Explore recursos adicionais do Visual Studio para Mac em uma [Introdução ao Visual Studio para Mac](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/) no site de desenvolvedor do Xamarin.
 * Para uma análise mais detalhada do Visual Studio para Mac, veja o guia [Tour do Xamarin Studio](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/ide-tour/).

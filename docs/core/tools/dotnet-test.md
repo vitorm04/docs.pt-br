@@ -1,6 +1,6 @@
 ---
 title: Comando dotnet-test - CLI do .NET Core | Microsoft Docs
-description: "O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto."
+description: "O comando “dotnet test” é usado para executar testes de unidade em um determinado projeto."
 keywords: dotnet-test, CLI, comando da CLI, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -11,24 +11,32 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+<a id="dotnet-test" class="xliff"></a>
 
-## <a name="name"></a>Nome
+#dotnet-test
+
+<a id="name" class="xliff"></a>
+
+## Nome
 
 `dotnet-test` - driver de teste do .NET usado para executar testes de unidade.
 
-## <a name="synopsis"></a>Sinopse
+<a id="synopsis" class="xliff"></a>
+
+## Sinopse
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-## <a name="description"></a>Descrição
+<a id="description" class="xliff"></a>
+
+## Descrição
 
 O comando `dotnet test` é usado para executar testes de unidade em um determinado projeto. Testes de unidade são projetos de aplicativo de console que têm dependências na estrutura de teste da unidade (por exemplo, MSTest, NUnit ou xUnit) e no executor de teste dotnet da estrutura de teste de unidade. Eles são empacotados como pacotes NuGet e são restaurados como dependências comuns para o projeto.
 
@@ -36,7 +44,9 @@ Projetos de teste também precisam especificar o executor de teste. Isso é espe
 
 [!code-xml[Modelo Básico do XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>Opções
+<a id="options" class="xliff"></a>
+
+## Opções
 
 `PROJECT`
     
@@ -90,7 +100,9 @@ Não compila o projeto de teste antes de executá-lo.
 
 Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-## <a name="examples"></a>Exemplos
+<a id="examples" class="xliff"></a>
+
+## Exemplos
 
 Execute os testes no projeto no diretório atual:
 
@@ -100,7 +112,9 @@ Execute os testes no projeto `test1`:
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-## <a name="filter-option-details"></a>Filtrar detalhes da opção
+<a id="filter-option-details" class="xliff"></a>
+
+## Filtrar detalhes da opção
 
 `--filter <EXPRESSION>`
 
@@ -129,14 +143,16 @@ As expressões podem ser associadas a operadores condicionais:
 
 | Operador | Função |
 | :------: | :------: |
-| `|`      | OU       |
+| <code>&#124;</code>      | OU       |
 | `&`      | AND      |
 
 Você pode incluir expressões em parênteses ao usar operadores condicionais (por exemplo: `(Name~TestMethod1) | (Name~TestMethod2)`).
 
-Para obter informações e exemplos adicionais sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
+Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
 
-## <a name="see-also"></a>Consulte também
+<a id="see-also" class="xliff"></a>
+
+## Consulte também
 
 [Estruturas e Destinos](../../standard/frameworks.md)   
 [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
