@@ -1,5 +1,5 @@
 ---
-title: "Reduzindo as dependências de pacote com o project.json"
+title: "Reduzindo as dependências de pacote com o project.json | Microsoft Docs"
 description: "Reduzindo as dependências de pacote com o project.json"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,24 +9,31 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: aaa29f82cc89593fd29d469d5633bc60fa434ad7
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
+<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
+
+# Reduzindo as dependências de pacote com o project.json
 
 Este artigo aborda o que você precisa saber sobre como reduzir suas dependências de pacote ao criar bibliotecas `project.json`. No final deste artigo, você aprenderá como compor sua biblioteca de forma que ela usa apenas as dependências necessárias. 
 
-## <a name="why-its-important"></a>Por que isso é importante
+<a id="why-its-important" class="xliff"></a>
+
+## Por que isso é importante
 
 O .NET Core é um produto composto por pacotes NuGet.  Um pacote essencial é o [metapacote da .NET Standard Library](https://www.nuget.org/packages/NETStandard.Library), que é um pacote NuGet composto por outros pacotes.  Ele fornece o conjunto de pacotes que com certeza funcionam com diversas implementações .NET, como o .NET Framework, .NET Core e Xamarin/Mono.
 
 No entanto, há uma boa chance de que a biblioteca não use todos os pacotes que ele contém.  Ao criar uma biblioteca e distribuí-la com o NuGet, é uma melhor prática “cortar” suas dependências para deixar apenas os pacotes que realmente serão usados.  Isso resulta em uma menor superfície geral de pacotes NuGet.
 
-## <a name="how-to-do-it"></a>Como fazer isso
+<a id="how-to-do-it" class="xliff"></a>
+
+## Como fazer isso
 
 Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências de pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
 
@@ -42,7 +49,9 @@ Você pode descobrir quais pacotes não são necessários das seguintes maneiras
 1. Tentativa e erro.  Isso significa remover um pacote, restaurar, ver se sua biblioteca ainda é compilada e repetir esse processo.
 2. Usar uma ferramenta como [ILSpy](http://ilspy.net) ou [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) para inspecionar as referências e ver o que seu código realmente está usando.  Você poderá então remover os pacotes que não correspondem aos tipos que você está usando.
 
-## <a name="example"></a>Exemplo 
+<a id="example" class="xliff"></a>
+
+## Exemplo 
 
 Imagine que você criou uma biblioteca que fornecia uma funcionalidade adicional para tipos de coleção genérica.  Uma biblioteca precisaria depender de pacotes como `System.Collections`, mas pode não de pacotes como `System.Net.Http`.  Dessa forma, seria bom cortar as dependências do pacote para reduzir até o que essa biblioteca realmente precisa.
 

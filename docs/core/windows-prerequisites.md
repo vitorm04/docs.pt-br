@@ -4,24 +4,28 @@ description: "Saiba quais dependências você precisa em seu computador Windows 
 keywords: ".NET Core, Windows, pré-requisitos, dependências, Visual Studio"
 author: mairaw
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 06/26/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 582b7d7f00b939493cea6d8cb4055b6779118c14
+ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
+ms.openlocfilehash: 22f7acab3ffbe2d3af587f7af2bfaad204f8e259
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 06/29/2017
 
 ---
 
-# <a name="prerequisites-for-net-core-on-windows"></a>Pré-requisitos para .NET Core no Windows
+<a id="prerequisites-for-net-core-on-windows" class="xliff"></a>
+
+# Pré-requisitos para .NET Core no Windows
 
 Este artigo mostra em quais dependências você precisa implantar e executar os aplicativos .NET Core em computadores Windows e como desenvolver usando Visual Studio.
 
-## <a name="supported-windows-versions"></a>Versões do Windows com suporte
+<a id="supported-windows-versions" class="xliff"></a>
+
+## Versões do Windows com suporte
 
 O .NET Core é compatível com as seguintes versões do Windows:
 
@@ -30,20 +34,24 @@ O .NET Core é compatível com as seguintes versões do Windows:
 * Windows 10
 * Windows Server 2008 R2 SP1 (Servidor Completo ou Server Core)
 * Windows Server 2012 SP1 (Servidor Completo ou Server Core)
-* Windows Server 2012 R2 SP1 (Servidor Completo ou Server Core)
+* Windows Server 2012 R2 (servidor completo ou Server Core)
 * Windows Server 2016 (Servidor Completo, Server Core ou Nano Server)
 
 Veja a lista completa de sistemas operacionais com suporte nas [Notas de Versão do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md).
 
-## <a name="net-core-dependencies"></a>Dependências do .NET Core
+<a id="net-core-dependencies" class="xliff"></a>
 
-O .NET Core requer os Pacotes Redistribuíveis do Visual C++ durante a execução em versões do Windows anteriores ao Windows 10 e Windows Server 2016. Essa dependência é instalada automaticamente para você, se você usar o instalador do .NET Core. No entanto, você precisará instalar manualmente o [Microsoft Visual C++ 2015 Redistribuível Atualização 3](https://www.microsoft.com/download/details.aspx?id=53840) se estiver instalando o .NET Core por meio do [script de instalação](./tools/dotnet-install-script.md) ou implantando um aplicativo .NET Core autocontido.
+## Dependências do .NET Core
+
+O .NET Core requer os Pacotes Redistribuíveis do Visual C++ durante a execução em versões do Windows anteriores ao Windows 10 e Windows Server 2016. Essa dependência é instalada automaticamente para você, se você usar o instalador do .NET Core. No entanto, você precisará instalar manualmente o [Microsoft Visual C++ 2015 Redistribuível Atualização 3](https://www.microsoft.com/en-us/download/details.aspx?id=52685) se estiver instalando o .NET Core por meio do [script de instalação](./tools/dotnet-install-script.md) ou implantando um aplicativo .NET Core autocontido.
 
 > [!NOTE]
 > <em>Somente para computadores com o Windows 7 e o Windows Server 2008:</em><br>
 > Verifique se a instalação do Windows está atualizada e inclui o hotfix [KB2533623](https://support.microsoft.com/help/2533623) instalado por meio do Windows Update.
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Pré-requisitos do Visual Studio 2017
+<a id="prerequisites-with-visual-studio-2017" class="xliff"></a>
+
+## Pré-requisitos do Visual Studio 2017
 
 Você pode usar qualquer editor de sua preferência para desenvolver aplicativos .NET Core usando o SDK do .NET Core. No entanto, se você desejar desenvolver aplicativos .NET Core no Windows em um ambiente de desenvolvimento integrado, será possível usar o [Visual Studio 2017](#visual-studio-2017).
 
@@ -61,3 +69,4 @@ Para verificar se você está executando a versão mais recente do Visual Studio
  * Na caixa de diálogo **Sobre o Microsoft Visual Studio**, o número de versão deve ser 15.0.26228.4 ou maior.
 
 Leia mais sobre as alterações no Visual Studio 2017 nas [notas de versão](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes).
+

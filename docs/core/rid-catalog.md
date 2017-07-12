@@ -1,5 +1,5 @@
 ---
-title: "Catálogo do RID (Identificador de Tempo de Execução) do .NET Core"
+title: "Catálogo do RID (identificador de tempo de execução) do .NET Core | Microsoft Docs"
 description: "Catálogo do RID (Identificador de Tempo de Execução) do .NET Core"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -9,16 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
-translationtype: Human Translation
-ms.sourcegitcommit: 811b9539019b7cc2817b5742760ae52fbc2f95dd
-ms.openlocfilehash: fc59a9f3333f01caf9622dd500a5de6e2ae5132b
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 904b9be05cd2e5337272ce7ddce15b1075fbefeb
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="net-core-runtime-identifier-rid-catalog"></a>Catálogo do RID (Identificador de Tempo de Execução) do .NET Core
+<a id="net-core-runtime-identifier-rid-catalog" class="xliff"></a>
 
-## <a name="what-are-rids"></a>O que são RIDs?
+# Catálogo do RID (Identificador de Tempo de Execução) do .NET Core
+
+<a id="what-are-rids" class="xliff"></a>
+
+## O que são RIDs?
 RID é a abreviação de *Identificador de Tempo de Execução*. RIDs são usados para identificar os sistemas operacionais de destino em que um aplicativo ou ativo (ou seja, o assembly) será executado. Eles assemelham-se a: "ubuntu.14.04-x64", "win7-x64" e "osx.10.11-x64". Para os pacotes com dependências nativas, ele designará as plataformas em que o pacote pode ser restaurado. 
 
 É importante observar que os RIDs são cadeias de caracteres realmente opacas. Isso significa que eles devem corresponder exatamente para as operações que os utilizam poderem funcionar. Por exemplo, vamos considerar o caso do [Elementary OS](https://elementary.io/), que é um clone simples do Ubuntu 14.04. Embora .NET Core e CLI funcionem nessa versão do Ubuntu, se você tentar usá-los no Elementary OS sem modificações, a operação de restauração de qualquer pacote falhará. Isso ocorre porque atualmente não temos um RID que designa o Elementary OS como uma plataforma. 
@@ -59,13 +64,17 @@ Embora pareça fácil de usar, existem algumas coisas especiais sobre RIDs que v
 * Você precisa usar os RIDs que já estão definidos para a plataforma e este documento mostra isso
 * Os RIDs precisam ser específicos, por isso não crie suposições com base no valor do real do RID. Consulte este documento para determinar qual RID(s) são necessário para uma determinada plataforma
 
-## <a name="using-rids"></a>Usando RIDs
+<a id="using-rids" class="xliff"></a>
+
+## Usando RIDs
 Para usar RIDs, você precisa saber quais RIDs existem. Novos RIDs são adicionados regularmente para a plataforma. Para a versão mais recente, consulte o arquivo [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.
 
 > [!NOTE]
 > Estamos trabalhando para disponibilizar essas informações em um formato mais interativo. Quando isso acontecer, esta página será atualizada para indicar a essa ferramenta e/ou sua documentação de uso. 
 
-## <a name="windows-rids"></a>RIDs do Windows
+<a id="windows-rids" class="xliff"></a>
+
+## RIDs do Windows
 
 * Windows 7 / Windows Server 2008 R2
     * `win7-x64`
@@ -84,7 +93,9 @@ Para usar RIDs, você precisa saber quais RIDs existem. Novos RIDs são adiciona
     * `win10-arm`
     * `win10-arm64`
 
-## <a name="linux-rids"></a>RIDs do Linux
+<a id="linux-rids" class="xliff"></a>
+
+## RIDs do Linux
 
 * Red Hat Enterprise Linux
     * `rhel.7-x64`
@@ -117,7 +128,9 @@ Para usar RIDs, você precisa saber quais RIDs existem. Novos RIDs são adiciona
     * `linuxmint.17.3-x64`
     * `linuxmint.18-x64`
 
-## <a name="os-x-rids"></a>RIDs do OS X
+<a id="os-x-rids" class="xliff"></a>
+
+## RIDs do OS X
 
 * `osx.10.10-x64`
 * `osx.10.11-x64`
