@@ -10,14 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: 31503e39d8a96092dbce03c17397e1adfec6421e
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
+<a id="net-core-application-deployment" class="xliff"></a>
+
+# Implantação de um aplicativo .NET Core
 
 Você pode criar dois tipos de implantações de aplicativos do .NET Core:
 
@@ -25,11 +27,15 @@ Você pode criar dois tipos de implantações de aplicativos do .NET Core:
 
 - Implantação autocontida. Ao contrário da FDD, a SCD (implantação autocontida) não se baseia na presença de componentes compartilhados no sistema de destino. Todos os componentes, inclusive as bibliotecas e o tempo de execução do .NET Core, são incluídos com o aplicativo e isolados de outros aplicativos .NET Core. As SCDs incluem um arquivo executável (como o *app.exe* em plataformas Windows para um aplicativo chamado `app`), que é uma versão renomeada do host específico da plataforma .NET Core, e um arquivo *.dll* (como *app.dll*), que é o aplicativo real.
 
-## <a name="framework-dependent-deployments-fdd"></a>FDD (implantação dependente de estrutura)
+<a id="framework-dependent-deployments-fdd" class="xliff"></a>
+
+## FDD (implantação dependente de estrutura)
 
 Para uma FDD, seu aplicativo é implantado apenas em dependências de terceiros. Você não precisa implantar o .NET Core, pois o aplicativo usará a versão do .NET Core presente no sistema de destino. Este é o modelo de implantação padrão para aplicativos .NET Core.
 
-### <a name="why-create-a-framework-dependent-deployment"></a>Por que criar uma implantação dependente de estrutura?
+<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
+
+### Por que criar uma implantação dependente de estrutura?
 
 Implantar uma FDD traz uma série de vantagens:
 
@@ -45,11 +51,15 @@ Contudo, também há algumas desvantagens:
 
 - É possível que o tempo de execução e as bibliotecas do .NET Core sejam alteradas em versões futuras, sem seu conhecimento. Em casos raros, isso pode alterar o comportamento do seu aplicativo.
 
-## <a name="self-contained-deployments-scd"></a>SCD (implantação autocontida)
+<a id="self-contained-deployments-scd" class="xliff"></a>
 
-No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. No entanto, a criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) em várias plataformas (por exemplo, OpenSSL no macOS), por isso elas devem estar presentes, antes de executar o aplicativo.
+## SCD (implantação autocontida)
 
-### <a name="why-deploy-a-self-contained-deployment"></a>Por que fazer uma implantação autocontida?
+No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. A criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) de várias plataformas, por isso elas devem estar presentes antes de executar o aplicativo.
+
+<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+
+### Por que fazer uma implantação autocontida?
 
 Implantar uma implantação autocontida apresenta duas vantagens principais:
 
@@ -65,7 +75,9 @@ Ela também apresenta algumas desvantagens:
 
 - Implantar vários aplicativos .NET Core autocontidos em um sistema pode consumir um volume significativo de espaço em disco, visto que cada aplicativo duplica os arquivos do .NET Core.
 
-## <a name="step-by-step-examples"></a>Exemplos passo a passo
+<a id="step-by-step-examples" class="xliff"></a>
+
+## Exemplos passo a passo
 
 Para obter exemplos passo a passo de como implantar aplicativos .NET Core com ferramentas da CLI, confira o artigo [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md). Para obter exemplos passo a passo de como implantar aplicativos .NET Core com o Visual Studio, confira o artigo [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md). Cada tópico inclui exemplos das seguintes implantações:
 
@@ -74,7 +86,9 @@ Para obter exemplos passo a passo de como implantar aplicativos .NET Core com fe
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
 
-# <a name="see-also"></a>Consulte também
+<a id="see-also" class="xliff"></a>
+
+# Consulte também
 
 [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)   
 [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)   

@@ -31,39 +31,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0fad74980e3c8cf66b9909b50bdaa3f9f4f567a1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 2dac1828a49bbf0d07e6134464e50eeb7c9cddd1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="delegates-visual-basic"></a>Delegados (Visual Basic)
-Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas, ao contrário dos ponteiros de função, os delegados [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] são um tipo de referência com base na classe <xref:System.Delegate?displayProperty=fullName>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.  
+<a id="delegates-visual-basic" class="xliff"></a>
+
+# Delegados (Visual Basic)
+Os delegados são objetos que se referem aos métodos. Às vezes, eles são descritos como *ponteiros de função fortemente tipados* porque eles são semelhante aos ponteiros de função usados em outras linguagens de programação. Mas ao contrário dos ponteiros de função, os delegados do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] são um tipo de referência baseado na classe <xref:System.Delegate?displayProperty=fullName>. Os delegados podem fazer referência a ambos os métodos compartilhados: os métodos que podem ser chamados sem uma instância específica de uma classe e os métodos de instância.  
   
-## <a name="delegates-and-events"></a>Representantes e eventos  
- Os delegados são úteis em situações em que é necessário um intermediário entre um procedimento de chamada e o procedimento sendo chamado. Por exemplo, você pode desejar que um objeto que aciona eventos possa chamar manipuladores de eventos diferentes em diferentes circunstâncias. Infelizmente, o objeto que aciona os eventos não pode saber de antemão quais manipulador de eventos estarão tratando um evento específico. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] permite que você associe dinamicamente os manipuladores de eventos a eventos criando um delegado para você quando você usa a instrução `AddHandler`. No tempo de execução, o delegado encaminha chamadas para o manipulador de eventos apropriado.  
+<a id="delegates-and-events" class="xliff"></a>
+
+## Representantes e eventos  
+ Os delegados são úteis em situações em que é necessário um intermediário entre um procedimento de chamada e o procedimento sendo chamado. Por exemplo, você pode desejar que um objeto que aciona eventos possa chamar manipuladores de eventos diferentes em diferentes circunstâncias. Infelizmente, o objeto que aciona os eventos não pode saber de antemão quais manipulador de eventos estarão tratando um evento específico. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] permite que você associe dinamicamente os manipuladores de eventos a eventos criando um delegado para você quando você usa a instrução `AddHandler`. No tempo de execução, o delegado encaminha chamadas para o manipulador de eventos apropriado.  
   
- Embora você possa criar seus próprios delegados, na maioria dos casos [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] cria o delegado e cuida dos detalhes para você. Por exemplo, uma instrução `Event` define implicitamente uma classe delegada chamada `<EventName>EventHandler` como uma classe aninhada da classe que contém a instrução `Event` e com a mesma assinatura que o evento. A instrução `AddressOf` cria implicitamente uma instância de um delegado que se refere a um procedimento específico. As duas linhas de código a seguir são equivalentes. Na primeira linha, você vê a criação explícita de uma instância do `Eventhandler`, com uma referência ao método `Button1_Click` enviado como o argumento. A segunda linha é uma maneira mais conveniente de fazer a mesma coisa.  
+ Embora você possa criar seus próprios delegados, na maioria dos casos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] cria o delegado e cuida dos detalhes para você. Por exemplo, uma instrução `Event` define implicitamente uma classe delegada chamada `<EventName>EventHandler` como uma classe aninhada da classe que contém a instrução `Event` e com a mesma assinatura que o evento. A instrução `AddressOf` cria implicitamente uma instância de um delegado que se refere a um procedimento específico. As duas linhas de código a seguir são equivalentes. Na primeira linha, você vê a criação explícita de uma instância do `Eventhandler`, com uma referência ao método `Button1_Click` enviado como o argumento. A segunda linha é uma maneira mais conveniente de fazer a mesma coisa.  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   
  Você pode usar a forma mais simples de criar delegados em qualquer local que o compilador possa determinar o tipo do delegado pelo contexto.  
   
-## <a name="declaring-events-that-use-an-existing-delegate-type"></a>Declarando eventos que usam um tipo delegado existente  
+<a id="declaring-events-that-use-an-existing-delegate-type" class="xliff"></a>
+
+## Declarando eventos que usam um tipo delegado existente  
  Em algumas situações, convém declarar um evento para usar um tipo delegado existente como seu delegado subjacente. A sintaxe a seguir demonstra como:  
   
  [!code-vb[VbVbalrDelegates#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_2.vb)]  
   
  Isso é útil quando você deseja rotear vários eventos para o mesmo manipulador.  
   
-## <a name="delegate-variables-and-parameters"></a>Variáveis e parâmetros de delegado  
+<a id="delegate-variables-and-parameters" class="xliff"></a>
+
+## Variáveis e parâmetros de delegado  
  Você pode usar delegados para outras tarefas não relacionadas a eventos, como threading livre ou com os procedimentos que precisem chamar diferentes versões de funções no tempo de execução.  
   
  Por exemplo, suponha que você tenha um aplicativo com anúncio classificado que inclui uma caixa de listagem com os nomes de carros. Os anúncios são classificados por título, que é, normalmente, a marca do carro. Um problema que você pode enfrentar ocorre quando alguns carros incluem o ano antes do fabricante. O problema é que a funcionalidade interna de classificação da caixa de listagem classifica somente por códigos de caracteres. Ela coloca todos os anúncios começando com datas primeiro, seguidos de anúncios começando com o fabricante.  
   
  Para corrigir isso, você pode criar um procedimento de classificação em uma classe que usa a classificação alfabética padrão na maioria das caixas de listagem, mas é possível mudar no tempo de execução para o procedimento de classificação personalizada para anúncios de carro. Para fazer isso, você passa o procedimento de classificação personalizada para a classe de classificação no tempo de execução usando delegados.  
   
-## <a name="addressof-and-lambda-expressions"></a>Expressões lambda e AddressOf  
+<a id="addressof-and-lambda-expressions" class="xliff"></a>
+
+## Expressões lambda e AddressOf  
  Cada classe de delegado define um construtor que é passado para a especificação de um método do objeto. Um argumento para o construtor delegado deve ser uma referência a um método ou uma expressão lambda.  
   
  Para especificar uma referência a um método, use a seguinte sintaxe:  
@@ -82,7 +93,9 @@ Os delegados são objetos que se referem aos métodos. Às vezes, eles são desc
   
  A assinatura da função deve corresponder a do tipo delegado. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md). Para obter mais exemplos de expressão lambda e atribuições `AddressOf` aos delegados, consulte [Conversão de delegado amena](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+<a id="related-topics" class="xliff"></a>
+
+## Tópicos relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  
