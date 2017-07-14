@@ -27,11 +27,11 @@ ms.lasthandoff: 05/31/2017
 
 ---
 
-<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
 # Compatibilidade de aplicativos no .NET Framework
+<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
 
-<a id="introduction" class="xliff"></a>
 ## Introdução
+<a id="introduction" class="xliff"></a>
 A compatibilidade é uma meta muito importante de cada versão do .NET. A compatibilidade garante que cada versão é aditiva e, portanto, as versões anteriores ainda funcionarão. Por outro lado, as alterações na funcionalidade anterior (para melhorar o desempenho, resolver problemas de segurança ou corrigir bugs) podem causar problemas de compatibilidade no código ou nos aplicativos existentes que são executados em uma versão posterior. O .NET Framework reconhece as alterações de redirecionamento e de tempo de execução. As alterações de redirecionamento afetam os aplicativos que se destinam a uma versão específica do .NET Framework, mas que são executados em uma versão posterior. As alterações de tempo de execução afetam todos os aplicativos executados em uma versão específica.
 
 Cada aplicativo se destina a uma versão específica do .NET Framework, que pode ser especificada por meio da:
@@ -42,18 +42,18 @@ Cada aplicativo se destina a uma versão específica do .NET Framework, que pode
 
 Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade.
 
-<a id="runtime-changes" class="xliff"></a>
 ## Alterações em tempo de execução
+<a id="runtime-changes" class="xliff"></a>
 
 Problemas de tempo de execução são aqueles que surgem quando um novo tempo de execução é colocado em um computador e os mesmos binários são executados, mas um comportamento diferente é observado. Se um binário foi compilado para o .NET Framework 4.0, ele será executado no modo de compatibilidade do .NET Framework 4.0 na versão 4.5 ou em versões posteriores. Muitas das alterações que afetam a versão 4.5 não afetarão um binário compilado para a versão 4.0. Isso é específico a um AppDomain e depende das configurações do assembly de entrada.
 
-<a id="retargeting-changes" class="xliff"></a>
 ## Alterações de redirecionamento
+<a id="retargeting-changes" class="xliff"></a>
 
 Problemas de redirecionamento são aqueles que surgem quando um assembly que era destinado à versão 4.0 agora está definido para ter a versão 4.5 como destino. Agora o assembly aceita os novos recursos, bem como os possíveis problemas de compatibilidade dos recursos antigos. Novamente, isso é determinado pelo assembly de entrada e, portanto, o aplicativo de console que usa o assembly ou o site que referencia o assembly.
 
-<a id="net-compatibility-diagnostics" class="xliff"></a>
 ## Diagnóstico de Compatibilidade do .NET
+<a id="net-compatibility-diagnostics" class="xliff"></a>
 
 O Diagnóstico de Compatibilidade do .NET são analisadores capacitados pelo Roslyn que ajudam a identificar problemas de compatibilidade de aplicativos entre versões do .NET Framework. Esta lista contém todos os analisadores disponíveis, embora apenas um subconjunto seja aplicado a qualquer migração específica. Os analisadores determinarão quais problemas se aplicam à migração planejada e os trará à tona.
 
@@ -85,16 +85,16 @@ Cada problema inclui as seguintes informações:
 
 -   As IDs do diagnóstico disponível
 
-<a id="usage" class="xliff"></a>
 ## Uso
+<a id="usage" class="xliff"></a>
 Para começar, selecione o tipo de alteração de compatibilidade abaixo:
 
 * [Alterações de redirecionamento](./retargeting/index.md)
 * [Alterações no tempo de execução](./runtime/index.md)
 
 
-<a id="see-also" class="xliff"></a>
 ## Consulte também
+<a id="see-also" class="xliff"></a>
 
 * [Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)
 * [Novidades](../../../docs/framework/whats-new/index.md)
