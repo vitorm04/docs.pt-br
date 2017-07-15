@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com LINQ
+title: Trabalhando com LINQ | Microsoft Docs
 description: "Este tutorial ensina a gerar sequências com LINQ, escrever métodos para uso em consultas LINQ e diferenciar entre avaliação lenta e detalhada."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,18 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="working-with-linq"></a>Trabalhando com LINQ
+# Trabalhando com LINQ
+<a id="working-with-linq" class="xliff"></a>
 
-## <a name="introduction"></a>Introdução
+## Introdução
+<a id="introduction" class="xliff"></a>
 
 Este tutorial ensina vários recursos no .NET Core e da linguagem C#. Você aprenderá:
 
@@ -36,17 +38,20 @@ Para nossos propósitos, vamos examinar rapidamente as sequências de manipulaç
 
 Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também poderá ver o [exemplo concluído](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) no repositório dotnet/docs do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## Pré-requisitos
+<a id="prerequisites" class="xliff"></a>
 
 Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core). Você pode executar esse aplicativo no Windows, Ubuntu Linux, OS X ou em um contêiner do Docker. Você precisará instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
-## <a name="create-the-application"></a>Criar o aplicativo
+## Criar o aplicativo
+<a id="create-the-application" class="xliff"></a>
 
 A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
 
 Se você nunca usou C# antes, [este tutorial](console-teleprompter.md) explicará a estrutura de um programa C#. Você pode ler e, em seguida, voltar aqui para saber mais sobre o LINQ. 
 
-## <a name="creating-the-data-set"></a>Criando o arquivo de dados
+## Criando o arquivo de dados
+<a id="creating-the-data-set" class="xliff"></a>
 
 Vamos começar criando um baralho. Você fará isso usando uma consulta LINQ com duas fontes (uma para os quatro naipes, uma para os treze valores). Você combinará essas fontes em um baralho com 52 cartas. Uma instrução `Console.WriteLine` dentro de um loop `foreach` exibe as cartas.
 
@@ -100,7 +105,8 @@ Vá em frente e execute o exemplo que você criou neste momento. Ele exibirá to
 
 ![Janela de console mostrando o aplicativo gravando 52 cartas](./media/working-with-linq/console.png)
 
-## <a name="manipulating-the-order"></a>Manipulando a ordem
+## Manipulando a ordem
+<a id="manipulating-the-order" class="xliff"></a>
 
 Em seguida, vamos criar um método de utilitário que pode executar o embaralhamento. A primeira etapa é dividir o baralho em dois. Os métodos `Take()` e `Skip()` que fazem parte das APIs do LINQ fornecem esse recurso para nós:
 
@@ -173,7 +179,8 @@ public static void Main(string[] args)
 }
 ```
 
-## <a name="comparisons"></a>Comparações
+## Comparações
+<a id="comparisons" class="xliff"></a>
 
 Vamos ver quantos embaralhamentos são necessários para colocar o baralho em sua ordem original. Você precisará escrever um método que determina se duas sequências são iguais. Depois de ter esse método, você precisará colocar o código de embaralhamento em um loop e verificar quando a apresentação estiver na ordem.
 
@@ -207,7 +214,8 @@ Console.WriteLine(times);
 
 Execute o exemplo e veja como o baralho é reorganizado em cada embaralhamento até que ele retorne à sua configuração original após 8 iterações.
 
-## <a name="optimizations"></a>Otimizações
+## Otimizações
+<a id="optimizations" class="xliff"></a>
 
 O exemplo que você compilou até agora executa um *embaralhamento*, no qual as cartas superiores e inferiores permanecem as mesmas em cada execução. Vamos fazer uma alteração e executar um *embaralhamento completo*, no qual todas as 52 cartas trocam de posição. Para um embaralhamento completo, intercale o baralho para que a primeira carta da metade inferior metade se torna a primeira carta do baralho. Isso significa que a última carta na metade superior torna-se a carta inferior. Isso é apenas uma alteração de uma linha. Atualize a chamada de embaralhamento para alterar a ordem das metades superior e inferior do baralho:
 
@@ -285,7 +293,8 @@ Não interprete incorretamente esse exemplo pensando que todas as consultas deve
 
 Na prática, alguns algoritmos são muito melhores executados usando a avaliação rápida e outros executam muito melhor usando a avaliação lenta. (Em geral, a avaliação lenta é uma opção muito melhor quando a fonte de dados é um processo separado, como um mecanismo de banco de dados. Nesses casos, a avaliação lenta permite que consultas mais complexas executem apenas uma viagem de ida e volta e para o processo de banco de dados.) O LINQ permite uma avaliação lenta e rápida. Meça e escolha a melhor opção.
 
-## <a name="preparing-for-new-features"></a>Preparação para novos recursos
+## Preparação para novos recursos
+<a id="preparing-for-new-features" class="xliff"></a>
 
 O código que você escreveu para este exemplo é um exemplo de como criar um protótipo simples que faz o trabalho. Isso é uma ótima maneira de explorar um espaço problemático e, para muitos recursos, pode ser a melhor solução permanente. Você terá aproveitado *tipos anônimos* para as cartas e cada carta será representada por cadeias de caracteres.
 
@@ -329,7 +338,8 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 Compile e execute novamente. A saída é um pouco mais limpa e o código é um pouco mais claro e pode ser estendido mais facilmente.
 
-## <a name="conclusion"></a>Conclusão
+## Conclusão
+<a id="conclusion" class="xliff"></a>
 
 Este exemplo mostrou alguns dos métodos usados em LINQ e como criar seus próprios métodos que serão facilmente usados com o código habilitado para LINQ. Ele também mostrou as diferenças entre a avaliação lenta e a rápida e o impacto que a decisão pode ter no desempenho.
 

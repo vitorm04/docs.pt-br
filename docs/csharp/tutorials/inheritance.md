@@ -1,5 +1,5 @@
 ---
-title: "Herança em C#"
+title: "Herança no C# | Microsoft Docs"
 description: "Aprenda a usar a herança em bibliotecas e aplicativos em C#."
 keywords: "herança (C#), classes base, classes derivadas, classes base abstratas"
 author: rpetrusha
@@ -12,23 +12,27 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET #
+# Herança em C# e .NET
+<a id="inheritance-in-c-and-net" class="xliff"></a> #
 
-## <a name="introduction"></a>Introdução ##
+## Introdução
+<a id="introduction" class="xliff"></a> ##
 
 Este tutorial apresenta a herança em C#. Herança é um recurso das linguagens de programação orientadas a objeto que permite a definição de uma classe base que, por sua vez, fornece uma funcionalidade específica (dados e comportamento), e a definição de classes derivadas que herdam ou substituem essa funcionalidade.
 
-## <a name="prerequisites"></a>Pré-requisitos ##
+## Pré-requisitos
+<a id="prerequisites" class="xliff"></a> ##
 
 Este tutorial presume que você já instalou o .NET Core. Para obter instruções de instalação, confira [Guia de instalação do .NET Core](https://www.microsoft.com/net/core). Você também precisa de um editor de código. Este tutorial usa o [Visual Studio Code](https://code.visualstudio.com), embora você possa usar qualquer editor de código que quiser.
 
-## <a name="running-the-examples"></a>Como executar os exemplos ##
+## Como executar os exemplos
+<a id="running-the-examples" class="xliff"></a> ##
 
 Para criar e executar os exemplos neste tutorial, use o utilitário [dotnet](../../core/tools/dotnet.md) na linha de comando. Execute estas etapas para cada exemplo:
 
@@ -42,7 +46,8 @@ Para criar e executar os exemplos neste tutorial, use o utilitário [dotnet](../
 
 1. Insira o comando [dotnet run](../../core/tools/dotnet-run.md) para compilar e executar o exemplo.
 
-## <a name="background-what-is-inheritance"></a>Informações: O que é a herança? ##
+## Informações: O que é a herança?
+<a id="background-what-is-inheritance" class="xliff"></a> ##
 
 *Herança* é um dos atributos fundamentais da programação orientada a objeto. Ela permite que você defina uma classe filha que reutiliza (herda), estende ou modifica o comportamento de uma classe pai. A classe cujos membros são herdados é chamada de *classe base*. A classe que herda os membros da classe base é chamada de *classe derivada*.
 
@@ -117,7 +122,8 @@ A herança se aplica apenas a classes e interfaces. Outras categorias de tipo (s
    }
    ```
 
-## <a name="implicit-inheritance"></a>Herança implícita ##
+## Herança implícita
+<a id="implicit-inheritance" class="xliff"></a> ##
 
 Apesar dos tipos possíveis de herança por meio de herança única, todos os tipos no sistema de tipo .NET herdam implicitamente de @System.Object ou de um tipo derivado dele. Isso garante a disponibilidade de funcionalidades comuns para qualquer tipo.
 
@@ -156,7 +162,8 @@ A tabela a seguir lista as categorias de tipos que você pode criar em C#, e os 
 | enum | @System.Enum, System.ValueType, @System.Object |
 | delegado | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>Herança e um relacionamento "é um(a)" ##
+## Herança e um relacionamento "é um(a)"
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a> ##
 
 Normalmente, a herança é usada para expressar um relacionamento "é um(a)" entre uma classe base e uma ou mais classes derivadas, em que as classes derivadas são versões especializadas da classe base; a classe derivada é um tipo de classe base. Por exemplo, a classe `Publication` representa uma publicação de qualquer tipo e as classes `Book` e `Magazine` representam tipos específicos de publicações.
 
@@ -172,11 +179,13 @@ Nesse caso, não devemos depender da herança para representar marcas e modelos 
 
 Um relacionamento é-um(a) baseado na herança é mais bem aplicado a uma classe base e em classes derivadas que adicionam outros membros à classe base, ou que exigem funcionalidades adicionais não incluídas na classe base.
 
-## <a name="designing-the-base-class-and-derived-classes"></a>Criação da classe base e das classes derivadas ##
+## Criação da classe base e das classes derivadas
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a> ##
 
 Vamos examinar o processo de criação de uma classe base e de suas classes derivadas. Nesta seção, definiremos uma classe base, `Publication`, que representa uma publicação de qualquer tipo, como um livro, revista, jornal, diário, artigo etc. Também definiremos uma classe `Book` que deriva de `Publication`. Poderíamos ampliar facilmente o exemplo para definir outras classes derivadas, como `Magazine`, `Journal`, `Newspaper` e `Article`.
 
-### <a name="the-base-publication-class"></a>A classe base `Publication` ###
+### A classe base `Publication`
+<a id="the-base-publication-class" class="xliff"></a> ###
 
 Ao criar nossa classe `Publication`, precisamos tomar várias decisões de design:
 
@@ -245,7 +254,8 @@ A figura a seguir ilustra o relacionamento entre nossa classe base `Publication`
 
 ![As classes Object e Publication](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>A classe `Book` ###
+### A classe `Book`
+<a id="the-book-class" class="xliff"></a> ###
 
 A classe `Book` representa um livro como tipo especializado de publicação. O exemplo a seguir mostra o código-fonte para a classe `Book`.
 
@@ -301,7 +311,8 @@ O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de obje
 
 [!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>Consulte também ##
+## Consulte também
+<a id="see-also" class="xliff"></a> ##
 
 [Classes e objetos](../tour-of-csharp/classes-and-objects.md)</br>
 [Herança (Guia de Programação em C#)](../programming-guide/classes-and-structs/inheritance.md)

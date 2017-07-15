@@ -1,5 +1,5 @@
 ---
-title: Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
+title: Testando uma biblioteca de classes com o .NET Core no Visual Studio 2017 | Microsoft Docs
 description: Saiba como testar uma biblioteca de classes escrita em C# usando o Visual Studio 2017
 keywords: .NET Core, biblioteca de classes .NET Standard, Visual Studio 2017, teste de unidade
 author: BillWagner
@@ -11,22 +11,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 629af913bb5172b890161bb82f45a65e6bb6498d
+ms.sourcegitcommit: 61c1c57fc0910fc2f4ce34da2975d181c40ed5cb
+ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
+# Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
+<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
 Em [Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md), você criou uma biblioteca de classes simples que adiciona um método de extensão à classe @System.String. Agora, você criará um teste de unidade para ter certeza de que ela funciona conforme o esperado. Você adicionará seu projeto de teste de unidade para a solução que criou no tópico anterior.
 
-## <a name="creating-a-unit-test-project"></a>Criar um projeto de teste de unidade
+## Criar um projeto de teste de unidade
+<a id="creating-a-unit-test-project" class="xliff"></a>
 
 Para criar o projeto de teste de unidade, faça o seguinte:
 
-1. No **Gerenciador de Soluções**, abra o menu de contexto do nó da solução **ClassLibraryProject** e selecione **Adicionar** > **Novo Projeto**.
+1. No **Gerenciador de Soluções**, abra o menu de contexto do nó da solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto**.
 
    <!-- Need a VS 2017 version  [!NOTE] In addition to a Unit Test project, you can also use Visual Studio to create an xUnit test project for .NET Core. For a walkthrough that includes an xUnit test project, see [Getting started with .NET Core on Windows, using Visual Studio 2015](../../core/tutorials/using-on-windows.md). --> 
 
@@ -54,7 +56,8 @@ Para criar o projeto de teste de unidade, faça o seguinte:
 
    ![Gerenciador de referências](./media/testing-library-with-visual-studio/referencemanager.png)
 
-## <a name="adding-and-running-unit-test-methods"></a>Adicionar e executar métodos de teste de unidade
+## Adicionar e executar métodos de teste de unidade
+<a id="adding-and-running-unit-test-methods" class="xliff"></a>
 
 Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) em uma classe de teste de unidade, a classe à qual o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) é aplicado. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método têm êxito.
 
@@ -98,7 +101,8 @@ Para criar os métodos de teste:
 
    ![Janela Gerenciador de Testes](./media/testing-library-with-visual-studio/firsttest.png)
 
-## <a name="handling-test-failures"></a>Tratamento de falhas do teste
+## Tratamento de falhas do teste
+<a id="handling-test-failures" class="xliff"></a>
 
 Sua execução de teste não apresentou falhas, mas altere-a um pouco para que um dos métodos do teste falhe:
 
@@ -119,7 +123,8 @@ Sua execução de teste não apresentou falhas, mas altere-a um pouco para que u
 
 1. Remova o código que foi adicionado (`"Error", `) e execute o teste novamente. Os testes serão aprovados.
 
-## <a name="testing-the-release-version-of-the-library"></a>Testar a versão de lançamento da biblioteca
+## Testar a versão de lançamento da biblioteca
+<a id="testing-the-release-version-of-the-library" class="xliff"></a>
 
 Você estava executando nossos testes na versão de Depuração da biblioteca. Agora que todos os testes foram aprovados, e nós testamos adequadamente nossa biblioteca, você deve executar os testes mais uma vez no build de Lançamento da biblioteca. Vários fatores, incluindo as otimizações do compilador, podem produzir um comportamento diferente entre as compilações de Depuração e Lançamento.
 

@@ -1,5 +1,5 @@
 ---
-title: "Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017"
+title: "Compilando um aplicativo Olá, Mundo no C# com o .NET Core no Visual Studio 2017 | Microsoft Docs"
 description: Saiba como compilar um aplicativo de console simples do .NET Core usando o Visual Studio 2017.
 keywords: .NET Core, aplicativo do console do .NET Core, Visual Studio 2017
 author: BillWagner
@@ -11,24 +11,27 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 08c8e18a95c25477eb81bd6df10cf593b284bf64
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017
+# Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017
+<a id="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
 Este tópico fornece uma introdução passo a passo para compilação, depuração e publicação de um aplicativo de console simples do .NET Core usando o Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tenha como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## Pré-requisitos
+<a id="prerequisites" class="xliff"></a>
 
 O [Visual Studio 2017](https://www.visualstudio.com/downloads/) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. 
 
 Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Core no Windows](../../core/windows-prerequisites.md).
 
-## <a name="a-simple-hello-world-application"></a>Um aplicativo simples Olá, Mundo
+## Um aplicativo simples Olá, Mundo
+<a id="a-simple-hello-world-application" class="xliff"></a>
 
 Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas:
 
@@ -58,7 +61,8 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
 
 1. Pressione qualquer tecla para fechar a janela de console.
 
-## <a name="enhancing-the-hello-world-application"></a>Aprimorando o aplicativo Olá, Mundo
+## Aprimorando o aplicativo Olá, Mundo
+<a id="enhancing-the-hello-world-application" class="xliff"></a>
 
 Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora. Para modificar e testar o programa, faça o seguinte:
 
@@ -84,7 +88,8 @@ Você criou e executou seu aplicativo. Para desenvolver um aplicativo profission
 
 - Para obter informações sobre o desenvolvimento e a publicação de uma versão distribuível do seu aplicativo, consulte [Publishing your Hello World application with Visual Studio 2017](publishing-with-visual-studio.md) (Publicando um aplicativo Olá, Mundo com o Visual Studio 2017).
 
-## <a name="related-topics"></a>Tópicos relacionados
+## Tópicos relacionados
+<a id="related-topics" class="xliff"></a>
 
 Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes com o .NET Core e o Visual Studio 2017. Para obter uma introdução passo a passo, consulte [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md).
 

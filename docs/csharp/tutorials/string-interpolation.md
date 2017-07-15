@@ -1,5 +1,5 @@
 ---
-title: "Interpolação de cadeia de caracteres | C#"
+title: "Interpolação de cadeia de caracteres – C# | Microsoft Docs"
 description: "Saiba como funciona o interpolação de cadeia de caracteres no C# 6"
 keywords: .NET, .NET Core, C#, cadeia de caracteres
 author: mgroves
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41afad1c1148319eb8d7d1c3066424eea431649d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 8396be84d229563973011470d0333af017302dc9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="string-interpolation-in-c"></a>Interpolação de cadeia de caracteres em C# #
+# Interpolação de cadeia de caracteres no C#
+<a id="string-interpolation-in-c" class="xliff"></a> #
 
 A interpolação de cadeia de caracteres é a maneira que os espaços reservados em uma cadeia de caracteres são substituídos pelo valor de uma variável de cadeia de caracteres. Antes do C# 6, a maneira de fazer isso era com `System.String.Format`. Isso funciona, mas como ele usa espaços reservados numerados, pode ser mais difícil de ler e ser mais detalhado.
 
@@ -31,11 +33,13 @@ echo "My name is $name.";
 
 No C# 6, finalmente temos esse estilo de interpolação de cadeia de caracteres. Você pode usar um `$` antes de uma cadeia de caracteres para indicar que ele deve substituir variáveis/expressões para seus valores.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## Pré-requisitos
+<a id="prerequisites" class="xliff"></a>
 Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core).
-Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker. Você precisará instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
+Você pode executar esse aplicativo no Windows, Ubuntu Linux, macOS ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
-## <a name="create-the-application"></a>Criar o aplicativo
+## Criar o aplicativo
+<a id="create-the-application" class="xliff"></a>
 
 Agora que você instalou todas as ferramentas, crie um novo aplicativo do .NET Core. Para usar o gerador de linha de comando, crie um diretório para seu projeto, como `interpolated`e execute o seguinte comando no shell de sua preferência:
 
@@ -47,7 +51,8 @@ Esse comando criará um projeto do .NET Core barebones com um arquivo de projeto
 
 Para executar o programa, use `dotnet run`. Você deve ver a saída do "Olá, Mundo" no console.
 
-## <a name="intro-to-string-interpolation"></a>Introdução à interpolação de cadeia de caracteres
+## Introdução à interpolação de cadeia de caracteres
+<a id="intro-to-string-interpolation" class="xliff"></a>
 
 Com `System.String.Format`, especifique "espaços reservados" em uma cadeia de caracteres que são substituídos pelos parâmetros na cadeia de caracteres a seguir. Por exemplo:
 
@@ -73,7 +78,8 @@ This is line number 4
 This is line number 5
 ```
 
-## <a name="how-string-interpolation-works"></a>Como funciona o interpolação de cadeia de caracteres
+## Como funciona o interpolação de cadeia de caracteres
+<a id="how-string-interpolation-works" class="xliff"></a>
 
 Nos bastidores, essa sintaxe de interpolação de cadeia de caracteres é convertida em String.Format pelo compilador. Portanto, você pode fazer o [mesmo que já fez antes com String.Format](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx).
 
@@ -109,7 +115,8 @@ Se compilar isso, você obterá erros:
 * `Cannot use local variable 'adj' before it is declared` – a variável `adj` não foi declarada até *depois* da cadeia de caracteres interpolada.
 * `The name 'otheranimal' does not exist in the current context` – uma variável chamada `otheranimal` nunca foi declarada
 
-## <a name="localization-and-internationalization"></a>Internacionalização e localização
+## Internacionalização e localização
+<a id="localization-and-internationalization" class="xliff"></a>
 
 Uma cadeia de caracteres interpolada dá suporte a `IFormattable` e `FormattableString`, o que pode ser útil para internacionalização.
 
@@ -119,7 +126,8 @@ Por exemplo:
 
 [!code-csharp[Exemplo de internacionalização de interpolação](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
-## <a name="conclusion"></a>Conclusão 
+## Conclusão
+<a id="conclusion" class="xliff"></a> 
 
 Neste tutorial, você aprendeu como usar recursos de interpolação de cadeia de caracteres de C# 6. Ele é basicamente uma maneira mais concisa de gravar instruções `String.Format` simples, com algumas restrições para usos mais avançados.
 

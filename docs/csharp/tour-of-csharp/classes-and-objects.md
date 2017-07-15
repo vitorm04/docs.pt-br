@@ -1,5 +1,5 @@
 ---
-title: Classes e objetos em C# | Um tour da linguagem C#
+title: "Classes e objetos no C# – um tour pela linguagem C# | Microsoft Docs"
 description: "Novato em C#? Leia esta visão geral de classes, objetos e herança"
 keywords: ".NET, csharp, classe, instância, objeto, herança, polimorfismo"
 author: BillWagner
@@ -11,13 +11,14 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
-ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: e4af598747b991757912880102cb18bf1835cc56
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="classes-and-objects"></a>Classes e objetos
+# Classes e objetos
+<a id="classes-and-objects" class="xliff"></a>
 
 As *classes* são os tipos do C# mais fundamentais. Uma classe é uma estrutura de dados que combina ações (métodos e outros membros da função) e estado (campos) em uma única unidade. Uma classe fornece uma definição para *instâncias* da classe criadas dinamicamente, também conhecidas como *objetos*. As classes dão suporte à *herança* e *polimorfismo*, mecanismos nos quais *classes derivadas* podem estender e especializar *classes base*.
 
@@ -33,7 +34,8 @@ Instâncias de classes são criadas usando o operador `new`, que aloca memória 
 
 A memória ocupada por um objeto é recuperada automaticamente quando o objeto não está mais acessível. Não é necessário nem possível desalocar explicitamente os objetos em C#.
 
-## <a name="members"></a>Membros
+## Membros
+<a id="members" class="xliff"></a>
 
 Os membros de uma classe são membros estáticos ou membros de instância. Os membros estáticos pertencem às classes e os membros de instância pertencem aos objetos (instâncias de classes).
 
@@ -60,7 +62,8 @@ O exemplo a seguir fornece uma visão geral dos tipos de membros que uma classe 
 * Tipos
     - Tipos aninhados declarados pela classe
 
-## <a name="accessibility"></a>Acessibilidade
+## Acessibilidade
+<a id="accessibility" class="xliff"></a>
 
 Cada membro de uma classe tem uma acessibilidade associada, que controla as regiões de texto do programa que são capazes de acessar o membro. Há cinco formas possíveis de acessibilidade. Elas são resumidas abaixo.
 
@@ -75,7 +78,8 @@ Cada membro de uma classe tem uma acessibilidade associada, que controla as regi
 * `private`
     - Acesso limitado a essa classe
 
-## <a name="type-parameters"></a>Parâmetros de tipo
+## Parâmetros de tipo
+<a id="type-parameters" class="xliff"></a>
 
 Uma definição de classe pode especificar um conjunto de parâmetros de tipo seguindo o nome da classe com colchetes angulares com uma lista de nomes de parâmetro de tipo. Em seguida, os parâmetros de tipo podem ser usados no corpo das declarações de classe para definir os membros da classe. No exemplo a seguir, os parâmetros de tipo de `Pair` são `TFirst` e `TSecond`:
 
@@ -88,7 +92,8 @@ Quando a classe genérica é usada, os argumentos de tipo devem ser fornecidos p
 
 Um tipo genérico com argumentos de tipo fornecidos, como `Pair<int,string>` acima, é chamado de *tipo construído*.
 
-## <a name="base-classes"></a>Classes base
+## Classes base
+<a id="base-classes" class="xliff"></a>
 
 Uma declaração de classe pode especificar uma classe base, seguindo os parâmetros de nome da classe e tipo com dois-pontos e o nome da classe base. Omitir uma especificação de classe base é o mesmo que derivar do `object` de tipo. No exemplo a seguir, a classe base de `Point3D` é `Point` e a classe base de `Point` é `object`:
 
@@ -100,7 +105,8 @@ Existe uma conversão implícita de um tipo de classe para qualquer um de seus t
 
 [!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
-## <a name="fields"></a>Campos
+## Campos
+<a id="fields" class="xliff"></a>
 
 Um *campo* é uma variável que está associada a uma classe ou a uma instância de uma classe.
 
@@ -114,7 +120,8 @@ No exemplo a seguir, cada instância da classe `Color` tem uma cópia separada d
 
 Conforme mostrado no exemplo anterior, os *campos somente leitura* podem ser declarados com um modificador `readonly`. A atribuição a um campo `readonly` só pode ocorrer como parte da declaração do campo ou em um construtor na mesma classe.
 
-## <a name="methods"></a>Métodos
+## Métodos
+<a id="methods" class="xliff"></a>
 
 Um *método* é um membro que implementa um cálculo ou uma ação que pode ser executada por um objeto ou classe. Os *métodos estáticos* são acessados pela classe. Os *métodos de instância* são acessados pelas instâncias da classe.
 
@@ -124,7 +131,8 @@ Como os tipos, os métodos também podem ter um conjunto de parâmetros de tipo,
 
 A *assinatura* de um método deve ser exclusiva na classe na qual o método é declarado. A assinatura de um método consiste no nome do método, número de parâmetros de tipo e número, modificadores e tipos de seus parâmetros. A assinatura de um método não inclui o tipo de retorno.
 
-### <a name="parameters"></a>Parâmetros
+### Parâmetros
+<a id="parameters" class="xliff"></a>
 
 Os parâmetros são usados para passar valores ou referências de variável aos métodos. Os parâmetros de um método obtêm seus valores reais de *argumentos* que são especificados quando o método é invocado. Há quatro tipos de parâmetros: parâmetros de valor, parâmetros de referência, parâmetros de saída e matrizes de parâmetros.
 
@@ -152,7 +160,8 @@ Dentro de um método que usa uma matriz de parâmetros, a matriz de parâmetros 
 
 [!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
-### <a name="method-body-and-local-variables"></a>Corpo do método e variáveis locais
+### Corpo do método e variáveis locais
+<a id="method-body-and-local-variables" class="xliff"></a>
 
 Um corpo do método especifica as instruções para execução quando o método é invocado.
 
@@ -164,7 +173,8 @@ O C# requer que uma variável local seja *atribuída definitivamente* antes de s
 
 Um método pode usar instruções `return` para retornar o controle é pelo chamador. Em um método que retorna `void`, as instruções `return` não podem especificar uma expressão. Em um método que retorna não nulo, as instruções `return` devem incluir uma expressão que calcula o valor retornado.
 
-### <a name="static-and-instance-methods"></a>Métodos estáticos e de instância
+### Métodos estáticos e de instância
+<a id="static-and-instance-methods" class="xliff"></a>
 
 Um método declarado com um modificador estático é um *método estático*. Um método estático não funciona em uma instância específica e pode acessar diretamente apenas membros estáticos.
 
@@ -184,7 +194,8 @@ O exemplo a seguir mostra o uso da classe Entity.
 
 Observe que os métodos estáticos `SetNextSerialNo` e `GetNextSerialNo` são invocados na classe enquanto o método de instância `GetSerialNo` é chamado em instâncias da classe.
 
-### <a name="virtual-override-and-abstract-methods"></a>Métodos abstratos, virtuais e de substituição
+### Métodos abstratos, virtuais e de substituição
+<a id="virtual-override-and-abstract-methods" class="xliff"></a>
 
 Quando uma declaração de método de instância inclui um modificador `virtual`, o método deve ser um *método virtual*. Quando nenhum modificador virtual estiver presente, o método será um *método não virtual*.
 
@@ -210,7 +221,8 @@ O seguinte programa usa as classes `Expression` para avaliar a expressão `x * (
 
 [!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
-### <a name="method-overloading"></a>Sobrecarga de método
+### Sobrecarga de método
+<a id="method-overloading" class="xliff"></a>
 
 A *sobrecarga* de método permite que vários métodos na mesma classe tenham o mesmo nome, contanto que tenham assinaturas exclusivas. Ao compilar uma invocação de um método sobrecarregado, o compilador usa a *resolução de sobrecarga* para determinar o método específico para invocar. A resolução de sobrecarga localizará o método que melhor corresponde aos argumentos ou relatará um erro se nenhuma correspondência for encontrada. O exemplo a seguir mostra a resolução de sobrecarga em vigor. O comentário para cada invocação no método `Main` mostra qual método é realmente chamado.
 
@@ -218,7 +230,8 @@ A *sobrecarga* de método permite que vários métodos na mesma classe tenham o 
 
 Conforme mostrado no exemplo, um determinado método sempre pode ser selecionado ao converter explicitamente os argumentos para os tipos de parâmetro exatos e/ou fornecendo explicitamente os argumentos de tipo.
 
-## <a name="other-function-members"></a>Outros membros da função
+## Outros membros da função
+<a id="other-function-members" class="xliff"></a>
 
 Os membros que contêm código executável são conhecidos coletivamente como *membros de função* de uma classe. A seção anterior descreve os métodos, que são o tipo principal de membros da função. Esta seção descreve os outros tipos de membros da função com suporte do C#: construtores, propriedades, indexadores, eventos, operadores e finalizadores.
 
@@ -226,7 +239,8 @@ A seguir é mostrada uma classe genérica chamada List<T>, que implementa uma li
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
-### <a name="constructors"></a>Construtores
+### Construtores
+<a id="constructors" class="xliff"></a>
 
 O C# dá suporte aos construtores estáticos e de instância. Um *construtor de instância* é um membro que implementa as ações necessárias para inicializar uma instância de uma classe. Um *construtor estático* é um membro que implementa as ações necessárias para inicializar uma classe quando ele for carregado pela primeira vez.
 
@@ -238,7 +252,8 @@ Os construtores de instância podem ser sobrecarregados e podem ter parâmetros 
 
 Diferentemente de outros membros, construtores de instância não são herdados e uma classe não tem nenhum construtor de instância que não os que são realmente declarados na classe. Se nenhum construtor de instância for fornecido para uma classe, então um construtor vazio sem parâmetros será fornecido automaticamente.
 
-### <a name="properties"></a>Propriedades
+### Propriedades
+<a id="properties" class="xliff"></a>
 
 As *propriedades* são uma extensão natural dos campos. Elas são denominadas membros com tipos associados, e a sintaxe para acessar os campos e as propriedades é a mesma. No entanto, diferentemente dos campos, as propriedades não denotam locais de armazenamento. Em vez disso, as propriedades têm *acessadores* que especificam as instruções a serem executadas quando os valores forem lidos ou gravados.
 
@@ -256,7 +271,8 @@ Como nos campos e métodos, o C# dá suporte a propriedades de instância e a pr
 
 Os acessadores de uma propriedade podem ser virtuais. Quando uma declaração de propriedade inclui um modificador `virtual`, `abstract` ou `override`, ela se aplica aos acessadores da propriedade.
 
-### <a name="indexers"></a>Indexadores
+### Indexadores
+<a id="indexers" class="xliff"></a>
 
 Um *indexador* é um membro que permite que objetos sejam indexados da mesma forma que uma matriz. Um indexador é declarado como uma propriedade, exceto se o nome do membro for seguido por uma lista de parâmetros escrita entre os delimitadores `[` e `]`. Os parâmetros estão disponíveis nos acessadores do indexador. Semelhante às propriedades, os indexadores podem ser de leitura-gravação, somente leitura e somente gravação, e os acessadores de um indexador pode ser virtuais.
 
@@ -266,7 +282,8 @@ A classe `List` declara um indexador único de leitura-gravação que usa um par
 
 Os indexadores podem ser sobrecarregados, o que significa que uma classe pode declarar vários indexadores, desde que o número ou os tipos de seus parâmetros sejam diferentes.
 
-### <a name="events"></a>Eventos
+### Eventos
+<a id="events" class="xliff"></a>
 
 Um *evento* é um membro que permite que uma classe ou objeto forneça notificações. Um evento é declarado como um campo exceto se a declaração incluir uma palavra-chave do evento e o tipo deverá ser um tipo delegado.
 
@@ -280,7 +297,8 @@ Os clientes reagem a eventos por meio de *manipuladores de eventos*. Os manipula
 
 Para cenários avançados nos quais o controle do armazenamento subjacente de um evento é desejado, uma declaração de evento pode fornecer explicitamente acessadores `add` e `remove`, que são um pouco semelhantes ao acessador `set` de uma propriedade.
 
-### <a name="operators"></a>Operadores
+### Operadores
+<a id="operators" class="xliff"></a>
 
 Um *operador* é um membro que define o significado da aplicação de um operador de expressão específico para instâncias de uma classe. Três tipos de operadores podem ser definidos: operadores unários, operadores binários e operadores de conversão. Todos os operadores devem ser declarados como `public` e `static`.
 
@@ -290,7 +308,8 @@ A classe `List<T>` declara dois operadores, `operator ==` e `operator !=` e, por
 
 O primeiro `Console.WriteLine` gera `True` porque as duas listas contêm o mesmo número de objetos com os mesmos valores na mesma ordem. Como `List<T>` não definiu `operator ==`, o primeiro `Console.WriteLine` geraria `False` porque `a` e `b` referenciam diferentes instâncias `List<int>`.
 
-### <a name="finalizers"></a>Finalizadores
+### Finalizadores
+<a id="finalizers" class="xliff"></a>
 
 Um *finalizador* é um membro que implementa as ações necessárias para finalizar uma instância de uma classe. Os finalizadores não podem ter parâmetros, eles não podem ter modificadores de acessibilidade e não podem ser chamados explicitamente. O finalizador de uma instância é invocado automaticamente durante a coleta de lixo.
 

@@ -1,5 +1,5 @@
 ---
-title: "Programação assíncrona de interface do usuário | Guia do C#"
+title: "Programação assíncrona de interface do usuário – Guia do C# | Microsoft Docs"
 description: "Conheça as técnicas para manter a interface do usuário responsiva enquanto uma programação está trabalhando com operações assíncronas"
 keywords: C#, UWP, XAML
 ms.date: 08/24/2016
@@ -9,14 +9,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7402b29b-1093-456d-be4c-f60ecb8926bb
 redirect_url: /dotnet/articles/csharp/tutorials/index
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d544740b2a172e08f333b55fb29c5a5f8782200
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 58cac34daca4199562ced9575212ad18fd8e03c0
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="-asynchronous-ui-programming"></a>🔧 Programação assíncrona de interface do usuário
+# 🔧 Programação assíncrona de interface do usuário
+<a id="-asynchronous-ui-programming" class="xliff"></a>
 
 > **Observação**
 > 
