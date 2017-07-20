@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 43a3074baf6215d3f4569e699a319681d9c78692
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
@@ -71,7 +72,7 @@ Refere-se a outro arquivo que descreve os tipos e membros em seu código-fonte.
   
  O formato do `commentFile.xml` é o seguinte.  
   
-```  
+```xml  
 <Docs>  
 <Members name="Open">  
 <summary>Opens a file.</summary>  

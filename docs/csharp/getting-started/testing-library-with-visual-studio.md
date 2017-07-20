@@ -1,134 +1,144 @@
 ---
-title: Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
+title: Testando uma biblioteca de classes com o .NET Core no Visual Studio 2017 | Microsoft Docs
 description: Saiba como testar uma biblioteca de classes escrita em C# usando o Visual Studio 2017
 keywords: .NET Core, biblioteca de classes .NET Standard, Visual Studio 2017, teste de unidade
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ee21799706b971f0ec13285b0771b32b4367f570
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 61c1c57fc0910fc2f4ce34da2975d181c40ed5cb
+ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/09/2017
 
 ---
 
-# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Testar uma biblioteca de classes com .NET Core no Visual Studio 2017 #
+# Testar uma biblioteca de classes com .NET Core no Visual Studio 2017
+<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
 
-Em [Compilar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio-2017.md), criamos uma biblioteca de classes simples que adiciona um método de extensão para a classe @System.String. Agora, criaremos um teste de unidade para ter certeza de que ela funciona conforme o esperado. Adicionaremos nosso projeto de teste de unidade à solução criada no tópico anterior.
+Em [Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md), você criou uma biblioteca de classes simples que adiciona um método de extensão à classe @System.String. Agora, você criará um teste de unidade para ter certeza de que ela funciona conforme o esperado. Você adicionará seu projeto de teste de unidade para a solução que criou no tópico anterior.
 
-## <a name="creating-a-unit-test-project"></a>Criar um projeto de teste de unidade ##
+## Criar um projeto de teste de unidade
+<a id="creating-a-unit-test-project" class="xliff"></a>
 
 Para criar o projeto de teste de unidade, faça o seguinte:
 
-1. No Gerenciador de Soluções, abra o menu de contexto do nó da solução **ClassLibraryProject** e escolha **Adicionar**, **Novo Projeto**.
+1. No **Gerenciador de Soluções**, abra o menu de contexto do nó da solução **ClassLibraryProjects** e selecione **Adicionar** > **Novo Projeto**.
 
-   <!-- Need a VS 2017 version  [!NOTE] In addition to a Unit Test project, you can also use Visual Studio to create an XUnit test project for .NET Core. For a walkthrough that includes an XUnit test project, see [Getting started with .NET Core on Windows, using Visual Studio 2015](../../core/tutorials/using-on-windows.md). --> 
+   <!-- Need a VS 2017 version  [!NOTE] In addition to a Unit Test project, you can also use Visual Studio to create an xUnit test project for .NET Core. For a walkthrough that includes an xUnit test project, see [Getting started with .NET Core on Windows, using Visual Studio 2015](../../core/tutorials/using-on-windows.md). --> 
 
-1. Na caixa de diálogo **Adicionar Novo Projeto**, expanda o nó **Visual C#** e o nó **.NET Core**, depois escolha o modelo de projeto **Projeto de Teste de Unidade (.NET Core)** e chame-o de `StringLibraryTest`, como mostra a figura a seguir.
+1. Na caixa de diálogo **Adicionar Novo Projeto**, selecione o nó **.NET Core** seguido pelo modelo de projeto **Projeto de Teste de Unidade (.NET Core)**. Na caixa de texto **Nome**, digite "StringLibraryTest" como o nome do projeto. Selecione **OK** para criar o projeto de teste de unidade.
 
-   ![Image](./media/testproject.jpg)
+   ![Caixa de diálogo Adicionar Novo Projeto](./media/testing-library-with-visual-studio/testproject.png)
 
-1. Escolha o botão **OK** para criar o projeto. O Visual Studio cria o projeto e abre o arquivo `UnitTest1.cs` na janela do código, como mostra a figura a seguir.
+1. O Visual Studio cria o projeto e abre o arquivo *UnitTest1.cs* na janela do código.
 
-   ![Image](./media/unit_test_code_window.jpg)
+   ![Janela de código do Visual Studio mostrando o método TestMethod1 e a classe UnitTest1 do projeto de teste de unidade padrão](./media/testing-library-with-visual-studio/unittestwindow.png)
 
    O código-fonte criado pelo modelo de teste de unidade faz o seguinte:
 
-   - Ele importa o namespace [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), que contém os tipos usados para testes de unidade.
+   * Ele importa o namespace [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), que contém os tipos usados para testes de unidade.
 
-   - Ele aplica o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] será executado automaticamente quando o teste de unidade for executado.
+   * Ele aplica o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) à classe `UnitTest1`. Cada método de teste em uma classe de teste marcada com o atributo \[TestMethod\] é executado automaticamente quando o teste de unidade é executado.
 
-   - Ele aplica o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) para definir `TestMethod1` como um método de teste para ser executado automaticamente quando o teste de unidade for executado.
+   * Ele aplica o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) para definir `TestMethod1` como um método de teste para execução automática quando o teste de unidade é executado.
 
-1. No Gerenciador de Soluções, abra o menu de contexto para o nó **Dependencies** do projeto **StringLibraryTest** e escolha **Adicionar Referência**. Isso adiciona uma referência ao nosso projeto de biblioteca de classes, `StringLibrary`. 
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no nó **Dependências** do projeto **StringLibraryTest** e selecione **Adicionar Referência** no menu de contexto.
 
-1. Na caixa de diálogo **Gerenciador de Referências**, expanda o nó **Projetos** e escolha **Solução**, depois marque a caixa ao lado de **StringLibrary**, como mostra a figura a seguir. A adição de uma referência ao assembly `StringLibrary` permite que o compilador resolva chamadas para os métodos **StringLibrary**.
+   ![Menu de contexto de Dependências de StringLibraryTest](./media/testing-library-with-visual-studio/addreference.png)
 
-   ![Image](./media/add_reference.jpg)
+1. Na caixa de diálogo **Gerenciador de Referências**, marque a caixa ao lado de **StringLibrary**. A adição de uma referência ao assembly `StringLibrary` permite que o compilador localize os métodos **StringLibrary**. Selecione o botão **OK**. Isso adiciona uma referência ao seu projeto de biblioteca de classes, `StringLibrary`.
 
-1. Clique no botão **OK** para fechar a caixa de diálogo **Gerenciador de Referências**.
+   ![Gerenciador de referências](./media/testing-library-with-visual-studio/referencemanager.png)
 
-## <a name="adding-and-running-unit-test-methods"></a>Adicionar e executar métodos de teste de unidade ##
+## Adicionar e executar métodos de teste de unidade
+<a id="adding-and-running-unit-test-methods" class="xliff"></a>
 
-Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) em uma classe de teste de unidade (a classe à qual o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) é aplicado. Um método de teste termina quando a primeira falha é encontrada, ou quando todos os testes contidos no método tiverem êxito.
+Quando o Visual Studio executa um teste de unidade, ele executa cada método marcado com o atributo [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) em uma classe de teste de unidade, a classe à qual o atributo [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) é aplicado. Um método de teste termina quando a primeira falha é encontrada ou quando todos os testes contidos no método têm êxito.
 
-Os testes mais comuns chamam membros da classe [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx). Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Entre alguns de seus métodos chamados com mais frequência estão:
+Os testes mais comuns chamam membros da classe [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx). Muitos métodos assert incluem pelo menos dois parâmetros, um deles é o resultado esperado do teste, e o outro é o resultado real do teste. Alguns de seus métodos chamados com mais frequência são mostrados na tabela abaixo.
 
-- `Assert.AreEqual`, que verifica se os dois valores ou objetos são iguais. A assert falha se os valores ou objetos não forem iguais.
+Métodos assert | Função
+--- | ---
+`Assert.AreEqual` | Verifica se os dois valores ou objetos são iguais. A assert falha se os valores ou objetos não forem iguais.
+`Assert.AreSame` | Verifica se duas variáveis de objeto se referem ao mesmo objeto. A assert falhará se as variáveis se referirem a objetos diferentes.
+`Assert.IsFalse` | Verifica se uma condição é `false`. O assert falhará se a condição for `true`.
+`Assert.IsNotNull` | Verifica se um objeto não é `null`. A assert falhará se o objeto for `null`.
+Atributo [\[ExpectedException\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx) | Indica o tipo de exceção que é esperado que um método de teste gere. O teste falhará se a exceção especificada não for lançada.
 
-- `Assert.AreSame`, que verifica se duas variáveis de objeto se referem ao mesmo objeto. A assert falhará se as variáveis se referirem a objetos diferentes.
+Ao testar o método `StringLibrary.StartsWithUpper`, você quer fornecer um número de cadeias de caracteres que comecem com um caractere maiúsculo. Você espera que o método retorne `true` nesses casos, então pode chamar o método [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx). Da mesma forma, você deseja fornecer um número de cadeias de caracteres que comecem com algo diferente de um caractere maiúsculo. Você espera que o método retorne `false` nesses casos, então pode chamar o método [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx).
 
-- `Assert.IsFalse`, que verifica se uma condição é False. A assert falhará se a condição for True.
+Como seu método de biblioteca lida com cadeias de caracteres, você também deseja ter certeza de que ele manipulará com êxito uma [cadeia de caracteres vazia (`String.Empty`)](xref:System.String.Empty), uma cadeia de caracteres válida sem caracteres e cujo @System.String.Length é 0 e uma cadeia de caracteres `null` que não foi inicializada. Se `StartsWithUpper` for chamado como um método de extensão em uma instância de @System.String, ele não poderá receber uma cadeia de caracteres `null`. No entanto, você também pode chamá-lo diretamente como um método estático e passa um único argumento @System.String.
 
-- `Assert.IsNotNull`, que verifica se um objeto não é `null`. A assert falhará se o objeto for `null`.
-
-Além disso, o atributo [ \[ExpectedException\] ](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx) pode ser usado para indicar o tipo de exceção que um método de teste espera lançar. Use-o para testar as condições que devem resultar em uma exceção. O teste falhará se a exceção especificada não for lançada.
-
-Ao testar o método `StringLibrary.StartsWithUpper`, queremos fornecer um número de cadeias de caracteres que comecem com um caractere maiúsculo. Esperamos que o método retorne `True` nesses casos, então podemos chamar o método [Assert.IsTrue(Boolean, String)](https://msdn.microsoft.com/library/ms243754.aspx). Da mesma forma, queremos fornecer um número de cadeias de caracteres que comecem com algo diferente de um caractere maiúsculo. Esperamos que o método retorne False nesses casos, então podemos chamar o método [Assert.IsFalse(Boolean, String)](https://msdn.microsoft.com/library/ms243805.aspx).
-
-Como nosso método de biblioteca lida com cadeias de caracteres, também queremos ter certeza de que ele manipulará com êxito uma [cadeia de caracteres vazia](xref:System.String.Empty) (uma cadeia de caracteres válida sem caracteres e cujo @System.String.Length é 0) e uma cadeia de caracteres `null` (uma cadeia que não foi inicializada). Se `StartsWithUpper` for chamado como um método de extensão em uma instância de @System.String, ele não poderá receber uma cadeia de caracteres `null`. No entanto, também pode ser chamado diretamente como um método estático e receber um único argumento @System.String.
-
-Definiremos três métodos, cada um deles chama seu método [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) repetidamente para cada elemento em uma matriz de cadeia de caracteres. Como o método de teste falha assim que encontra a primeira falha, chamaremos uma sobrecarga de método que nos permite passar uma cadeia de caracteres indicando o valor da cadeia de caracteres usado na chamada do método.
+Você definirá três métodos, cada um deles chamará seu método [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) repetidamente para cada elemento em uma matriz de cadeia de caracteres. Como o método de teste falha assim que encontra a primeira falha, você chamará uma sobrecarga de método que permite passar uma cadeia de caracteres que indica o valor da cadeia de caracteres usado na chamada do método.
 
 Para criar os métodos de teste:
 
-1. Substitua o código na janela de código pelo seguinte:
+1. Na janela de código *UnitTest1.cs*, substitua o código pelo seguinte código:
 
    [!CODE-csharp[Teste1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs#1)]
 
-   Observe que nosso teste de caracteres maiúsculos no método `TestStartsWithUpper` inclui a letra maiúscula grega alfa (U+0391) e a letra maiúscula cirílica EM (U+041 C), e o teste de caracteres minúsculos no método `TestDoesNotStartWithUpper` inclui a letra minúscula grega alfa (U+03B1) e a letra minúscula cirílica Ghe (U+0433).
+   Observe que seu teste de caracteres maiúsculos no método `TestStartsWithUpper` inclui a letra maiúscula grega alfa (U+0391) e a letra maiúscula cirílica EM (U+041C) e o teste de caracteres minúsculos no método `TestDoesNotStartWithUpper` inclui a letra minúscula grega alfa (U+03B1) e a letra minúscula cirílica Ghe (U+0433).
 
-1. Na barra de menus, escolha **Arquivo**, **Salvar UnitTest1.cs como...**. Na caixa de diálogo **Salvar Arquivo como**, escolha a seta ao lado do botão **Salvar** e escolha **Salvar com Codificação...***.
+1. Na barra de menus, selecione **Arquivo** > **Salvar UnitTest1.cs Como**. Na caixa de diálogo **Salvar Arquivo Como**, selecione a seta ao lado do botão **Salvar** e selecione **Salvar com Codificação**.
 
-1. Na caixa de diálogo Confirmar Salvar como, escolha o botão **Sim** para salvar o arquivo.
+   ![Caixa de diálogo Salvar Arquivo Como](./media/testing-library-with-visual-studio/savefileas.png)
 
-1. Na lista suspensa **Codificação** da caixa de diálogo **Opções Avançadas de Salvamento**, escolha **Unicode (UTF-8 com assinatura) - Página de código 65001** e escolha **OK**.
+1. Na caixa de diálogo **Confirmar Salvar Como**, selecione o botão **Sim** para salvar o arquivo.
 
-   Se você não salvar seu código-fonte em um arquivo codificado em UTF8, o Visual Studio poderá salvá-lo como um arquivo ASCII. Nesse caso, o tempo de execução não decodificará com precisão os caracteres fora do intervalo ASCII, e os resultados do teste não serão precisos.
+1. Na caixa de diálogo **Opções Avançadas de Salvamento**, selecione **Unicode (UTF-8 com assinatura) – página de código 65001** na lista suspensa **Codificação** e selecione **OK**.
 
-1. Na barra de menus, escolha **Teste**, **Executar**, **Todos os Testes**. A janela **Gerenciador de Testes** deve ser aberta e mostrar que os dois testes foram executadas com êxito, como mostra a figura a seguir. Observe que os três testes estão listados na seção **Testes Aprovados**, e a seção **Resumo** relata o resultado da execução do teste.
+   ![Caixa de diálogo Opções Avançadas de Salvamento](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
 
-   ![Image](./media/first_test.jpg)
+   Se você não salvar seu código-fonte como um arquivo codificado em UTF8, o Visual Studio poderá salvá-lo como um arquivo ASCII. Quando isso acontecer, o tempo de execução não decodificará de forma precisa os caracteres UTF8 fora do intervalo ASCII e os resultados de teste não serão precisos.
 
-## <a name="handling-test-failures"></a>Tratamento de falhas do teste ##
+1. Na barra de menus, selecione **Testar** > **Executar** > **Todos os Testes**. A janela **Gerenciador de Testes** é aberta e mostra que os testes foram executados com êxito. Os três testes estão listados na seção **Testes Aprovados**, e a seção **Resumo** relata o resultado da execução de teste.
 
-Nosso teste não apresentou falhas, então vamos alterá-lo um pouco para que um dos métodos do teste falhe:
+   ![Janela Gerenciador de Testes](./media/testing-library-with-visual-studio/firsttest.png)
 
-1. Modifique a matriz `words` no método `TestDoesNotStartWithUpper` para incluir a cadeia de caracteres "Error", para que a instrução leia o seguinte:
+## Tratamento de falhas do teste
+<a id="handling-test-failures" class="xliff"></a>
+
+Sua execução de teste não apresentou falhas, mas altere-a um pouco para que um dos métodos do teste falhe:
+
+1. Modifique a matriz `words` no método `TestDoesNotStartWithUpper` para incluir a cadeia de caracteres “Error”. Não é necessário salvar o arquivo porque o Visual Studio salva automaticamente os arquivos abertos quando uma solução é criada para executar testes.
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " };
    ```
 
-1. Execute o teste escolhendo **Teste**, **Executar**, **Todos os Testes**. Agora, a janela **Gerenciador de Teste** indica que dois testes tiveram êxito e um falhou, como mostra a figura a seguir.
+1. Execute o teste selecionando **Testar** > **Executar** > **Todos os Testes** na barra de menus. A Janela **Gerenciador de Testes** indica que dois testes tiveram êxito e um falhou.
 
-   ![Image](./media/failed_test.jpg)
+   ![Janela Gerenciador de Testes](./media/testing-library-with-visual-studio/failedtest.png)
 
-1. Escolha o teste com falha, `TestDoesNotStartWith`, na seção **Testes com Falha**. O painel inferior do **Gerenciador de Testes** exibe a mensagem produzida pela assert: "Assert.IsFalse falhou. Esperado para 'Error': false; real: True", como mostra a figura a seguir do **Gerenciador de Testes**. Devido à falha, todas as cadeias de caracteres na matriz após "Error" não foram testadas.
+1. Na seção **Testes com Falha**, selecione o teste com falha, `TestDoesNotStartWith`. A janela **Gerenciador de Testes** mostra a mensagem produzida pelo assert: "Assert.IsFalse falhou. Esperado para 'Error': false, real: True". Devido à falha, todas as cadeias de caracteres na matriz após "Error" não foram testadas.
 
-   ![Image](./media/failed_test2.jpg)
+   ![Janela Gerenciador de Testes mostrando a falha de asserção Is False](./media/testing-library-with-visual-studio/failedtestdetail.png)
 
-1. Remova o código que foi adicionado (`"Error", `) e execute o teste novamente. Agora ele deve passar.
+1. Remova o código que foi adicionado (`"Error", `) e execute o teste novamente. Os testes serão aprovados.
 
-## <a name="testing-the-release-version-of-the-library"></a>Testar a versão de lançamento da biblioteca ##
+## Testar a versão de lançamento da biblioteca
+<a id="testing-the-release-version-of-the-library" class="xliff"></a>
 
-Estamos executando nossos testes na versão de Depuração da biblioteca. Agora que todos os nossos testes foram aprovados, e nós testamos adequadamente nossa biblioteca, devemos executar os testes mais uma vez na compilação de Lançamento da biblioteca. Vários fatores, incluindo as otimizações do compilador, podem produzir um comportamento diferente entre as compilações de Depuração e Lançamento.
+Você estava executando nossos testes na versão de Depuração da biblioteca. Agora que todos os testes foram aprovados, e nós testamos adequadamente nossa biblioteca, você deve executar os testes mais uma vez no build de Lançamento da biblioteca. Vários fatores, incluindo as otimizações do compilador, podem produzir um comportamento diferente entre as compilações de Depuração e Lançamento.
 
 Para testar a compilação de Lançamento:
 
-1. Na barra de ferramentas do Visual Studio, altere a configuração de compilação de **Depurar** para **Lançamento**. A figura a seguir mostra uma parte da barra de ferramentas.
+1. Na barra de ferramentas do Visual Studio, altere a configuração de compilação de **Depurar** para **Lançamento**.
 
-   ![Image](./media/lib_release.jpg)
+   ![Barra de ferramentas do Visual Studio](./media/testing-library-with-visual-studio/toolbar.png)
 
-1. No **Gerenciador de Soluções**, abra o menu de contexto para o nó do projeto **StringLibrary** e escolha **Compilação** para recompilar a biblioteca.
+1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto **StringLibrary** e selecione **Compilar** no menu de contexto para recompilar a biblioteca.
 
-1. Execute novamente os testes de unidade escolhendo **Teste**, **Executar**, **Todos os Testes** no menu do Visual Studio. Todos os testes devem ser aprovados.
+   ![Menu de contexto StringLibrary](./media/testing-library-with-visual-studio/buildlibrary.png)
 
-Agora que você concluiu o teste de sua biblioteca, a próxima etapa é disponibilizá-la aos chamadores. Você pode agrupá-la com um ou mais aplicativos, ou pode distribuí-la como um pacote do NuGet. Para saber como fazer isso, consulte [Consumo de uma biblioteca de classes .NET Standard](./consuming-library-with-visual-studio-2017.md).
+1. Execute os testes de unidade escolhendo **Testar** > **Executar** > **Todos os Testes** na barra de menus. Os testes são aprovados.
+
+Agora que você concluiu o teste de sua biblioteca, a próxima etapa é disponibilizá-la aos chamadores. Você pode agrupá-la com um ou mais aplicativos, ou pode distribuí-la como um pacote do NuGet. Para obter mais informações, consulte [Consumindo uma biblioteca de classes .NET Standard](./consuming-library-with-visual-studio.md).
 

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4412f8a48c0f7f343554d685400cfcd88ffedb72
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1663cc6ad0a6e5f2a940c050c75d403cffd1f53f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>Como carregar um arquivo no Visual Basic
@@ -68,7 +69,7 @@ O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser us
   
 -   Falha na autenticação (<xref:System.Security.SecurityException>).  
   
--   A conexão atingiu o tempo limite (<xref:System.TimeoutException>).  
+-   A conexão ultrapassou o tempo limite (<xref:System.TimeoutException>).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   

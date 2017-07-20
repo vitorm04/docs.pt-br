@@ -4,16 +4,17 @@ description: Propriedades
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 04/03/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 871beb36f9801a0456eec1501fdbf07375c9b418
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f9eab74a3b259037aff30320753191eee95aa974
+ms.openlocfilehash: 763a76a8ea0e48fd6935c951ce584efad50dabb9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/25/2017
 
 ---
 
@@ -25,6 +26,7 @@ As propriedades se comportam como campos quando são acessadas.
 No entanto, diferentemente dos campos, as propriedades são implementadas com acessadores, que definem as instruções que são executadas quando uma propriedade é acessada ou atribuída.
 
 ## <a name="property-syntax"></a>Sintaxe de propriedade
+
 A sintaxe para propriedades é uma extensão natural para os campos. Um campo define um local de armazenamento:
 
 ```csharp
@@ -40,16 +42,27 @@ Uma definição de propriedade contém declarações para um acessador `get` e `
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
+
     // remaining implementation removed from listing
 }
 ```
 
 A sintaxe mostrada acima é a sintaxe da *propriedade automática*. O compilador gera o local de armazenamento para o campo que dá suporte à propriedade. O compilador também implementa o corpo dos acessadores `get` e `set`.
+
+Às vezes, você precisa inicializar uma propriedade para um valor diferente do padrão para seu tipo.  O C# permite isso definindo um valor após a chave de fechamento da propriedade. Você pode preferir que o valor inicial para a propriedade `FirstName` seja a cadeia de caracteres vazia em vez de `null`. Você deve especificar isso conforme mostrado abaixo:
+
+```csharp
+public class Person
+{
+    public string FirstName { get; set; } = string.Empty;
+
+    // remaining implementation removed from listing
+}
+```
+
+Isso é mais útil para propriedades somente leitura, como você verá posteriormente neste tópico.
+
 Você mesmo também pode definir o armazenamento, conforme mostrado abaixo:
 
 ```csharp
@@ -64,14 +77,31 @@ public class Person
     // remaining implementation removed from listing
 }
 ```
- 
+
+Quando uma implementação de propriedade é uma única expressão, você pode usar *membros aptos para expressão* para getter ou setter:
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get => firstName;
+        set => firstName = value;
+    }
+    private string firstName;
+    // remaining implementation removed from listing
+}
+```
+
+Essa sintaxe simplificada será usada quando aplicável ao longo deste tópico.
+
 A definição da propriedade mostrada acima é uma propriedade de leitura/gravação. Observe a palavra-chave `value` no acessador set. O acessador `set` sempre tem um parâmetro único chamado `value`. O acessador `get` deve retornar um valor que seja conversível para o tipo da propriedade (`string`, neste exemplo).
  
-Essas são as noções básicas sobre a sintaxe. Há muitas variações diferentes que oferecem suporte a uma variedade de linguagens de design diferentes. Vamos explorá-las e conhecer as opções de sintaxe para cada uma. 
+Essas são as noções básicas sobre a sintaxe. Há muitas variações diferentes que oferecem suporte a uma variedade de linguagens de design diferentes. Vamos explorá-las e conhecer as opções de sintaxe para cada uma.
 
 ## <a name="scenarios"></a>Cenários
 
-Os exemplos acima mostraram um dos casos mais simples de definição de propriedade: uma propriedade de leitura/gravação sem validação. Ao escrever o código que você deseja nos acessadores `get` e `set`, você pode criar vários cenários diferentes.  
+Os exemplos acima mostraram um dos casos mais simples de definição de propriedade: uma propriedade de leitura/gravação sem validação. Ao escrever o código que você deseja nos acessadores `get` e `set`, você pode criar vários cenários diferentes.
 
 ### <a name="validation"></a>Validação
 
@@ -82,7 +112,7 @@ public class Person
 {
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -96,9 +126,11 @@ public class Person
 ```
 
 O exemplo acima aplica a regra de que o nome não deve ser em branco ou espaço em branco. Se um desenvolvedor escreve
+
 ```csharp
 hero.FirstName = "";
 ```
+
 Essa atribuição lança uma `ArgumentException`. Como um acessador set de propriedade deve ter um tipo de retorno void, você relata erros no acessador set lançando uma exceção.
 
 Esse é um caso simples de validação. Você pode estender essa mesma sintaxe para qualquer coisa necessária em seu cenário. Você pode verificar as relações entre diferentes propriedades ou validar em relação a qualquer condição externa. Todas as instruções de C# válidas são válidas em um acessador de propriedade.
@@ -111,20 +143,43 @@ Você pode criar propriedades somente leitura ou dar acessibilidade diferente ao
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        private set;
-    }
+    public string FirstName { get; private set; }
+
     // remaining implementation removed from listing
 }
 ```
 
 Agora, a propriedade `FirstName` pode ser acessada de qualquer código, mas só pode ser atribuída de outro código na classe `Person`.
+
 Você pode adicionar qualquer modificador de acesso restritivo aos acessadores get ou set. Nenhum modificador de acesso que você colocar no acessador individual deve ser mais limitado que o modificador de acesso da definição de propriedade. O que está acima é válido porque a propriedade `FirstName` é `public`, mas o acessador set é `private`. Você não pode declarar uma propriedade `private` com um acessador `public`. As declarações de propriedade também podem ser declaradas `protected`, `internal`, `protected internal` ou até mesmo `private`.   
 
 Também é válido colocar o modificador mais restritivo no acessador `get`. Por exemplo, você poderia ter uma propriedade `public`, mas restringir o acessador `get` como `private`. Esse cenário raramente acontece na prática.
- 
+
+Você também pode restringir modificações a uma propriedade para que ela possa ser definida somente em um construtor ou um inicializador de propriedade. Você pode modificar a classe `Person` da seguinte maneira:
+
+```csharp
+public class Person
+{
+    public Person(string firstName)
+    {
+        this.FirstName = firstName;
+    }
+
+    public string FirstName { get; }
+
+    // remaining implementation removed from listing
+}
+```
+
+Esse recurso é mais comumente usado para inicializar coleções que são expostas como propriedades somente leitura:
+
+```csharp
+public class Measurements
+{
+    public ICollection<DataPoint> points { get; } = new List<DataPoint>();
+}
+```
+
 ### <a name="computed-properties"></a>Propriedades computadas
 
 Uma propriedade não precisa simplesmente retornar o valor de um campo de membro. Você pode criar propriedades que retornam um valor computado. Vamos expandir o objeto `Person` para retornar o nome completo, computado pela concatenação dos nomes e sobrenomes:
@@ -132,25 +187,11 @@ Uma propriedade não precisa simplesmente retornar o valor de um campo de membro
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
-    public string FullName
-    {
-        get
-        {
-            return $"{FirstName} {LastName}";
-        }
-    }
+    public string FullName { get { return $"{FirstName} {LastName}"; } }
 }
 ```
 
@@ -161,17 +202,9 @@ Você também pode usar *membros aptos para expressão*, que fornecem uma maneir
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
     public string FullName =>  $"{FirstName} {LastName}";
 }
@@ -186,17 +219,9 @@ Você pode combinar o conceito de uma propriedade computada com o armazenamento 
 ```csharp
 public class Person
 {
-    public string FirstName
-    {
-        get;
-        set;
-    }
+    public string FirstName { get; set; }
 
-    public string LastName
-    {
-        get;
-        set;
-    }
+    public string LastName { get; set; }
 
     private string fullName;
     public string FullName
@@ -219,7 +244,7 @@ public class Person
     private string firstName;
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             firstName = value;
@@ -230,7 +255,7 @@ public class Person
     private string lastName;
     public string LastName
     {
-        get { return lastName; }
+        get => lastName;
         set
         {
             lastName = value;
@@ -252,7 +277,7 @@ public class Person
 ```
 
 Esta versão final avalia a propriedade `FullName` apenas quando necessário.
-Se a versão calculada anteriormente for válida, ela será usada. Se outra alteração de estado invalidar a versão calculada anteriormente, ela será recalculada. Os desenvolvedores que usam essa classe não precisam saber dos detalhes da implementação. Nenhuma dessas alterações internas afetam o uso do objeto Person. Esse é o motivo principal para o uso de propriedades para expor os membros de dados de um objeto. 
+Se a versão calculada anteriormente for válida, ela será usada. Se outra alteração de estado invalidar a versão calculada anteriormente, ela será recalculada. Os desenvolvedores que usam essa classe não precisam saber dos detalhes da implementação. Nenhuma dessas alterações internas afetam o uso do objeto Person. Esse é o motivo principal para o uso de propriedades para expor os membros de dados de um objeto.
  
 ### <a name="inotifypropertychanged"></a>INotifyPropertyChanged
 
@@ -263,7 +288,7 @@ public class Person : INotifyPropertyChanged
 {
     public string FirstName
     {
-        get { return firstName; }
+        get => firstName;
         set
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -288,7 +313,7 @@ O uso de `nameof` pode reduzir erros no local em que você digitou errado o nome
 
 Novamente, este é um exemplo de um caso em que você pode escrever código em seus acessadores para dar suporte aos cenários você precisa.
 
-## <a name="summing-up"></a>Resumindo 
+## <a name="summing-up"></a>Resumindo
 
 As propriedades são uma forma de campos inteligentes em uma classe ou objeto. De fora do objeto, elas parecem como campos no objeto. No entanto, as propriedades podem ser implementadas usando a paleta completa de funcionalidades do C#.
 Você pode fornecer validação, acessibilidade diferente, avaliação lenta ou quaisquer requisitos necessários aos seus cenários.

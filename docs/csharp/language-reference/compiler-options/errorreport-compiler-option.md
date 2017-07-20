@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 34e7e3b8c6a9f645ec1b359095c2d289afd1370a
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport (opções do compilador C#)
@@ -45,7 +46,7 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /errorreport:{ none | prompt | queue | send }  
 ```  
   
@@ -83,7 +84,7 @@ Esta opção fornece uma maneira conveniente de relatar um erro interno do compi
   
 4.  Modifique a propriedade **Relatório de Erros do Compilador Interno**.  
   
- Para obter informações sobre como definir essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
+ Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)

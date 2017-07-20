@@ -30,14 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9126a882984799a5c726ecc5d82b3f3db707858a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 36c9fd396914f2d958615b9f62666a0d0cc47fc1
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="static-c-reference"></a>static (Referência de C#)
-Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O modificador `static` pode ser usado com classes, campos, métodos, propriedades, operadores, eventos e construtores, mas não pode ser usado com indexadores, destruidores ou tipos diferentes de classes. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O modificador `static` pode ser usado com classes, campos, métodos, propriedades, operadores, eventos e construtores, mas não pode ser usado com indexadores, finalizadores ou tipos diferentes de classes. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
 ## <a name="example"></a>Exemplo  
  A seguinte classe é declarada como `static` e contém apenas métodos `static`:  
@@ -65,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  As classes e as classes estáticas podem ter construtores estáticos. Os construtores estáticos são chamados em algum ponto entre o momento em que o programa é iniciado e a classe é instanciada.  
   
 > [!NOTE]
->  A palavra-chave `static` tem utilizações mais limitadas do que no C++. Para comparar com a palavra-chave do C++, consulte [Static](https://docs.microsoft.com/cpp/misc/static-cpp).  
+>  A palavra-chave `static` tem utilizações mais limitadas do que no C++. Para comparar com a palavra-chave do C++, consulte [Storage classes (C++)](https://docs.microsoft.com/cpp/cpp/storage-classes-cpp#static) (Classes de armazenamento (C++)).
   
  Para demonstrar os membros estáticos, considere uma classe que representa um funcionário da empresa. Suponha que a classe contém um método para contar funcionários e um campo para armazenar o número de funcionários. O método e o campo não pertencem a qualquer instância funcionário. Em vez disso, eles pertencem à classe empresa. Portanto, eles devem ser declarados como membros estáticos da classe.  
   
@@ -80,7 +81,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  [!code-cs[csrefKeywordsModifiers#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/static_4.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
@@ -88,3 +89,4 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)   
  [Classes static e membros de classes static](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+

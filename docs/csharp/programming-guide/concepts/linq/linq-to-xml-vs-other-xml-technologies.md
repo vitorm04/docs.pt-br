@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8ac37ce1a225a66069e34abedd2ee0c273b8f8a9
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML e outras tecnologias XML
@@ -31,11 +32,11 @@ Este tópico compara o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-gui
  Para ver uma comparação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] com DOM (Modelo de Objeto do Documento), consulte [LINQ to XML vs. DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML e XmlReader  
- <xref:System.Xml.XmlReader> é um analisador rápido, somente de encaminhamento e sem armazenamento em cache.  
+ A classe <xref:System.Xml.XmlReader> é um analisador rápido, somente encaminhamento e não armazenado em cache.  
   
- O [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] é implementado sobre <xref:System.Xml.XmlReader> e eles são fortemente integrados. No entanto, você também pode usar <xref:System.Xml.XmlReader> sozinho.  
+ O [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] é implementado sobre a classe <xref:System.Xml.XmlReader>; eles são fortemente integrados. No entanto, você também pode usar apenas <xref:System.Xml.XmlReader>.  
   
- Por exemplo, suponha que você esteja criando um serviço Web que analisará centenas de documentos XML por segundo e que os documentos tenham a mesma estrutura, o que significa que você só precisará criar uma única implementação do código para analisar o XML. Nesse caso, convém usar <xref:System.Xml.XmlReader> sozinho.  
+ Por exemplo, suponha que você esteja criando um serviço Web que analisará centenas de documentos XML por segundo e que os documentos tenham a mesma estrutura, o que significa que você só precisará criar uma única implementação do código para analisar o XML. Nesse caso, convém usar apenas <xref:System.Xml.XmlReader>.  
   
  Por outro lado, se você estiver construindo um sistema que analisa vários documentos XML menores, todos diferentes, convém aproveitar as vantagens das melhorias de produtividade que o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] proporciona.  
   

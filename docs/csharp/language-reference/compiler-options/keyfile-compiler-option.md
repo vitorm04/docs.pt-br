@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 53165ff60a135bb5be9d808010fc5d6142679c65
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 4f9ccbfe7126aac3214ccf08015353eec0490cd4
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="keyfile-c-compiler-options"></a>/keyfile (opções do compilador C#)
@@ -42,7 +43,7 @@ Especifica o nome de arquivo que contém a chave de criptografia.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /keyfile:file  
 ```  
   
@@ -63,7 +64,7 @@ Especifica o nome de arquivo que contém a chave de criptografia.
   
  Observe que um arquivo de chave pode conter somente a chave pública.  
   
- Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](https://msdn.microsoft.com/library/xwb8f617) e [Atraso na Assinatura de um Assembly](http://msdn.microsoft.com/library/9d300e17-5bf1-4360-97da-2aa55efd9070).  
+ Para obter mais informações, consulte [Criando e usando assemblies de nomes fortes](https://msdn.microsoft.com/library/xwb8f617) e [Atraso na Assinatura de um Assembly](../../../framework/app-domains/delay-sign-assembly.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -73,7 +74,7 @@ Especifica o nome de arquivo que contém a chave de criptografia.
   
 3.  Modifique a propriedade **Escolha um arquivo de chave de nome forte**.  
   
- É possível acessar de maneira programática essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
+ Você pode acessar programaticamente essa opção do compilador com <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   

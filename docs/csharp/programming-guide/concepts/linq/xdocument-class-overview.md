@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f3233a634e358ee227b0adbe30cb05d1efbf8fe0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 445b7dff10e25556dabb87867144edece7fc26f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="xdocument-class-overview-c"></a>Visão geral da classe XDocument (C#)
@@ -33,7 +34,7 @@ Este tópico apresenta a classe <xref:System.Xml.Linq.XDocument>.
   
  Observe que você só precisará criar objetos <xref:System.Xml.Linq.XDocument> se precisar da funcionalidade específica fornecida pela classe <xref:System.Xml.Linq.XDocument>. Em muitas circunstâncias, você pode trabalhar diretamente com <xref:System.Xml.Linq.XElement>. Trabalhar diretamente com <xref:System.Xml.Linq.XElement> é um modelo de programação mais simples.  
   
- <xref:System.Xml.Linq.XDocument> deriva de <xref:System.Xml.Linq.XContainer>. Portanto, pode conter nós filho. No entanto, objetos <xref:System.Xml.Linq.XDocument> podem ter apenas um nó <xref:System.Xml.Linq.XElement> filho. Isso reflete o padrão XML de que pode haver apenas um elemento raiz em um documento XML.  
+ <xref:System.Xml.Linq.XDocument> deriva de <xref:System.Xml.Linq.XContainer>. Portanto, pode conter nós filho. Entretanto, os objetos <xref:System.Xml.Linq.XDocument> podem ter apenas um nó <xref:System.Xml.Linq.XElement> filho. Isso reflete o padrão XML de que pode haver apenas um elemento raiz em um documento XML.  
   
 ## <a name="components-of-xdocument"></a>Componentes de XDocument  
  Um <xref:System.Xml.Linq.XDocument> pode conter os seguintes elementos:  
@@ -56,7 +57,7 @@ Este tópico apresenta a classe <xref:System.Xml.Linq.XDocument>.
  Conforme mencionado anteriormente, a classe <xref:System.Xml.Linq.XElement> é a classe principal da interface de programação [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Em muitos casos, seu aplicativo não exigirá que você crie um documento. Usando a classe <xref:System.Xml.Linq.XElement>, você poderá criar uma árvore XML, adicionar outras árvores XML a ela, modificar a árvore XML e salvá-la.  
   
 ## <a name="using-xdocument"></a>Usando XDocument  
- Para construir um <xref:System.Xml.Linq.XDocument>, use a construção funcional, exatamente como você faz para construir objetos <xref:System.Xml.Linq.XElement>.  
+ Para construir um <xref:System.Xml.Linq.XDocument>, use a construção funcional exatamente como você faz para criar objetos <xref:System.Xml.Linq.XElement>.  
   
  O código a seguir cria um objeto <xref:System.Xml.Linq.XDocument> e seus objetos independentes associados.  
   

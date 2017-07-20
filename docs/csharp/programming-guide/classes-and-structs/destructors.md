@@ -1,6 +1,6 @@
 ---
-title: "Destruidores (Guia de Programação em C#) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "Finalizadores (Guia de programação em C#) | Microsoft Docs"
+ms.date: 2017-05-10
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -8,9 +8,9 @@ ms.topic: article
 dev_langs:
 - CSharp
 helpviewer_keywords:
-- ~ [C#], in destructors
-- C# language, destructors
-- destructors [C#]
+- ~ [C#], in finalizers
+- C# language, finalizers
+- finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
 caps.latest.revision: 24
 author: BillWagner
@@ -29,34 +29,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6940be34b6cc15f006901e6d14d2a38ebb5d012a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: b4221d37bd955da98c812dadef3b0dd4a69a21bf
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="destructors-c-programming-guide"></a>Destruidores (Guia de Programação em C#)
-Destruidores são usados para destruir instâncias de classes.  
+# <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
+Finalizadores são usados para destruir instâncias de classes.  
   
 ## <a name="remarks"></a>Comentários  
   
--   Destruidores não podem ser definidos em structs. Eles são usados somente com classes.  
+-   Os finalizadores não podem ser definidos em structs. Eles são usados somente com classes.  
   
--   Uma classe pode ter somente um destruidor.  
+-   Uma classe pode ter somente um finalizador.  
   
--   Destruidores não podem ser herdados ou sobrecarregados.  
+-   Os finalizadores não podem ser herdados ou sobrecarregados.  
   
--   Destruidores não podem ser chamados. Eles são invocados automaticamente.  
+-   Os finalizadores não podem ser chamados. Eles são invocados automaticamente.  
   
--   Um destruidor não usa modificadores e não tem parâmetros.  
+-   Um finalizador não usa modificadores ou não tem parâmetros.  
   
- Por exemplo, o seguinte é uma declaração de um destruidor para a classe `Car`:  
+ Por exemplo, o seguinte é uma declaração de um finalizador para a classe `Car`.
   
  [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+
+Um finalizador também pode ser implementado como uma definição do corpo da expressão, como mostra o exemplo a seguir.
+
+[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
- O destruidor chama implicitamente <xref:System.Object.Finalize%2A> na classe base do objeto. Portanto, o código do destruidor anterior é convertido implicitamente no código a seguir:  
+ O finalizador chama implicitamente <xref:System.Object.Finalize%2A> na classe base do objeto. Portanto, uma chamada para um finalizador é convertida implicitamente para o código a seguir:  
   
-```  
+```csharp  
 protected override void Finalize()  
 {  
     try  
@@ -73,28 +78,28 @@ protected override void Finalize()
  Isso significa que o método `Finalize` é chamado de forma recursiva para todas as instâncias da cadeia de herança, da mais derivada à menos derivada.  
   
 > [!NOTE]
->  Destruidores vazios não devem ser usados. Quando uma classe contém um destruidor, uma entrada é criada na fila `Finalize`. Quando o destruidor é chamado, o coletor de lixo é invocado para processar a fila. Se o destruidor estiver vazio, isso apenas causa uma perda de desempenho desnecessária.  
+>  Finalizadores vazios não devem ser usados. Quando uma classe contém um finalizador, uma entrada é criada na fila `Finalize`. Quando o finalizador é chamado, o coletor de lixo é invocado para processar a fila. Um finalizador vazio apenas resulta na perda de desempenho desnecessária.  
   
- O programador não tem controle sobre quando o destruidor é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para destruição, ele chamará o destruidor (se houver) e recupera a memória usada para armazenar o objeto. Destruidores também são chamados quando o programa é encerrado.  
+ O programador não tem controle sobre quando o finalizador é chamado porque isso é determinado pelo coletor de lixo. O coletor de lixo procura objetos que não estão mais sendo usados pelo aplicativo. Se considerar um objeto qualificado para finalização, ele chamará o finalizador (se houver) e recuperará a memória usada para armazenar o objeto. Os finalizadores também são chamados quando o programa é encerrado.  
   
  É possível forçar a coleta de lixo chamando <xref:System.GC.Collect%2A>, mas na maioria das vezes, isso deve ser evitado porque pode criar problemas de desempenho.  
   
-## <a name="using-destructors-to-release-resources"></a>Usando destruidores para liberar recursos  
- Em geral, o C# não demanda tanto gerenciamento de memória quanto é necessário quando você desenvolve usando uma linguagem que não tem como destino um tempo de execução com coleta de lixo. Isso ocorre porque o coletor de lixo do .NET Framework gerencia implicitamente a alocação e a liberação de memória para seus objetos. No entanto, quando seu aplicativo encapsula recursos não gerenciados, como janelas, arquivos e conexões de rede, você deve usar destruidores para liberar esses recursos. Quando o objeto está qualificado para destruição, o coletor de lixo executa o método `Finalize` do objeto.  
+## <a name="using-finalizers-to-release-resources"></a>Usando finalizadores para liberar recursos  
+ Em geral, o C# não demanda tanto gerenciamento de memória quanto é necessário quando você desenvolve usando uma linguagem que não tem como destino um tempo de execução com coleta de lixo. Isso ocorre porque o coletor de lixo do .NET Framework gerencia implicitamente a alocação e a liberação de memória para seus objetos. No entanto, quando seu aplicativo encapsula recursos não gerenciados, como janelas, arquivos e conexões de rede, você deve usar finalizadores para liberar esses recursos. Quando o objeto está qualificado para finalização, o coletor de lixo executa o método `Finalize` do objeto.  
   
 ## <a name="explicit-release-of-resources"></a>Liberação explícita de recursos  
- Se seu aplicativo estiver usando um recurso externo caro, também será recomendável fornecer uma maneira de liberar explicitamente o recurso antes que o coletor de lixo libere o objeto. Você faz isso implementando um método `Dispose` da interface <xref:System.IDisposable> que executa a limpeza necessária para o objeto. Isso pode melhorar consideravelmente o desempenho do aplicativo. Mesmo com esse controle explícito sobre os recursos, o destruidor se torna uma proteção usada para limpar os recursos se a chamada para o método `Dispose` falhar.  
+ Se seu aplicativo estiver usando um recurso externo caro, também será recomendável fornecer uma maneira de liberar explicitamente o recurso antes que o coletor de lixo libere o objeto. Você faz isso implementando um método `Dispose` da interface <xref:System.IDisposable> que executa a limpeza necessária para o objeto. Isso pode melhorar consideravelmente o desempenho do aplicativo. Mesmo com esse controle explícito sobre os recursos, o finalizador se tornará uma proteção usada para limpar os recursos se a chamada para o método `Dispose` falhar.  
   
  Para obter mais detalhes sobre limpeza de recursos, consulte os seguintes tópicos:  
   
--   [Limpando recursos não gerenciados](http://msdn.microsoft.com/library/a17b0066-71c2-4ba4-9822-8e19332fc213)  
+-   [Limpando recursos não gerenciados](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implementando um método dispose](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)  
+-   [Implementando um método dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
 -   [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria três classes que compõem uma cadeia de herança. A classe `First` é a classe base, `Second` é derivado de `First` e `Third` é derivado de `Second`. As três têm destruidores. Em `Main()`, uma instância da classe mais derivada é criada. Quando o programa é executado, observe que os destruidores das três classes são chamados automaticamente e em ordem, do mais derivado para o menos derivado.  
+ O exemplo a seguir cria três classes que compõem uma cadeia de herança. A classe `First` é a classe base, `Second` é derivado de `First` e `Third` é derivado de `Second`. Todas as três têm finalizadores. Em `Main`, uma instância da classe mais derivada é criada. Quando o programa for executado, observe que os finalizadores das três classes são chamados automaticamente e em ordem, do mais derivado para o menos derivado.  
   
  [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
@@ -103,6 +108,6 @@ protected override void Finalize()
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IDisposable>   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+ [Guia de programação em C#](../../../csharp/programming-guide/index.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [Coleta de lixo](../../../standard/garbagecollection/index.md)
+ [Coleta de lixo](../../../standard/garbage-collection/index.md)

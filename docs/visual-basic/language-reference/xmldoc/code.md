@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ad9437d2d3f84ab3cb441a9424eba00844358c39
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -41,7 +42,7 @@ Indica que o texto de várias linhas de código.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <code>content</code>  
 ```  
   

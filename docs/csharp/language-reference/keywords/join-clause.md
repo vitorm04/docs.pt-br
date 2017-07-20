@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
@@ -88,7 +89,7 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Junções em coleções de objetos versus tabelas relacionais  
  Em uma expressão de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], as operações de junção são realizadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. Em [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], cláusulas `join` explícitas só são necessárias quando duas sequências de origem não são ligadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.  
   
- Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], consulte [Como mapear relações de banco de dados](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af).  
+ Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], consulte [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
 ## <a name="composite-keys"></a>Chaves de composição  
  Você pode testar a igualdade de vários valores, usando uma chave de composição. Para obter mais informações, consulte [Como unir usando chaves compostas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). As chaves compostas também podem ser usadas em uma cláusula `group`.  
@@ -99,7 +100,7 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>Comentários  
- Uma cláusula `join` que não é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.Join%2A>. Uma cláusula `join` que é seguida por `into` é movida para uma chamada de método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
+ Uma cláusula `join` que não é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.Join%2A>. Uma cláusula `join` que é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.GroupJoin%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   

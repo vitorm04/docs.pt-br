@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 38efd00549d5f71b78393e1102f0ca19cf490174
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção do compilador **/pdb** especifica o nome e o local do arquivo de símb
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /pdb:filename  
 ```  
   
@@ -60,7 +61,7 @@ A opção do compilador **/pdb** especifica o nome e o local do arquivo de símb
 ## <a name="example"></a>Exemplo  
  Compile `t.cs` e crie um arquivo .pdb chamado tt.pdb:  
   
-```  
+```console  
 csc /debug /pdb:tt t.cs  
 ```  
   

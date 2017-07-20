@@ -41,7 +41,7 @@ A opção do compilador **/appconfig** habilita um aplicativo em C# a especifica
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /appconfig:file  
 ```  
   
@@ -64,7 +64,7 @@ A opção do compilador **/appconfig** habilita um aplicativo em C# a especifica
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra um arquivo app.config que habilita um aplicativo a referenciar as implementações do .NET Framework e do .NET Framework para Silverlight de qualquer assembly do .NET Framework que exista em ambas as implementações. A opção do compilador **/appconfig** especifica o local desse arquivo app.config.  
   
-```  
+```xml  
 <configuration>  
       <runtime>  
       <assemblyBinding>  

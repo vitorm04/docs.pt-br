@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1733538c605cb06c7da4d91a6780caa3ea3bec23
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: ff7e67add731324e01b8f2cc323a66e3a8683ec9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -44,7 +45,7 @@ Na maioria das vezes, os structs compartilham a mesma sintaxe das classes, embor
   
 -   Dentro de uma declaração de struct, os campos não podem ser inicializados, a menos que sejam declarados como `const` ou `static`.  
   
--   Um struct não pode declarar um construtor padrão (um construtor sem parâmetros) ou um destruidor.  
+-   Um struct não pode declarar um construtor padrão (um construtor sem parâmetros) ou um finalizador.  
   
 -   Os structs são copiados na atribuição. Quando um struct recebe uma nova variável, todos os dados são copiados e qualquer modificação na nova cópia não altera os dados da cópia original. É importante se lembrar disso ao trabalhar com coleções de tipos de valor como Dictionary<string, myStruct>.  
   

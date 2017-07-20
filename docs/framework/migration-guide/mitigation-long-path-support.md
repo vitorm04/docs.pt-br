@@ -28,7 +28,7 @@ A partir dos aplicativos destinados ao [!INCLUDE[net_v462](../../../includes/net
 ## <a name="impact"></a>Impacto  
  Os aplicativos recompilados para o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] e que geravam anteriormente um <xref:System.IO.PathTooLongException> automaticamente porque um caminho tinha excedido 260 caracteres agora só gerarão uma <xref:System.IO.PathTooLongException> sob as seguintes condições:  
   
--   O comprimento do caminho é maior do que <xref:System.Int16.MaxValue?displayProperty=fullName>(32.767) caracteres.  
+-   O tamanho do caminho é superior a <xref:System.Int16.MaxValue?displayProperty=fullName> (32.767) caracteres.  
   
 -   O sistema operacional retorna `COR_E_PATHTOOLONG` ou seu equivalente.  
   

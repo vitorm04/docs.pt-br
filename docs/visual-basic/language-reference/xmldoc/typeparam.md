@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b8c8b8a8df8f847934bdcd6196e79fec90647574
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Define um nome de parâmetro de tipo e descrição.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <typeparam name="name">description</typeparam>  
 ```  
   

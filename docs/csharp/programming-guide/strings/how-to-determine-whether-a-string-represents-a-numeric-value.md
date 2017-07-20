@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6185a646b5b53112c1e586864037204ad4e9f34d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 343e7304a83f396b8bdcc9c92e9123eed206be56
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Como determinar se uma cadeia de caracteres representa um valor numérico (Guia de Programação em C#)
@@ -64,5 +65,5 @@ bool result = int.TryParse(s, out i); //i now = 108
  [Como Converter uma Matriz de Bytes em um int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)   
  [Como Converter uma Cadeia de Caracteres em um Número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)   
  [Como Converter entre Cadeias de Caracteres Hexadecimais e Tipos Numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
- [Analisando Cadeias de Caracteres Numéricas](http://msdn.microsoft.com/library/e39324ee-72e5-42d4-a80d-bf3ee7fc6c59)   
+ [Analisando Cadeias de Caracteres Numéricas](../../../standard/base-types/parsing-numeric.md)   
  [Formatando Tipos](../../../standard/base-types/formatting-types.md)

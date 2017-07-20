@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 2569e6a07ba1456d8bba9b27bf16190e634d6b47
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigação: período de bloqueio de pool
@@ -34,7 +34,7 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
  Essa alteração permite que a tentativa de abertura da conexão seja repetida imediatamente para bancos de dados SQL do Azure, melhorando, assim, o desempenho dos aplicativos habilitados para a nuvem.  
   
 ## <a name="mitigation"></a>Redução  
- Para aplicativos que são afetados negativamente por essa alteração, o período de bloqueio do pool de conexões pode ser configurado pela definição da nova propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  O valor da propriedade é um membro da enumeração <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName> que pode usar um destes três valores:  
+ Para aplicativos que são afetados negativamente por essa alteração, o período de bloqueio do pool de conexões pode ser configurado pela definição da nova propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A>.  O valor da propriedade é membro da enumeração <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName> que pode assumir um dos três valores:  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
   
@@ -42,7 +42,7 @@ O pool de conexão no período de bloqueio foi removido para conexões com banco
   
 -   `PoolBlockingPeriod.NeverBlock` 
   
- O comportamento anterior pode ser restaurado definindo a propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> como `PoolBlockingPeriod.AlwaysBlock`.  
+ É possível restaurar o comportamento anterior definindo a propriedade <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> como `PoolBlockingPeriod.AlwaysBlock`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

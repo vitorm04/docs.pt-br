@@ -20,20 +20,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1875a63ab7f5104f7b8c2d39a16499b289d9a50
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 0c9cf36aeee43afc710dd3261f5d012ba53c02e5
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="threading-visual-basic"></a>Threading (Visual Basic)
+<a id="threading-visual-basic" class="xliff"></a>
+
+# Threading (Visual Basic)
 O threading permite que seu programa do Visual Basic execute processamento simultâneo para que você possa fazer mais de uma operação de cada vez. Por exemplo, você pode usar o threading para monitorar a entrada do usuário, executar tarefas em segundo plano e lidar com fluxos simultâneos de entrada.  
   
  Os threads têm as seguintes propriedades:  
   
 -   Eles permitem que seu programa execute processamento simultâneo.  
   
--   O namespace <xref:System.Threading> do .NET Framework facilita o uso de threads.  
+-   O namespace do .NET Framework <xref:System.Threading> facilita o uso de threads.  
   
 -   Os threads compartilham os recursos do aplicativo. Para obter mais informações, consulte [Usando threads e threading](https://msdn.microsoft.com/library/e1dx6b2h).  
   
@@ -45,12 +48,14 @@ O threading permite que seu programa do Visual Basic execute processamento simul
   
  Uma estratégia comum é usar threads de trabalho para executar tarefas demoradas ou tarefas de tempo crítico que não exigem muitos dos recursos usados por outros threads. Naturalmente, alguns recursos em seu programa devem ser acessados por vários threads. Nesses casos, o namespace <xref:System.Threading> fornece classes para sincronização de threads. Essas classes incluem <xref:System.Threading.Mutex>, <xref:System.Threading.Monitor>, <xref:System.Threading.Interlocked>, <xref:System.Threading.AutoResetEvent> e <xref:System.Threading.ManualResetEvent>.  
   
- Você pode usar algumas ou todas essas classes para sincronizar as atividades de vários threads, mas o suporte para threading é dado pela linguagem do Visual Basic. Por exemplo, a [instrução SyncLock](../../../../visual-basic/language-reference/statements/synclock-statement.md) fornece recursos de sincronização por meio do uso implícito de <xref:System.Threading.Monitor>.  
+ Você pode usar algumas ou todas essas classes para sincronizar as atividades de vários threads, mas o suporte para threading é dado pela linguagem do Visual Basic. Por exemplo, a [Instrução SyncLock](../../../../visual-basic/language-reference/statements/synclock-statement.md) fornece funcionalidades de sincronização por meio do uso implícito de <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Iniciando do [!INCLUDE[net_v40_long](../../../../csharp/programming-guide/concepts/threading/includes/net_v40_long_md.md)], a programação multi-threaded é bastante simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> e <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), novas classes de coleta simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=fullName> e um novo modelo de programação com base no conceito de tarefas em vez de threads. Para obter mais informações, consulte [Programação paralela](https://msdn.microsoft.com/library/dd460693).  
+>  A partir do [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], a programação multi-threaded é bastante simplificada com as classes <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> e <xref:System.Threading.Tasks.Task?displayProperty=fullName>, o [PLINQ (LINQ Paralelo)](https://msdn.microsoft.com/library/dd460688), as novas classes de coleta simultânea no namespace <xref:System.Collections.Concurrent?displayProperty=fullName> e um novo modelo de programação com base no conceito de tarefas em vez de threads. Para obter mais informações, consulte [Programação paralela](https://msdn.microsoft.com/library/dd460693).  
   
-## <a name="related-topics"></a>Tópicos relacionados  
+<a id="related-topics" class="xliff"></a>
+
+## Tópicos relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  

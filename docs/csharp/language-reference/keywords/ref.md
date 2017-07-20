@@ -31,12 +31,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 353abf8a0c852acbbb2949f9640c1465dec8593b
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
+
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 A palavra-chave `ref` faz com que um argumento seja passado por referência, não por valor. O efeito de passar por referência é que qualquer alteração no parâmetro do método chamado será refletida no método chamado. Por exemplo, se o chamador passa uma expressão variável local ou uma expressão de acesso do elemento de matriz e o método chamado substituir o objeto ao qual o parâmetro ref se refere, então a variável local do chamador ou o elemento da matriz fará agora referência ao novo objeto.  
   
@@ -82,4 +84,5 @@ A palavra-chave `ref` faz com que um argumento seja passado por referência, nã
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Passando Parâmetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)   
  [Parâmetros de método](../../../csharp/language-reference/keywords/method-parameters.md)   
+
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)

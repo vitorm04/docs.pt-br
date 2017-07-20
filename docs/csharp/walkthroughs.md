@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c4c52096803ff0cbf311afb2a0e38a7f37cf86c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
@@ -43,7 +44,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
 ## <a name="in-this-section"></a>Nesta seção  
 
  [Acessando a Web usando Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Mostra como criar uma solução assíncrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md), introduzidos em [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)].  
+ Mostra como criar uma solução assíncrona usando [async](../csharp/language-reference/keywords/async.md) e [await](../csharp/language-reference/keywords/await.md).  
   
  [Criando um componente do Tempo de Execução do Windows em C# ou no Visual Basic e chamando-o do JavaScript](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  Mostra como criar um tipo [!INCLUDE[wrt](../csharp/includes/wrt_md.md)], compactá-lo em um componente [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] e chamar o componente de um aplicativo [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)] que é compilado para Windows usando JavaScript.  

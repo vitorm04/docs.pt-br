@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c6cfc54c2dbd3e14d874d7684fdc75a972260cc3
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="checked-c-compiler-options"></a>/checked (opções do compilador C#)
@@ -42,7 +43,7 @@ A opção **/checked** especifica se uma instrução de aritmética de inteiros 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -63,12 +64,12 @@ A opção **/checked** especifica se uma instrução de aritmética de inteiros 
   
 4.  Modifique a propriedade **Procurar estouro/estouro negativo aritmético**.  
   
- Para acessar essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
+ Para acessar programaticamente essa opção do compilador, confira <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>.  
   
 ## <a name="example"></a>Exemplo  
  O comando a seguir compila `t2.cs`. O uso de `/checked` no comando especifica que qualquer instrução de aritmética de inteiros no arquivo que não está no escopo de uma palavra-chave `checked` ou `unchecked` e que resulta em um valor fora do intervalo do tipo de dados, causa uma exceção em tempo de execução.  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

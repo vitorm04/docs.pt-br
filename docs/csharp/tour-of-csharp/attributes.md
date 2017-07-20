@@ -1,6 +1,6 @@
 ---
-title: Atributos do C# | Um tour da linguagem C#
-description: "Saiba mais sobre a programação declarativa usando atributos em C#"
+title: "Atributos do C# – um tour pela linguagem C# | Microsoft Docs"
+description: "Saiba mais sobre a programação declarativa usando atributos no C#"
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ef8b93bf0a2cf98c5251b888b61db9ab12d9a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="attributes"></a>Atributos
+# Atributos
+<a id="attributes" class="xliff"></a>
 
 Tipos, membros e outras entidades em um programa C# dão suporte a modificadores que controlam determinados aspectos de seu comportamento. Por exemplo, a acessibilidade de um método é controlada usando os modificadores `public`, `protected`, `internal` e `private`. O C# generaliza essa funcionalidade, de modo que os tipos definidos pelo usuário de informações declarativas podem ser anexados a entidades de programa e recuperados no tempo de execução. Os programas especificam essas informações declarativas adicionais, definindo e usando os ***atributos***.
 

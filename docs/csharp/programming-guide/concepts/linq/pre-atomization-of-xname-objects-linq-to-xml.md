@@ -14,17 +14,18 @@ ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2e324029a4951f1cb05507d580db73caea2d3f7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0b7cc79a10cc2c8288c048fdb98717e61a3f3463
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/30/2017
 
 
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>Pré-atomização de objetos XName (LINQ to XML) (C#)
-Uma maneira de melhorar o desempenho no LINQ to XML é pré-atomizar objetos <xref:System.Xml.Linq.XName>. Pré-atomização significa que você atribui uma cadeia de caracteres a um objeto <xref:System.Xml.Linq.XName> antes de criar a árvore XML usando os construtores das classes <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XAttribute>. Depois, em vez de passar uma cadeia de caracteres para o construtor, que usaria a conversão implícita da cadeia de caracteres para <xref:System.Xml.Linq.XName>, você passa o objeto <xref:System.Xml.Linq.XName> inicializado.  
+Uma maneira para melhorar o desempenho em LINQ to XML é pré-compilação atomizar objetos de <xref:System.Xml.Linq.XName> . a pré-compilação atomização significa que você atribuir uma cadeia de caracteres a um objeto de <xref:System.Xml.Linq.XName> antes de criar a árvore XML usando os construtores de classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XAttribute> . Em seguida, em vez de passar uma cadeia de caracteres para o construtor, que usaria a conversão implícita de cadeia de caracteres a <xref:System.Xml.Linq.XName>, você passa o objeto inicializado de <xref:System.Xml.Linq.XName> .  
   
- Isso melhora o desempenho quando você cria uma grande árvore XML em que os nomes específicos são repetidos. Para fazer isso, você declara e inicializa objetos <xref:System.Xml.Linq.XName> antes de construir a árvore XML e, em seguida, usa os objetos <xref:System.Xml.Linq.XName> em vez de especificar cadeias de caracteres para os nomes de elementos e atributos. Essa técnica pode produzir ganhos significativos de desempenho se você estiver criando um grande número de elementos ou atributos () com o mesmo nome.  
+ Isso melhora o desempenho quando você cria uma grande árvore XML em que os nomes específicos são repetidos. Para fazer isso, você declarar e inicializar objetos de <xref:System.Xml.Linq.XName> antes que você construa a árvore XML e em seguida, usar objetos de <xref:System.Xml.Linq.XName> em vez de especificar cadeias de caracteres para nomes de elementos e atributos. Essa técnica pode produzir ganhos significativos de desempenho se você estiver criando um grande número de elementos ou atributos () com o mesmo nome.  
   
  Você deve testar a pré-compilação atomização com seu cenário para decidir se você usar o.  
   

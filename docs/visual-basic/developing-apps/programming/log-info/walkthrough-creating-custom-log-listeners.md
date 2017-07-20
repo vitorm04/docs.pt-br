@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 98cec8d5077e777f18c18ad1af0040b3359151f7
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -115,7 +116,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 3.  Adicione esse elemento à seção `<listeners>`:  
   
-    ```  
+    ```xml  
     <add name="SimpleLog" />  
     ```  
   
@@ -123,7 +124,7 @@ Estas instruções passo a passo demonstram como criar um ouvinte de log persona
   
 5.  Adicione esse elemento a essa seção `<sharedListeners>`:  
   
-    ```  
+    ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   

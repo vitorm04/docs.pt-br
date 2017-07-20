@@ -32,7 +32,7 @@ ms.lasthandoff: 04/18/2017
   
 -   Você pode redirecionar o aplicativo a ser executado no [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. O redirecionamento exige que você adicione um elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) ao arquivo de configuração do aplicativo que permite que ele seja executado no [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Esse arquivo de configuração utiliza a seguinte forma:  
   
-    ```  
+    ```xml  
     <configuration>   
        <startup>  
           <supportedRuntime version="v4.0"/>  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="breaking-changes"></a>Alterações significativas  
  Quando ocorre uma alteração significativa, dependendo da alteração específica, a solução desse problema pode estar disponível tanto para aplicativos redestinados como para recompilados. Em alguns casos, você pode adicionar um elemento filho para o elemento [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) do seu arquivo de configuração do aplicativo para restaurar o comportamento anterior. Por exemplo, o arquivo de configuração restaura a classificação da cadeia de caracteres e o comportamento usado no [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] e podem ser usados com um aplicativo redestinado ou recompilado.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <CompatSortNLSVersion enabled="4096"/>  

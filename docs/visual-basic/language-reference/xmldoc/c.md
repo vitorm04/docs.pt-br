@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: d5c3e82372bf14b41fd26cd840a1771fd017e44f
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -41,7 +42,7 @@ Indica que o texto dentro uma descrição é o código.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <c>text</c>  
 ```  
   

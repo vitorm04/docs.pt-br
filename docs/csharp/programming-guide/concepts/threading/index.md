@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 84447f877f0bb5af8eff737b1ec2503539185bbf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e3f213b43c2f05a5afef1db7aec8b9c2695df989
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="threading-c"></a>Threading (C#)

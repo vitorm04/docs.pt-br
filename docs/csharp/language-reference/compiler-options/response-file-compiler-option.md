@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b36aca2b13a8d590ae02b5eb5a50ef786863737e
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -71,7 +72,7 @@ A opção @ possibilita especificar um arquivo que contém opções do compilado
 ## <a name="example"></a>Exemplo  
  A seguir, há algumas linhas de um exemplo de arquivo de resposta:  
   
-```  
+```console  
 # build the first output file  
 /target:exe /out:MyExe.exe source1.cs source2.cs  
 ```  

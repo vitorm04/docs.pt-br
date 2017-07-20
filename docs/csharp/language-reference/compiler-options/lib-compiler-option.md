@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4f557712fae30e77c734f30295a1a1daa74b5d8c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 27bcca456a7a5c884c33de6429e06c94afc9536a
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="lib-c-compiler-options"></a>/lib (opções do compilador C#)
@@ -42,7 +43,7 @@ A opção **/lib** especifica o local dos assemblies referenciados por meio da o
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /lib:dir1[,dir2]  
 ```  
   
@@ -70,7 +71,7 @@ A opção **/lib** especifica o local dos assemblies referenciados por meio da o
   
  Uma alternativa ao uso de **/lib** é copiar para o diretório de trabalho quaisquer assemblies necessários; isso permitirá que você simplesmente passe o nome do assembly para **/reference**. Em seguida, é possível excluir os assemblies do diretório de trabalho. Como o caminho para o assembly dependente não foi especificado no manifesto do assembly, o aplicativo pode ser iniciado no computador de destino e localizará e usará o assembly no cache de assembly global.  
   
- O fato de o compilador poder referenciar o assembly não implica que o Common Language Runtime será capaz de localizar e carregar o assembly em tempo de execução. Consulte [Como o tempo de execução localiza assemblies](http://msdn.microsoft.com/library/772ac6f4-64d2-4cfb-92fd-58096dcd6c34) para obter detalhes sobre como o runtime pesquisa assemblies referenciados.  
+ O fato de o compilador poder referenciar o assembly não implica que o Common Language Runtime será capaz de localizar e carregar o assembly em tempo de execução. Consulte [Como o tempo de execução localiza assemblies](../../../framework/deployment/how-the-runtime-locates-assemblies.md) para obter detalhes sobre como o runtime pesquisa assemblies referenciados.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -80,12 +81,12 @@ A opção **/lib** especifica o local dos assemblies referenciados por meio da o
   
 3.  Modifique o conteúdo da caixa de listagem.  
   
- Para obter informações sobre como definir essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
+ Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compile t2.cs para criar um arquivo .exe. O compilador examinará referências de assembly no diretório de trabalho e no diretório raiz da unidade C.  
   
-```  
+```console  
 csc /lib:c:\ /reference:t2.dll t2.cs  
 ```  
   

@@ -1,0 +1,116 @@
+---
+title: "Lc.exe (Compilador de Licença) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Lc.exe
+- .licx file
+- License Compiler
+- control licenses [Windows Forms]
+- compiling licenses file
+- license file
+- .licenses file
+- Windows Forms, control licenses
+- licensed controls [Windows Forms]
+ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
+caps.latest.revision: 18
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 4b20c589622526fd973700ed5b8bdd6f86d9b2ff
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/02/2017
+
+---
+# <a name="lcexe-license-compiler"></a>Lc.exe (Compilador de Licença)
+O Compilador de Licença lê arquivos de texto que contêm informações de licenciamento e produz um arquivo binário que pode ser inserido em um executável do Common Language Runtime como um recurso.  
+  
+ Um arquivo de texto .licx é gerado automaticamente ou atualizado pelo Designer de Formulários do Windows sempre que um controle licenciado é adicionado ao formulário. Como parte da compilação, o sistema do projeto transformará o arquivo de texto .licx em um recurso binário .licenses que dá suporte ao licenciamento de controle do .NET. Em seguida, o recurso binário será inserido na saída do projeto.  
+  
+ A compilação cruzada entre 32 e 64 bits não é compatível quando você usa o Compilador de Licença ao compilar o projeto. Isso porque o Compilador de Licença precisa carregar assemblies, e o carregamento de assemblies 64 bits de um aplicativo 32 bits não é permitido, e vice-versa. Nesse caso, use o Compilador de Licença na linha de comando para compilar manualmente a licença e especificar a arquitetura correspondente.  
+  
+ Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+  
+ No prompt de comando, digite o seguinte:  
+  
+## <a name="syntax"></a>Sintaxe  
+  
+```  
+      lc /target:  
+      targetPE /complist:filename [/outdir:path]  
+/i:modules [/nologo] [/v]  
+```  
+  
+|Opção|Descrição|  
+|------------|-----------------|  
+|**/complist:** *filename*|Especifica o nome de um arquivo que contém a lista de componentes licenciados que serão incluídos no arquivo .licenses. Cada componente é referenciado usando-se seu nome completo com apenas um componente por linha.<br /><br /> Os usuários de linha de comando podem especificar um arquivo separado para cada formulário no projeto. Lc.exe aceita vários arquivos de entrada e produz um único arquivo .licenses.|  
+|**/h**[**elp**]|Exibe sintaxe de comando e opções para a ferramenta.|  
+|**/i:** *module*|Especifica os módulos que contêm os componentes listados no arquivo **/complist**. Para especificar mais de um módulo, use vários sinalizadores **/i**.|  
+|**/nologo**|Suprime a exibição do banner de inicialização da Microsoft.|  
+|**/outdir:** *path*|Especifica o diretório no qual o arquivo .licenses de saída deve ser colocado.|  
+|**/target:** *targetPE*|Especifica o executável para o qual o arquivo .licenses está sendo gerado.|  
+|**/v**|Especifica o modo detalhado; exibe informações de andamento da compilação.|  
+|**@** *file*|Especifica o arquivo de resposta (.rsp).|  
+|**/?**|Exibe sintaxe de comando e opções para a ferramenta.|  
+  
+## <a name="example"></a>Exemplo  
+  
+1.  Se estiver usando um controle licenciado `MyCompany.Samples.LicControl1` contido em `Samples.DLL` em um aplicativo chamado `HostApp.exe`**, você poderá criar `HostAppLic.txt` que contém o seguinte.  
+  
+    ```  
+    MyCompany.Samples.LicControl1, Samples.DLL  
+    ```  
+  
+2.  Crie o arquivo .licenses chamado `HostApp.exe.licenses` usando o comando a seguir.  
+  
+    ```  
+    lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
+    ```  
+  
+3.  Compile `HostApp.exe` incluindo o arquivo .licenses como um recurso. Se estivesse compilando um aplicativo do C#, você usaria o comando a seguir para compilar o aplicativo.  
+  
+    ```  
+    csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
+    ```  
+  
+ O comando a seguir compila `myApp.licenses` com base nas listas de componentes licenciados especificados por `hostapplic.txt`, `hostapplic2.txt` e `hostapplic3.txt`. O argumento `modulesList` especifica os módulos que contêm os componentes licenciados.  
+  
+```  
+lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
+```  
+  
+## <a name="response-file-example"></a>Exemplo de arquivo de resposta  
+ A listagem a seguir mostra um exemplo de um arquivo de resposta, `response.rsp`. Para saber mais sobre arquivos de resposta, confira [Arquivos de resposta](/visualstudio/msbuild/msbuild-response-files).  
+  
+```  
+/target:hostapp.exe  
+/complist:hostapplic.txt   
+/i:WFCPrj.dll   
+/outdir:"C:\My Folder"  
+```  
+  
+ A linha de comando a seguir usa o arquivo `response.rsp`.  
+  
+```  
+lc @response.rsp  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Ferramentas](../../../docs/framework/tools/index.md)   
+ [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
+ [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

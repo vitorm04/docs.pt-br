@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 87d0487ab2bb953fcde1de884d1cbed1fe592c36
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f9e2b11b6eed10bac04d22b202e7e16cfa70225d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>Como criar um arquivo no Visual Basic
@@ -64,14 +65,14 @@ Este exemplo cria um arquivo de texto vazio no caminho especificado usando o mé
 -   O caminho é apenas dois-pontos ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Uma <xref:System.Security.SecurityException> poderá ser lançada em ambientes de confiança parcial.  
+ Uma <xref:System.Security.SecurityException> pode ser gerada em ambientes de confiança parcial.  
   
  A chamada para o método <xref:System.IO.File.Create%2A> requer <xref:System.Security.Permissions.FileIOPermission>.  
   
- Uma <xref:System.UnauthorizedAccessException> será lançada se o usuário não tiver permissão para criar o arquivo.  
+ Uma <xref:System.UnauthorizedAccessException> será gerada se o usuário não tiver permissão para criar o arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IO>   
  <xref:System.IO.File.Create%2A>   
- [Usando Bibliotecas de Código Parcialmente Confiável](http://msdn.microsoft.com/library/dd66cd4c-b087-415f-9c3e-94e3a1835f74)   
+ [Usando Bibliotecas de Código Parcialmente Confiável](../../../../framework/misc/using-libraries-from-partially-trusted-code.md)   
  [Noções Básicas da Segurança de Acesso do Código](https://msdn.microsoft.com/library/33tceax8)

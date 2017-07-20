@@ -1,6 +1,6 @@
 ---
 title: "long (Referência de C#) | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,67 +30,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c28c8308d7ed32f7240f56113a77a0794cb1ba62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0ea7f109ab934660418aab1a88bff7206ef23a37
+ms.contentlocale: pt-br
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="long-c-reference"></a>long (Referência de C#)
-A palavra-chave `long` indica um tipo integral que armazena valores de acordo com o tamanho e o intervalo mostrados na tabela a seguir.  
+
+`long` indica um tipo integral que armazena valores de acordo com o tamanho e o intervalo mostrados na tabela a seguir.  
   
 |Tipo|Intervalo|Tamanho|Tipo do .NET Framework|  
 |----------|-----------|----------|-------------------------|  
 |`long`|–9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Inteiro de 64 bits com sinal|<xref:System.Int64?displayProperty=fullName>|  
   
-## <a name="literals"></a>Literais  
- É possível declarar e inicializar uma variável `long` como neste exemplo:  
+## <a name="literals"></a>Literais 
+
+Você pode declarar e inicializar uma variável `long` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela. 
+
+No exemplo a seguir, inteiros iguais a 4.294.967.296 representados como literais decimais, hexadecimais e binários são atribuídos a valores `long`.  
   
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Long)]  
+
+> [!NOTE] 
+> Use o prefixo `0x` ou `0X` para indicar um literal hexadecimal e o prefixo `0b` ou `0B` para indicar um literal binário. Literais decimais não têm nenhum prefixo. 
+
+Começando com o C# 7, você também pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como o exemplo a seguir mostra.
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ Literais inteiros também podem incluir um sufixo que indica o tipo. O sufixo `L` indica um `long`. O exemplo a seguir usa o sufixo `L` para indicar um inteiro longo:
+ 
+```csharp
+long value = 4294967296L;  
 ```  
+
+> [!NOTE]
+>  Você também pode usar a letra minúscula "l" como sufixo. No entanto, isso gera um aviso do compilador porque a letra "l" é facilmente confundida com o dígito "1". Use "L" para fins de clareza.  
   
-long long1 = 4294967296;  
-```  
+ Quando você usa o sufixo `L`, o tipo do inteiro integral é determinado para ser `long` ou [ulong](../../../csharp/language-reference/keywords/ulong.md), dependendo de seu tamanho. Nesse caso é `long` porque ele menor do que o intervalo de [ulong](../../../csharp/language-reference/keywords/ulong.md).  
   
- Quando um literal inteiro não tem sufixo, seu tipo é o primeiro desses tipos em que seu valor pode ser representado: [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), `long`, [ulong](../../../csharp/language-reference/keywords/ulong.md). No exemplo anterior, ele é do tipo `long` porque excede o intervalo de [uint](../../../csharp/language-reference/keywords/uint.md) (consulte [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md) para os tamanhos de armazenamento de tipos integrais).  
+ Um uso comum do sufixo é para chamar métodos sobrecarregados. Por exemplo, os métodos sobrecarregados a seguir têm parâmetros do tipo `long` e [int](../../../csharp/language-reference/keywords/int.md):  
   
- Você também pode usar o sufixo L com o tipo `long` dessa forma:  
-  
-```  
-  
-long long2 = 4294967296L;  
-```  
-  
- Quando você usa o sufixo L, o tipo do literal inteiro é determinado para ser `long` ou [ulong](../../../csharp/language-reference/keywords/ulong.md) de acordo com seu tamanho. Nesse caso é `long` porque ele menor do que o intervalo de [ulong](../../../csharp/language-reference/keywords/ulong.md).  
-  
- Um uso comum do sufixo é a chamada de métodos sobrecarregados. Considere, por exemplo, os seguintes métodos sobrecarregados que usam os parâmetros `long` e [int](../../../csharp/language-reference/keywords/int.md):  
-  
-```  
+```csharp
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(long l) {}  
 ```  
   
- O uso do sufixo L garante que o tipo correto será chamado, por exemplo:  
+ O sufixo `L` garante que a sobrecarga correta é chamada:  
   
+```csharp  
+SampleMethod(5);    // Calls the method with the int parameter  
+SampleMethod(5L);   // Calls the method with the long parameter  
 ```  
-SampleMethod(5);    // Calling the method with the int parameter  
-SampleMethod(5L);   // Calling the method with the long parameter  
-```  
+Se um literal inteiro não tiver sufixo, seu tipo será o primeiro dos tipos a seguir em que seu valor pode ser representado: 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. `long`
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+
+O literal 4294967296 no exemplo anterior é do tipo `long` porque excede o intervalo de [uint](../../../csharp/language-reference/keywords/uint.md) (consulte [Tabela de tipos integrais](../../../csharp/language-reference/keywords/integral-types-table.md) para os tamanhos de armazenamento de tipos integrais).  
   
- Você pode usar o tipo `long` com outros tipos integrais numéricos na mesma expressão, caso em que a expressão é avaliada como `long` (ou [bool](../../../csharp/language-reference/keywords/bool.md) no caso de expressões relacionais ou boolianas). Por exemplo, a expressão a seguir é avaliada como `long`:  
+ Se você usar o tipo `long` com outros tipos integrais na mesma expressão, a expressão será avaliada como `long` (ou [bool](../../../csharp/language-reference/keywords/bool.md) no caso de expressões relacionais ou boolianas). Por exemplo, a expressão a seguir é avaliada como `long`:  
   
-```  
+```csharp  
 898L + 88  
 ```  
-  
-> [!NOTE]
->  Você também pode usar a letra minúscula "l" como sufixo. No entanto, isso gera um aviso do compilador porque a letra "l" é facilmente confundida com o dígito "1". Use "L" para fins de clareza.  
   
  Para obter informações sobre expressões aritméticas com tipos de ponto flutuante mistos e tipos integrais, consulte [float](../../../csharp/language-reference/keywords/float.md) e [double](../../../csharp/language-reference/keywords/double.md).  
   
 ## <a name="conversions"></a>Conversões  
  Há uma conversão implícita predefinida de `long` para [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) ou [decimal](../../../csharp/language-reference/keywords/decimal.md). Caso contrário, uma conversão deve ser usada. Por exemplo, a instrução a seguir produzirá um erro de compilação sem uma conversão explícita:  
   
-```  
+```csharp  
 int x = 8L;        // Error: no implicit conversion from long to int  
 int x = (int)8L;   // OK: explicit conversion to int  
 ```  
@@ -99,9 +113,8 @@ int x = (int)8L;   // OK: explicit conversion to int
   
  Observe também que não há conversão implícita de tipos de ponto flutuante em `long`. Por exemplo, a instrução a seguir gerará um erro de compilador, a menos que uma conversão explícita seja usada:  
   
-```  
-  
-      long x = 3.0;         // Error: no implicit conversion from double  
+```csharp  
+long x = 3.0;         // Error: no implicit conversion from double  
 long y = (long)3.0;   // OK: explicit conversion  
 ```  
   

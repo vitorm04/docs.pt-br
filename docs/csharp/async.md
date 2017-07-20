@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27c39f8c67a3f8288883a37025797a461c50f940
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -225,7 +226,7 @@ Embora seja menos código, tome cuidado ao misturar LINQ com código assíncrono
 
 Embora a programação assíncrona seja relativamente simples, há alguns detalhes para ter em mente, que podem evitar um comportamento inesperado.
 
-*  `async` Os métodos **precisam ter uma palavra-chave** `await` **no corpo ou eles nunca transferirão!**
+*  `async` Os métodos  **precisam ter uma palavra-chave** `await` **no corpo ou eles nunca transferirão!**
 
 É importante ter isso em mente.  Se `await` não for usado no corpo de um método `async`, o compilador do C# gerará um aviso, mas o código será compilado e executado como se fosse um método normal.  Observe que isso também seria extremamente ineficiente, pois a máquina de estado, gerada pelo compilador do C# para o método assíncrono, não realizaria nada.
 
@@ -233,7 +234,7 @@ Embora a programação assíncrona seja relativamente simples, há alguns detalh
 
 Essa é a convenção usada no .NET para diferenciar mais facilmente os métodos síncronos e assíncronos. Observe que isso não se aplica, necessariamente, a alguns métodos que não são explicitamente chamados pelo seu código (como manipuladores de eventos ou métodos do controlador da Web). Como eles não são chamados explicitamente pelo seu código, ser explícito em relação à sua nomenclatura não é tão importante.
 
-*   `async void` O **só deve ser usado para manipuladores de eventos.**
+*   `async void` O  **só deve ser usado para manipuladores de eventos.**
 
 O `async void` é a única maneira de permitir que os manipuladores de eventos assíncronos trabalhem, pois os eventos não têm tipos de retorno (portanto, não podem fazer uso de `Task` e `Task<T>`). Qualquer outro uso de `async void` não segue o modelo TAP e pode ser um desafio utilizá-lo, como:
 

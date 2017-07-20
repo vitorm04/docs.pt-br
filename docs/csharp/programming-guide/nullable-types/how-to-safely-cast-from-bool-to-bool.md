@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f067a4b36205db36533719b88b5ebed6dbef1cc4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 7648b9bb5d54b58dc13371e1308f038289df8e56
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>Como converter bool? em bool com segurança (Guia de Programação em C#)
@@ -44,7 +45,7 @@ if (b) // Error CS0266.
 }  
 ```  
   
- Isso não é permitido, porque não está claro o que `null` significa no contexto de uma condicional. Para usar um `bool?` em uma instrução condicional, verifique primeiro sua propriedade <xref:System.Nullable%601.HasValue%2A> para garantir que seu valor não seja `null` e, em seguida, converta-a em `bool`. Para obter mais informações, consulte [bool](../../../csharp/language-reference/keywords/bool.md). Se você executar a conversão em um `bool?` com um valor de `null`, um <xref:System.InvalidOperationException> será lançado no teste condicional. O exemplo a seguir mostra uma maneira de converter `bool?` em `bool` de maneira segura:  
+ Isso não é permitido, porque não está claro o que `null` significa no contexto de uma condicional. Para usar um `bool?` em uma instrução condicional, verifique primeiro sua propriedade <xref:System.Nullable%601.HasValue%2A> para garantir que seu valor não seja `null` e, em seguida, converta-a em `bool`. Para obter mais informações, consulte [bool](../../../csharp/language-reference/keywords/bool.md). Se você executar a conversão em um `bool?` com um valor de `null`, uma <xref:System.InvalidOperationException> será lançada no teste condicional. O exemplo a seguir mostra uma maneira de converter `bool?` em `bool` de maneira segura:  
   
 ## <a name="example"></a>Exemplo  
   

@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 88397167b12a00bf5e99a0537148a2957b9f0bd8
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Usando tipos anuláveis (Guia de Programação em C#)
@@ -62,7 +63,7 @@ Os tipos que permitem valor nulo podem representar todos os valores de um tipo s
   
 -   `Value`  
   
-     `Value` é do mesmo tipo que o tipo subjacente. Se `HasValue` for `true`, `Value` conterá um valor significativo. Se `HasValue` for `false`, acessar `Value` lançará uma <xref:System.InvalidOperationException>.  
+     `Value` é do mesmo tipo que o tipo subjacente. Se `HasValue` for `true`, `Value` conterá um valor significativo. Se `HasValue` for `false`, o acesso a `Value` lançará uma <xref:System.InvalidOperationException>.  
   
  Neste exemplo, o membro `HasValue` é usado para testar se a variável contém um valor antes de tentar exibi-la.  
   

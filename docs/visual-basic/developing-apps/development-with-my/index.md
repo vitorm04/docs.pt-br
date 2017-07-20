@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 815f459a651adf98dfb78a8444f4b873dece8283
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 76055b9c0a611fa3688e5bada1dd8e7d426765e3
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="development-with-my-visual-basic"></a>Desenvolvimento com My (Visual Basic)
@@ -59,7 +60,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
  Descreve os objetos `My.Resources` e `My.Settings`, que fornecem acesso a recursos e configurações de um aplicativo.  
   
  [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Descreve o modelo [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] de inicialização/desligamento do aplicativo.  
+ Descreve o modelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] de inicialização/desligamento do aplicativo.  
   
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  

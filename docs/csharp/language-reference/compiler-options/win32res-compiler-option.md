@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 750af9e25369daf17973be0329617ae6505da432
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -43,7 +44,7 @@ A opção **/win32res** insere um recurso do Win32 no arquivo de saída.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /win32res:filename  
 ```  
   
@@ -69,7 +70,7 @@ A opção **/win32res** insere um recurso do Win32 no arquivo de saída.
 ## <a name="example"></a>Exemplo  
  Compilar `in.cs` e anexar um arquivo de recurso do Win32 `rf.res` para produzir `in.exe`:  
   
-```  
+```console  
 csc /win32res:rf.res in.cs  
 ```  
   

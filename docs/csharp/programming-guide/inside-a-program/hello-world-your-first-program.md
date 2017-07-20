@@ -35,7 +35,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
@@ -43,7 +43,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
  Para obter mais exemplos de conceitos introdutórios, consulte [Introdução ao Visual C# e ao Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-and-run-a-console-application"></a>Para criar e executar um aplicativo de console  
   
@@ -112,7 +112,7 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
  [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
- Para obter mais informações sobre os métodos de entrada/saída, consulte <xref:System.IO>.  
+ Para saber mais sobre os métodos de entrada/saída, veja <xref:System.IO>.  
   
 ## <a name="command-line-compilation-and-execution"></a>Compilação e Execução da Linha de Comando  
  Você pode compilar o programa "Hello World!" usando a linha de comando em vez do IDE (ambiente de desenvolvimento integrado) do Visual Studio.  

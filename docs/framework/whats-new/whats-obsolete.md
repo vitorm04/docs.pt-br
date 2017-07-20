@@ -18,9 +18,10 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 68c71e26ac5e5a1872ac006d02adec84c1fb63da
+ms.contentlocale: pt-br
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -54,7 +55,7 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
   
 2.  Adicione o seguinte ao arquivo de configuração.  
   
-    ```  
+    ```xml  
     <configuration>  
        <startup>   
           <supportedRuntime version="v4.0" />  

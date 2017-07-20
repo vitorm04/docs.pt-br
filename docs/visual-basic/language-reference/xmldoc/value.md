@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 24763f620bcd0e4113b918b3b925229ba2b5e173
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica a descrição de uma propriedade.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <value>property-description</value>  
 ```  
   

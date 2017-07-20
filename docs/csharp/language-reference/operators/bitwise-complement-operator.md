@@ -32,17 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8b77189ca3a141f5b95d703f5d0dbd2b055b23c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: c7245700f78ff52a98c499d895c7eb2f95efe5b6
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="-operator-c-reference"></a>Operador ~ (Referência de C#)
 O operador `~` executa uma operação de complemento bit a bit em seu operando, que tem o efeito de reverter cada bit. Operadores de complemento bit a bit são predefinidos para [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) e [ulong](../../../csharp/language-reference/keywords/ulong.md).  
   
 > [!NOTE]
->  O símbolo `~` também é usado para declarar destruidores. Para obter mais informações, consulte [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md).  
+>  O símbolo `~` também é usado para declarar finalizadores. Para mais informações, consulte [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="remarks"></a>Comentários  
  Os tipos definidos pelo usuário podem sobrecarregar o operador `~`. Para obter mais informações, consulte [operador](../../../csharp/language-reference/keywords/operator.md). As operações em tipos integrais geralmente são permitidas na enumeração.  
@@ -54,4 +55,4 @@ O operador `~` executa uma operação de complemento bit a bit em seu operando, 
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)   
- [Destruidores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+ [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)

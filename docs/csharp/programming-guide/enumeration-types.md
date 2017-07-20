@@ -34,7 +34,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeração (Guia de Programação em C#)
@@ -96,7 +96,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- Para obter mais informações sobre o que considerar ao definir os tipos de enumeração com o atributo <xref:System.FlagsAttribute?displayProperty=fullName>, consulte <xref:System.Enum?displayProperty=fullName>.  
+ Para saber mais sobre o que considerar ao definir tipos de enumeração com o atributo <xref:System.FlagsAttribute?displayProperty=fullName>, veja <xref:System.Enum?displayProperty=fullName>.  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>Usando os Métodos System.Enum Methods para Descobrir e Manipular Valores Enum  
  Todas as enumerações são instâncias do tipo <xref:System.Enum?displayProperty=fullName>. Não é possível derivar novas classes de <xref:System.Enum?displayProperty=fullName>, mas você pode usar seus métodos para descobrir informações sobre e manipular valores em uma instância de enumeração.  
@@ -109,5 +109,5 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Enum?displayProperty=fullName>   
- [Guia de Programação em C#](../../csharp/programming-guide/index.md)   
+ [Guia de programação em C#](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)

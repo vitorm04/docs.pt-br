@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2c085ecb058b18d776e37969fd8c545e648257f9
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ A opção **/warnaserror+** trata todos os avisos como erros
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
@@ -68,7 +69,7 @@ A opção **/warnaserror+** trata todos os avisos como erros
 ## <a name="example"></a>Exemplo  
  Compilar `in.cs` e fazer com que o compilador não exiba avisos:  
   
-```  
+```console  
 csc /warnaserror in.cs  
 csc /warnaserror:642,649,652 in.cs  
 ```  

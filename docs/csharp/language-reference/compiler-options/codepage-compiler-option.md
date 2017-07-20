@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4dfd36f076a8ea667018658cf662f07dad346cad
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Esta opção especifica qual página de código deve ser usada durante a compila
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /codepage:id  
 ```  
   

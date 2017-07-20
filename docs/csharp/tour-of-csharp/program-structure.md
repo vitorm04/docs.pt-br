@@ -1,5 +1,5 @@
 ---
-title: Estrutura do programa C# | Um tour da linguagem C#
+title: "Estrutura do programa C# – um tour pela linguagem C# | Microsoft Docs"
 description: "Saiba mais sobre os blocos de construção básicos de um programa em C#"
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ef19d7fa2164990edd5e27651d28aa085ec90ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3642b6525691d6179eca66f11d5002377323cdf3
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="program-structure"></a>Estrutura do programa
+# Estrutura do programa
+<a id="program-structure" class="xliff"></a>
 
 Os principais conceitos organizacionais em C# são ***programas***, ***namespaces***, ***tipos***, ***membros*** e ***assemblies***. Os programas C# consistem em um ou mais arquivos de origem. Os programas declaram tipos que contêm membros e podem ser organizados em namespaces. Classes e interfaces são exemplos de tipos. Campos, métodos, propriedades e eventos são exemplos de membros. Quando os programas em C# são compilados, eles são empacotados fisicamente em assemblies. Os assemblies normalmente têm a extensão de arquivo `.exe` ou `.dll`, dependendo se eles implementam ***aplicativos*** ou ***bibliotecas***, respectivamente.
 

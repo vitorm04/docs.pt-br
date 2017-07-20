@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -39,7 +40,7 @@ Você pode exibir dados relacionados usando dois ou mais <xref:Microsoft.VisualB
   
  Você pode exibir dados relacionados, arrastando os itens de detalhe que compartilham o mesmo nó da tabela principal do **fontes de dados** janela para um <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>controle.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Por exemplo, se você tiver uma fonte de dados que tenha uma tabela clientes e uma tabela relacionada Orders, você ver ambas as tabelas como nós superiores na exibição de árvore no **fontes de dados** janela. Expanda o nó Customers para que você possa ver as colunas. Observe que a última coluna da lista é um nó expansível que representa a tabela Orders. Este nó representa os pedidos relacionados para um cliente.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-display-related-data-in-two-datarepeater-controls"></a>Para exibir dados relacionados em dois controles DataRepeater  
   

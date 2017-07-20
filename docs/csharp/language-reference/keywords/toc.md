@@ -1,152 +1,454 @@
+
+
 # [Palavras-chave do C#](index.md)
+
+
 ## [Tipos](types.md)
+
+
 ### [Tipos de valor](value-types.md)
+
+
 #### [bool](bool.md)
+
+
 #### [byte](byte.md)
+
+
 #### [char](char.md)
+
+
 #### [decimal](decimal.md)
+
+
 #### [double](double.md)
+
+
 #### [enum](enum.md)
+
+
 #### [float](float.md)
+
+
 #### [int](int.md)
+
+
 #### [long](long.md)
+
+
 #### [sbyte](sbyte.md)
+
+
 #### [short](short.md)
+
+
 #### [struct](struct.md)
+
+
 #### [uint](uint.md)
+
+
 #### [ulong](ulong.md)
+
+
 #### [ushort](ushort.md)
+
+
 ### [Tipos de referência](reference-types.md)
+
+
 #### [class](class.md)
+
+
 #### [delegate](delegate.md)
+
+
 #### [dynamic](dynamic.md)
+
+
 #### [interface](interface.md)
+
+
 #### [object](object.md)
+
+
 #### [string](string.md)
-#### [Cadeias de caracteres interpoladas (referência do C# e do Visual Basic)](interpolated-strings.md)
+
+
+#### [Cadeias de caracteres interpoladas](interpolated-strings.md)
+
+
 ### [void](void.md)
+
+
 ### [var](var.md)
+
+
 ### [Tabelas de referência de tipos](reference-tables-for-types.md)
+
+
 #### [Tabela de tipos internos](built-in-types-table.md)
+
+
 #### [Tabela de tipos integrais](integral-types-table.md)
+
+
 #### [Tabela de tipos de ponto flutuante](floating-point-types-table.md)
+
+
 #### [Tabela de valores padrão](default-values-table.md)
+
+
 #### [Tabela de tipos de valor](value-types-table.md)
+
+
 #### [Tabela de conversões numéricas implícitas](implicit-numeric-conversions-table.md)
+
+
 #### [Tabela de conversões numéricas explícitas](explicit-numeric-conversions-table.md)
+
+
 #### [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md)
+
+
 ## [Modificadores](modifiers.md)
+
+
 ### [Modificadores de acesso](access-modifiers.md)
+
+
 #### [Níveis de acessibilidade](accessibility-levels.md)
+
+
 #### [Domínio de acessibilidade](accessibility-domain.md)
+
+
 #### [Restrições ao uso de níveis de acessibilidade](restrictions-on-using-accessibility-levels.md)
+
+
 #### [internal](internal.md)
+
+
 #### [private](private.md)
+
+
 #### [protected](protected.md)
+
+
 #### [public](public.md)
+
+
 ### [abstract](abstract.md)
+
+
 ### [async](async.md)
+
+
 ### [const](const.md)
+
+
 ### [event](event.md)
+
+
 ### [extern](extern.md)
+
+
 ### [in (modificador genérico)](in-generic-modifier.md)
+
+
 ### [out (modificador genérico)](out-generic-modifier.md)
+
+
 ### [override](override.md)
+
+
 ### [readonly](readonly.md)
+
+
 ### [sealed](sealed.md)
+
+
 ### [static](static.md)
+
+
 ### [unsafe](unsafe.md)
+
+
 ### [virtual](virtual.md)
+
+
 ### [volatile](volatile.md)
+
+
 ## [Palavras-chave de instrução](statement-keywords.md)
+
+
 ### [Instruções de seleção](selection-statements.md)
+
+
 #### [if-else](if-else.md)
+
+
 #### [switch](switch.md)
+
+
 ### [Instruções de iteração](iteration-statements.md)
+
+
 #### [do](do.md)
+
+
 #### [for](for.md)
+
+
 #### [foreach, in](foreach-in.md)
+
+
 #### [while](while.md)
+
+
 ### [Instruções de atalho](jump-statements.md)
+
+
 #### [break](break.md)
+
+
 #### [continue](continue.md)
+
+
 #### [goto](goto.md)
+
+
 #### [return](return.md)
+
+
 ### [Instruções para manipulação de exceções](exception-handling-statements.md)
+
+
 #### [throw](throw.md)
+
+
 #### [try-catch](try-catch.md)
+
+
 #### [try-finally](try-finally.md)
+
+
 #### [try-catch-finally](try-catch-finally.md)
+
+
 ### [Checked e Unchecked](checked-and-unchecked.md)
+
+
 #### [checked](checked.md)
+
+
 #### [unchecked](unchecked.md)
+
+
 ### [Instrução fixed](fixed-statement.md)
+
+
 ### [Instrução lock](lock-statement.md)
+
+
 ## [Parâmetros de método](method-parameters.md)
+
+
 ### [params](params.md)
+
+
 ### [ref](ref.md)
+
+
 ### [out](out.md)
+
+
 #### [out (modificador de parâmetro)](out-parameter-modifier.md)
+
+
 ## [Palavras-chave de namespace](namespace-keywords.md)
+
+
 ### [namespace](namespace.md)
+
+
 ### [using](using.md)
+
+
 #### [Diretiva using](using-directive.md)
+
+
 #### [Diretiva using static](using-static.md)
+
+
 #### [Instrução using](using-statement.md)
+
+
 ### [Alias extern](extern-alias.md)
+
+
 ## [Palavras-chave do operador](operator-keywords.md)
+
+
 ### [as](as.md)
+
+
 ### [await](await.md)
+
+
 ### [is](is.md)
+
+
 ### [new](new.md)
+
+
 #### [Operador new](new-operator.md)
+
+
 #### [Modificador new](new-modifier.md)
+
+
 #### [Restrição new](new-constraint.md)
+
+
 ### [sizeof](sizeof.md)
+
+
 ### [typeof](typeof.md)
+
+
 ### [true](true.md)
+
+
 #### [Operador true](true-operator.md)
+
+
 #### [Literal true](true-literal.md)
+
+
 ### [false](false.md)
+
+
 #### [Operador false](false-operator.md)
+
+
 #### [Literal false](false-literal.md)
+
+
 ### [stackalloc](stackalloc.md)
-### [nameof (referência do C# e do Visual Basic)](nameof.md)
+
+
+### [nameof](nameof.md)
+
+
 ## [Palavras-chave de conversão](conversion-keywords.md)
+
+
 ### [explicit](explicit.md)
+
+
 ### [implicit](implicit.md)
+
+
 ### [operator](operator.md)
+
+
 ## [Palavras-chave de acesso](access-keywords.md)
+
+
 ### [base](base.md)
+
+
 ### [this](this.md)
+
+
 ## [Palavras-chave literais](literal-keywords.md)
+
+
 ### [null](null.md)
+
+
 ### [default](default.md)
+
+
 ## [Palavras-chave contextuais](contextual-keywords.md)
+
+
 ### [add](add.md)
+
+
 ### [get](get.md)
+
+
 ### [global](global.md)
+
+
 ### [(partial (tipo)](partial-type.md)
+
+
 ### [partial (método)](partial-method.md)
+
+
 ### [remove](remove.md)
+
+
 ### [set](set.md)
+
+
 ### [when (condição de filtro)](when.md)
+
+
 ### [where (restrição de tipo genérico)](where-generic-type-constraint.md)
+
+
 ### [value](value.md)
+
+
 ### [yield](yield.md)
+
+
 ## [Palavras-chave de consulta](query-keywords.md)
+
+
 ### [Cláusula From](from-clause.md)
+
+
 ### [Cláusula where](where-clause.md)
+
+
 ### [Cláusula select](select-clause.md)
+
+
 ### [Cláusula group](group-clause.md)
+
+
 ### [into](into.md)
+
+
 ### [Cláusula orderby](orderby-clause.md)
+
+
 ### [Cláusula join](join-clause.md)
+
+
 ### [Cláusula let](let-clause.md)
+
+
 ### [ascending](ascending.md)
+
+
 ### [descending](descending.md)
+
+
 ### [on](on.md)
+
+
 ### [equals](equals.md)
+
+
 ### [by](by.md)
+
+
 ### [in](in.md)
 

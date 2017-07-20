@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 837cbcaaa4fc35824c69dadf5a19aa3bbdef9c2f
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica um link que aparece na seção Consulte também.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <seealso cref="member"/>  
 ```  
   

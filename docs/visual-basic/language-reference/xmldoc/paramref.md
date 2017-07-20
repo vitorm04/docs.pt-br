@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: fa9ce4782610e50730418f9c6f552181dbef8e59
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Formata uma palavra como um parâmetro.
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <paramref name="name"/>  
 ```  
   

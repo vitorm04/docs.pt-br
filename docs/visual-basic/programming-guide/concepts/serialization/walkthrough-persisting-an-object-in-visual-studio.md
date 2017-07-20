@@ -1,5 +1,5 @@
 ---
-title: Mantendo um objeto no Visual Studio (Visual Basic) | Documentos do Microsoft
+title: Mantendo um objeto no Visual Studio (Visual Basic) | Documentos da Microsoft
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,39 +20,40 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0ff6320aee65850b8b445f445f80b4bbe2c9c254
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f4b78654f79913d90667daa9e75c88f45f8efbdc
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: Mantendo um objeto no Visual Studio (Visual Basic)
-Embora você possa definir propriedades de um objeto com valores padrão em tempo de design, quaisquer valores inseridos em tempo de execução são perdidos quando o objeto é destruído. Você pode usar serialização para manter os dados de um objeto entre instâncias, que permite que você armazene valores e recuperá-las na próxima vez que o objeto é instanciado.  
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Passo a passo: mantendo um objeto no Visual Studio (Visual Basic)
+Embora você possa definir as propriedades de um objeto para os valores padrão em tempo de design, qualquer valor inserido em tempo de execução será perdido quando o objeto for destruído. Você pode usar a serialização para manter os dados de um objeto entre instâncias, o que permite armazenar valores e recuperá-los na próxima vez que o objeto for instanciado.  
   
 > [!NOTE]
->  No Visual Basic, para armazenar dados simples, como um nome ou número, você pode usar o `My.Settings` objeto. Para obter mais informações, consulte [objeto My. Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+>  No Visual Basic, para armazenar dados simples, como um nome ou número, você pode usar o objeto `My.Settings`. Para obter mais informações, consulte [Objeto My.Settings](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
- Neste passo a passo, você criará um simples `Loan` de objeto e manter seus dados em um arquivo. Em seguida, recuperará os dados do arquivo quando você recriar o objeto.  
-  
-> [!IMPORTANT]
->  Este exemplo cria um novo arquivo, se o arquivo ainda não existir. Se um aplicativo deve criar um arquivo, o aplicativo deve `Create` permissão para a pasta. As permissões são definidas usando listas de controle de acesso. Se o arquivo já existir, o aplicativo precisa apenas `Write` permissão, uma permissão menos. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder `Read` permissões para um único arquivo (em vez de criar permissões para uma pasta). Além disso, é mais seguro gravar dados em pastas de usuário que a pasta raiz ou a pasta arquivos de programas.  
+ Neste passo a passo, você criará um objeto `Loan` simples e manterá seus dados em um arquivo. Em seguida, você recuperará os dados do arquivo quando recriar o objeto.  
   
 > [!IMPORTANT]
->  Este exemplo armazena dados em um binário. Esses formatos não devem ser usados para dados confidenciais, como senhas ou informações de cartão de crédito.  
+>  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, esse aplicativo precisará da permissão `Create` para a pasta. Permissões são definidas usando listas de controle de acesso. Se o arquivo já existir, o aplicativo precisará somente da permissão `Write`, que é uma permissão menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder permissões `Read` a um único arquivo (em vez de permissões Create para uma pasta). Além disso, é mais seguro gravar dados em pastas de usuário do que na pasta raiz ou na pasta Arquivos de Programas.  
+  
+> [!IMPORTANT]
+>  Este exemplo armazena dados em um arquivo binário. Esses formatos não devem ser usados para dados confidenciais, como senhas ou informações de cartão de crédito.  
   
 > [!NOTE]
->  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, clique em **Import and Export Settings** sobre o **ferramentas** menu. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  As caixas de diálogo e os comandos de menu que você vê podem ser diferentes dos descritos na Ajuda, dependendo da sua edição ou das configurações ativas. Para alterar as configurações, clique em **Importar e exportar configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-## <a name="creating-the-loan-object"></a>Criando o objeto de empréstimo  
- A primeira etapa é criar um `Loan` classe e um aplicativo de teste que usa a classe.  
+## <a name="creating-the-loan-object"></a>Criando o objeto Loan  
+ A primeira etapa é criar uma classe `Loan` e um aplicativo de teste que usa a classe.  
   
-### <a name="to-create-the-loan-class"></a>Para criar a classe de empréstimo  
+### <a name="to-create-the-loan-class"></a>Para criar a classe Loan  
   
-1.  Criar um novo projeto de biblioteca de classes e nomeie-a como "LoanClass". Para obter mais informações, consulte [Criando soluções e projetos](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1.  Crie um novo projeto de Biblioteca de classes e denomine-o “LoanClass". Para obter mais informações, consulte [Criando soluções e projetos](http://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2.  Em **Solution Explorer**, abra o menu de atalho para o arquivo Class1 e escolha **Renomear**. Renomeie o arquivo como `Loan` e pressione ENTER. Renomear o arquivo também renomear a classe `Loan`.  
+2.  No **Gerenciador de Soluções**, abra o menu de atalho para o arquivo Class1 e escolha **Renomear**. Renomeie o arquivo como `Loan` e pressione ENTER. Renomear o arquivo também renomeará a classe para `Loan`.  
   
-3.  Adicione os seguintes membros públicos na classe:  
+3.  Adicione os seguintes membros públicos à classe:  
   
     ```vb  
     Public Class Loan  
@@ -90,25 +91,25 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
     End Class  
     ```  
   
- Você também terá que criar um aplicativo simples que usa o `Loan` classe.  
+ Você também precisará criar um aplicativo simples que usa a classe `Loan`.  
   
 ### <a name="to-create-a-test-application"></a>Para criar um aplicativo de teste  
   
-1.  Para adicionar um projeto de aplicativo do Windows Forms para sua solução, no **arquivo** menu, escolha **adicionar**,**novo projeto**.  
+1.  Para adicionar um projeto de Aplicativo do Windows Forms à sua solução, no menu **Arquivo**, escolha **Adicionar**, **Novo Projeto**.  
   
-2.  No **adicionar novo projeto** caixa de diálogo, escolha **aplicativo do Windows Forms**e digite `LoanApp` como o nome do projeto e clique **Okey** para fechar a caixa de diálogo.  
+2.  Na caixa de diálogo **Adicionar Novo Projeto**, escolha **Aplicativo do Windows Forms** e insira `LoanApp` como o nome do projeto e clique **OK** para fechar a caixa de diálogo.  
   
-3.  Em **Solution Explorer**, escolha o projeto LoanApp.  
+3.  No **Gerenciador de Soluções**, escolha o projeto LoanApp.  
   
-4.  Sobre o **projeto** menu, escolha **Set as StartUp Project**.  
+4.  No menu **Projeto**, escolha **Definir como Projeto de Inicialização**.  
   
 5.  No menu **Projeto**, escolha **Adicionar Referência**.  
   
-6.  No **adicionar referência** caixa de diálogo, escolha o **projetos** guia e, em seguida, escolha o projeto LoanClass.  
+6.  Na caixa de diálogo **Adicionar Referência**, escolha a guia **Projetos** e escolha o projeto LoanClass.  
   
 7.  Clique em **OK** para fechar a caixa de diálogo.  
   
-8.  No designer, adicione quatro <xref:System.Windows.Forms.TextBox>controles ao formulário.</xref:System.Windows.Forms.TextBox>  
+8.  No designer, adicione quatro controles <xref:System.Windows.Forms.TextBox> ao formulário.  
   
 9. No Editor de Códigos, adicione o seguinte código:  
   
@@ -123,7 +124,7 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
     End Sub  
     ```  
   
-10. Adicionar um manipulador de eventos para o `PropertyChanged` evento para o formulário usando o código a seguir:  
+10. Adicione um manipulador de eventos para o evento `PropertyChanged` do formulário usando o seguinte código:  
   
     ```vb  
     Public Sub CustomerPropertyChanged(  
@@ -135,27 +136,27 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
     End Sub  
     ```  
   
- Neste ponto, você pode compilar e executar o aplicativo. Observe que os valores padrão da `Loan` classe aparecem nas caixas de texto. Tente alterar o valor de taxa de juros de 7.5 para 7.1 e, em seguida, feche o aplicativo e executá-la novamente, o valor será revertido para o padrão de 7.5.  
+ Neste ponto, você pode compilar e executar o aplicativo. Observe que os valores padrão da classe `Loan` aparecem nas caixas de texto. Tente alterar o valor de taxa de juros de 7,5 para 7,1 e, em seguida, feche o aplicativo e execute-o novamente – o valor será revertido para o padrão de 7,5.  
   
- No mundo real, taxas de juros alterar periodicamente, mas não necessariamente toda vez que o aplicativo é executado. Em vez de fazer com que o usuário atualizar a taxa de juros toda vez que o aplicativo é executado, é melhor preservar a taxa de juros mais recente entre instâncias do aplicativo. Na próxima etapa, você fará exatamente isso adicionando serialização à classe empréstimo.  
+ No mundo real, as taxas de juros mudam periodicamente, mas não necessariamente toda vez que o aplicativo for executado. Em vez de fazer o usuário atualizar a taxa de juros sempre que o aplicativo for executado, é melhor preservar a taxa de juros mais recente entre instâncias do aplicativo. Na próxima etapa, você fará exatamente isso adicionando a serialização à classe Loan.  
   
 ## <a name="using-serialization-to-persist-the-object"></a>Usando a serialização para manter o objeto  
- Para manter os valores para a classe de empréstimo, você deve primeiro marcar a classe com o `Serializable` atributo.  
+ Para manter os valores da classe Loan, primeiro você deve marcar a classe com o atributo `Serializable`.  
   
 ### <a name="to-mark-a-class-as-serializable"></a>Para marcar uma classe como serializável  
   
--   Altere a declaração de classe para a classe de empréstimo da seguinte maneira:  
+-   Altere a declaração da classe para a classe Loan da seguinte maneira:  
   
     ```vb  
     <Serializable()>  
     Public Class Loan  
     ```  
   
- O `Serializable` atributo informa ao compilador que tudo na classe pode ser mantido em um arquivo. Porque o `PropertyChanged` evento é manipulado por um objeto de formulário do Windows, ele não pode ser serializado. O `NonSerialized` atributo pode ser usado para marcar os membros de classe que não devem ser persistentes.  
+ O atributo `Serializable` informa ao compilador que tudo na classe pode ser mantido em um arquivo. Como o evento `PropertyChanged` é manipulado por um objeto do Windows Forms, ele não pode ser serializado. O atributo `NonSerialized` pode ser usado para marcar os membros da classe que não devem ser mantidos.  
   
-### <a name="to-prevent-a-member-from-being-serialized"></a>Para impedir que um membro que está sendo serializado  
+### <a name="to-prevent-a-member-from-being-serialized"></a>Para impedir que um membro seja serializado  
   
--   Altere a declaração para o `PropertyChanged` evento da seguinte maneira:  
+-   Altere a declaração para o evento `PropertyChanged` da seguinte maneira:  
   
     ```vb  
     <NonSerialized()>  
@@ -163,11 +164,11 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
       Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged  
     ```  
   
- A próxima etapa é adicionar o código de serialização para o aplicativo LoanApp. Para serializar a classe e gravá-lo em um arquivo, você usará o <xref:System.IO>e <xref:System.Xml.Serialization>namespaces.</xref:System.Xml.Serialization> </xref:System.IO> Para evitar a digitação dos nomes totalmente qualificados, você pode adicionar referências a bibliotecas de classe necessária.  
+ A etapa seguinte é adicionar o código de serialização ao aplicativo LoanApp. Para serializar a classe e gravá-la em um arquivo, use os namespaces <xref:System.IO> e <xref:System.Xml.Serialization>. Para evitar digitar os nomes totalmente qualificados, você pode adicionar referências às bibliotecas de classe necessárias.  
   
-### <a name="to-add-references-to-namespaces"></a>Para adicionar referências aos namespaces  
+### <a name="to-add-references-to-namespaces"></a>Para adicionar referências a namespaces  
   
--   Adicione as seguintes instruções na parte superior do `Form1` classe:  
+-   Adicione as seguintes instruções ao topo da classe `Form1`:  
   
     ```vb  
     Imports System.IO  
@@ -176,17 +177,17 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
   
      Nesse caso, você está usando um formatador binário para salvar o objeto em um formato binário.  
   
- A próxima etapa é adicionar código para desserializar o objeto do arquivo quando o objeto é criado.  
+ A próxima etapa é adicionar código para desserializar o objeto do arquivo quando o objeto for criado.  
   
 ### <a name="to-deserialize-an-object"></a>Para desserializar um objeto  
   
-1.  Adicione uma constante para a classe para o nome do arquivo de dados serializados.  
+1.  Adicione uma constante à classe para o nome do arquivo de dados serializado.  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  Modifique o código no `Form1_Load` procedimento de evento da seguinte maneira:  
+2.  Modifique o código no procedimento do evento `Form1_Load` da seguinte maneira:  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -208,13 +209,13 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
     End Sub  
     ```  
   
-     Observe que você primeiro deve verificar se o arquivo existe. Se ele existir, crie um <xref:System.IO.Stream>classe para ler o arquivo binário e um <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>classe para converter o arquivo.</xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> </xref:System.IO.Stream> Você também precisa converter do tipo de fluxo para o tipo de objeto de empréstimo.  
+     Observe que primeiro você deve verificar se o arquivo existe. Se ele existir, crie uma classe <xref:System.IO.Stream> para ler o arquivo binário e uma classe <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> para converter o arquivo. Você também precisa converter do tipo de fluxo para o tipo de objeto Loan.  
   
- Em seguida, você deve adicionar código para salvar os dados inseridos nas caixas de texto para o `Loan` classe e, em seguida, você precisa serializar a classe em um arquivo.  
+ Em seguida, você deve adicionar código para salvar os dados inseridos nas caixas de texto na classe `Loan` e, então, precisa serializar a classe em um arquivo.  
   
-### <a name="to-save-the-data-and-serialize-the-class"></a>Para salvar os dados e a classe  
+### <a name="to-save-the-data-and-serialize-the-class"></a>Para salvar os dados e serializar a classe  
   
--   Adicione o seguinte código para o `Form1_FormClosing` procedimento de evento:  
+-   Adicione o seguinte código ao procedimento do evento `Form1_FormClosing`:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  
@@ -230,8 +231,8 @@ Embora você possa definir propriedades de um objeto com valores padrão em temp
     End Sub  
     ```  
   
- Neste ponto, você pode novamente Compile e execute o aplicativo. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que os novos valores agora aparecem nas caixas de texto.  
+ Neste ponto, você pode compilar e executar o aplicativo novamente. Inicialmente, os valores padrão aparecem nas caixas de texto. Tente alterar os valores e digite um nome na quarta caixa de texto. Feche o aplicativo e execute-o novamente. Observe que agora os novos valores aparecem nas caixas de texto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)   
- [Guia de programação em Visual Basic](../../../../visual-basic/programming-guide/index.md)
+ [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)

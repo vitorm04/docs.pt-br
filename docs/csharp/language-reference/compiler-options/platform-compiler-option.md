@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b6ebf868af5ddd9a9073f505cad267cb69745d4a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /platform:string  
 ```  
   
@@ -93,7 +94,7 @@ Especifica qual versão do CLR (Common Language Runtime) pode executar o assembl
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar a opção **/platform** para especificar que o aplicativo deve ser executado pelo CLR de 64 bits em um sistema de operacional do Windows de 64 bits.  
   
-```  
+```console  
 csc /platform:anycpu filename.cs  
 ```  
   

@@ -59,7 +59,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
   
 2.  Adicione o elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) como a seguir ao arquivo de configuração do aplicativo:  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

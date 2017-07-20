@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e01cbe0e514a97fe29dbc9ca4bbaa6cb8d64a10f
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,7 @@ Essa opção envia uma lista de opções do compilador e uma breve descrição d
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /help  
 /?  
 ```  

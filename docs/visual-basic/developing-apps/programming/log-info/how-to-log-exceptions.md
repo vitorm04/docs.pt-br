@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4cfec2b37c874dc772e6965f5736c761d93d530c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8a5233f5e39c5e6c423a453cd241be40877d2ba8
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Como registrar em log as exceções no Visual Basic
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log informações sobre exceções que ocorrem em um aplicativo. Esses exemplos mostram como usar o método `My.Application.Log.WriteException` para registrar em log exceções capturadas explicitamente e exceções sem tratamento.  
   
- Para registrar informações de rastreamento de registros em log, use o método `My.Application.Log.WriteEntry`. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ Para registrar informações de rastreamento de registros em log, use o método `My.Application.Log.WriteEntry`. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>.  
   
 ### <a name="to-log-a-handled-exception"></a>Registrar em log uma exceção manipulada  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  Coloque o código que poderá gerar uma exceção no bloco `Try`.  
   
-     Remova a marca de comentário das linhas `Dim` e `MsgBox` para causar uma exceção <xref:System.NullReferenceException>.  
+     Remova a marca de comentário das linhas `Dim` e `MsgBox` para lançar uma exceção <xref:System.NullReferenceException>.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 03/13/2017
   
 5.  No menu **Declarações**, escolha **UnhandledException**.  
   
-     O aplicativo gerará o evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> antes de o aplicativo principal ser executado.  
+     A aplicativo gera o evento <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> antes da execução do aplicativo principal.  
   
 6.  Adicione o método `My.Application.Log.WriteException` ao manipulador de eventos `UnhandledException`.  
   

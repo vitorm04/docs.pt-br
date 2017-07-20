@@ -1,5 +1,5 @@
 ---
-title: "Portabilidade para .NET Core – Analisar suas dependências de terceiros"
+title: "Portabilidade para .NET Core – Analisando as dependências de terceiros | Microsoft Docs"
 description: "Portabilidade para .NET Core – Analisar suas dependências de terceiros"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,22 +9,29 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 5b7bbc0718817365df63db4d8ca7e4cf8871abae
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>Portabilidade para .NET Core – Analisar suas dependências de terceiros
+<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
+
+# Portabilidade para .NET Core – Analisar suas dependências de terceiros
 
 A primeira etapa no processo de portabilidade é entender suas dependências de terceiros.  Você precisa descobrir quais delas, se houver, ainda não são executadas no .NET Core e desenvolver um plano de contingência para elas.
 
-## <a name="prerequisites"></a>Pré-requisitos
+<a id="prerequisites" class="xliff"></a>
+
+## Pré-requisitos
 
 Este artigo supõe que você está usando o Windows e o Visual Studio, e que você tem um código que é executado no .NET Framework atualmente.
 
-## <a name="analyzing-nuget-packages"></a>Analisando Pacotes NuGet
+<a id="analyzing-nuget-packages" class="xliff"></a>
+
+## Analisando Pacotes NuGet
 
 É muito fácil analisar pacotes NuGet para portabilidade.  Como um pacote NuGet é essencialmente um conjunto de pastas que contêm assemblies específicos de plataforma, basta você verificar se há uma pasta que contém um assembly .NET Core.
 
@@ -54,7 +61,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-Esses são TFMs (Monikers da Estrutura de Destino), que são mapeados para versões da [.NET Standard Library](../../standard/library.md) e perfis de PCL (Biblioteca de Classes Portátil) tradicionais, os quais são compatíveis com .NET Core.  Observe que `netcoreapp1.0`, embora seja compatível, ele se destina a aplicativos e não a bibliotecas.  Embora não haja nada de errado em usar uma biblioteca baseada em `netcoreapp1.0`, ela pode não destinar-se a nada *além* de consumir outros aplicativos `netcoreapp1.0`.
+Esses são TFMs (Monikers da Estrutura de Destino), que são mapeados para versões da [.NET Standard Library](../../standard/net-standard.md) e perfis de PCL (Biblioteca de Classes Portátil) tradicionais, os quais são compatíveis com .NET Core.  Observe que `netcoreapp1.0`, embora seja compatível, ele se destina a aplicativos e não a bibliotecas.  Embora não haja nada de errado em usar uma biblioteca baseada em `netcoreapp1.0`, ela pode não destinar-se a nada *além* de consumir outros aplicativos `netcoreapp1.0`.
 
 Também há alguns TFMs herdados usados em versões de pré-lançamento do .NET Core que podem ser compatíveis:
 
@@ -73,7 +80,9 @@ dotnet5.5
 > [!NOTE]
 > Para usar um pacote direcionado para uma PCL tradicional ou para um destino .NET Core pré-lançamento, você deve usar a diretiva `imports` no seu arquivo `project.json`.
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>O que fazer quando a dependência de pacote NuGet não é executada no .NET Core
+<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
+
+### O que fazer quando a dependência de pacote NuGet não é executada no .NET Core
 
 Há algumas coisas que você pode fazer se um pacote NuGet do qual você depende não for executado no .NET Core.
 
@@ -89,11 +98,15 @@ Se você não conseguir resolver seu problema com nenhuma das opções acima, ta
 
 A Equipe .NET gostaria de saber quais bibliotecas são as próximas mais importantes para receber suporte no .NET Core. Você também pode nos enviar um email em dotnet@microsoft.com sobre as bibliotecas que você deseja usar.
 
-## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>Analisando dependências que não são pacotes NuGet
+<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
+
+## Analisando dependências que não são pacotes NuGet
 
 Você pode ter uma dependência que não é um pacote NuGet, tal como uma DLL no sistema de arquivos.  A única maneira de determinar a portabilidade dessa dependência é executar a [ferramenta ApiPort](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/).
 
-## <a name="next-steps"></a>Próximas etapas
+<a id="next-steps" class="xliff"></a>
+
+## Próximas etapas
 
 Se você estiver portando uma biblioteca, consulte [Portando suas bibliotecas](libraries.md).
 

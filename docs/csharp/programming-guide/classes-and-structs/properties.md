@@ -93,7 +93,7 @@ Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverã
 -   [Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
  [Guia de programação em C#](../../../csharp/programming-guide/index.md)   

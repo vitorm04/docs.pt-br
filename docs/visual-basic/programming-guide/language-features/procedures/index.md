@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimentos no Visual Basic
-Um *procedimento* é um bloco de demonstrativos [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] incluídos por um demonstrativo de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e por uma declaração `End` de correspondência. Todos os demonstrativos executáveis em [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] devem estar incluídos em algum procedimento.  
+Um *procedimento* é um bloco de demonstrativos [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] incluídos por um demonstrativo de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e por uma declaração `End` de correspondência. Todos os demonstrativos executáveis em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] devem estar incluídos em algum procedimento.  
   
 ## <a name="calling-a-procedure"></a>Chamar um procedimento  
  Você invoca um procedimento de algum outro lugar no código. Isso é conhecido como uma *chamada de procedimento*. Quando a execução do procedimento termina, ele retorna o controle para o código que o invocou, que é conhecido como o *código de chamada*. O código de chamada é um demonstrativo, ou uma expressão incluída em um demonstrativo, que especifica o procedimento pelo nome e transfere o controle a ele.  
@@ -60,7 +60,7 @@ Um *procedimento* é um bloco de demonstrativos [!INCLUDE[vbprvb](../../../../cs
  Na maioria dos casos, um procedimento precisa operar em diferentes dados cada vez que é chamado. Você pode transmitir essas informações para o procedimento como parte da chamada de procedimento. O procedimento define zero ou mais *parâmetros* e cada um deles representa um valor que se espera que seja transmitido. A correspondência com cada parâmetro na definição do procedimento é um *argumento* na chamada de procedimento. Um argumento representa o valor que você transmite ao parâmetro correspondente em uma determinada chamada de procedimento.  
   
 ## <a name="types-of-procedures"></a>Tipos de procedimentos  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] usa vários tipos de procedimentos:  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] usa vários tipos de procedimentos:  
   
 -   Os [procedimentos Sub](./sub-procedures.md) executam ações, mas não retornam um valor para o código de chamada.  
   

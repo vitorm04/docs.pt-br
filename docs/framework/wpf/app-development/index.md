@@ -17,10 +17,11 @@ caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: aa6ebe6c4ddc9b5cdec267cb2fc114440c189f0c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 09b1e6559b7edba2ee7dced1df4f6f6414f87aa9
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="application-development"></a>Desenvolvimento do aplicativo
@@ -73,9 +74,9 @@ ms.lasthandoff: 04/08/2017
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Janelas e caixas de diálogo  
- Os usuários interagem com aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autônomos por meio de janelas. A finalidade de uma janela é hospedar conteúdo do aplicativo e expor a funcionalidade do aplicativo que normalmente permite aos usuários interagir com o conteúdo. No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], as janelas são encapsuladas pela classe <xref:System.Windows.Window>, que dá suporte a:  
+ Os usuários interagem com aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autônomos por meio de janelas. A finalidade de uma janela é hospedar conteúdo do aplicativo e expor a funcionalidade do aplicativo que normalmente permite aos usuários interagir com o conteúdo. No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], as janelas são encapsuladas pela classe <xref:System.Windows.Window>, que permite:  
   
--   Cria e exibir janelas.  
+-   Criar e exibir janelas.  
   
 -   Estabelecer relações de janela de proprietário/propriedade.  
   
@@ -85,9 +86,9 @@ ms.lasthandoff: 04/08/2017
   
  Para obter mais informações, consulte [Visão geral do WPF do Windows](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> dá suporte à capacidade de criar um tipo especial de janela conhecido como caixa de diálogo. Tipos modais e sem janela restrita de caixas de diálogo podem ser criados.  
+ <xref:System.Windows.Window> é compatível com a criação de um tipo especial de janela conhecido como caixa de diálogo. Tipos modais e sem janela restrita de caixas de diálogo podem ser criados.  
   
- Para fins de conveniência, e pelos benefícios da reutilização e de uma experiência do usuário consistente entre aplicativos, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expõe três das caixas de diálogo [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] comuns: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> e <xref:System.Windows.Controls.PrintDialog>.  
+ Por conveniência e pelos benefícios de proporcionar reutilização e uma experiência de usuário consistente entre aplicativos, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] exibe três caixas de diálogo comuns do [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> e <xref:System.Windows.Controls.PrintDialog>.  
   
  Uma caixa de mensagem é um tipo especial de caixa de diálogo para mostrar informações textuais importantes para os usuários e para fazer perguntas simples como Sim/Não/OK/Cancelar. Use a classe <xref:System.Windows.MessageBox> para criar e exibir caixas de mensagem.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 04/08/2017
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navegação  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dá suporte à navegação de estilo da Web usando páginas (<xref:System.Windows.Controls.Page>) e hiperlinks (<xref:System.Windows.Documents.Hyperlink>). A navegação pode ser implementada de uma variedade de formas, que incluem o seguinte:  
+ O [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oferece suporte à navegação no estilo da Web por meio de páginas (<xref:System.Windows.Controls.Page>) e hiperlinks (<xref:System.Windows.Documents.Hyperlink>). A navegação pode ser implementada de uma variedade de formas, que incluem o seguinte:  
   
 -   Páginas autônomas que são hospedadas em um navegador da Web.  
   
@@ -103,11 +104,11 @@ ms.lasthandoff: 04/08/2017
   
 -   Páginas compiladas em um aplicativo autônomo e hospedadas por uma janela de navegação (<xref:System.Windows.Navigation.NavigationWindow>).  
   
--   Páginas que são hospedadas por um quadro (<xref:System.Windows.Controls.Frame>), que pode ser hospedado em uma página autônoma, ou uma página compilada em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ou um aplicativo autônomo.  
+-   Páginas hospedadas por um quadro (<xref:System.Windows.Controls.Frame>), que pode ser hospedado em uma página autônoma, ou uma página compilada em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ou um aplicativo autônomo.  
   
  Para facilitar a navegação, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementa o seguinte:  
   
--   <xref:System.Windows.Navigation.NavigationService>, o mecanismo de navegação compartilhada para processar solicitações de navegação que é usado pelo <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para dar suporte à navegação intra-aplicativo.  
+-   <xref:System.Windows.Navigation.NavigationService>, o mecanismo de navegação compartilhada para processar solicitações de navegação que é usado por <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] para oferecer suporte à navegação intra-aplicativo.  
   
 -   Métodos de navegação para iniciar a navegação.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Variáveis e tipos C# | Um tour da linguagem C#"
+title: "Tipos e variáveis do C# – um tour pela linguagem C# | Microsoft Docs"
 description: "Saiba mais sobre como definir tipos e declarar variáveis em C#"
 keywords: ".NET, csharp, tipo, tipo de referência, tipo de valor"
 author: BillWagner
@@ -10,14 +10,16 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="types-and-variables"></a>Tipos e variáveis
+# Tipos e variáveis
+<a id="types-and-variables" class="xliff"></a>
 
 Há dois tipos em C#: *tipos de referência* e *tipos de valor*. As variáveis de tipos de valor contêm diretamente seus dados enquanto variáveis de tipos de referência armazenam referências a seus dados, o último sendo conhecido como objetos. Com tipos de referência, é possível que duas variáveis referenciem o mesmo objeto e, portanto, é possível que operações em uma variável afetem o objeto referenciado por outra variável. Com tipos de valor, cada variável tem sua própria cópia dos dados e não é possível que operações em uma variável afetem a outra (exceto no caso de variáveis de parâmetros `ref` e `out`).
 
@@ -89,7 +91,7 @@ Um tipo `interface` define um contrato como um conjunto nomeado de membros da fu
 
 Um tipo `delegate` representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são análogos aos tipos de função fornecidos pelas linguagens funcionais. Eles também são parecidos com o conceito de ponteiros de função em outras linguagens, mas, ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
 
-Classe `struct`, `interface` e tipos `delegate` dão suporte a genéricos e podem ser parametrizados com outros tipos.
+Os tipos `class`, `struct`, `interface` e `delegate` dão suporte a genéricos e podem ser parametrizados com outros tipos.
 
 Um tipo `enum` é um tipo distinto com constantes nomeadas. Cada tipo `enum` tem um tipo subjacente, que deve ser um dos oito tipos integrais. O conjunto de valores de um tipo `enum` é o mesmo que o conjunto de valores do tipo subjacente.
 
@@ -103,7 +105,7 @@ O sistema de tipos do C# é unificado, de modo que um valor de qualquer tipo pod
 
 Quando um valor de um tipo de valor é convertido para o tipo `object`, uma instância `object`, também chamada de "caixa", é alocada para armazenar o valor e o valor é copiado na caixa. Por outro lado, quando uma referência `object` é convertida em um tipo de valor, é verificado se o `object` referenciado é uma caixa do tipo de valor correto e, se a verificação for bem-sucedida, o valor na caixa será copiado.
 
-O sistema de tipo unificado do C# significa que os tipos de valor podem se tornar objetos "sob demanda”. Devido à unificação, as bibliotecas de finalidade geral que usam o tipo `object` podem ser usadas com os tipos de referência e os tipos de valor.
+O sistema de tipo unificado do C# significa que os tipos de valor podem se tornar objetos “sob demanda”. Devido à unificação, as bibliotecas de finalidade geral que usam o tipo `object` podem ser usadas com os tipos de referência e os tipos de valor.
 
 Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matriz, variáveis locais e parâmetros. As variáveis representam os locais de armazenamento e cada variável tem um tipo que determina quais valores podem ser armazenados na variável, conforme mostrado abaixo.
 
@@ -120,7 +122,7 @@ Existem vários tipos de *variáveis* no C#, incluindo campos, elementos de matr
 * Tipo de matriz
     - Uma referência `null`, uma referência a uma instância desse tipo de matriz ou uma referência a uma instância de um tipo de matriz compatível
 * Tipo delegado
-    - Uma referência `null` ou uma referência a uma instância compatível do tipo delegado
+    - Uma referência `null` ou uma referência a uma instância de um tipo de delegado compatível
 
 >[!div class="step-by-step"]
 [Anterior](program-structure.md)

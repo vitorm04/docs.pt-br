@@ -18,15 +18,15 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>Mitigação: alocação de espaço do controle de grade para colunas de estrela
 
-A partir dos aplicativos destinados ao .NET Framework 4.7, o WPF substitui o algoritmo que o controle <xref:System.Windows.Controls.Grid> usa para alocar espaço para colunas de \*. 
+A partir dos aplicativos destinados ao .NET Framework 4.7, o WPF substitui o algoritmo usado pelo controle <xref:System.Windows.Controls.Grid> para alocar espaço para colunas de \*. 
 
 ## <a name="whats-changed"></a>O que mudou
 
@@ -64,7 +64,7 @@ Tudo que foi dito sobre colunas e larguras neste tópico se aplica também a lin
 
 O novo algoritmo altera a largura real atribuída a colunas \* em diversos casos:
 
-- Quando uma ou mais colunas de \* também têm uma largura mínima ou máxima que substitui a alocação proporcional para aquela coluna. (A largura mínima pode ser derivada de uma declaração de <xref:System.Windows.FrameworkElement.MinWidth%2A> explícita ou de um mínimo implícito obtido do conteúdo da coluna. A largura máxima só pode ser definida explicitamente, de uma declaração <xref:System.Windows.FrameworkElement.MaxWidth%2A>.)
+- Quando uma ou mais colunas de \* também têm uma largura mínima ou máxima que substitui a alocação proporcional para aquela coluna. (A largura mínima pode ser derivada de uma declaração <xref:System.Windows.FrameworkElement.MinWidth%2A> explícita ou de um mínimo implícito obtido do conteúdo da coluna. A largura máxima só pode ser definida explicitamente de uma declaração <xref:System.Windows.FrameworkElement.MaxWidth%2A>.)
 
 - Quando uma ou mais colunas de \* declaram um peso de \* extremamente grande, maior que 10^298.
 

@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8fb5101eabd95dd6574caf344a428afcd4bf648c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 6ce347ec50378590946c756b3adbf64fe855874d
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="collections-c"></a>Coleções (C#)
@@ -156,7 +157,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8  
 ```  
   
- Para o tipo dos elementos na <xref:System.Collections.Generic.List%601> você também pode definir sua própria classe. No exemplo a seguir, a classe `Galaxy` que é usada pela <xref:System.Collections.Generic.List%601> é definida no código.  
+ Para o tipo dos elementos na <xref:System.Collections.Generic.List%601>, você também pode definir sua própria classe. No exemplo a seguir, a classe `Galaxy` que é usada pela <xref:System.Collections.Generic.List%601> é definida no código.  
   
 ```csharp  
 private static void IterateThroughList()  
@@ -202,33 +203,33 @@ public class Galaxy
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Classes System.Collections.Generic  
- Você pode criar uma coleção genérica, usando uma das classes do namespace <xref:System.Collections.Generic>. Uma coleção genérica é útil quando cada item na coleção tem o mesmo tipo de dados. Uma coleção genérica impõe tipagem forte, permitindo que apenas o tipo de dados desejado seja adicionado.  
+ Você pode criar uma coleção genérica usando uma das classes no namespace <xref:System.Collections.Generic>. Uma coleção genérica é útil quando cada item na coleção tem o mesmo tipo de dados. Uma coleção genérica impõe tipagem forte, permitindo que apenas o tipo de dados desejado seja adicionado.  
   
- A tabela a seguir lista algumas das classes usadas com frequência do namespace <xref:System.Collections.Generic?displayProperty=fullName>:  
+ A tabela a seguir lista algumas das classes frequentemente usadas do namespace <xref:System.Collections.Generic?displayProperty=fullName>:  
 
 |Classe|Descrição| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Representa uma coleção de pares chave-valor organizados com base na chave.|  
 |<xref:System.Collections.Generic.List%601>|Representa uma lista de objetos que podem ser acessados por índice. Fornece métodos para pesquisar, classificar e modificar listas.|  
 |<xref:System.Collections.Generic.Queue%601>|Representa uma coleção de objetos PEPS (primeiro a entrar, primeiro a sair).|  
-|<xref:System.Collections.Generic.SortedList%602>|Representa uma coleção de pares chave-valor que são classificados por chave com base na implementação associada de <xref:System.Collections.Generic.IComparer%601>.|  
+|<xref:System.Collections.Generic.SortedList%602>|Representa uma coleção de pares chave/valor que são classificados por chave com base na implementação de <xref:System.Collections.Generic.IComparer%601> associada.|  
 |<xref:System.Collections.Generic.Stack%601>|Representa uma coleção de objetos UEPS (último a entrar, primeiro a sair).|  
   
  Para obter informações adicionais, consulte [Tipos de coleção comumente usados](../../../standard/collections/commonly-used-collection-types.md), [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md) e @System.Collections.Generic.  
   
 <a name="BKMK_Concurrent"></a>
 ### <a name="systemcollectionsconcurrent-classes"></a>Classes System.Collections.Concurrent  
- No .NET Framework 4 ou mais recente, as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção em vários threads.  
+ No .NET Framework 4 ou mais recente, as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção de vários threads.  
   
- As classes do namespace <xref:System.Collections.Concurrent> devem ser usadas em vez dos tipos correspondentes dos namespaces <xref:System.Collections.Generic?displayProperty=fullName> e <xref:System.Collections?displayProperty=fullName>, sempre que vários threads acessarem a coleção simultaneamente. Para obter mais informações, consulte [Coleções thread-safe](../../../standard/collections/threadsafe/index.md) e <xref:System.Collections.Concurrent>.  
+ As classes no namespace <xref:System.Collections.Concurrent> deverão ser usadas em vez dos tipos correspondentes nos namespaces <xref:System.Collections.Generic?displayProperty=fullName> e <xref:System.Collections?displayProperty=fullName> sempre que vários threads estiverem acessando a coleção simultaneamente. Para obter mais informações, veja [Coleções thread-safe](../../../standard/collections/thread-safe/index.md) e <xref:System.Collections.Concurrent>.  
   
- Algumas classes incluídas no namespace <xref:System.Collections.Concurrent> são: <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
+ Algumas classes incluídas no namespace <xref:System.Collections.Concurrent> são <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> e <xref:System.Collections.Concurrent.ConcurrentStack%601>.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>Classes System.Collections  
- As classes do namespace <xref:System.Collections?displayProperty=fullName> não armazenam elementos como objetos especificamente tipados, mas como objetos do tipo `Object`.  
+ As classes no namespace <xref:System.Collections?displayProperty=fullName> não armazenam elementos como objetos especificamente tipados, mas como objetos do tipo `Object`.  
   
- Sempre que possível, você deve usar as coleções genéricas no namespace <xref:System.Collections.Generic?displayProperty=fullName> ou no namespace <xref:System.Collections.Concurrent> em vez dos tipos herdados no namespace `System.Collections`.  
+ Sempre que possível, você deve usar as coleções genéricas no namespace <xref:System.Collections.Generic?displayProperty=fullName> ou no <xref:System.Collections.Concurrent> em vez dos tipos herdados no namespace `System.Collections`.  
   
  A tabela a seguir lista algumas das classes frequentemente usadas no namespace `System.Collections`:  
   
@@ -239,7 +240,7 @@ public class Galaxy
 |<xref:System.Collections.Queue>|Representa uma coleção de objetos PEPS (primeiro a entrar, primeiro a sair).|  
 |<xref:System.Collections.Stack>|Representa uma coleção de objetos UEPS (último a entrar, primeiro a sair).|  
   
- O namespace <xref:System.Collections.Specialized> fornece classes de coleções especializadas e fortemente tipadas, como coleções de somente sequência de caracteres, bem como de dicionários híbridos e de listas vinculadas.  
+ O namespace <xref:System.Collections.Specialized> fornece classes de coleções especializadas e fortemente tipadas, como coleções somente de cadeias de caracteres, bem como de dicionários híbridos e de listas vinculadas.  
 
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>Implementando uma coleção de pares chave-valor  
@@ -313,7 +314,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }  
 ```  
   
- O exemplo a seguir usa o método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> e a propriedade <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para localizar rapidamente um item através da chave. A propriedade `Item` permite que você acesse um item na coleção `elements` usando o `elements[symbol]` no C#.  
+ O exemplo a seguir usa o método <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> e a propriedade <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` para localizar rapidamente um item por chave. A propriedade `Item` permite que você acesse um item na coleção `elements` usando o `elements[symbol]` no C#.  
   
 ```csharp  
 private static void FindInDictionary(string symbol)  
@@ -332,7 +333,7 @@ private static void FindInDictionary(string symbol)
 }  
 ```  
   
- De outra maneira, o exemplo a seguir usa o método <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> para localizar rapidamente um item através da chave.  
+ O exemplo a seguir usa o método <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> para localizar rapidamente um item por chave.  
   
 ```csharp  
 private static void FindInDictionary2(string symbol)  
@@ -400,7 +401,7 @@ public class Element
   
  Cada chamada ao método <xref:System.IComparable%601.CompareTo%2A> faz uma comparação única que é usada para classificação. Os códigos escritos pelo usuário no método `CompareTo` retornam um valor para cada comparação do objeto atual com outro objeto. O valor retornado será menor que zero se o objeto atual for menor que o outro objeto, maior que zero se o objeto atual for maior que o outro objeto e zero, se eles forem iguais. Isso permite que você defina no código os critérios para maior que, menor que e igual.  
   
- No método `ListCars`, a instrução `cars.Sort()` classifica a lista. Essa chamada ao método <xref:System.Collections.Generic.List%601.Sort%2A> da <xref:System.Collections.Generic.List%601> faz com que o método `CompareTo` seja chamado automaticamente para os objetos `Car` na `List`.  
+ No método `ListCars`, a instrução `cars.Sort()` classifica a lista. Essa chamada para o método <xref:System.Collections.Generic.List%601.Sort%2A> da <xref:System.Collections.Generic.List%601> faz com que o método `CompareTo` seja chamado automaticamente para os objetos `Car` na `List`.  
   
 ```csharp  
 private static void ListCars()  
@@ -474,13 +475,13 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>Definindo uma coleção personalizada  
- Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou a <xref:System.Collections.IEnumerable>. Para obter informações adicionais, consulte [Como acessar uma classe de coleção com foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).  
+ Você pode definir uma coleção implementando a interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Para obter informações adicionais, consulte [Como acessar uma classe de coleção com foreach](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md).  
   
  Embora seja possível definir uma coleção personalizada, é melhor usar as coleções que estão incluídas no .NET Framework, que estão descritas em [Tipos de coleções](#BKMK_KindsOfCollections) anteriormente neste tópico.  
   
  O exemplo a seguir define uma classe de coleção personalizada chamada `AllColors`. Essa classe implementa a interface <xref:System.Collections.IEnumerable>, que requer que o método <xref:System.Collections.IEnumerable.GetEnumerator%2A> seja implementado.  
   
- O método `GetEnumerator` retorna uma instância da classe `ColorEnumerator`. A `ColorEnumerator` implementa a interface <xref:System.Collections.IEnumerator>, que requer que a propriedade <xref:System.Collections.IEnumerator.Current%2A>, o método <xref:System.Collections.IEnumerator.MoveNext%2A> e o método <xref:System.Collections.IEnumerator.Reset%2A> sejam implementados.  
+ O método `GetEnumerator` retorna uma instância da classe `ColorEnumerator`. `ColorEnumerator` implementa a interface <xref:System.Collections.IEnumerator>, que requer que a propriedade <xref:System.Collections.IEnumerator.Current%2A>, o método <xref:System.Collections.IEnumerator.MoveNext%2A> e o método <xref:System.Collections.IEnumerator.Reset%2A> sejam implementados.  
   
 ```csharp  
 private static void ListColors()  
@@ -593,7 +594,7 @@ private static IEnumerable<int> EvenSequence(
  [Conceitos de programação (C#)](../../../csharp/programming-guide/concepts/index.md)   
  [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
  [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [PLINQ (LINQ paralela)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
+ [PLINQ (LINQ paralela)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
  [Coleções e estruturas de dados](../../../standard/collections/index.md)   
  [Criando e manipulando coleções](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
  [Selecionando uma classe de coleção](../../../standard/collections/selecting-a-collection-class.md)   

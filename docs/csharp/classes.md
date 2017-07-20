@@ -2,18 +2,19 @@
 title: Classes | Guia de C#
 description: "Saiba mais sobre os tipos de classes e como criá-las"
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b5614123d38ae00cb471ef85d0eb92c03c68bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: f2cfeac321860a609c21046818c36fbc6aa3c636
+ms.contentlocale: pt-br
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -25,7 +26,7 @@ Um tipo que é definido como uma [classe](https://msdn.microsoft.com/library/0b0
 
 [!code-csharp[Tipos de Referência](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-Quando o objeto é criado, a memória é alocada no heap gerenciado e a variável contém apenas uma referência ao local do objeto. Os tipos no heap gerenciado requerem sobrecarga quando são alocados e quando são recuperados pela funcionalidade de gerenciamento automático de memória do CLR, que é conhecida como *coleta de lixo*. No entanto, a coleta de lixo também é altamente otimizada e na maioria dos cenários não cria problemas de desempenho. Para obter mais informações sobre a coleta de lixo, consulte [Gerenciamento automático de memória e coleta de lixo](../standard/garbagecollection/gc.md).  
+Quando o objeto é criado, a memória é alocada no heap gerenciado e a variável contém apenas uma referência ao local do objeto. Os tipos no heap gerenciado requerem sobrecarga quando são alocados e quando são recuperados pela funcionalidade de gerenciamento automático de memória do CLR, que é conhecida como *coleta de lixo*. No entanto, a coleta de lixo também é altamente otimizada e na maioria dos cenários não cria problemas de desempenho. Para obter mais informações sobre a coleta de lixo, consulte [Gerenciamento automático de memória e coleta de lixo](../standard/garbage-collection/gc.md).  
   
 Os tipos de referência dão suporte completo à *herança*, uma característica fundamental da programação orientada a objetos. Ao criar uma classe, você pode herdar de qualquer outra interface ou classe que não esteja definida como [lacrada](https://msdn.microsoft.com/library/88c54tsw.aspx) e outras classes podem herdar de sua classe e substituir seus métodos virtuais. Para obter mais informações, consulte [Herança](https://msdn.microsoft.com/library/ms173149.aspx).
 
@@ -81,7 +82,7 @@ Para obter mais informações, consulte a [Especificação da linguagem C#](http
 [Membros de classe e struct](https://msdn.microsoft.com/library/ms173113.aspx)   
 [Métodos de classe e struct](https://msdn.microsoft.com/library/ms173114.aspx)   
 [Construtores](https://msdn.microsoft.com/library/ace5hbzh.aspx)   
-[Destruidores](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
+[Finalizadores](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
 [Objetos](https://msdn.microsoft.com/library/ms173110.aspx)
 
 
