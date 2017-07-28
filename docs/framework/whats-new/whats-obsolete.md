@@ -1,5 +1,5 @@
 ---
-title: "O que está obsoleto na biblioteca de classes .NET Framework | Microsoft Docs"
+title: "O que está obsoleto na biblioteca de classes .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 68c71e26ac5e5a1872ac006d02adec84c1fb63da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7afe9496ca116ed0c330c4ff9e7c3a855249cf14
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes .NET Framework
@@ -34,11 +34,11 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
 >  Os termos *obsoleto* e *preterido* têm o mesmo significado quando aplicados aos tipos e membros do .NET Framework.  
   
 ## <a name="the-obsoleteattribute-attribute"></a>O atributo ObsoleteAttribute  
- O .NET Framework indica que um tipo ou um membro de tipo está obsoleto marcando-o com o atributo <xref:System.ObsoleteAttribute> . A aplicação do atributo a um tipo ou um membro indica que esse tipo ou membro será removido em qualquer versão futura do .NET Framework sem interromper o código compilado que usa esse membro.  
+ O .NET Framework indica que um tipo ou um membro de tipo está obsoleto marcando-o com o atributo <xref:System.ObsoleteAttribute>. A aplicação do atributo a um tipo ou um membro indica que esse tipo ou membro será removido em qualquer versão futura do .NET Framework sem interromper o código compilado que usa esse membro.  
   
- Além de indicar que um tipo ou membro de tipo está obsoleto, <xref:System.ObsoleteAttribute> define como o compilador trata o código-fonte que inclui esse tipo ou membro. O compilador pode compilar o código, mas emite uma mensagem de aviso, ou pode tratar o uso do tipo ou do membro como um erro. No primeiro caso, o código pode ser compilado com êxito, mas uma mensagem de aviso indica que o tipo ou o membro é obsoleto. No segundo caso, a compilação falha.  
+ Além de indicar que um tipo ou membro de tipo é obsoleto, <xref:System.ObsoleteAttribute> define como o compilador identifica o código-fonte que inclui esse tipo ou membro. O compilador pode compilar o código, mas emite uma mensagem de aviso, ou pode tratar o uso do tipo ou do membro como um erro. No primeiro caso, o código pode ser compilado com êxito, mas uma mensagem de aviso indica que o tipo ou o membro é obsoleto. No segundo caso, a compilação falha.  
   
- Mesmo se a compilação produzir um erro em vez de uma mensagem de aviso, <xref:System.ObsoleteAttribute> não afetará o comportamento do tempo de execução. Ou seja, os aplicativos que usam o tipo ou o membro e que são compilados com êxito sempre terão êxito. Somente a tentativa de recompilar um aplicativo que use o tipo ou o membro falha.  
+ Mesmo se a compilação produzir um erro em vez de uma mensagem de aviso, o <xref:System.ObsoleteAttribute> não afetará o comportamento do tempo de execução. Ou seja, os aplicativos que usam o tipo ou o membro e que são compilados com êxito sempre terão êxito. Somente a tentativa de recompilar um aplicativo que use o tipo ou o membro falha.  
   
 ## <a name="how-to-handle-obsolete-types-and-members"></a>Como identificar tipos e membros obsoletos  
  Quando você atualiza e depois recompila o código existente, o uso de um tipo ou de um membro obsoleto que produza um aviso do compilador em seu aplicativo é perfeitamente aceitável. No entanto, você deve examinar a mensagem de aviso do compilador para determinar se você deve alterar o código do aplicativo. Se a mensagem não apontar para uma alternativa adequada, você deverá fazer o seguinte:  
@@ -92,3 +92,4 @@ O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos ti
   
 ## <a name="see-also"></a>Consulte também  
  Elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

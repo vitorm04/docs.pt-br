@@ -1,0 +1,1 @@
+XAML (BAML) binário

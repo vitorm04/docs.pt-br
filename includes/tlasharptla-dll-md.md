@@ -1,0 +1,1 @@
+DLL (biblioteca de vínculo dinâmico)

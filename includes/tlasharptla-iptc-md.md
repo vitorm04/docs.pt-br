@@ -1,0 +1,1 @@
+IPTC (Conselho de Imprensa Internacional das Telecomunicações)

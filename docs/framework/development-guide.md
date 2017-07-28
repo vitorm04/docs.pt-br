@@ -1,5 +1,5 @@
 ---
-title: Guia de Desenvolvimento do .NET Framework | Microsoft Docs
+title: Guia de Desenvolvimento do .NET Framework
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -16,10 +16,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: b630f2dc91068168b1d57b37ad80d79f5e3d1738
-ms.openlocfilehash: 88219e428409a71eb2706c97dca31ccde38bb918
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-development-guide"></a>Guia de Desenvolvimento do .NET Framework
@@ -78,7 +79,7 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
  Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
   
 ## <a name="reference"></a>Referência  
- [Biblioteca de classes .NET Framework](https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.7)  
+ [Biblioteca de classes .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Fornece sintaxe, exemplos de código e informações de uso para cada classe contida nos namespaces [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -93,3 +94,4 @@ Esta seção explica como criar, configurar, depurar, proteger e implantar aplic
   
  [Exemplos do .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  Fornece links para a Galeria de Exemplos de Código do MSDN com exemplos de aplicativos que demonstram tecnologias .NET Framework.
+

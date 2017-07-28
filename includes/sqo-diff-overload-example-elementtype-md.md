@@ -1,0 +1,2 @@
+> [!NOTE]
+>  Este exemplo de código usa uma sobrecarga desse método sobrecarregado que é diferente da sobrecarga específica descrita neste tópico. Para estender o exemplo para este tópico, substitua os elementos da sequência de origem por elementos do tipo numérico adequado.
