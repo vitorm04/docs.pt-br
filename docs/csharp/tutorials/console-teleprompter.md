@@ -1,5 +1,5 @@
 ---
-title: Aplicativo de console | Microsoft Docs
+title: Aplicativo do Console
 description: "Este tutorial ensina vários recursos no .NET Core e da linguagem C#."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,33 +11,29 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 7e8cc0ed7093a90a51d1b0c50123adb73ca968aa
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 360e93af03e00547116d1af1816c2b9b29524881
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Aplicativo do Console
-<a id="console-application" class="xliff"></a>
+# <a name="console-application"></a>Aplicativo do Console
 
-## Introdução
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>Introdução
 Este tutorial ensina vários recursos no .NET Core e da linguagem C#. Você aprenderá:
-*    As noções básicas da CLI (Interface de Linha de Comando) do .NET Core
-*    A estrutura de um aplicativo de console C#
-*    E/S do Console
-*    Fundamentos das APIs de E/S de arquivo no .NET Core
-*    Os fundamentos do modelo de programação assíncrona de tarefa no .NET Core
+*   As noções básicas da CLI (Interface de Linha de Comando) do .NET Core
+*   A estrutura de um aplicativo de console C#
+*   E/S do Console
+*   Fundamentos das APIs de E/S de arquivo no .NET Core
+*   Os fundamentos do modelo de programação assíncrona de tarefa no .NET Core
 
 Você compilará um aplicativo que lê um arquivo de texto e exibe o conteúdo desse arquivo de texto no console. A saída para o console será conduzida a fim de corresponder à leitura em voz alta. Você pode acelerar ou diminuir o ritmo pressionando as teclas ‘<’ ou ‘>’.
 
 Há vários recursos neste tutorial. Vamos compilá-los individualmente. 
-## Pré-requisitos
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Pré-requisitos
 Você precisará configurar seu computador para executar o .NET Core. Você encontrará as instruções de instalação na página do [.NET Core](https://www.microsoft.com/net/core). Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. 
-## Criar o aplicativo
-<a id="create-the-application" class="xliff"></a>
+## <a name="create-the-application"></a>Criar o aplicativo
 A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
 
 Antes de começar as modificações, vamos percorrer as etapas para execução do aplicativo simples Hello World. Depois de criar o aplicativo, digite `dotnet restore` no prompt de comando. Esse comando executa o processo de restauração do pacote NuGet. O NuGet é um gerenciador de pacotes do .NET. Esse comando baixa qualquer uma das dependências ausentes para seu projeto. Como esse é um novo projeto, nenhuma das dependências foram aplicadas, portanto, a primeira execução baixará a estrutura do .NET Core. Após essa etapa inicial, você só precisará executar o `dotnet restore` ao adicionar novos pacotes dependentes, ou atualizar as versões de qualquer uma de suas dependências. Esse processo também cria o arquivo de bloqueio do projeto (project.lock.json) no diretório de seu projeto. Esse arquivo ajuda a gerenciar as dependências do projeto. Ele contém o local de todas as dependências do projeto. Você não precisa colocar o arquivo no controle do código-fonte; ele será gerado quando você executar `dotnet restore`. 
@@ -57,8 +53,7 @@ Essa instrução informa ao compilador que quaisquer tipos do namespace `System`
 namespace TeleprompterConsole
 ```
 
-## Como ler e exibir o arquivo
-<a id="reading-and-echoing-the-file" class="xliff"></a>
+## <a name="reading-and-echoing-the-file"></a>Como ler e exibir o arquivo
 O primeiro recurso a ser adicionado é a capacidade de ler um arquivo de texto e a exibição de todo esse texto para um console. Primeiro, vamos adicionar um arquivo de texto. Copie o arquivo [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) do repositório do GitHub para este [exemplo](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) no diretório de seu projeto. Isso servirá como o script de seu aplicativo. Se desejar obter informações sobre como baixar o aplicativo de exemplo para este tópico, consulte as instruções no tópico [Exemplos e Tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Em seguida, adicione o seguinte método em sua classe Program (logo abaixo do método `Main`):
@@ -104,8 +99,7 @@ foreach (var line in lines)
 
 Execute o programa (usando `dotnet run`, e você poderá ver todas as linhas impressa no console).  
 
-## Adicionar atrasos e formatar a saída
-<a id="adding-delays-and-formatting-output" class="xliff"></a>
+## <a name="adding-delays-and-formatting-output"></a>Adicionar atrasos e formatar a saída
 O que você possui está sendo exibido muito rápido para permitir a leitura em voz alta. Agora você precisa adicionar os atrasos na saída. Ao começar, você compilará parte do código principal que permite o processamento assíncrono. No entanto, essas primeiras etapas seguirão alguns antipadrões. Os antipadrões são indicados nos comentários durante a adição do código, e o código será atualizado em etapas posteriores.
 
 Há duas etapas nesta seção. Primeiro, você atualizará o método iterador a fim de retornar palavras individuais em vez de linhas inteiras. Isso é feito com estas modificações. Substitua a instrução `yield return line;` pelo seguinte código:
@@ -158,8 +152,7 @@ if (lineLength > 70)
  
 Execute o exemplo e você poderá ler em voz alta de acordo com o ritmo pré-configurado.
 
-## Tarefas assíncronas
-<a id="async-tasks" class="xliff"></a>
+## <a name="async-tasks"></a>Tarefas assíncronas
 Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, casos ele queira acelerar ou diminuir o ritmo da exibição do texto. Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
 A primeira etapa é criar um método de retorno @System.Threading.Tasks.Task assíncrono que representa o código que você criou até agora para ler e exibir o arquivo.
 
@@ -319,8 +312,7 @@ public void SetDone()
 }
 ```
 
-## Conclusão
-<a id="conclusion" class="xliff"></a>
+## <a name="conclusion"></a>Conclusão
 Este tutorial mostrou a você alguns recursos da linguagem C# e as bibliotecas .NET Core relacionadas ao trabalho em aplicativos de Console.
 Use esse conhecimento como base para explorar mais sobre a linguagem e sobre as classes apresentadas aqui. Você já viu os fundamentos de E/S do Arquivo e do Console, uso com bloqueio e sem bloqueio do modelo de programação assíncrono com base em tarefa, um tour pela linguagem C# e como os programas em C# são organizados, além da Interface de linha de comando e ferramentas do .NET Core.
  

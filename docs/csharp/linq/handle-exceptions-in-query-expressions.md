@@ -41,3 +41,4 @@ ms.lasthandoff: 05/10/2017
 
 ## <a name="see-also"></a>Consulte também  
  [Expressões de consulta LINQ](index.md)
+
