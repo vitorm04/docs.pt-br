@@ -1,5 +1,5 @@
 ---
-title: Interfaces (Visual Basic) | Microsoft Docs
+title: Interfaces (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,16 +33,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: a95f3cfc8213c6a34953ae3ce87c6f5da9c0f8ca
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1da2458f39886a5d5f0bbf17fd9e63550ed80adf
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="interfaces-visual-basic" class="xliff"></a>
-
-# Interfaces (Visual Basic)
+# <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 As *interfaces* definem as propriedades, os métodos e os eventos que as classes podem implementar. As interfaces permitem definir as funcionalidades como pequenos grupos de propriedades, de métodos e de eventos estreitamente relacionados. Isso reduz os problemas de compatibilidade, uma vez que é possível desenvolver implementações avançadas para as interfaces sem arriscar o código existente. Você pode adicionar novas funcionalidades a qualquer momento desenvolvendo interfaces e implementações adicionais.  
   
  Há vários outros motivos pelos quais você possa querer usar interfaces em vez da herança de classe:  
@@ -55,9 +53,7 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
 -   As interfaces são úteis quando você não pode usar herança de classe. Por exemplo, as estruturas não podem herdar de classes, mas podem implementar interfaces.  
   
-<a id="declaring-interfaces" class="xliff"></a>
-
-## Declarando interfaces  
+## <a name="declaring-interfaces"></a>Declarando interfaces  
  As definições de interface são colocadas entre as instruções `Interface` e `End Interface`. Após a instrução `Interface`, você pode adicionar uma instrução `Inherits` opcional que lista uma ou mais interfaces herdadas. As instruções `Inherits` devem preceder todas as outras instruções nos comentários de exceção de declaração. As instruções restantes na definição da interface devem ser as instruções `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure` e `Enum`. As interfaces não podem conter código de implementação nem instruções associadas ao código de implementação, como `End Sub` ou `End Property`.  
   
  Em um namespace, as instruções de interface são `Friend` por padrão, mas também podem ser declaradas explicitamente como `Public` ou `Friend`. As interfaces definidas em classes, em módulos, em interfaces e em estruturas são `Public` por padrão, mas também podem ser explicitamente declaradas como `Public`, `Friend`, `Protected` ou `Private`.  
@@ -69,19 +65,13 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
-<a id="implementing-interfaces" class="xliff"></a>
-
-## Implementando interfaces  
+## <a name="implementing-interfaces"></a>Implementando interfaces  
  A palavra reservada `Implements` do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] é usada de duas maneiras. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
   
-<a id="implements-statement" class="xliff"></a>
-
-### Instrução Implements  
+### <a name="implements-statement"></a>Instrução Implements  
  Se uma classe ou estrutura implementa uma ou mais interfaces, ela deve incluir a instrução `Implements` imediatamente após a instrução `Class` ou `Structure`. A instrução `Implements` exige uma lista de interfaces separadas por vírgula a serem implementadas por uma classe. A classe ou a estrutura deve implementar todos os membros da interface usando a palavra-chave `Implements`.  
   
-<a id="implements-keyword" class="xliff"></a>
-
-### Palavra-chave Implements  
+### <a name="implements-keyword"></a>Palavra-chave Implements  
  A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados. Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros. A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado. O nome de um membro que implementa um membro de interface pode usar qualquer identificador válido e não está limitado à convenção `InterfaceName_MethodName` usada em versões anteriores do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Por exemplo, o código a seguir mostra como declarar uma sub-rotina chamada `Sub1` que implementa um método de uma interface:  
@@ -98,9 +88,7 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  Você pode usar um membro particular para implementar um membro de interface. Quando um membro particular implementa um membro de uma interface, esse membro fica disponível por meio da interface, embora não esteja disponível diretamente em variáveis de objeto para a classe.  
   
-<a id="interface-implementation-examples" class="xliff"></a>
-
-### Exemplos de implementação de interface  
+### <a name="interface-implementation-examples"></a>Exemplos de implementação de interface  
  As classes que implementam uma interface devem implementar todas as suas propriedades, métodos e eventos.  
   
  O exemplo a seguir define duas interfaces. A segunda interface, `Interface2`, herda `Interface1` e define uma propriedade e um método adicionais.  
@@ -117,11 +105,10 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
  Você pode implementar uma propriedade readonly com uma propriedade readwrite (ou seja, você não precisa declará-la como readonly na classe sendo implementada).  Implementar uma interface significa implementar pelo menos os membros que a interface declara, mas você pode oferecer mais funcionalidades, como permitir que a propriedade seja gravável.  
   
-<a id="related-topics" class="xliff"></a>
-
-## Tópicos relacionados  
+## <a name="related-topics"></a>Tópicos relacionados  
   
 |Título|Descrição|  
 |-----------|-----------------|  
 |[Instruções passo a passo: criando e implementando interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.|  
 |[Variação em Interfaces Genéricas](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
+

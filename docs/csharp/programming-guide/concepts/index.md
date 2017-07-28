@@ -1,5 +1,5 @@
 ---
-title: "Conceitos de programação (C#) | Microsoft Docs"
+title: "Conceitos de programação (C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0100944b93943f269b031fe0da2370ffccf06dcb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8b914c6f820af1cd7de93fadc0d915261497f296
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-concepts-c"></a>Conceitos de programação (C#)
@@ -48,3 +49,4 @@ Esta seção explica conceitos de programação na linguagem C#.
 |||  
 |---|---|  
 |[Dicas de desempenho](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Discute várias regras básicas que podem ajudá-lo a aumentar o desempenho do seu aplicativo.|
+

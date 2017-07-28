@@ -1,5 +1,5 @@
 ---
-title: Cadeia de caracteres no Visual Basic | Microsoft Docs
+title: Cadeias de caracteres no Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3bfb94cf3b3e40164ccd9ff6021e1b624c963039
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05cb6db768779895ebf3e57a0feb7bb58c65fc2a
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="strings-in-visual-basic" class="xliff"></a>
-
-# Cadeias de caracteres no Visual Basic
+# <a name="strings-in-visual-basic"></a>Cadeias de caracteres no Visual Basic
 Esta seção descreve os conceitos básicos do uso de cadeias de caracteres no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
  Lista os tópicos que descrevem os conceitos básicos do uso de cadeias de caracteres no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -64,7 +60,6 @@ Esta seção descreve os conceitos básicos do uso de cadeias de caracteres no [
  [Instruções passo a passo: criptografando e descriptografando cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
  Demonstra como criptografar e descriptografar cadeias de caracteres usando a versão do provedor de serviços de criptografia do algoritmo DES triplo.  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Recursos da linguagem do Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)
+

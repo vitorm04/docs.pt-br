@@ -1,5 +1,5 @@
 ---
-title: "Associação inicial e tardia (Visual Basic) | Microsoft Docs"
+title: "Associação antecipada e tardia (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -39,16 +39,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 54b7e96c8b7cab8fba3dc295dfe124fcf3847118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 66a34580417fb8b4a814b237ec36ffe700b1b30a
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="early-and-late-binding-visual-basic" class="xliff"></a>
-
-# Associação antecipada e tardia (Visual Basic)
+# <a name="early-and-late-binding-visual-basic"></a>Associação antecipada e tardia (Visual Basic)
 O compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] executa um processo chamado `binding` quando um objeto é atribuído a uma variável de objeto. Um objeto é *associado inicialmente* quando ele é atribuído a uma variável declarada como de um tipo de objeto específico. Os objetos de associação inicial permitem que o compilador aloque memória e execute outras otimizações antes que um aplicativo seja executado. Por exemplo, o seguinte fragmento de código declara que uma variável é do tipo <xref:System.IO.FileStream>:  
   
  [!code-vb[VbVbalrOOP#90](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_1.vb)]  
@@ -59,17 +57,14 @@ O compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] executa um processo cha
   
  [!code-vb[VbVbalrOOP#91](../../../../visual-basic/misc/codesnippet/VisualBasic/early-and-late-binding_2.vb)]  
   
-<a id="advantages-of-early-binding" class="xliff"></a>
-
-## Vantagens da associação inicial  
+## <a name="advantages-of-early-binding"></a>Vantagens da associação inicial  
  Você deve usar objetos associação inicial sempre que possível, pois eles permitem que o compilador faça otimizações importantes que resultam em aplicativos mais eficientes. Os objetos de associação inicial são significativamente mais rápidos do que objetos de associação tardia e tornam seu código mais fácil de ler e manter informando exatamente quais tipos de objetos estão sendo usados. Outra vantagem da associação inicial é que ela permite que recursos úteis, como a conclusão de código automática e ajuda dinâmica, pois o IDE (ambiente de desenvolvimento integrado) [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] pode determinar exatamente com qual tipo de objeto você está trabalhando conforme você edita o código. A associação inicial reduz o número e a gravidade dos erros em tempo de execução porque ela permite que o compilador relate erros quando um programa é compilado.  
   
 > [!NOTE]
 >  A associação tardia só pode ser usada para acessar membros de tipo que são declarados como `Public`. Acessando membros declarados como `Friend` ou `Protected Friend` resulta em um erro em tempo de execução.  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>   
  [Tempo de vida do objeto: como os objetos são criados e destruídos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)   
  [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+

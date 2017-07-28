@@ -1,5 +1,5 @@
 ---
-title: "Interoperabilidade (Guia de Programação em C#) | Microsoft Docs"
+title: "Interoperabilidade (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,23 +30,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: be95d675d22dedcbf45c8eb1e8fd8d9f5ce0b56c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df2f33c4599baef6d606738cbe5766fdd88e4ef3
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="interoperability-c-programming-guide" class="xliff"></a>
-
-# Interoperabilidade (Guia de Programação em C#)
+# <a name="interoperability-c-programming-guide"></a>Interoperabilidade (Guia de Programação em C#)
 A interoperabilidade permite que você mantenha e aproveite os investimentos existentes em código não gerenciado. O código que é executado sob o controle do CLR (Common Language Runtime) é chamado de *código gerenciado*, e o código que é executado fora do CLR é chamado de *código não gerenciado*. COM, COM+, componentes do C++, componentes do ActiveX e a API do Microsoft Win32 são exemplos de código não gerenciado.  
   
  O [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] habilita a interoperabilidade com código não gerenciado por meio de serviços de invocação de plataforma, o namespace <xref:System.Runtime.InteropServices>, a interoperabilidade com C++ e a interoperabilidade COM.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Visão geral sobre interoperabilidade](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  Descreve métodos para fins de interoperabilidade entre código gerenciado em C# e código não gerenciado.  
   
@@ -65,15 +61,12 @@ A interoperabilidade permite que você mantenha e aproveite os investimentos exi
  [Exemplo de classe COM](../../../csharp/programming-guide/interop/example-com-class.md)  
  Demonstra como expor uma classe C# como um objeto COM.  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Interoperação com código não gerenciado](https://msdn.microsoft.com/library/sd10k43k)   
  [Passo a passo: programação do Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Exceções e manipulação de exceções (Guia de programação em C#) | Microsoft Docs"
+title: "Exceções e manipulação de exceções (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e9faf744717980468afb995eceeb31bda93443b9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e372cfa3239c39af86a29cda06b5817f0aeff0a2
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Exceções e manipulação de exceções (Guia de Programação em C#)
@@ -66,7 +66,7 @@ Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar c
   
 -   O código em um bloco `finally` será executado mesmo se uma exceção for lançada. Use um bloco `finally` para liberar recursos, por exemplo, para fechar todos os fluxos ou arquivos que foram abertos no bloco `try`.  
   
--   As exceções gerenciadas no .NET Framework são implementadas sobre o mecanismo de manipulação de exceções estruturadas do Win32. Para obter mais informações, consulte [Manipulação de exceções estruturadas (C/C++)](https://docs.microsoft.com/cpp/cpp/structured-exception-handling-c-cpp) e [Curso rápido sobre a manipulação de exceções estruturadas do Win32](http://go.microsoft.com/fwlink/?LinkId=119654).  
+-   As exceções gerenciadas no .NET Framework são implementadas sobre o mecanismo de manipulação de exceções estruturadas do Win32. Para obter mais informações, consulte [Manipulação de exceções estruturadas (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) e [Curso rápido sobre a manipulação de exceções estruturadas do Win32](http://go.microsoft.com/fwlink/?LinkId=119654).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  Consulte os tópicos a seguir para obter mais informações sobre exceções e manipulação de exceção:  
@@ -98,3 +98,4 @@ Os recursos de manipulação de exceção da linguagem C# ajudam você a lidar c
  [Hierarquia de exceções](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [Gravando código .NET confiável](http://go.microsoft.com/fwlink/?LinkId=112400)   
  [Minidespejos para exceções específicas](http://go.microsoft.com/fwlink/?LinkId=112408)
+

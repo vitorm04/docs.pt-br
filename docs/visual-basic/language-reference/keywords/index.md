@@ -1,5 +1,5 @@
 ---
-title: Palavras-chave (Visual Basic) | Microsoft Docs
+title: Palavras-chave (Visual Basic)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,11 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
