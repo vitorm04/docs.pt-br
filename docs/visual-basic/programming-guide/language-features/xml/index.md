@@ -1,5 +1,5 @@
 ---
-title: XML no Visual Basic | Microsoft Docs
+title: XML no Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,21 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5dd44fb1d3efe53ce37d17d91d522aeed7442ef9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7cfa2abbc5ec68f26561813552d491a4131d54b0
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="xml-in-visual-basic" class="xliff"></a>
-
-# XML no Visual Basic
+# <a name="xml-in-visual-basic"></a>XML no Visual Basic
 O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece suporte de linguagem integrado que o permite interagir com o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  Os tópicos nesta seção apresentam o uso do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] com o Visual Basic.  
   
 |Tópico|Descrição|  
@@ -56,10 +52,9 @@ O [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece suporte de linguagem integ
 |[Acessando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)|Descreve as propriedades do eixo XML e os métodos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para acessar atributos e elementos XML.|  
 |[XML IntelliSense no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md)|Descreve os recursos do IntelliSense fornecidos com o Visual Basic.|  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Linq>   
  [Literais do XML](../../../../visual-basic/language-reference/xml-literals/index.md)   
  [Propriedades do eixo XML](../../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
  [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)
+

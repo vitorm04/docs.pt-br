@@ -1,0 +1,1 @@
+PNG (formato PNG)

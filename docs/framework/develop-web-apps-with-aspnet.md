@@ -1,5 +1,5 @@
 ---
-title: Desenvolvendo aplicativos Web com o ASP.NET | Microsoft Docs
+title: Desenvolvendo aplicativos Web com o ASP.NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,10 +18,11 @@ caps.latest.revision: 14
 author: tdykstra
 ms.author: tdykstra
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b7d34542785ab1a621ec68784f49576d3e64e929
-ms.lasthandoff: 04/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 509590f6986fe7c2cd9e834ccea60193fe8da977
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="developing-web-applications-with-aspnet"></a>Desenvolvendo aplicativos Web com o ASP.NET
@@ -37,3 +38,4 @@ ASP.NET é uma tecnologia do .NET Framework para a criação de aplicativos Web.
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de desenvolvimento](../../docs/framework/development-guide.md)
+

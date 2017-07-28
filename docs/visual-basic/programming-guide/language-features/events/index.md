@@ -1,5 +1,5 @@
 ---
-title: Eventos (Visual Basic) | Microsoft Docs
+title: Eventos (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e4e92b4e47d7cc743233aff3aaa77232a74e789f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
@@ -133,3 +133,4 @@ Enquanto você visualiza um projeto [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 
 |[Eventos](../../../../standard/events/index.md)|Apresenta uma visão geral do modelo de evento no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
 |[Criando manipuladores de eventos no Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)|Descreve como trabalhar com eventos associados aos objetos do Windows Forms.|  
 |[Delegados](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Fornece uma visão geral de delegados no Visual Basic.|
+

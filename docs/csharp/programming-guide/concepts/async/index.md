@@ -1,5 +1,5 @@
 ---
-title: "Programação assíncrona com Async e Await (C#) | Microsoft Docs"
+title: "Programação assíncrona com async e await (C#)"
 ms.date: 2017-05-22
 ms.prod: .net
 ms.technology:
@@ -16,16 +16,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 45d2357336b6ffade3a9767ff13343cdfc2965be
-ms.openlocfilehash: a7c89d56bb3d2c40804ae7a2cc191a0f2f722764
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d087951ce3e3f05c7f1e8f9c99529eab2f76b8d5
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="asynchronous-programming-with-async-and-await-c" class="xliff"></a>
-
-# Programação assíncrona com async e await (C#)
+# <a name="asynchronous-programming-with-async-and-await-c"></a>Programação assíncrona com async e await (C#)
 É possível evitar gargalos de desempenho e aprimorar a resposta geral do seu aplicativo usando a programação assíncrona. No entanto, as técnicas tradicionais para escrever aplicativos assíncronos podem ser complicadas, dificultando sua escrita, depuração e manutenção.  
   
 O [C# 5](../../../whats-new/index.md#previous-versions) apresentou uma programação assíncrona de abordagem simplificada que aproveita o suporte assíncrono no .NET Framework 4.5 e superior, no .NET Core e no Windows Runtime. O compilador faz o trabalho difícil que o desenvolvedor costumava fazer, e seu aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, você obtém todas as vantagens da programação assíncrona com uma fração do esforço.  
@@ -350,9 +348,7 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [async](../../../../csharp/language-reference/keywords/async.md)   
  [await](../../../../csharp/language-reference/keywords/await.md)
 

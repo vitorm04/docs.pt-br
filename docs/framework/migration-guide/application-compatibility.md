@@ -1,5 +1,5 @@
 ---
-title: Compatibilidade de aplicativos no .NET Framework | Microsoft Docs
+title: Compatibilidade de aplicativos no .NET Framework
 ms.custom: 
 ms.date: 05/19/2017
 ms.prod: .net-framework
@@ -19,41 +19,37 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d0d39f1d6d15dc2757387ea83d3a0f868f6ec17
-ms.openlocfilehash: 9169b8ec118ed0d9ab3f05eec47317cf68551754
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Compatibilidade de aplicativos no .NET Framework
-<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
+# <a name="application-compatibility-in-the-net-framework"></a>Compatibilidade de aplicativos no .NET Framework
 
-## Introdução
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>Introdução
+
 A compatibilidade é uma meta muito importante de cada versão do .NET. A compatibilidade garante que cada versão é aditiva e, portanto, as versões anteriores ainda funcionarão. Por outro lado, as alterações na funcionalidade anterior (para melhorar o desempenho, resolver problemas de segurança ou corrigir bugs) podem causar problemas de compatibilidade no código ou nos aplicativos existentes que são executados em uma versão posterior. O .NET Framework reconhece as alterações de redirecionamento e de tempo de execução. As alterações de redirecionamento afetam os aplicativos que se destinam a uma versão específica do .NET Framework, mas que são executados em uma versão posterior. As alterações de tempo de execução afetam todos os aplicativos executados em uma versão específica.
 
 Cada aplicativo se destina a uma versão específica do .NET Framework, que pode ser especificada por meio da:
 
-* Definição de uma estrutura de destino no Visual Studio.
-* Especificação da estrutura de destino em um arquivo de projeto.
-* Aplicação de um <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ao código-fonte.
+- Definição de uma estrutura de destino no Visual Studio.
+- Especificação da estrutura de destino em um arquivo de projeto.
+- Aplicação de um <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ao código-fonte.
 
 Quando for executado em uma versão mais recente do que a versão à qual foi destinado, o .NET Framework usará o comportamento peculiar para simular a versão de destino mais antiga. Em outras palavras, o aplicativo será executado na versão mais recente do Framework, mas atuará como se estivesse sendo executado na versão mais antiga. Muitos dos problemas de compatibilidade entre versões do .NET Framework são atenuados com esse modelo de peculiaridade.
 
-## Alterações em tempo de execução
-<a id="runtime-changes" class="xliff"></a>
+## <a name="runtime-changes"></a>Alterações em tempo de execução
 
 Problemas de tempo de execução são aqueles que surgem quando um novo tempo de execução é colocado em um computador e os mesmos binários são executados, mas um comportamento diferente é observado. Se um binário foi compilado para o .NET Framework 4.0, ele será executado no modo de compatibilidade do .NET Framework 4.0 na versão 4.5 ou em versões posteriores. Muitas das alterações que afetam a versão 4.5 não afetarão um binário compilado para a versão 4.0. Isso é específico a um AppDomain e depende das configurações do assembly de entrada.
 
-## Alterações de redirecionamento
-<a id="retargeting-changes" class="xliff"></a>
+## <a name="retargeting-changes"></a>Alterações de redirecionamento
 
 Problemas de redirecionamento são aqueles que surgem quando um assembly que era destinado à versão 4.0 agora está definido para ter a versão 4.5 como destino. Agora o assembly aceita os novos recursos, bem como os possíveis problemas de compatibilidade dos recursos antigos. Novamente, isso é determinado pelo assembly de entrada e, portanto, o aplicativo de console que usa o assembly ou o site que referencia o assembly.
 
-## Diagnóstico de Compatibilidade do .NET
-<a id="net-compatibility-diagnostics" class="xliff"></a>
+## <a name="net-compatibility-diagnostics"></a>Diagnóstico de Compatibilidade do .NET
 
 O Diagnóstico de Compatibilidade do .NET são analisadores capacitados pelo Roslyn que ajudam a identificar problemas de compatibilidade de aplicativos entre versões do .NET Framework. Esta lista contém todos os analisadores disponíveis, embora apenas um subconjunto seja aplicado a qualquer migração específica. Os analisadores determinarão quais problemas se aplicam à migração planejada e os trará à tona.
 
@@ -85,18 +81,17 @@ Cada problema inclui as seguintes informações:
 
 -   As IDs do diagnóstico disponível
 
-## Uso
-<a id="usage" class="xliff"></a>
+## <a name="usage"></a>Uso
+
 Para começar, selecione o tipo de alteração de compatibilidade abaixo:
 
-* [Alterações de redirecionamento](./retargeting/index.md)
-* [Alterações no tempo de execução](./runtime/index.md)
+- [Alterações de redirecionamento](./retargeting/index.md)
+- [Alterações no tempo de execução](./runtime/index.md)
 
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 
-* [Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [Novidades](../../../docs/framework/whats-new/index.md)
-* [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)
+[Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
+[Novidades](../../../docs/framework/whats-new/index.md)   
+[O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md)
 

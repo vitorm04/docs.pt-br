@@ -1,5 +1,5 @@
 ---
-title: "Referência (Visual Basic) | Microsoft Docs"
+title: "Referência (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: c730caa8b3beaa3e26e63b324a5394a4a0c46d64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c341ec68a12019814d0185cab9b89ad5928d171
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-visual-basic"></a>Referência (Visual Basic)
@@ -48,7 +48,7 @@ Esta seção fornece links para informações de referência sobre vários aspec
  [Informações de Referência do .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
  Fornece links para informações sobre como trabalhar com a biblioteca de classe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- [Especificação da linguagem do Visual Basic](../../visual-basic/reference/language-specification.md)  
+ [Especificação da linguagem do Visual Basic](../../visual-basic/reference/language-specification/index.md)  
  Fornece links para a conclusão da especificação do idioma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que contêm informações detalhadas sobre todos os aspectos do idioma.  
   
 ## <a name="reference"></a>Referência  
@@ -59,11 +59,12 @@ Esta seção fornece links para informações de referência sobre vários aspec
  Este namespace fornece um componente que habilita você a imprimir um fax de forma conforme aparece na tela.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Elementos gerais de interface do usuário (Visual Studio)](https://docs.microsoft.com/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ [Elementos gerais de interface do usuário (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  Contém tópicos para caixas de diálogo e janelas usadas no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Ferramentas XML no Visual Studio](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ [Ferramentas XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Fornece links para tópicos em várias ferramentas XML disponíveis em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Referência de automação e extensibilidade](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  Fornece links para tópicos abrangendo automação e extensibilidade no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], para componentes compartilhados e de idioma específico.
+

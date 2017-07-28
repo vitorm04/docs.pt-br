@@ -1,5 +1,5 @@
 ---
-title: "Quando usar uma coleção thread-safe | Microsoft Docs"
+title: "Quando usar uma coleção thread-safe"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 87898a4a6ba3d3ef4c53fd1c6b8f94ff353f10e4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5166b7b7be38fae9bf809cb0b3aa79b76efd41ac
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Quando usar uma coleção thread-safe
@@ -74,3 +74,4 @@ O [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] apresenta ci
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
  [Coleções thread-safe](../../../../docs/standard/collections/thread-safe/index.md)   
  [Programação paralela](../../../../docs/standard/parallel-programming/index.md)
+

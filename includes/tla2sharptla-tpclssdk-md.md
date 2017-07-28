@@ -1,0 +1,1 @@
+SDK 1.7 do Tablet

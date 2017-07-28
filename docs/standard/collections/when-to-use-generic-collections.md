@@ -1,5 +1,5 @@
 ---
-title: "Quando usar coleções genéricas | Microsoft Docs"
+title: "Quando usar coleções genéricas"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,11 +16,11 @@ caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9dcf0802b1d9a1d6b63d108289cbc814b73e8c48
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 465939bca9e0300300efef9842f312800817a5cc
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="when-to-use-generic-collections"></a>Quando usar coleções genéricas
@@ -65,3 +65,4 @@ Geralmente é recomendável usar coleções genéricas, porque você obtém a va
  [Coleções e estruturas de dados](../../../docs/standard/collections/index.md)   
  [Tipos de coleção de uso comum](../../../docs/standard/collections/commonly-used-collection-types.md)   
  [Genéricos](../../../docs/standard/generics/index.md)
+

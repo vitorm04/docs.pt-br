@@ -1,5 +1,5 @@
 ---
-title: Bem-vindo ao .NET | Microsoft Docs
+title: Bem-vindo ao .NET
 description: "Introdução à família de tecnologias do .NET."
 keywords: ".NET, .NET Core, introdução, notícias"
 author: richlander
@@ -9,25 +9,21 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="welcome-to-net" class="xliff"></a>
-
-# Bem-vindo ao .NET
+# <a name="welcome-to-net"></a>Bem-vindo ao .NET
 
 Confira a [Introdução ao .NET Core](core/get-started.md) para saber como criar aplicativos do .NET Core.
 
 Crie vários tipos de aplicativos com o .NET, como nuvem, IoT e jogos usando ferramentas gratuitas de plataforma cruzada. Seus aplicativos podem ser executados em Android, iOS, Linux, macOS e Windows. Implante aplicativos em servidores ou em desktops e publique em lojas de aplicativos para implantação em dispositivos móveis. O .NET está disponível para estudantes e amadores, e todos são bem-vindos a participar de uma comunidade dinâmica de desenvolvedores internacionais e a fazer contribuições diretas para muitas das tecnologias do .NET.
 
-<a id="news" class="xliff"></a>
-
-## Notícias
+## <a name="news"></a>Notícias
 
 - [Apresentando o .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
 - [Apresentando o .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)
@@ -44,9 +40,7 @@ Crie vários tipos de aplicativos com o .NET, como nuvem, IoT e jogos usando fer
 - [A semana no .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)
 - [Build 2017 no Channel 9 – vídeo sobre as notícias e tecnologias mais recentes da Microsoft!](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)
 
-<a id="documentation" class="xliff"></a>
-
-## Documentação
+## <a name="documentation"></a>Documentação
 
 Esta documentação abrange a extensão do .NET entre plataformas e linguagens.  Você pode começar com o .NET e suas linguagens em qualquer uma das seções a seguir:
 
@@ -57,11 +51,9 @@ Esta documentação abrange a extensão do .NET entre plataformas e linguagens. 
 - [Guia do F#](fsharp/index.md)
 - [Guia do Visual Basic](visual-basic/index.md)
 
-Além disso, você pode procurar a [referência da API .NET](https://docs.microsoft.com/dotnet/api).
+Além disso, você pode procurar a [referência da API .NET](/dotnet/api).
 
-<a id="open-source" class="xliff"></a>
-
-## Código Aberto
+## <a name="open-source"></a>Código Aberto
 
 Esta documentação é totalmente de [software livre](https://github.com/dotnet/docs).  Você pode contribuir na maneira que desejar, desde criar problemas até escrever a documentação.  Além disso, grande parte do .NET em si é um software livre:
 

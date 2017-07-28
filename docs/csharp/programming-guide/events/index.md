@@ -1,5 +1,5 @@
 ---
-title: "Eventos (Guia de Programação em C#) | Microsoft Docs"
+title: "Eventos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,23 +30,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: b3f4673eccdbd568fa8ab042023a4b3bd8230bb3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a913a615de8185bb358376def1e2a051bdaa951
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="events-c-programming-guide" class="xliff"></a>
-
-# Eventos (Guia de Programação em C#)
+# <a name="events-c-programming-guide"></a>Eventos (Guia de Programação em C#)
 Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/class.md) ou objeto notifique outras classes ou objetos quando algo interessante ocorre. A classe que envia (ou *aciona*) o evento é chamada de *editor* e as classes que recebem (ou *manipulam*) os eventos são chamadas *assinantes*.  
   
  Em um aplicativo Windows Forms em C# ou Web típico, você assina eventos acionados pelos controles, como botões e caixas de listagem. Você pode usar o IDE [!INCLUDE[csprcs](~/includes/csprcs-md.md)] (ambiente de desenvolvimento integrado) para procurar os eventos que um controle publica e selecionar aqueles que você deseja manipular. O IDE adiciona automaticamente um método de manipulador de eventos vazio e o código para assinar o evento. Para obter mais informações, consulte [Como realizar e cancelar a assinatura de eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).  
   
-<a id="events-overview" class="xliff"></a>
-
-## Visão geral sobre eventos  
+## <a name="events-overview"></a>Visão geral sobre eventos  
  Os eventos têm as seguintes propriedades:  
   
 -   O editor determina quando um evento é acionado. Os assinantes determinam a ação que é executada em resposta ao evento.  
@@ -61,9 +57,7 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
   
 -   Na biblioteca de classes do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], os eventos são baseados no delegado <xref:System.EventHandler> e na classe base <xref:System.EventArgs>.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  Para obter mais informações, consulte:  
   
 -   [Como realizar e cancelar a assinatura de eventos](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)  
@@ -80,23 +74,18 @@ Eventos permitem que uma [classe](../../../csharp/language-reference/keywords/cl
   
 -   [Como implementar acessadores de eventos personalizados](../../../csharp/programming-guide/events/how-to-implement-custom-event-accessors.md)  
   
-<a id="c-language-specification" class="xliff"></a>
-
-## Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da Linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-<a id="featured-book-chapters" class="xliff"></a>
-
-## Capítulos do Livro em Destaque  
+## <a name="featured-book-chapters"></a>Capítulos do Livro em Destaque  
  [Expressões lambda, eventos e delegados](http://go.microsoft.com/fwlink/?LinkId=195395) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  
   
  [Delegados e eventos](http://go.microsoft.com/fwlink/?LinkId=195418) em [Learning C# 3.0: Master the fundamentals of C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195412)  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  <xref:System.EventHandler>   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)   
  [Criando manipuladores de eventos no Windows Forms](https://msdn.microsoft.com/library/dacysss4.aspx)   
  [Programação multi-threaded com o padrão assíncrono baseado em evento](https://msdn.microsoft.com/library/hkasytyf)
+

@@ -1,5 +1,5 @@
 ---
-title: "Referência de C# | Microsoft Docs"
+title: "Referência de C#"
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-reference"></a>Referência de C#
@@ -61,7 +61,7 @@ Esta seção fornece o material de referência sobre palavras-chave do C#, opera
  [Erros do Compilador do C#](../../csharp/language-reference/compiler-messages/index.md)  
  Inclui trechos de código que demonstram a causa e a correção de erros do compilador do C# e avisos.  
   
- [C# Language Specification](../../csharp/language-reference/language-specification.md) (Especificação da linguagem C#)  
+ [C# Language Specification](../../csharp/language-reference/language-specification/index.md) (Especificação da linguagem C#)  
  Fornece ponteiros para a versão mais recente da especificação de linguagem do C# no formato Microsoft Word.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
@@ -75,7 +75,7 @@ Esta seção fornece o material de referência sobre palavras-chave do C#, opera
  [C#](../../csharp/csharp.md)  
  Fornece um portal para a documentação do Visual C#.  
   
- [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Fornece links para tópicos conceituais e de tarefas que descrevem o IDE e o Editor.  
   
  [Guia de Programação em C#](../../csharp/programming-guide/index.md)  

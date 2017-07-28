@@ -1,5 +1,5 @@
 ---
-title: "Guia de Introdução ao .NET Core | Microsoft Docs"
+title: "Introdução ao .NET Core"
 description: Encontre recursos para aprender a criar aplicativos .NET Core no Windows, Linux e macOS.
 keywords: .NET, .NET Core
 author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 890e6af3095866608e9c91ea26b4d0edb6d81e29
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-net-core" class="xliff"></a>
-
-# Introdução ao .NET Core
+# <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
 O .NET Core é executado em [Windows](#windows), [Linux](#linux) e [macOS / OS X](#os-x--macos).
 
-<a id="windows" class="xliff"></a>
-
-## Windows
+## <a name="windows"></a>Windows
 
 Instalar o .NET Core no [Windows](https://www.microsoft.com/net/core#windows). 
 
@@ -39,9 +35,7 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 
 Consulte o tópico de [Desenvolvimento de pré-requisitos para o Windows](windows-prerequisites.md) para ver uma lista das versões do Windows com suporte. 
 
-<a id="linux" class="xliff"></a>
-
-## Linux
+## <a name="linux"></a>Linux
 
 Instale o .NET Core na sua distribuição/versão:
 
@@ -59,9 +53,7 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 
 O .NET Core tem suporte nas distribuições e versões do Linux listadas acima nos links de instalação.
 
-<a id="os-x--macos" class="xliff"></a>
-
-## OS X / macOS
+## <a name="os-x--macos"></a>OS X / macOS
 
 Instalar o .NET Core para [macOS](https://www.microsoft.com/net/core#macos). Há suporte para o .NET Core no OS X El Capitan (versão 10.11) no macOS Sierra (versão 10.12).
 

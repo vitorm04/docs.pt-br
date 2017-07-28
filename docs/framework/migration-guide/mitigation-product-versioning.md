@@ -1,5 +1,5 @@
 ---
-title: "Mitigação: controle de versão de produto | Microsoft Docs"
+title: "Mitigação: Controle de versão de produto"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a6bf9656dee0e6074a8341997abb0e73dc3666f5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c69eaefde812d8910ebfc329765d0571701da25
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-product-versioning"></a>Mitigação: Controle de versão de produto
@@ -52,3 +52,4 @@ Na [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e posterior, o controle 
 ## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
  
+

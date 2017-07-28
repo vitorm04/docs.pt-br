@@ -1,5 +1,5 @@
 ---
-title: Aplicativos de 64 bits | Microsoft Docs
+title: Aplicativos de 64 bits
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="64-bit-applications"></a>Aplicativos de 64 bits
@@ -74,3 +74,4 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
  Para determinar se um arquivo .exe ou .dll deve ser executado apenas em uma plataforma específica ou no WOW64, use [CorFlags.exe (Ferramenta de Conversão CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) sem opções. Você também pode usar CorFlags.exe para alterar o status da plataforma de um arquivo .exe ou .dll. O cabeçalho CLR de um assembly do Visual Studio tem o número de versão principal do tempo de execução definido como 2 e o número de versão secundário do tempo de execução definido como 5. Os aplicativos que têm a versão secundária do tempo de execução definida como 0 são tratados como aplicativos herdados e são sempre executados no WOW64.  
   
  Para consultar programaticamente um .exe ou .dll para saber se ele deve ser executado somente em uma plataforma específica ou no WOW64, use o método <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName>.
+

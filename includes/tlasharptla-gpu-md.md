@@ -1,0 +1,1 @@
+GPU (unidade de processamento gráfico)

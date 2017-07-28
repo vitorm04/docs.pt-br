@@ -1,5 +1,5 @@
 ---
-title: "Código não seguro e ponteiros (Guia de programação em C#) | Microsoft Docs"
+title: "Código não seguro e ponteiros (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a6c139941f0ba2dfc413a79e170241fac8507521
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75e11b34f0749270650e0e5b5a2a191a1b9e9f9a
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Código não seguro e ponteiros (Guia de Programação em C#)
@@ -76,3 +76,4 @@ Para manter a segurança de tipos e a segurança, o C# não dá suporte à aritm
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+

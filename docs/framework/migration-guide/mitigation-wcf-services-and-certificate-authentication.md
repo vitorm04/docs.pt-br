@@ -1,5 +1,5 @@
 ---
-title: "Mitigação: serviços WCF e autenticação de certificado | Microsoft Docs"
+title: "Mitigação: serviços WCF e autenticação de certificado"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,23 +15,20 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
-# Mitigação: serviços WCF e autenticação de certificado
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mitigação: serviços WCF e autenticação de certificado
 O .NET Framework 4.6 adiciona o TLS 1.1 e o TLS 1.2 à lista padrão de protocolos SSL do WCF. Quando os computadores cliente e servidor têm o .NET Framework 4.6 ou posteriores instalados, o TLS 1.2 é usado para negociação.  
   
-<a id="impact" class="xliff"></a>
-## Impacto  
+## <a name="impact"></a>Impacto  
  O TLS 1.2 não dá suporte à autenticação do certificado MD5. Consequentemente, se um cliente usar um certificado SSL que use MD5 para o algoritmo de hash, o cliente WCF falhará ao se conectar ao serviço WCF. Para saber mais, confira [Mitigation: WCF Services and Certificate Authentication](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md) (Mitigação: serviços WCF e autenticação de certificado).  
   
-<a id="mitigation" class="xliff"></a>
-## Redução  
+## <a name="mitigation"></a>Redução  
  Você pode contornar esse problema para que um cliente WCF possa se conectar a um servidor WCF seguindo um destes procedimentos:  
   
 -   Atualize o certificado para não usar o algoritmo MD5. Esta é a solução recomendada.  
@@ -67,7 +64,6 @@ O .NET Framework 4.6 adiciona o TLS 1.1 e o TLS 1.2 à lista padrão de protocol
     > [!CAUTION]
     >  Essa solução alternativa não é recomendada, pois um certificado com o algoritmo de hash MD5 é considerado inseguro.  
   
-<a id="see-also" class="xliff"></a>
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Alterações no tempo de execução](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 

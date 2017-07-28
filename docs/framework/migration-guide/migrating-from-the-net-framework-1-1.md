@@ -1,5 +1,5 @@
 ---
-title: Migrar do .NET Framework 1.1 | Microsoft Docs
+title: Migrar do .NET Framework 1.1
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5757894a63ed556413147b8ef8c85c2d31ef11a5
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migrar do .NET Framework 1.1
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/18/2017
   
 -   [Alterações no .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkID=186989) documenta alterações entre o[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] e o [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].  
   
--   [Problemas de migração do .NET Framework 4](http://msdn.microsoft.com/library/ee941656\(v=vs.100\).aspx) documenta alterações entre o [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] e o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+-   [Problemas de migração do .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) documenta alterações entre o [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] e o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
 ## <a name="obsolete-types-and-members"></a>Tipos e membros obsoletos  
  O impacto de tipos e membros substituídos é um pouco diferente para aplicativos redirecionados e aplicativos recompilados. O uso de tipos e de membros obsoletos não afetará um aplicativo que foi escolhido novamente como destino, a menos que o tipo ou membro obsoleto tenha sido removido fisicamente do assembly. A recompilação de um aplicativo que usa tipos ou associados obsoletos geralmente resulta em um aviso de compilador, em vez de um erro do compilador. No entanto, em alguns casos, ele produz um erro do compilador, e o código que usa o tipo ou membro obsoleto não é compilado com êxito. Neste caso, você deve reescrever o código-fonte que chama o tipo ou membro obsoleto antes de recompilar seu aplicativo. Para saber mais sobre os tipos e membros obsoletos, veja [O que está obsoleto na Biblioteca de Classes](../../../docs/framework/whats-new/whats-obsolete.md).  

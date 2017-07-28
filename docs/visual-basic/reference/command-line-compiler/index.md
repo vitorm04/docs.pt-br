@@ -1,5 +1,5 @@
 ---
-title: Compilador de linha de comando do Visual Basic | Microsoft Docs
+title: Compilador de linha de comando do Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7c62eb47ba748cb119855e9a3987cab8c6a5b74b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 850aac4098dc22bacd377362f7886fa70219d365
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-command-line-compiler" class="xliff"></a>
-
-# Compilador de linha de comando do Visual Basic
+# <a name="visual-basic-command-line-compiler"></a>Compilador de linha de comando do Visual Basic
 O compilador de linha de comando do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] fornece alternativa para compilar programas no IDE (ambiente de desenvolvimento integrado) do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Esta seção contém descrições para as opções do compilador [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Compilando da Linha de Comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
  Descreve o compilador de linha de comando [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que é fornecido como uma alternativa para compilar programas de dentro do IDE [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
@@ -57,11 +53,10 @@ O compilador de linha de comando do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 
  [Opções do compilador do Visual Basic listadas por categoria](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
  Apresenta opções de compilador in grupos funcionais.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [NIB: gerenciando propriedades do projeto com o Designer de Projeto](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e)  
  Discute como usar o Designer de Projeto para especificar as configurações globais para seu projeto.  
   
  [Visual Basic](../../../visual-basic/index.md)  
  O ponto de partida para a Ajuda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+

@@ -1,5 +1,5 @@
 ---
-title: "Referência da linguagem Visual Basic | Microsoft Docs"
+title: "Referência da linguagem Visual Basic"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Referência da linguagem Visual Basic
+# <a name="visual-basic-language-reference"></a>Referência da linguagem Visual Basic
 Esta seção fornece informações de referência para vários aspectos da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
-<a id="in-this-section" class="xliff"></a>
-
-## Nesta seção  
+## <a name="in-this-section"></a>Nesta seção  
  [Convenções Tipográficas e de Código](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  Resume como palavras-chave, espaços reservados e outros elementos da linguagem são formatados na documentação do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
@@ -108,11 +104,10 @@ Esta seção fornece informações de referência para vários aspectos da lingu
  [Mensagens de Erro](../../visual-basic/language-reference/error-messages/index.md)  
  Fornece uma lista de mensagens de erro em tempo de execução e do compilador do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] e ajuda a tratá-los.  
   
-<a id="related-sections" class="xliff"></a>
-
-## Seções relacionadas  
+## <a name="related-sections"></a>Seções relacionadas  
  [Visual Basic](../../visual-basic/index.md)  
  Fornece ajuda abrangente sobre todas as áreas da linguagem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Descreve como usar o compilador de linha de comando como alternativa para compilar programas no IDE (ambiente de desenvolvimento integrado) do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
+
