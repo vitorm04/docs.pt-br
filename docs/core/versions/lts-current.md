@@ -1,5 +1,5 @@
 ---
-title: Suporte do .NET Core | Microsoft Docs
+title: Suporte do .NET Core
 description: "Saiba mais sobre os diferentes suportes de séries de versões (LTS e Atual) para .NET Core"
 keywords: ".NET, .NET Core, lts, atual, fts, suporte, séries de suporte, acompanhamentos de suporte, Ciclo de vida, séries de versões"
 author: kendrahavens
@@ -9,9 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-translationtype: Human Translation
-ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
-ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -41,8 +43,4 @@ Para entender quais alterações específicas, como correções de bugs ou a adi
 ### <a name="further-reading"></a>Leitura adicional
 * [Folha informativa sobre o ciclo de vida do suporte do .NET Core](https://www.microsoft.com/net/core/support)
 * [Versões e sistemas operacionais com suporte atualmente](https://github.com/dotnet/core/blob/master/roadmap.md)
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "Introdução ao .NET Core no macOS | Microsoft Docs"
+title: "Guia de Introdução ao .NET Core no macOS"
 description: "Este documento fornece as etapas e o fluxo de trabalho para criar uma Solução do .NET Core usando o Visual Studio Code."
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
@@ -9,26 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
-
-# Guia de Introdução ao .NET Core no macOS
+# <a name="getting-started-with-net-core-on-macos"></a>Guia de Introdução ao .NET Core no macOS
 
 Este documento fornece as etapas e o fluxo de trabalho para criar uma solução do .NET Core para macOS. Saiba como criar projetos, testes de unidade, usar as ferramentas de depuração e incorporar bibliotecas de terceiros por meio do [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
 > Esse artigo usa o [Visual Studio Code](http://code.visualstudio.com) no macOS.
 
-<a id="prerequisites" class="xliff"></a>
-
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 Instalar o [SDK do .NET Core](https://www.microsoft.com/net/core). O SDK do .NET Core inclui a versão mais recente da estrutura do .NET Core e do tempo de execução.
 
@@ -36,9 +32,7 @@ Instalar o [Visual Studio Code](http://code.visualstudio.com). No decorrer deste
 
 Para instalar a extensão de C# do Visual Studio Code, abra o Visual Studio Code e pressione <kbd>F1</kbd> para abrir a paleta do programa. Digite **ext install** para ver a lista de extensões. Selecione a extensão de C#. Reinicie o Visual Studio Code para ativar a extensão. Para obter mais informações, consulte a [Documentação da Extensão de C# do Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-<a id="getting-started" class="xliff"></a>
-
-## Introdução
+## <a name="getting-started"></a>Introdução
 
 Neste tutorial, você criará três projetos: um projeto de biblioteca, testes para esse projeto de biblioteca e um aplicativo de console que usa a biblioteca. Você pode [exibir ou baixar a fonte](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) para este tópico no repositório dotnet/docs do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
@@ -117,9 +111,7 @@ Crie a biblioteca com o comando [`dotnet build`](../tools/dotnet-build.md). Isso
 dotnet build
 ```
 
-<a id="create-the-test-project" class="xliff"></a>
-
-## Criar um projeto de teste
+## <a name="create-the-test-project"></a>Criar um projeto de teste
 
 Crie um projeto de teste para a biblioteca. Na pasta *golden*, crie um novo projeto de teste:
 
@@ -182,9 +174,7 @@ Edite o arquivo *UnitTest1.cs* e altere a asserção de `Assert.NotEqual` para `
 dotnet test test-library/test-library.csproj
 ```
 
-<a id="create-the-console-app" class="xliff"></a>
-
-## Criar o aplicativo de console
+## <a name="create-the-console-app"></a>Criar o aplicativo de console
 
 O aplicativo de console criado ao longo das etapas a seguir usa uma dependência no projeto de biblioteca criado anteriormente e chama seu método de biblioteca quando é executado. Usando esse padrão de desenvolvimento, você verá como criar bibliotecas reutilizáveis para vários projetos.
 
@@ -225,9 +215,7 @@ Execute o seguinte comando `dotnet run` para executar o executável, em que a op
 dotnet run -p app/app.csproj
 ```
 
-<a id="debug-the-application" class="xliff"></a>
-
-## Depurar o aplicativo
+## <a name="debug-the-application"></a>Depurar o aplicativo
 
 Defina um ponto de interrupção na instrução `WriteLine` no método `Main`. Faça isso pressionando a tecla <kbd>F9</kbd> quando o cursor estiver sobre a linha `WriteLine` ou clicando com o mouse na margem esquerda na linha em que deseja definir o ponto de interrupção. Um círculo vermelho será exibido na margem ao lado da linha de código. Quando o ponto de interrupção for atingido, a execução do código será interrompida *antes* de a linha do ponto de interrupção ser executada.
 

@@ -1,5 +1,5 @@
 ---
-title: "Introdução à linguagem C# e ao .NET Framework | Microsoft Docs"
+title: "Introdução à linguagem C# e ao .NET Framework"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
@@ -64,7 +64,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
  Veja a seguir recursos adicionais de C#:  
   
--   Para uma boa introdução geral à linguagem, consulte o Capítulo 1 da [Especificação da linguagem C#](../../csharp/language-reference/language-specification.md).  
+-   Para uma boa introdução geral à linguagem, consulte o Capítulo 1 da [Especificação da linguagem C#](../../csharp/language-reference/language-specification/index.md).  
   
 -   Para obter informações detalhadas sobre aspectos específicos da linguagem C#, consulte a [Referência de C#](../../csharp/language-reference/index.md).  
   
@@ -89,4 +89,5 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 ## <a name="see-also"></a>Consulte também  
  [C#](../../csharp/csharp.md)   
- [Introdução ao Visual C# e ao Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
