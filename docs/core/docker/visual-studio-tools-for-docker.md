@@ -1,5 +1,5 @@
 ---
-title: Ferramentas do Visual Studio para Docker | Microsoft Docs
+title: Ferramentas do Visual Studio para Docker
 description: Usando as Ferramentas do Visual Studio para Docker
 keywords: .NET, .NET Core, Docker, ASP.NET Core, Visual Studio
 author: spboyer
@@ -11,29 +11,23 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: dd1a0dc226d6ac9af5a474da54ac14094855fe31
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 05/01/2017
 
 ---
 
-<a id="visual-studio-tools-for-docker" class="xliff"></a>
-
-# Ferramentas do Visual Studio para Docker
+# <a name="visual-studio-tools-for-docker"></a>Ferramentas do Visual Studio para Docker
 
 O [Microsoft Visual Studio 2017](https://www.visualstudio.com/) com [Docker para Windows](https://docs.docker.com/docker-for-windows/install/) dá suporte ao build, depuração e execução de aplicativos Web e de console do .NET Framework e .NET Core usando contêineres do Windows e do Linux.
 
-<a id="prerequisites" class="xliff"></a>
-
-## Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
 - [Docker para Windows](https://docs.docker.com/docker-for-windows/install/)
 
-<a id="installation-and-setup" class="xliff"></a>
-
-## Instalação e configuração
+## <a name="installation-and-setup"></a>Instalação e configuração
 
 Instale o [Microsoft Visual Studio 2017](https://www.visualstudio.com/) com a carga de trabalho do .NET Core. Examine as informações em [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker para Windows: o que saber antes de instalar) e instale o [Docker para Windows](https://docs.docker.com/docker-for-windows/install/).
 
@@ -43,9 +37,7 @@ Clique com botão direito do mouse no ícone do Docker na Bandeja do Sistema e s
 
 ![Unidades Compartilhadas](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
-<a id="create-an-aspnet-web-application-and-add-docker-support" class="xliff"></a>
-
-## Criar um Aplicativo Web ASP.NET e adicionar suporte ao Docker
+## <a name="create-an-aspnet-web-application-and-add-docker-support"></a>Criar um Aplicativo Web ASP.NET e adicionar suporte ao Docker
 
 Usando o Visual Studio, crie um novo Aplicativo Web ASP.NET Core. Quando o aplicativo é carregado, selecione **Adicionar Suporte ao Docker** no **Menu Projeto** ou clique com botão direito do mouse no projeto no Gerenciador de Soluções e selecione **Adicionar** > **Suporte ao Docker**.
 
@@ -83,9 +75,7 @@ Neste exemplo, `image: user/hellodockertools${TAG}` gera a imagem `user/hellodoc
 
 Você deve alterar o `user` para seu nome de usuário do Hub do Docker se planejar enviar a imagem por push para o Registro. Por exemplo, `spboyer/hellodockertools`, ou altere a URL do seu Registro privado `privateregistry.domain.com/` dependendo da configuração.
 
-<a id="debugging" class="xliff"></a>
-
-### Depuração
+### <a name="debugging"></a>Depuração
 
 Selecione **Docker** no menu suspenso de depuração na barra de ferramentas e use F5 para iniciar a depuração do aplicativo. 
 
@@ -111,9 +101,7 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   4 minutes ago       Up 4 minutes        0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-<a id="edit-and-continue" class="xliff"></a>
-
-### Editar e continuar
+### <a name="edit-and-continue"></a>Editar e continuar
 
 Alterações em arquivos estáticos e/ou arquivos de modelo do razor (.cshtml) são atualizadas automaticamente sem a necessidade de uma etapa de compilação. Faça a alteração, salve e toque em Atualizar no navegador para exibir a atualização.  
 
@@ -124,9 +112,7 @@ CONTAINER ID        IMAGE                          COMMAND               CREATED
 3f240cf686c9        spboyer/hellodockertools:dev   "tail -f /dev/null"   10 minutes ago      Up 10 minutes       0.0.0.0:32769->80/tcp   hellodockertools_hellodockertools_1
 ```
 
-<a id="publishing-docker-images" class="xliff"></a>
-
-### Publicando imagens do Docker
+### <a name="publishing-docker-images"></a>Publicando imagens do Docker
 
 Depois de ter concluído o ciclo de desenvolvimento e depuração do seu aplicativo, o Ferramentas do Visual Studio para Docker ajudará você a criar a imagem de produção do seu aplicativo. Altere o menu suspenso de depuração para **Lançamento** e compile o aplicativo. A ferramenta produzirá a imagem com o marcador `:latest` que você pode enviar por push para seu Registro privado ou Hub do Docker. 
 
