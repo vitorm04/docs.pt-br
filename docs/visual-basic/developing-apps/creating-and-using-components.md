@@ -1,5 +1,5 @@
 ---
-title: Criando e usando componentes no Visual Basic | Microsoft Docs
+title: Criando e usando componentes no Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 1235f62f6ac0878e16387c35150764f3585bc004
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03929dd0dbb81a9efee5b69ede78ff0b4ab4d380
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Criando e usando componentes no Visual Basic
-Um *componente* é uma classe que implementa a interface <xref:System.ComponentModel.IComponent?displayProperty=fullName> ou que deriva direta ou indiretamente de uma classe que implementa <xref:System.ComponentModel.IComponent>. Um componente [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] é um objeto que é reutilizável, pode interagir com outros objetos e fornece controle sobre recursos externos e suporte ao tempo de design.  
+Um *componente* é uma classe que implementa a interface <xref:System.ComponentModel.IComponent?displayProperty=fullName> ou que deriva direta ou indiretamente de uma classe que implementa <xref:System.ComponentModel.IComponent>. Um componente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] é um objeto que é reutilizável, pode interagir com outros objetos e fornece controle sobre recursos externos e suporte ao tempo de design.  
   
- Um recurso importante dos componentes é que eles são projetáveis, o que significa que uma classe que é um componente pode ser usada no ambiente de desenvolvimento integrado do [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]. Um componente pode ser adicionado à Caixa de Ferramentas, arrastado e solto em um formulário e manipulado em uma superfície de design. Observe que o suporte ao tempo de design de base para componentes é incorporado no [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]; um desenvolvedor de componentes não precisa fazer nenhum trabalho adicional para aproveitar a funcionalidade de base do tempo de design.  
+ Um recurso importante dos componentes é que eles são projetáveis, o que significa que uma classe que é um componente pode ser usada no ambiente de desenvolvimento integrado do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Um componente pode ser adicionado à Caixa de Ferramentas, arrastado e solto em um formulário e manipulado em uma superfície de design. Observe que o suporte ao tempo de design de base para componentes é incorporado no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]; um desenvolvedor de componentes não precisa fazer nenhum trabalho adicional para aproveitar a funcionalidade de base do tempo de design.  
   
  Um *controle* é semelhante a um componente, pois ambos são projetáveis. No entanto, um controle fornece uma interface do usuário, enquanto que um componente não. Um controle deve derivar de uma das classes de controle base: <xref:System.Windows.Forms.Control> ou <xref:System.Web.UI.Control>.  
   
@@ -103,3 +103,4 @@ Um *componente* é uma classe que implementa a interface <xref:System.ComponentM
  [Como acessar o suporte a tempo de design no Windows Forms](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)   
  [Como estender a aparência e o comportamento dos controles no modo de design](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)   
  [Como realizar uma inicialização personalizada para controles no modo de design](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+

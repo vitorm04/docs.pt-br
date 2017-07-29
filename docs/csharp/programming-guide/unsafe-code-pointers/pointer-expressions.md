@@ -1,5 +1,5 @@
 ---
-title: "Expressões de ponteiro (Guia de Programação em C#) | Microsoft Docs"
+title: "Expressões de ponteiro (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d745f99d7b132609504c7304842675c9eb5f34aa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a566881a65770fa99a97cc2ef3cceefad46d1be6
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="pointer-expressions-c-programming-guide"></a>Expressões de ponteiro (Guia de Programação em C#)
@@ -55,3 +56,4 @@ Nesta seção, as seguintes expressões de ponteiro são discutidas:
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+

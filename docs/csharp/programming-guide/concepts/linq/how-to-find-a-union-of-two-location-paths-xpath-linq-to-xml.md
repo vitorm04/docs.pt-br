@@ -1,5 +1,5 @@
 ---
-title: "Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#) | Microsoft Docs"
+title: "Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1e63adc27b32475b4cff908e72157464e0e5097
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b15991b6a97c19cd038114649bcef90f53ea5ace
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Como localizar uma união de dois caminhos de local (XPath-LINQ to XML) (C#)
@@ -28,10 +28,10 @@ O XPath permite que você localize a união de resultados de dois caminhos de lo
   
  `//Category|//Price`  
   
- Você pode obter os mesmos resultados usando o operador de consulta padrão <xref:System.Linq.Enumerable.Concat%2A>.  
+ Você pode obter os mesmos resultados usando o operador padrão de consulta de <xref:System.Linq.Enumerable.Concat%2A> .  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo localiza os elementos de `Category` e todos os elementos de `Price` , e os concatena em uma única coleção. Observe que a consulta [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] chama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar os resultados. Os resultados da avaliação de expressão XPath são também em ordem do documento.  
+ Este exemplo localiza os elementos de `Category` e todos os elementos de `Price` , e os concatena em uma única coleção. Observe que a consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] chama <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> para ordenar os resultados. Os resultados da avaliação de expressão XPath são também em ordem do documento.  
   
  Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: dados numéricos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
@@ -82,3 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também  
  [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Palavras-chave de Acesso (Referência de C#) | Microsoft Docs"
+title: "Palavras-chave de acesso (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25e747ee1ac0bb61cc85e8473bac99d635cb629c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b9aa1d98727dd4ecf20f7b183dd798a06bbd05e8
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="access-keywords-c-reference"></a>Palavras-chave de acesso (Referência de C#)
@@ -49,3 +50,4 @@ Esta seção apresenta as seguintes palavras-chave de acesso:
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Modificadores de acesso](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+

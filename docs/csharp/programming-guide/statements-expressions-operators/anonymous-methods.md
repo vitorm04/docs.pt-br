@@ -1,5 +1,5 @@
 ---
-title: "Métodos Anônimos (Guia de Programação em C#) | Microsoft Docs"
+title: "Métodos anônimos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f438abfb00cda1a608f086aa973c06774e1d0084
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92842becf26a15ab1a6f5e9621002abf71dc67bc
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Métodos anônimos (Guia de Programação em C#)
@@ -86,3 +87,4 @@ Nas versões anteriores ao C# 2.0, a única maneira de declarar um [delegado](..
  [Código Não Seguro e Ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Delegados com métodos nomeados vs. métodos anônimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+

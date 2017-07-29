@@ -1,5 +1,5 @@
 ---
-title: "Tabela de Valores Padrão (Referência de C#) | Microsoft Docs"
+title: "Tabela de valores padrão (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 508a3542a97dc2b67f47b6e611d37c9ee76f7ec3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d609403269a5cbfe6715647a240c44b254a4d8f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="default-values-table-c-reference"></a>Tabela de valores padrão (Referência de C#)
@@ -81,3 +82,4 @@ int myInt = 0;
  [Tipos de Valor](../../../csharp/language-reference/keywords/value-types.md)   
  [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+

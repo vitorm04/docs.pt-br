@@ -1,5 +1,5 @@
 ---
-title: "Métodos de extensão (Guia de programação em C#) | Microsoft Docs"
+title: "Métodos de extensão (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,17 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d65b4050287289df419685127cdbbb18f52ec719
-ms.openlocfilehash: a214f129424fd458decf473ef94ec3c5ed6eed3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bfc0c0af620f7ec8b6b8a8352bf4253b85cc682c
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>Métodos de extensão (Guia de Programação em C#)
 Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original. Os métodos de extensão são um tipo especial de método estático, mas são chamados como se fossem métodos de instância no tipo estendido. Para o código do cliente escrito em C# e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos realmente definidos em um tipo.  
   
- Os métodos de extensão mais comuns são os operadores de consulta padrão [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] que adicionam funcionalidade de consulta aos tipos <xref:System.Collections.IEnumerable?displayProperty=fullName> e <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> existentes. Para usar os operadores de consulta padrão, traga-os primeiro ao escopo com uma diretiva `using System.Linq`. Em seguida, qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parece ter métodos de instância como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Você pode exibir esses métodos adicionais no preenchimento de declaração do IntelliSense ao digitar "ponto" após uma instância de um tipo <xref:System.Collections.Generic.IEnumerable%601> como <xref:System.Collections.Generic.List%601> ou <xref:System.Array>.  
+ Os métodos de extensão mais comuns são os operadores de consulta padrão [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que adicionam funcionalidade de consulta aos tipos <xref:System.Collections.IEnumerable?displayProperty=fullName> e <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> existentes. Para usar os operadores de consulta padrão, traga-os primeiro ao escopo com uma diretiva `using System.Linq`. Em seguida, qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601> parece ter métodos de instância como <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Você pode exibir esses métodos adicionais no preenchimento de declaração do IntelliSense ao digitar "ponto" após uma instância de um tipo <xref:System.Collections.Generic.IEnumerable%601> como <xref:System.Collections.Generic.List%601> ou <xref:System.Array>.  
   
  O exemplo a seguir mostra como chamar o método de consulta padrão `OrderBy` em qualquer matriz de inteiros. A expressão entre parênteses é uma expressão lambda. Vários operadores de consulta padrão obtêm expressões lambda como parâmetros, mas isso não é um requisito para métodos de extensão. Para obter mais informações, consulte [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   

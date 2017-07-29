@@ -1,5 +1,5 @@
 ---
-title: "Criando interfaces genéricas variantes (C#) | Microsoft Docs"
+title: "Criando interfaces genéricas variantes (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3dcc75151a3cff601869b4f8a3a4de698d2dc47
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 122b56e34582fdd84424fd3f5d2fd5904b401775
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Criando interfaces genéricas variantes (C#)
@@ -35,7 +36,7 @@ Você pode declarar parâmetros de tipo genérico em interfaces como covariantes
  Você pode declarar interfaces genéricas variantes usando as palavras-chave `in` e `out` para parâmetros de tipo genérico.  
   
 > [!IMPORTANT]
-> Os parâmetros  `ref` e `out` no C# não podem ser variantes. Os tipos de valor também não dão suporte à variância.  
+>  Os parâmetros `ref` e `out` no C# não podem ser variantes. Os tipos de valor também não dão suporte à variância.  
   
  Você pode declarar um parâmetro de tipo genérico como covariante usando a palavra-chave `out`. O tipo de covariante deve satisfazer as condições a seguir:  
   

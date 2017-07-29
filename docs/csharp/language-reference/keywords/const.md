@@ -1,5 +1,5 @@
 ---
-title: "const (Referência de C#) | Microsoft Docs"
+title: "const (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,18 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 700e80272384a946609d538c5516f0480b7fed27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b8f6d567deed513ff5693fe39bd21c8607677402
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="const-c-reference"></a>const (Referência de C#)
 Use a palavra-chave `const` para declarar um campo constante ou um local constante. Campos e locais constantes não são variáveis ​​e não podem ser modificados. As constantes podem ser números, valores boolianos, cadeias de caracteres ou uma referência nula. Não crie uma constante para representar informações que você espera mudar a qualquer momento. Por exemplo, não use um campo constante para armazenar o preço de um serviço, um número de versão de produto ou a marca de uma empresa. Esses valores podem mudar ao longo do tempo e como os compiladores propagam constantes, outro código compilado com as bibliotecas terá que ser recompilado para ver as alterações. Veja também a palavra-chave [readonly](../../../csharp/language-reference/keywords/readonly.md). Por exemplo:  
   
-```  
-      const int x = 0;  
+```csharp
+const int x = 0;  
 public const double gravitationalConstant = 6.673e-11;  
 private const string productName = "Visual C#";  
 ```  
@@ -53,7 +53,7 @@ private const string productName = "Visual C#";
   
  A declaração constante pode declarar constantes múltiplas como:  
   
-```  
+```csharp
 public const double x = 1.0, y = 2.0, z = 3.0;  
 ```  
   
@@ -61,7 +61,7 @@ public const double x = 1.0, y = 2.0, z = 3.0;
   
  A constante pode fazer parte de uma expressão constante, como a seguir:  
   
-```  
+```csharp
 public const int c1 = 5;  
 public const int c2 = c1 + 100;  
 ```  

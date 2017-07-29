@@ -1,5 +1,5 @@
 ---
-title: "Como Obter o Endereço de uma Variável (Guia de Programação em C#) | Microsoft Docs"
+title: "Como obter o endereço de uma variável (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 01ec57192d3f8438ef1b655c01d92243590517c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 169f68cc80b7a27427a9987942e66e0ba9ed1a02
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Como obter o endereço de uma variável (Guia de Programação em C#)
@@ -64,3 +65,4 @@ int* p = &number; //address-of operator &
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "#endif (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"endif-c-reference\"></a>endif (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,18 +29,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1bcba1fe90f05ce088fad5ee20d550e2627bf1dd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e4c37657a1ca81b7e5403e58123cf630a224b8ec
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="endif-c-reference"></a>#endif (Referência de C#)
 O `#endif` especifica o final de uma diretiva condicional, que começou com a diretiva [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Por exemplo,  
   
-```  
-  
-      #define DEBUG  
+```csharp
+#define DEBUG  
 // ...  
 #if DEBUG  
     Console.WriteLine("Debug version");  
@@ -54,3 +54,4 @@ O `#endif` especifica o final de uma diretiva condicional, que começou com a di
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

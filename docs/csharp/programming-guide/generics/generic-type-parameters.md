@@ -1,5 +1,5 @@
 ---
-title: "Parâmetros de Tipo Genérico (Guia de Programação em C#) | Microsoft Docs"
+title: "Parâmetros de tipo genérico (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e86f5cd4631938652e7de6b5bab477688a01e7b6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ce1024215a381afb3a7b42f2127fe5e8c212d378
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Parâmetros de tipo genérico (Guia de Programação em C#)
@@ -62,3 +63,4 @@ Na definição de um tipo genérico ou método, parâmetros de tipo são um espa
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Genéricos](../../../csharp/programming-guide/generics/index.md)   
  [Diferenças entre modelos C++ e genéricos C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)
+

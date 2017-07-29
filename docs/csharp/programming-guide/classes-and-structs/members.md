@@ -1,5 +1,5 @@
 ---
-title: "Membros (Guia de Programação em C#) | Microsoft Docs"
+title: "Membros (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 229955400c0c16cdc0069d6e45148d91d6253f9d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="members-c-programming-guide"></a>Membros (Guia de Programação em C#)
@@ -66,3 +66,4 @@ Classes e structs têm membros que representam seus dados e comportamento. Os me
  [Tipos Aninhados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
  [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
  [Operadores sobrecarregáveis](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+

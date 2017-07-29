@@ -1,5 +1,5 @@
 ---
-title: "Introdução ao LINQ em C# | Microsoft Docs"
+title: "Introdução a LINQ em C#"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,13 +34,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 88eff7c3909a31939f5789fd19bc4f1d07d013b7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 02a76889912e441cc0d1bcf27cb5e9421ef852ad
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="getting-started-with-linq-in-c"></a>Introdução ao LINQ em C#
+# <a name="getting-started-with-linq-in-c"></a>Introdução a LINQ em C#
 Esta seção contém informações básicas que ajudarão você a compreender o restante da documentação e dos exemplos do LINQ.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -83,3 +84,4 @@ Esta seção contém informações básicas que ajudarão você a compreender o 
   
  [Introdução à LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  Fornece links para tópicos sobre como usar a LINQ com o Visual Basic.
+

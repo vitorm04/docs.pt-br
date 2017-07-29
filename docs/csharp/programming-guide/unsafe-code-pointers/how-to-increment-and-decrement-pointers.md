@@ -1,5 +1,5 @@
 ---
-title: "Como Incrementar e Diminuir Ponteiros (Guia de Programação em C#) | Microsoft Docs"
+title: "Como incrementar e diminuir ponteiros (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7cf8c4a423f47e5ff5b9c11a16639ae10f531abc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b474249ed9f7778e44981b292d51f29f46bc420d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Como incrementar e diminuir ponteiros (Guia de Programação em C#)
@@ -74,3 +75,4 @@ p--;
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+

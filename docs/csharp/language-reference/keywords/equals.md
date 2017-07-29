@@ -1,5 +1,5 @@
 ---
-title: "equals (Referência de C#) | Microsoft Docs"
+title: "equals (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89c14fc84b04303d251a3fc50fdb0778bb960ee1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 44676dd796b237e1608aa9ab904e0c9d62cdbf9e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="equals-c-reference"></a>equals (Referência de C#)
@@ -46,3 +47,4 @@ A palavra-chave contextual `equals` é usada uma cláusula `join` em uma express
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

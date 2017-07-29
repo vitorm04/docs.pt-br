@@ -1,5 +1,5 @@
 ---
-title: "Como listar todos os nós em uma árvore (C#) | Microsoft Docs"
+title: "Como listar todos os nós em uma árvore (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0d91ec6807a533a504c643bc1303d1a42953f942
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ae2f34e085b0084d5cb589cfdd14562ca6f50bc1
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>Como listar todos os nós em uma árvore (C#)
 Às vezes é útil listar todos os nós em uma árvore. Isso pode ser útil para saber exatamente como um método ou propriedade afeta a árvore. Uma abordagem para listar todos os nós em um formato textual é gerar uma expressão XPath que identifica exata e especificamente qualquer nó na árvore.  
   
- Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] e as consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] são muito mais avançadas. No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.  
+ Não é particularmente útil executar expressões XPath usando [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. As expressões XPath têm um desempenho pior que consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] e as consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são muito mais avançadas. No entanto, como uma maneira de identificar nós na árvore XML, o XPath funciona bem.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra uma função chamada `GetXPath` que produz uma expressão XPath específica para qualquer nó na árvore XML. Ela gera expressões XPath apropriadas mesmo quando os nós estão em um namespace. As expressões XPath são geradas usando prefixos de namespace.  
@@ -362,3 +362,4 @@ class Program
   
 ## <a name="see-also"></a>Consulte também  
  [Técnicas avançadas de consulta (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

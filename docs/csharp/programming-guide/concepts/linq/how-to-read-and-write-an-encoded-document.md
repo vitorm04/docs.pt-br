@@ -1,5 +1,5 @@
 ---
-title: Como ler e escrever um documento codificado (C#) | Microsoft Docs
+title: Como ler e escrever um documento codificado (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f599d279e804372ef8779514939f14cee15c5e3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fc7c21c1aa6f4035bfaee509c7bc542542635313
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Como ler e escrever um documento codificado (C#)
@@ -30,9 +31,9 @@ Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDecla
   
  Qualquer valor retornado por <xref:System.Text.Encoding.WebName%2A> é um valor válido.  
   
- Se você ler um documento codificado, a propriedade <xref:System.Xml.Linq.XDeclaration.Encoding%2A> será definida como o nome da página de código.  
+ Se você ler um documento codificado, a propriedade <xref:System.Xml.Linq.XDeclaration.Encoding%2A> será definida para o nome da página de código.  
   
- Se você definir <xref:System.Xml.Linq.XDeclaration.Encoding%2A> como um nome válido de página de código, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] serializará com a codificação especificada.  
+ Se você definir <xref:System.Xml.Linq.XDeclaration.Encoding%2A> como um nome válido de página de código, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializará com a codificação especificada.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir cria dois documentos, um com codificação utf-8 e um com codificação utf-16. Ele em seguida carrega os documentos e imprime a codificação para o console.  
@@ -95,3 +96,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
  [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

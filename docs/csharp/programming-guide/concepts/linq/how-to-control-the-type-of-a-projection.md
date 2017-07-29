@@ -1,5 +1,5 @@
 ---
-title: "Como controlar o tipo de uma projeção (C#) | Microsoft Docs"
+title: "Como controlar o tipo de uma projeção (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 465a04338de0a092bf60e15ce07a9aace160bbe3
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e681fbffe681237d0b0ac3d7a161180e478172f9
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Como controlar o tipo de uma projeção (C#)
-A projeção é o processo de receber um dataset, de filtre-o, para alterar sua forma, e mesmo de alterar seu tipo. A maioria das expressões de consulta executam projeções. A maioria das expressões de consulta mostradas nesta seção são avaliadas como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, mas você pode controlar o tipo de projeção para criar coleções de outros tipos. Este tópico mostra como fazer isso.  
+A projeção é o processo de receber um dataset, de filtre-o, para alterar sua forma, e mesmo de alterar seu tipo. A maioria das expressões de consulta executam projeções. A maioria das expressões de consulta mostradas nesta seção valor para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, mas você pode controlar o tipo de projeção para criar coleções de outros tipos. Este tópico mostra como fazer isso.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define um novo tipo, `Customer`. A expressão de consulta cria uma instância em novos objetos de `Customer` na cláusula `Select` . Isso faz com que o tipo da expressão de consulta seja <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.  
+ O exemplo a seguir define um novo tipo, `Customer`. A expressão de consulta cria uma instância em novos objetos de `Customer` na cláusula `Select` . Isso faz com que o tipo da expressão de consulta para ser <xref:System.Collections.Generic.IEnumerable%601> de `Customer`.  
   
  Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
@@ -84,3 +84,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq.Enumerable.Select%2A>   
  [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

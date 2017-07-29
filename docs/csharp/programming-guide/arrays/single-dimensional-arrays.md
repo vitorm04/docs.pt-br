@@ -1,5 +1,5 @@
 ---
-title: "Matrizes unidimensionais (Guia de Programação em C#) | Microsoft Docs"
+title: "Matrizes unidimensionais (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1438a8415381598f402f66e94a0c529c1509a0c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cc42640715274b89c4c4a12ced8c0ae6af603318
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrizes unidimensionais (Guia de Programação em C#)
@@ -79,3 +80,4 @@ ms.lasthandoff: 03/13/2017
  [Matrizes](../../../csharp/programming-guide/arrays/index.md)   
  [Matrizes Multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
  [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+

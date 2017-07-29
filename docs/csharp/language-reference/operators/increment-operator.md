@@ -1,5 +1,5 @@
 ---
-title: "Operador ++ (Referência de C#) | Microsoft Docs"
+title: "Operador ++ (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bee872ba489739149dacc777b776072a22306ddb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f481dbe2437495b109d6d41cd24c8b4bb5b6a5b
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-operator-c-reference"></a>Operador ++ (Referência de C#)
@@ -54,3 +55,4 @@ O operador de incremento (`++`) incrementa seu operando em 1. O operador de incr
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "@ (Opções do compilador C#) | Microsoft Docs"
+title: "@ (Opções do compilador de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b36aca2b13a8d590ae02b5eb5a50ef786863737e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 219c12e4e3c9b847400f00a135d58506c72d2e7f
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-c-compiler-options"></a>@ (Opções do compilador de C#)
@@ -79,3 +79,4 @@ A opção @ possibilita especificar um arquivo que contém opções do compilado
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+

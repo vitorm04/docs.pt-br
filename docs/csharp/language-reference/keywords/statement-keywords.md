@@ -1,5 +1,5 @@
 ---
-title: "Palavras-chave de instrução (Referência de C#) | Microsoft Docs"
+title: "Palavras-chave de instrução (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4a240f373f2f9dd6af34b7c52c0e5eef627c3a44
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aae7d08eaca3491754444182ae1cfb82276e0939
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statement-keywords-c-reference"></a>Palavras-chave de instrução (Referência de C#)
@@ -51,3 +52,4 @@ As instruções são instruções do programa. Exceto conforme descrito nos tóp
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Instruções](../../../csharp/programming-guide/statements-expressions-operators/statements.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+

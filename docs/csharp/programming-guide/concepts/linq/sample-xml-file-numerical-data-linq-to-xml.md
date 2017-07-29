@@ -1,5 +1,5 @@
 ---
-title: "Arquivo XML de exemplo: dados numéricos (LINQ to XML) | Microsoft Docs"
+title: "Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 180c2d8fbc5db1e31999f17e2a94e1b02997399f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0289368d7ab27855ab32cc7fb4ad32567d52a80f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.  
+O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.  
   
 ## <a name="dataxml"></a>Data.xml  
   
@@ -73,3 +74,4 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
   
 ## <a name="see-also"></a>Consulte também  
  [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

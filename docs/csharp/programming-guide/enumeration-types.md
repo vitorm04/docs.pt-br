@@ -1,5 +1,5 @@
 ---
-title: "Tipos de enumeração (Guia de Programação em C#) | Microsoft Docs"
+title: "Tipos de enumeração (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 677de7c6e0c0f72b600ce8ee5a8bad265725f6d3
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeração (Guia de Programação em C#)
@@ -64,7 +64,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
 -   Você especifica claramente para o código do cliente quais valores são válidos para a variável.  
   
--   Em [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)], o IntelliSense lista os valores definidos.  
+-   Em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], o IntelliSense lista os valores definidos.  
   
  Quando você não especifica valores para os elementos na lista de enumerador, os valores são automaticamente incrementados em 1. No exemplo anterior, `Days.Sunday` tem um valor de 0, `Days.Monday` tem um valor de 1 e assim por diante. Ao criar um novo objeto `Days`, ele terá um valor padrão de `Days.Sunday` (0) se você não atribuir explicitamente um valor a ele. Quando você criar uma enumeração, selecione o valor padrão mais lógico e forneça a ele um valor igual a zero. Isso fará com que todos os enumeradores tenham esse valor padrão se eles não tiverem um valor explicitamente atribuído quando forem criados.  
   
@@ -109,5 +109,6 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Enum?displayProperty=fullName>   
- [Guia de programação em C#](../../csharp/programming-guide/index.md)   
+ [Guia de Programação em C#](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)
+

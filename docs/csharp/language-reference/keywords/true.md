@@ -1,5 +1,5 @@
 ---
-title: "true (Referência de C#) | Microsoft Docs"
+title: "true (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4aba77bc12e3f88e5ac82b5e4c89ad8f7682032a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 633f83c8650f86968047093e34154a47fdf574c8
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="true-c-reference"></a>true (Referência de C#)
@@ -47,3 +48,4 @@ Usado como um operador sobrecarregado ou como um literal:
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+

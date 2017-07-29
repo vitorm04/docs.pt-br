@@ -1,5 +1,5 @@
 ---
-title: C# | Microsoft Docs
+title: C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8470043d266275cd70d48299be96f1ee6f50682
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9a46179f25c166923f702b745e874406adfdeac
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c"></a>C#
@@ -44,10 +45,10 @@ C# (pronunciado "C sharp") é uma linguagem de programação projetada para cria
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução ao C#](../csharp/getting-started/getting-started-with-csharp.md)  
- Apresenta os recursos do C# para programadores iniciantes na linguagem ou no [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)] e fornece um roteiro para encontrar Ajuda sobre [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)].  
+ Apresenta os recursos do C# para programadores iniciantes na linguagem ou no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] e fornece um roteiro para encontrar Ajuda sobre [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- Apresenta o ambiente de desenvolvimento [!INCLUDE[csprcs](../csharp/includes/csprcs_md.md)].  
+ [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ Apresenta o ambiente de desenvolvimento [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
   
  [Guia de Programação em C#](../csharp/programming-guide/index.md)  
  Fornece informações e exemplos práticos sobre como usar construções da linguagem C#.  
@@ -62,9 +63,10 @@ C# (pronunciado "C sharp") é uma linguagem de programação projetada para cria
  Fornece links para explicações passo a passo sobre programação em C# e uma breve descrição sobre cada explicação passo a passo.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [C# Language Specification](../csharp/language-reference/language-specification.md) (Especificação da linguagem C#)  
+ [C# Language Specification](../csharp/language-reference/language-specification/index.md) (Especificação da linguagem C#)  
  Links para a versão mais recente das Especificações de C# em formato Microsoft Word.  
   
 ## <a name="see-also"></a>Consulte também  
- [Introdução ao Visual C# e ao Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [Desenvolvimento .NET](https://msdn.microsoft.com/library/ff361664)
+

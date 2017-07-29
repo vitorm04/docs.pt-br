@@ -1,5 +1,5 @@
 ---
-title: "Conversões de ponteiro (Guia de programação em C#) | Microsoft Docs"
+title: "Conversões de ponteiro (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b61f40a6ca04b608a32c0105d7731ec2cce9d071
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e415d892d979e2bdcd648256150e2a96b1772ce4
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversões de ponteiro (Guia de Programação em C#)
@@ -68,3 +69,4 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+

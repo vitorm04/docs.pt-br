@@ -1,5 +1,5 @@
 ---
-title: "Comparação entre Propriedades e Indexadores (Guia de Programação em C#) | Microsoft Docs"
+title: "Comparação entre propriedades e indexadores (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 97172a3113d04cb345f52b5cd6a8957d279982b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4bb2de1cfdcf4a8a7c847dfabe8d69124a4adf90
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Comparação entre propriedades e indexadores (Guia de Programação em C#)
@@ -50,3 +51,4 @@ Os indexadores são como propriedades. Com exceção das diferenças mostradas n
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+

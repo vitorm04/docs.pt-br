@@ -1,5 +1,5 @@
 ---
-title: Como filtrar em um elemento opcional (C#) | Microsoft Docs
+title: Como filtrar em um elemento opcional (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bc732e029b1548a551128b7f8daca5f10dc19c03
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d0d849bb8c6174408810f2d2192faea6db6afd5b
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Como filtrar em um elemento opcional (C#)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o método de extensão <xref:System.Xml.Linq.Extensions.Elements%2A>.  
+ Este exemplo usa o método de extensão de <xref:System.Xml.Linq.Extensions.Elements%2A> .  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  
@@ -114,3 +114,4 @@ Child Four Text
  [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
  [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Operações de projeção (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+

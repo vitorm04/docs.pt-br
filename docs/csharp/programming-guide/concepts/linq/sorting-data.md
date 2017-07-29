@@ -1,5 +1,5 @@
 ---
-title: Classificando dados (C#) | Microsoft Docs
+title: Classificando dados (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 201789725738d06bdda2f8b9765e194c6b4c4115
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ff6ef81486074f2e738b62ce37e6cb58bff49bf8
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sorting-data-c"></a>Classificando dados (C#)
@@ -148,3 +149,4 @@ foreach (string str in query)
  [Cláusula orderby](../../../../csharp/language-reference/keywords/orderby-clause.md)   
  [Como ordenar os resultados de uma cláusula join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
  [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+

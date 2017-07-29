@@ -1,5 +1,5 @@
 ---
-title: "Matrizes denteados (Guia de Programação em C#) | Microsoft Docs"
+title: "Matrizes denteadas (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 167a3d12405b9639c0080e5bdce5994702c9e585
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb6c0823af37924235dba7daa20e607cb8402a79
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Matrizes denteadas (Guia de Programação em C#)
@@ -90,3 +91,4 @@ Uma matriz denteada é uma matriz cujos elementos são matrizes. Os elementos de
  [Matrizes](../../../csharp/programming-guide/arrays/index.md)   
  [Matrizes Unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
  [Matrizes multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+

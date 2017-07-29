@@ -1,5 +1,5 @@
 ---
-title: "Usando foreach com matrizes (Guia de Programação em C#) | Microsoft Docs"
+title: "Usando foreach com matrizes (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1785a762db3a9b9f0972e199be4db5d1589369c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a1d0b704233b110b5f499b8186a4a901f9b5408f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Usando foreach com matrizes (Guia de Programação em C#)
@@ -52,3 +53,4 @@ O C# também oferece a instrução [foreach](../../../csharp/language-reference/
  [Matrizes Unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
  [Matrizes Multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
  [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+

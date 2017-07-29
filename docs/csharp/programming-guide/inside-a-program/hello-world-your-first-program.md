@@ -1,5 +1,5 @@
 ---
-title: "Hello World – seu primeiro programa (Guia de programação em C#) | Microsoft Docs"
+title: "Hello World -- seu primeiro programa (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,17 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
 O procedimento a seguir cria uma versão de C# do programa tradicional "Hello World!" programa. O programa exibe a cadeia de caracteres `Hello World!`  
   
- Para obter mais exemplos de conceitos introdutórios, consulte [Introdução ao Visual C# e ao Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
+ Para obter mais exemplos de conceitos introdutórios, consulte [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -156,4 +156,5 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
  [\<paveover> Aplicativos de exemplo do C#](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Introdução ao Visual C# e ao Visual Basic](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

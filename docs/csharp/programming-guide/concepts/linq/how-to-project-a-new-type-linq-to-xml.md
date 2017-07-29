@@ -1,5 +1,5 @@
 ---
-title: Como projetar um novo tipo (LINQ to XML) (C#) | Microsoft Docs
+title: Como projetar um novo tipo (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa8c4676890dcc25108d919a501bde44299db04
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b772326b3b8827351ffbfbb1888b105bd6e537df
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Como projetar um novo tipo (LINQ to XML) (C#)
-Outros exemplos nesta seção mostraram consultas que retornam resultados como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string` e <xref:System.Collections.Generic.IEnumerable%601> de `int`. Esses são tipos comuns de resultado, mas não são adequados para cada cenário. Em muitos casos você desejará que suas consultas retornem um <xref:System.Collections.Generic.IEnumerable%601> de algum outro tipo.  
+Outros exemplos nesta seção mostraram consultas que os resultados de retorno como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, <xref:System.Collections.Generic.IEnumerable%601> de `string`, e <xref:System.Collections.Generic.IEnumerable%601> de `int`. Esses são tipos comuns de resultado, mas não são adequados para cada cenário. Em muitos casos você desejará suas consultas para retornar <xref:System.Collections.Generic.IEnumerable%601> de qualquer outro tipo.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como instanciar objetos na cláusula `select` . O código define primeiro uma nova classe com um construtor, e altera a declaração de `select` de modo que a expressão é uma nova instância da nova classe.  
@@ -68,3 +68,4 @@ Baby Monitor:2
   
 ## <a name="see-also"></a>Consulte também  
  [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Serializando gráficos de objeto que contêm objetos de XElement (C#) | Microsoft Docs"
+title: "Serializando gráficos de objeto que contêm objetos de XElement (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 752092f7455fa0a10efcaa41166b66ff1f87b16e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4e7b1d6365eb27596477de39577caa4144aa3501
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Serializando gráficos de objeto que contêm objetos de XElement (C#)
-Este tópico introduz a capacidade de serializar gráficos de objeto que contêm referências a objetos do tipo <xref:System.Xml.Linq.XElement>. Para facilitar esse tipo de serialização, <xref:System.Xml.Linq.XElement> implementa a interface <xref:System.Xml.Serialization.IXmlSerializable>.  
+Este tópico apresenta o recurso de serializar os gráficos de objeto que contêm referências a objetos do tipo <xref:System.Xml.Linq.XElement>. Para facilitar esse tipo de serialização, <xref:System.Xml.Linq.XElement> implementa a interface de <xref:System.Xml.Serialization.IXmlSerializable> .  
   
- Observe que somente a classe <xref:System.Xml.Linq.XElement> implementa a serialização.  
+ Observe que somente a classe de <xref:System.Xml.Linq.XElement> implementa a serialização.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -39,3 +40,4 @@ Este tópico introduz a capacidade de serializar gráficos de objeto que contêm
   
 ## <a name="see-also"></a>Consulte também  
  [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

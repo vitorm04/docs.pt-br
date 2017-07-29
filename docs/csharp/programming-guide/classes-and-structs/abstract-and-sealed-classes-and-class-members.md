@@ -1,5 +1,5 @@
 ---
-title: "Classes e membros de classes abstract e sealed (Guia de programação em C#) | Microsoft Docs"
+title: "Classes e membros de classes abstract e sealed (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dfed09ac62d60b83f15c9b976668d62d56f25c01
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0788ea0778b3f8b846231fc2408938b2236314c9
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Classes e membros de classes abstract e sealed (Guia de Programação em C#)
@@ -77,3 +78,4 @@ A palavra-chave [abstract](../../../csharp/language-reference/keywords/abstract.
  [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)   
  [Como definir propriedades abstract](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+

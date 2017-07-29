@@ -1,5 +1,5 @@
 ---
-title: "Como executar a transformação de streaming de grandes documentos XML (C#) | Microsoft Docs"
+title: "Como executar a transformação de streaming de grandes documentos XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: fc8716c2190ac42b66ba8d76ccfec152ea804c4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 952fad19f9abdea464e2763b721446ab5fe68301
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Como executar a transformação de streaming de grandes documentos XML (C#)
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/22/2017
   
  Mesmo se você usar a técnica descrita em [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), se você tentar montar uma árvore XML que contém o documento transformado, o uso de memória será muito grande.  
   
- Há duas principais abordagens. Uma abordagem é usar as características de processamento adiado de <xref:System.Xml.Linq.XStreamingElement>. Outra abordagem é criar <xref:System.Xml.XmlWriter> e usar os recursos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este tópico demonstra as duas abordagens.  
+ Há duas principais abordagens. Uma abordagem é usar as características de processamento adiado de <xref:System.Xml.Linq.XStreamingElement>. Outra abordagem é criar <xref:System.Xml.XmlWriter> e usar os recursos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este tópico demonstra as duas abordagens.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir compila no exemplo em [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
@@ -208,7 +208,7 @@ static void Main(string[] args)
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir também compila no exemplo em [Como transmitir fragmentos XML com acesso a informações de cabeçalho (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- Este exemplo usa o recurso de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
+ Este exemplo usa o recurso de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] para gravar os elementos em um <xref:System.Xml.XmlWriter>. Este exemplo pode transformar um documento muito grande mantendo um requisito pequeno de memória.  
   
  Observe que o eixo personalizado (`StreamCustomerItem`) é escrito especificamente para esperar um documento que tem os elementos `Customer`, `Name` e `Item`, e que esses elementos serão organizados como no documento Source.xml a seguir. Uma implementação mais robusta, no entanto, validaria o documento de origem com um XSD ou seria preparada para analisar um documento inválido.  
   
@@ -341,3 +341,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>Consulte também  
  [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

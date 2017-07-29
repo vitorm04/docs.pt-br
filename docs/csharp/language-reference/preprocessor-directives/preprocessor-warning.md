@@ -1,5 +1,5 @@
 ---
-title: "#warning (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"warning-c-reference\"></a>warning (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75dbce06e28810f9c6b616a03c4bc11d731d2874
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8630101a90bd6d4ed2036b495b254c9475531dc0
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="warning-c-reference"></a>#warning (Referência de C#)
 O `#warning` permite gerar um aviso de um nível um em um local específico em seu código. Por exemplo:  
   
-```  
+```csharp
 #warning Deprecated code in this method.  
 ```  
   
@@ -47,7 +48,7 @@ O `#warning` permite gerar um aviso de um nível um em um local específico em s
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```csharp
 // preprocessor_warning.cs  
 // CS1030 expected  
 #define DEBUG  
@@ -66,3 +67,4 @@ class MainClass
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

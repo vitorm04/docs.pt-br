@@ -1,5 +1,5 @@
 ---
-title: Como Definir Constantes em C# | Microsoft Docs
+title: Como definir constantes em C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,13 +28,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 381474198650b5dcd49698f77db3c15f64315365
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6c5a6f63675893eb0700afab462bf237f5639d74
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-define-constants-in-c"></a>Como Definir Constantes em C#
+# <a name="how-to-define-constants-in-c"></a>Como definir constantes em C#
 As constantes são campos cujos valores são definidos em tempo de compilação e nunca podem ser alterados. Use constantes para fornecer nomes significativos em vez de literais numéricos ("números mágicos") a valores especiais.  
   
 > [!NOTE]
@@ -51,3 +52,4 @@ As constantes são campos cujos valores são definidos em tempo de compilação 
   
 ## <a name="see-also"></a>Consulte também  
  [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+

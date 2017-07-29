@@ -1,5 +1,5 @@
 ---
-title: "Cláusula join (Referência de C#) | Microsoft Docs"
+title: "Cláusula join (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
@@ -74,7 +74,7 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
  Para obter mais informações, consulte [Como realizar junções agrupadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md).  
   
 ## <a name="left-outer-join"></a>Junção Externa Esquerda  
- Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junção externa esquerda em [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], use o método `DefaultIfEmpty` em combinação com uma junção de grupo para especificar um elemento padrão do lado direito, que será produzido caso um elemento do lado esquerdo não tenha correspondência. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:  
+ Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junção externa esquerda em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], use o método `DefaultIfEmpty` em combinação com uma junção de grupo para especificar um elemento padrão do lado direito, que será produzido caso um elemento do lado esquerdo não tenha correspondência. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:  
   
  [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
@@ -87,9 +87,9 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
  Você pode realizar junções por não igualdade, uniões cruzadas e outras operações de junção personalizadas, usando várias cláusulas `from` para introduzir novas sequências de maneira independente em uma consulta. Para obter mais informações, consulte [Como realizar operações de junção personalizadas](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md).  
   
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Junções em coleções de objetos versus tabelas relacionais  
- Em uma expressão de consulta [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], as operações de junção são realizadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. Em [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)], cláusulas `join` explícitas só são necessárias quando duas sequências de origem não são ligadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.  
+ Em uma expressão de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], as operações de junção são realizadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], cláusulas `join` explícitas só são necessárias quando duas sequências de origem não são ligadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.  
   
- Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)], consulte [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], consulte [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
   
 ## <a name="composite-keys"></a>Chaves de composição  
  Você pode testar a igualdade de vários valores, usando uma chave de composição. Para obter mais informações, consulte [Como unir usando chaves compostas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md). As chaves compostas também podem ser usadas em uma cláusula `group`.  
@@ -113,3 +113,4 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
  [Como ordenar os resultados de uma cláusula join](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
  [Como unir usando chaves compostas](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
  [Como instalar bancos de dados de exemplo](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
+

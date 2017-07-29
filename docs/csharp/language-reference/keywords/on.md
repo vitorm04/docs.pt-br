@@ -1,5 +1,5 @@
 ---
-title: "on (Referência de C#) | Microsoft Docs"
+title: "on (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9668032378dc429ef3f5f0bb61f34cb8eaac8717
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 895f83caa9200a8eea7ddf047f4de8ba85155e83
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="on-c-reference"></a>on (Referência de C#)
@@ -47,3 +48,4 @@ A palavra-chave contextual `on` é usada na [cláusula join](../../../csharp/lan
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

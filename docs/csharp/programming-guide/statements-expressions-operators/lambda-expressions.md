@@ -1,5 +1,5 @@
 ---
-title: "Expressões lambda (Guia de programação em C#) | Microsoft Docs"
+title: "Expressões lambda (Guia de Programação em C#)"
 ms.date: 2017-03-03
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expressões lambda (Guia de Programação em C#)
@@ -72,9 +72,9 @@ namespace ConsoleApplication1
   
  O operador `=>` tem a mesma precedência que a atribuição (`=`) e é [associativo direito](../../../csharp/programming-guide/statements-expressions-operators/operators.md) (consulte a seção "Associatividade" do artigo Operadores).  
   
- Lambdas são usadas em consultas [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] baseadas em métodos como argumentos para métodos de operador de consulta padrão como <xref:System.Linq.Enumerable.Where%2A>.  
+ Lambdas são usadas em consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] baseadas em métodos como argumentos para métodos de operador de consulta padrão como <xref:System.Linq.Enumerable.Where%2A>.  
   
- Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Where%2A> na classe <xref:System.Linq.Enumerable> (assim como você faz em [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] para objetos e [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]) o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=fullName>. Uma expressão lambda é a maneira mais conveniente de criar esse delegado. Quando você chama o mesmo método, por exemplo, na classe <xref:System.Linq.Queryable?displayProperty=fullName> (como faz em [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]), o tipo de parâmetro é uma <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, em que Func é qualquer delegado Func com até 16 parâmetros de entrada. Novamente, uma expressão lambda é apenas uma maneira muito concisa de construir essa árvore de expressão. Os lambdas permitem que chamadas `Where` pareçam semelhantes embora, na verdade, o tipo de objeto criado do lambda seja diferente.  
+ Quando você usa a sintaxe baseada em método para chamar o método <xref:System.Linq.Enumerable.Where%2A> na classe <xref:System.Linq.Enumerable> (assim como você faz em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para objetos e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]) o parâmetro é um tipo delegado <xref:System.Func%602?displayProperty=fullName>. Uma expressão lambda é a maneira mais conveniente de criar esse delegado. Quando você chama o mesmo método, por exemplo, na classe <xref:System.Linq.Queryable?displayProperty=fullName> (como faz em [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), o tipo de parâmetro é uma <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>, em que Func é qualquer delegado Func com até 16 parâmetros de entrada. Novamente, uma expressão lambda é apenas uma maneira muito concisa de construir essa árvore de expressão. Os lambdas permitem que chamadas `Where` pareçam semelhantes embora, na verdade, o tipo de objeto criado do lambda seja diferente.  
   
  No exemplo anterior, observe que a assinatura do delegado tem um parâmetro de entrada implícito inserido do tipo `int` e retorna um `int`. A expressão lambda pode ser convertida como um delegado desse tipo porque também tem um parâmetro de entrada (`x`) e um valor de retorno que o compilador pode converter implicitamente no tipo `int`. (A inferência de tipos é discutida em mais detalhes nas seções a seguir.) Quando o delegado for chamado usando um parâmetro de entrada 5, ele retornará 25 como resultado.  
   
@@ -290,7 +290,7 @@ class Test
 -   Uma expressão lambda não poderá conter uma instrução `goto`, `break` ou `continue` que está dentro da função lambda se o destino da instrução jump estiver fora do bloco. Também será um erro ter uma instrução jump fora do bloco da função lambda se o destino estiver dentro do bloco.  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Capítulo do Livro em Destaque  
  [Expressões lambda, eventos e delegados](http://go.microsoft.com/fwlink/?LinkId=195395) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195369)  

@@ -1,5 +1,5 @@
 ---
-title: Como renomear um arquivo no Visual Basic | Microsoft Docs
+title: Como renomear um arquivo no Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a090fa8df6347a98b5c971c26664e6dd1098a594
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f003cfc7c7880a47515f7328a0503072f3b02cbf
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Como renomear um arquivo no Visual Basic
@@ -47,7 +47,7 @@ Use o método `RenameFile` do objeto `My.Computer.FileSystem` para renomear um a
   
      [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
- Este exemplo de código também está disponível como um trecho de código do IntelliSense. No selecionador de trecho de código, o trecho está localizado em **Sistema de Arquivos – Processando Unidades, Pastas e Arquivos**. Para obter mais informações, consulte [Trechos de Código](https://docs.microsoft.com/visualstudio/ide/code-snippets).  
+ Este exemplo de código também está disponível como um trecho de código do IntelliSense. No selecionador de trecho de código, o trecho está localizado em **Sistema de Arquivos – Processando Unidades, Pastas e Arquivos**. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
@@ -78,3 +78,4 @@ Use o método `RenameFile` do objeto `My.Computer.FileSystem` para renomear um a
  [Criando, excluindo e movendo arquivos e diretórios](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)   
  [Como Criar uma Cópia de um Arquivo no Mesmo Diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
  [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+

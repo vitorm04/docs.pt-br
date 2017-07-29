@@ -1,5 +1,5 @@
 ---
-title: "Operador &gt;&gt; (Referência de C#) | Microsoft Docs"
+title: "Operador &gt;&gt; (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b1f2e0a1c724199bcf82a8b363fe81f187d6870
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd3f077e9bb491cefce7db7c015bde201f6f8207
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="gtgt-operator-c-reference"></a>Operador &gt;&gt; (Referência de C#)
@@ -55,3 +56,4 @@ O operador de deslocamento para a direita (`>>`) desloca o primeiro operando à 
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+

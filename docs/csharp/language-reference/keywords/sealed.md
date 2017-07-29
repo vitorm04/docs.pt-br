@@ -1,5 +1,5 @@
 ---
-title: "sealed (Referência de C#) | Microsoft Docs"
+title: "sealed (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a546a6019daf836ab870775e4432660aa723fd69
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8d0fe959eac03aad4f1ae1fada61c0ad2fd65cd
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sealed-c-reference"></a>sealed (Referência de C#)
@@ -95,3 +95,4 @@ sealed class B : A {}
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)   
  [override](../../../csharp/language-reference/keywords/override.md)   
  [virtual](../../../csharp/language-reference/keywords/virtual.md)
+

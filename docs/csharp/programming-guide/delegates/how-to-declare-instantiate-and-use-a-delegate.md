@@ -1,5 +1,5 @@
 ---
-title: "Como Declarar, Instanciar e Usar um Delegado (Guia de Programação em C#) | Microsoft Docs"
+title: "Como declarar e usar um delegado e criar uma instância dele (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f80f50d7d6630aa5738c077cc2f278993e792eb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a16fe4c627989f701ba523769cd87839d074849
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar e usar um delegado e criar uma instância dele (Guia de Programação em C#)
@@ -98,3 +98,4 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Eventos](../../../csharp/programming-guide/events/index.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)
+

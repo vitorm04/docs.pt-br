@@ -1,5 +1,5 @@
 ---
-title: Acesso ao arquivo com o Visual Basic | Microsoft Docs
+title: Access de arquivo com o Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -40,14 +40,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2a2a60f9033d6bdec0b9a0d5905adb2b1953bf66
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 71e941bf33c3b1051c22c8170b327df9fae7d4b9
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-access-with-visual-basic"></a>Access de arquivo com o Visual Basic
-O objeto `My.Computer.FileSystem` fornece ferramentas para trabalhar com arquivos e pastas. Suas propriedades, métodos e eventos permitem que você crie, copie, mova, investigue e exclua arquivos e pastas. `My.Computer.FileSystem` fornece um desempenho melhor do que as funções herdadas (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` etc.) que são fornecidas pelo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] para compatibilidade com versões anteriores.  
+O objeto `My.Computer.FileSystem` fornece ferramentas para trabalhar com arquivos e pastas. Suas propriedades, métodos e eventos permitem que você crie, copie, mova, investigue e exclua arquivos e pastas. `My.Computer.FileSystem` fornece um desempenho melhor do que as funções herdadas (`FileOpen`, `FileClose`, `Input`, `InputString`, `LineInput` etc.) que são fornecidas pelo [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] para compatibilidade com versões anteriores.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
@@ -70,3 +71,4 @@ O objeto `My.Computer.FileSystem` fornece ferramentas para trabalhar com arquivo
   
  [Solução de problemas: lendo e gravando em arquivos de texto](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)  
  Lista problemas comuns encontrados ao ler e gravar em arquivos de texto e sugere soluções para cada um.
+

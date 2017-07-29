@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com logs de aplicativo no Visual Basic | Microsoft Docs
+title: Trabalhando com logs de aplicativo no Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Trabalhando com logs de aplicativo no Visual Basic
@@ -57,7 +57,7 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
 ## <a name="where-messages-are-logged"></a>Onde as mensagens são registradas em log  
  Se o assembly não tiver nenhum arquivo de configuração, os objetos `My.Application.Log` e `My.Log` serão gravados na saída de depuração do aplicativo (por meio da classe <xref:System.Diagnostics.DefaultTraceListener>). Além disso, o objeto `My.Application.Log` é gravado no arquivo de log do assembly (por meio da classe <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>), enquanto o objeto `My.Log` é gravado na saída da página da Web do ASP.NET (por meio da classe <xref:System.Web.WebPageTraceListener>).  
   
- A saída de depuração pode ser vista na janela [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)]**Saída** ao executar o aplicativo no modo de depuração. Para abrir a janela **Saída**, clique no item de menu **Depuração**, aponte para **Janelas** e, em seguida, clique em **Saída**. Na janela **Saída**, selecione **Depuração** na caixa **Mostrar saída de**.  
+ A saída de depuração pode ser vista na janela [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]**Saída** ao executar o aplicativo no modo de depuração. Para abrir a janela **Saída**, clique no item de menu **Depuração**, aponte para **Janelas** e, em seguida, clique em **Saída**. Na janela **Saída**, selecione **Depuração** na caixa **Mostrar saída de**.  
   
  Por padrão, `My.Application.Log` grava o arquivo de log no caminho para os dados de aplicativo do usuário. Você pode obter o caminho pela propriedade <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> do objeto <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A>. O formato do caminho é o seguinte:  
   
@@ -84,7 +84,7 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
   
  Exemplos dos nós `<sources>`, `<switches>` e `<sharedListeners>` são mostrados no código a seguir:  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -130,3 +130,4 @@ Os objetos `My.Applicaton.Log` e `My.Log` facilitam a gravação de informaçõe
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

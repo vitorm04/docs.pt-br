@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"if-c-reference--microsoft-docs\"></a>if (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"if-c-reference\"></a>if (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4fc51446d297015d9e492703c9b1868c3b513c53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f70dac98d5731370ae961f795b08a71946867d9b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="if-c-reference"></a>#if (Referência de C#)

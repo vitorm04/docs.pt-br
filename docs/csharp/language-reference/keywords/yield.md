@@ -1,5 +1,5 @@
 ---
-title: "yield (Referência de C#) | Microsoft Docs"
+title: "yield (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb55fd5b1ade48316516cda83633935abbf8dcf9
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="yield-c-reference"></a>yield (Referência de C#)
-Quando você usa a palavra-chave `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador. Usar `yield` para definir um iterador remove a necessidade de uma classe extra explícita (a classe que contém o estado para uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizada.  
+Quando você usa a palavra-chave `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador. Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita (a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.  
   
  O exemplo a seguir mostra as duas formas de instrução `yield`.  
   
@@ -63,7 +63,7 @@ yield break;
   
 -   A declaração não pode ter nenhum parâmetro [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md).  
   
- O tipo `yield` de um iterador que retorna <xref:System.Collections.IEnumerable> ou <xref:System.Collections.IEnumerator> é `object`.  Se o iterador retornar <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.Generic.IEnumerator%601>, deverá haver uma conversão implícita do tipo da expressão na instrução `yield return` para o parâmetro de tipo genérico.  
+ O tipo `yield` de um iterador que retorna <xref:System.Collections.IEnumerable> ou <xref:System.Collections.IEnumerator> é `object`.  Se o iterador retornar <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.Generic.IEnumerator%601>, uma conversão implícita deverá existir do tipo da expressão na instrução `yield return` para o parâmetro de tipo genérico.  
   
  Você não pode incluir uma instrução `yield return` ou `yield break` nos métodos com as seguintes características:  
   
@@ -91,14 +91,14 @@ foreach (string element in elements)
   
  A chamada a `MyIteratorMethod` não executa o corpo do método. Em vez disso, a chamada retorna `IEnumerable<string>` na variável `elements`.  
   
- Em uma iteração do loop `foreach`, o método <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado para `elements`. Essa chamada executará o corpo de `MyIteratorMethod` até que a próxima instrução `yield return` seja atingida. A expressão retornada pela instrução `yield return` determina não apenas o valor da variável `element` para consumo pelo corpo do loop, mas também a propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A> dos elementos que é um `IEnumerable<string>`.  
+ Em uma iteração do loop `foreach`, o método <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado para `elements`. Essa chamada executará o corpo de `MyIteratorMethod` até que a próxima instrução `yield return` seja atingida. A expressão retornada pela instrução `yield return` determina não apenas o valor da variável `element` para consumo pelo corpo do loop, mas também a propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A> dos elementos que é `IEnumerable<string>`.  
   
  Em cada iteração subsequente do loop `foreach`, a execução do corpo do iterador continuará de onde parou, parando novamente quando atingir uma instrução `yield return`. O loop `foreach` é concluído quando o fim do método iterador ou uma instrução `yield break` é atingida.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir contém uma instrução `yield return` dentro de um loop `for`. Cada iteração do corpo da instrução `foreach` em `Process` cria uma chamada à função iteradora `Power`. Cada chamada à função iteradora prossegue para a próxima execução da instrução `yield return` que ocorre durante a próxima iteração do loop `for`.  
   
- O tipo de retorno do método iterador é <xref:System.Collections.IEnumerable>, que é um tipo de interface de iterador. Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.  
+ O tipo de retorno do método iterador é <xref:System.Collections.IEnumerable> que é um tipo de interface de iterador. Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.  
   
  [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
   
@@ -115,3 +115,4 @@ foreach (string element in elements)
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+

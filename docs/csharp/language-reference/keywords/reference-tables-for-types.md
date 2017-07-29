@@ -1,5 +1,5 @@
 ---
-title: "Tabelas de referência de tipos (Referência de C#) | Microsoft Docs"
+title: "Tabelas de referência de tipos (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 38138b3523b492cdff5c489616bb3981a1445f2e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2db010c698adf236d0b826b633759a21a7045438
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-tables-for-types-c-reference"></a>Tabelas de referência de tipos (Referência de C#)
@@ -61,3 +62,4 @@ As tabelas de referência a seguir resumem os tipos do C#:
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Tipos de Referência](../../../csharp/language-reference/keywords/reference-types.md)   
  [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)
+

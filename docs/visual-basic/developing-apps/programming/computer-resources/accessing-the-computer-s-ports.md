@@ -1,5 +1,5 @@
 ---
-title: Acessando as portas do computador (Visual Basic) | Microsoft Docs
+title: Acessando as portas do computador (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db4fdbea07000ab92d5329f53d68c61db9d0547d
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>Acessando as portas do computador (Visual Basic)
@@ -55,7 +55,7 @@ O objeto `My.Computer.Ports` fornece uma propriedade e um método para acessar a
  Demonstra como receber uma cadeia de caracteres de uma porta serial do computador.  
   
  [Operações de Porta no .NET Framework](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- Descreve como usar o [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] ao executar operações de porta.  
+ Descreve como usar o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ao executar operações de porta.  
   
 ## <a name="reference"></a>Referência  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
@@ -70,3 +70,4 @@ O objeto `My.Computer.Ports` fornece uma propriedade e um método para acessar a
 ## <a name="related-sections"></a>Seções relacionadas  
  <xref:System.IO.Ports.SerialPort>  
  Descreve a classe <xref:System.IO.Ports.SerialPort> do .NET Framework.
+

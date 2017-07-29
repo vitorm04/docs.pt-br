@@ -1,5 +1,5 @@
 ---
-title: "&lt;paramref&gt; (Guia de Programação em C#) | Microsoft Docs"
+title: "&lt;paramref&gt; (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db05cb0d25ab22ae62967a26524c79739c5f2eab
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 452701c4f70bf6cbc619064d62de552fa54bba65
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ltparamrefgt-c-programming-guide"></a>&lt;paramref&gt; (Guia de Programação em C#)
@@ -60,3 +60,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

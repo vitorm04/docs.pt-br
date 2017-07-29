@@ -1,5 +1,5 @@
 ---
-title: "Usando exceções (Guia de Programação em C#) | Microsoft Docs"
+title: "Usando exceções (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: a8c29002ae2287df60996ed2b23068eec1e2739b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96fc082d135d38f521429de7b4e9a668773982ea
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Usando exceções (Guia de Programação em C#)
@@ -69,3 +69,4 @@ No C#, os erros no programa em tempo de execução são propagados pelo programa
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Exceções e manipulação de exceções](../../../csharp/programming-guide/exceptions/index.md)
+

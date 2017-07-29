@@ -1,5 +1,5 @@
 ---
-title: "Objetos (Guia de Programação em C#) | Microsoft Docs"
+title: "Objetos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guia de Programação em C#)
@@ -52,7 +52,7 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- A memória de `p1` e `p2` é alocada na pilha de thread. Essa memória é recuperada em conjunto com o tipo ou método em que ela é declarada. Esse é um dos motivos pelos quais os structs são copiados na atribuição. Por outro lado, a memória alocada a uma instância de classe é recuperada automaticamente (o lixo é coletado) pelo Common Language Runtime quando todas as referências ao objeto tiveram saído do escopo. Não é possível destruir de forma determinista um objeto de classe, como é possível no C++. Para obter mais informações sobre a coleta de lixo no [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)], consulte [Coleta de lixo](../../../standard/garbage-collection/index.md).  
+ A memória de `p1` e `p2` é alocada na pilha de thread. Essa memória é recuperada em conjunto com o tipo ou método em que ela é declarada. Esse é um dos motivos pelos quais os structs são copiados na atribuição. Por outro lado, a memória alocada a uma instância de classe é recuperada automaticamente (o lixo é coletado) pelo Common Language Runtime quando todas as referências ao objeto tiveram saído do escopo. Não é possível destruir de forma determinista um objeto de classe, como é possível no C++. Para obter mais informações sobre a coleta de lixo no [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], consulte [Coleta de lixo](../../../standard/garbage-collection/index.md).  
   
 > [!NOTE]
 >  A alocação e a desalocação de memória no heap gerenciado é altamente otimizada no Common Language Runtime. Na maioria dos casos, não há uma diferença significativa quanto ao custo do desempenho de alocar uma instância da classe no heap em vez de alocar uma instância de struct na pilha.  
@@ -91,3 +91,4 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [Operador new](../../../csharp/language-reference/keywords/new-operator.md)   
  [Common Type System](../../../standard/base-types/common-type-system.md)
+

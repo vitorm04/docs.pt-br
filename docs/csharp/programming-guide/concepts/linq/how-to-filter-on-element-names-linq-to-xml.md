@@ -1,5 +1,5 @@
 ---
-title: Como filtrar em nomes de elemento (LINQ to XML) (C#) | Microsoft Docs
+title: Como filtrar em nomes de elemento (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 5c11af47434ec00e812f966d5937c138a5ac3640
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03f1be79322882e49b7cb619ff4578fda94450a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Como filtrar em nomes de elemento (LINQ to XML) (C#)
-Quando você chama um dos métodos que retorna <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, você pode filtrar no nome do elemento.  
+Quando você chamar um dos métodos que <xref:System.Collections.Generic.IEnumerable%601> de retorno de <xref:System.Xml.Linq.XElement>, você pode filtrar no nome do elemento.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo retorna uma coleção de descendentes que é filtrada para conter somente descendentes com o nome especificado.  
@@ -46,7 +45,7 @@ ProductName:Lawnmower
 ProductName:Baby Monitor  
 ```  
   
- Os outros métodos que retornam <xref:System.Collections.Generic.IEnumerable%601> de coleções de <xref:System.Xml.Linq.XElement> seguem o mesmo padrão. As assinaturas deles são semelhantes a <xref:System.Xml.Linq.XContainer.Elements%2A> e <xref:System.Xml.Linq.XContainer.Descendants%2A>. O seguinte é a lista completa dos métodos semelhantes que tenham assinaturas de método:  
+ Os outros métodos que <xref:System.Collections.Generic.IEnumerable%601> de retorno de coleções de <xref:System.Xml.Linq.XElement> segue o mesmo padrão. Suas assinaturas são semelhantes a <xref:System.Xml.Linq.XContainer.Elements%2A> e a <xref:System.Xml.Linq.XContainer.Descendants%2A>. O seguinte é a lista completa dos métodos semelhantes que tenham assinaturas de método:  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -86,3 +85,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Consulte também  
  [Eixos do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Acessando atributos usando reflexão (C#) | Microsoft Docs"
+title: "Acessando atributos usando reflexão (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d268f237c4feab964c64b2d2843d5b9b539d7535
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36724c7b6a2a786aff837db5bcf2ad2ccfa39205
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Acessando atributos usando reflexão (C#)
@@ -133,8 +133,9 @@ class TestAuthorAttribute
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Reflection>   
  <xref:System.Attribute>   
- [Guia de programação em C#](../../../../csharp/programming-guide/index.md)   
+ [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)   
  [Recuperando informações armazenadas em atributos](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)   
  [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
  [Criando atributos personalizados (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+

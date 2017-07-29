@@ -1,5 +1,5 @@
 ---
-title: "Sintaxe de expressão de consulta para operadores de consulta padrão (C#) | Microsoft Docs"
+title: "Sintaxe de expressão de consulta para operadores de consulta padrão (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 115f97eec99d5f22a659532ccf4ed7b20a089014
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30e994329234b8bd455f739694e50121bac63d5d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-c"></a>Sintaxe de expressão de consulta para operadores de consulta padrão (C#)
@@ -50,3 +51,4 @@ Alguns dos operadores de consulta padrão mais usados têm uma sintaxe de palavr
  <xref:System.Linq.Queryable>   
  [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Classificação de operadores de consulta padrão pelo modo de execução (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+

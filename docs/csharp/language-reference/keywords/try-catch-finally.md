@@ -1,5 +1,5 @@
 ---
-title: "try-catch-finally (Referência de C#) | Microsoft Docs"
+title: "try-catch-finally (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ebaf3d90c672bd3c069af12307f3745a12af3739
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 05b2e0075aae79f85fba26d64690eefadaa166cd
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (Referência de C#)
@@ -53,8 +53,9 @@ Um uso comum de `catch` e `finally` juntos é obter e usar recursos em um bloco 
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Instruções try, throw e catch (C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [Instruções try, throw e catch (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [Instruções para Tratamento de Exceções](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [Como gerar exceções explicitamente](https://msdn.microsoft.com/library/xhcbs8fz)   
  [Instrução using](../../../csharp/language-reference/keywords/using-statement.md)
+

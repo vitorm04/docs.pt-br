@@ -1,5 +1,5 @@
 ---
-title: "Como Implementar Eventos de Interface (Guia de Programação em C#) | Microsoft Docs"
+title: "Como implementar eventos de interface (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4a5b5b862a88d7008049e411e6dc0f020952cc5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f8460674aa59170cf75eb2fa93e9d232df07e5e
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (Guia de Programação em C#)
@@ -89,3 +89,4 @@ Um [interface](../../../csharp/language-reference/keywords/interface.md) pode de
  [Delegados](../../../csharp/programming-guide/delegates/index.md)   
  [Implementação Explícita da Interface](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)   
  [Como acionar eventos de classe base em classes derivadas](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "#elif (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"elif-c-reference\"></a>elif (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9ab91d4258eb0962e1ce2fec8e4f729d5ddf41c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7635365222621101253ecb2a3676701c2e6a2b88
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="elif-c-reference"></a>#elif (Referência de C#)
 O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` será avaliada se nenhum dos [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) anteriores nem nenhuma diretiva `#elif`, opcional, anterior avaliar expressões para `true`. Se uma expressão `#elif` for avaliada como `true`, o compilador avalia todo o código entre o `#elif` e a próxima diretiva condicional. Por exemplo:  
   
-```  
+```csharp
 #define VC7  
 //...  
 #if debug  
@@ -53,7 +54,7 @@ O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` 
 ## <a name="remarks"></a>Comentários  
  `#elif` é equivalente a usar:  
   
-```  
+```csharp
 #else  
 #if  
 ```  
@@ -66,3 +67,4 @@ O `#elif` permite criar uma diretiva condicional composta. A expressão `#elif` 
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

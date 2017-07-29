@@ -1,5 +1,5 @@
 ---
-title: "stackalloc (Referência de C#) | Microsoft Docs"
+title: "stackalloc (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53d61cfdcf4d356a28881c57ad923017c2b479ae
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Referência de C#)
@@ -57,7 +57,7 @@ block = stackalloc int[100];
   
  Como os tipos de ponteiro estão envolvidos, `stackalloc` requer o contexto [unsafe](../../../csharp/language-reference/keywords/unsafe.md). Para obter mais informações, consulte [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
   
- `stackalloc` é como [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca) na biblioteca de tempo de execução C.  
+ `stackalloc` é como [_alloca](/cpp/c-runtime-library/reference/alloca) na biblioteca de tempo de execução C.  
   
  O exemplo a seguir calcula e exibe os 20 primeiros números na sequência de Fibonacci. Cada número é a soma dos dois números anteriores. No código, um bloco de memória de tamanho suficiente para conter 20 elementos do tipo `int` é alocado na pilha, não no heap. O endereço do bloco é armazenado no ponteiro `fib`. Essa memória não está sujeita à coleta de lixo e, portanto, não precisa ser fixado (usando [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)). O tempo de vida do bloco de memória é limitado ao tempo de vida do método que o define. Você não pode liberar a memória antes de o método retornar.  
   
@@ -76,3 +76,4 @@ block = stackalloc int[100];
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Palavras-chave do operador](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [Código não seguro e ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

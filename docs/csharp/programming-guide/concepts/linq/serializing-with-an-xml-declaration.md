@@ -1,5 +1,5 @@
 ---
-title: "Serializando com uma declaração XML (C#) | Microsoft Docs"
+title: "Serializando com uma declaração XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c0389630c7fc4b8aa394974b7e42cce2a5101a4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36ffb8ddd584785c660896ca77707d504638852f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>Serializando com uma declaração XML (C#)
 Este tópico descreve como controlar se a serialização gera uma declaração XML.  
   
 ## <a name="xml-declaration-generation"></a>Geração da declaração XML  
- Ao serializar para um <xref:System.IO.File> ou um <xref:System.IO.TextWriter> usando o método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> ou o método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>, uma declaração XML é gerada. Quando você serializa para um <xref:System.Xml.XmlWriter>, as configurações do gravador (especificadas em um objeto <xref:System.Xml.XmlWriterSettings>) determinam se uma declaração XML é gerada ou não.  
+ Serializar para um <xref:System.IO.File> ou <xref:System.IO.TextWriter> usando o método <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> ou o método <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> gera uma declaração XML. Quando você serializa para um <xref:System.Xml.XmlWriter>, as configurações do gravador (especificadas em um objeto <xref:System.Xml.XmlWriterSettings>) determinam se uma declaração XML é gerada ou não.  
   
  Se você estiver serialização para uma cadeia de caracteres usando o método `ToString`, o XML resultante não incluirá uma declaração XML.  
   
@@ -79,3 +80,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>Consulte também  
  [Serializando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

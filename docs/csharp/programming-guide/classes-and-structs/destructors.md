@@ -1,5 +1,5 @@
 ---
-title: "Finalizadores (Guia de programação em C#) | Microsoft Docs"
+title: "Finalizadores (Guia de Programação em C#)"
 ms.date: 2017-05-10
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: b4221d37bd955da98c812dadef3b0dd4a69a21bf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 43bb7e6488da5eda863e7ad70b25c9bf55bebb52
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guia de Programação em C#)
@@ -104,10 +104,11 @@ protected override void Finalize()
  [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IDisposable>   
- [Guia de programação em C#](../../../csharp/programming-guide/index.md)   
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [Coleta de lixo](../../../standard/garbage-collection/index.md)
+
