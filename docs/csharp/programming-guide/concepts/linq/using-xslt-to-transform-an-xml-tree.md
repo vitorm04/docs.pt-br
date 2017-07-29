@@ -1,5 +1,5 @@
 ---
-title: "Usar XSLT para transformar uma árvore XML (C#) | Microsoft Docs"
+title: "Usando XSLT para transformar uma árvore XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c4c466b30292d4bee0b209ef217b1378975045eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6ec4a04bebd39ecb6a90dfc48729fa8696a2ab5
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Usando XSLT para transformar uma árvore XML (C#)
-Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> da árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que serão gravados no novo documento. Em seguida, você pode invocar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> à transformação. Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.  
+Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento. Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação. Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -78,3 +79,4 @@ Console.WriteLine(newTree);
  <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
  <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
  [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

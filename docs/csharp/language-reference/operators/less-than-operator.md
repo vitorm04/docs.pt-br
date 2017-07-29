@@ -1,5 +1,5 @@
 ---
-title: "Operador &lt; (Referência de C#) | Microsoft Docs"
+title: "Operador &lt; (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bee42b7dbd7ba414296ab7450888ed7787152f6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d90a8e549b54fc229ac3ae5bb8f30ce3b55c0d4
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lt-operator-c-reference"></a>Operador &lt; (Referência de C#)
@@ -49,3 +50,4 @@ Todos os tipos numéricos e de enumeração definem um operador relacional "meno
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+

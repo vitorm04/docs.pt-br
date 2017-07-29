@@ -1,5 +1,5 @@
 ---
-title: "Usando propriedades (Guia de programação em C#) | Microsoft Docs"
+title: "Usando propriedades (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d487b5849f6b5882ae39977c3a008253fdff90c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b1b1dbffa3af7fdaf1f3a93ecdf6183fe1c1cf2
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-properties-c-programming-guide"></a>Usando propriedades (Guia de Programação em C#)
@@ -126,3 +127,4 @@ As propriedades combinam aspectos de métodos e campos. Para o usuário de um ob
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Propriedades de interface](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)   
  [Propriedades Autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Valores de retorno de Main() (Guia de programação em C#) | Microsoft Docs"
+title: "Valores de retorno de Main() (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 846c52b7d5429a23f354dd6a732ddb62563a55bf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a24a0db126945d122db7a0c8d373d0c91e5da8a2
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valores de retorno de Main() (Guia de Programação em C#)
@@ -88,3 +89,4 @@ MainReturnValTest
  [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Como exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [Como acessar argumentos de linha de comando usando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+

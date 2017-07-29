@@ -1,5 +1,5 @@
 ---
-title: "volatile (Referência de C#) | Microsoft Docs"
+title: "volatile (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 801187b1fcc25a1eea1f40ec8ac4c67af42e5880
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c8f9fba15991197be885a973435089098a57db87
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="volatile-c-reference"></a>volatile (Referência de C#)
@@ -76,3 +76,4 @@ A palavra-chave `volatile` indica que um campo pode ser modificado por vários t
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
+

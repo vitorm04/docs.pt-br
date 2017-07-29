@@ -1,5 +1,5 @@
 ---
-title: "Tabela de tipos de valor (Referência de C#) | Microsoft Docs"
+title: "Tabela de tipos de valor (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dbb8d6e47ec8844dadc9e632931d5e33f32281e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f97f0b7fd1887367bf64fef737420e4c6c3ada2
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="value-types-table-c-reference"></a>Tabela de tipos de valor (Referência de C#)
@@ -65,3 +66,4 @@ A tabela a seguir lista os tipos de valor do C# por categoria.
  [Tipos de Valor](../../../csharp/language-reference/keywords/value-types.md)   
  [Tabela de Formatação de Resultados Numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
  [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+
