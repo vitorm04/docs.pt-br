@@ -1,5 +1,5 @@
 ---
-title: "Recuperando os parágrafos e seus estilos (C#) | Microsoft Docs"
+title: "Recuperando os parágrafos e seus estilos (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fddaa5e25befc40278888c0b401ad39a61e8e9d4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db420c0aca9edadb8009556ebf476f196ee7641a
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recuperando os parágrafos e seus estilos (C#)
@@ -35,7 +35,7 @@ Nesse exemplo, nós escrevemos uma consulta que recupera os nós de parágrafo d
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- Esta expressão é semelhante à fonte da consulta no exemplo anterior, [Localizando o estilo de parágrafo padrão (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). A principal diferença é que ela usa o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> em vez do eixo <xref:System.Xml.Linq.XContainer.Elements%2A>. A consulta usa o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> porque em documentos que têm seções, os parágrafos não serão filhos diretos do elemento do corpo; em vez disso, os parágrafos estarão dois níveis abaixo na hierarquia. Usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>, o código funcionará que o documento use seções ou não.  
+ Esta expressão é semelhante à fonte da consulta no exemplo anterior, [Localizando o estilo de parágrafo padrão (C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). A principal diferença é que usa o eixo de <xref:System.Xml.Linq.XContainer.Descendants%2A> em vez do eixo de <xref:System.Xml.Linq.XContainer.Elements%2A> . A consulta usa o eixo de <xref:System.Xml.Linq.XContainer.Descendants%2A> porque em documentos que têm seções, os parágrafos não serão os filhos diretos do elemento do corpo; em vez, os parágrafos serão dois níveis para baixo na hierarquia. Usando o eixo de <xref:System.Xml.Linq.XContainer.Descendants%2A> , o código funcionará de mesmo se o documento usa seções.  
   
 ## <a name="example"></a>Exemplo  
  A consulta usa uma cláusula de `let` para determinar o elemento que contém o nó de estilo. Se não houver nenhum elemento, então `styleNode` é definido como `null`:  
@@ -44,7 +44,7 @@ xDoc.Root.Element(w + "body").Descendants(w + "p")
 let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()  
 ```  
   
- A cláusula `let` usa primeiro o eixo <xref:System.Xml.Linq.XContainer.Elements%2A> para localizar todos os elementos chamados `pPr`, usa o método de extensão <xref:System.Xml.Linq.Extensions.Elements%2A> para localizar todos os elementos filho chamados `pStyle` e, por fim, usa o operador de consulta padrão <xref:System.Linq.Enumerable.FirstOrDefault%2A> para converter a coleção em um singleton. Se a coleção estiver vazia, `styleNode` é definido como `null`. Este é um idioma útil para procurar o nó descendente de `pStyle` . Observe que se o nó filho de `pPr` não existir, o código faz ou falhas lançando uma exceção; em vez disso, `styleNode` é definido como `null`, que é o comportamento desejado desta cláusula de `let` .  
+ A cláusula de `let` primeiro usa o eixo de <xref:System.Xml.Linq.XContainer.Elements%2A> para localizar todos os elementos chamados `pPr`, então usa o método de extensão de <xref:System.Xml.Linq.Extensions.Elements%2A> para localizar todos os elementos filho chamados `pStyle`, e finalmente usa o operador padrão de consulta de <xref:System.Linq.Enumerable.FirstOrDefault%2A> para converter a um único. Se a coleção estiver vazia, `styleNode` é definido como `null`. Este é um idioma útil para procurar o nó descendente de `pStyle` . Observe que se o nó filho de `pPr` não existir, o código faz ou falhas lançando uma exceção; em vez disso, `styleNode` é definido como `null`, que é o comportamento desejado desta cláusula de `let` .  
   
  A consulta em uma coleção de um tipo anônimo com dois membros, `StyleName` e `ParagraphNode`.  
   
@@ -146,3 +146,4 @@ StyleName:Code
   
 ## <a name="see-also"></a>Consulte também  
  [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

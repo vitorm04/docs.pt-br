@@ -1,5 +1,5 @@
 ---
-title: "Passando matrizes com o uso de ref e out (Guia de Programação em C#) | Microsoft Docs"
+title: "Passando matrizes com o uso de ref e out (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9af154afed7c43c840c23dc8bf2db6a78edc143c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58fc359881295a9e6627ac1269ef17aa298009c7
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a>Passando matrizes com o uso de ref e out (Guia de Programação em C#)
@@ -62,3 +63,4 @@ Como todos os parâmetros [out](../../../csharp/language-reference/keywords/out.
  [Matrizes Unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
  [Matrizes Multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
  [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+

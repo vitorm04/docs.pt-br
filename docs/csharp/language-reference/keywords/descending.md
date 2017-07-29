@@ -1,5 +1,5 @@
 ---
-title: "descending (Referência de C#) | Microsoft Docs"
+title: "descending (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d90becd6e8e8151074348cc9d76d092377e287d4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c9b77aba2e98a213f7e042d9c2dd6dc059a03830
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="descending-c-reference"></a>descending (Referência de C#)
@@ -48,3 +49,4 @@ A palavra-chave contextual `descending` é usada na [cláusula orderby](../../..
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [ascending](../../../csharp/language-reference/keywords/ascending.md)
+

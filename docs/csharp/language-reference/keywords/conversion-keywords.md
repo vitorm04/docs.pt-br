@@ -1,5 +1,5 @@
 ---
-title: "Palavras-chave de Conversão (Referência de C#) | Microsoft Docs"
+title: "Palavras-chave de conversão (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5abc3b273c1af1cae95c3d167762260c4504c2a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d94a114706f4fc4f367f2c82813e1ae09394a005
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="conversion-keywords-c-reference"></a>Palavras-chave de conversão (Referência de C#)
@@ -48,3 +49,4 @@ Esta seção descreve as palavras-chave usadas em conversões de tipo:
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+

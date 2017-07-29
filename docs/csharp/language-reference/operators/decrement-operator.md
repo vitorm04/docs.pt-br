@@ -1,5 +1,5 @@
 ---
-title: "Operador -- (Referência de C#) | Microsoft Docs"
+title: "Operador -- (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ed27a3080b83a97c0d4ec1687efdd9bf47c5b28d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 100e68f3b07164b0cfb398a32f47137f2726943f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="---operator-c-reference"></a>Operador -- (Referência de C#)
@@ -51,3 +52,4 @@ O operador de decremento (`--`) decrementa o operando em 1. O operador de decrem
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+

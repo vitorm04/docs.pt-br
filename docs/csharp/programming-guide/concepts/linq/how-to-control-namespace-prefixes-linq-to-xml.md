@@ -1,5 +1,5 @@
 ---
-title: Como controlar prefixos de namespace (C#) (LINQ to XML) | Microsoft Docs
+title: Como controlar prefixos de namespace (C#) (LINQ to XML)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96bc6d1187aa72f8653cd01b2027306009634fd5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Como controlar prefixos de namespace (C#) (LINQ to XML)
@@ -36,9 +37,9 @@ Este tópico descreve como você pode controlar prefixos de namespace ao seriali
   
  Outra razão comum para controlar prefixos de namespace é que você deseja que os usuários editem manualmente o documento XML e deseja criar prefixos de namespace que sejam convenientes para o usuário digitar. Por exemplo, você pode estar gerando um documento XSD. As convenções de esquemas sugerem que você use `xs` ou `xsd` como o prefixo do namespace do esquema.  
   
- Para controlar prefixos de namespace, você insere os atributos que declaram os namespaces. Se você declarar namespaces com prefixos específicos, o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] tentará respeitar os prefixos de namespace ao serializar.  
+ Para controlar prefixos de namespace, você insere os atributos que declaram os namespaces. Se você declarar namespaces com prefixos específicos, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] tentará respeitar os prefixos de namespace ao serializar.  
   
- Para criar um atributo que declara um namespace com um prefixo, você cria um atributo em que o namespace do nome do atributo é <xref:System.Xml.Linq.XNamespace.Xmlns%2A> e o nome do atributo é o prefixo do namespace. O valor do atributo é o URI do namespace.  
+ Para criar um atributo que declare um namespace com um prefixo, você cria um atributo onde o namespace do nome do atributo é <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, e o nome do atributo é o prefixo do namespace. O valor do atributo é o URI do namespace.  
   
 ## <a name="example"></a>Exemplo  
  Esse exemplo declara dois namespaces. Ele especifica que o namespace `http://www.adventure-works.com` tem o prefixo `aw` e que o namespace `www.fourthcoffee.com` tem o prefixo `fc`.  
@@ -72,3 +73,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

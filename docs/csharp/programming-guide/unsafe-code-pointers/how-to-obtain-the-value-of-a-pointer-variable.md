@@ -1,5 +1,5 @@
 ---
-title: "Como Obter o Valor de uma Variável de Ponteiro (Guia de Programação em C#) | Microsoft Docs"
+title: "Como obter o valor de uma variável de ponteiro (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e1c3d8d38d9ce5404d23ee3961b6c0859f660f9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4cff42de07f2edb279ddd1cafefe9f4b67a38ce1
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Como obter o valor de uma variável de ponteiro (Guia de Programação em C#)
@@ -66,3 +67,4 @@ Use o operador de indireção de ponteiro para obter a variável no local aponta
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
  [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+

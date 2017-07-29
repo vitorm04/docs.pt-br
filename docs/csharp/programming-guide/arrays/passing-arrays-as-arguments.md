@@ -1,5 +1,5 @@
 ---
-title: "Passando matrizes como argumentos (Guia de Programação em C#) | Microsoft Docs"
+title: "Passando matrizes como argumentos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f6dcaf5fa5e32cdd47292ba2a687da9cd24d87d7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5e83c0c119bc1448be76f83416098158c7f5d684
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Passando matrizes como argumentos (Guia de Programação em C#)
@@ -84,3 +85,4 @@ As matrizes podem ser passadas como argumentos para parâmetros de método. Como
  [Matrizes Unidimensionais](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)   
  [Matrizes Multidimensionais](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)   
  [Matrizes denteadas](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+

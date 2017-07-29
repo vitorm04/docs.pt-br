@@ -1,5 +1,5 @@
 ---
-title: "Como Declarar e Usar Propriedades de Leitura e Gravação (Guia de Programação em C#) | Microsoft Docs"
+title: "Como Declarar e Usar Propriedades de Leitura e Gravação (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 22f3d9ab8b47e78147524e029847aea3ab87c842
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5e4ca1feff203dc2ab88c0d1dfae8098508fec7
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Como Declarar e Usar Propriedades de Leitura e Gravação (Guia de Programação em C#)
@@ -81,3 +82,4 @@ person.SetAge(person.GetAge() + 1);
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Classes e Structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+

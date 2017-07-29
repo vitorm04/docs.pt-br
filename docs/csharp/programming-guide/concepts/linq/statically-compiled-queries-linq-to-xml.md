@@ -1,5 +1,5 @@
 ---
-title: Consultas estaticamente compiladas (LINQ to XML) (C#) | Microsoft Docs
+title: Consultas estaticamente compiladas (LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10e4df75be88dc5609e0ca15666042a0354824bc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e9986524756c979226919d37318a9ca2562213a
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Consultas estaticamente compiladas (LINQ to XML) (C#)
-Um dos benefícios de desempenho mais importantes do LINQ to XML, em oposição ao <xref:System.Xml.XmlDocument>, é que as consultas no LINQ to XML são compiladas estatisticamente compiladas, ao passo que as consultas XPath devem ser interpretadas em tempo de execução. Esse recurso é interna a LINQ to XML, portanto você não precisa executar etapas adicionais para aproveitá-lo, mas é útil entender a diferença ao escolher entre as duas tecnologias. Este tópico explica a diferença.  
+Um de desempenho mais importante beneficia LINQ to XML, diferentemente de <xref:System.Xml.XmlDocument>, é que as consultas em LINQ to XML são compiladas estaticamente, enquanto as consultas XPath devem ser interpretado em tempo de execução. Esse recurso é interna a LINQ to XML, portanto você não precisa executar etapas adicionais para aproveitá-lo, mas é útil entender a diferença ao escolher entre as duas tecnologias. Este tópico explica a diferença.  
   
 ## <a name="statically-compiled-queries-vs-xpath"></a>Consultas estaticamente compilado contra. XPath  
  O exemplo a seguir mostra como obter os elementos descendentes com um nome especificado e, com um atributo com um valor especificado.  
@@ -59,7 +59,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- O método <xref:System.Linq.Enumerable.Where%2A> é um método de extensão. Para obter mais informações, consulte [Métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Como <xref:System.Linq.Enumerable.Where%2A> é um método de extensão, a consulta acima é compilada como se tivesse sido escrita da seguinte forma:  
+ O método de <xref:System.Linq.Enumerable.Where%2A> é um método de extensão. Para obter mais informações, consulte [Métodos de extensão](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Porque <xref:System.Linq.Enumerable.Where%2A> é um método de extensão, a consulta anterior é criada como se ele foi gravado como segue:  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -91,9 +91,9 @@ foreach (XmlNode n in nl)
 reader.Close();  
 ```  
   
- Esta consulta retorna a mesma saída que os exemplos que usam o LINQ to XML, a única diferença é que o LINQ to XML recua o XML impresso, enquanto o <xref:System.Xml.XmlDocument> não.  
+ Esta consulta retorna as mesmas saída que os exemplos que usam LINQ to XML; a única diferença é que LINQ to XML recua XML impresso, enquanto <xref:System.Xml.XmlDocument> não.  
   
- No entanto, a abordagem de <xref:System.Xml.XmlDocument> geralmente não tem um desempenho tão bom quanto o LINQ to XML porque o método <xref:System.Xml.XmlNode.SelectNodes%2A> precisa fazer o seguinte internamente sempre que é chamado:  
+ No entanto, a abordagem de <xref:System.Xml.XmlDocument> geralmente não executa bem como LINQ to XML, porque o método de <xref:System.Xml.XmlNode.SelectNodes%2A> deve fazer o seguinte internamente todas as vezes nele é chamado:  
   
 -   Analisa a cadeia de caracteres que contém a expressão XPath, quebrando a cadeia de caracteres em tokens.  
   
@@ -103,7 +103,8 @@ reader.Close();
   
 -   Itera através de nós, selecionando adequadamente os nós para o conjunto de resultados com base na avaliação da expressão.  
   
- Este é significativamente mais do que o trabalho feito pela consulta correspondente LINQ to XML. A diferença de desempenho específica varia para tipos diferentes de consultas, mas em geral as consultas LINQ to XML realizam menos trabalho e, portanto, têm um desempenho menor do que as expressões XPath de avaliação usando <xref:System.Xml.XmlDocument>.  
+ Este é significativamente mais do que o trabalho feito pela consulta correspondente LINQ to XML. A diferença desempenho específico variam para tipos diferentes de consultas, mas em geral LINQ to XML consultas menos trabalho e, portanto, executam melhor do que as expressões XPath de avaliação usando <xref:System.Xml.XmlDocument>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Desempenho (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

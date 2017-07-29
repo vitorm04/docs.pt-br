@@ -1,5 +1,5 @@
 ---
-title: "Tipos (Referência de C#) | Microsoft Docs"
+title: "Tipos (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ef8f764cc9fe2b9e71eb8c340aa5d532eb1b18d1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2816a5dd86e71641198a340b3a72094dffc93bdf
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="types-c-reference"></a>Tipos (Referência de C#)
@@ -58,3 +59,4 @@ O sistema de digitação do C# contém as seguintes categorias:
  [Tabelas de Referência de Tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
  [Conversões cast e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
  [Tipos](../../../csharp/programming-guide/types/index.md)
+

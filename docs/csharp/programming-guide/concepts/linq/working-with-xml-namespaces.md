@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com namespaces de XML (C#) | Microsoft Docs
+title: Trabalhando com namespaces XML (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3b0a211d7cd699238b86c00c78f9920d4053a2d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98627e6944f774bb74f705c8c8607e856e1c1195
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-xml-namespaces-c"></a>Trabalhando com namespaces XML (C#)
-Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] dá suporte a namespaces.  
+Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dá suporte a namespaces.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 |Tópico|Descrição|  
 |-----------|-----------------|  
-|[Visão geral sobre namespaces (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Este tópico apresenta namespaces e as classes <xref:System.Xml.Linq.XName> e <xref:System.Xml.Linq.XNamespace>.|  
+|[Visão geral sobre namespaces (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|Este tópico apresenta namespaces, a classe <xref:System.Xml.Linq.XName> e a classe <xref:System.Xml.Linq.XNamespace>.|  
 |[Como criar um documento com namespaces (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|Mostra como criar documentos com namespaces.|  
 |[Como controlar prefixos de namespace (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-control-namespace-prefixes-linq-to-xml.md)|Mostra como controlar prefixos de namespace inserindo atributos de namespace na árvore XML.|  
 |[Escopo de namespace padrão em C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Demonstra a maneira apropriada de escrever consultas para XML no namespace padrão.|  
@@ -40,3 +41,4 @@ Os tópicos nesta seção descrevem como o [!INCLUDE[sqltecxlinq](../../../../cs
   
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

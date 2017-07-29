@@ -1,5 +1,5 @@
 ---
-title: "Matrizes de tipo implícito (Guia de Programação em C#) | Microsoft Docs"
+title: "Matrizes de tipo implícito (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74037dc7aa175b2f1276f7c21154b7bf2228ba68
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5a042bdebd07062debe70cbea0a9661fbd425804
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrizes de tipo implícito (Guia de Programação em C#)
@@ -59,3 +60,4 @@ ms.lasthandoff: 03/13/2017
  [Inicializadores de Objeto e Coleção](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
  [var](../../../csharp/language-reference/keywords/var.md)   
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

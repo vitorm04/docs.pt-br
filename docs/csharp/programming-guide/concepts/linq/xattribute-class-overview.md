@@ -1,5 +1,5 @@
 ---
-title: "Visão geral da classe XAttribute (C#) | Microsoft Docs"
+title: "Visão geral da classe XAttribute (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,26 +19,27 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1b461158fed20ea5824d89ec455abb667d3fef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdac066fbd467768cedcf93f6258cbde0b6dd847
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xattribute-class-overview-c"></a>Visão geral da classe XAttribute (C#)
-Os atributos são pares nome/valor que são associados a um elemento. A classe <xref:System.Xml.Linq.XAttribute> representa atributos XML.  
+Os atributos são pares nome/valor que são associados a um elemento. A classe de <xref:System.Xml.Linq.XAttribute> representa atributos XML.  
   
 ## <a name="overview"></a>Visão geral  
- Trabalhar com atributos em [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] é semelhante a trabalhar com elementos. Os construtores são semelhantes. Os métodos que você usa para recuperar coleções deless são semelhantes. Uma expressão de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para uma coleção de atributos se parece muito com uma expressão de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] para uma coleção de elementos.  
+ Trabalhar com atributos em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é semelhante a trabalhar com elementos. Os construtores são semelhantes. Os métodos que você usa para recuperar coleções deless são semelhantes. Uma expressão de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para uma coleção de atributos se parece muito com uma expressão de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para uma coleção de elementos.  
   
  A ordem em que os atributos foram adicionados a um elemento é preservada. Isto é, quando você itera através de atributos, você ver na mesma ordem que foram adicionados.  
   
 ## <a name="the-xattribute-constructor"></a>O construtor de XAttribute  
- O seguinte construtor da classe <xref:System.Xml.Linq.XAttribute> é aquele que você usará mais comumente:  
+ O seguinte construtor de classe <xref:System.Xml.Linq.XAttribute> é aquele que você usará mais comumente:  
   
 |Construtor|Descrição|  
 |-----------------|-----------------|  
-|`XAttribute(XName name, object content)`|Cria um objeto <xref:System.Xml.Linq.XAttribute>. O argumento de `name` especifica o nome do atributo; `content` especifica o conteúdo de atributo.|  
+|`XAttribute(XName name, object content)`|Cria um objeto de <xref:System.Xml.Linq.XAttribute> . O argumento de `name` especifica o nome do atributo; `content` especifica o conteúdo de atributo.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Criando um elemento com um atributo  
  O código a seguir mostra a tarefa comum de criar um elemento que contém um atributo:  
@@ -57,7 +58,7 @@ Console.WriteLine(phone);
 ```  
   
 ### <a name="functional-construction-of-attributes"></a>Compilação funcional de atributos  
- Você pode construir objetos <xref:System.Xml.Linq.XAttribute> em linha com a construção de objetos <xref:System.Xml.Linq.XElement>, da seguinte maneira:  
+ Você pode criar objetos de <xref:System.Xml.Linq.XAttribute> na linha de compilação de objetos <xref:System.Xml.Linq.XElement> , como segue:  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -91,9 +92,10 @@ Console.WriteLine(c);
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>Os atributos não são nós  
- Há algumas diferenças entre atributos e elementos. Os objetos <xref:System.Xml.Linq.XAttribute> não são nós na árvore XML. São pares nome/valor associados com um elemento XML. Em contraste com Document Object Model (DOM), este reflete mais apertadamente a estrutura XML. Embora os objetos <xref:System.Xml.Linq.XAttribute> não sejam realmente nós na árvore de XML, trabalhar com objetos <xref:System.Xml.Linq.XAttribute> é muito semelhante a trabalhar com objetos <xref:System.Xml.Linq.XElement>.  
+ Há algumas diferenças entre atributos e elementos. os objetos de<xref:System.Xml.Linq.XAttribute> não são nós na árvore XML. São pares nome/valor associados com um elemento XML. Em contraste com Document Object Model (DOM), este reflete mais apertadamente a estrutura XML. Embora os objetos de <xref:System.Xml.Linq.XAttribute> não são realmente nós na árvore XML, trabalhar com objetos de <xref:System.Xml.Linq.XAttribute> é muito semelhante a trabalhar com objetos de <xref:System.Xml.Linq.XElement> .  
   
  Essa distinção importante é primeiro somente para os desenvolvedores que estão escrevendo código que funciona com as árvores XML no nível do nó. Muitos desenvolvedores não serão preocupados com essa distinção.  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

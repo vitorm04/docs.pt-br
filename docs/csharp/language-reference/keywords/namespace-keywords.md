@@ -1,5 +1,5 @@
 ---
-title: "Palavras-chave de namespace (Referência de C#) | Microsoft Docs"
+title: "Palavras-chave de namespace (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59c384e6a103dfdf1f0fe8b38c601cdad7b0ea12
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0613bb81446e1c6b0cde94b0c0bdd6dd810ce264
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="namespace-keywords-c-reference"></a>Palavras-chave de namespace (Referência de C#)
@@ -53,3 +54,4 @@ Esta seção descreve as palavras-chave e operadores associados ao uso de namesp
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
+

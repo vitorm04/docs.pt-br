@@ -1,5 +1,5 @@
 ---
-title: "Como comparar cadeias de caracteres (Guia de Programação em C#) | Microsoft Docs"
+title: "Como comparar cadeias de caracteres (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 1699a488234a9de8dab9c060bb33e6afd2346780
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 494b9ef1a1e6c8958dd3df2edb44debf32690eeb
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-compare-strings-c-programming-guide"></a>Como comparar cadeias de caracteres (Guia de Programação em C#)
@@ -67,4 +67,5 @@ Quando compara cadeias de caracteres, você está produzindo um resultado que di
  <xref:System.StringComparer?displayProperty=fullName>   
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)   
  [Comparando cadeias de caracteres](../../../standard/base-types/comparing.md)   
- [Globalizando e localizando aplicativos](https://docs.microsoft.com/visualstudio/ide/globalizing-and-localizing-applications)
+ [Globalizando e localizando aplicativos](/visualstudio/ide/globalizing-and-localizing-applications)
+

@@ -1,5 +1,5 @@
 ---
-title: "Como criar uma árvore de um XmlReader (C#) | Microsoft Docs"
+title: "Como criar uma árvore de um XmlReader (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: debacd82cc2da645a83c21e6557f2805b426e7b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61685e93e6886b3101d6b30c7f8eb04d026ea55a
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/21/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Como criar uma árvore de um XmlReader (C#)
@@ -70,3 +70,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>Consulte também  
  [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "&lt;include&gt; (Guia de Programação em C#) | Microsoft Docs"
+title: "&lt;include&gt; (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f88fbdbbb865b0114d84af4738e4bd30f6f1651
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1788a51d1bc61ba5e69774d65c14001851924472
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 03/13/2017
   
  O segundo arquivo, xml_include_tag.doc, contém os comentários de documentação a seguir:  
   
-```  
+```xml  
 <MyDocs>  
   
 <MyMembers name="test">  
@@ -88,9 +89,9 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>Saída do Programa  
- A seguinte saída é gerada quando você compila as classes Test e Test2 com a seguinte linha de comando: `/doc:DocFileName.xml.` No Visual Studio, especifique a opção de comentários de documentos XML no painel Compilar do Designer de Projeto. Quando o compilador C# vê a marca \<inclue>, ele pesquisará comentários de documentação em xml_include_tag.doc em vez do arquivo de origem atual. O compilador, então, gera DocFileName.xml e esse é o arquivo consumido pelas ferramentas de documentação como [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) para gerar a documentação final.  
+ A seguinte saída é gerada quando você compila as classes Test e Test2 com a seguinte linha de comando: `/doc:DocFileName.xml.` No Visual Studio, especifique a opção de comentários de documentos XML no painel Compilar do Designer de Projeto. Quando o compilador C# vê a marca \<inclue>, ele pesquisará comentários de documentação em xml_include_tag.doc em vez do arquivo de origem atual. O compilador, então, gera DocFileName.xml e esse é o arquivo consumido pelas ferramentas de documentação como [Sandcastle](https://github.com/EWSoftware/SHFB) para gerar a documentação final.  
   
-```  
+```xml  
 <?xml version="1.0"?>   
 <doc>   
     <assembly>   
@@ -114,3 +115,4 @@ The summary for this other type.
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Marcas recomendadas para comentários de documentação](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+

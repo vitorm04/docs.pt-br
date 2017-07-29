@@ -1,5 +1,5 @@
 ---
-title: "Tabela de tipos integrais (Referência de C#) | Microsoft Docs"
+title: "Tabela de tipos integrais (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7b70b5bc990f03c76b8160f5651cea56abaa78e3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2932d0b7c8e1b01a4965b29d90bdd5711ddb5dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela de tipos integrais (Referência de C#)
@@ -62,3 +63,4 @@ A tabela a seguir mostra os tamanhos e os intervalos de tipos integrais, que con
  [Tabela de Valores Padrão](../../../csharp/language-reference/keywords/default-values-table.md)   
  [Tabela de Formatação de Resultados Numéricos](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
  [Tabelas de referência de tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+

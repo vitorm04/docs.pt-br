@@ -1,5 +1,5 @@
 ---
-title: "Propriedades de interface (Guia de Programação em C#) | Microsoft Docs"
+title: "Propriedades de interface (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 005bb7489e229dbee5a797e55402577aad444602
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b76cdc4e8419b08dcd95c3711eaead5513ae1d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interface-properties-c-programming-guide"></a>Propriedades de interface (Guia de Programação em C#)
@@ -79,3 +80,4 @@ As propriedades podem ser declaradas em uma [interface](../../../csharp/language
  [Comparação entre propriedades e indexadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)   
  [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
  [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
+

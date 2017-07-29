@@ -1,5 +1,5 @@
 ---
-title: "Como usar um dicionário para armazenar instâncias de eventos (Guia de Programação em C#) | Microsoft Docs"
+title: "Como usar um dicionário para armazenar instâncias de eventos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0e72a864e513661d8af7c2036ee4f016588fd4c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bca140ee4d7519f67d6e896757b3187ac169de1f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a>Como usar um dicionário para armazenar instâncias de eventos (Guia de Programação em C#)
@@ -43,3 +44,4 @@ Um uso de `accessor-declarations` é expor muitos eventos sem alocar um campo pa
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Eventos](../../../csharp/programming-guide/events/index.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)
+

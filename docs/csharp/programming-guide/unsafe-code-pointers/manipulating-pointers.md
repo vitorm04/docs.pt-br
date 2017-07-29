@@ -1,5 +1,5 @@
 ---
-title: "Manipulando Ponteiros (Guia de Programação em C#) | Microsoft Docs"
+title: "Manipulando ponteiros (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad8f7156ff6ab034b15c834cafd6b76b10758a4a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f535fa555ce0bc6f2e3aa1674fd258ea1b235ee6
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a>Manipulando ponteiros (Guia de Programação em C#)
@@ -49,3 +50,4 @@ Esta seção inclui as seguintes operações de ponteiro:
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)   
  [Tipos de Ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
  [/unsafe (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)
+

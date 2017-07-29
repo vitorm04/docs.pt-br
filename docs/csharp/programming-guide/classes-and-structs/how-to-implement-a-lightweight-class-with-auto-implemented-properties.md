@@ -1,5 +1,5 @@
 ---
-title: "Como Implementar uma Classe Leve com Propriedades Autoimplementadas (Guia de Programação em C#) | Microsoft Docs"
+title: "Como implementar uma classe leve com propriedades autoimplementadas (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf00658c2510cc8717c926cfe434a3eec8f05ade
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Como implementar uma classe leve com propriedades autoimplementadas (Guia de Programação em C#)

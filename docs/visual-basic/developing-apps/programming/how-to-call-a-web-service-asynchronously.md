@@ -1,5 +1,5 @@
 ---
-title: "Como chamar um serviço Web de forma assíncrona (Visual Basic) | Microsoft Docs"
+title: "Como chamar um serviço Web de forma assíncrona (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a88c7250ba844603bcbc33d0768a45c40f18f53e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f191ccb5f42f9cfc5dc4e44e58d2338422207aa1
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Como chamar um serviço Web de forma assíncrona (Visual Basic)
 Este exemplo conecta um manipulador a um evento de manipulador assíncrono do serviço Web, para que ele possa recuperar o resultado de uma chamada de método assíncrono. Este exemplo usou o serviço Web DemoTemperatureService disponível em http://www.xmethods.net.  
   
- Quando você faz referência a um serviço Web em seu projeto no Ambiente de Desenvolvimento Integrado (IDE) do [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], ele é adicionado ao objeto `My.WebServices` e o IDE gera uma classe proxy do cliente para acesso a um serviço Web especificado  
+ Quando você faz referência a um serviço Web em seu projeto no Ambiente de Desenvolvimento Integrado (IDE) do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], ele é adicionado ao objeto `My.WebServices` e o IDE gera uma classe proxy do cliente para acesso a um serviço Web especificado  
   
  A classe proxy permite chamar os métodos de serviço Web de forma síncrona, em que seu aplicativo aguarda até que a função seja concluída. Além disso, o proxy cria membros adicionais para ajudar a chamar o método de forma assíncrona. Para cada função de serviço Web, *NameOfWebServiceFunction*, o proxy cria uma sub-rotina *NameOfWebServiceFunction*`Async`, um evento *NameOfWebServiceFunction*`Completed` e uma classe *NameOfWebServiceFunction*`CompletedEventArgs`. Este exemplo demonstra como usar os membros assíncronos para acessar a função `getTemp` do serviço Web DemoTemperatureService.  
   
@@ -91,3 +92,4 @@ Este exemplo conecta um manipulador a um evento de manipulador assíncrono do se
 ## <a name="see-also"></a>Consulte também  
  [Acessando serviços Web de aplicativo](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)   
  [Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+

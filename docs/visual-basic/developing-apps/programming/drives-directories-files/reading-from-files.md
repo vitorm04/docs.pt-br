@@ -1,5 +1,5 @@
 ---
-title: Lendo em arquivos no Visual Basic | Microsoft Docs
+title: Lendo a partir de arquivos no Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Lendo a partir de arquivos no Visual Basic
@@ -90,4 +90,5 @@ Esta seção explica como executar tarefas que estão associadas à leitura de a
  Demonstra como usar o recurso `My` com arquivos e diretórios.  
   
  [Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Demonstra como usar os métodos [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] com arquivos e diretórios.
+ Demonstra como usar os métodos [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] com arquivos e diretórios.
+

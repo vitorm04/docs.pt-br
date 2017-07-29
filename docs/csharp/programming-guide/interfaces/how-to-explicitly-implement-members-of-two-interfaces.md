@@ -1,5 +1,5 @@
 ---
-title: "Como Implementar Membros de Duas Interfaces Explicitamente (Guia de Programação em C#) | Microsoft Docs"
+title: "Como implementar membros de duas interfaces explicitamente (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4d9e134a43b508718e03d2292669416b88be2669
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1446233793e3fd61f09d7da99f4f68cb7b3eabb8
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Como implementar membros de duas interfaces explicitamente (Guia de Programação em C#)
@@ -54,3 +55,4 @@ A implementação explícita da [interface](../../../csharp/language-reference/k
  [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Interfaces](../../../csharp/programming-guide/interfaces/index.md)   
  [Como implementar membros de interface explicitamente](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)
+

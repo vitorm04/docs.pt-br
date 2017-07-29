@@ -1,5 +1,5 @@
 ---
-title: "in (Referência de C#) | Microsoft Docs"
+title: "in (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8013f79105ba0f091a57745d476ce250116e94c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7e9ef207b2363f57cf7d92f743ec9213da937b7f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="in-c-reference"></a>in (Referência de C#)
@@ -47,3 +48,4 @@ A palavra-chave contextual `in` é usada em três contextos:
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)
+

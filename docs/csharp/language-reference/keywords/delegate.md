@@ -1,5 +1,5 @@
 ---
-title: "delegate (Referência de C#) | Microsoft Docs"
+title: "delegate (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf100a5ad3adf001d5435ef6f67e2aa670456649
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 402eedd0c59b5c95e1a9b44faca66ccb4d4e04e7
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="delegate-c-reference"></a>delegate (Referência de C#)
@@ -71,3 +71,4 @@ public delegate int TestDelegate(MyType m, long num);
  [Eventos](../../../csharp/programming-guide/events/index.md)   
  [Delegados com métodos nomeados vs. Métodos Anônimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)   
  [Métodos anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+

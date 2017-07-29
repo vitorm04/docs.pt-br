@@ -1,5 +1,5 @@
 ---
-title: "Como saber a diferença entre passar um struct e passar uma referência de classe para um método (Guia de Programação em C#) | Microsoft Docs"
+title: "Como saber a diferença entre passar um struct e passar uma referência de classe para um método (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0aaec8de038307222247659d0a39a451b367fa4e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a4508c8765ac678fd371180cb0c3ece3e1d9a44
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Como saber a diferença entre passar um struct e passar uma referência de classe para um método (Guia de Programação em C#)
@@ -52,3 +53,4 @@ O exemplo a seguir demonstra como passar um [struct](../../../csharp/language-re
  [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)   
  [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)   
  [Passando parâmetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
+

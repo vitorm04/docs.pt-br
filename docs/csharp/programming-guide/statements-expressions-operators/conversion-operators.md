@@ -1,5 +1,5 @@
 ---
-title: "Operadores de Conversão (Guia de Programação em C#) | Microsoft Docs"
+title: "Operadores de conversão (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59916ed211d92b8349cba03d3adc4da42ef5c9ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c12fd13d6526d79363f973ce2a944c4823bf4104
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Operadores de conversão (Guia de Programação em C#)
@@ -70,3 +71,4 @@ O C# habilita os programadores a declarar conversões em classes ou structs, par
  <xref:System.Convert>   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Conversões explícitas encadeadas definidas pelo usuário em C#](http://go.microsoft.com/fwlink/?LinkId=112384)
+

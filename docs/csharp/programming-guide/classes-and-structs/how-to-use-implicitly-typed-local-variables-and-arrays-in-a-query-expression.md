@@ -1,5 +1,5 @@
 ---
-title: "Como usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta (Guia de Programação em C#) | Microsoft Docs"
+title: "Como usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3cc24fc5581b3174f194753e1ff917f891efed78
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 60e22aacef05ae2fe1b5e7127396cc66f24661d3
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Como usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta (Guia de Programação em C#)
@@ -54,3 +55,4 @@ Será possível usar variáveis locais de tipo implícito sempre que você desej
  [LINQ (Consulta Integrada à Linguagem)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [var](../../../csharp/language-reference/keywords/var.md)   
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

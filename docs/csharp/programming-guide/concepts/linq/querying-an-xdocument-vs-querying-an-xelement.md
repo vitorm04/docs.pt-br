@@ -1,5 +1,5 @@
 ---
-title: Consultar um XDocument versus Consultar um XElement (C#) | Microsoft Docs
+title: Consultar um XDocument versus Consultar um XElement (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a3da563618ad3dbc9797f252ab51588a43ce8e6
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa756d4adb1c361ef52e58bf6bdfd3bc2e31d13a
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Consultar um XDocument versus Consultar um XElement (C#)
-Quando carregar um documento via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, você observará que precisa escrever consultas de forma ligeiramente diferente do que quando você carrega via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
+Ao carregar um documento por meio do <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, você observará que precisa escrever consultas um pouco diferentes do que ao carregar por meio do <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Comparação de XDocument.Load e de XElement.Load  
- Quando você carrega um documento XML em um <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, o <xref:System.Xml.Linq.XElement> na raiz da árvore XML contém o elemento raiz do documento carregado. No entanto, quando você carrega o mesmo documento XML em um <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, a raiz da árvore é um nó <xref:System.Xml.Linq.XDocument> e o elemento raiz do documento carregado é o nó filho <xref:System.Xml.Linq.XElement> permitido do <xref:System.Xml.Linq.XDocument>. Os eixos [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] operam em relação ao nó raiz.  
+ Quando você carrega um documento XML em um <xref:System.Xml.Linq.XElement> por meio do <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, o <xref:System.Xml.Linq.XElement> na raiz da árvore XML contém o elemento raiz do documento carregado. No entanto, quando você carrega o mesmo documento XML em um <xref:System.Xml.Linq.XDocument> por meio do <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, a raiz da árvore é um nó de <xref:System.Xml.Linq.XDocument>, e o elemento raiz do documento carregado é o nó filho <xref:System.Xml.Linq.XElement> permitido do <xref:System.Xml.Linq.XDocument>. Os eixos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] operam em relação ao nó raiz.  
   
  Este primeiro exemplo carrega uma árvore XML usando <xref:System.Xml.Linq.XElement.Load%2A>. Em seguida, ele consulta os elementos filho da raiz da árvore.  
   
@@ -91,7 +91,7 @@ Querying tree loaded with XDocument.Load
   
  Observe que a mesma consulta retornou o nó `Root` em vez dos três nós filho.  
   
- Uma abordagem para lidar com isso é usar a propriedade <xref:System.Xml.Linq.XDocument.Root%2A> antes de acessar os métodos dos eixos, da seguinte maneira:  
+ Uma abordagem para lidar com isso é usar a propriedade <xref:System.Xml.Linq.XDocument.Root%2A> antes de acessar os métodos de eixos, da seguinte maneira:  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -111,7 +111,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- Essa consulta agora é executada da mesma maneira que a consulta na árvore enraizada em <xref:System.Xml.Linq.XElement>. O exemplo produz a seguinte saída:  
+ Essa consulta agora executa da mesma maneira que a consulta na árvore enraizada em <xref:System.Xml.Linq.XElement>. O exemplo produz a seguinte saída:  
   
 ```  
 Querying tree loaded with XDocument.Load  
@@ -123,3 +123,4 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

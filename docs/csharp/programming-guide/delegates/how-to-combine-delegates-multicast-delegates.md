@@ -1,5 +1,5 @@
 ---
-title: "Como Combinar Delegados (Delegados Multicast) (Guia de Programação em C#) | Microsoft Docs"
+title: "Como combinar delegados (delegados multicast) (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 21f8c7762c1c59d7df3fafcd3acab39cfa6e95c9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 617af10d3fb5f9371d5893b87a91a48639d44a53
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-combine-delegates-multicast-delegatesc-programming-guide"></a>Como combinar delegados (delegados multicast) (Guia de Programação em C#)
@@ -46,3 +47,4 @@ Este exemplo demonstra como criar delegados multicast. Uma propriedade útil de 
  <xref:System.MulticastDelegate>   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Eventos](../../../csharp/programming-guide/events/index.md)
+

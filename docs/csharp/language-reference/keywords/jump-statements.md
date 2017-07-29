@@ -1,5 +1,5 @@
 ---
-title: "Instruções de hiperlink (Referência de C#) | Microsoft Docs"
+title: "Instruções de salto (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 76d4b043546e47f194058a4d2adfaf5bfd57ee05
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6d2eef3f9adc426b93890751d72dfdb2855bb09
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="jump-statements-c-reference"></a>Instruções de salto (Referência de C#)
@@ -52,3 +53,4 @@ A ramificação é executada usando instruções de hiperlink, que causam uma tr
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Palavras-chave de instrução](../../../csharp/language-reference/keywords/statement-keywords.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Consultas básicas (LINQ to XML) (C#) | Microsoft Docs"
+title: "Consultas básicas (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 272cfadeccb505960f7872274a2af8c18efc3679
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
-Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] básicas.  
+Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] básicas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -39,9 +38,10 @@ Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](../../../../cs
 |[Como localizar todos os nós em um namespace (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Mostra como localizar todos os nós que estão em um namespace específico.|  
 |[Como classificar os elementos (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|Mostra como escrever uma consulta que classifique seus resultados.|  
 |[Como classificar os elementos em múltiplas chaves (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Mostra como classificar sobre várias chaves.|  
-|[Como calcular valores intermediários (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Mostra como usar a cláusula `Let` para calcular valores intermediários em uma consulta [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].|  
+|[Como calcular valores intermediários (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Mostra como usar a cláusula `Let` para calcular valores intermediários em uma consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Como escrever uma consulta que encontra elementos com base no contexto (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Mostra como selecionar elementos com base em outros elementos na árvore.|  
 |[Como depurar conjuntos de resultados de consultas vazios (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Mostra a correção apropriada ao depurar consultas em XML que está em um namespace padrão.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Consultando árvores XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+

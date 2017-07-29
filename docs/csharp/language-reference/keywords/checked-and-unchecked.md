@@ -1,5 +1,5 @@
 ---
-title: "Contexto Verificado e Não Verificado (Referência de C#) | Microsoft Docs"
+title: "Contexto verificado e não verificado (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 09a738c0dea231e33517ca4c2263ef9219c92228
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 744f59dbf7ee8370010ff76d4e9dde20490de403
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Contexto verificado e não verificado (Referência de C#)
@@ -62,3 +63,4 @@ Instruções C# podem ser executadas em contexto marcado ou desmarcado. Em um co
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Palavras-chave de instrução](../../../csharp/language-reference/keywords/statement-keywords.md)
+

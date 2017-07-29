@@ -1,5 +1,5 @@
 ---
-title: "Acessando dados do usuário (Visual Basic) | Microsoft Docs"
+title: "Acessando dados do usuário (Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ef4607074e1e89bcafdd4262a25070693948f8ff
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 396ae45d26551c3a44a8a8fa6334a744508734a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-user-data-visual-basic"></a>Acessando dados do usuário (Visual Basic)
@@ -57,3 +57,4 @@ Esta seção contém tópicos que lidam com o objeto `My.User` e com as tarefas 
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>
+

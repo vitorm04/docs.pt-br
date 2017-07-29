@@ -1,5 +1,5 @@
 ---
-title: "Tabela de Tipos de Ponto Flutuante (Referência de C#) | Microsoft Docs"
+title: "Tabela de tipos de ponto flutuante (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1aa258fdda3559f7603d0d7717824a365753576c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a5947e0570c5204e79495603c9a95c062155b9c2
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabela de tipos de ponto flutuante (Referência de C#)
@@ -52,3 +53,4 @@ A tabela a seguir mostra a precisão e os intervalos aproximados dos tipos de po
  [Tabela de Formatação de Resultados Numéricos](formatting-numeric-results-table.md)   
  [Tabelas de Referência de Tipos](reference-tables-for-types.md)   
  [decimal](decimal.md)
+

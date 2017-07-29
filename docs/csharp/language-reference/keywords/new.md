@@ -1,5 +1,5 @@
 ---
-title: "new (Referência de C#) | Microsoft Docs"
+title: "new (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95bc101f2497bb42b178a04bc7f84cfcd4918794
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9fa3bb911433e07f7fdebefeda1bea591c9dd643
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="new-c-reference"></a>new (Referência de C#)
@@ -52,3 +53,4 @@ No C#, a palavra-chave `new` pode ser usada como um operador, um modificador ou 
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+

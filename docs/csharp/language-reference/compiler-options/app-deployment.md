@@ -1,5 +1,5 @@
 ---
-title: "Implantação de aplicativos em C# | Microsoft Docs"
+title: "Implantação de aplicativos em C#"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,18 +31,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc3aa401ae0f44fe7904f1d426ce0051c452078b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fe9c4d38836821364bec3fea746676cd1df4ba8e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deployment-of-c-applications"></a>Implantação de aplicativos em C#
 Após criar seu aplicativo em C#, a próxima etapa é distribuí-lo. C# é uma linguagem .NET, portanto, distribuir executáveis em C# para outros computadores requer que o .NET Framework esteja instalado em cada computador de execução (e possivelmente outras dependências específicas para seu aplicativo). Você tem uma variedade de opções disponíveis para a distribuição do .NET Framework. Para uma visão geral, consulte [Guia de implantação para desenvolvedores](https://msdn.microsoft.com/library/ee942965).  
   
- Mover aplicativos concluídos para outros computadores é geralmente conhecido como implantação. O ambiente de desenvolvimento da Microsoft fornece mecanismos para implantação. Para obter mais informações, consulte [Implantando aplicativos e componentes](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components).  
+ Mover aplicativos concluídos para outros computadores é geralmente conhecido como implantação. O ambiente de desenvolvimento da Microsoft fornece mecanismos para implantação. Para obter mais informações, consulte [Implantando aplicativos e componentes](/visualstudio/deployment/deploying-applications-services-and-components).  
   
  Se você compilar e distribuir principalmente da linha de comando, precisará considerar outros métodos de implantação e redistribuição de dependências.  
   
 ## <a name="see-also"></a>Consulte também  
  [Build pela linha de comando com csc.exe](command-line-building-with-csc-exe.md)
+

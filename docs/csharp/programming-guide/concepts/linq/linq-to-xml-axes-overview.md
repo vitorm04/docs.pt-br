@@ -1,5 +1,5 @@
 ---
-title: "Visão geral dos eixos LINQ to XML (C#) | Microsoft Docs"
+title: "Visão geral dos eixos do LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b43d3cb5cc7154c1133c5fa17e5bdacca97a38c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Visão geral dos eixos do LINQ to XML (C#)
@@ -27,9 +26,9 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
   
  Conforme descrito em [Visão geral da classe XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), um objeto <xref:System.Xml.Linq.XElement> representa um nó de um único elemento. O conteúdo de um elemento pode ser complexo (às vezes denominado conteúdo estruturado) ou pode ser um elemento simples. Um elemento simples pode ser vazio ou conter um valor. Se o nó contiver o conteúdo estruturado, você poderá usar os vários métodos de eixo para recuperar enumerações de elementos descendentes. Os métodos de eixo mais usados do eixo são <xref:System.Xml.Linq.XContainer.Elements%2A> e <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
- Além dos métodos de eixo, que retornam coleções, há mais dois métodos que você geralmente usa nas consultas do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. O método <xref:System.Xml.Linq.XContainer.Element%2A> retorna um <xref:System.Xml.Linq.XElement> único. O método <xref:System.Xml.Linq.XElement.Attribute%2A> retorna um <xref:System.Xml.Linq.XAttribute> único.  
+ Além dos métodos de eixo, que retornam coleções, há mais dois métodos que você geralmente usa nas consultas do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. O método <xref:System.Xml.Linq.XContainer.Element%2A> retorna um <xref:System.Xml.Linq.XElement> único. O método <xref:System.Xml.Linq.XElement.Attribute%2A> retorna um <xref:System.Xml.Linq.XAttribute> único.  
   
- Em várias circunstâncias, as consultas do [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] fornecem a maneira mais eficiente de examinar uma árvore, extrair dados dela e transformá-la. As consultas do [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] operam em objetos que implementam o <xref:System.Collections.Generic.IEnumerable%601>, e os eixos do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] retornam o <xref:System.Collections.Generic.IEnumerable%601> das coleções <xref:System.Xml.Linq.XElement> e o <xref:System.Collections.Generic.IEnumerable%601> das coleções <xref:System.Xml.Linq.XAttribute>. Você precisa dessas coleções para executar suas consultas.  
+ Em várias circunstâncias, as consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fornecem a maneira mais eficiente de examinar uma árvore, extrair dados dela e transformá-la. As consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operam em objetos que implementam o <xref:System.Collections.Generic.IEnumerable%601>, e os eixos do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] retornam o <xref:System.Collections.Generic.IEnumerable%601> das coleções <xref:System.Xml.Linq.XElement> e o <xref:System.Collections.Generic.IEnumerable%601> das coleções <xref:System.Xml.Linq.XAttribute>. Você precisa dessas coleções para executar suas consultas.  
   
  Além dos métodos de eixo que recuperam coleções de elementos e atributos, há métodos de eixo que permitem a você iterar na árvore detalhadamente. Por exemplo, em vez de tratar elementos e atributos, você pode trabalhar com os nós da árvore. Os nós são um nível mais refinado de granularidade do que os elementos e os atributos. Ao trabalhar com os nós, você pode examinar comentários XML, nós de texto, instruções de processamento e muito mais. Essa funcionalidade é importante, por exemplo, para alguém que estiver escrevendo em um processador de texto e deseja salvar documentos como XML. No entanto, a maioria dos programadores XML se preocupam basicamente com os elementos, os atributos e seus valores.  
   
@@ -69,3 +68,4 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
   
 ## <a name="see-also"></a>Consulte também  
  [Eixos do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

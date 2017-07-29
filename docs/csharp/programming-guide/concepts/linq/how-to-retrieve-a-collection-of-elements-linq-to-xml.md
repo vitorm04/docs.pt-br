@@ -1,5 +1,5 @@
 ---
-title: "Como recuperar uma coleção de elementos (LINQ to XML) (C#) | Microsoft Docs"
+title: "Como recuperar uma coleção de elementos (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8cb7df493696aac23d223785d6c0f38f1285c8f
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 24a9eee962554ac6082dd4df5676d7e169912583
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Como recuperar uma coleção de elementos (LINQ to XML) (C#)
-Este tópico demonstra o método <xref:System.Xml.Linq.XContainer.Elements%2A>. Esse método retorna uma coleção de elementos filho de um elemento.  
+Este tópico demonstra o método de <xref:System.Xml.Linq.XContainer.Elements%2A> . Esse método retorna uma coleção de elementos filho de um elemento.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo efetua iterações através dos elementos filho do elemento de `purchaseOrder` .  
@@ -49,3 +49,4 @@ Name: Items
   
 ## <a name="see-also"></a>Consulte também  
  [Eixos do LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Modificadores (Referência de C#) | Microsoft Docs"
+title: "Modificadores (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0a76197aa7d109e868f154f62d324ec6babfe885
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e2e7e5e3907ac9bb66676e749ddd55a8ac4836c
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="modifiers-c-reference"></a>Modificadores (Referência de C#)
@@ -59,3 +60,4 @@ Os modificadores são usados para alterar declarações de tipos e membros de ti
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+

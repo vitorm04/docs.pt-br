@@ -1,5 +1,5 @@
 ---
-title: "Como implementar e chamar um método de extensão personalizado (Guia de programação em C#) | Microsoft Docs"
+title: "Como implementar e chamar um método de extensão personalizado (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: bcebdd1a6462e651619776549754eacfac9f9573
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c1c26640c550ce2b16ffafd59430e92189764f9
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Como implementar e chamar um método de extensão personalizado (Guia de Programação em C#)
@@ -74,3 +74,4 @@ Este tópico mostra como implementar seus próprios métodos de extensão para q
  [public](../../../csharp/language-reference/keywords/public.md)   
  [this](../../../csharp/language-reference/keywords/this.md)   
  [namespace](../../../csharp/language-reference/keywords/namespace.md)
+

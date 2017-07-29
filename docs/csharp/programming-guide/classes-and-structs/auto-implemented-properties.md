@@ -1,5 +1,5 @@
 ---
-title: "Propriedades Autoimplementadas (Guia de Programação em C#) | Microsoft Docs"
+title: "Propriedades autoimplementadas (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 075214f10d93c3ed0d069c5e8a6c6c4c96175865
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92e0037b73f1054673ea8060b71af5bd4db13ca3
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Propriedades autoimplementadas (Guia de Programação em C#)
@@ -55,3 +56,4 @@ public string FirstName { get; set; } = "Jane";
 ## <a name="see-also"></a>Consulte também  
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
+

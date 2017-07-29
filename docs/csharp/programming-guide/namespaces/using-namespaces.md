@@ -1,5 +1,5 @@
 ---
-title: "Usando namespaces (Guia de programação em C#) | Microsoft Docs"
+title: "Usando namespaces (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0ab1adb2103989234e5f44f95a73bf75a66a35dd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61b5d78f1c4924e3858c14876d36e52d4ee46ceb
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Usando namespaces (Guia de Programação em C#)
@@ -116,3 +117,4 @@ Os namespaces são usados intensamente em programas em C# de duas maneiras. Em p
  [. Operador](../../../csharp/language-reference/operators/member-access-operator.md)   
  [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
  [extern](../../../csharp/language-reference/keywords/extern.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "#line (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"line-c-reference\"></a>line (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3e4a33a166c2310129f764f1b5ec1e0858f111e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="line-c-reference"></a>#line (Referência de C#)
 O `#line` permite modificar o número de linha do compilador e (opcionalmente) a saída do nome de arquivo para erros e avisos. Este exemplo mostra como relatar dois avisos associados aos números de linha. A diretiva `#line 200` força o número de linha a ser 200 (embora o padrão seja #7) e até a próxima diretiva #line, o nome de arquivo será relatado como "Especial". A diretiva padrão #line retorna a numeração de linhas à sua numeração padrão, que conta as linhas que foram renumeradas pela diretiva anterior.  
   
-```  
+```csharp
 class MainClass  
 {  
     static void Main()  
@@ -70,7 +71,7 @@ class MainClass
 ## <a name="example-1"></a>Exemplo 1  
  O exemplo a seguir mostra como o depurador ignora as linhas ocultas no código. Quando você executar o exemplo, ele exibirá três linhas de texto. No entanto, quando você definir um ponto de interrupção, conforme mostrado no exemplo e apertar F10 para percorrer o código, você observará que o depurador ignorará a linha oculta. Observe também que, mesmo que você defina um ponto de interrupção na linha oculta, o depurador ainda a ignorará.  
   
-```  
+```csharp
 // preprocessor_linehidden.cs  
 using System;  
 class MainClass   
@@ -90,3 +91,4 @@ class MainClass
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

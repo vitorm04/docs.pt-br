@@ -1,5 +1,5 @@
 ---
-title: "Como Localizar Subdiretórios com um Padrão Específico no Visual Basic | Microsoft Docs"
+title: "Como localizar subdiretórios com um padrão específico no Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3fc7683c6629e2d94f3acb670810c6632efec094
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3719c13c74b873927382d2ff3ca733e3fd8fe945
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>Como localizar subdiretórios com um padrão específico no Visual Basic
@@ -73,3 +73,4 @@ O método <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> retor
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A>   
  [Como localizar arquivos com um padrão específico](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "partial (método) (Referência de C#) | Microsoft Docs"
+title: "partial (método) (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fb27922903cb717fdb600979e292f111dfc905d8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b6f8ecca01ebf681c906b73abefc94e9e45b8700
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="partial-method-c-reference"></a>partial (método) (Referência de C#)
@@ -53,3 +54,4 @@ Um método parcial tem sua assinatura definida em uma parte de um tipo parcial e
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [(partial (tipo)](../../../csharp/language-reference/keywords/partial-type.md)
+

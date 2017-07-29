@@ -1,5 +1,5 @@
 ---
-title: "#undef (Referência de C#) | Microsoft Docs"
+title: "#<a name=\"undef-c-reference\"></a>undef (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5bfbe187519a1d7e648d9830ddac70619ab61ce8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: acdd043535ef319f2af40c809e7fe4af612cb17d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="undef-c-reference"></a>#undef (Referência de C#)
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```csharp
 // preprocessor_undef.cs  
 // compile with: /d:DEBUG  
 #undef DEBUG  
@@ -65,3 +66,4 @@ class MyClass
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Diretivas do pré-processador do C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+

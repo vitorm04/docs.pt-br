@@ -1,5 +1,5 @@
 ---
-title: "remove (Referência de C#) | Microsoft Docs"
+title: "remove (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a58f81e31c67ae3640b5ede873f867cf43f0248
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b34d653a40e1309e281235416c0399abc6dd9a0d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="remove-c-reference"></a>remove (Referência de C#)
@@ -47,3 +48,4 @@ A palavra-chave contextual `remove` é usada para definir um acessador de evento
   
 ## <a name="see-also"></a>Consulte também  
  [Eventos](../../../csharp/programming-guide/events/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "dynamic (Referência de C#) | Microsoft Docs"
+title: "dynamic (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c1202c29d5286c56ddb28e7277a01051b153485
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b68a6ef4dc3dda01638b9bb84db58ba77214f490
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Referência de C#)
@@ -92,3 +93,4 @@ obj = obj + 3;
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
  [Como Executar a Conversão com Segurança Usando Operadores as e is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)   
  [Passo a passo: Criando e usando objetos dinâmicos](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Visão geral sobre interoperabilidade (Guia de programação em C#) | Microsoft Docs"
+title: "Visão geral sobre interoperabilidade (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 5084c4af3334c39f844fec67a1ab05dd9443bf27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
@@ -50,7 +50,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
 >  O [CLR](../../../standard/clr.md) (Common Language Runtime) gerencia o acesso aos recursos do sistema. Chamar código não gerenciado que esteja fora do CLR ignora esse mecanismo de segurança e, portanto, apresenta um risco de segurança. Por exemplo, o código não gerenciado pode chamar recursos diretamente em código não gerenciado, ignorando os mecanismos de segurança do CLR. Para obter mais informações, consulte [Segurança do .NET Framework](http://go.microsoft.com/fwlink/?LinkId=37122).  
   
 ## <a name="c-interop"></a>Interoperabilidade C++  
- Você pode usar a interoperabilidade do C++, também conhecida como IJW (It Just Works), para encapsular uma classe de C++ nativa, de forma que ela possa ser consumida pelo código que é criado no C# ou em outra linguagem do .NET Framework. Para fazer isso, você deve escrever código C++ para encapsular um componente nativo DLL ou COM. Ao contrário de outras linguagens do .NET Framework, o [!INCLUDE[vcprvc](../../../csharp/programming-guide/interop/includes/vcprvc_md.md)] tem suporte de interoperabilidade que permite que o código gerenciado e não gerenciado seja localizado no mesmo aplicativo e até no mesmo arquivo. Então, você compila o código C++ usando a opção do compilador **/clr** para produzir um assembly gerenciado. Finalmente, você adiciona uma referência ao assembly no seu projeto do C# e usa os objetos encapsulados, assim como usaria outras classes gerenciadas.  
+ Você pode usar a interoperabilidade do C++, também conhecida como IJW (It Just Works), para encapsular uma classe de C++ nativa, de forma que ela possa ser consumida pelo código que é criado no C# ou em outra linguagem do .NET Framework. Para fazer isso, você deve escrever código C++ para encapsular um componente nativo DLL ou COM. Ao contrário de outras linguagens do .NET Framework, o [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] tem suporte de interoperabilidade que permite que o código gerenciado e não gerenciado seja localizado no mesmo aplicativo e até no mesmo arquivo. Então, você compila o código C++ usando a opção do compilador **/clr** para produzir um assembly gerenciado. Finalmente, você adiciona uma referência ao assembly no seu projeto do C# e usa os objetos encapsulados, assim como usaria outras classes gerenciadas.  
   
 ## <a name="exposing-com-components-to-c"></a>Expondo componentes COM ao C#  
  Você pode consumir um componente COM de um projeto do C#. As etapas gerais são as seguintes:  
@@ -59,7 +59,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
 2.  Adicione ao projeto uma referência ao componente COM ou à biblioteca de tipo.  
   
-     Quando você adiciona a referência, o [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] usa o [Tlbimp.exe (Importador da biblioteca de tipos)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), que utiliza uma biblioteca de tipos como entrada para produzir um assembly de interoperabilidade do .NET Framework. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] adiciona ao projeto uma referência ao assembly gerado.  
+     Quando você adiciona a referência, o [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa o [Tlbimp.exe (Importador da biblioteca de tipos)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382), que utiliza uma biblioteca de tipos como entrada para produzir um assembly de interoperabilidade do .NET Framework. O assembly, também chamado de RCW (Runtime Callable Wrapper), contém classes gerenciadas e interfaces que encapsulam as classes COM e as interfaces que estão na biblioteca de tipos. O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] adiciona ao projeto uma referência ao assembly gerado.  
   
 3.  Crie uma instância de uma classe que esteja definida no RCW. Isso, por sua vez, criará uma instância do objeto COM.  
   
@@ -72,11 +72,11 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
 1.  Adicione atributos de interoperabilidade no projeto do C#.  
   
-     Você pode tornar visível um assembly do COM ao modificar as propriedades de projeto do [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)]. Para obter mais informações, consulte [Caixa de diálogo de informações do assembly](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box).  
+     Você pode tornar visível um assembly do COM ao modificar as propriedades de projeto do [!INCLUDE[csprcs](~/includes/csprcs-md.md)]. Para obter mais informações, consulte [Caixa de diálogo de informações do assembly](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
 2.  Gere e registre uma biblioteca de tipos COM para ser usada pelo COM.  
   
-     Você pode modificar as propriedades do projeto do [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] para registrar automaticamente o assembly do C# para a interoperabilidade COM. O [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] usa a [Regasm.exe (Ferramenta de Registro de Assembly)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb), usando a opção de linha de comando `/tlb`, que utiliza um assembly gerenciado como entrada, para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
+     Você pode modificar as propriedades do projeto do [!INCLUDE[csprcs](~/includes/csprcs-md.md)] para registrar automaticamente o assembly do C# para a interoperabilidade COM. O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] usa a [Regasm.exe (Ferramenta de Registro de Assembly)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb), usando a opção de linha de comando `/tlb`, que utiliza um assembly gerenciado como entrada, para gerar uma biblioteca de tipos. Esta biblioteca de tipos descreve os tipos `public` no assembly e adiciona as entradas do Registro para que os clientes COM possam criar classes gerenciadas.  
   
  Para obter mais informações, consulte [Expondo componentes do .NET Framework para o COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) e [Classe COM de exemplo](../../../csharp/programming-guide/interop/example-com-class.md).  
   
@@ -87,3 +87,4 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
  [Interoperação com código não gerenciado](https://msdn.microsoft.com/library/sd10k43k)   
  [Interoperabilidade COM avançada](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)
+
