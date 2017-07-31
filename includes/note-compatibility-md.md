@@ -1,0 +1,2 @@
+> [!NOTE]
+>  As funções e os objetos no namespace N:Microsoft.VisualBasic.Compatibility.VB6?qualifyHint=False&autoUpgrade=True são fornecidos para uso pelas ferramentas para atualização do Visual Basic 6.0 para o Visual Basic 2008. Na maioria dos casos, essas funções e objetos duplicam a funcionalidade que é possível encontrar em outros namespaces no .NET Framework Eles apenas são necessários quando o modelo de código do Visual Basic 6.0 difere significativamente da implementação do .NET Framework.
