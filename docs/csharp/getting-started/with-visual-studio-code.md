@@ -1,5 +1,5 @@
 ---
-title: "Introdução ao Visual Studio Code – Guia do C# | Microsoft Docs"
+title: "Introdução ao Visual Studio Code - Guia do C#"
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 keywords: "C#, Introdução, Aquisição, Instalação, Visual Studio Code, Plataforma Cruzada"
 author: kendrahavens
@@ -10,28 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e1e9ce39b2de05478a2bf010584e2e7fd8eb02f
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Introdução ao Visual Studio Code
-<a id="get-started-with-visual-studio-code" class="xliff"></a>
+# <a name="get-started-with-visual-studio-code"></a>Introdução ao Visual Studio Code
 
 O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos de servidor que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
 
-## Pré-requisitos
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>Pré-requisitos
 
 1. Instalar o [Visual Studio Code](https://code.visualstudio.com/).
 2. Instalar o [SDK do .NET Core](https://www.microsoft.com/net/download/core).
 3. Instalar a [extensão C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) do Visual Studio Code Marketplace.
 
-## Hello World
-<a id="hello-world" class="xliff"></a>
+## <a name="hello-world"></a>Hello World
 
 Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
@@ -66,8 +63,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 Você também pode assistir a um tutorial breve em vídeo para obter ajuda na instalação em [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) ou [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-## Depurar
-<a id="debug" class="xliff"></a>
+## <a name="debug"></a>Depurar
 1. Abra *Program.cs* clicando nele. Na primeira vez que você abrir um arquivo do C# no Visual Studio Code, o [OmniSharp](http://www.omnisharp.net/) será carregado no editor.
 
   ![Abra o arquivo Program.cs](media/with-visual-studio-code/opencs.png)
@@ -98,8 +94,7 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
 > [!TIP] 
 > Para obter mais informações e dicas sobre solução de problemas de depuração do .NET Core com o OmniSharp no Visual Studio Code, consulte [Instruções para configurar o depurador .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## Consulte também
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>Consulte também
 [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
 [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
 
