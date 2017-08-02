@@ -1,5 +1,5 @@
 ---
-title: "Expressões do C# – um tour pela linguagem C# | Microsoft Docs"
+title: "Expressões C# - um tour pela linguagem C#"
 description: "expressões, operandos e operadores são blocos de compilação da linguagem C#"
 keywords: ".NET, csharp, expressão, operador, operando"
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Expressões
-<a id="expressions" class="xliff"></a>
+# <a name="expressions"></a>Expressões
 
 *Expressões* são construídas a partir de *operandos* e *operadores*. Os operadores de uma expressão indicam quais operações devem ser aplicadas aos operandos. Exemplos de operadores incluem `+`, `-`, `*`, `/` e `new`. Exemplos de operandos incluem literais, campos, variáveis locais e expressões.
 
@@ -27,8 +26,8 @@ Quando uma expressão contiver vários operadores, a *precedência* dos operador
 
 Quando ocorre um operando entre dois operadores com a mesma precedência, a *associatividade* dos operadores controla a ordem na qual as operações são executadas:
 
-*    Exceto para os operadores de atribuição, todos os operadores binários são *associativos à esquerda*, o que significa que as operações são executadas da esquerda para a direita. Por exemplo, `x + y + z` é avaliado como `(x + y) + z`.
-*    Os operadores de atribuição e o operador condicional (`?:`) são *associativos à direita*, o que significa que as operações são executadas da direita para a esquerda. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
+*   Exceto para os operadores de atribuição, todos os operadores binários são *associativos à esquerda*, o que significa que as operações são executadas da esquerda para a direita. Por exemplo, `x + y + z` é avaliado como `(x + y) + z`.
+*   Os operadores de atribuição e o operador condicional (`?:`) são *associativos à direita*, o que significa que as operações são executadas da direita para a esquerda. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
 
 Precedência e associatividade podem ser controladas usando parênteses. Por exemplo, `x + y * z` primeiro multiplica `y` por `z` e, em seguida, adiciona o resultado a `x`, mas `(x + y) * z` primeiro adiciona `x` e `y` e, em seguida, multiplica o resultado por `z`.
 
@@ -42,7 +41,7 @@ O item a seguir resume os operadores do C#, listando as categorias de operador e
     - `x[...]`: acesso de matriz e indexador
     - `x++`: pós-incremento
     - `x--`: pós-decremento
-    - `new T(...)`: criação de objeto e de delegado
+    - `new T(...)`: criação de objeto e delegado
     - `new T(...){...}`: criação de objeto com inicializador
     - `new {...}`: inicializador de objeto anônimo
     - `new T[...]`: criação de matriz
