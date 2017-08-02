@@ -1,6 +1,6 @@
 ---
-title: Tutoriais do .NET Core | Microsoft Docs
-description: Tutoriais do .NET Core
+title: Tutoriais do .NET Core
+description: Siga os tutoriais para aprender como criar aplicativos e bibliotecas do .NET Core no Windows, Mac e Linux.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Testando uma biblioteca de classes do C#](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [Consumindo uma biblioteca de classes do C# com o .NET Core](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Compilando uma solução completa do .NET Core no Windows](using-on-windows-full-solution.md)
-- [Tutorial de NoSQL: compilar um aplicativo de console em C# do DocumentDB no .NET Core](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Tutorial de NoSQL: compilar um aplicativo de console em C# do DocumentDB no .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
 
@@ -55,5 +55,5 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Como Gerenciar Versões de Dependência de Pacote para o .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hospedando o .NET Core com base no código nativo](netcore-hosting.md)
 
-Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](https://docs.microsoft.com/aspnet/core/).
+Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](/aspnet/core/).
 

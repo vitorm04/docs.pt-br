@@ -1,5 +1,5 @@
 ---
-title: Atributos (C#) | Microsoft Docs
+title: Atributos (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e793ac7647c63125bf7bf075cdba57e770cc3be4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab55021a073f914905e29163ba2a669f69d6dcab
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-c"></a>Atributos (C#)
@@ -51,7 +52,7 @@ public class SampleClass
 }  
 ```  
   
- Um método com o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> é declarado do seguinte modo:  
+ Um método com o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> é declarado como este:  
   
 ```csharp  
 using System.Runtime.InteropServices;  
@@ -74,7 +75,7 @@ void MethodB([Out][In] ref double x) { }
 void MethodC([In, Out] ref double x) { }  
 ```  
   
- Alguns atributos podem ser especificados mais de uma vez para uma determinada entidade. Um exemplo de tal atributo de múltiplos usos é <xref:System.Diagnostics.ConditionalAttribute>:  
+ Alguns atributos podem ser especificados mais de uma vez para uma determinada entidade. Um exemplo de um atributo multiuso é <xref:System.Diagnostics.ConditionalAttribute>:  
   
 ```csharp  
 [Conditional("DEBUG"), Conditional("TEST1")]  
@@ -158,7 +159,7 @@ int Method3() { return 0; }
   
 -   Descrever as propriedades COM para classes, métodos e interfaces.  
   
--   Chamar código não gerenciado usando a classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+-   Chamar o código não gerenciado usando a classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
 -   Descrever o assembly em termos de versão, título, descrição ou marca.  
   
@@ -191,3 +192,4 @@ int Method3() { return 0; }
  [Guia de programação em C#](../../../../csharp/programming-guide/index.md)   
  [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [Atributos](https://msdn.microsoft.com/library/5x6cd29c)
+

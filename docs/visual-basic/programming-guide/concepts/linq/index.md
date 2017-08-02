@@ -1,5 +1,5 @@
 ---
-title: "LINQ (consulta integrada à linguagem) (Visual Basic) | Microsoft Docs"
+title: "LINQ (consulta integrada à linguagem) (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74374f96c86c0c4bf57a0c72d2d35825125cc7ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eca96e5d9be109bf5b8a9eff1bdf289b5b16ac06
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>LINQ (consulta integrada à linguagem) (Visual Basic)
@@ -49,7 +50,8 @@ O LINQ é um conjunto de recursos que estende os recursos avançados de consulta
  Inclui links para tópicos que explicam como usar o LINQ to XML, o qual fornece os recursos de modificação de documentos na memória do DOM (Modelo de Objeto do Documento) e dão suporte a expressões de consulta do LINQ.  
   
  [LINQ to ADO.NET (página do portal)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-adonet-portal-page.md)  
- Fornece um ponto de entrada para a documentação sobre LINQ to DataSet, LINQ to SQL e LINQ to Entities. O LINQ to DataSet permite que você crie mais recursos sofisticados de consulta no <xref:System.Data.DataSet> usando a mesma funcionalidade de consultas que está disponível para outras fontes de dados. O LINQ to SQL fornece uma infraestrutura em tempo de execução para gerenciar dados relacionais como objetos. O LINQ to Entities permite que os desenvolvedores escrevam consultas no modelo conceitual de Entity Framework usando C #.  
+ Fornece um ponto de entrada para a documentação sobre LINQ to DataSet, LINQ to SQL e LINQ to Entities. O LINQ to DataSet permite que você crie recursos mais sofisticados de consulta no <xref:System.Data.DataSet> usando a mesma funcionalidade de consultas que está disponível para outras fontes de dados. O LINQ to SQL fornece uma infraestrutura em tempo de execução para gerenciar dados relacionais como objetos. O LINQ to Entities permite que os desenvolvedores escrevam consultas no modelo conceitual de Entity Framework usando C #.  
   
  [Habilitando uma fonte de dados para consulta LINQ](../../../../visual-basic/programming-guide/concepts/linq/enabling-a-data-source-for-linq-querying.md)  
  Fornece uma introdução aos provedores LINQ personalizados, a árvores de expressões de LINQ e a outras formas de estender o LINQ.
+

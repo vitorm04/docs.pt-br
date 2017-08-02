@@ -193,7 +193,7 @@
 #### [Estilos e modelos ComboBox](combobox-styles-and-templates.md)
 #### [Estilos e modelos ContextMenu](contextmenu-styles-and-templates.md)
 #### [Estilos e modelos DataGrid](datagrid-styles-and-templates.md)
-#### [Estilos e modelos DatePicker](datepicker-syles-and-templates.md)
+#### [Estilos e modelos DatePicker](datepicker-styles-and-templates.md)
 #### [Estilos e modelos DocumentViewer](documentviewer-styles-and-templates.md)
 #### [Estilos e modelos de expansor](expander-styles-and-templates.md)
 #### [Estilos e modelos de quadro](frame-styles-and-templates.md)

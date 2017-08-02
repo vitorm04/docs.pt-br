@@ -1,5 +1,5 @@
 ---
-title: Assemblies e o cache de assembly global (Visual Basic) | Microsoft Docs
+title: Assemblies e o cache de assembly global (Visual Basic)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assemblies e o cache de assembly global (Visual Basic)
@@ -41,7 +42,7 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
   
 -   Você pode obter informações programaticamente sobre um assembly usando reflexão. Para obter mais informações, consulte [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
--   Se você deseja carregar um assembly apenas para inspecioná-lo, use um método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   Se deseja carregar um assembly somente para inspecioná-lo, use um método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Manifesto de um assembly  
  Dentro de todo assembly está um *manifesto do assembly*. Semelhante a um sumário, o manifesto do assembly contém o seguinte:  
@@ -74,3 +75,4 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
  [Como criar e usar assemblies usando a linha de comando (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
  [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
  [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+
