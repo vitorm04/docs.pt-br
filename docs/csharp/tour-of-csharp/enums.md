@@ -1,5 +1,5 @@
 ---
-title: "Enums do C# – um tour pela linguagem C# | Microsoft Docs"
+title: Enums em C# - um tour pela linguagem C#
 description: Saiba mais sobre enums, constantes nomeadas discretas no C#
 keywords: .NET, csharp
 author: BillWagner
@@ -10,16 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: b317f399fcbb5c1e91976defba3532bf5533b539
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
     
-# Enums
-<a id="enums" class="xliff"></a>
+# <a name="enums"></a>Enums
 
 Um ***tipo enum*** é um tipo de valor diferente com um conjunto de constantes nomeadas. Você define enums quando precisa definir um tipo que pode ter um conjunto de valores discretos. Eles usam um dos tipos de valor integral como o armazenamento subjacente. Eles fornecem um significado semântico aos valores discretos.
 

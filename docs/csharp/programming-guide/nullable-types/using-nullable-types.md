@@ -1,5 +1,5 @@
 ---
-title: "Usando tipos que permitem valor nulo (Guia de programação em C#) | Microsoft Docs"
+title: "Usando tipos anuláveis (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 88397167b12a00bf5e99a0537148a2957b9f0bd8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0721d9f60abc4e158135d6b050953b3e63ab8cb5
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Usando tipos anuláveis (Guia de Programação em C#)
@@ -137,3 +137,4 @@ Os tipos que permitem valor nulo podem representar todos os valores de um tipo s
  [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)   
  [Conversão boxing de tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)   
  [Tipos de Valor Anulável](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+

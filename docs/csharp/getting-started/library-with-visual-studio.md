@@ -1,5 +1,5 @@
 ---
-title: Criando uma biblioteca de classes com o C# e o .NET Core no Visual Studio 2017 | Microsoft Docs
+title: Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017
 description: Saiba como criar uma biblioteca de classes escrita em C# usando o Visual Studio 2017
 keywords: .NET Core, biblioteca de classes .NET Standard, Visual Studio 2017
 author: BillWagner
@@ -10,26 +10,24 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c29c4d2d1332fbf9e9e162e671200384a930aff1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 709b05dc9baeae1e99481a37287b91730b395f63
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017
-<a id="building-a-class-library-with-c-and-net-core-in-visual-studio-2017" class="xliff"></a>
+# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017
 
-Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes desenvolvida usando o .NET Core oferece suporte à biblioteca .NET Standard, que permite que sua biblioteca seja chamada por qualquer plataforma .NET que ofereça suporte a essa versão da biblioteca .NET Standard. Quando você finaliza sua biblioteca de classes, pode decidir se deseja distribuí-la como um componente de terceiros ou se quer incluí-la como um componente agrupado com um ou mais aplicativos.
+Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes desenvolvida usando o .NET Core oferece suporte ao .NET Standard, que permite que sua biblioteca seja chamada por qualquer plataforma .NET que ofereça suporte a essa versão do .NET Standard. Quando você finaliza sua biblioteca de classes, pode decidir se deseja distribuí-la como um componente de terceiros ou se quer incluí-la como um componente agrupado com um ou mais aplicativos.
 
 > [!NOTE]
 > Para obter uma lista das versões do .NET Standard e as plataformas às quais elas dão suporte, consulte [.NET Standard](../../standard/net-standard.md).
 
 Neste tópico, você criará uma biblioteca de utilitários simples que contém um único método de manipulação de cadeia de caracteres. Você implementará essa biblioteca como um [método de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md), para que você possa chamá-la como se fosse membro da classe @System.String.
 
-## Criar uma solução de biblioteca de classes
-<a id="creating-a-class-library-solution" class="xliff"></a>
+## <a name="creating-a-class-library-solution"></a>Criar uma solução de biblioteca de classes
 
 Comece criando uma solução para seu projeto de biblioteca de classes e seus projetos relacionados. Uma solução do Visual Studio serve como um contêiner para um ou mais projetos. Para criar a solução:
 
@@ -39,8 +37,7 @@ Comece criando uma solução para seu projeto de biblioteca de classes e seus pr
 
    ![Caixa de diálogo Novo projeto](./media/library-with-visual-studio/newproject.png)
 
-## Criar o projeto de biblioteca de classes
-<a id="creating-the-class-library-project" class="xliff"></a>
+## <a name="creating-the-class-library-project"></a>Criar o projeto de biblioteca de classes
 
 Crie seu projeto de biblioteca de classes:
 
@@ -62,8 +59,7 @@ Crie seu projeto de biblioteca de classes:
 
    ![Painel de saída mostrando que o build foi bem-sucedido](./media/library-with-visual-studio/buildsucceeds.png)
 
-## Próximas etapas
-<a id="next-step" class="xliff"></a>
+## <a name="next-step"></a>Próximas etapas
 
 Você compilou com êxito a biblioteca. Mas como você ainda não chamou nenhum de seus métodos, não sabe se ele funciona como esperado. A próxima etapa no desenvolvimento de sua biblioteca é testá-la usando um [Projeto de Teste de Unidade em C#](testing-library-with-visual-studio.md).
 
