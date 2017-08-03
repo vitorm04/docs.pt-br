@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-clean - CLI do .NET Core | Microsoft Docs
+title: "Comando dotnet-clean – CLI do .NET Core"
 description: "O comando dotnet-clean limpa o diretório atual."
 keywords: dotnet-clean, CLI, comando da CLI, .NET Core
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 0bdd8b9ab133ca92e414618412d95d8136d6234a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet clean` limpará a saída da compilação anterior. Ele é implementado como um [destino de MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets), para que o projeto seja avaliado durante a execução do comando. Apenas as saídas criadas durante a compilação são limpas. As pastas de saídas intermediária (*obj*) e final (*bin*) serão limpas.
+O comando `dotnet clean` limpará a saída da compilação anterior. Ele é implementado como um [destino de MSBuild](/visualstudio/msbuild/msbuild-targets), para que o projeto seja avaliado durante a execução do comando. Apenas as saídas criadas durante a compilação são limpas. As pastas de saídas intermediária (*obj*) e final (*bin*) serão limpas.
 
 ## <a name="arguments"></a>Arguments
 

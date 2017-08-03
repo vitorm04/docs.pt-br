@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-build - CLI do .NET Core | Microsoft Docs
+title: "Comando dotnet-build – CLI do .NET Core"
 description: "O comando dotnet-build compila um projeto e todas as suas dependências."
 keywords: dotnet-build, CLI, comando de CLI, .NET Core
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2006b15978f384e53e43a0a2562e81d10582abd
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -35,9 +36,9 @@ Se o projeto tiver dependências de terceiros, como bibliotecas do NuGet, elas s
 
 A compilação exige o arquivo *project.assets.json*, que lista as dependências do seu aplicativo. O arquivo é criado quando você executa [`dotnet restore`](dotnet-restore.md) antes de compilar o projeto. Sem o arquivo de ativos as ferramentas não conseguem resolver os assemblies de referência, o que resultará em erros.
 
-O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para saber mais, veja [Compilações incrementais](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds). 
+O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para saber mais, veja [Compilações incrementais](/visualstudio/msbuild/incremental-builds). 
 
-Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `/p` para configurar propriedades ou `/l` para definir um agente. Saiba mais sobre essas opções na [Referência de linha de comando do MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference). 
+Além das próprias opções, o comando `dotnet build` também aceita opções do MSBuild, como `/p` para configurar propriedades ou `/l` para definir um agente. Saiba mais sobre essas opções na [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
 
 O fato de o projeto ser executável ou não é determinado pela propriedade `<OutputType>` do arquivo de projeto. O seguinte exemplo mostra um projeto que produzirá um código executável:
 

@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-sln - CLI do .NET Core | Microsoft Docs
+title: "Comando dotnet-sln – CLI do .NET Core"
 description: "O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução."
 keywords: dotnet-sln, CLI, comando da CLI, .NET Core
 author: spboyer
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e5a72d3e-c14b-4b0a-a978-c5e54a0988c6
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7d7f0864ee1641627c4a55192d81ed76f2f44450
-ms.openlocfilehash: 0a832765d01609aebd10b13387a4317a6a246c30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 606929fbcafddf47abf5da6d3c8ce97d5af06909
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

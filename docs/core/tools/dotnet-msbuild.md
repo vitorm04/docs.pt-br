@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-msbuild - CLI do .NET Core | Microsoft Docs
+title: "Comando dotnet-msbuild – CLI do .NET Core"
 description: "O comando dotnet-msbuild fornece acesso à linha de comando MSBuild."
 keywords: dotnet-msmsbuild, CLI, comando da CLI, .NET Core
 author: blackdwarf
@@ -10,41 +10,31 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: df4b2ddd322e4bd2ebaf444439107e88a983f988
-ms.openlocfilehash: 2267ef0b5785959456ea443405b6708a423d00ba
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1f02dcd779b9ed249ebd2fedb973383b1dcd8963
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="dotnet-msbuild" class="xliff"></a>
+# <a name="dotnet-msbuild"></a>dotnet-msbuild
 
-# dotnet-msbuild
-
-<a id="name" class="xliff"></a>
-
-## Nome
+## <a name="name"></a>Nome
 
 `dotnet-msbuild` – Compila um projeto e todas as suas dependências.
 
-<a id="synopsis" class="xliff"></a>
-
-## Sinopse
+## <a name="synopsis"></a>Sinopse
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-<a id="description" class="xliff"></a>
-
-## Descrição
+## <a name="description"></a>Descrição
 
 O comando `dotnet msbuild` permite o acesso a um MSBuild totalmente funcional.
 
-O comando tem exatamente os mesmos recursos do cliente de linha de comando existente do MSBuild. As opções são todas iguais. Use a [Referência de linha de comando do MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference) para obter informações sobre as opções disponíveis. 
+O comando tem exatamente os mesmos recursos do cliente de linha de comando existente do MSBuild. As opções são todas iguais. Use a [Referência de linha de comando do MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) para obter informações sobre as opções disponíveis. 
 
-<a id="examples" class="xliff"></a>
-
-## Exemplos
+## <a name="examples"></a>Exemplos
 
 Compile um projeto e suas dependências:
 
@@ -61,3 +51,4 @@ Execute o destino de publicação e publique para o RID `osx.10.11-x64`:
 Confira o projeto inteiro com todos os destinos incluídos pelo SDK:
 
 `dotnet msbuild /pp`
+

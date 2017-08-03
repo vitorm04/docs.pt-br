@@ -1,6 +1,6 @@
 ---
-title: "Como gerenciar versões de dependência de pacote para .NET Core 1.0 | Microsoft Docs"
-description: "Como gerenciar versões de dependência de pacote para o .NET Core 1.0"
+title: "Como gerenciar versões de dependência de pacote para o .NET Core 1.0"
+description: "Saiba mais sobre o gerenciamento de versão de dependência de pacote para seus aplicativos e bibliotecas do .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3576fecfd4964bc0a4ca9482888cd61e6ac44350
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="how-to-manage-package-dependency-versions-for-net-core-10" class="xliff"></a>
-
-# Como gerenciar versões de dependência de pacote para o .NET Core 1.0
+# <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>Como gerenciar versões de dependência de pacote para o .NET Core 1.0
 
 Esse artigo aborda o que você precisa saber sobre as versões do pacote para seus aplicativos e bibliotecas .NET Core.
 
-<a id="glossary" class="xliff"></a>
-
-## Glossário
+## <a name="glossary"></a>Glossário
 
 **Corrigir** – Corrigir as dependências significa que você está usando a mesma “família” de pacotes lançados em NuGet para .NET Core 1.0.
 
@@ -33,9 +29,7 @@ Esse artigo aborda o que você precisa saber sobre as versões do pacote para se
 
 **Cortar** – O ato de remover de um metapacote os pacotes dos quais você não.  Isso é algo relevante para autores de pacotes NuGet.  Consulte [Reduzindo as dependências de pacote com o project.json](../deploying/reducing-dependencies.md) para obter mais informações. 
 
-<a id="fix-your-dependencies-to-net-core-10" class="xliff"></a>
-
-## Corrija suas dependências para o .NET Core 1.0
+## <a name="fix-your-dependencies-to-net-core-10"></a>Corrija suas dependências para o .NET Core 1.0
 
 Para restaurar os pacotes de forma confiável e escrever código com segurança, é importante que você corrija suas dependências para as versões de pacotes enviados juntamente com o .NET Core 1.0.  Isso significa que todos os pacotes devem ter uma única versão sem nenhum qualificador adicional.
 
@@ -55,15 +49,11 @@ Para restaurar os pacotes de forma confiável e escrever código com segurança,
 
 `"System.Text.RegularExpressions":"4.0.10-rc3-24021-00"`
 
-<a id="why-does-this-matter" class="xliff"></a>
-
-### Por que isso importa?
+### <a name="why-does-this-matter"></a>Por que isso importa?
 
 Asseguramos que, se você corrigir suas dependências para aquelas fornecidas junto com o .NET Core 1.0, os pacotes sempre funcionarão juntos.  Essa garantia não existe se você usar pacotes que não são corrigidos dessa maneira.
 
-<a id="scenarios" class="xliff"></a>
-
-### Cenários
+### <a name="scenarios"></a>Cenários
 
 Embora haja uma grande lista de todos os pacotes e suas versões lançadas com o .NET Core 1.0, você pode não precisar examiná-la se seu código estiver em determinados cenários.
 
@@ -83,19 +73,15 @@ Nesse caso, você deve garantir que o metapacote de início seja corrigido para 
 
 Nesse caso, você precisa corrigir suas outras dependências para 1.0.  Consulte as versões do pacote correto e números de build no fim desse artigo.
 
-<a id="a-note-on-using-a-splat-string--when-versioning" class="xliff"></a>
-
-### Uma observação sobre o uso de uma cadeia de caracteres splat (\*) durante o controle de versão
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>Uma observação sobre o uso de uma cadeia de caracteres splat (\*) durante o controle de versão
 
 Você pode ter adotado um padrão de controle de versão que usa uma cadeia de caracteres splat (\*) como esta: `"System.Collections":"4.0.11-*"`.
 
 **Você não deve fazer isso**.  Usar a cadeia de caracteres splat pode resultar na restauração de pacotes de diferentes versões, algumas muito mais avançadas que o .NET Core 1.0.  Isso poderia deixar alguns pacotes incompatíveis.
 
-<a id="packages-and-version-numbers-organized-by-metapackage" class="xliff"></a>
+## <a name="packages-and-version-numbers-organized-by-metapackage"></a>Pacotes e os Números de Versão organizados por Metapacote
 
-## Pacotes e os Números de Versão organizados por Metapacote
-
-[Lista de todos os pacotes de biblioteca do .NET Standard e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
+[Lista de todos os pacotes do .NET Standard e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
 
 [Lista de todos os pacotes de tempo de execução e suas versões para 1.0](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
