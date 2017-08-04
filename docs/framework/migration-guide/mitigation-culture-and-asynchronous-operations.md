@@ -1,5 +1,5 @@
 ---
-title: "Para saber mais, confira Mitigação: cultura e operações assíncronas | Microsoft Docs"
+title: "Para saber mais, confira Mitigação: cultura e operações assíncronas"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,25 +15,25 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c2dbf60cacf47be3c448b5683b771840ef85ddaf
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: debcae8281c832d2815e1b9896fbbcb725c8ffc3
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-culture-and-asynchronous-operations"></a>Para saber mais, confira Mitigação: cultura e operações assíncronas
-Para aplicativos direcionados ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versões posteriores, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> são armazenados em um <xref:System.Threading.ExecutionContext> do thread, que flui entre as operações assíncronas.  
+Em aplicativos direcionados ao [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e versões posteriores, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> são armazenados no <xref:System.Threading.ExecutionContext> de um thread, que flui por operações assíncronas.  
   
 ## <a name="impact"></a>Impacto  
- Como resultado dessa mudança, as alterações em <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> ou <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> serão refletidas em tarefas que são executadas posteriormente de forma assíncrona. Isso é diferente do comportamento de versões anteriores do .NET Framework, que redefiniriam <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> para o padrão do sistema em todas as tarefas assíncronas.  
+ Como resultado dessa alteração, alterações no <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> ou <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> são refletidas nas tarefas que são executadas posteriormente de forma assíncrona. Isso é diferente do comportamento das versões anteriores do .NET Framework, que redefiniria <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> para o padrão do sistema em todas as tarefas assíncronas.  
   
 ## <a name="mitigation"></a>Redução  
  Os aplicativos afetados por essa alteração podem contorná-la de duas maneiras:  
   
--   Definindo explicitamente a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> ou <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> como a primeira operação em uma tarefa assíncrona.  
+-   Definindo explicitamente a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> ou <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> desejada como a primeira operação em uma tarefa assíncrona.  
   
--   Aceitando o antigo comportamento de não deixar fluir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> adicionando o seguinte elemento `AppContextSwitchOverrides` ao arquivo de configuração do aplicativo:  
+-   Aceitando o comportamento antigo de não fluir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> adicionando o seguinte elemento `AppContextSwitchOverrides` ao arquivo de configuração do aplicativo:  
   
     ```xml  
     <configuration>  
@@ -43,7 +43,7 @@ Para aplicativos direcionados ao [!INCLUDE[net_v46](../../../includes/net-v46-md
     </configuration>  
     ```  
   
--   Aceitando o antigo comportamento de não deixar fluir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> configurando a seguinte opção de compatibilidade de forma programática:  
+-   Aceitando o comportamento antigo de não fluir <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> definindo a seguinte opção de compatibilidade de maneira programática:  
   
     ```csharp  
     AppContext.SetSwitch("Switch.System.Globalization.NoAsyncCurrentCulture", true);  

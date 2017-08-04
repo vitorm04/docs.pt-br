@@ -1,5 +1,5 @@
 ---
-title: "Comparação entre project.json e csproj – .NET Core | Microsoft Docs"
+title: "Comparação entre project.json e csproj – .NET Core"
 description: Veja um mapeamento entre os elementos project.json e csproj.
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -494,7 +494,7 @@ Não há nenhum equivalente do elemento `owners` no MSBuild. Para `summary`, é 
 }
 ```
 
-Seu equivalente no MSBuild são [destinos](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets):
+Seu equivalente no MSBuild são [destinos](/visualstudio/msbuild/msbuild-targets):
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -562,12 +562,12 @@ No entanto, é possível definir todos esses valores em csproj, bem como proprie
 }
 ```
 
-Sem suporte em csproj. Em vez disso, é necessário criar e incluir arquivos de conteúdo no arquivo *.nuspec*. Para obter mais informações, consulte [Incluindo arquivos de conteúdo](https://docs.microsoft.com/nuget/schema/nuspec#including-content-files).
+Sem suporte em csproj. Em vez disso, é necessário criar e incluir arquivos de conteúdo no arquivo *.nuspec*. Para obter mais informações, consulte [Incluindo arquivos de conteúdo](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>arquivos
 
 Em *project.json*, o build e o pacote poderão ser estendidos para serem compilados e inseridos de pastas diferentes.
-No MSBuild, isso é feito com [itens](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items). O seguinte exemplo é uma conversão comum:
+No MSBuild, isso é feito com [itens](/visualstudio/msbuild/common-msbuild-project-items). O seguinte exemplo é uma conversão comum:
 
 ```json
 {
@@ -620,7 +620,7 @@ Todos os elementos `ItemGroup` do MSBuild dão suporte a `Include`, `Exclude` e 
 
 O layout do pacote dentro do .nupkg pode ser modificado com `PackagePath="path"`.
 
-Com exceção de `Content`, a maioria dos grupos de itens exige a adição explícita de `Pack="true"` a ser incluída no pacote. `Content` será colocado na pasta *conteúdo* de um pacote, pois a propriedade `<IncludeContentInPack>` do MSBuild está definida como `true` por padrão. Para obter mais informações, consulte [Incluindo conteúdo em um pacote](https://docs.microsoft.com/nuget/schema/msbuild-targets#including-content-in-a-package).
+Com exceção de `Content`, a maioria dos grupos de itens exige a adição explícita de `Pack="true"` a ser incluída no pacote. `Content` será colocado na pasta *conteúdo* de um pacote, pois a propriedade `<IncludeContentInPack>` do MSBuild está definida como `true` por padrão. Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
 `PackagePath="%(Identity)"` é uma maneira curta de configurar o caminho do pacote para o caminho do arquivo relativo do projeto.
 

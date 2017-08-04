@@ -1,5 +1,5 @@
 ---
-title: "Guia de programação em C# | Microsoft Docs"
+title: "Guia de Programação em C#"
 ms.date: 2017-05-02
 ms.prod: .net
 ms.technology:
@@ -32,33 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d13005e3151058dfe1651b965d6dc6055b26210
-ms.openlocfilehash: a7c73e7b17275de0c9f305653005b84d2d1e8030
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 073c0600840ccc802b0481bf0023a6099821bec3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="c-programming-guide" class="xliff"></a>
-
-# Guia de programação em C#
+# <a name="c-programming-guide"></a>Guia de programação em C#
 Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.  
   
- Grande parte dessa seção pressupõe que você já sabe algo sobre o C# e conceitos gerais de programação. Se for um iniciante em programação ou em C#, acesse a [Central do desenvolvedor de C#](http://go.microsoft.com/fwlink/?linkid=95125), na qual você pode encontrar muitos tutoriais, exemplos e vídeos para ajudá-lo a começar.  
+ Grande parte dessa seção pressupõe que você já sabe algo sobre o C# e conceitos gerais de programação. Se você for um completo principiante em programação ou com C#, talvez seja útil visitar o tutorial interativo do [Guia de Introdução ao C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), no qual não é necessário nenhum conhecimento prévio de programação.  
   
- Para obter informações sobre palavras-chave específicas, operadores e diretivas de pré-processador, consulte [Referência de C#](../../csharp/language-reference/index.md). Para obter mais informações sobre as especificações da linguagem C#, consulte [Especificações da linguagem C#](../../csharp/language-reference/language-specification.md).  
+ Para obter informações sobre palavras-chave específicas, operadores e diretivas de pré-processador, consulte [Referência de C#](../../csharp/language-reference/index.md). Para obter mais informações sobre as especificações da linguagem C#, consulte [Especificações da linguagem C#](../../csharp/language-reference/language-specification/index.md).  
   
-<a id="program-sections" class="xliff"></a>
-
-## Seções de programa
+## <a name="program-sections"></a>Seções de programa
 
 [Por dentro de um programa em C#](../../csharp/programming-guide/inside-a-program/index.md)  
   
 [Main() e argumentos de linha de comando](../../csharp/programming-guide/main-and-command-args/index.md)  
  
-<a id="language-sections" class="xliff"></a>
-
-## Seções da linguagem  
+## <a name="language-sections"></a>Seções da linguagem  
 [Instruções, expressões e operadores](../../csharp/programming-guide/statements-expressions-operators/index.md)  
 
  [Tipos](../../csharp/programming-guide/types/index.md)  
@@ -97,9 +91,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Comentários da documentação XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
-<a id="platform-sections" class="xliff"></a>
-
-## Seções da plataforma  
+## <a name="platform-sections"></a>Seções da plataforma  
  [Domínios de aplicativo (C# e Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
  [Assemblies e o Cache de Assembly Global](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
@@ -116,8 +108,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Reflexão](../../csharp/programming-guide/concepts/reflection.md)  
   
-<a id="see-also" class="xliff"></a>
-
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../csharp/language-reference/index.md)   
  [C#](../../csharp/csharp.md)
+

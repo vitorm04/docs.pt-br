@@ -1,5 +1,5 @@
 ---
-title: "Serialização (C#) | Microsoft Docs"
+title: "Serialização (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2deffa4f2c9a407b74e8bc6357afc9400a3ba7d4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2eefd71abf07a96bb99b256571e6ac4529fb277d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serialization-c-"></a>Serialização (C#)
@@ -39,13 +40,13 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
  A serialização permite que o desenvolvedor salve o estado de um objeto e recrie conforme necessário, fornecendo o armazenamento dos objetos, bem como a troca de dados. Pela serialização, um desenvolvedor pode executar ações como enviar o objeto para um aplicativo remoto por meio de um serviço Web, passando um objeto de um domínio para outro, passando um objeto por um firewall como uma cadeia de caracteres XML ou mantendo a segurança ou as informações específicas de usuários entre aplicativos.  
   
 ### <a name="making-an-object-serializable"></a>Tornando um objeto serializável  
- Para serializar um objeto, é necessário que o esteja serializado, um fluxo para conter o objeto serializado e um <xref:System.Runtime.Serialization.Formatter>. <xref:System.Runtime.Serialization> contém as classes necessárias para serializar e desserializar objetos.  
+ Para serializar um objeto, é necessário que ele esteja serializado, um fluxo contenha o objeto serializado e um <xref:System.Runtime.Serialization.Formatter>. O <xref:System.Runtime.Serialization> contém as classes necessárias para serializar e desserializar objetos.  
   
- Aplique o atributo <xref:System.SerializableAttribute> a um tipo para indicar que as instâncias desse tipo podem ser serializadas. Uma exceção <xref:System.Runtime.Serialization.SerializationException> será lançada se você tentar serializar, mas o tipo não tiver o atributo <xref:System.SerializableAttribute>.  
+ Aplique o atributo <xref:System.SerializableAttribute> a um tipo para indicar que as instâncias desse tipo podem ser serializadas. Uma exceção de <xref:System.Runtime.Serialization.SerializationException> será gerada se você tentar serializar, mas o tipo não tiver o atributo <xref:System.SerializableAttribute>.  
   
- Se você não quiser que um campo em sua classe seja serializável, aplique o atributo <xref:System.NonSerializedAttribute>. Se um campo de um tipo serializável contiver um ponteiro, um identificador ou outra estrutura de dados que é específica de um determinado ambiente e o campo não puder ser reconstituído em um ambiente diferente, será necessário torná-lo não serializável.  
+ Se não desejar que um campo em sua classe seja serializável, aplique o atributo <xref:System.NonSerializedAttribute>. Se um campo de um tipo serializável contiver um ponteiro, um identificador ou outra estrutura de dados que é específica de um determinado ambiente e o campo não puder ser reconstituído em um ambiente diferente, será necessário torná-lo não serializável.  
   
- Se uma classe serializada contiver referências a objetos de outras classes que estão marcadas como <xref:System.SerializableAttribute>, esses objetos também poderão ser serializados.  
+ Se uma classe serializada contiver referências a objetos de outras classes que estão marcadas como <xref:System.SerializableAttribute>, esses objetos também serão serializados.  
   
 ## <a name="binary-and-xml-serialization"></a>Serialização XML e binária  
  É possível usar serialização XML ou binária. Na serialização binária, todos os membros, mesmo aqueles que são somente leitura, são serializados, e o desempenho é aprimorado. A serialização XML fornece código mais legível, bem como maior flexibilidade de compartilhamento do objeto e uso para fins de interoperabilidade.  
@@ -54,7 +55,7 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
  A serialização binária usa a codificação binária para produzir uma serialização compacta para usos como armazenamento ou fluxos de rede com base em soquete.  
   
 ### <a name="xml-serialization"></a>Serialização XML  
- A serialização XML serializa as propriedades e os campos públicos de um objeto, ou os parâmetros e os valores de retorno de métodos, em um fluxo XML que esteja de acordo com um documento XSD (linguagem de definição de esquema XML) específico. A serialização XML resulta em classes fortemente tipadas com propriedades e campos públicos que são convertidos em XML. <xref:System.Xml.Serialization> contém as classes necessárias para serializar e desserializar XML.  
+ A serialização XML serializa as propriedades e os campos públicos de um objeto, ou os parâmetros e os valores de retorno de métodos, em um fluxo XML que esteja de acordo com um documento XSD (linguagem de definição de esquema XML) específico. A serialização XML resulta em classes fortemente tipadas com propriedades e campos públicos que são convertidos em XML. O <xref:System.Xml.Serialization> contém as classes necessárias para serializar e desserializar XML.  
   
  Você pode aplicar atributos a classes e membros de classe para controlar a maneira como o <xref:System.Xml.Serialization.XmlSerializer> serializa ou desserializa uma instância da classe.  
   
@@ -82,4 +83,5 @@ A serialização é o processo de converter um objeto em um fluxo de bytes para 
  Mostra como ler dados de objeto que foram previamente gravados em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
  [Como gravar dados de objeto em um arquivo XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- Mostra como gravar o objeto de uma classe em um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.
+ Mostra como gravar o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.
+

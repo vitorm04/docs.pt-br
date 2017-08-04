@@ -1,6 +1,6 @@
 ---
-title: Docker no .NET Framework | Microsoft Docs
-description: Docker no .NET Framework
+title: Docker no .NET Framework
+description: "Saiba mais sobre como implantar aplicativos .NET Framework com Docker, usando contêineres do Windows."
 keywords: ".NET, .NET Server, Docker, Contêineres do Windows"
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-framework
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 600faa333273452716ee85187c5384d54a6fa5fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f271ed03527e425baab4313d03526c0c41e10237
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -23,5 +23,5 @@ ms.lasthandoff: 05/23/2017
 Você pode implantar aplicativos .NET Framework com Docker, usando contêineres do Windows. Você pode saber sobre os requisitos de uso dos [Contêineres do Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview) e sobre a [Introdução ao Docker para Windows](https://docs.docker.com/docker-for-windows/). 
 
 Você pode começar [executando um aplicativo de console com Docker](console.md).
-Para executar aplicativos da Web no Docker, você pode ler [Aplicativos ASP.NET MVC no Docker](https://docs.microsoft.com/aspnet/mvc/overview/deployment/docker-aspnetmvc).
+Para executar aplicativos da Web no Docker, você pode ler [Aplicativos ASP.NET MVC no Docker](/aspnet/mvc/overview/deployment/docker-aspnetmvc).
 

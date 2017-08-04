@@ -1,6 +1,6 @@
 ---
-title: Pacotes, metapacotes e estruturas | Microsoft Docs
-description: Pacotes, Metapacotes e Estruturas
+title: Pacotes, Metapacotes e Estruturas
+description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,25 +9,21 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 6a8f57de57e3470b0312b0d248d91d14f613ae94
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="packages-metapackages-and-frameworks" class="xliff"></a>
-
-# Pacotes, Metapacotes e Estruturas
+# <a name="packages-metapackages-and-frameworks"></a>Pacotes, Metapacotes e Estruturas
 
 O .NET Core é uma plataforma composta por pacotes NuGet. Algumas experiências de produtos aproveitam melhor a definição refinada de pacotes, enquanto para outros a alta granularidade é melhor. Para acomodar esse dualidade, o produto é distribuído como um conjunto refinado de pacotes, sendo então descrito como blocos mais volumosos com um tipo de pacote chamado informalmente de “metapacote”.
 
 Cada um dos pacotes .NET Core dá suporte à execução de vários tempos de execução .NET, representados como estruturas. Algumas dessas estruturas são tradicionais, como o `net46`, que representa o .NET Framework. Outro conjunto são as novas estruturas que podem ser consideradas como "estruturas baseadas em pacote", que estabelecem um novo modelo para definir estruturas. Essas estruturas baseadas em pacote são totalmente formadas e definidas como pacotes, criando uma forte relação entre pacotes e estruturas.
 
-<a id="packages" class="xliff"></a>
-
-## Pacotes
+## <a name="packages"></a>Pacotes
 
 O .NET Core é dividido em um conjunto de pacotes, que fornecem tipos de dados primitivos de nível superior, tipos de composição de aplicativos e utilitários comuns. Cada um desses pacotes representa um único assembly de mesmo nome. Por exemplo, [System.Runtime](https://www.nuget.org/packages/System.Runtime) contém System.Runtime.dll. 
 
@@ -62,9 +58,7 @@ Normalmente, em vez de incluir um pacote de cada vez nos projetos, é muito mais
 </Project>
 ```
 
-<a id="metapackages" class="xliff"></a>
-
-## Metapacotes
+## <a name="metapackages"></a>Metapacotes
 
 Metapacotes são uma convenção de pacotes NuGet para descrever um conjunto de pacotes que são significativos juntos. Eles representam esse conjunto de pacotes tornando-os dependências. Opcionalmente, eles podem estabelecer uma estrutura para esse conjunto de pacotes especificando-a. 
 
@@ -77,18 +71,16 @@ Há vantagens em usar metapacotes:
 - Fornece uma experiência de usuário conveniente para fazer referência a um grande conjunto de pacotes refinados. 
 - Define um conjunto de pacotes (incluindo versões específicas) que são testados e funcionam bem em conjunto.
 
-O metapacote da Biblioteca Padrão do .NET é:
+O metapacote da .NET Standard é:
 
-- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) – Descreve as bibliotecas que fazem parte da “.NET Standard Library”. Aplica-se a todas as implementações do .NET (por exemplo, .NET Framework, .NET Core e Mono) que dão suporte à .NET Standard Library. Estabelece a estrutura “netstandard”.
+- [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) – Descreve as bibliotecas que fazem parte da ".NET Standard". Aplica-se a todas as implementações do .NET (por exemplo, .NET Framework, .NET Core e Mono) que dão suporte à .NET Standard. Estabelece a estrutura “netstandard”.
 
 Os principais metapacotes do .NET Core são:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) – Descreve as bibliotecas que fazem parte da distribuição do .NET Core. Estabelece a estrutura [`.NETCoreApp`](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Conta com o `NETStandard.Library` menor.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – Um conjunto de fachadas de compatibilidade que permitem que PCLs (Bibliotecas de Classes Portáteis) baseadas em mscorlib sejam executadas no .NET Core.
 
-<a id="frameworks" class="xliff"></a>
-
-## Estruturas
+## <a name="frameworks"></a>Estruturas
 
 Cada pacote do .NET Core dá suporte a um conjunto de estruturas de tempo de execução. As estruturas descrevem um conjunto de APIs disponível (e possivelmente outras características) com os quais você pode contar ao direcionar uma determinada estrutura. Eles têm controle de versão à medida que novas APIs são adicionadas.
 
@@ -104,9 +96,7 @@ A estrutura `.NETFramework,Version=4.6` representa as APIs disponíveis no .NET 
 
 A estrutura `.NETStandard,Version=1.3` é uma estrutura baseada em pacote. Ela se baseia em pacotes direcionados para a estrutura definir e expor as APIs com relação à estrutura.
 
-<a id="package-based-frameworks" class="xliff"></a>
-
-## Estruturas baseadas em pacote
+## <a name="package-based-frameworks"></a>Estruturas baseadas em pacote
 
 Há uma relação bidirecional entre estruturas e pacotes. A primeira parte é definir as APIs disponíveis para uma determinada estrutura, por exemplo `netstandard1.3`. Pacotes direcionados a `netstandard1.3` (ou estruturas compatíveis, como o `netstandard1.0`) definem as APIs disponíveis para `netstandard1.3`. Isso pode parecer uma definição circular, mas não é. Por ser "baseada em pacote", a definição da API para a estrutura vem dos pacotes. A estrutura em si não define nenhuma APIs.
 
@@ -121,13 +111,11 @@ As duas principais estruturas baseadas em pacote usadas com o .NET Core são:
 - `netstandard`
 - `netcoreapp`
 
-<a id="net-standard" class="xliff"></a>
+### <a name="net-standard"></a>.NET Standard
 
-### .NET Standard
+A estrutura do .NET Standard (Moniker da Estrutura de Destino: `netstandard`) representa as APIs definidas e criadas com base no [.NET Standard](../standard/net-standard.md). Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino. Elas terão suporte em qualquer tempo de execução compatível com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses tempos de execução dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam.
 
-A estrutura do .NET Standard (Moniker da Estrutura de Destino: `netstandard`) representa as APIs definidas e criadas com base no [.NET Standard](../standard/net-standard.md). Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino. Elas terão suporte em qualquer tempo de execução compatível com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses tempos de execução dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam. 
-
-A estrutura `netstandard` referencia implicitamente o metapacote `NETStandard.Library`. Por exemplo, o arquivo de projeto do MSBuild a seguir indica que o projeto tem `netstandard1.6` como destino, que referencia o metapacote da Biblioteca Padrão do .NET versão 1.6. 
+A estrutura `netstandard` faz referência implícita ao metapacote [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Por exemplo, o arquivo de projeto do MSBuild a seguir indica que o projeto é direcionado ao `netstandard1.6`, que faz referência ao metapacote [`NETStandard.Library` versão 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -154,9 +142,7 @@ Pode parecer estranho apontar para `netstandard1.3`, mas use a versão 1.6.0 do 
 
 O inverso não seria válido: direcionar `netstandard1.6` com a versão 1.3.0 do `NETStandard.Library`. Você não pode direcionar uma estrutura mais elevada com um metapacote menos elevado, visto que a versão do metapacote inferior não exporá os ativos para essa estrutura superior. O esquema de controle de versão para metapacotes declara que os metapacotes correspondem à versão mais alta da estrutura descrita por eles. Devido a esse esquema de controle de versão, a primeira versão do `NETStandard.Library` é v1.6.0, já que ele contém ativos `netstandard1.6`. A versão 1.3.0 é usada no exemplo acima para fins de simetria, mas não existe na verdade.
 
-<a id="net-core-application" class="xliff"></a>
-
-### .NET Core Application
+### <a name="net-core-application"></a>.NET Core Application
 
 A estrutura .NET Core Application (TFM: `netcoreapp`) representa os pacotes e APIs associadas que são fornecidos com a distribuição do .NET Core e o modelo de aplicativo de console que ela fornece. Aplicativos .NET Core devem usar essa estrutura, devido ao direcionamento do modelo de aplicativo de console, assim como as bibliotecas que devem ser executados apenas em .NET Core. Usar essa estrutura restringe a bibliotecas à execução apenas no .NET Core. 
 

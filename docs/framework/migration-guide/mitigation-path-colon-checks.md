@@ -1,5 +1,5 @@
 ---
-title: "Mitigação: verificações de dois-pontos no caminho | Microsoft Docs"
+title: "Mitigação: verificações de dois-pontos no caminho"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,21 +15,21 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5e2426fc81c8fd38994a4124cf71af8ec445bfb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8eb6864213aa4420f7a4373b9abbf173880f035f
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-path-colon-checks"></a>Mitigação: verificações de dois-pontos no caminho
 Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], várias alterações foram feitas para dar suporte aos caminhos anteriormente sem suporte (em termos de comprimento e formato). Em particular, as verificações da sintaxe adequada do separador de unidade (os dois-pontos) foram corrigidas.  
   
 ## <a name="impact"></a>Impacto  
- Essas alterações bloqueiam alguns caminhos de URI aos quais os métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> ofereciam suporte anteriormente.  
+ Essas alterações bloqueiam alguns caminhos de URI aos quais esses os métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName> anteriormente davam suporte.  
   
 ## <a name="mitigation"></a>Redução  
- Para solucionar o problema de um caminho anteriormente aceitável que não tem mais suporte dos métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, faça o seguinte:  
+ Para contornar o problema de um caminho aceitável anteriormente que não tem mais suporte pelos métodos <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=fullName> e <xref:System.IO.Path.GetPathRoot%2A?displayProperty=fullName>, é possível fazer o seguinte:  
   
 -   Remova manualmente o esquema de uma URL. Por exemplo, remova `file://` de uma URL.  
   

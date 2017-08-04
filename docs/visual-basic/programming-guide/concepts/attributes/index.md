@@ -1,5 +1,5 @@
 ---
-title: "Visão geral de atributos (Visual Basic) | Microsoft Docs"
+title: "Visão geral de atributos (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,11 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81f6275334a0ba1507dcff2bcd85e0b1aa276067
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-overview-visual-basic"></a>Visão geral de atributos (Visual Basic)
@@ -51,7 +51,7 @@ Os atributos fornecem um método eficiente de associação de metadados, ou info
 End Class  
 ```  
   
- Um método com o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> é declarado do seguinte modo:  
+ Um método com o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> é declarado como este:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +76,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- Alguns atributos podem ser especificados mais de uma vez para uma determinada entidade. Um exemplo de tal atributo de múltiplos usos é <xref:System.Diagnostics.ConditionalAttribute>:  
+ Alguns atributos podem ser especificados mais de uma vez para uma determinada entidade. Um exemplo de um atributo multiuso é <xref:System.Diagnostics.ConditionalAttribute>:  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -131,7 +131,7 @@ Module: CLSCompliant(True)>
   
 -   Descrever as propriedades COM para classes, métodos e interfaces.  
   
--   Chamar código não gerenciado usando a classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+-   Chamar o código não gerenciado usando a classe <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
 -   Descrever o assembly em termos de versão, título, descrição ou marca.  
   
@@ -164,3 +164,4 @@ Module: CLSCompliant(True)>
  [Guia de programação do Visual Basic](../../../../visual-basic/programming-guide/index.md)   
  [Reflexão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
  [Atributos](https://msdn.microsoft.com/library/5x6cd29c)
+

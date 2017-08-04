@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-pack - CLI do .NET Core | Microsoft Docs
+title: "Comando dotnet-pack – CLI do .NET Core"
 description: O comando dotnet-pack cria pacotes NuGet para seu projeto .NET Core.
 keywords: dotnet-pack, CLI, comando da CLI, .NET Core
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 14c2e01ab0c30c9f1cbfdcc53ea85fe51a4d8c2e
-ms.openlocfilehash: 5a2ea69825fa336b1d8ce2283e214d02c16347e3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04b967fdf6578098caae8c21604c5d6160eb6775
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

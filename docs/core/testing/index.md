@@ -1,6 +1,6 @@
 ---
-title: Teste de Unidade no .NET Core | Microsoft Docs
-description: Teste de Unidade no .NET Core
+title: Teste de Unidade no .NET Core
+description: "Testes de unidade nunca foram tão fáceis. Saiba mais sobre como usar os testes de unidade em projetos do .NET Core."
 keywords: .NET, .NET Core
 author: ardalis
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 4983af5386efc6b713f10f200687535b7dc36a11
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22647a9ad7723bbfcf0d54530b3c0538198e7c35
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -28,12 +28,12 @@ Ter um pacote de testes automatizados é uma das melhores maneiras de garantir q
 > [!NOTE]
 > Os desenvolvedores geralmente enfrentam problemas para inventar bons nomes para seus métodos e classe de teste. Como ponto de partida, a equipe de produto do ASP.NET segue [essas convenções](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
 
-Ao escrever testes de unidade, tenha cuidado para não apresentar dependências à infraestrutura acidentalmente. Eles tendem a tornar os testes mais lentos e mais frágeis, ficando reservados aos testes de integração. Você pode evitar essas dependências ocultas no código do aplicativo seguindo o [Princípio de Dependências Explícitas](http://deviq.com/explicit-dependencies-principle/) e usando a [Injeção de Dependência](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection) para solicitar as dependências da estrutura. Você pode manter seus testes de unidade em um projeto separado dos seus testes de integração e verificar se o projeto de teste de unidade não tem dependências ou referências a pacotes de infraestrutura.
+Ao escrever testes de unidade, tenha cuidado para não apresentar dependências à infraestrutura acidentalmente. Eles tendem a tornar os testes mais lentos e mais frágeis, ficando reservados aos testes de integração. Você pode evitar essas dependências ocultas no código do aplicativo seguindo o [Princípio de Dependências Explícitas](http://deviq.com/explicit-dependencies-principle/) e usando a [Injeção de Dependência](/aspnet/core/fundamentals/dependency-injection) para solicitar as dependências da estrutura. Você pode manter seus testes de unidade em um projeto separado dos seus testes de integração e verificar se o projeto de teste de unidade não tem dependências ou referências a pacotes de infraestrutura.
 
 Saiba mais sobre testes de unidade em projetos do .NET Core:
 
-* Experimente seguir o [passo a passo para criar testes de unidade com xUnit e a CLI do .NET](unit-testing-with-dotnet-test.md). 
+* Experimente seguir o [passo a passo para criar testes de unidade com xUnit e a CLI do .NET Core](unit-testing-with-dotnet-test.md). 
 * A equipe do XUnit criou um tutorial que mostra [como usar o xUnit com o .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-* Se você preferir usar o MSTest, tente as [instruções passo a passo para criar testes de unidade com o MSTest e a CLI do .NET](unit-testing-with-mstest.md).
+* Se preferir usar o MSTest, tente as [instruções passo a passo para criar testes de unidade com o MSTest e a CLI do .NET Core](unit-testing-with-mstest.md).
 * Para obter informações e exemplos adicionais sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
 

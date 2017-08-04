@@ -1,5 +1,5 @@
 ---
-title: "Mitigação: MemberDescriptor.Equals | Microsoft Docs"
+title: "Mitigação: MemberDescriptor.Equals"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,23 +15,23 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 409f06f4dfbe7be50dd2c487e49d3d4d8a477539
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4989d3c2611b500063158955f102931902e1ab32
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-memberdescriptorequals"></a>Mitigação: MemberDescriptor.Equals
-Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a implementação do método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> mudou. Como os métodos `System.ComponentModel.EventDescriptor.Equals` e `System.ComponentModel.PropertyDescriptor.Equals` herdam a implementação da classe base, a alteração também afeta esses métodos.  
+Começando com os aplicativos que direcionam o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], a implementação do método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> foi alterada. Como os métodos `System.ComponentModel.EventDescriptor.Equals` e `System.ComponentModel.PropertyDescriptor.Equals` herdam a implementação da classe base, a alteração também afeta esses métodos.  
   
- Em aplicativos direcionados a versões do .NET Framework anteriores ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], uma parte do teste de igualdade do método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> comparou incorretamente a propriedade <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> de um objeto com a propriedade <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> de outro. A partir dos aplicativos direcionados ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> compara a propriedade <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> dos dois objetos.  
+ Em aplicativos que direcionam versões do .NET Framework antes do [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], uma parte do método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> de igualdade comparou incorretamente a propriedade <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> de um objeto com a propriedade <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> do outro. Começando com aplicativos que direcionam o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], o método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> compara a propriedade <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> dos dois objetos.  
   
 ## <a name="impact"></a>Impacto  
  Essa alteração implementa corretamente o teste de igualdade para objetos <xref:System.ComponentModel.MemberDescriptor?displayProperty=fullName> e deve ter um impacto mínimo.  
   
 ## <a name="mitigation"></a>Redução  
- Há duas soluções alternativas disponíveis se o seu aplicativo for direcionado ao [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou a uma versão posterior do .NET Framework e se depender do método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> retornar, às vezes, `false` quando os descritores de membro forem equivalentes:  
+ Duas soluções alternativas estarão disponíveis se o seu aplicativo direcionar o [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ou uma versão posterior do .NET Framework e ela depender do método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> que às vezes retornará `false` quando os descritores de membro forem equivalentes:  
   
 -   Você pode recusar essa alteração sem modificar seu código-fonte adicionando o seguinte à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo app.config:  
   
@@ -41,7 +41,7 @@ Começando com os aplicativos direcionados ao [!INCLUDE[net_v462](../../../inclu
      </runtime>  
     ```  
   
--   Modifique seu código-fonte para restaurar o comportamento anterior comparando manualmente as propriedades <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> e <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> depois de chamar o método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, como faz o seguinte fragmento de código.  
+-   É possível modificar seu código-fonte para restaurar o comportamento anterior comparando manualmente as propriedades <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> e <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> após chamar o método <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName>, como o fragmento de código a seguir faz.  
   
     ```csharp  
     if (memberDescriptor1.Equals(memberDescriptor2) &   

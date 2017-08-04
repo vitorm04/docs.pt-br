@@ -1,5 +1,5 @@
 ---
-title: Comando dotnet-new - CLI do .NET Core | Microsoft Docs
+title: "Comando dotnet-new – CLI do .NET Core"
 description: "O comando dotnet-new cria novos projetos .NET Core no diretório atual."
 keywords: dotnet-new, CLI, comando da CLI, .NET Core
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
-ms.openlocfilehash: 14279ea6fdf4af52c0492f2dad1171d8150ac95b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 56033295b2448b045d5a51dbd84d5429aed77451
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/05/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -118,7 +118,7 @@ Crie um novo projeto de aplicativo de MVC C# do ASP.NET Core no diretório atual
  
 Crie um novo aplicativo xUnit destinado ao .NET Core 1.1:
 
-`dotnet new xunit --Framework netcoreapp1.1`
+`dotnet new xunit --framework netcoreapp1.1`
 
 Lista todos os modelos disponíveis para o MVC:
 

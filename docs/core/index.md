@@ -1,6 +1,6 @@
 ---
-title: .NET Core | Microsoft Docs
-description: .NET Core
+title: .NET Core
+description: "O .NET core é uma implementação modular de alto desempenho do .NET para a criação de aplicativos do Windows, Linux e Mac. Saiba mais sobre o .NET Core para começar."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,17 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc5c9cdad9c0180eff30886ac923cf6beaff4e0c
-ms.openlocfilehash: 168ebcd1ad5bff5802c188ebfd06c08f4bdd13b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core" class="xliff"></a>
-
-# .NET Core
+# <a name="net-core"></a>.NET Core
 
 > Confira os [Tutoriais de "Introdução"](get-started.md) para aprender a criar um aplicativo .NET Core simples. Bastam apenas alguns minutos para colocar seu primeiro aplicativo em funcionamento.
 
@@ -34,9 +32,7 @@ As seguintes características são as que melhor definem o .NET Core:
 - **Código-fonte aberto:** a plataforma do .NET Core é um software livre que usa licenças do MIT e Apache 2. A documentação é licenciada por [CC-BY](https://creativecommons.org/licenses/by/4.0/). O .NET Core é um projeto do [.NET Foundation](https://dotnetfoundation.org/).
 - **Suporte da Microsoft:** .NET Core tem suporte pela Microsoft, pelo [Suporte do .NET Core](https://www.microsoft.com/net/core/support/)
 
-<a id="composition" class="xliff"></a>
-
-## Composição
+## <a name="composition"></a>Composição
 
 O .NET Core é composto pelas seguintes partes:
 
@@ -45,55 +41,41 @@ O .NET Core é composto pelas seguintes partes:
 - Um [conjunto de ferramentas do SDK](https://github.com/dotnet/cli) e [compiladores de linguagem](https://github.com/dotnet/roslyn) que habilitam a experiência de desenvolvedor básica disponível no [SDK do .NET Core](sdk.md).
 - O host de aplicativo “dotnet”, que é usado para iniciar aplicativos .NET Core. Ele seleciona e hospeda o tempo de execução, fornece um assembly para carregar a política e inicia o aplicativo. O mesmo host também é usado para abrir as ferramentas de SDK da mesma maneira.
 
-<a id="languages" class="xliff"></a>
-
-### Linguagens
+### <a name="languages"></a>Linguagens
 
 As linguagens C# e F# (o Visual Basic virá em breve) podem ser usadas para criar aplicativos e bibliotecas para .NET Core. Os compiladores são executados no .NET Core, permitindo que você desenvolva soluções para .NET Core em qualquer lugar ele é executado. Em geral, você não usará os compiladores diretamente, mas sim indiretamente, usando as ferramentas do SDK.
 
 Os compiladores C# e F# e as ferramentas do .NET Core são ou podem ser integradas em vários editores de texto e IDEs, incluindo o Visual Studio, [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text e Vim, tornando o desenvolvimento no .NET Core uma boa opção nos seus ambientes de codificação e sistemas operacionais favoritos. Essa integração é fornecida, em parte, pelo pessoal do [projeto OmniSharp](http://www.omnisharp.net/).
 
-<a id="net-apis-and-compatibility" class="xliff"></a>
-
-### APIs e compatibilidade do .NET
+### <a name="net-apis-and-compatibility"></a>APIs e compatibilidade do .NET
 
 O .NET Core pode ser pensado como uma versão de plataforma cruzada do .NET Framework, na camada da BCL (Biblioteca de Classes Base) do .NET Framework. Ele implementa a especificação [.NET Standard](../standard/net-standard.md). O .NET Core fornece um subconjunto das APIs que estão disponíveis no .NET Framework ou Mono/Xamarin. Em alguns casos, os tipos não são implementados completamente (alguns membros não estão disponíveis ou foram movidos).
 
 Examine o [Roteiro do .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md) para saber mais sobre o roteiro da API do .NET Core.
 
-<a id="relationship-to-the-net-standard-library" class="xliff"></a>
+### <a name="relationship-to-net-standard"></a>Relacionamento com o .NET padrão
 
-### Relações com a .NET Standard Library
+A [.NET Standard](../standard/net-standard.md) é uma especificação de API que descreve o conjunto coerente de APIs .NET que os desenvolvedores podem esperar em cada implementação do .NET. Implementações do .NET precisam implantar essa especificação para serem consideradas em conformidade com o .NET Standard e para dar suporte a bibliotecas voltadas para o .NET Standard. 
 
-A [.NET Standard](../standard/net-standard.md) é uma especificação de API que descreve o conjunto coerente de APIs .NET que os desenvolvedores podem esperar em cada implementação do .NET. Implementações do .NET precisam implantar essa especificação para serem considerados compatíveis com a .NET Standard Library e para dar suporte a bibliotecas voltadas para a .NET Standard Library. 
+O .NET Core implementa o .NET Standard e, portanto, dá suporte a bibliotecas do .NET Standard.
 
-O .NET Core implementa a .NET Standard Library e, portanto, dá suporte a bibliotecas padrão do .NET.
-
-<a id="workloads" class="xliff"></a>
-
-### Cargas de trabalho
+### <a name="workloads"></a>Cargas de trabalho
 
 Por si só, o .NET Core inclui um modelo de aplicativo único, os aplicativos de console, que são úteis para ferramentas, serviços locais e os jogos baseados em texto. Modelos de aplicativo adicionais foram criados junto ao .NET Core para estender sua funcionalidade, como:
 
-- [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
+- [ASP.NET Core](/aspnet/core/)
 - [Plataforma Universal do Windows (UWP) do Windows 10](https://developer.microsoft.com/windows)
 - [Xamarin.Forms ao direcionar para a UWP](https://www.xamarin.com/forms)
 
-<a id="open-source" class="xliff"></a>
-
-### Software Livre
+### <a name="open-source"></a>Software Livre
 
 O [.NET Core](https://github.com/dotnet/core) é um software livre (licença MIT) e foi concedido ao [.NET Foundation](https://dotnetfoundation.org) pela Microsoft em 2014. Agora ele é um dos projetos mais ativos do .NET Foundation. Ele pode ser adotado livremente por pessoas e empresas, incluindo para fins pessoais, comerciais ou acadêmicos. Várias empresas usam o .NET Core como parte de aplicativos, ferramentas, novas plataformas e serviços de hospedagem. Algumas dessas empresas fazer contribuições significativas para o .NET Core no GitHub e fornecem diretrizes sobre a direção de produto como parte do [.NET Foundation Technical Steering Group](https://dotnetfoundation.org/blog/tsg-welcome).
 
-<a id="acquisition" class="xliff"></a>
-
-## Aquisição
+## <a name="acquisition"></a>Aquisição
 
 O .NET Core é distribuído de duas maneiras principais, como pacotes no NuGet.org e como distribuições autônomas.
 
-<a id="distributions" class="xliff"></a>
-
-### Distribuições
+### <a name="distributions"></a>Distribuições
 
 Você pode baixar o .NET Core na página [Introdução ao .NET Core](https://www.microsoft.com/net/core).
 
@@ -102,22 +84,16 @@ Você pode baixar o .NET Core na página [Introdução ao .NET Core](https://www
 
 Normalmente, você primeiro instala a introdução ao SDK do .NET Core com desenvolvimento de .NET Core. Você pode optar por instalar compilações adicionais (talvez pré-lançamento) do .NET Core.
 
-<a id="packages" class="xliff"></a>
-
-### Pacotes
+### <a name="packages"></a>Pacotes
 
 - [Pacotes do .NET Core](packages.md) contêm o tempo de execução e as bibliotecas do .NET Core (implementações e assemblies de referência). Por exemplo, [System.Net.Http](https://www.nuget.org/packages/System.Net.Http/).
 - [Metapacotes do .NET Core](packages.md) descrevem várias camadas e modelos de aplicativo referenciando o conjunto apropriado de pacotes de biblioteca com versão.
 
-<a id="architecture" class="xliff"></a>
-
-## Arquitetura
+## <a name="architecture"></a>Arquitetura
 
 O .NET Core é uma implementação de plataforma cruzada do .NET. As principais questões de arquitetura exclusivas do .NET Core são referentes a implementações específicas de plataforma para as plataformas com suporte.
 
-<a id="environments" class="xliff"></a>
-
-### Ambientes
+### <a name="environments"></a>Ambientes
 
 O .NET Core tem suporte com o Microsoft no Windows, macOS e Linux. No Linux, a Microsoft dá suporte principalmente ao .NET Core em execução em famílias de distribuição do RHEL (Red Hat Enterprise Linux) ou Debian.
 
@@ -127,9 +103,7 @@ O [Roteiro do .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md) 
 
 Outras empresas ou grupos podem dar suporte a .NET Core para outros tipos de aplicativos e ambientes.
 
-<a id="designed-for-adaptability" class="xliff"></a>
-
-### Projetado para adaptação
+### <a name="designed-for-adaptability"></a>Projetado para adaptação
 
 O .NET Core foi criado como um produto muito semelhante, porém único, em relação a outros produtos .NET. Ele foi projetado para possibilitar ampla adaptação a novas plataformas, para novas cargas de trabalho e com novas cadeias de ferramentas do compilador. Ele tem portas de vários sistemas operacionais e CPU em andamento e pode ser levado para muitos outros. Um exemplo é o projeto [LLILC](https://github.com/dotnet/llilc), que é um protótipo inicial da compilação nativa para .NET Core por meio do compilador [LLVM](http://llvm.org/).
 
@@ -150,15 +124,11 @@ Há uma combinação de bibliotecas específicas ou neutras de plataforma no .NE
 - O [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) e o [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) são específicas de plataforma, considerando que as APIs de armazenamento e de criptografia diferem significativamente em cada sistema operacional. 
 - O [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) e [System.LINQ](https://github.com/dotnet/corefx/tree/master/src/System.Linq) são neutros de plataforma, considerando que eles podem criar e operar em estruturas de dados.
 
-<a id="comparisons-to-other-net-platforms" class="xliff"></a>
-
-## Comparações com outras plataformas .NET
+## <a name="comparisons-to-other-net-platforms"></a>Comparações com outras plataformas .NET
 
 Talvez seja mais fácil entender o tamanho e a forma do .NET Core ao compará-lo com as plataformas .NET existentes. 
 
-<a id="comparison-with-net-framework" class="xliff"></a>
-
-### Comparação com o .NET Framework
+### <a name="comparison-with-net-framework"></a>Comparação com o .NET Framework
 
 A plataforma .NET foi anunciada pela primeira vez pela Microsoft em 2000, evoluindo a partir daí. O .NET Framework foi o principal produto .NET produzido pela Microsoft durante esse período de 15 anos. 
 
@@ -172,9 +142,7 @@ Principais diferenças entre o .NET Core e o .NET Framework:
 
 Embora o .NET Core seja único e apresente diferenças significativas do .NET Framework e outras plataformas .NET, é muito fácil compartilhar o código usando técnicas de compartilhamento de código-fonte ou de binário. 
 
-<a id="comparison-with-mono" class="xliff"></a>
-
-### Comparação com Mono
+### <a name="comparison-with-mono"></a>Comparação com Mono
 
 O [Mono](http://www.mono-project.com/) é a implementação .NET de plataforma cruzada e de [software livre](https://github.com/mono/mono) original, sendo fornecido pela primeira vez em 2004. Ele pode ser considerado um clone de comunidade do .NET Framework. A equipe de projeto do Mono contava com [padrões .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (especificamente o ECMA 335) publicados pela Microsoft a fim de fornecer uma implementação compatível.
 

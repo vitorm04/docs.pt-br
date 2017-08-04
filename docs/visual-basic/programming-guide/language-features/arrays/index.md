@@ -1,5 +1,5 @@
 ---
-title: Matrizes no Visual Basic | Microsoft Docs
+title: Matrizes no Visual Basic
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Matrizes no Visual Basic
@@ -235,7 +235,7 @@ Elementos da matriz "alunos"
   
  O exemplo a seguir declara uma matriz tridimensional.  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   

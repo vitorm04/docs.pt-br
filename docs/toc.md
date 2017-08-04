@@ -1,7 +1,7 @@
 # [Bem-vindo](welcome.md)
 
-<!-- Start of .NET Platform Guide -->
-# [Guia da plataforma .NET](standard/index.md)
+<!-- Start of .NET Guide -->
+# [Guia do .NET](standard/index.md)
 ## [Introdução ao C](standard/get-started.md)
 ## [Tour do .NET](standard/tour.md)
 ## [Microsserviços .NET: arquitetura para aplicativos .NET em contêineres](standard/microservices-architecture/)
@@ -48,7 +48,7 @@
 ## [Programação paralela](standard/parallel-programming/)
 ## [Segurança](standard/security/)
 ## [Desenvolvimento para várias plataformas](standard/cross-platform/)
-<!-- End of .NET Platform Guide -->
+<!-- End of .NET Guide -->
 
 <!-- .NET Core Content -->
 # [Guia do .NET Core](core/index.md)
@@ -124,6 +124,8 @@
 ### [Analisando dependências de terceiros](core/porting/third-party-deps.md)
 ### [Portabilidade de bibliotecas](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
+## [Compilar Build .NET Core da origem](core/build/index.md)
+### [Pacote de distribuição do .NET Core](core/build/distribution-packaging.md)
 ## [Documentos do VS 2015/project.json](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -201,7 +203,7 @@
 #### [Delegados Fortemente Tipados](csharp/delegates-strongly-typed.md)
 #### [Padrões Comuns para Delegados](csharp/delegates-patterns.md)
 #### [Introdução a Eventos](csharp/events-overview.md)
-#### [O Padrão de Evento .NET](csharp/event-pattern.md)
+#### [Modelo de evento .NET padrão](csharp/event-pattern.md)
 #### [O Padrão de Evento .NET Atualizado](csharp/modern-events.md)
 #### [Distinção entre Delegados e Eventos](csharp/distinguish-delegates-events.md)
 ### [LINQ (Consulta Integrada à Linguagem)](csharp/linq/)
@@ -231,14 +233,13 @@
 # [Guia do F#](fsharp/index.md)
 
 ## [Tour do F#](fsharp/tour.md)
-
+## [Introdução](fsharp/get-started/index.md)
+### [Introdução ao Visual Studio](fsharp/get-started/get-started-visual-studio.md)
+### [Introdução ao Visual Studio para Mac](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
+### [Introdução ao Visual Studio Code e Ionide](fsharp/get-started/get-started-vscode.md)
+### [Introdução à CLI do .NET Core](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Tutoriais
-### [Introdução](fsharp/tutorials/getting-started/index.md)
-#### [Introdução ao Visual Studio](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
-#### [Introdução ao Visual Studio para Mac](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
-#### [Introdução ao Visual Studio Code e Ionide](fsharp/tutorials/getting-started/getting-started-vscode.md)
-#### [Introdução às Ferramentas de Linha de Comando](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interativo](fsharp/tutorials/fsharp-interactive/index.md)
 #### [Opções do F# Interativo](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [Provedores de Tipos](fsharp/tutorials/type-providers/index.md)
@@ -1058,7 +1059,7 @@
 ##### [/win32resource](visual-basic/reference/command-line-compiler/win32resource.md)
 #### [Opções de Compilador Listadas por Categoria](visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 ### [Informações de Referência do .NET Framework](visual-basic/reference/net-framework-reference-information.md)
-### [Especificação da Linguagem](visual-basic/reference/language-specification.md)
+### [Especificação da Linguagem](visual-basic/reference/language-specification/)
 ## [Aplicativos de Exemplo](visual-basic/sample-applications.md)
 ## [Explicações Passo a Passo](visual-basic/walkthroughs.md)
 

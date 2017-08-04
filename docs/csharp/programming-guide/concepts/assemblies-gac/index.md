@@ -1,5 +1,5 @@
 ---
-title: Assemblies e o cache de assembly global (C#) | Microsoft Docs
+title: Assemblies e o cache de assembly global (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3305034e916f10d863b2194681342df246f2acc1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2b98bd872bfdcbebb34fff3d878b92f39e27bbe0
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblies e o cache de assembly global (C#)
@@ -41,7 +41,7 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
   
 -   Você pode obter informações programaticamente sobre um assembly usando reflexão. Para obter mais informações, consulte [Reflexão (C#)](../../../../csharp/programming-guide/concepts/reflection.md).  
   
--   Se você deseja carregar um assembly apenas para inspecioná-lo, use um método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
+-   Se deseja carregar um assembly somente para inspecioná-lo, use um método como <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Manifesto de um assembly  
  Dentro de todo assembly está um *manifesto do assembly*. Semelhante a um sumário, o manifesto do assembly contém o seguinte:  
@@ -77,3 +77,4 @@ Os assemblies formam a unidade fundamental de implantação, controle de versão
  [Como criar e usar assemblies usando a linha de comando (C#)](how-to-create-and-use-assemblies-using-the-command-line.md)   
  [Passo a passo: inserindo tipos de assemblies gerenciados no Visual Studio (C#)](walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)   
  [Passo a passo: inserindo informações de tipo dos Microsoft Office Assemblies no Visual Studio (C#)](walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+
