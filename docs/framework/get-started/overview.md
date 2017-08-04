@@ -1,5 +1,5 @@
 ---
-title: "Visão geral do .NET Framework | Microsoft Docs"
+title: "Visão geral do .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,15 +19,14 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6e4cd4dc15fb8da942e947a031567b180327a7d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="overview-of-the-net-framework" class="xliff"></a>
-# Visão geral do .NET Framework
+# <a name="overview-of-the-net-framework"></a>Visão geral do .NET Framework
 O .NET Framework é uma tecnologia que dá suporte à compilação e à execução da próxima geração de aplicativos e serviços Web XML. O .NET Framework foi criado para atender aos seguintes objetivos:  
   
 -   Para fornecer um ambiente de programação orientada a objeto consistente, independentemente do código do objeto ser armazenado e executado localmente, executado localmente mas distribuído pela Internet ou executado remotamente.  
@@ -55,13 +54,12 @@ O .NET Framework é uma tecnologia que dá suporte à compilação e à execuç�
   
  A ilustração a seguir mostra o relacionamento do Common Language Runtime e da biblioteca de classes com seus aplicativos e com o sistema geral. A ilustração também mostra como o código gerenciado opera dentro uma arquitetura maior.  
   
- ![Código gerenciado em uma arquitetura maior](../../../docs/framework/get-started/media/circle.gif "circle")  
+ ![Código gerenciado em uma arquitetura maior](../../../docs/framework/get-started/media/circle.gif "círculo")  
 .NET Framework em contexto  
   
  As seções a seguir descrevem os recursos principais do .NET Framework com mais detalhes.  
   
-<a id="features-of-the-common-language-runtime" class="xliff"></a>
-## Recursos do Common Language Runtime  
+## <a name="features-of-the-common-language-runtime"></a>Recursos do Common Language Runtime  
  O Common Language Runtime gerencia memória, execução de threads, execução de código, verificação de segurança do código, compilação e outros serviços do sistema. Esses recursos são intrínsecos ao código gerenciado, executado no Common Language Runtime.  
   
  Quanto à segurança, os componentes gerenciados recebem níveis de confiança variados, dependendo do número de fatores que incluem sua origem (como a Internet, a rede corporativa ou o computador local). Isso significa que um componente gerenciado pode ou não ser capaz de executar operações de acesso a arquivo, operações de acesso a Registro ou outras funções confidenciais, mesmo que esteja sendo usado no mesmo aplicativo ativo.  
@@ -80,8 +78,7 @@ O .NET Framework é uma tecnologia que dá suporte à compilação e à execuç�
   
  Por fim, o tempo de execução pode ser hospedado por aplicativos do servidor de alto desempenho, como o Microsoft SQL Server e o IIS (Serviços de Informações da Internet). Essa infraestrutura permite que você use código gerenciado para escrever sua lógica de negócio, enquanto aproveita o desempenho superior dos melhores servidores de empresa que dão suporte à hospedagem em tempo de execução.  
   
-<a id="net-framework-class-library" class="xliff"></a>
-## Biblioteca de classes .NET Framework  
+## <a name="net-framework-class-library"></a>Biblioteca de classes .NET Framework  
  A biblioteca de classes .NET Framework é uma coleção de tipos reutilizáveis que se integram plenamente ao Common Language Runtime. A biblioteca de classes é orientada a objeto, fornecendo tipos que seu próprio código gerenciado pode derivar. Isso não apenas torna os tipos do .NET Framework fáceis de usar, mas também reduz o tempo associado ao aprendizado de novos recursos do .NET Framework. Além disso, componentes de terceiros podem ser totalmente integrados a classes do .NET Framework.  
   
  Por exemplo, as classes da coleção do .NET Framework implementam um conjunto de interfaces que você pode usar para desenvolver suas próprias coleções de classes. Sua coleção de classes será perfeitamente combinada às classes do .NET Framework.  
@@ -104,11 +101,11 @@ O .NET Framework é uma tecnologia que dá suporte à compilação e à execuç�
   
  Por exemplo, as classes Windows Forms são um conjunto abrangente de tipos reutilizáveis que simplificam muito o desenvolvimento de GUI Windows. Se criar um aplicativo Web Form do ASP.NET, você poderá usar as classes Web Forms.  
   
-<a id="see-also" class="xliff"></a>
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md)   
  [Guia de instalação](../../../docs/framework/install/index.md)   
  [Guia de desenvolvimento](../../../docs/framework/development-guide.md)   
  [ Ferramentas](../../../docs/framework/tools/index.md)   
  [Exemplos do .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
  [Biblioteca de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)
+

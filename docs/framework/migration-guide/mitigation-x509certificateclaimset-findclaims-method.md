@@ -1,5 +1,5 @@
 ---
-title: "Mitigação: método X509CertificateClaimSet.FindClaims | Microsoft Docs"
+title: "Mitigação: método X509CertificateClaimSet.FindClaims"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,20 +14,20 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c234d6ddeda50dfefff8c49a2e14d623cdd8d861
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d19bf73e36061729c0c57439f4e4144669787d1a
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Mitigação: método X509CertificateClaimSet.FindClaims
-Começando com aplicativos que se destinam ao [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> tentará fazer a correspondência do argumento `claimType` com todas as entradas DNS em seu campo SAN.  
+Começando com aplicativos que direcionam o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> tentará corresponder o argumento `claimType` com todas as entradas DNS em seu campo SAN.  
   
 ## <a name="impact"></a>Impacto  
  Essa alteração afeta somente os aplicativos que se destinam a versões do .NET Framework, começando pelo [!INCLUDE[net_v461](../../../includes/net-v461-md.md)].  
   
- Para aplicativos que se destinam às versões anteriores do .NET Framework, o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> tenta fazer a correspondência do argumento `claimType` apenas com a última entrada DNS.  
+ Para aplicativos direcionados a versões anteriores do .NET Framework, o método <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=fullName> tenta corresponder o argumento `claimType` apenas com a última entrada DNS.  
   
 ## <a name="mitigation"></a>Redução  
  Se essa alteração for indesejável, os aplicativos que se destinam às versões do .NET Framework, começando com o [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], poderão recusá-la adicionando a seguinte definição de configuração à seção [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) do arquivo de configuração do aplicativo:  
