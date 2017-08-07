@@ -1,5 +1,5 @@
 ---
-title: "Como capturar erros de análise (C#) | Microsoft Docs"
+title: "Como capturar erros de análise (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf9469a328d80cca95fc5da2b143a494490089c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 240bc9770475bdf7b6da2102bd8b552a0991eea6
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Como capturar erros de análise (C#)
 Este tópico mostra como detectar XML mal formado ou inválido.  
   
- O [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] é implementado usando <xref:System.Xml.XmlReader>. Se um XML malformado ou inválido for passado para o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], a classe subjacente <xref:System.Xml.XmlReader> gerará uma exceção. Os vários métodos que analisam XML, como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, não capturam a exceção. A exceção, então, pode ser capturada pelo seu aplicativo.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é implementado usando <xref:System.Xml.XmlReader>. Se malformado ou XML válido é passado para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a classe subjacente de <xref:System.Xml.XmlReader> irá acionar uma exceção. Os vários métodos que analisam XML, tais como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, não capturam a exceção; a exceção pode ser capturada por seu aplicativo.  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir tenta analisar XML válido:  
@@ -56,7 +57,8 @@ catch (System.Xml.XmlException e)
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- Para obter informações sobre as exceções que podem ser lançadas pelos métodos <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> e <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>, consulte a documentação do <xref:System.Xml.XmlReader>.  
+ Para obter informações sobre as exceções que você pode esperar <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>, e métodos de <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName> lançar, consulte a documentação de <xref:System.Xml.XmlReader> .  
   
 ## <a name="see-also"></a>Consulte também  
  [Analisando XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+

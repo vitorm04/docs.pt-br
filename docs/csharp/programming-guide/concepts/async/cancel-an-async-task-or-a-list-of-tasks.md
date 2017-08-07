@@ -1,5 +1,5 @@
 ---
-title: "Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#) | Microsoft Docs"
+title: "Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Cancelar uma tarefa assíncrona ou uma lista de tarefas (C#)
@@ -92,7 +92,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
         cts = new CancellationTokenSource();  
         ```  
   
-    -   Na chamada para `AccessTheWebAsync`, que baixa o conteúdo de um site específico, envie a propriedade <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> de `cts` como um argumento. A propriedade `Token` propaga a mensagem se o cancelamento é solicitado. Adicione um bloco catch que exibe uma mensagem se o usuário optar por cancelar a operação de download. O código a seguir mostra as alterações.  
+    -   Na chamada para `AccessTheWebAsync`, que baixa o conteúdo de um site especificado, envie a propriedade <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> de `cts` como um argumento. A propriedade `Token` propaga a mensagem se o cancelamento é solicitado. Adicione um bloco catch que exibe uma mensagem se o usuário optar por cancelar a operação de download. O código a seguir mostra as alterações.  
   
         ```csharp  
         try  
@@ -113,7 +113,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
         }  
         ```  
   
-4.  Em `AccessTheWebAsync`, use a sobrecarga <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> do método `GetAsync` no tipo <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site. Passe `ct`, o parâmetro <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, como o segundo argumento. O token executa a mensagem se o usuário escolhe o botão **Cancelar**.  
+4.  No `AccessTheWebAsync`, use a sobrecarga <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> do método `GetAsync` no tipo <xref:System.Net.Http.HttpClient> para baixar o conteúdo de um site. Passe `ct`, o parâmetro <xref:System.Threading.CancellationToken> de `AccessTheWebAsync`, como o segundo argumento. O token executa a mensagem se o usuário escolhe o botão **Cancelar**.  
   
      O código a seguir mostra as alterações em `AccessTheWebAsync`.  
   
@@ -224,7 +224,7 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
     }  
     ```  
   
-4.  Como `AccessTheWebAsync` exibe os comprimentos, o método não precisa retornar nada. Remova a instrução retornada e altere o tipo de retorno do método para <xref:System.Threading.Tasks.Task> em vez de <xref:System.Threading.Tasks.Task%601>.  
+4.  Como `AccessTheWebAsync` exibe os comprimentos, o método não precisa retornar nada. Remova a instrução de retorno e altere o tipo de retorno do método para <xref:System.Threading.Tasks.Task> em vez de <xref:System.Threading.Tasks.Task%601>.  
   
     ```csharp  
     async Task AccessTheWebAsync(CancellationToken ct)  
@@ -239,7 +239,6 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
 5.  Se você não cancelar o programa, ele produzirá a saída a seguir.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -255,7 +254,6 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
      Se você escolher o botão **Cancelar** antes de os downloads serem concluídos, a saída conterá os tamanhos dos downloads que foram concluídos antes do cancelamento.  
@@ -268,7 +266,6 @@ Você pode configurar um botão que pode ser usado para cancelar um aplicativo a
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
 ##  <a name="BKMK_CompleteExamples"></a> Exemplos completos  
@@ -538,3 +535,4 @@ namespace CancelAListOfTasks
  [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046)
+

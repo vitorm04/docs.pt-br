@@ -1,5 +1,5 @@
 ---
-title: "Programando com nós (C#) | Microsoft Docs"
+title: "Programando com nós (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b5cc31077c31d6ba08521a9ba6d602409734e695
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6afa5c9ca5fdf4a8c64be826ead86e96aa94a446
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-with-nodes-c"></a>Programando com nós (C#)
-desenvolvedores de[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] que precisam geralmente escrever programas como um editor XML, um sistema uma transformação, ou uma necessidade o gravador de relatório escrever programas que funcionam no nível mais fino de granularidade dos elementos e atributos. Freqüentemente necessitam de trabalhar no nível de nó, em nós de manipulação de texto, as instruções de processamento, e os comentários. Este tópico fornece alguns detalhes sobre programação no nível do nó.  
+desenvolvedores de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que precisam geralmente escrever programas como um editor XML, um sistema uma transformação, ou uma necessidade o gravador de relatório escrever programas que funcionam no nível mais fino de granularidade dos elementos e atributos. Freqüentemente necessitam de trabalhar no nível de nó, em nós de manipulação de texto, as instruções de processamento, e os comentários. Este tópico fornece alguns detalhes sobre programação no nível do nó.  
   
 ## <a name="node-details"></a>Detalhes do nó  
  Há um número de detalhes de programação que um programador que funciona a nível do nó deve conhecer.  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>A propriedade pai de nós de filhos de XDocument é definida como nula  
- A propriedade <xref:System.Xml.Linq.XObject.Parent%2A> contém o pai <xref:System.Xml.Linq.XElement> e não o nó pai. Os nós filhos de <xref:System.Xml.Linq.XDocument> não têm <xref:System.Xml.Linq.XElement> pai. O pai deles é o documento, portanto a propriedade <xref:System.Xml.Linq.XObject.Parent%2A> para esses nós é definida como nula.  
+ A propriedade de <xref:System.Xml.Linq.XObject.Parent%2A> contém <xref:System.Xml.Linq.XElement>pai, não o nó pai. Os nós filho de <xref:System.Xml.Linq.XDocument> não têm nenhum <xref:System.Xml.Linq.XElement>pai. Seu pai é o documento, assim que a propriedade de <xref:System.Xml.Linq.XObject.Parent%2A> para os nós é definida como nula.  
   
  O exemplo a seguir demonstra este:  
   
@@ -50,7 +51,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>Nós adjacentes de texto são possíveis  
- Em um número XML que programa modelos, nós adjacentes de texto sempre são mesclados. Isso é às vezes chamado normalização de nós de texto. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] não normalizará nós de texto. Se você adicionar dois nós de texto ao mesmo elemento, resultará a nós adjacentes de texto. Entretanto, se você adicionar o conteúdo especificado como uma cadeia de caracteres em vez de como um nó <xref:System.Xml.Linq.XText>, o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] poderá mesclar a cadeia de caracteres com um nó de texto adjacente.  
+ Em um número XML que programa modelos, nós adjacentes de texto sempre são mesclados. Isso é às vezes chamado normalização de nós de texto. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] não normalizará nós de texto. Se você adicionar dois nós de texto ao mesmo elemento, resultará a nós adjacentes de texto. Entretanto, se você adicionar o conteúdo especificado como uma cadeia de caracteres em vez de como um nó de <xref:System.Xml.Linq.XText>, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] poderá mesclar a cadeia de caracteres com um nó de texto adjacente.  
   
  O exemplo a seguir demonstra este:  
   
@@ -110,15 +111,15 @@ Console.WriteLine(child2);
   
  Este exemplo gera a seguinte saída:  
   
-```  
+```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>Namespaces são atributos na árvore LINQ to XML  
- Mesmo que as declarações namespace tenham a sintaxe idêntica a atributos, em algumas interfaces de programação, como XSLT e o XPath, as declarações namespace não são consideradas como atributos. No entanto, no [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], os namespaces são armazenados como objetos <xref:System.Xml.Linq.XAttribute> na árvore XML. Se você itera através de atributos para um elemento que contém uma declaração de namespace, você verá a declaração de namespace como um dos itens na coleção retornada.  
+ Mesmo que as declarações namespace tenham a sintaxe idêntica a atributos, em algumas interfaces de programação, como XSLT e o XPath, as declarações namespace não são consideradas como atributos. No entanto, em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], namespaces são armazenadas como objetos de <xref:System.Xml.Linq.XAttribute> na árvore XML. Se você itera através de atributos para um elemento que contém uma declaração de namespace, você verá a declaração de namespace como um dos itens na coleção retornada.  
   
- A propriedade <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica se um atributo é uma declaração de namespace.  
+ A propriedade de <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> indica se um atributo é uma declaração de namespace.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -139,7 +140,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Os métodos do eixo XPath retornam espaço em branco filho de XDocument  
- O [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] permite isso para nós de texto filho de um <xref:System.Xml.Linq.XDocument>, contanto que os nós de texto contenham somente espaço em branco. No entanto, o modelo de objeto do XPath não inclui espaço em branco como nós filho de um documento, para que quando você iterar nos filhos de um <xref:System.Xml.Linq.XDocument>, usando o eixo <xref:System.Xml.Linq.XContainer.Nodes%2A>, os nós de texto de espaço em branco serão retornados. No entanto, quando você itera nos filhos de um <xref:System.Xml.Linq.XDocument> usando os métodos de eixo do XPath, os nós de texto de espaço em branco não serão retornados.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite nós filhos de texto de <xref:System.Xml.Linq.XDocument>, desde que os nós de texto contém somente espaço em branco. No entanto, o modelo de objeto XPath não inclui espaço em branco como nós filho de um documento, para que quando você itera através de filhos de <xref:System.Xml.Linq.XDocument> usando o eixo de <xref:System.Xml.Linq.XContainer.Nodes%2A> , os nós de texto de espaço em branco serão retornados. No entanto, quando você itera através de filhos de <xref:System.Xml.Linq.XDocument> usando os métodos do eixo XPath, os nós de texto de espaço em branco não serão retornados.  
   
 ```csharp  
 // Create a document with some white space child nodes of the document.  
@@ -166,7 +167,7 @@ Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Co
 ```  
   
 ### <a name="xdeclaration-objects-are-not-nodes"></a>Os objetos de XDeclaration não são nós  
- Ao iterar nos nós filhos de um <xref:System.Xml.Linq.XDocument>, você não verá o objeto de declaração de XML. É uma propriedade do documento, não um nó filho deles.  
+ Quando você itera através de nós de filhos de <xref:System.Xml.Linq.XDocument>, você não verá o objeto da declaração XML. É uma propriedade do documento, não um nó filho deles.  
   
 ```csharp  
 XDocument doc = new XDocument(  
@@ -190,3 +191,4 @@ Console.WriteLine(doc.Nodes().Count());
   
 ## <a name="see-also"></a>Consulte também  
  [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

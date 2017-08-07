@@ -1,5 +1,5 @@
 ---
-title: Como depurar conjuntos de resultados de consultas vazios (C#) | Microsoft Docs
+title: Como depurar conjuntos de resultados de consultas vazios (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: afa7e63f4224a91c072c99d04a4851d2548166e5
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78c6d612e11f50bedf8f1c2e9826775494faa465
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Como depurar conjuntos de resultados de consultas vazios (C#)
@@ -62,7 +62,7 @@ End of result set
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.  
   
- A solução é declarar e inicializar um objeto <xref:System.Xml.Linq.XNamespace> e usá-lo ao especificar objetos <xref:System.Xml.Linq.XName>. Neste caso, o argumento para o método <xref:System.Xml.Linq.XElement.Elements%2A> é um objeto <xref:System.Xml.Linq.XName>.  
+ A solução é declarar e inicializar um objeto de <xref:System.Xml.Linq.XNamespace> e usá-lo para especificar <xref:System.Xml.Linq.XName> objetos. Nesse caso, o argumento para o método de <xref:System.Xml.Linq.XElement.Elements%2A> é um objeto de <xref:System.Xml.Linq.XName> .  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -96,3 +96,4 @@ End of result set
   
 ## <a name="see-also"></a>Consulte também  
  [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

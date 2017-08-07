@@ -1,5 +1,5 @@
 ---
-title: "Restrições a parâmetros de tipo (Guia de Programação em C#) | Microsoft Docs"
+title: "Restrições a parâmetros de tipo (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 235e26f66fd010c313041fbfb5e90548b2cc7e36
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e91ae026bd89a6dd30b4c9233da4dd897928291e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
@@ -41,7 +42,7 @@ Ao definir uma classe genérica, é possível aplicar restrições às modalidad
   
 |Restrição|Descrição|  
 |----------------|-----------------|  
-|em que T: struct|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo, exceto <xref:System.Nullable>, pode ser especificado. Para obter mais informações, consulte [Usando Tipos Anuláveis](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
+|em que T: struct|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable> pode ser especificado. Para obter mais informações, consulte [Usando Tipos Anuláveis](../../../csharp/programming-guide/nullable-types/using-nullable-types.md).|  
 |em que T: class|O argumento de tipo deve ser um tipo de referência. Isso também se aplica a qualquer classe, interface, delegado ou tipo de matriz.|  
 |em que T: new()|O argumento de tipo deve ter um construtor público sem parâmetros. Quando usado em conjunto com outras restrições, a restrição `new()` deve ser a última a ser especificada.|  
 |em que T: \<base class name>|O argumento de tipo deve ser ou derivar da classe base especificada.|  
@@ -100,3 +101,4 @@ Ao definir uma classe genérica, é possível aplicar restrições às modalidad
  [Introdução aos Genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [Classes Genéricas](../../../csharp/programming-guide/generics/generic-classes.md)   
  [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Como obter informações sobre arquivos, pastas e unidades (Guia de Programação em C#) | Microsoft Docs"
+title: "Como obter informações sobre arquivos, pastas e unidades (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 16950f835938846804ade1a8ad23d907aa69b9c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6067ea9d51c31c9398c7b1fcd83ca8fa3a4fec76
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Como obter informações sobre arquivos, pastas e unidades (Guia de Programação em C#)
@@ -52,9 +53,9 @@ No .NET Framework, você pode acessar informações do sistema de arquivos usand
 System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");  
 ```  
   
- Você também pode obter os nomes de arquivos, pastas ou unidades usando chamadas para <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> e <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
+ Você também pode obter os nomes das unidades, pastas ou arquivos por meio de chamadas para <xref:System.IO.DirectoryInfo.GetDirectories%2A?displayProperty=fullName>, <xref:System.IO.DirectoryInfo.GetFiles%2A?displayProperty=fullName> e <xref:System.IO.DriveInfo.RootDirectory%2A?displayProperty=fullName>.  
   
- As classes <xref:System.IO.Directory?displayProperty=fullName> e <xref:System.IO.File?displayProperty=fullName> fornecem métodos estáticos para recuperar informações sobre diretórios e arquivos.  
+ As classes <xref:System.IO.Directory?displayProperty=fullName> e <xref:System.IO.File?displayProperty=fullName> fornecem métodos estáticos para recuperar informações sobre arquivos e diretórios.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra várias maneiras de acessar informações sobre arquivos e pastas.  
@@ -76,5 +77,6 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IO?displayProperty=fullName>   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+ [Guia de programação em C#](../../../csharp/programming-guide/index.md)   
  [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "-unsafe (Opções do compilador do C#) | Microsoft Docs"
+title: "-unsafe (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 842ce23401046fe4835c4afbdc3cdfe143e5e143
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f285af57d6a06d38d20b2c28e4a637fbc3ecf2c
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="unsafe-c-compiler-options"></a>/unsafe (opções do compilador C#)
@@ -58,7 +58,7 @@ A opção do compilador **/unsafe** permite que o código que usa a palavra-chav
   
 3.  Marque a caixa de seleção **Permitir código não seguro**.  
   
- Para obter informações sobre como definir essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
+ Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compile `in.cs` para o modo não seguro:  
@@ -69,4 +69,5 @@ csc /unsafe in.cs
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB: como modificar as propriedades do projeto e as definições de configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+

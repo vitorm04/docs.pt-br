@@ -1,5 +1,5 @@
 ---
-title: "Como Converter RTF em Texto sem Formatação (Guia de Programação em C#) | Microsoft Docs"
+title: "Como converter RTF em texto sem formatação (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5a55a488eac331c0319abf357899041965082600
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e4c7b48467f3b260526c604fa3a36fc5d80374e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-rtf-to-plain-text-c-programming-guide"></a>Como converter RTF em texto sem formatação (Guia de Programação em C#)
@@ -53,15 +54,15 @@ O Formato Rich Text (RTF) é um formato de documento desenvolvido pela Microsoft
 ```  
 The Greek word for "psyche" is spelled ψυχή. The Greek letters are encoded in Unicode.  
 These characters are from the extended ASCII character set (Windows code page 1252):  âäӑå  
-  
 ```  
   
  [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-rtf-to-plain-text_1.cs)]  
   
- Caracteres RTF são codificados em oito bits. No entanto, os usuários podem especificar caracteres Unicode, além de caracteres ASCII de páginas de código especificadas. Como a propriedade <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> é do tipo [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md), os caracteres são codificados como Unicode UTF-16. Quaisquer caracteres ASCII estendidos e Unicode do documento RTF de origem serão codificados corretamente na saída de texto.  
+ Caracteres RTF são codificados em oito bits. No entanto, os usuários podem especificar caracteres Unicode, além de caracteres ASCII de páginas de código especificadas. Já que a propriedade <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> é do tipo [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md), os caracteres são codificados como Unicode UTF-16. Quaisquer caracteres ASCII estendidos e Unicode do documento RTF de origem serão codificados corretamente na saída de texto.  
   
  Ao usar o método <xref:System.IO.File.WriteAllText%2A?displayProperty=fullName> para gravar o texto no disco, o texto será codificado como UTF-8 (sem uma marca de ordem de byte).  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Windows.Forms.RichTextBox?displayProperty=fullName>   
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
+

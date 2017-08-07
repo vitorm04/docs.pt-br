@@ -1,5 +1,5 @@
 ---
-title: "Como manipular uma exceção usando try-catch (Guia de Programação em C#) | Microsoft Docs"
+title: "Como manipular uma exceção usando try-catch (Guia de programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10eac61f4b9bb186d28044862ebc7273c6eb07b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f6f714cd1b652845e77405ff74fbfc860e71dc21
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Como manipular uma exceção usando try/catch (Guia de Programação em C#)
@@ -50,3 +51,4 @@ A finalidade de um bloco [try-catch](../../../csharp/language-reference/keywords
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Exceções e tratamento de exceções](../../../csharp/programming-guide/exceptions/index.md)   
  [Tratamento de Exceção](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Correspondência de padrões | Guia de C#"
+title: "Correspondência de padrões – Guia de C#"
 description: "Saiba mais sobre expressões de correspondência de padrões em C#"
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
@@ -9,10 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5b1ef4b6de108e2ea3967630e9e37e52a97245c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +51,7 @@ Esse código se torna mais simples usando extensões para a expressão `is` para
 
 Nesta versão atualizadas, a expressão `is` testa a variável e a atribui a uma nova variável do tipo adequado. Além disso, observe que essa versão inclui o tipo `Rectangle`, que é um `struct`. A nova expressão `is` funciona com tipos de valor, bem como com tipos de referência.
 
-As regras da linguagem para expressões de correspondência de padrões ajudam a evitar usar incorretamente os resultados de uma expressão de correspondência. No exemplo acima, as variáveis `s`,  `c` e `r` estão somente no escopo e são atribuídas definitivamente quando as expressões de correspondência de padrão têm resultados `true`. Se você tentar usar qualquer variável em outro local, seu código gerará erros de compilador.
+As regras da linguagem para expressões de correspondência de padrões ajudam a evitar usar incorretamente os resultados de uma expressão de correspondência. No exemplo acima, as variáveis `s`, `c` e `r` estão somente no escopo e são atribuídas definitivamente quando as expressões de correspondência de padrão têm resultados `true`. Se você tentar usar qualquer variável em outro local, seu código gerará erros de compilador.
 
 Vamos examinar ambas as regras detalhadamente, começando com o escopo. A variável `c` está no escopo somente no branch `else` da primeira instrução `if`. A variável `s` está no escopo no método `ComputeArea`. Isso ocorre porque cada branch de uma instrução `if` estabelece um escopo separado para as variáveis. No entanto, a instrução `if` em si não. Isso significa que as variáveis declaradas na instrução `if` estão no mesmo escopo da instrução `if` (o método nesse caso). Esse comportamento não é específico para correspondência de padrões, mas é o comportamento definido para escopos de variável e instruções `if` e `else`.
 
@@ -111,7 +112,7 @@ Por fim, você pode adicionar um case `null` para garantir que o argumento não 
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Adicionar um case null")]
 
-O case especial para o `null` padrão é interessante porque a constante `null` não tem um tipo, mas pode ser convertida em qualquer tipo de referência ou tipo que permite valor nulo. 
+O comportamento especial para o padrão `null` é interessante porque a constante `null` no padrão não tem um tipo, mas pode ser convertida em qualquer tipo de referência ou tipo que permite valor nulo. Em vez de converter um `null` em qualquer tipo, a linguagem define que um `null` valor não será correspondente ao padrão de qualquer tipo, independentemente do tipo de tempo de compilação da variável. Esse comportamento torna o novo padrão de tipo baseado em `switch` consistente com a instrução `is`: instruções `is` sempre retornam `false` quando o valor sendo verificado é `null`. Isso também é mais simples: depois de verificar o tipo, não é necessário fazer uma verificação adicional de nulos. Você pode ver isso pelo fato de que não há nenhuma verificação de nulos em nenhum dos blocos de casos dos exemplos acima: elas não são necessárias, já que a correspondência do padrão de tipo assegura um valor não nulo.
 
 ## <a name="conclusions"></a>Conclusões
 

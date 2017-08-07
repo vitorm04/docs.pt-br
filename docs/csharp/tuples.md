@@ -1,5 +1,5 @@
 ---
-title: Tuplas | Guia de C#
+title: "Tuplas – Guia de C#"
 description: Saiba mais sobre os tipos de tupla nomeadas e sem nome em C#
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0efb478491ab4c226ec56519c9a957b19ce0478f
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,8 +25,10 @@ As tuplas do C# são tipos definidos usando uma sintaxe simples. As vantagens in
 Neste tópico, você aprenderá as regras de linguagem que regem as tuplas no C# 7, diferentes maneiras de usá-las e diretrizes iniciais sobre como trabalhar com tuplas.
 
 > [!NOTE]
-> Os novos recursos de tuplas exigem o tipo `System.ValueTuple`. Para o Visual Studio 2017, você deve adicionar o pacote NuGet [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/), disponível na Galeria do NuGet.
-> Sem esse pacote, você pode receber um erro de compilação semelhante a `error CS8179: Predefined type 'System.ValueTuple``2' is not defined or imported` ou `error CS8137: Cannot define a class or member that utilizes tuples because the compiler required type 'System.Runtime.CompilerServices.TupleElementNamesAttribute' cannot be found.`
+> Os novos recursos de tuplas exigem os tipos @System.ValueTuple.
+> Você deve adicionar o pacote NuGet [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) para usá-lo em plataformas que não incluem os tipos.
+>
+> Isso é semelhante a outros recursos de linguagem que dependem de tipos entregues no framework. Os exemplos incluem `async` e `await` que dependem da interface `INotifyCompletion`, além do LINQ que depende de `IEnumerable<T>`. No entanto, o mecanismo de entrega está mudando conforme o .NET se torna mais independente de plataforma. O .NET Framework pode não ser enviados sempre na mesma cadência que o compilador de linguagem. Quando novos recursos de linguagem dependerem de novos tipos, esses tipos estarão disponíveis como pacotes do NuGet quando os recursos de linguagem forem enviados. Conforme esses novos tipos são adicionados à API padrão do .NET e fornecidos como parte do framework, o requisito de pacote do NuGet será removido.
 
 Vamos começar com os motivos para adicionar o novo suporte de tupla. Métodos retornam um único objeto. Tuplas permitem que você empacote vários valores nesse único objeto mais facilmente. 
 
@@ -200,7 +202,7 @@ O método `Deconstruct` pode ser um método de extensão que retira do pacote os
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Tipo com um método de extensão deconstruct")]
 
 Um objeto `Student` agora tem dois métodos `Deconstruct` acessíveis: o método de extensão declarado para tipos `Student` e o membro do tipo `Person`. Ambos estão no escopo e isso permite que um `Student` seja desconstruído em duas ou três variáveis.
-Se você atribuir um aluno a três variáveis, o nome, o sobrenome e a GPA são retornados. Se você atribuir um aluno a duas variáveis, apenas o nome e o sobrenome serão retornados.
+Se você atribuir um aluno a três variáveis, o nome, o sobrenome e a GPA serão retornados. Se você atribuir um aluno a duas variáveis, apenas o nome e o sobrenome serão retornados.
 
 [!code-csharp[Método de extensão deconstruct](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Desconstruir um tipo de classe usando um método de extensão")]
 

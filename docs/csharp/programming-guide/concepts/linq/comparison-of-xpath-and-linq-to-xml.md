@@ -1,5 +1,5 @@
 ---
-title: "Comparação de XPath e LINQ to XML2 | Microsoft Docs"
+title: "Comparação de XPath e de LINQ to XML2"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,29 +14,29 @@ ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60000605a42faa22841cc7b76b878a77bc53b7f
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a0b24eeeb79651f69178fa4e9c2e4a3359434556
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparação XPath e de LINQ to XML
-O XPath e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] fornecer alguma funcionalidade semelhante. Ambos podem ser usados para ver uma árvore XML, retornando resultados como uma coleção de elementos, uma coleção de atributos, uma coleção de nós, ou o valor de um elemento ou de um atributo. No entanto, também há algumas diferenças.  
+O XPath e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fornecer alguma funcionalidade semelhante. Ambos podem ser usados para ver uma árvore XML, retornando resultados como uma coleção de elementos, uma coleção de atributos, uma coleção de nós, ou o valor de um elemento ou de um atributo. No entanto, também há algumas diferenças.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>Diferenças entre o XPath e o LINQ to XML  
- O XPath não permite a projeção de novos tipos. Só pode retornar coleções de nós de árvore, enquanto [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] pode executar uma consulta e projetar um objeto gráfico ou uma árvore XML em uma nova forma. consultas de[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] abrangem muito mais funcionalidade e são muito mais avançados de expressões XPath.  
+ O XPath não permite a projeção de novos tipos. Só pode retornar coleções de nós de árvore, enquanto [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pode executar uma consulta e projetar um objeto gráfico ou uma árvore XML em uma nova forma. consultas de[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] abrangem muito mais funcionalidade e são muito mais avançados de expressões XPath.  
   
- As expressões XPath existem no isolamento dentro de uma cadeia de caracteres. O compilador do C# não pode ajudar a analisar em tempo de compilação a expressão XPath. Por outro lado, as consultas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] são analisadas e compiladas pelo compilador do C#. O compilador pode capturar muitos erros de consulta.  
+ As expressões XPath existem no isolamento dentro de uma cadeia de caracteres. O compilador do C# não pode ajudar a analisar em tempo de compilação a expressão XPath. Por outro lado, as consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são analisadas e compiladas pelo compilador do C#. O compilador pode capturar muitos erros de consulta.  
   
- Os resultados XPath não são altamente digitados. Em um número das circunstâncias, o resultado para avaliar uma expressão XPath é um objeto, e até o desenvolvedor para determinar o tipo apropriado e conforme necessário para converter o resultado. Por outro lado, as projeções de uma consulta de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] são fortemente tipadas.  
+ Os resultados XPath não são altamente digitados. Em um número das circunstâncias, o resultado para avaliar uma expressão XPath é um objeto, e até o desenvolvedor para determinar o tipo apropriado e conforme necessário para converter o resultado. Por outro lado, as projeções de uma consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] são fortemente tipadas.  
   
 ## <a name="result-ordering"></a>Ordenação de resultado  
  O XPath 1,0 estados de recomendação que uma coleção que é o resultado de avaliar uma expressão XPath é não ordenada.  
   
- Entretanto, ao fazer iterações por uma coleção retornada por um método do eixo XPath [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] , os nós na coleção são retornados em ordem do documento. Este é o caso mesmo quando acessando os eixos XPath onde os predicados são expressos em termos de ordem inversa de documento, como `preceding` e `preceding-sibling`.  
+ Entretanto, ao fazer iterações por uma coleção retornada por um método do eixo XPath [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , os nós na coleção são retornados em ordem do documento. Este é o caso mesmo quando acessando os eixos XPath onde os predicados são expressos em termos de ordem inversa de documento, como `preceding` e `preceding-sibling`.  
   
- Por outro lado, a maioria do eixos de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] retornam coleções na ordem do documento, mas dois deles, <xref:System.Xml.Linq.XNode.Ancestors%2A> e <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, retornam coleções na ordem inversa do documento. A tabela a seguir enumera os eixos, e indica a ordem de coleção para cada:  
+ Por outro lado, a maioria das coleções de retorno os eixos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] na ordem de documento, mas por dois deless, por <xref:System.Xml.Linq.XNode.Ancestors%2A> e por <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, coleções de retorno na ordem inversa do documento. A tabela a seguir enumera os eixos, e indica a ordem de coleção para cada:  
   
 |O eixo LINQ to XML|Ordenando|  
 |----------------------|--------------|  
@@ -61,17 +61,17 @@ O XPath e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/l
   
  Por outro lado, todos os predicados posicionais em LINQ to XML sempre são expressos em termos de pedido do eixo. Por exemplo, `anElement.ElementsBeforeSelf().ToList()[0]` retorna o primeiro elemento filho do pai do elemento consultado, não irmão anterior imediato. Outro exemplo: `anElement.Ancestors().ToList()[0]` retorna o elemento pai.  
   
- Observe que a abordagem anterior materializa toda a coleção. Isso não é a maneira mais eficiente de escrever a consulta. Escreveu-se nessa maneira para demonstrar o comportamento de predicados posicionais. Uma maneira mais apropriada de se escrever a mesma consulta é usar o método <xref:System.Linq.Enumerable.First%2A>, da seguinte maneira: `anElement.ElementsBeforeSelf().First()`.  
+ Observe que a abordagem anterior materializa toda a coleção. Isso não é a maneira mais eficiente de escrever a consulta. Escreveu-se nessa maneira para demonstrar o comportamento de predicados posicionais. Uma maneira mais apropriado de escrever a mesma consulta é usar o método de <xref:System.Linq.Enumerable.First%2A> , como segue: `anElement.ElementsBeforeSelf().First()`.  
   
- Se você desejar localizar imediatamente antes o elemento em [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], escreva a expressão a seguir:  
+ Se você desejar localizar imediatamente antes o elemento em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], escreva a expressão a seguir:  
   
  `ElementsBeforeSelf().Last()`  
   
 ## <a name="performance-differences"></a>Diferenças de desempenho  
- As consultas XPath que usam a funcionalidade XPath em [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] não serão tão bem executadas como as consultas de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+ As consultas XPath que usam a funcionalidade XPath em [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] não serão tão bem executadas como as consultas de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="comparison-of-composition"></a>Comparação de composição  
- A composição de uma consulta de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] é um pouco paralela a composição de uma expressão XPath, embora muito diferente na sintaxe.  
+ A composição de uma consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é um pouco paralela a composição de uma expressão XPath, embora muito diferente na sintaxe.  
   
  Por exemplo, se você tiver um elemento em uma variável chamada `customers`, e você desejar localizar um elemento de neto chamado `CompanyName` em todos os elementos filho chamados `Customer`, escreva uma expressão XPath como segue:  
   
@@ -79,7 +79,7 @@ O XPath e [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/l
 customers.XPathSelectElements("./Customer/CompanyName");  
 ```  
   
- A consulta de [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] do equivalente realiza-se:  
+ A consulta de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do equivalente realiza-se:  
   
 ```csharp  
 customers.Element("Customer").Elements("CompanyName");  
@@ -103,3 +103,4 @@ customers.Element("Customer").Elements("CompanyName");
   
 ## <a name="see-also"></a>Consulte também  
  [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

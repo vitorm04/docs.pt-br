@@ -1,5 +1,5 @@
 ---
-title: "char (Referência de C#) | Microsoft Docs"
+title: "char (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf4c71d6f33d66e5ca917f2cfeb6c882b19b9d22
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6601a58804d6ecfcbedbc19da09560884e54e7f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="char-c-reference"></a>char (Referência de C#)
@@ -57,7 +58,7 @@ A palavra-chave `char` é usada para declarar uma instância da estrutura <xref:
  O tipo <xref:System.Char?displayProperty=fullName> fornece vários métodos estáticos para trabalhar com valores `char`.  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Char>   
@@ -70,3 +71,4 @@ A palavra-chave `char` é usada para declarar uma instância da estrutura <xref:
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)   
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
+

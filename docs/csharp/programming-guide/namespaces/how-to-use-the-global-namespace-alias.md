@@ -1,5 +1,5 @@
 ---
-title: "Como Usar o Alias de Namespace Global (Guia de Programação em C#) | Microsoft Docs"
+title: "Como usar o alias de namespace global (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ac454102b1b91b3f55623d56a2564eb776dc5a44
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1252fc107d46b1d3a1cbef0a61708edc57253910
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Como usar o alias de namespace global (Guia de Programação em C#)
@@ -72,3 +73,4 @@ A capacidade de acessar um membro no [namespace](../../../csharp/language-refere
  [. Operador](../../../csharp/language-reference/operators/member-access-operator.md)   
  [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
  [extern](../../../csharp/language-reference/keywords/extern.md)
+

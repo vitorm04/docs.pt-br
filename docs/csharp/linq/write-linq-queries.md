@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e08c8e3594bedeab763895c8b6f7d78a2bbf56d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -49,7 +50,7 @@ Este tópico mostra as três maneiras em que você pode escrever uma consulta LI
 ## <a name="example"></a>Exemplo  
   
 ## <a name="method-syntax"></a>Sintaxe do método  
- Algumas operações de consulta devem ser expressas como uma chamada de método. Os mais comuns desses métodos são aqueles que retornam valores numéricos singleton, como <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Esses métodos devem sempre ser chamados por último em qualquer consulta porque representam apenas um único valor e não podem atuar como a fonte para uma operação de consulta adicional. O exemplo a seguir mostra uma chamada de método em uma expressão de consulta:  
+ Algumas operações de consulta devem ser expressas como uma chamada de método. Os mais comuns desses métodos são aqueles que retornam valores numéricos singleton como <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> e assim por diante. Esses métodos devem sempre ser chamados por último em qualquer consulta porque representam apenas um único valor e não podem atuar como a fonte para uma operação de consulta adicional. O exemplo a seguir mostra uma chamada de método em uma expressão de consulta:  
   
  [!code-cs[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
   
@@ -58,7 +59,7 @@ Este tópico mostra as três maneiras em que você pode escrever uma consulta LI
   
  [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
- Nas consultas anteriores, apenas a Query #4 é executada imediatamente. Isso ocorre porque ela retorna um único valor e não uma coleção <xref:System.Collections.Generic.IEnumerable%601> genérica. O próprio método tem que usar `foreach` para calcular seu valor.  
+ Nas consultas anteriores, apenas a Query #4 é executada imediatamente. Isso ocorre porque ele retorna um único valor e não uma coleção <xref:System.Collections.Generic.IEnumerable%601> genérica. O próprio método tem que usar `foreach` para calcular seu valor.  
   
  Cada uma das consultas anteriores pode ser escrita usando a tipagem implícita com [var](../language-reference/keywords/var.md), como mostrado no exemplo a seguir:  
   
@@ -95,3 +96,4 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   [Passo a passo: escrevendo consultas em C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [Expressões de Consulta LINQ](index.md)   
  [Cláusula where](../language-reference/keywords/where-clause.md)
+

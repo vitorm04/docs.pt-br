@@ -1,5 +1,5 @@
 ---
-title: "-link (Opções do compilador do C#) | Microsoft Docs"
+title: "-link (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3096dd622a0b7c5fae13412a95322b934bd38b76
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c08f2e7f13a51fb1a350acadff5224cfa8d61aaa
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="link-c-compiler-options"></a>/link (opções do compilador C#)
@@ -45,7 +46,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /link:fileList  
 // -or-  
 /l:fileList  
@@ -65,7 +66,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
 > [!NOTE]
 >  Quando você cria uma instância de um tipo COM inserido no seu código, você deve criar a instância usando a interface apropriada. Tentar criar uma instância de um tipo COM inserido usando o CoClass causa um erro.  
   
- Para definir a opção `/link` em [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)], adicione uma referência de assembly e defina a propriedade `Embed Interop Types` como **true**. O valor padrão da propriedade `Embed Interop Types` é **false**.  
+ Para definir a opção `/link` em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], adicione uma referência de assembly e defina a propriedade `Embed Interop Types` como **true**. O valor padrão da propriedade `Embed Interop Types` é **false**.  
   
  Se você vincular a um assembly COM (Assembly A) que em si faz referência a outro assembly COM (Assembly B), também precisará vincular ao Assembly B se uma das seguintes opções for verdadeira:  
   
@@ -73,7 +74,7 @@ Faz com que o compilador disponibilize as informações de tipo COM nos assembli
   
 -   Um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B é invocado.  
   
- Como a opção do compilador [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), a opção do compilador `/link` usa o arquivo de resposta Csc.rsp, que faz referência a assemblies [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] usados com frequência. Use a opção do compilador [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se não desejar que o compilador use o arquivo Csc.rsp.  
+ Como a opção do compilador [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), a opção do compilador `/link` usa o arquivo de resposta Csc.rsp, que faz referência a assemblies [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usados com frequência. Use a opção do compilador [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) se não desejar que o compilador use o arquivo Csc.rsp.  
   
  A forma abreviada de `/link` é `/l`.  
   
@@ -110,3 +111,4 @@ csc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.cs
  [/noconfig (opções do compilador do C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)   
  [Compilação de linha de comando com csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [Visão geral sobre interoperabilidade](../../../csharp/programming-guide/interop/interoperability-overview.md)
+

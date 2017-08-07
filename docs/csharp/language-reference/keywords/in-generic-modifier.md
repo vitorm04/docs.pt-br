@@ -1,5 +1,5 @@
 ---
-title: "in (modificador genérico) (Referência de C#) | Microsoft Docs"
+title: "in (modificador genérico) (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6c490d14b47aaa527fe2ddb3627ea0a84bfe604
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (modificador genérico) (Referência de C#)
@@ -42,7 +42,7 @@ Para parâmetros de tipo genérico, a palavra-chave `in` especifica que o parâm
   
  Um tipo pode ser declarado contravariante em uma interface genérica ou delegado se ele for usado apenas como um tipo de argumentos de método e não como um tipo de retorno do método. Os parâmetros `Ref` e `out` não podem ser variantes.  
   
- Uma interface que tem um parâmetro de tipo contravariante permite que os seus métodos aceitem argumentos de tipos menos derivados que aqueles especificados pelo parâmetro de tipo de interface. Por exemplo, como no .NET Framework 4, na interface <xref:System.Collections.Generic.IComparer%601>, o tipo T é contravariante, você pode atribuir um objeto do tipo `IComparer(Of Person)` a um objeto do tipo `IComparer(Of Employee)`, sem usar qualquer método de conversão especial se o `Employee` herdar o `Person`.  
+ Uma interface que tem um parâmetro de tipo contravariante permite que os seus métodos aceitem argumentos de tipos menos derivados que aqueles especificados pelo parâmetro de tipo de interface. Por exemplo, como no .NET Framework 4, na interface <xref:System.Collections.Generic.IComparer%601>, o tipo T é contravariante, você poderá atribuir um objeto do tipo `IComparer(Of Person)` a um objeto do tipo `IComparer(Of Employee)`, sem usar qualquer método de conversão especial se o `Employee` herdar o `Person`.  
   
  Um delegado contravariante pode ser atribuído a outro delegado do mesmo tipo, mas com um parâmetro de tipo genérico menos derivado.  
   
@@ -65,3 +65,4 @@ Para parâmetros de tipo genérico, a palavra-chave `in` especifica que o parâm
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
  [Covariância e contravariância](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
  [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
+

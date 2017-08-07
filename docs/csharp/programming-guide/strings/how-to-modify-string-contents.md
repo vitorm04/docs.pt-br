@@ -1,5 +1,5 @@
 ---
-title: "Como modificar o conteúdo de uma cadeia de caracteres (Guia de programação em C#) | Microsoft Docs"
+title: "Como modificar o conteúdo de uma cadeia de caracteres (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,14 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 638ba26768dd0406174cd1308669ae4c16ea45c4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 114b6fdabd235d7e57947e77b672352e28aff11e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-modify-string-contents-c-programming-guide"></a>Como modificar o conteúdo de uma cadeia de caracteres (Guia de Programação em C#)
-Como as cadeias de caracteres são *imutáveis*, não é possível (sem usar código não seguro) modificar o valor de um objeto de cadeia de caracteres depois que ele foi criado. No entanto, há várias maneiras de modificar o valor de uma cadeia de caracteres e armazenar o resultado em um novo objeto de cadeia de caracteres. A classe <xref:System.String?displayProperty=fullName> fornece métodos que operam em uma cadeia de caracteres de entrada e retornam um novo objeto de cadeia de caracteres. Em muitos casos, você pode atribuir o novo objeto à variável que mantinha a cadeia de caracteres original. A classe <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName> fornece métodos adicionais que funcionam de maneira semelhante. A classe <xref:System.Text.StringBuilder?displayProperty=fullName> fornece um buffer de caracteres que pode ser modificado "in-loco." Você chama o método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=fullName> para criar um novo objeto de cadeia de caracteres que contenha o conteúdo atual do buffer.  
+Como as cadeias de caracteres são *imutáveis*, não é possível (sem usar código não seguro) modificar o valor de um objeto de cadeia de caracteres depois que ele foi criado. No entanto, há várias maneiras de modificar o valor de uma cadeia de caracteres e armazenar o resultado em um novo objeto de cadeia de caracteres. A classe <xref:System.String?displayProperty=fullName> fornece métodos que operam em uma cadeia de caracteres de entrada e retornam um novo objeto de cadeia de caracteres. Em muitos casos, você pode atribuir o novo objeto à variável que mantinha a cadeia de caracteres original. A classe <xref:System.Text.RegularExpressions.Regex?displayProperty=fullName> fornece métodos adicionais que funcionam de maneira semelhante. A classe <xref:System.Text.StringBuilder?displayProperty=fullName> fornece um buffer de caracteres que você pode modificar "no local." Você chama o método <xref:System.Text.StringBuilder.ToString%2A?displayProperty=fullName> para criar um novo objeto de cadeia de caracteres que contém o conteúdo atual do buffer.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra várias maneiras para substituir ou remover subcadeias de caracteres em uma cadeia de caracteres especificada.  
@@ -54,3 +55,4 @@ Como as cadeias de caracteres são *imutáveis*, não é possível (sem usar có
 ## <a name="see-also"></a>Consulte também  
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Palavra-chave switch (Referência de C#) | Microsoft Docs"
+title: "Palavra-chave switch (Referência de C#)"
 ms.date: 2017-03-07
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
+ms.translationtype: HT
+ms.sourcegitcommit: 4609c30a03c835b9b1338ea6bc9672f7445cfd25
+ms.openlocfilehash: ebbfb5818c8f2a07df7a8cb4724e99b1b9268b03
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="switch-c-reference"></a>switch (Referência de C#)
@@ -155,7 +155,7 @@ A expressão de constante é avaliada da seguinte forma:
 
 - Caso contrário, o valor da expressão será determinado por uma chamada ao método estático [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)).  
 
-O exemplo a seguir usa o padrão de constante para determinar se uma data específica é um final de semana, o primeiro dia, o último dia ou o meio da semana de trabalho. Ele avalia a propriedade [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) do dia atual em relação aos membros da enumeração @System.DayOfWeek. 
+O exemplo a seguir usa o padrão de constante para determinar se uma data específica é um final de semana, o primeiro dia, o último dia ou o meio da semana de trabalho. Ela avalia a propriedade [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) do dia atual em relação aos membros da enumeração @System.DayOfWeek. 
 
 [!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
@@ -221,3 +221,4 @@ Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` 
  
 
  
+

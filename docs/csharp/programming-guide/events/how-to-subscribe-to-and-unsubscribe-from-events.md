@@ -1,5 +1,5 @@
 ---
-title: "Como realizar e cancelar a assinatura de eventos (Guia de Programação em C#) | Microsoft Docs"
+title: "Como realizar e cancelar a assinatura de eventos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 583168bc8cce2f4bee9a2dd35d1e59c7a0f380a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
@@ -46,7 +47,7 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
 3.  Clique duas vezes no evento que deseja criar, por exemplo, o evento `Load`.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] cria um método de manipulador de eventos vazio e o adiciona ao seu código. Como alternativa, você pode adicionar o código manualmente no modo de exibição **Código**. Por exemplo, as linhas de código a seguir declaram um método de manipulador de eventos que será chamado quando a classe `Form` gerar o evento `Load`.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] cria um método de manipulador de eventos vazio e o adiciona ao seu código. Como alternativa, você pode adicionar o código manualmente no modo de exibição **Código**. Por exemplo, as linhas de código a seguir declaram um método de manipulador de eventos que será chamado quando a classe `Form` gerar o evento `Load`.  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

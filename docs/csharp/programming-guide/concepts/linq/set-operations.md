@@ -1,5 +1,5 @@
 ---
-title: "Operações de conjunto (C#) | Microsoft Docs"
+title: "Operações de conjunto (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 37841cde3aa5e4aaa6545b3a160422d024be5842
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 121dcd4d41dcfea332c45031a5fbed594e2f1e3e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="set-operations-c"></a>Operações de conjunto (C#)
@@ -42,17 +43,17 @@ As operações de conjunto na LINQ referem-se a operações de consulta que gera
 ## <a name="comparison-of-set-operations"></a>Comparação de operações de conjuntos  
   
 ### <a name="distinct"></a>Distinct  
- A ilustração a seguir descreve o comportamento do método <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> em uma sequência de caracteres. A sequência retornada contém os elementos exclusivos da sequência de entrada.  
+ A ilustração a seguir mostra o comportamento do método <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=fullName> em uma sequência de caracteres. A sequência retornada contém os elementos exclusivos da sequência de entrada.  
   
  ![Gráfico mostrando o comportamento de Distinct&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
   
 ### <a name="except"></a>Exceto  
- A ilustração a seguir descreve o comportamento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. A sequência retornada contém apenas os elementos da primeira sequência de entrada que não estão na segunda sequência de entrada.  
+ A ilustração a seguir mostra o comportamento de <xref:System.Linq.Enumerable.Except%2A?displayProperty=fullName>. A sequência retornada contém apenas os elementos da primeira sequência de entrada que não estão na segunda sequência de entrada.  
   
  ![Gráfico mostrando a ação de Except&#40;&#41;.](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
   
 ### <a name="intersect"></a>Interseção  
- A ilustração a seguir descreve o comportamento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. A sequência retornada contém os elementos que são comuns a ambas as sequências de entrada.  
+ A ilustração a seguir mostra o comportamento de <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=fullName>. A sequência retornada contém os elementos que são comuns a ambas as sequências de entrada.  
   
  ![Gráfico mostrando a interseção de duas sequências.](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
   
@@ -66,3 +67,4 @@ As operações de conjunto na LINQ referem-se a operações de consulta que gera
  [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [Como combinar e comparar coleções de cadeias de caracteres (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)   
  [Como localizar a diferença de conjunto entre duas listas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Cláusula select (Referência de C#) | Microsoft Docs"
+title: "Cláusula select (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 602294b64bd8446376e9cc7b4f8ce4e9b0d788fc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a505399eb79cbecbefcc53953329279a4abd92f6
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="select-clause-c-reference"></a>Cláusula select (Referência de C#)
@@ -64,3 +65,4 @@ Em uma expressão de consulta, a cláusula `select` especifica o tipo de valores
  [Tipos Anônimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
  [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+
