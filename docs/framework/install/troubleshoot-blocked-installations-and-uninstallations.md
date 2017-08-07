@@ -1,7 +1,7 @@
 ---
 title: "Solucionar problemas de instalações e desinstalações bloqueadas do .NET Framework"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -90,5 +90,4 @@ O instalador do .NET Framework não pode ser executado no Modo de Compatibilidad
 [Instalar o .NET Framework para desenvolvedores](../../../docs/framework/install/guide-for-developers.md)   
 [Como determinar quais versões do .NET Framework estão instaladas](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [Versões e dependências](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-
 
