@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7197f2453367e4613b4d44f0d84be5984525a5a
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f922abca6898e91748158ee16f89ca7f57a81bf7
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -703,7 +703,7 @@ Para saber mais sobre a estrutura <xref:System.TimeZoneInfo> e ajustes de fuso h
 
 - **ASP.NET 5**
 
-     O .NET 2015 inclui o ASP.NET 5, que é uma plataforma enxuta do .NET para a compilação de aplicativos modernos baseados em nuvem. A plataforma é modular para que você possa incluir somente os recursos necessários em seu aplicativo. Pode ser hospedada no IIS ou auto-hospedada em um processo personalizado, e você pode executar aplicativos com diferentes versões do .NET Framework no mesmo servidor. Ela inclui um novo sistema de configuração do ambiente projetado para implantação na nuvem.
+     O .NET 2015 inclui o ASP.NET 5, que é uma implementação enxuta do .NET para a compilação de modernos aplicativos baseados em nuvem. O ASP.NET 5 é modular para que você possa incluir somente os recursos necessários em seu aplicativo. Pode ser hospedada no IIS ou auto-hospedada em um processo personalizado, e você pode executar aplicativos com diferentes versões do .NET Framework no mesmo servidor. Ela inclui um novo sistema de configuração do ambiente projetado para implantação na nuvem.
 
      MVC, API da Web e Páginas da Web são unificados em uma única estrutura chamada MVC 6. Compile aplicativos do ASP.NET 5 usando as novas ferramentas no Visual Studio 2015. Os aplicativos existentes funcionarão no novo .NET Framework; no entanto, para compilar um aplicativo que usa o MVC 6 ou SignalR 3, use o sistema de projetos no Visual Studio 2015.
 

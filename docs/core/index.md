@@ -1,5 +1,5 @@
 ---
-title: .NET Core
+title: Guia do .NET Core
 description: "O .NET core é uma implementação modular de alto desempenho do .NET para a criação de aplicativos do Windows, Linux e Mac. Saiba mais sobre o .NET Core para começar."
 keywords: .NET, .NET Core
 author: richlander
@@ -10,14 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a>Guia do .NET Core
 
 > Confira os [Tutoriais de "Introdução"](get-started.md) para aprender a criar um aplicativo .NET Core simples. Bastam apenas alguns minutos para colocar seu primeiro aplicativo em funcionamento.
 
@@ -124,13 +124,13 @@ Há uma combinação de bibliotecas específicas ou neutras de plataforma no .NE
 - O [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) e o [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) são específicas de plataforma, considerando que as APIs de armazenamento e de criptografia diferem significativamente em cada sistema operacional. 
 - O [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) e [System.LINQ](https://github.com/dotnet/corefx/tree/master/src/System.Linq) são neutros de plataforma, considerando que eles podem criar e operar em estruturas de dados.
 
-## <a name="comparisons-to-other-net-platforms"></a>Comparações com outras plataformas .NET
+## <a name="comparisons-to-other-net-implementations"></a>Comparações com outras implementações do .NET
 
-Talvez seja mais fácil entender o tamanho e a forma do .NET Core ao compará-lo com as plataformas .NET existentes. 
+Talvez seja mais fácil entender o tamanho e a forma do .NET Core ao compará-lo com as implementações do .NET existentes. 
 
 ### <a name="comparison-with-net-framework"></a>Comparação com o .NET Framework
 
-A plataforma .NET foi anunciada pela primeira vez pela Microsoft em 2000, evoluindo a partir daí. O .NET Framework foi o principal produto .NET produzido pela Microsoft durante esse período de 15 anos. 
+O .NET foi anunciado pela primeira vez pela Microsoft em 2000 e continuou evoluindo a partir daí. O .NET Framework foi a principal implementação do .NET produzida pela Microsoft durante esse período de mais de 15 anos. 
 
 Principais diferenças entre o .NET Core e o .NET Framework: 
 
@@ -140,7 +140,7 @@ Principais diferenças entre o .NET Core e o .NET Framework:
 - **Plataformas** – O .NET Framework dá suporte a Windows e Windows Server, enquanto o .NET Core também dá suporte a macOS e Linux.
 - **Software Livre** – O.NET Core é um software livre, enquanto um [subconjunto somente leitura do .NET Framework](https://github.com/microsoft/referencesource) é um software livre.
 
-Embora o .NET Core seja único e apresente diferenças significativas do .NET Framework e outras plataformas .NET, é muito fácil compartilhar o código usando técnicas de compartilhamento de código-fonte ou de binário. 
+Embora o .NET Core seja único e apresente diferenças significativas em relação ao .NET Framework e a outras implementações do .NET, é muito fácil compartilhar o código usando técnicas de compartilhamento de binários ou de fontes. 
 
 ### <a name="comparison-with-mono"></a>Comparação com Mono
 
