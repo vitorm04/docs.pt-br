@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40d2c13ad4218952b143e6403851a1027bd7c161
+ms.sourcegitcommit: 8e5ab7bea3ca0f6e067b65c09009c7da36d30938
+ms.openlocfilehash: 84fcd22a502b23ed4a28b8b4419a1269dc7c7ffa
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out (modificador genérico) (Referência de C#)
@@ -44,7 +44,7 @@ Para parâmetros de tipo genérico, a palavra-chave `out` especifica que o parâ
   
  Pode ser atribuído a um delegado covariante outro delegado do mesmo tipo, mas com um parâmetro de tipo genérico mais derivado.  
   
- Para obter mais informações, consulte [Covariância e contravariância](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8).  
+ Para obter mais informações, consulte [Covariância e contravariância](../../programming-guide/concepts/covariance-contravariance/index.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como declarar, estender e implementar uma interface genérica covariante. Ele também mostra como usar a conversão implícita para classes que implementam uma interface covariante.  
