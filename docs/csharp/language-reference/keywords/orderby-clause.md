@@ -1,5 +1,5 @@
 ---
-title: "Cláusula orderby (Referência de C#) | Microsoft Docs"
+title: "Cláusula orderby (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f07b231b977288af5210d23c0b4c99082ce0bbd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ec9507e4c1d9691d90d47cdbb20fdb22fc281d24
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="orderby-clause-c-reference"></a>Cláusula orderby (Referência de C#)
@@ -51,7 +52,7 @@ Em uma expressão de consulta, a cláusula `orderby` faz com que a sequência ou
  [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
   
 ## <a name="remarks"></a>Comentários  
- No tempo de compilação, a cláusula `orderby` é convertida em uma chamada para o método <xref:System.Linq.Enumerable.OrderBy%2A>. Várias chaves na cláusula `orderby` são convertidas em chamadas de método <xref:System.Linq.Enumerable.ThenBy%2A>.  
+ Em tempo de compilação, a cláusula `orderby` é convertida em uma chamada para o método <xref:System.Linq.Enumerable.OrderBy%2A>. Várias chaves na cláusula `orderby` são traduzidas para chamadas de método <xref:System.Linq.Enumerable.ThenBy%2A>.  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
@@ -59,3 +60,4 @@ Em uma expressão de consulta, a cláusula `orderby` faz com que a sequência ou
  [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Cláusula group](../../../csharp/language-reference/keywords/group-clause.md)   
  [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

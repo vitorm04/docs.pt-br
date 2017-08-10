@@ -1,5 +1,5 @@
 ---
-title: "Depurando árvores de expressão no Visual Studio (C#) | Microsoft Docs"
+title: "Depurando árvores de expressão no Visual Studio (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14ab67e78a3b4c4819ddca36a406526e78f5485e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Depurando árvores de expressão no Visual Studio (C#)
-Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração. Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio).  
+Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das árvores de expressão. Para obter uma rápida visão geral da estrutura da árvore de expressão, você pode usar a propriedade `DebugView`, que está disponível apenas no modo de depuração. Para obter mais informações sobre depuração, consulte [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
- Para melhor representar o conteúdo das árvores de expressão, a propriedade `DebugView` usa os visualizadores do Visual Studio. Para obter mais informações, consulte [Criar visualizadores personalizados](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data).  
+ Para melhor representar o conteúdo das árvores de expressão, a propriedade `DebugView` usa os visualizadores do Visual Studio. Para obter mais informações, consulte [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data).  
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Para abrir um visualizador para uma árvore de expressão  
   
@@ -41,7 +42,7 @@ Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das �
  Cada tipo de expressão é exibido no visualizador, conforme descrito nas seções a seguir.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- Os nomes de variáveis <xref:System.Linq.Expressions.ParameterExpression> são exibidos com um símbolo de "$" no início.  
+ Os nomes de variáveis <xref:System.Linq.Expressions.ParameterExpression> são exibidos com o símbolo "$" no início.  
   
  Se um parâmetro não tiver um nome, será atribuído um nome gerado automaticamente, como `$var1` ou `$var2`.  
   
@@ -84,7 +85,7 @@ Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das �
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
   
 ## <a name="lambdaexpression"></a>LambdaExpression  
- Os objetos <xref:System.Linq.Expressions.LambdaExpression> são exibidos junto com os tipos delegados.  
+ Objetos <xref:System.Linq.Expressions.LambdaExpression> são exibidos junto com seus tipos delegados.  
   
  Se uma expressão lambda não tiver um nome, será atribuído um nome gerado automaticamente, como `#Lambda1` ou `#Lambda2`.  
   
@@ -121,5 +122,6 @@ Ao depurar seus aplicativos, você pode analisar a estrutura e o conteúdo das �
   
 ## <a name="see-also"></a>Consulte também  
  [Árvores de expressão (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Depurando no Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Criar visualizadores personalizados](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)
+ [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)   
+ [Criar visualizadores personalizados](/visualstudio/debugger/create-custom-visualizers-of-data)
+

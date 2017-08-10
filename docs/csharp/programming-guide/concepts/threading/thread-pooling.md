@@ -1,5 +1,5 @@
 ---
-title: Pooling de threads (C#) | Microsoft Docs
+title: Pooling de threads (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>Pooling de threads (C#)
@@ -68,7 +69,7 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>Parâmetros do pool de threads e valores retornados  
  Os valores retornados de um thread do pool de threads não são simples. A forma padrão de retornar valores de uma chamada de função não é permitida porque os procedimentos `Sub` são o único tipo de procedimento que pode ser colocado na fila para um pool de thread. Uma maneira de você fornecer parâmetros e valores retornados é encapsular os parâmetros, valores retornados e métodos em uma classe wrapper conforme descrito em [Parâmetros e valores de retorno para procedimentos multithreaded (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
   
- Uma maneira mais fácil de fornecer parâmetros e valores retornados é usar a variável de objeto de estado `ByVal` opcional do método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Se você usar essa variável para passar uma referência para uma instância de uma classe, os membros da instância poderão ser modificados pelo thread do pool de threads e usados como valores retornados.  
+ Um modo mais fácil de fornecer parâmetros e retornar valores é usando a variável de objeto de estado `ByVal` do método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Se você usar essa variável para passar uma referência para uma instância de uma classe, os membros da instância poderão ser modificados pelo thread do pool de threads e usados como valores retornados.  
   
  Inicialmente pode não ser óbvio que você pode modificar um objeto referenciado por uma variável passada por valor. Você pode fazer isso porque somente a referência de objeto é passada por valor. Quando você faz alterações em membros do objeto referenciado pela referência de objeto, as alterações se aplicam à instância de classe real.  
   
@@ -82,3 +83,4 @@ private void AnotherLongTask(Object state)
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [Sincronização de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

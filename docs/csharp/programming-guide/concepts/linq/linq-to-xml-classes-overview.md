@@ -1,5 +1,5 @@
 ---
-title: "Visão geral de classes LINQ to XML (C#) | Microsoft Docs"
+title: "Visão geral de classes LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f75a7a2aa3f9fca867562807595c6387b0be23d4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: de9664f56a0ab075d2c74b45d0eebab541213d06
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>Visão geral de classes LINQ to XML (C#)
-Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] no namespace <xref:System.Xml.Linq> e uma breve descrição de cada uma delas.  
+Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] no namespace <xref:System.Xml.Linq> e uma breve descrição de cada.  
   
 ## <a name="linq-to-xml-classes"></a>Classes LINQ to XML  
   
@@ -40,7 +41,7 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](../../../../cs
  <xref:System.Xml.Linq.XComment> representa um comentário XML.  
   
 ### <a name="xcontainer-class"></a>Classe XContainer  
- <xref:System.Xml.Linq.XContainer> é uma classe base abstrata para todos os nós que podem ter nós filho. As seguintes classes são derivadas da classe <xref:System.Xml.Linq.XContainer>:  
+ <xref:System.Xml.Linq.XContainer> é uma classe base abstrata para todos os nós que podem ter nós filho. As seguintes classes derivam da classe <xref:System.Xml.Linq.XContainer>:  
   
 -   <xref:System.Xml.Linq.XElement>  
   
@@ -53,7 +54,7 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](../../../../cs
  <xref:System.Xml.Linq.XDocument> representa um documento XML. Para obter informações detalhadas e exemplos, consulte [Visão geral da classe XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
 ### <a name="xdocumenttype-class"></a>Classe XDocumentType  
- <xref:System.Xml.Linq.XDocumentType> representa um DTD (definição de tipo de documento) XML.  
+ <xref:System.Xml.Linq.XDocumentType> representa um DTD (definição de tipo de documento) de XML.  
   
 ### <a name="xelement-class"></a>Classe XElement  
  <xref:System.Xml.Linq.XElement> representa um elemento XML. Para obter informações detalhadas e exemplos, consulte [Visão geral da classe XElement (C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md).  
@@ -61,15 +62,15 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](../../../../cs
 ### <a name="xname-class"></a>Classe XName  
  <xref:System.Xml.Linq.XName> representa nomes de elementos (<xref:System.Xml.Linq.XElement>) e atributos (<xref:System.Xml.Linq.XAttribute>). Para obter informações detalhadas e exemplos, consulte [Visão geral da classe XDocument (C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md).  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] é criado para simplificar ao máximo os nomes XML. Devido à sua complexidade, nomes XML geralmente são considerados um tópico avançado em XML. Pode-se afirmar que essa complexidade vem não dos namespaces, que os desenvolvedores usam regularmente em programação, mas dos prefixos de namespace. Prefixos de namespace podem ser úteis para reduzir os pressionamentos de teclas necessários para inserir XML ou para facilitar a leitura de XML. No entanto, os prefixos frequentemente são apenas um atalho para usar o namespace de XML completo e não são necessários na maioria dos casos. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] simplifica os nomes XML resolvendo todos os prefixos para o namespace de XML correspondente. Prefixos estão disponíveis, se forem necessários, por meio do método <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é criado para simplificar ao máximo os nomes XML. Devido à sua complexidade, nomes XML geralmente são considerados um tópico avançado em XML. Pode-se afirmar que essa complexidade vem não dos namespaces, que os desenvolvedores usam regularmente em programação, mas dos prefixos de namespace. Prefixos de namespace podem ser úteis para reduzir os pressionamentos de teclas necessários para inserir XML ou para facilitar a leitura de XML. No entanto, os prefixos frequentemente são apenas um atalho para usar o namespace de XML completo e não são necessários na maioria dos casos. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica os nomes XML resolvendo todos os prefixos para o namespace de XML correspondente. Caso necessários, os prefixos estão disponíveis por meio do método <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A>.  
   
  É possível, se necessário, controlar os prefixos de namespace. Em algumas circunstâncias, se você estiver trabalhando com outros sistemas XML, como XSLT ou XAML, você precisará controlar os prefixos de namespace. Por exemplo, se você tiver uma expressão XPath que usa prefixos de namespace e está inserida em uma folha de estilos XSLT, verifique se o documento XML está serializado com prefixos de namespace que coincidem com os usados na expressão XPath.  
   
 ### <a name="xnamespace-class"></a>Classe XNamespace  
- <xref:System.Xml.Linq.XNamespace> representa um namespace para um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute>. Namespaces são um componente de um <xref:System.Xml.Linq.XName>.  
+ <xref:System.Xml.Linq.XNamespace> representa um namespace para <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XAttribute>. Namespaces são um componente de um <xref:System.Xml.Linq.XName>.  
   
 ### <a name="xnode-class"></a>Classe XNode  
- <xref:System.Xml.Linq.XNode> é uma classe abstrata que representa os nós de uma árvore XML. As classes a seguir são derivadas da classe <xref:System.Xml.Linq.XNode>:  
+ <xref:System.Xml.Linq.XNode> é uma classe abstrata que representa os nós de uma árvore XML. As seguintes classes derivam da classe <xref:System.Xml.Linq.XNode>:  
   
 -   <xref:System.Xml.Linq.XText>  
   
@@ -82,19 +83,19 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](../../../../cs
 -   <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>Classe XNodeDocumentOrderComparer  
- <xref:System.Xml.Linq.XNodeDocumentOrderComparer> fornece a funcionalidade de comparar nós quanto à ordem dos documentos.  
+ <xref:System.Xml.Linq.XNodeDocumentOrderComparer> fornece a funcionalidade para comparar nós para sua ordem do documento.  
   
 ### <a name="xnodeequalitycomparer-class"></a>Classe XNodeEqualityComparer  
- <xref:System.Xml.Linq.XNodeEqualityComparer> fornece a funcionalidade de comparar nós quanto à igualdade de valor.  
+ <xref:System.Xml.Linq.XNodeEqualityComparer> fornece a funcionalidade para comparar nós para igualdade de valor.  
   
 ### <a name="xobject-class"></a>Classe XObject  
  <xref:System.Xml.Linq.XObject> é uma classe base abstrata de <xref:System.Xml.Linq.XNode> e <xref:System.Xml.Linq.XAttribute>. Ele fornece a anotação e a funcionalidade de evento.  
   
 ### <a name="xobjectchange-class"></a>Classe XObjectChange  
- <xref:System.Xml.Linq.XObjectChange> especifica o tipo de evento quanto um evento é gerado para um <xref:System.Xml.Linq.XObject>.  
+ <xref:System.Xml.Linq.XObjectChange> especifica o tipo de evento quando um evento é gerado para um <xref:System.Xml.Linq.XObject>.  
   
 ### <a name="xobjectchangeeventargs-class"></a>Classe XObjectChangeEventArgs  
- <xref:System.Xml.Linq.XObjectChangeEventArgs> fornece dados para os eventos <xref:System.Xml.Linq.XObject.Changing> e <xref:System.Xml.Linq.XObject.Changed>.  
+ <xref:System.Xml.Linq.XObjectChangeEventArgs> fornece dados para os eventos de <xref:System.Xml.Linq.XObject.Changing> e de <xref:System.Xml.Linq.XObject.Changed>.  
   
 ### <a name="xprocessinginstruction-class"></a>Classe XProcessingInstruction  
  <xref:System.Xml.Linq.XProcessingInstruction> representa uma instrução de processamento XML. Uma instrução de processamento comunica informações a um aplicativo que processa o XML.  
@@ -104,3 +105,4 @@ Este tópico fornece uma lista das classes [!INCLUDE[sqltecxlinq](../../../../cs
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da programação LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

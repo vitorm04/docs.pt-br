@@ -1,5 +1,5 @@
 ---
-title: "Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (C#) | Microsoft Docs"
+title: "Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: fa0a35df3c2038859a8c2861780fd8dfa98d4429
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23e68327cfc52845b203acdf5f69253de746d566
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída (C#)
-Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> junto com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa estiver concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  
+Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.  
   
  Este exemplo demonstra como usar um token de cancelamento em conjunto com `WhenAny` para aguardar na primeira tarefa que for finalizada na coleção de tarefas e para cancelar as tarefas restantes. Cada tarefa baixa o conteúdo de um site. O exemplo exibe o comprimento do conteúdo do primeiro download que é concluído e cancela os outros downloads.  
   
@@ -80,7 +80,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 1.  Comente ou exclua o loop.  
   
-2.  Crie uma consulta que, quando executada, produz uma coleção de tarefas genéricas. Cada chamada a `ProcessURLAsync` retorna uma <xref:System.Threading.Tasks.Task%601> em que `TResult` é um inteiro.  
+2.  Crie uma consulta que, quando executada, produz uma coleção de tarefas genéricas. Cada chamada para `ProcessURLAsync` retorna um <xref:System.Threading.Tasks.Task%601> em que `TResult` é um inteiro.  
   
     ```csharp  
     // ***Create a query that, when executed, returns a collection of tasks.  
@@ -279,3 +279,4 @@ namespace CancelAfterOneTask
  [Ajuste fino de seu aplicativo assíncrono (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Programação assíncrona com async e await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Exemplo assíncrono: ajuste fino de seu aplicativo](http://go.microsoft.com/fwlink/?LinkId=255046)
+

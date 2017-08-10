@@ -1,5 +1,5 @@
 ---
-title: "Interfaces Genéricas (Guia de Programação em C#) | Microsoft Docs"
+title: "Interfaces genéricas (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2c50e42d8a22f831db65af24e1061440e336acda
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2a9a994c339553b923b930660c0e129dd930de96
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Interfaces genéricas (Guia de Programação em C#)
-Muitas vezes, é útil definir interfaces para classes de coleção genéricas ou para as classe genéricas que representam itens na coleção. Para classes genéricas, prefere-se usar interfaces genéricas, como <xref:System.IComparable%601>, em vez de <xref:System.IComparable>, a fim de evitar operações de conversão boxing e unboxing em tipos de valor. A biblioteca de classes .NET Framework define várias interfaces genéricas para uso com as classes de coleção no namespace <xref:System.Collections.Generic>.  
+Muitas vezes, é útil definir interfaces para classes de coleção genéricas ou para as classe genéricas que representam itens na coleção. Para classes genéricas, prefere-se usar interfaces genéricas, como <xref:System.IComparable%601> em vez de <xref:System.IComparable>, a fim de evitar operações de conversão boxing e unboxing em tipos de valor. A biblioteca de classes .NET Framework define várias interfaces genéricas para uso com as classes de coleção no namespace <xref:System.Collections.Generic>.  
   
  Quando uma interface é especificada como uma restrição em um parâmetro de tipo, somente os tipos que implementam a interface podem ser usados. O exemplo de código a seguir mostra uma classe `SortedList<T>` que deriva da classe `GenericList<T>`. Para obter mais informações, consulte [Introdução aos Genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md). `SortedList<T>` adiciona a restrição `where T : IComparable<T>`. Isso habilita o método `BubbleSort` em `SortedList<T>` a usar o método genérico <xref:System.IComparable%601.CompareTo%2A> em elementos de lista. Neste exemplo, os elementos de lista são uma classe simples, `Person`, que implementa `IComparable<Person>`.  
   
@@ -53,7 +54,7 @@ Muitas vezes, é útil definir interfaces para classes de coleção genéricas o
   
  [!code-cs[csProgGuideGenerics#32](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-interfaces_4.cs)]  
   
- Interfaces genéricas podem herdar de interfaces não genéricas se a interface genérica for contra variant, o que significa que ela usa apenas seu parâmetro de tipo como um valor retornado. Na biblioteca de classes .NET Framework, <xref:System.Collections.Generic.IEnumerable%601> herda de <xref:System.Collections.IEnumerable>, pois <xref:System.Collections.Generic.IEnumerable%601> usa somente `T` no valor retornado de <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> e no getter da propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
+ Interfaces genéricas podem herdar de interfaces não genéricas se a interface genérica for contra variant, o que significa que ela usa apenas seu parâmetro de tipo como um valor retornado. Na biblioteca de classes do .NET Framework, <xref:System.Collections.Generic.IEnumerable%601> herda de <xref:System.Collections.IEnumerable> porque <xref:System.Collections.Generic.IEnumerable%601> usa apenas `T` no valor retornado de <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> e no getter de propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A>.  
   
  Classes concretas podem implementar interfaces construídas fechadas, da seguinte maneira:  
   
@@ -69,4 +70,5 @@ Muitas vezes, é útil definir interfaces para classes de coleção genéricas o
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Introdução aos Genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [interface](../../../csharp/language-reference/keywords/interface.md)   
- [Genéricos](https://msdn.microsoft.com/library/ms172192)
+ [Genéricos](~/docs/standard/generics/index.md)
+

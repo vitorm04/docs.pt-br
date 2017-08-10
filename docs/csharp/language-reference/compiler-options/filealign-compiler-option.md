@@ -1,5 +1,5 @@
 ---
-title: "-filealign (Opções do compilador do C#) | Microsoft Docs"
+title: "-filealign (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -39,11 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 83569fa264ba3ed6e271281885940a70a5354840
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b13dee0a221bc0b97349be5897a04188304ff16
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="filealign-c-compiler-options"></a>/filealign (opções do compilador C#)
@@ -64,7 +64,7 @@ A opção **/filealign** permite que você especifique o tamanho das seções em
   
  Ao especificar o tamanho da seção, você afeta o tamanho do arquivo de saída. Modificar o tamanho da seção pode ser útil para programas que serão executados em dispositivos menores.  
   
- Use [DUMPBIN](https://docs.microsoft.com/cpp/build/reference/dumpbin-options) para ver informações sobre as seções em seu arquivo de saída.  
+ Use [DUMPBIN](/cpp/build/reference/dumpbin-options) para ver informações sobre as seções em seu arquivo de saída.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
@@ -80,4 +80,5 @@ A opção **/filealign** permite que você especifique o tamanho das seções em
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB: como modificar as propriedades do projeto e as definições de configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+

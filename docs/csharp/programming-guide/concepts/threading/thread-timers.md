@@ -1,5 +1,5 @@
 ---
-title: Temporizadores de thread (C#) | Microsoft Docs
+title: Temporizadores de thread (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-timers-c"></a>Temporizadores de thread (C#)
@@ -83,8 +84,9 @@ private void TimerTask(object StateObj)
 }  
 ```  
   
- Temporizadores de thread são particularmente úteis quando o objeto <xref:System.Windows.Forms.Timer?displayProperty=fullName> está indisponível, como quando você está desenvolvendo aplicativos de console.  
+ Temporizadores de thread são particularmente úteis quando o objeto <xref:System.Windows.Forms.Timer?displayProperty=fullName> não está disponível, assim como quando você está desenvolvendo aplicativos de console.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading>   
  [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

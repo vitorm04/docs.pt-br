@@ -1,5 +1,5 @@
 ---
-title: Como criar um documento com namespaces (C#) (LINQ to XML) | Microsoft Docs
+title: Como criar um documento com namespaces (C#) (LINQ to XML)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 23cc762b1dcd5e39b923c1a57b6f171c7885f0ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cecd2012012ba789ad2c2935b6b69c282718a066
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Como criar um documento com namespaces (C#) (LINQ to XML)
@@ -31,7 +32,7 @@ Este tópico mostra como criar documentos com namespaces.
 ## <a name="example"></a>Exemplo  
  Para criar um elemento ou um atributo que esteja em um namespace, você primeiro declara e inicializa um objeto <xref:System.Xml.Linq.XNamespace>. Em seguida, você usa a sobrecarga do operador de adição para combinar o namespace com o nome local, expresso como uma cadeia de caracteres.  
   
- O exemplo a seguir cria um documento com um namespace. Por padrão, o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] serializa esse documento com um namespace padrão.  
+ O exemplo a seguir cria um documento com um namespace. Por padrão, o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializa esse documento com um namespace padrão.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -51,7 +52,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir cria um documento com um namespace. Também cria um atributo que declara o namespace com um prefixo de namespace. Para criar um atributo que declara um namespace com um prefixo, você cria um atributo cujo nome é o prefixo do namespace e esse nome está no namespace <xref:System.Xml.Linq.XNamespace.Xmlns%2A>. O valor desse atributo é o URI do namespace.  
+ O exemplo a seguir cria um documento com um namespace. Também cria um atributo que declara o namespace com um prefixo de namespace. Para criar um atributo que declare um namespace com um prefixo, você cria um atributo onde o namespace do nome do atributo seja o prefixo do namespace, e esse nome esteja no namespace <xref:System.Xml.Linq.XNamespace.Xmlns%2A>. O valor desse atributo é o URI do namespace.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -135,9 +136,9 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Exemplo  
- Outra maneira de obter o mesmo resultado é usar nomes expandidos em vez de declarar e criar um objeto <xref:System.Xml.Linq.XNamespace>.  
+ Outra maneira de obter o mesmo resultado é usar nomes expandidos, em vez de declarar e criar um objeto <xref:System.Xml.Linq.XNamespace>.  
   
- Essa abordagem tem implicações de desempenho. Cada vez que você passa uma cadeia de caracteres que contém um nome expandido para o [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] deve analisar o nome, localizar o namespace atomizado e localizar o nome atomizado. Esse processo utiliza tempo de CPU. Se o desempenho for importante, convém declarar e usar um objeto <xref:System.Xml.Linq.XNamespace> explicitamente.  
+ Essa abordagem tem implicações de desempenho. Cada vez que você passa uma cadeia de caracteres que contém um nome expandido para o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] deve analisar o nome, localizar o namespace atomizado e localizar o nome atomizado. Esse processo utiliza tempo de CPU. Se o desempenho for importante, convém declarar e usar um objeto <xref:System.Xml.Linq.XNamespace> explicitamente.  
   
  Se o desempenho for uma questão importante, consulte [Pré-atomização de objetos XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) para obter mais informações  
   
@@ -160,3 +161,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

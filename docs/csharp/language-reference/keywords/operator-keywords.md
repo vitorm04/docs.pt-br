@@ -1,5 +1,5 @@
 ---
-title: "Palavras-chave de Operador (Referência de C#) | Microsoft Docs"
+title: "Palavras-chave de operador (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08db7a1e8f039f6cd40033dd15fb3bf233edb693
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f1109fb343ebed3dc66e14664ed5ba470750f59
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="operator-keywords-c-reference"></a>Palavras-chave de operador (Referência de C#)
@@ -51,6 +52,8 @@ Utilizada para executar diversas ações, como a criação de objetos, a verific
   
     -   [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md) Qualifica um parâmetro de tipo.  
   
+-   [nameof](nameof.md) Obtém o nome de cadeia de caracteres simples (não qualificado) de uma variável, tipo ou membro.
+ 
 -   [sizeof](../../../csharp/language-reference/keywords/sizeof.md) Obtém o tamanho de um tipo.  
   
 -   [typeof](../../../csharp/language-reference/keywords/typeof.md) Obtains o objeto **System.Type** de um tipo.  
@@ -80,3 +83,4 @@ Utilizada para executar diversas ações, como a criação de objetos, a verific
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
  [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+

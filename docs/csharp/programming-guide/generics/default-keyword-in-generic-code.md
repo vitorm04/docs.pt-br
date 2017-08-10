@@ -1,5 +1,5 @@
 ---
-title: "Palavra-chave default em código genérico (Guia de programação em C#) | Microsoft Docs"
+title: "Palavra-chave default em código genérico (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 17591eb07d2bf8af0e13c62b632df29e00b45df6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b5f5995b720d377717a5fff8a5e7e6e2196c612c
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="default-keyword-in-generic-code-c-programming-guide"></a>Palavra-chave default em código genérico (Guia de Programação em C#)
@@ -41,7 +42,7 @@ Um problema que surge em métodos e classes genéricas é como atribuir um valor
   
 -   Se T for um tipo de valor, ele será um valor numérico ou um struct.  
   
- Dada uma variável t de um tipo parametrizado T, a instrução t = null só será válida se T for um tipo de referência e t = 0 funcionará somente para tipos de valor numérico, mas não para structs. A solução é usar a palavra-chave `default`, que retornará null para tipos de referência e zero para tipos de valor numérico. Para structs, ela retornará cada membro do struct inicializado como zero ou null, dependendo se forem tipos de valor ou de referência. Para tipos que permitem valor nulo, o padrão retorna um <xref:System.Nullable%601?displayProperty=fullName>, que é inicializado como qualquer struct.  
+ Dada uma variável t de um tipo parametrizado T, a instrução t = null só será válida se T for um tipo de referência e t = 0 funcionará somente para tipos de valor numérico, mas não para structs. A solução é usar a palavra-chave `default`, que retornará null para tipos de referência e zero para tipos de valor numérico. Para structs, ela retornará cada membro do struct inicializado como zero ou null, dependendo se forem tipos de valor ou de referência. Para tipos de valor anuláveis, o padrão retorna um <xref:System.Nullable%601?displayProperty=fullName>, que é inicializado como qualquer struct.  
   
  O exemplo a seguir da classe `GenericList<T>` mostra como usar a palavra-chave `default`. Para obter mais informações, consulte [Visão geral de genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
   
@@ -52,4 +53,5 @@ Um problema que surge em métodos e classes genéricas é como atribuir um valor
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Genéricos](../../../csharp/programming-guide/generics/index.md)   
  [Métodos Genéricos](../../../csharp/programming-guide/generics/generic-methods.md)   
- [Genéricos](https://msdn.microsoft.com/library/ms172192)
+ [Genéricos](~/docs/standard/generics/index.md)
+

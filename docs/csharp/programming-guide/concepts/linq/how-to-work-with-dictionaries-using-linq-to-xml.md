@@ -1,5 +1,5 @@
 ---
-title: "Como trabalhar com dicionários usando LINQ to XML (C#) | Microsoft Docs"
+title: "Como trabalhar com dicionários usando LINQ to XML (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1570e4bb0be707d1c27e8bdfc1ef853413d70784
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 66668c14c472f68dd3da365bd7c7cbc64ccd4365
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Como trabalhar com dicionários usando LINQ to XML (C#)
-É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> para XML e vice-versa.  
+É conveniente converter variedades de estruturas de dados para XML, e XML de volta para outras estruturas de dados. Este tópico mostra uma implementação específica dessa abordagem geral convertendo <xref:System.Collections.Generic.Dictionary%602> a XML e verso.  
   
 ## <a name="example"></a>Exemplo  
- Esse exemplo usa uma forma de construção funcional na qual uma consulta projeta novos objetos <xref:System.Xml.Linq.XElement> e a coleção resultante é passada como um argumento para o construtor do objeto <xref:System.Xml.Linq.XElement> raiz.  
+ Este exemplo usa um formulário de compilação funcional em que uma consulta projetos novos objetos de <xref:System.Xml.Linq.XElement> e a coleção resultante é passada como um argumento para o construtor do objeto de <xref:System.Xml.Linq.XElement> raiz.  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -80,3 +80,4 @@ Child4:Value4
   
 ## <a name="see-also"></a>Consulte também  
  [Projeções e transformações (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

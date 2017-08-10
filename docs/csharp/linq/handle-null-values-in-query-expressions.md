@@ -11,15 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14b64bf8d3590f4f7dc3d1b00cb50d0bc421d9bc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f4f189504c57c9c01268b10bc96ad3c9af49ddbd
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="handle-null-values-in-query-expressions"></a>Manipular valores nulos em expressões de consulta
 
-Este exemplo mostra como tratar os possíveis valores nulos em coleções de origem. Uma coleção de objetos como uma <xref:System.Collections.Generic.IEnumerable%601> pode conter elementos cujo valor é [null](../language-reference/keywords/null.md). Se uma coleção de origem for nula ou contiver um elemento cujo valor for null e sua consulta não lidar com valores null, uma <xref:System.NullReferenceException> será gerada ao executar a consulta.  
+Este exemplo mostra como tratar os possíveis valores nulos em coleções de origem. Uma coleção de objetos, tal como uma <xref:System.Collections.Generic.IEnumerable%601>, pode conter elementos cujo valor é [null](../language-reference/keywords/null.md). Se uma coleção de origem for nula ou contiver um elemento cujo valor for null e sua consulta não lidar com valores null, uma <xref:System.NullReferenceException> será gerada ao executar a consulta.  
   
 ## <a name="example"></a>Exemplo
 
@@ -39,3 +40,4 @@ Este exemplo mostra como tratar os possíveis valores nulos em coleções de ori
  <xref:System.Nullable%601>   
  [Expressões de consulta LINQ](index.md)   
  [Tipos que permitem valor nulo](../programming-guide/nullable-types/index.md)
+

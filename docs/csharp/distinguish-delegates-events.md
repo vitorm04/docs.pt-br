@@ -1,6 +1,6 @@
 ---
-title: "Distinção entre delegados e eventos"
-description: "Distinção entre delegados e eventos"
+title: "Distinção entre Delegados e Eventos"
+description: "Saber a diferença entre delegados e eventos e quando usar cada um desses recursos do .NET Core."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4020df1a63cbcdeb7e7b5d9d49cfe6444a43655e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="distinguising-delegates-and-events"></a>Distinção entre delegados e eventos
+# <a name="distinguishing-delegates-and-events"></a>Distinção entre Delegados e Eventos
 
 [Anterior](modern-events.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres (Guia de Programação em C#) | Microsoft Docs"
+title: "Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5926451da851fedaaf1a3ce21854d6183100ad87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 59c6884a2a83089962baed02d35dd9addd714bb6
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-search-strings-using-string-methods-c-programming-guide"></a>Como pesquisar cadeias de caracteres usando métodos de cadeia de caracteres (Guia de Programação em C#)
-O tipo [cadeia de caracteres](../../../csharp/language-reference/keywords/string.md), que é um alias para a classe <xref:System.String?displayProperty=fullName>, fornece uma série de métodos úteis para pesquisar o conteúdo de uma cadeia de caracteres.  
+O tipo [string](../../../csharp/language-reference/keywords/string.md), que é um alias para a classe <xref:System.String?displayProperty=fullName>, fornece uma série de métodos úteis para pesquisar o conteúdo de uma cadeia de caracteres.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa os métodos <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>, <xref:System.String.StartsWith%2A> e <xref:System.String.EndsWith%2A> para pesquisar as cadeias de caracteres.  
@@ -47,3 +48,4 @@ O tipo [cadeia de caracteres](../../../csharp/language-reference/keywords/string
  [Cadeias de Caracteres](../../../csharp/programming-guide/strings/index.md)   
  [Como pesquisar cadeias de caracteres usando expressões regulares](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)   
  [LINQ e Cadeias de Caracteres](http://msdn.microsoft.com/library/6c34169f-7a39-436a-98d8-9a7283043942)
+

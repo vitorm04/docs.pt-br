@@ -1,5 +1,5 @@
 ---
-title: "Filtrando a saída de My.Application.Log (Visual Basic) | Microsoft Docs"
+title: "Filtrando a saída de My.Application.Log (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Instruções passo a passo: filtrando a saída de My.Application.Log (Visual Basic)
@@ -48,7 +48,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 #### <a name="to-build-the-sample-application"></a>Para compilar o aplicativo de exemplo  
   
-1.  Abra um novo projeto de aplicativos do Windows [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+1.  Abra um novo projeto de aplicativos do Windows [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
 2.  Adicione um botão denominado Button1 a Form1.  
   
@@ -68,7 +68,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
   
 6.  Feche o aplicativo.  
   
-     Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](https://docs.microsoft.com/visualstudio/ide/reference/output-window). Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
+     Para obter informações sobre como exibir a janela de saída de depuração do aplicativo, consulte [Janela de Saída](/visualstudio/ide/reference/output-window). Para obter informações sobre o local do arquivo de log do aplicativo, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
     > [!NOTE]
     >  Por padrão, o aplicativo libera a saída do arquivo de log quando é fechado.  
@@ -162,7 +162,7 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
 9. Altere o valor do atributo `value` de volta para "Information".  
   
     > [!NOTE]
-    >  A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> e <xref:System.Diagnostics.Debug?displayProperty=fullName> se comportam.  
+    >  A configuração da opção `DefaultSwitch` controla apenas `My.Application.Log`. Ele não altera como as classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> e <xref:System.Diagnostics.Debug?displayProperty=fullName> se comportam.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtragem individual de ouvintes de My.Application.Log  
  O exemplo anterior mostra como alterar a filtragem para toda a saída `My.Application.Log`. Este exemplo demonstra como filtrar um ouvinte de log individual. Por padrão, um aplicativo tem dois ouvintes que gravam na saída de depuração do aplicativo e no arquivo de log.  
@@ -281,3 +281,4 @@ Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `
  [Como Gravar Mensagens de Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [Opções de rastreamento](../../../../framework/debug-trace-profile/trace-switches.md)   
  [Registrando informações em log no aplicativo](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

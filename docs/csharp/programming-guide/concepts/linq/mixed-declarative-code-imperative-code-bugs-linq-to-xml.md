@@ -1,5 +1,5 @@
 ---
-title: "Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#) | Microsoft Docs"
+title: "Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 747b3462dd6e463a565b27553f241b1ee5171de7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2fb679ee2593520e633daba969ccaa4db4d30509
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bugs misturados de código declarativo/código obrigatório (LINQ to XML) (C#)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A> e estiver alterando a árvore XML enquanto itera pelo eixo, você pode se deparar com alguns erros estranhos.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contém vários métodos que permitem que você modifique uma árvore XML diretamente. Você pode adicionar elementos, excluir elementos, modifica o conteúdo de um elemento, adiciona atributos, e assim por diante. Essa interface de programação é descrita em [Modificando árvores XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Se você estiver iterando com um dos eixos, como <xref:System.Xml.Linq.XContainer.Elements%2A>, e você está alterando a árvore XML como você itera através do eixo, você pode acabar com alguns erros estranhas.  
   
  Esse problema é às vezes conhecido como “o problema do Dia De Bruxas”.  
   
@@ -62,7 +63,7 @@ foreach (XElement e in root.Elements())
   
  Esse código entra em um loop infinito. A declaração de `foreach` itera através do eixo de `Elements()` , adicionando novos elementos para o elemento de `doc` . Acaba também iterar através dos elementos que acabou de adicionar. E como atribuir novos objetos com cada iteração do loop, consumirá se houver qualquer memória disponível.  
   
- Você pode corrigir esse problema colocando a coleção na memória usando o operador de consulta padrão <xref:System.Linq.Enumerable.ToList%2A>, da seguinte forma:  
+ Você pode corrigir este problema recebendo a coleção na memória usando o operador padrão de consulta de <xref:System.Linq.Enumerable.ToList%2A> , como segue:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -113,7 +114,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- A solução novamente é chamar <xref:System.Linq.Enumerable.ToList%2A> para materializar a coleção, da seguinte forma:  
+ A solução é novamente chamar <xref:System.Linq.Enumerable.ToList%2A> para materializar a coleção, como segue:  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -186,3 +187,4 @@ Console.WriteLine(newRoot);
   
 ## <a name="see-also"></a>Consulte também  
  [Programação LINQ to XML avançada (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

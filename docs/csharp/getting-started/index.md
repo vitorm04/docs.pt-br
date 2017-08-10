@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 09415f996c9dd03c34a74cfe2d2d030f2b4b6fe8
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="get-started-with-c"></a>Introdução ao C# #
@@ -33,7 +33,7 @@ Os seguintes tópicos estão disponíveis:
 
    Uma biblioteca de classes permite definir tipos e membros de tipo que podem ser chamados de outro aplicativo. Este tópico permite criar uma biblioteca de classes com um único método que determina se uma cadeia de caracteres começa com um caractere maiúsculo. Após criar a biblioteca, você pode desenvolver um [teste de unidade](testing-library-with-visual-studio.md) para garantir que ela funciona conforme o esperado e, em seguida, você pode torná-la disponível para [aplicativos que desejam consumi-la](consuming-library-with-visual-studio.md).
 
-- [Introdução ao Código do Visual Studio](with-visual-studio-code.md)
+- [Introdução ao Código do Visual Studio e C#](../../core/tutorials/with-visual-studio-code.md)
 
    O Visual Studio Code é um editor de código gratuito e otimizado para compilação e depuração de aplicativos Web e de nuvem modernos. Ele dá suporte ao IntelliSense e está disponível para Windows, Linux e macOS.
 

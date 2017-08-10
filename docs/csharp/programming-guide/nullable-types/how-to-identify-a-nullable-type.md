@@ -1,5 +1,5 @@
 ---
-title: "Como Identificar um Tipo que Permite Valor Nulo (Guia de Programação em C#) | Microsoft Docs"
+title: "Como identificar um tipo anulável (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe24676fa2e49b8a8dbd03519f1d25611d14f6ac
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c9e05bfe8be45e5b71a8db06ce4f2502c5397fd4
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Como identificar um tipo anulável (Guia de Programação em C#)
@@ -71,3 +72,4 @@ if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
 ## <a name="see-also"></a>Consulte também  
  [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)   
  [Conversão boxing de tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)
+

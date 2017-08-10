@@ -1,5 +1,5 @@
 ---
-title: "-subsystemversion (Opções do compilador C#) | Microsoft Docs"
+title: "-subsystemversion (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -25,10 +25,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8766904cad739b29c7dfe80b29305ea2b3bd2e6f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c7992086eb33577d795496025820ed8f7bb51c24
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="subsystemversion-c-compiler-options"></a>/subsystemversion (opções do compilador C#)
@@ -39,7 +40,7 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /subsystemversion:major.minor  
 ```  
   
@@ -60,7 +61,7 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
 |Windows Server 2008|6.01|  
-|[!INCLUDE[win8](../../../csharp/language-reference/compiler-options/includes/win8_md.md)]|6.02|  
+|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Valores padrão  
  O valor padrão da opção do compilador **/subsystemversion** depende das condições na lista a seguir:  
@@ -73,12 +74,13 @@ Especifica a versão mínima do subsistema no qual o arquivo executável gerado 
   
     -   [/platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)  
   
--   O valor padrão é 6.00 se você estiver usando o MSBuild, se tiver como alvo [!INCLUDE[net_v45](../../../csharp/language-reference/compiler-options/includes/net_v45_md.md)] e se não tiver definido nenhuma das opções de compilador que foram especificadas anteriormente na lista.  
+-   O valor padrão é 6.00 se você estiver usando o MSBuild, se tiver como alvo [!INCLUDE[net_v45](~/includes/net-v45-md.md)] e se não tiver definido nenhuma das opções de compilador que foram especificadas anteriormente na lista.  
   
 -   O valor padrão é 4.00 se nenhuma das condições anteriores for verdadeira.  
   
 ## <a name="setting-this-option"></a>Definindo esta opção  
- Para definir a opção do compilador **/subsystemversion** no Visual Studio, você precisa abrir o arquivo .csproj e especificar um valor para a propriedade `SubsystemVersion` no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties).  
+ Para definir a opção do compilador **/subsystemversion** no Visual Studio, você precisa abrir o arquivo .csproj e especificar um valor para a propriedade `SubsystemVersion` no XML do MSBuild. Você não pode definir essa opção no IDE do Visual Studio. Para obter mais informações, consulte "Valores padrão" no início deste tópico ou [Propriedades de projeto comuns do MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+

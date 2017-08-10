@@ -1,6 +1,6 @@
 ---
-title: "Tipos aninhados (Guia de Programação em C#) | Microsoft Docs"
-ms.date: 2015-07-20
+title: "Tipos aninhados (Guia de Programação em C#)"
+ms.date: 2017-07-10
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -28,22 +28,33 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 893473753a25c010728a1fe6a1562502ade81bad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 853ec746d9be01ed63d7a229ca86e99d9f192374
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipos aninhados (Guia de Programação em C#)
 Um tipo definido em uma [classe](../../../csharp/language-reference/keywords/class.md) ou [struct](../../../csharp/language-reference/keywords/struct.md) é denominado tipo aninhado. Por exemplo:  
   
- [!code-cs[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
+[!code-cs[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
   
- Independentemente se o tipo externo é uma classe ou um struct, o padrão dos tipos aninhados é definido como [privado](../../../csharp/language-reference/keywords/private.md), mas pode ser tornado [público](../../../csharp/language-reference/keywords/public.md), interno protegido, [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md) ou [privado](../../../csharp/language-reference/keywords/private.md). No exemplo anterior, `Nested` é inacessível para tipos externos, mas pode se tornar público como este:  
+Independentemente de o tipo externo ser uma classe ou uma estrutura, tipos aninhados tornam-se [privados](../../../csharp/language-reference/keywords/private.md) por padrão; eles são acessíveis somente de seu tipo recipiente. No exemplo anterior, a classe `Nested` é inacessível para tipos externos. 
+
+Você também pode especificar um [modificador de acesso](../../language-reference/keywords/access-modifiers.md) para definir a acessibilidade de um tipo aninhado, da seguinte maneira:
+
+- Tipos aninhados de uma **classe** podem ser [públicos](../../../csharp/language-reference/keywords/public.md), [protegidos](../../../csharp/language-reference/keywords/protected.md), [internos](../../../csharp/language-reference/keywords/internal.md), `protected internal` ou [particulares](../../../csharp/language-reference/keywords/private.md). 
+
+   No entanto, definir uma classe aninhada `protected` ou `protected internal` dentro de uma [classe lacrada](../../language-reference/keywords/sealed.md) gera um aviso do compilador [CS0628](../../misc/cs0628.md), "novo membro protegido declarado na classe lacrada".
   
- [!code-cs[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
+- Tipos aninhados de um **struct** podem ser [públicos](../../../csharp/language-reference/keywords/public.md), [internos](../../../csharp/language-reference/keywords/internal.md) ou [particulares](../../../csharp/language-reference/keywords/private.md).
   
- O tipo aninhado ou interno pode acessar o tipo recipiente ou externo. Para acessar o tipo recipiente, passe-o como um construtor para o tipo aninhado. Por exemplo:  
+O exemplo a seguir torna a classe `Nested` pública:
+  
+[!code-cs[csProgGuideObjects#69](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_2.cs)]  
+  
+ O tipo aninhado ou interno pode acessar o tipo recipiente ou externo. Para acessar o tipo recipiente, passe-o como um argumento ao construtor do tipo aninhado. Por exemplo:  
   
  [!code-cs[csProgGuideObjects#70](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_3.cs)]  
   
@@ -58,3 +69,4 @@ Um tipo definido em uma [classe](../../../csharp/language-reference/keywords/cla
  [Classes e structs](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [Modificadores de acesso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
  [Construtores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+

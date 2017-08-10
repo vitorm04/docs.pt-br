@@ -65,9 +65,12 @@
             - name: Programação paralela no .NET Framework
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
-            - name: Segurança no .NET Framework
+            - name: Segurança no .NET
               tocHref: /dotnet/standard/security/
               topicHref: /dotnet/standard/security/index
+            - name: Serialização no .NET
+              tocHref: /dotnet/standard/serialization/
+              topicHref: /dotnet/standard/serialization/index
             - name: Threading gerenciado
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
@@ -211,9 +214,6 @@
             - name: Segurança no .NET Framework
               tocHref: /dotnet/framework/security/
               topicHref: /dotnet/framework/security/index
-            - name: Serialização no .NET Framework
-              tocHref: /dotnet/framework/serialization/
-              topicHref: /dotnet/framework/serialization/index
             - name: Ferramentas do .NET Framework
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index

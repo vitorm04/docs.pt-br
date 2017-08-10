@@ -1,5 +1,5 @@
 ---
-title: Como criar uma chave no Registro (Visual C#) | Microsoft Docs
+title: Como criar uma chave no Registro (Visual C#)
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3a377a85acdc31b426171ab6583bff92b24889b3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Como criar uma chave no Registro (Visual C#)
@@ -53,7 +54,7 @@ key.Close();
   
 -   Substitua o parâmetro `Names` pelo nome de uma chave existente diretamente sob o nó HKEY_CURRENT_USER do Registro.  
   
--   Substitua o parâmetro `Nam`e pelo nome de um valor que existe diretamente sob o nó Names.  
+-   Substitua o parâmetro `Name` pelo nome de um valor que existe diretamente sob o nó Names.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Analise a estrutura do Registro para encontrar um local adequado para a chave. Por exemplo, caso você queira abrir a chave Software do usuário atual e criar uma chave com o nome da empresa. Em seguida, adicione os valores do Registro à chave da empresa.  
@@ -82,3 +83,4 @@ key.Close();
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Sistema de arquivos e o Registro (Guia de Programação em C#)](../../../csharp/programming-guide/file-system/index.md)   
  [Ler, gravar e excluir do Registro com C#](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+

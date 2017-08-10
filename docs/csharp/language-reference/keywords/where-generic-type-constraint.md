@@ -1,5 +1,5 @@
 ---
-title: "where (restrição de tipo genérico) (Referência de C#) | Microsoft Docs"
+title: "where (restrição de tipo genérico) (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e5baa75c55d58a4d975fc42472f90ff4125cbb5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e81640ee56ed672bb09242a070fdf167740874b
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restrição de tipo genérico) (Referência de C#)
@@ -86,3 +86,4 @@ delegate T MyDelegate<T>() where T : new()
  [Introdução aos Genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [Restrição new](../../../csharp/language-reference/keywords/new-constraint.md)   
  [Restrições a parâmetros de tipo](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+

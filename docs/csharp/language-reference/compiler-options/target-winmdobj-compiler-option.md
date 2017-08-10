@@ -1,5 +1,5 @@
 ---
-title: "-target:winmdobj (Opções do compilador C#) | Microsoft Docs"
+title: "-target:winmdobj (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7581ec18db0d2741452b47ad6200482b63c102be
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3967f7f9326652271ce55aa286e9f42f94dee775
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj (opções do compilador C#)
@@ -37,7 +38,7 @@ Se você usar a opção do compilador **/target:winmdobj**, o compilador criará
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 /target:winmdobj  
 ```  
   
@@ -58,17 +59,18 @@ Se você usar a opção do compilador **/target:winmdobj**, o compilador criará
   
 3.  Na lista **Tipo de saída**, escolha **Arquivo WinMD**.  
   
-     A opção **Arquivo WinMD** está disponível apenas para modelos de aplicativo [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)].  
+     A opção **Arquivo WinMD** está disponível apenas para modelos de aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
   
- Para obter informações sobre como definir essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   
 ## <a name="example"></a>Exemplo  
  O comando a seguir compila `filename.cs` em um arquivo .winmdobj intermediário.  
   
-```  
+```console  
 csc /target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
  [/target (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+

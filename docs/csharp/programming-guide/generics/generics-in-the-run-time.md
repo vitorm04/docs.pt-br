@@ -1,5 +1,5 @@
 ---
-title: "Genéricos em tempo de execução (Guia de Programação em C#) | Microsoft Docs"
+title: "Genéricos em tempo de execução (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc0bd1d44192bce0adffc8efd5a089771539f62f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 661dff2d8ec2e12ab6a459660a5378f74e93b9c5
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Genéricos em tempo de execução (Guia de Programação em C#)
@@ -64,7 +65,7 @@ Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL)
   
  [!code-cs[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
   
- Assim como no uso anterior da classe <xref:System.Collections.Generic.Stack%601> criada por meio do tipo `Order`, outra instância da classe especializada <xref:System.Collections.Generic.Stack%601> será criada. Os ponteiros contidos nela são definidos para referenciar uma área de memória do tamanho de um tipo `Customer`. Como a quantidade de tipos de referência pode variar muito entre os programas, a implementação de genéricos no C# reduz significativamente a quantidade de código ao diminuir para um o número de classes especializadas criadas pelo compilador para classes genéricas ou tipos de referência.  
+ Assim como acontece com o uso anterior da classe <xref:System.Collections.Generic.Stack%601> criada usando o tipo `Order`, outra instância da classe especializada <xref:System.Collections.Generic.Stack%601> é criada. Os ponteiros contidos nela são definidos para referenciar uma área de memória do tamanho de um tipo `Customer`. Como a quantidade de tipos de referência pode variar muito entre os programas, a implementação de genéricos no C# reduz significativamente a quantidade de código ao diminuir para um o número de classes especializadas criadas pelo compilador para classes genéricas ou tipos de referência.  
   
  Além disso, quando uma classe genérica do C# for instanciada usando um tipo de valor ou parâmetro de tipo de referência, a reflexão pode consultá-la em tempo de execução e o seu tipo real e parâmetro de tipo podem ser determinados.  
   
@@ -72,4 +73,5 @@ Um tipo genérico ou método compilado em Microsoft Intermediate Language (MSIL)
  <xref:System.Collections.Generic>   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Introdução aos Genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [Genéricos](https://msdn.microsoft.com/library/ms172192)
+ [Genéricos](~/docs/standard/generics/index.md)
+

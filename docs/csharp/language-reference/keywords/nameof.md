@@ -1,6 +1,6 @@
 ---
-title: "nameof (referência do C# e do Visual Basic) | Microsoft Docs"
-ms.date: 2017-03-03
+title: "nameof (Referência de C#)"
+ms.date: 2017-06-16
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -28,14 +28,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: da3fef282ac71de07057131069bf58d4f761ad2d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db79af5f38439b881863cf3e03aa0e684ec5cd39
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="nameof-c-and-visual-basic-reference"></a>nameof (referência do C# e do Visual Basic)
+# <a name="nameof-c-reference"></a>nameof (Referência de C#)
 
 Usado para obter o nome de cadeia de caracteres simples (não qualificado) de uma variável, tipo ou membro.  
 
@@ -122,19 +122,6 @@ nameof(f<>) -> syntax error
 nameof(Method2()) -> error "This expression does not have a name"  
 ```  
   
- Muitos dos exemplos acima se aplicam ao Visual Basic.  Aqui estão alguns exemplos específicos do Visual Basic:  
-  
-```vb  
-NameOf(a!Foo) -> ' error  "This expression does not have a name"  
-NameOf(dict("Foo")) -> ' error  "This expression does not have a name": default property access  
-NameOf(dict.Item("Foo")) -> ' error  "This expression does not have a name"  
-NameOf(arr(2)) -> ' error  "This expression does not have a name": array element index  
-Dim x = Nothing   
-NameOf(x.ToString(2)) -> ' error  "This expression does not have a name"  
-Dim o = Nothing  
-NameOf(o.Equals) -> ' result "Equals".  Warning: "Access of static member of instance; instance will not be evaluated"  
-```  
-  
 ## <a name="remarks"></a>Comentários  
  O argumento para `nameof` deve ser um nome simples, nome qualificado, acesso de membro, acesso básico com um membro especificado ou esse acesso com um membro especificado.  A expressão de argumento identifica uma definição de código, mas ela nunca é avaliada.  
   
@@ -165,12 +152,9 @@ class C {
 ## <a name="language-specifications"></a>Especificações da linguagem  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
- Para obter mais informações, consulte [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md).  
-  
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)   
- [Guia de programação do Visual Basic](../../../visual-basic/programming-guide/index.md)
+ 
 

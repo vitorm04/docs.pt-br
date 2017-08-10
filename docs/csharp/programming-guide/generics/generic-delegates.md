@@ -1,5 +1,5 @@
 ---
-title: "Delegados Genéricos (Guia de Programação em C#) | Microsoft Docs"
+title: "Delegados genéricos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 797eea24dcf5a408e49e6e40e52411d267c16ebb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be067e2a2e2a192da8ccc92b60af81f0999c449a
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Delegados genéricos (Guia de Programação em C#)
@@ -63,4 +64,5 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) pode defi
  [Classes Genéricas](../../../csharp/programming-guide/generics/generic-classes.md)   
  [Interfaces Genéricas](../../../csharp/programming-guide/generics/generic-interfaces.md)   
  [Delegados](../../../csharp/programming-guide/delegates/index.md)   
- [Genéricos](https://msdn.microsoft.com/library/ms172192)
+ [Genéricos](~/docs/standard/generics/index.md)
+

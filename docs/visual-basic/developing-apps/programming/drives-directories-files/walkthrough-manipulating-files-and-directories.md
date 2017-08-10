@@ -1,5 +1,5 @@
 ---
-title: "Manipulando arquivos e diretórios no Visual Basic | Microsoft Docs"
+title: "Manipulando arquivos e diretórios no Visual Basic"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,19 +41,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic
-Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Ele descreve como criar um pequeno aplicativo que lista e examina os arquivos de texto em um diretório. Para cada arquivo de texto selecionado, o aplicativo fornece atributos de arquivo e a primeira linha do conteúdo. Há uma opção para gravar as informações em um arquivo de log.  
+Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Ele descreve como criar um pequeno aplicativo que lista e examina os arquivos de texto em um diretório. Para cada arquivo de texto selecionado, o aplicativo fornece atributos de arquivo e a primeira linha do conteúdo. Há uma opção para gravar as informações em um arquivo de log.  
   
- Este passo a passo usa os membros de `My.Computer.FileSystem Object`, que estão disponível em [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]. Consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obter mais informações. No final do passo a passo, será fornecido um exemplo equivalente que usa classes do namespace <xref:System.IO>.  
+ Este passo a passo usa os membros de `My.Computer.FileSystem Object`, que estão disponível em [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obter mais informações. No final do passo a passo, será fornecido um exemplo equivalente que usa classes do namespace <xref:System.IO>.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>Para criar o projeto  
   
@@ -65,7 +65,7 @@ Este passo a passo fornece uma introdução aos fundamentos de E/S de arquivo no
   
 3.  Na caixa **Nome**, digite `FileExplorer` para definir o nome do projeto e, em seguida, clique em **OK**.  
   
-     O [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] adiciona o projeto ao **Gerenciador de Soluções** e o Designer de Formulários do Windows é aberto.  
+     O [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] adiciona o projeto ao **Gerenciador de Soluções** e o Designer de Formulários do Windows é aberto.  
   
 4.  Adicione os controles da tabela a seguir no formulário e defina os valores correspondentes para as respectivas propriedades.  
   

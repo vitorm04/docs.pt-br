@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6ba90a6fe16d4ba33e8b9e55c93f7365b6bc905b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="perform-left-outer-joins"></a>Executar junções externas esquerdas
@@ -39,3 +40,4 @@ Uma junção externa esquerda é uma junção em que cada elemento da primeira c
  [Executar junções agrupadas](perform-grouped-joins.md)   
  [Tipos anônimos](../programming-guide/classes-and-structs/anonymous-types.md)   
  
+

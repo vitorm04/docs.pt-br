@@ -1,5 +1,5 @@
 ---
-title: "Polimorfismo (Guia de Programação em C#) | Microsoft Docs"
+title: "Polimorfismo (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d15b606f835b3a3dbc23aac8e79991a349377a8c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c278a6a931154af97cab5b1ff33124dd31a3fa2e
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guia de Programação em C#)
@@ -39,7 +40,7 @@ O polimorfismo costuma ser chamado de o terceiro pilar da programação orientad
   
 -   Em tempo de execução, os objetos de uma classe derivada podem ser tratados como objetos de uma classe base, em locais como parâmetros de método, coleções e matrizes. Quando isso ocorre, o tipo declarado do objeto não é mais idêntico ao seu tipo de tempo de execução.  
   
--   As classes base podem definir e implementar [métodos](../../../csharp/language-reference/keywords/virtual.md)*virtuais* e as classes derivadas podem [substituí-los](../../../csharp/language-reference/keywords/override.md), o que significa que elas fornecem sua própria definição e implementação. Em tempo de execução, quando o código do cliente chama o método, o CLR procura o tipo de tempo de execução do objeto e invoca a substituição do método virtual. Dessa forma, você pode chamar em seu código-fonte um método de uma classe base e fazer com que a versão de uma classe derivada do método seja executada.  
+-   As classes base podem definir e implementar *métodos* [virtuais](../../../csharp/language-reference/keywords/virtual.md) e as classes derivadas podem [substituí-los](../../../csharp/language-reference/keywords/override.md), o que significa que elas fornecem sua própria definição e implementação. Em tempo de execução, quando o código do cliente chama o método, o CLR procura o tipo de tempo de execução do objeto e invoca a substituição do método virtual. Dessa forma, você pode chamar em seu código-fonte um método de uma classe base e fazer com que a versão de uma classe derivada do método seja executada.  
   
  Os métodos virtuais permitem que você trabalhe com grupos de objetos relacionados de maneira uniforme. Por exemplo, suponha que você tem um aplicativo de desenho que permite que um usuário crie vários tipos de formas sobre uma superfície de desenho. Você não sabe em tempo de compilação que tipos específicos de formas que o usuário criará. No entanto, o aplicativo precisa manter controle de todos os diferentes tipos de formas que são criados e atualizá-los em resposta às ações do mouse do usuário. Você pode usar o polimorfismo para resolver esse problema em duas etapas básicas:  
   
@@ -51,7 +52,7 @@ O polimorfismo costuma ser chamado de o terceiro pilar da programação orientad
   
  [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
- Em C#, todo tipo é polimórfico, porque todos os tipos, incluindo tipos definidos pelo usuário, herdam de <xref:System.Object>.  
+ Em C#, cada tipo é polimórfico porque todos os tipos, incluindo tipos definidos pelo usuário, herdam de <xref:System.Object>.  
   
 ## <a name="polymorphism-overview"></a>Visão Geral sobre o polimorfismo  
   
@@ -126,3 +127,4 @@ O polimorfismo costuma ser chamado de o terceiro pilar da programação orientad
  [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)   
  [Indexadores](../../../csharp/programming-guide/indexers/index.md)   
  [Tipos](../../../csharp/programming-guide/types/index.md)
+

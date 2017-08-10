@@ -1,5 +1,5 @@
 ---
-title: "-preferreduilang (Opções do compilador C#) | Microsoft Docs"
+title: "-preferreduilang (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30585b6df0a7acbc109d386efe0e311b1625342d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b94c2794642ad93a78eaafdeb655310e4ecb2d25
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="preferreduilang-c-compiler-options"></a>/preferreduilang (opções do compilador C#)
@@ -62,3 +62,4 @@ csc.exe /preferreduilang:ja-JP
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+

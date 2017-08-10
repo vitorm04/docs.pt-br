@@ -1,5 +1,5 @@
 ---
-title: "Como Acessar uma Classe de Coleção com foreach (Guia de Programação em C#) | Microsoft Docs"
+title: "Como acessar uma classe de coleção com foreach (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 841132b5181c5e17d1eabae11d3550811aa959ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ad81ab699b079f4aabb04a886211e94a937335d
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-a-collection-class-with-foreach-c-programming-guide"></a>Como acessar uma classe de coleção com foreach (Guia de Programação em C#)
@@ -45,16 +45,15 @@ O exemplo de código a seguir ilustra como gravar uma classe de coleção não g
  [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## <a name="example"></a>Exemplo  
- Internamente, a classe `Tokens` usa uma matriz para armazenar os tokens. Como as matrizes implementam <xref:System.Collections.IEnumerator> e <xref:System.Collections.IEnumerable>, o código de exemplo pode usar os métodos de enumeração da matriz (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> e <xref:System.Collections.IEnumerator.Current%2A>) em vez de defini-los na classe `Tokens`. As definições de método estão incluídas no exemplo para esclarecer como elas são definidas e o que cada uma delas faz.  
+ Internamente, a classe `Tokens` usa uma matriz para armazenar os tokens. Já que as matrizes implementam <xref:System.Collections.IEnumerator> e <xref:System.Collections.IEnumerable>, o exemplo de código poderia ter usado os métodos de enumeração da matriz (<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> e <xref:System.Collections.IEnumerator.Current%2A>) em vez de defini-los na classe `Tokens`. As definições de método estão incluídas no exemplo para esclarecer como elas são definidas e o que cada uma delas faz.  
   
  [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
- No C#, não é necessário que uma classe de coleção implemente <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para ser compatível com `foreach`. Se a classe tiver os membros <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> e <xref:System.Collections.IEnumerator.Current%2A> necessários, ela funcionará com `foreach`. A vantagem de omitir as interfaces é que isso permite definir um tipo de retorno para `Current` mais específico do que <xref:System.Object>. Isso fornece segurança de tipos.  
+ Em C#, não é necessário que uma classe de coleção implemente <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para que seja compatível com `foreach`. Se a classe tiver os membros <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> e <xref:System.Collections.IEnumerator.Current%2A> necessários, ela funcionará com `foreach`. A vantagem de omitir as interfaces é que isso permite definir um tipo de retorno para `Current` mais específico do que <xref:System.Object>. Isso fornece segurança de tipos.  
   
  Por exemplo, altere as seguintes linhas no exemplo anterior.  
   
 ```csharp  
-  
 // Change the Tokens class so that it no longer implements IEnumerable.  
 public class Tokens  
 {  
@@ -74,13 +73,11 @@ public class Tokens
         {   }  
     }  
  }  
-  
 ```  
   
  Como `Current` retorna uma cadeia de caracteres, o compilador pode detectar quando um tipo incompatível for usado em uma instrução `foreach`, conforme mostrado no código a seguir.  
   
 ```csharp  
-  
 // Error: Cannot convert type string to int.  
 foreach (int item in f)    
 ```  
@@ -93,3 +90,4 @@ foreach (int item in f)
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Matrizes](../../../csharp/programming-guide/arrays/index.md)   
  [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+

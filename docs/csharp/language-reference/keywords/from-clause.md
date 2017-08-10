@@ -1,5 +1,5 @@
 ---
-title: "Cláusula from (Referência de C#) | Microsoft Docs"
+title: "Cláusula from (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8634e7bd7f3c3110b42d8fc64e7ebef88b4ad8c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0165144acfa8d0928015e8222179f7e69f19644
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="from-clause-c-reference"></a>Cláusula from (Referência de C#)
@@ -44,7 +45,7 @@ Uma expressão de consulta deve começar com uma cláusula `from`. Além disso, 
   
 -   Uma *variável de intervalo* local que representa cada elemento na sequência de origem.  
   
- A variável de intervalo e a fonte de dados são fortemente tipadas. A fonte de dados referenciada na cláusula `from` deve ter um tipo de <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> ou um tipo derivado, como <xref:System.Linq.IQueryable%601>.  
+ A variável de intervalo e a fonte de dados são fortemente tipadas. A fonte de dados referenciada na cláusula `from` deve ter um tipo de <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> ou um tipo derivado, por exemplo, <xref:System.Linq.IQueryable%601>.  
   
  No exemplo a seguir, `numbers` é a fonte de dados e `num` é a variável de intervalo. Observe que ambas as variáveis são fortemente tipadas, mesmo com o uso da palavra-chave [var](../../../csharp/language-reference/keywords/var.md).  
   
@@ -74,3 +75,4 @@ Uma expressão de consulta deve começar com uma cláusula `from`. Além disso, 
 ## <a name="see-also"></a>Consulte também  
  [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [Expressões de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

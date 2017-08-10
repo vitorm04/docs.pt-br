@@ -1,5 +1,5 @@
 ---
-title: "Escopo de namespaces padrão em C# 1 | Microsoft Docs"
+title: "Escopo de namespace padrão em C#1"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 760716dc81f5cd946ae014ed22b6c5a7df64a5dd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1c8d8106f7e3e01bb546ce24dd4153b90a0142d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>Escopo de namespaces padrão em C#
-Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas. Se tiver XML em um namespace padrão, você ainda precisa declarar uma variável <xref:System.Xml.Linq.XNamespace> e combiná-la com o nome local para fazer um nome qualificado para ser usado na consulta.  
+# <a name="scope-of-default-namespaces-in-c"></a>Escopo de namespace padrão em C#
+Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas. Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.  
   
  Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
   
@@ -69,7 +70,7 @@ End of result set
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.  
   
- Em contraste com o exemplo codificado incorretamente anterior, a abordagem correta ao usar C# é declarar e inicializar um objeto <xref:System.Xml.Linq.XNamespace> e usá-lo para especificar objetos <xref:System.Xml.Linq.XName>. Neste caso, o argumento para o método <xref:System.Xml.Linq.XElement.Elements%2A> é um objeto <xref:System.Xml.Linq.XName>.  
+ Em contraste com incorretamente codificado o exemplo anterior, a abordagem correta para usar C# é declarar e inicializar um objeto de <xref:System.Xml.Linq.XNamespace> , e usá-lo para especificar <xref:System.Xml.Linq.XName> objetos. Nesse caso, o argumento para o método de <xref:System.Xml.Linq.XElement.Elements%2A> é um objeto de <xref:System.Xml.Linq.XName> .  
   
 ### <a name="code"></a>Código  
   
@@ -106,3 +107,4 @@ End of result set
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com namespaces XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

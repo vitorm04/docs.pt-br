@@ -1,6 +1,6 @@
 ---
 title: "Interpretando Expressões"
-description: "Interpretando Expressões"
+description: "Aprenda como escrever código para examinar a estrutura de um árvore de expressão."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07352a2807c08ad19b8d5a47c5a42a0e1c455ab6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -522,7 +522,7 @@ Primeiro, os visitantes lidam somente com constantes que são números inteiros.
 
 Até o último exemplo reconhece um subconjunto dos tipos de nó possíveis.
 Você ainda poderá alimentá-lo com muitas expressões que o fariam falhar.
-Uma implementação completa está incluída na Biblioteca padrão do .NET com o nome [ExpressionVisitor](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) e pode lidar com todos os tipos de nó possíveis.
+Uma implementação completa está incluída no .NET Standard com o nome [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor) e pode lidar com todos os tipos de nó possíveis.
 
 Por fim, a biblioteca usada neste artigo foi desenvolvida para demonstração e aprendizado. Ela não está otimizada. Eu a escrevi para deixar as estruturas usadas muito claras e para destacar as técnicas usadas para visitar os nós e analisar o conteúdo. Uma implementação de produção dedicaria mais atenção ao desempenho do que eu dediquei.
 

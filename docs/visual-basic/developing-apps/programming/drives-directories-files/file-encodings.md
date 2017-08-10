@@ -1,5 +1,5 @@
 ---
-title: "Codificações de Arquivo (Visual Basic) | Microsoft Docs"
+title: "Codificações de arquivo (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 97ca07e0351fe2f89c841e39087813a216557881
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d4a12d3c6098271dad0a52a9c6799303b9fe81d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-encodings-visual-basic"></a>Codificações de arquivo (Visual Basic)
@@ -63,3 +64,4 @@ As codificações de arquivo, também conhecidas como codificações de caracter
 ## <a name="see-also"></a>Consulte também  
  [Leitura de Arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
  [Gravando em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+

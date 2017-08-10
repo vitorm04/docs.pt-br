@@ -1,5 +1,5 @@
 ---
-title: "Operações de consulta básica em LINQ (C#) | Microsoft Docs"
+title: "Operações de consulta LINQ básica (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -44,14 +44,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 48624d608c3eb8d1118a2492454595d46025cb3e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5dbebb7950678a0f40ec774d23b42dfe89cff49
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basic-linq-query-operations-c"></a>Operações de consulta LINQ básica (C#)
-Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
+Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
   
  [Expressões de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
   
@@ -60,10 +61,10 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
  [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  Se já estiver familiarizado com uma linguagem de consulta como SQL ou XQuery, você poderá ignorar a maior parte deste tópico. Leia sobre a "cláusula `from`" na próxima seção para saber mais sobre a ordem das cláusulas em expressões de consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)].  
+>  Se já estiver familiarizado com uma linguagem de consulta como SQL ou XQuery, você poderá ignorar a maior parte deste tópico. Leia sobre a "cláusula `from`" na próxima seção para saber mais sobre a ordem das cláusulas em expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="obtaining-a-data-source"></a>Obtendo uma Fonte de Dados  
- Em um consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], a primeira etapa é especificar a fonte de dados. No C#, como na maioria das linguagens de programação, uma variável deve ser declarada antes que possa ser usada. Em um consulta [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], a cláusula `from` vem primeiro para introduzir a fonte de dados (`customers`) e a *variável de intervalo* (`cust`).  
+ Em um consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a primeira etapa é especificar a fonte de dados. No C#, como na maioria das linguagens de programação, uma variável deve ser declarada antes que possa ser usada. Em um consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a cláusula `from` vem primeiro para introduzir a fonte de dados (`customers`) e a *variável de intervalo* (`cust`).  
   
  [!code-cs[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
   
@@ -110,11 +111,11 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
  Para obter mais informações, consulte [Cláusula group](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Ingressando  
- Operações de junção criam associações entre sequências que não são modeladas explicitamente nas fontes de dados. Por exemplo, você pode executar uma junção para localizar todos os clientes e distribuidores que têm o mesmo local. Em [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], a cláusula `join` sempre funciona com coleções de objetos em vez de tabelas de banco de dados diretamente.  
+ Operações de junção criam associações entre sequências que não são modeladas explicitamente nas fontes de dados. Por exemplo, você pode executar uma junção para localizar todos os clientes e distribuidores que têm o mesmo local. Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a cláusula `join` sempre funciona com coleções de objetos em vez de tabelas de banco de dados diretamente.  
   
  [!code-cs[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
   
- Em [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)], você não precisa usar `join` com a mesma frequência que o faz no SQL, porque as chaves estrangeiras em [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] são representados no modelo do objeto como propriedades que mantêm uma coleção de itens. Por exemplo, um objeto `Customer` que contém uma coleção de objetos `Order`. Em vez de executar uma junção, você pode acessar os pedidos usando notação de ponto:  
+ Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa usar `join` com a mesma frequência que o faz no SQL, porque as chaves estrangeiras em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são representados no modelo do objeto como propriedades que mantêm uma coleção de itens. Por exemplo, um objeto `Customer` que contém uma coleção de objetos `Order`. Em vez de executar uma junção, você pode acessar os pedidos usando notação de ponto:  
   
 ```  
 from order in Customer.Orders...  
@@ -123,7 +124,7 @@ from order in Customer.Orders...
  Para obter mais informações, consulte [Cláusula join](../../../../csharp/language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Selecionando (Projeções)  
- A cláusula `select` produz os resultados da consulta e especifica a "forma" ou o tipo de cada elemento retornado. Por exemplo, você pode especificar se os resultados consistirão em objetos `Customer` completos, apenas um membro, um subconjunto de membros ou algum tipo de resultado completamente diferente com base em um cálculo ou na criação de um novo objeto. Quando a cláusula `select` produz algo diferente de uma cópia do elemento de origem, a operação é chamada de *projeção*. O uso de projeções para transformar dados é uma funcionalidade poderosa das expressões de consulta de [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]. Para obter mais informações, consulte [Transformações de dados com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) e [Cláusula select](../../../../csharp/language-reference/keywords/select-clause.md).  
+ A cláusula `select` produz os resultados da consulta e especifica a "forma" ou o tipo de cada elemento retornado. Por exemplo, você pode especificar se os resultados consistirão em objetos `Customer` completos, apenas um membro, um subconjunto de membros ou algum tipo de resultado completamente diferente com base em um cálculo ou na criação de um novo objeto. Quando a cláusula `select` produz algo diferente de uma cópia do elemento de origem, a operação é chamada de *projeção*. O uso de projeções para transformar dados é uma funcionalidade poderosa das expressões de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, consulte [Transformações de dados com LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) e [Cláusula select](../../../../csharp/language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao LINQ em C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
@@ -131,3 +132,4 @@ from order in Customer.Orders...
  [Passo a passo: escrevendo consultas em C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [Palavras-chave de Consulta (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)   
  [Tipos Anônimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+

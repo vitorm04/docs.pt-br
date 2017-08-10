@@ -1,5 +1,5 @@
 ---
-title: "Métodos (Guia de Programação em C#) | Microsoft Docs"
+title: "Métodos (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf320a26e697943416cd8f1065f1b4ca4afeac07
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guia de Programação em C#)
@@ -80,7 +80,18 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
  Para obter mais informações sobre como passar tipos de referência por referência e por valor, consulte [Passando parâmetros de tipo de referência](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) e [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md).  
   
 ## <a name="return-values"></a>Valores de Retorno  
- Os métodos podem retornar um valor para o chamador. Se o tipo de retorno, o tipo listado antes do nome do método, não for `void`, o método poderá retornar o valor usando a palavra-chave `return`. Uma instrução com a palavra-chave `return` seguida por uma variável que corresponde ao tipo de retorno retornará esse valor ao chamador do método. A palavra-chave `return` também interrompe a execução do método. Se o tipo de retorno for `void`, uma instrução `return` sem um valor ainda será útil para interromper a execução do método. Sem a palavra-chave `return`, a execução do método será interrompida quando chegar ao final do bloco de código. Métodos com um tipo de retorno não nulo devem usar a palavra-chave `return` para retornar um valor. Por exemplo, esses dois métodos usam a palavra-chave `return` para retornar inteiros:  
+Os métodos podem retornar um valor para o chamador. Se o tipo de retorno, o tipo listado antes do nome do método, não for `void`, o método poderá retornar o valor usando a palavra-chave `return`. Uma instrução com a palavra-chave `return` seguida por uma variável que corresponde ao tipo de retorno retornará esse valor ao chamador do método. 
+
+O valor pode ser retornado ao chamador por valor ou, do C# 7 em diante, [por referência](ref-returns.md). Valores são retornados ao chamador por referência se a `ref` palavra-chave é usada na assinatura do método e segue cada palavra-chave `return`. Por exemplo, a instrução de retorno e a assinatura de método a seguir indicam que o método retorna uma variável chamada `estDistance` por referência para o chamador.
+
+```csharp
+public ref double GetEstimatedDistance()
+{
+   return ref estDistance;
+}
+```
+
+A palavra-chave `return` também interrompe a execução do método. Se o tipo de retorno for `void`, uma instrução `return` sem um valor ainda será útil para interromper a execução do método. Sem a palavra-chave `return`, a execução do método será interrompida quando chegar ao final do bloco de código. Métodos com um tipo de retorno não nulo devem usar a palavra-chave `return` para retornar um valor. Por exemplo, esses dois métodos usam a palavra-chave `return` para retornar inteiros:  
   
  [!code-cs[csProgGuideObjects#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_6.cs)]  
   
@@ -91,8 +102,14 @@ Um método é um bloco de código que contém uma série de instruções. Um pro
  [!code-cs[csProgGuideObjects#46](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_8.cs)]  
   
  Usar uma variável local, nesse caso, `result`, para armazenar um valor é opcional. Isso pode ajudar a legibilidade do código ou pode ser necessário se você precisar armazenar o valor original do argumento para todo o escopo do método.  
-  
- Retornar uma matriz multidimensional de um método, M, que modifica o conteúdo da matriz não é necessário se a função de chamada tiver passado a matriz para M. Você pode retornar a matriz resultante de M para ter um fluxo de valores funcional ou um bom estilo, mas não é necessário.  O motivo pelo qual você não precisa retornar a matriz modificada é que o C# passa todos os tipos de referência por valor e o valor de uma referência de matriz é o ponteiro para a matriz. No método M, as alterações do conteúdo da matriz podem ser observadas por qualquer código que tiver uma referência à matriz, conforme mostrado no exemplo a seguir.  
+
+Para usar o valor retornado de um método por referência, você deve declarar uma variável [ref local](ref-returns.md#ref-locals) se você pretende modificar seu valor. Por exemplo, se o método `Planet.GetEstimatedDistance` retorna um valor <xref:System.Double> por referência, você pode defini-lo como uma variável ref local com código semelhante ao seguinte:
+
+```csharp
+ref int distance = plant 
+```
+
+Retornar uma matriz multidimensional de um método, `M`, que modifica o conteúdo da matriz, não é necessário se a função de chamada passou a matriz para `M`.  Você pode retornar a matriz resultante de `M` para um bom estilo ou fluxo funcional de valores, mas isso não é necessário porque o C# passa todos os tipos de referência por valor e o valor de uma referência de matriz é o ponteiro para a matriz. No método `M`, as alterações do conteúdo da matriz podem ser observadas por qualquer código que tiver uma referência à matriz, conforme mostrado no exemplo a seguir.  
   
 ```csharp  
 static void Main(string[] args)  

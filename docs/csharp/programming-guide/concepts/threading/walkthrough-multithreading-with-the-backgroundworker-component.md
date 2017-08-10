@@ -1,5 +1,5 @@
 ---
-title: "Instruções passo a passo: Multithreading com o componente BackgroundWorker (C#) | Microsoft Docs"
+title: "Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)
 Este passo a passo demonstra como criar um aplicativo Windows Forms com multithread que pesquisa um arquivo de texto para ocorrências de uma palavra. Ele demonstra:  
   
--   A definição de uma classe com um método que pode ser chamado pelo componente <xref:System.ComponentModel.BackgroundWorker>.  
+-   Defina uma classe com um método que possa ser chamado pelo componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   A manipulação de eventos gerados pelo componente <xref:System.ComponentModel.BackgroundWorker>.  
+-   Manipular eventos gerados pelo componente <xref:System.ComponentModel.BackgroundWorker>.  
   
--   A inicialização de um componente <xref:System.ComponentModel.BackgroundWorker> para executar um método.  
+-   Iniciar um componente <xref:System.ComponentModel.BackgroundWorker> para executar um método.  
   
--   A implementação de um botão `Cancel` que para o componente <xref:System.ComponentModel.BackgroundWorker>.  
+-   Implementar um botão `Cancel` que interrompe o componente <xref:System.ComponentModel.BackgroundWorker>.  
   
 ### <a name="to-create-the-user-interface"></a>Para criar a interface do usuário  
   
@@ -64,7 +65,7 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
   
 ### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>Para criar um componente BackgroundWorker e assinar seus eventos  
   
-1.  Adicione um componente <xref:System.ComponentModel.BackgroundWorker> da seção **Componentes** da **Caixa de Ferramentas** ao formulário. Ele será exibido na bandeja de componentes do formulário.  
+1.  Adicionar um componente <xref:System.ComponentModel.BackgroundWorker> da seção **Componentes** da **Caixa de ferramentas** ao formulário. Ele será exibido na bandeja de componentes do formulário.  
   
 2.  Defina as propriedades a seguir ao objeto backgroundWorker1.  
   
@@ -293,3 +294,4 @@ Este passo a passo demonstra como criar um aplicativo Windows Forms com multithr
 ## <a name="see-also"></a>Consulte também  
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [Como realizar e cancelar a assinatura de eventos](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+

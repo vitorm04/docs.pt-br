@@ -1,5 +1,5 @@
 ---
-title: "get (Referência de C#) | Microsoft Docs"
+title: "get (Referência de C#)"
 ms.date: 2017-03-10
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cdd3107a9e23e2f41a412390c8a723d4366e3952
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 88603864ae0a31a193cab211b8ce8061ec63c169
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-c-reference"></a>get (Referência de C#)
@@ -59,7 +59,6 @@ Para casos simples em que os acessadores `get` e `set` de uma propriedade não r
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)
- [Propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+ [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
+ [Palavras-chave C#](../../../csharp/language-reference/keywords/index.md) [propriedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
 

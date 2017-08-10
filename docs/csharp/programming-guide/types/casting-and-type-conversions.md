@@ -1,5 +1,5 @@
 ---
-title: "Conversões cast e conversões de tipo (Guia de programação em C#) | Microsoft Docs"
+title: "Conversões cast e conversões de tipo (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: d421f0115642efa73dbeb893dba912b96d5f4dc6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 20743c07c8e9c6b7ec24cf52a28bb9f451ba9df5
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversões cast e conversões de tipo (Guia de Programação em C#)
@@ -55,7 +55,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
   
 -   **Conversões definidas pelo usuário**: as conversões definidas pelo usuário são realizadas por métodos especiais que podem ser definidos para habilitar conversões explícitas e implícitas entre tipos personalizados que não têm uma relação de classe base/classe derivada. Para obter mais informações, consulte [Operadores de Conversão](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
   
--   **Conversões com classes auxiliares**: para converter entre tipos não compatíveis, como inteiros e objetos <xref:System.DateTime?displayProperty=fullName> ou cadeias de caracteres hexadecimais e matrizes de bytes, você pode usar a classe <xref:System.BitConverter?displayProperty=fullName>, a classe <xref:System.Convert?displayProperty=fullName> e os métodos `Parse` dos tipos numéricos internos, como <xref:System.Int32.Parse%2A?displayProperty=fullName>. Para obter mais informações, consulte [Como converter uma matriz de bytes em um int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Como converter uma cadeia de caracteres em um número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) e [Como converter entre cadeias de caracteres hexadecimais e tipos numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
+-   **Conversões com classes auxiliares**: para converter entre tipos não compatíveis, assim como inteiros e objetos <xref:System.DateTime?displayProperty=fullName>, ou cadeias de caracteres hexadecimais e matrizes de bytes, você pode usar a classe <xref:System.BitConverter?displayProperty=fullName>, a classe <xref:System.Convert?displayProperty=fullName> e os métodos `Parse` dos tipos numéricos internos, tais como <xref:System.Int32.Parse%2A?displayProperty=fullName>. Para obter mais informações, consulte [Como converter uma matriz de bytes em um int](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Como converter uma cadeia de caracteres em um número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) e [Como converter entre cadeias de caracteres hexadecimais e tipos numéricos](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
 ## <a name="implicit-conversions"></a>Conversões implícitas  
  Para tipos numéricos internos, uma conversão implícita poderá ser feita quando o valor a ser armazenado puder se ajustar à variável sem ser truncado ou arredondado. Por exemplo, uma variável do tipo [long](../../../csharp/language-reference/keywords/long.md) (inteiro de 8 bytes) pode armazenar qualquer valor que uma [int](../../../csharp/language-reference/keywords/int.md) (4 bytes em um computador de 32 bits) pode armazenar. No exemplo a seguir, o compilador converte implicitamente o valor à direita para um tipo `long` antes de atribuí-lo à `bigNum`.  
@@ -116,3 +116,4 @@ Giraffe g2 = (Giraffe) a;
  [Conversão de tipos generalizada](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)   
  [Conversão de tipos exportados](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)   
  [Como converter uma cadeia de caracteres em um número](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+

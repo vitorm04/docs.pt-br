@@ -1,5 +1,5 @@
 ---
-title: "into (Referência de C#) | Microsoft Docs"
+title: "into (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc66b297a709eea1682bc307d0cdc249bc661604
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef85caf02387432761e5ccbb7e0478b46d32f795
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="into-c-reference"></a>into (Referência de C#)
@@ -52,3 +53,4 @@ A palavra-chave contextual `into` pode ser usada para criar um identificador tem
  [Palavras-chave de Consulta (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
  [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [Cláusula group](../../../csharp/language-reference/keywords/group-clause.md)
+

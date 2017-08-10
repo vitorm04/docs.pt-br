@@ -1,5 +1,5 @@
 ---
-title: "Alterando onde My.Application.Log grava informações (Visual Basic) | Microsoft Docs"
+title: "Alterar o local em que My.Application.Log grava informações (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: alterando onde My.Application.Log grava informações (Visual Basic)
@@ -180,9 +180,9 @@ ms.lasthandoff: 03/13/2017
   
      Alguns tipos que você pode usar são:  
   
-    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que grava um log de arquivo.  
+    -   Um ouvinte <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>, que grava em um arquivo de log.  
   
-    -   Um ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>, que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
+    -   O ouvinte <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> que grava informações no log de eventos do computador especificado pelo parâmetro `initializeData`.  
   
     -   Os ouvintes <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> e <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName>, que gravam no arquivo especificado no parâmetro `initializeData`.  
   
@@ -215,3 +215,4 @@ ms.lasthandoff: 03/13/2017
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
  [Como gravar informações de evento em um arquivo de texto](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [Como gravar em um log de eventos do aplicativo](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+

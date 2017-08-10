@@ -1,5 +1,5 @@
 ---
-title: "Como acessar argumentos de linha de comando usando foreach (Guia de programação em C#) | Microsoft Docs"
+title: "Como acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2f0e3bce88beafd45a21773a7b26ffb2bb41215d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 766b5cd0879edec1dc409e07c4f62ee693fd615d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Como acessar argumentos de linha de comando usando foreach (Guia de Programação em C#)
 Outra abordagem para iterar na matriz é usar a instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md), conforme mostrado neste exemplo. A instrução `foreach` pode ser usada para iterar em uma matriz, em uma classe de coleção do .NET Framework ou em qualquer classe ou struct que implementa a interface <xref:System.Collections.IEnumerable>.  
   
 > [!NOTE]
->  Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer).  
+>  Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](/visualstudio/ide/reference/debug-page-project-designer).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo demonstra como imprimir os argumentos de linha de comando usando `foreach`.  
@@ -55,3 +56,4 @@ Outra abordagem para iterar na matriz é usar a instrução [foreach](../../../c
  [Main() e argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/index.md)   
  [Como exibir argumentos de linha de comando](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
  [Valores de retorno de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+

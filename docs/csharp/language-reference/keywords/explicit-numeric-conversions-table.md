@@ -1,5 +1,5 @@
 ---
-title: "Tabela de conversões numéricas explícitas (Referência de C#) | Microsoft Docs"
+title: "Tabela de conversões numéricas explícitas (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0f879d07ccc4dae365b611799d5dedcd13c36add
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabela de conversões numéricas explícitas (Referência de C#)
@@ -76,7 +77,7 @@ A conversão numérica explícita é usada para converter qualquer tipo numéric
   
 -   Ao converter `decimal` para `float` ou `double`, o valor `decimal` será arredondado para o valor `double` ou `float` mais próximo.  
   
- Para obter mais informações sobre conversões explícitas, consulte Explícito na Especificação da Linguagem C#. Para obter mais informações sobre como acessar a especificação, consulte [Especificação da Linguagem C#](../../../csharp/language-reference/language-specification.md).  
+ Para obter mais informações sobre conversões explícitas, consulte Explícito na Especificação da Linguagem C#. Para obter mais informações sobre como acessar a especificação, consulte [Especificação da Linguagem C#](../../../csharp/language-reference/language-specification/index.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../../csharp/language-reference/index.md)   
@@ -86,3 +87,4 @@ A conversão numérica explícita é usada para converter qualquer tipo numéric
  [Tabela de Tipos Integrais](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+

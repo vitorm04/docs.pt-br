@@ -1,5 +1,5 @@
 ---
-title: "Determinando onde My.Application.Log grava informações (Visual Basic) | Microsoft Docs"
+title: "Determinar o local em que My.Application.Log grava informações (Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 44e6dc6add43050897bbcae6eff3d2e58d027821
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Instruções passo a passo: determinando onde My.Application.Log grava informações (Visual Basic)
@@ -50,7 +50,7 @@ O objeto `My.Application.Log` pode gravar informações em vários ouvintes de l
   
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>Para determinar os ouvintes de My.Application.Log  
   
-1.  Localize o arquivo de configuração do assembly. Se você estiver desenvolvendo o assembly, pode acessar o app.config em [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] no **Gerenciador de Soluções**. Caso contrário, o nome do arquivo de configuração é o nome do assembly acrescentado com ".config" e ele está localizado no mesmo diretório do assembly.  
+1.  Localize o arquivo de configuração do assembly. Se você estiver desenvolvendo o assembly, pode acessar o app.config em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] no **Gerenciador de Soluções**. Caso contrário, o nome do arquivo de configuração é o nome do assembly acrescentado com ".config" e ele está localizado no mesmo diretório do assembly.  
   
     > [!NOTE]
     >  Nem todo assembly tem um arquivo de configuração.  
@@ -61,7 +61,7 @@ O objeto `My.Application.Log` pode gravar informações em vários ouvintes de l
   
      Se estas seções não existirem, o arquivo de configuração do computador poderá configurar os ouvintes de log `My.Application.Log`. As etapas a seguir descrevem como determinar o que define o arquivo de configuração do computador:  
   
-    1.  Localize o arquivo machine.config do computador. Normalmente, ele está localizado no diretório *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG*, em que `SystemRoot` é o diretório do sistema operacional e `frameworkVersion` é a versão do [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)].  
+    1.  Localize o arquivo machine.config do computador. Normalmente, ele está localizado no diretório *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG*, em que `SystemRoot` é o diretório do sistema operacional e `frameworkVersion` é a versão do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
          As configurações em machine.config podem ser substituídas por um arquivo de configuração de aplicativo.  
   
@@ -103,3 +103,4 @@ O objeto `My.Application.Log` pode gravar informações em vários ouvintes de l
  [Instruções passo a passo: alterando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [Eventos ETW no .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
  [Solução de problemas: ouvintes de Log](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+

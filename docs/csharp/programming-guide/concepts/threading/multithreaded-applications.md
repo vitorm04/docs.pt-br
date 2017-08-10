@@ -1,5 +1,5 @@
 ---
-title: Aplicativos multi-threaded (C# e Visual Basic) | Microsoft Docs
+title: Aplicativos com multithread (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a36fd71ff41eb219f4c4de36d4fa8da9b8ee179a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multithreaded-applications-c"></a>Aplicativos com multithread (C#)
@@ -76,21 +77,22 @@ newThread.Abort();
 |Propriedade|Valor|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Contém o valor `True` se um thread estiver ativo.|  
-|<xref:System.Threading.Thread.IsBackground%2A>|Obtém ou define um valor booliano que indica se um thread é ou deve ser um thread de segundo plano. Threads de segundo plano são como threads de primeiro plano, mas um thread de segundo plano não impede que um processo pare. Após todos os threads de primeiro plano que pertencem a um processo serem parados, o Common Language Runtime finaliza o processo chamando o método <xref:System.Threading.Thread.Abort%2A> em threads de segundo plano que ainda estão ativos.|  
+|<xref:System.Threading.Thread.IsBackground%2A>|Obtém ou define um valor booliano que indica se um thread é ou deve ser um thread de segundo plano. Threads de segundo plano são como threads de primeiro plano, mas um thread de segundo plano não impede que um processo pare. Após todos os threads de primeiro plano que pertencem a um processo serem parados, o Common Language Runtime finaliza o processo chamando o método <xref:System.Threading.Thread.Abort%2A> em threads em segundo plano que ainda estão ativos.|  
 |<xref:System.Threading.Thread.Name%2A>|Obtém ou define o nome de um thread. Usado com mais frequência para descobrir threads individuais quando você depura.|  
 |<xref:System.Threading.Thread.Priority%2A>|Obtém ou define um valor usado pelo sistema operacional para priorizar agendamento de threads.|  
 |<xref:System.Threading.Thread.ThreadState%2A>|Contém um valor que descreve o estado ou estados de um thread.|  
   
 ## <a name="thread-priorities"></a>Prioridades do thread  
- Cada thread tem uma propriedade de prioridade que determina quanto tempo do processador ele tem para ser executado. O sistema operacional aloca frações de tempo maiores para segmentos de maior prioridade e frações de tempo mais curtas para segmentos de menor prioridade. Novos threads são criados com o valor de `Normal`, mas você pode alterar a propriedade <xref:System.Threading.Thread.Priority%2A> para qualquer valor na enumeração <xref:System.Threading.ThreadPriority>.  
+ Cada thread tem uma propriedade de prioridade que determina quanto tempo do processador ele tem para ser executado. O sistema operacional aloca frações de tempo maiores para segmentos de maior prioridade e frações de tempo mais curtas para segmentos de menor prioridade. Novos segmentos são criados com o valor de `Normal`, mas você pode alterar a propriedade <xref:System.Threading.Thread.Priority%2A> para qualquer valor na enumeração <xref:System.Threading.ThreadPriority>.  
   
- Consulte <xref:System.Threading.ThreadPriority> para obter uma descrição detalhada das várias prioridades do thread.  
+ Consulte <xref:System.Threading.ThreadPriority> para obter uma descrição detalhada sobre as várias prioridades de thread.  
   
 ## <a name="foreground-and-background-threads"></a>Threads em primeiro plano e em segundo plano  
- Um *thread de primeiro plano* é executado indefinidamente, enquanto um *thread de segundo plano* para assim que o último thread do primeiro plano parar. Você pode usar a propriedade <xref:System.Threading.Thread.IsBackground%2A> para determinar ou alterar o status do segundo plano de um thread.  
+ Um *thread de primeiro plano* é executado indefinidamente, enquanto um *thread de segundo plano* para assim que o último thread do primeiro plano parar. Você pode usar a propriedade <xref:System.Threading.Thread.IsBackground%2A> para determinar ou alterar o status em segundo plano de um thread.  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Threading.Thread>   
  [Sincronização de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
  [Parâmetros e valores retornados para procedimentos multi-threaded (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
  [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
+
