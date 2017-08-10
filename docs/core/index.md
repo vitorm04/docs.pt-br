@@ -25,7 +25,7 @@ O .NET Core é uma plataforma de desenvolvimento de uso geral mantida pela Micro
 
 As seguintes características são as que melhor definem o .NET Core:
 
-- **Distribuiço flexível:** pode ser incluído no seu aplicativo ou instalado lado a lado no usuário ou em todos os computadores.
+- **Distribuição flexível:** pode ser incluído no seu aplicativo ou instalado lado a lado no usuário ou em todos os computadores.
 - **Multiplataforma:** executa em Windows, macOS e Linux e pode ser portado para outros sistemas operacionais. Os [sistemas operacionais com suporte](https://github.com/dotnet/core/blob/master/roadmap.md), CPUs e cenários de aplicação serão ampliados com os passar do tempo, fornecidos pela Microsoft, outras empresas e outros indivíduos.
 - **Ferramentas de linha de comando:** todos os cenários de produto podem ser exercidos na linha de comando. 
 - **Compatibilidade:** o .NET Core é compatível com .NET Framework, Xamarin e Mono por meio do [.NET Standard](../standard/net-standard.md).
@@ -38,7 +38,7 @@ O .NET Core é composto pelas seguintes partes:
 
 - Um [_runtime_ .NET](https://github.com/dotnet/coreclr) que fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos. 
 - Um conjunto de [bibliotecas de _framework_](https://github.com/dotnet/corefx) que fornece tipos de dados primitivos, tipos de composição de aplicativos e utilitários essenciais. 
-- Um [conjunto de ferramentas de SDK](https://github.com/dotnet/cli) e [compiladores de linguagem](https://github.com/dotnet/roslyn) que possibilitam ama experiência de desenvolvedor básica, disponíveis no [SDK do .NET Core](sdk.md).
+- Um [conjunto de ferramentas de SDK](https://github.com/dotnet/cli) e [compiladores de linguagem](https://github.com/dotnet/roslyn) que possibilitam uma experiência de desenvolvedor básica, disponíveis no [SDK do .NET Core](sdk.md).
 - O host de aplicativo “dotnet”, que é usado para iniciar aplicativos .NET Core. Ele seleciona e hospeda o _runtime_, fornece políticas de carregamento de _assembly_ e inicia o aplicativo. O mesmo host também é usado para abrir as ferramentas de SDK da mesma maneira.
 
 ### <a name="languages"></a>Linguagens
@@ -111,7 +111,7 @@ O produto é dividido em várias partes, permitindo que essas sejam adaptadas pa
 
 As pessoas geralmente perguntam como o .NET Core é implementado para dar suporte a vários sistemas operacionais. Eles normalmente perguntam se há implementações separadas ou se a [compilação condicional](https://en.wikipedia.org/wiki/Conditional_compilation) é usada. Ambos, com uma forte tendência para compilação condicional.
 
-Você pode ver no gráfico abaixo que a maior parte do [CoreFX](https://github.com/dotnet/corefx) código neutro compartilhado entre todas as plataformas. O código neutro com relação à plataforma pode ser implementado como um único assembly portável usado em todas as plataformas.
+Você pode ver no gráfico abaixo que a maior parte do [CoreFX](https://github.com/dotnet/corefx) é código neutro compartilhado entre todas as plataformas. O código neutro com relação à plataforma pode ser implementado como um único assembly portável usado em todas as plataformas.
 
 ![CoreFX: Linhas de código por plataforma](../images/corefx-platforms-loc.png)
 
