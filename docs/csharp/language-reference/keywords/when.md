@@ -62,7 +62,7 @@ O exemplo a seguir usa a palavra-chave `when` para executar os manipuladores con
 Iniciando com 7, os rótulos `case` não precisam mais ser mutuamente exclusivos e a ordem na qual os rótulos `case` são exibidos em uma instrução `switch` pode determinar qual bloco switch é executado. A palavra-chave `when` pode ser usada para especificar uma condição de filtro que faz com que seu rótulo case associado seja verdadeiro somente se a condição de filtro também for verdadeira. A sintaxe é:
 
 ```csharp
-case (expr) where (when-condition):
+case (expr) when (when-condition):
 ```
 em que *expr* é um padrão de constante ou padrão de tipo que é comparado com a expressão de correspondência e *when-condition* é qualquer expressão booliana. 
 
