@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ Este artigo pressupõe que você:
 Você também deve se familiarizar com o conteúdo dos tópicos a seguir:
 
 [.NET Standard](~/docs/standard/net-standard.md)   
-Este tópico descreve a especificação formal de APIs do .NET que devem estar disponíveis em todos os tempos de execução do .NET.
+Este tópico descreve a especificação formal de APIs do .NET que devem estar disponíveis em todas as implementações do .NET.
 
 [Pacotes, metapacotes e estruturas](~/docs/core/packages.md)   
-Este artigo discute como o .NET Core define e usa pacotes, e como os pacotes dão suporte ao código em execução em vários tempos de execução do .NET.
+Este artigo discute como o .NET Core define e usa pacotes, e como os pacotes dão suporte ao código em execução em várias implementações do .NET.
 
 [Desenvolver bibliotecas com as ferramentas de plataforma cruzada](~/docs/core/tutorials/libraries.md)   
 Este tópico explica como escrever bibliotecas para .NET usando ferramentas de CLI de plataforma cruzada.

@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 
 O .NET Core é uma plataforma composta por pacotes NuGet. Algumas experiências de produtos aproveitam melhor a definição refinada de pacotes, enquanto para outros a alta granularidade é melhor. Para acomodar esse dualidade, o produto é distribuído como um conjunto refinado de pacotes, sendo então descrito como blocos mais volumosos com um tipo de pacote chamado informalmente de “metapacote”.
 
-Cada um dos pacotes .NET Core dá suporte à execução de vários tempos de execução .NET, representados como estruturas. Algumas dessas estruturas são tradicionais, como o `net46`, que representa o .NET Framework. Outro conjunto são as novas estruturas que podem ser consideradas como "estruturas baseadas em pacote", que estabelecem um novo modelo para definir estruturas. Essas estruturas baseadas em pacote são totalmente formadas e definidas como pacotes, criando uma forte relação entre pacotes e estruturas.
+Cada um dos pacotes .NET Core dá suporte à execução de várias implementações do .NET, representadas como estruturas. Algumas dessas estruturas são tradicionais, como o `net46`, que representa o .NET Framework. Outro conjunto são as novas estruturas que podem ser consideradas como "estruturas baseadas em pacote", que estabelecem um novo modelo para definir estruturas. Essas estruturas baseadas em pacote são totalmente formadas e definidas como pacotes, criando uma forte relação entre pacotes e estruturas.
 
 ## <a name="packages"></a>Pacotes
 
