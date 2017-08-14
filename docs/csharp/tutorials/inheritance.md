@@ -221,7 +221,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
   `Title` é uma propriedade <xref:System.String> somente leitura cujo valor é fornecido pela chamada do construtor `Publication`, que armazena o valor em um campo privado chamado `pubTitle`.
 
-  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. O lançamento deve ser de um número positivo ou de um <xref:System.ArgumentOutOfRangeException>.
+  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. A propriedade Pages deve ser um número positivo pois do contrário será gerada uma exceção do tipo <xref:System.ArgumentOutOfRangeException>.
 
 - Membros relacionados ao publicador
 
