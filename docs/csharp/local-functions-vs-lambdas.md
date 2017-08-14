@@ -1,6 +1,6 @@
 ---
 title: "Funções locais vs. expressões lambda"
-description: "Por que as funções locais podem ser uma escolha melhor que as expressões lambda"
+description: "Saiba porque as funções locais podem ser uma escolha melhor que as expressões lambda."
 keywords: "C#, .NET, .NET Core, Últimos Recursos, Novidades, funções locais, expressões lambda"
 author: BillWagner
 ms.author: wiwagn
@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 315d4c5ee1f16c4fe59599c3a37437b112b784f6
+ms.sourcegitcommit: a7eda5cde2998bfb2b6a609a4ffc90019ab57a7c
+ms.openlocfilehash: 4cace9b5549b2d8c08c993e7c22e5f1b5fc8a9c3
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 

@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- seu primeiro programa (Guia de Programação em C#)
@@ -123,11 +123,11 @@ O procedimento a seguir cria uma versão de C# do programa tradicional "Hello Wo
   
 2.  Realize uma das etapas a seguir para abrir uma janela de prompt de comando:  
   
-    -   No Windows 8, na tela **Inicial**, pesquise `Developer Command Prompt` e, em seguida, toque ou escolha **Prompt de Comando do Desenvolvedor para VS2012**.  
+    -   No Windows 10, no menu **Iniciar**, pesquise por `Developer Command Prompt` e, em seguida, toque ou escolha **Prompt de Comando do Desenvolvedor para VS 2017**.  
   
          Uma janela do Prompt de Comando do Desenvolvedor será exibida.  
   
-    -   No Windows 7, abra o menu **Iniciar**, expanda a pasta para a versão atual do Visual Studio, abra o menu de atalho para **Ferramentas do Visual Studio** e, em seguida, escolha **Prompt de Comando do Desenvolvedor para VS2012**.  
+    -   No Windows 7, abra o menu **Iniciar**, expanda a pasta para a versão atual do Visual Studio, abra o menu de atalho para **Ferramentas do Visual Studio** e, em seguida, escolha **Prompt de Comando do Desenvolvedor para VS 2017**.  
   
          Uma janela do Prompt de Comando do Desenvolvedor será exibida.  
   

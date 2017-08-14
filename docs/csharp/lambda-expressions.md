@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -58,7 +58,7 @@ Normalmente, o compilador usa a inferência de tipos na determinação de tipos 
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-Observe no exemplo anterior que o corpo de uma expressão lambda pode consistir de uma chamada de método. No entanto, se você estiver criando árvores de expressão que serão avaliadas fora do .NET Framework, como no SQL Server ou no EF (Entity Framework), você deverá evitar o uso de chamadas de método em expressões lambda, pois os métodos podem não ter significado fora do contexto do tempo de execução do .NET. Se você optar por usar chamadas de método nesse caso, certifique-se de testá-las cuidadosamente para garantir que as chamadas de método possam ser resolvidas com êxito.
+Observe no exemplo anterior que o corpo de uma expressão lambda pode consistir de uma chamada de método. No entanto, se você estiver criando árvores de expressão que serão avaliadas fora do .NET Framework, como no SQL Server ou no EF (Entity Framework), você deverá evitar o uso de chamadas de método em expressões lambda, pois os métodos podem não ter significado fora do contexto da implementação do .NET. Se você optar por usar chamadas de método nesse caso, certifique-se de testá-las cuidadosamente para garantir que as chamadas de método possam ser resolvidas com êxito.
 
 ## <a name="statement-lambdas"></a>Lambdas de instrução ##
 

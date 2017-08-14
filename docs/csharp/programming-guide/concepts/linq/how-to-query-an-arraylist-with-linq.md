@@ -20,14 +20,14 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5aece8a49762898f4ea3af41a9290daa22bfe96d
+ms.sourcegitcommit: 77d7bbaa99f7b8becf53244211ad480736d9ffab
+ms.openlocfilehash: 3ef12d014715237fe752038466be85c4b47437eb
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Como consultar um ArrayList com LINQ (C#)
-Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver uma <xref:System.Collections.ArrayList> dos objetos `Student`, sua [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md) deverá ter uma aparência semelhante a essa:  
+Ao usar a LINQ para consultar coleções <xref:System.Collections.IEnumerable> não genéricas como <xref:System.Collections.ArrayList>, você deve declarar explicitamente o tipo da variável de intervalo para refletir o tipo específico dos objetos na coleção. Por exemplo, se você tiver um <xref:System.Collections.ArrayList> de objetos `Student`, sua [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md) deverá ter uma aparência semelhante a esta:  
   
 ```  
 var query = from Student s in arrList  
