@@ -1,19 +1,20 @@
 ---
 title: Instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8
-description: Saiba como instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8
+description: Saiba como instalar o .NET Framework 3.5 no Windows 10, no Windows 8.1 e no Windows 8.
 author: rlander
+ms.author: mairaw
 keywords: ".Net Framework, Instalação"
-ms.date: 04/20/2017
+ms.date: 05/26/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 64ba9cb408e565b20a001382c3b39a41602b6e55
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -33,7 +34,7 @@ Você pode habilitar o .NET Framework 3.5 por meio do Painel de Controle do Wind
 
 1. Pressione a tecla Windows ![logotipo do Windows](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg) no teclado, digite “Recursos do Windows” e pressione Enter. A caixa de diálogo **Ativar ou desativar recursos do Windows** é exibida.
 
-2. Marque a caixa de seleção **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)**, selecione OK e reinicialize o computador, se isso for solicitado.
+2. Marque a caixa de seleção **.NET Framework 3.5 (inclui o .NET 2.0 e 3.0)**, selecione **OK** e reinicialize o computador, se isso for solicitado.
 
    ![Instalar o .NET com o painel de controle](./media/dotnet-control-panel.png)
 

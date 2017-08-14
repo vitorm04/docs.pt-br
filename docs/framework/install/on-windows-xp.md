@@ -1,19 +1,18 @@
 ---
 title: Instalar o .NET Framework no Windows XP
-description: Saiba como instalar o .NET Framework no Windows XP
+description: Saiba como instalar o .NET Framework no Windows XP.
 author: rlander
+ms.author: mairaw
 keywords: ".Net Framework, Instalação"
-ms.date: 03/28/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.technology: vs-ide-deployment
 ms.devlang: dotnet
-ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7a4bf14ad57495c5d6cd2ba40e2bd63b91551e33
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: fe9d044efae87f212c620b9fa8c02221ca475d71
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -28,7 +27,7 @@ Talvez você precise do .NET Framework para executar um aplicativo no Windows XP
 
 Você não pode instalar o .NET Framework 4.5 ou posterior no Windows XP. Em vez disso, você deve atualizar para uma versão posterior do Windows para usar uma versão posterior do .NET Framework.
 
-O .NET Framework 4.6.2 está incluído na [Atualização de Aniversário do Windows 10](https://www.microsoft.com/software-download/windows10).
+O .NET Framework 4.7 está incluído na [Atualização do Windows 10 para Criadores](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
