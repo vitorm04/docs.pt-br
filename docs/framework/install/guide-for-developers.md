@@ -1,7 +1,7 @@
 ---
 title: Instalar o .NET Framework para desenvolvedores
 ms.custom: 
-ms.date: 04/28/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da0e9bd789068d94feda3c2a6ab0d35606d423a1
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 844b3e40b816d324ca4ba22d6884be5a7e3a2ec1
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 
-O .NET é parte integrante de vários aplicativos em execução no Windows e fornece funcionalidades comuns para que esses aplicativos sejam executados. Para os desenvolvedores, o .NET Framework fornece um modelo de programação abrangente e consistente para compilar aplicativos que possuem experiências de usuário visualmente impressionantes e uma comunicação direta e segura.  
+O .NET é parte integrante de vários aplicativos em execução no Windows e fornece funcionalidades comuns para que esses aplicativos sejam executados. Para os desenvolvedores, o .NET Framework fornece um modelo de programação abrangente e consistente para compilar aplicativos que oferecem experiências de usuário visualmente impressionantes e uma comunicação direta e segura.  
 
 Esse artigo fornece links para instalação do .NET Framework 4.5, e seus lançamentos pontuais (4.5.1, 4.5.2), do [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] e seus lançamentos pontuais (4.6.1, 4.6.2) e o .NET Framework 4.7 no computador. Se você for um desenvolvedor, também poderá usar esses links para baixar e redistribuir o .NET Framework com seus aplicativos.
 

@@ -1,6 +1,6 @@
 ---
 title: "Introdução ao Visual Basic"
-ms.date: 2017-08-07
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -30,13 +30,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 168d37a4e4ada31b09ea68b6e0ef5eb41fb1e55f
-ms.openlocfilehash: 5b8a13e850369affe203440c79496047b24053f0
+ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
+ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/11/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Introdução ao Visual Basic
+# <a name="get-started-with-visual-basic"></a>Introdução ao Visual Basic
 Esta seção da documentação ajuda você a começar o desenvolvimento de aplicativos do Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -54,7 +54,8 @@ Fornece uma lista de sites e grupos de notícias que podem ajudá-lo a encontrar
  [Obtenha o Visual Basic](https://www.visualstudio.com/downloads/)  
  Fornece links de download para versões do Visual Studio que incluem o suporte ao Visual Basic, incluindo versões gratuitas.  
 
- [Fundamentos do Visual Basic para principiantes](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Curso da Microsoft Virtual Academy que ensina os fundamentos de programação em Visual Basic.
+ [Fundamentos do Visual Basic para principiantes](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ Curso da Microsoft Virtual Academy que ensina os fundamentos de programação em Visual Basic.
 
  [Programação Orientada a Objeto](../programming-guide/concepts/object-oriented-programming.md)  
  Fornece links para páginas que apresentam a programação orientada a objeto e descrevem como criar seus próprios objetos e usar objetos para simplificar a codificação.  

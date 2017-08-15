@@ -12,16 +12,13 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3004d84e9a87fcf86737b18fe58bb200eefd33b
+ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
+ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
-
-## <a name="introduction"></a>Introdução
 
 Este tutorial apresenta a herança em C#. Herança é um recurso das linguagens de programação orientadas a objeto que permite a definição de uma classe base que, por sua vez, fornece uma funcionalidade específica (dados e comportamento), e a definição de classes derivadas que herdam ou substituem essa funcionalidade.
 
@@ -122,13 +119,13 @@ Para ver o que significa herança implícita, vamos definir uma nova classe, `Si
 
 [!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-Podemos usar reflexão (o que nos permite inspecionar os metadados de um tipo para obter informações sobre o tipo) para obter uma lista dos membros que pertencem ao tipo `SimpleClass`. Embora não tenhamos definido membros em nossa classe `SimpleClass`, a saída do exemplo indica que ele tem nove membros na verdade. Um deles é um construtor sem parâmetros (ou padrão) fornecido automaticamente para o tipo `SimpleClass` pelo compilador em C#. Os membros sete e oito são membros de <xref:System.Object>, o tipo do qual todas as classes e interfaces no sistema do tipo .NET herdam implicitamente.
+Podemos usar reflexão (o que nos permite inspecionar os metadados de um tipo para obter informações sobre o tipo) para obter uma lista dos membros que pertencem ao tipo `SimpleClass`. Embora não tenhamos definido membros em nossa classe `SimpleClass`, a saída do exemplo indica que ele tem nove membros na verdade. Um deles é um construtor sem parâmetros (ou padrão) fornecido automaticamente para o tipo `SimpleClass` pelo compilador em C#. Os oito são membros do <xref:System.Object>, o tipo do qual todas as classes e interfaces no sistema do tipo .NET herdam implicitamente.
 
 [!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 A herança implícita da classe <xref:System.Object> torna esses métodos disponíveis para a classe `SimpleClass`:
 
-- O método `ToString` público, que converte um objeto `SimpleClass` em sua representação de cadeia de caracteres, o nome de tipo totalmente qualificado. Nesse caso, o método `ToString` retorna a cadeia de caracteres "SimpleClass".
+- O método `ToString` público, que converte um objeto `SimpleClass` em sua representação de cadeia de caracteres, retorna o nome de tipo totalmente qualificado. Nesse caso, o método `ToString` retorna a cadeia de caracteres "SimpleClass".
 
 - Três métodos de teste de igualdade de dois objetos: o método `Equals(Object)` da instância pública, o método `Equals(Object, Object)` do público estático e o método `ReferenceEquals(Object, Object)` de público estático. Por padrão, esses métodos testam a igualdade de referência; ou seja, para que seja iguais, duas variáveis de objeto devem fazer referência ao mesmo objeto.
 
@@ -160,7 +157,7 @@ Normalmente, a herança é usada para expressar um relacionamento "é um(a)" ent
 > [!NOTE]
 > Uma classe ou struct pode implementar uma ou mais interfaces. Embora a implementação da interface seja apresentada geralmente como uma alternativa para herança única, ou como uma forma de usar a herança com structs, ela tem como objetivo expressar um relacionamento diferente (um relacionamento "pode fazer") entre uma interface e seu tipo de implementação em comparação com a herança. Uma interface define um subconjunto de funcionalidades (como a capacidade de testar a igualdade, comparar ou classificar objetos ou dar suporte à formatação e análise sensível à cultura) que disponibiliza para seus tipos de implementação.
 
-Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Moke`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. Nossa classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método <xref:System.Object.ToString%2A?displayProperty=fullName> para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
+Observe que "é um(a)" também expressa o relacionamento entre um tipo e uma instanciação específica desse tipo. No exemplo a seguir, `Automobile` é uma classe que tem três propriedades somente leitura exclusivas: `Make`, o fabricante do automóvel; `Model`, o tipo de automóvel; e `Year`, o ano de fabricação. Nossa classe `Automobile` também tem um construtor cujos argumentos são atribuídos aos valores de propriedade. Ela também substitui o método <xref:System.Object.ToString%2A?displayProperty=fullName> para produzir uma cadeia de caracteres que identifica exclusivamente a instância `Automobile` em vez da classe `Automobile`.
 
 [!code-csharp[Herança](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 

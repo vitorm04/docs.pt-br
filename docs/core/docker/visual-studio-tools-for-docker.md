@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -33,7 +33,7 @@ Instale o [Microsoft Visual Studio 2017](https://www.visualstudio.com/) com a ca
 
 É uma configuração necessária para instalação de **[Unidades Compartilhadas](https://docs.docker.com/docker-for-windows/#shared-drives)** no Docker para Windows. A configuração é necessária para o mapeamento do volume e suporte à depuração.
 
-Clique com botão direito do mouse no ícone do Docker na Bandeja do Sistema e selecione as Unidades Compartilhadas.
+Clique com o botão direito do mouse no ícone do Docker na Bandeja do Sistema, clique em **Configurações** e selecione **Unidades Compartilhadas**. Selecione a unidade em que o Docker armazenará seus arquivos e faça as alterações.
 
 ![Unidades Compartilhadas](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
@@ -48,6 +48,8 @@ Menu Projeto
 Projeto Menu de Contexto
 
 ![Clique com o botão direito do mouse em Adicionar Suporte ao Docker](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+
+Quando você adiciona suporte do Docker ao seu projeto, é possível escolher entre contêineres do Windows ou Linux. (O host do Docker deve estar executando o mesmo tipo de contêiner. Se for necessário, altere o tipo de contêiner na instância do Docker em execução, clique com o botão direito do mouse no ícone do **Docker** na Bandeja do Sistema e escolha **Alterar para contêineres do Windows** ou **Alterar para contêineres do Linux**.) 
 
 Os seguintes arquivos são adicionados ao projeto.
 

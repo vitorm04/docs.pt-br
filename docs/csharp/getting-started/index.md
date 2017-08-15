@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 923875aa48fb78c63e8e3e9e17095ff424c8e49d
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="get-started-with-c"></a>Introdução ao C# #
@@ -23,15 +23,15 @@ Esta seção fornece breves tutoriais simples que permitem que você compile rap
 
 Os seguintes tópicos estão disponíveis:
 
-* [Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017](with-visual-studio.md)
+* [Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
    Visual Studio 2017, a versão mais recente do Visual Studio, permite codificar, compilar, executar, depurar, analisar e publicar seus aplicativos em um ambiente de desenvolvimento integrado para o Windows.
 
-   O tópico permite criar e executar um aplicativo Olá, Mundo simples e, em seguida, modificá-lo para executar um aplicativo Olá, Mundo ligeiramente mais interativo. Quando terminar de compilar e executar seu aplicativo, você também poderá aprender como [depurá-lo](debugging-with-visual-studio.md) e como [publicá-lo](publishing-with-visual-studio.md) para que ele possa ser executado em qualquer plataforma com suporte do .NET Core.
+   O tópico permite criar e executar um aplicativo Olá, Mundo simples e, em seguida, modificá-lo para executar um aplicativo Olá, Mundo ligeiramente mais interativo. Quando terminar de compilar e executar seu aplicativo, você também poderá aprender como [depurá-lo](../../core/tutorials/debugging-with-visual-studio.md) e como [publicá-lo](../../core/tutorials/publishing-with-visual-studio.md) para que ele possa ser executado em qualquer plataforma com suporte do .NET Core.
 
-* [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md)
+* [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 
-   Uma biblioteca de classes permite definir tipos e membros de tipo que podem ser chamados de outro aplicativo. Este tópico permite criar uma biblioteca de classes com um único método que determina se uma cadeia de caracteres começa com um caractere maiúsculo. Após criar a biblioteca, você pode desenvolver um [teste de unidade](testing-library-with-visual-studio.md) para garantir que ela funciona conforme o esperado e, em seguida, você pode torná-la disponível para [aplicativos que desejam consumi-la](consuming-library-with-visual-studio.md).
+   Uma biblioteca de classes permite definir tipos e membros de tipo que podem ser chamados de outro aplicativo. Este tópico permite criar uma biblioteca de classes com um único método que determina se uma cadeia de caracteres começa com um caractere maiúsculo. Após criar a biblioteca, você pode desenvolver um [teste de unidade](../../core/tutorials/testing-library-with-visual-studio.md) para garantir que ela funciona conforme o esperado e, em seguida, você pode torná-la disponível para [aplicativos que desejam consumi-la](../../core/tutorials/consuming-library-with-visual-studio.md).
 
 - [Introdução ao Código do Visual Studio e C#](../../core/tutorials/with-visual-studio-code.md)
 
