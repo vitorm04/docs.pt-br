@@ -1,0 +1,129 @@
+
+
+# [Operadores do C#](index.md)
+
+
+## [Operador []](index-operator.md)
+
+
+## [Operador ()](invocation-operator.md)
+
+
+## [. Operador .](member-access-operator.md)
+
+
+## [Operador ::](namespace-alias-qualifer.md)
+
+
+## [Operador +](addition-operator.md)
+
+
+## [Operador -](subtraction-operator.md)
+
+
+## [Operador *](multiplication-operator.md)
+
+
+## [Operador /](division-operator.md)
+
+
+## [Operador %](modulus-operator.md)
+
+
+## [Operador &](and-operator.md)
+
+
+## [Operador |](or-operator.md)
+
+
+## [Operador ^](xor-operator.md)
+
+
+## [Operador !](logical-negation-operator.md)
+
+
+## [Operador ~](bitwise-complement-operator.md)
+
+
+## [Operador =](assignment-operator.md)
+
+
+## [Operador <](less-than-operator.md)
+
+
+## [Operador >](greater-than-operator.md)
+
+
+## [Operador ?:](conditional-operator.md)
+
+
+## [Operador ++](increment-operator.md)
+
+
+## [Operador --](decrement-operator.md)
+
+
+## [Operador &&](conditional-and-operator.md)
+
+
+## [Operador ||](conditional-or-operator.md)
+
+
+## [Operador <<](left-shift-operator.md)
+
+
+## [Operador >>](right-shift-operator.md)
+
+
+## [Operador ==](equality-comparison-operator.md)
+
+
+## [Operador !=](not-equal-operator.md)
+
+
+## [Operador <=](less-than-equal-operator.md)
+
+
+## [Operador >=](greater-than-equal-operator.md)
+
+
+## [Operador +=](addition-assignment-operator.md)
+
+
+## [Operador -=](subtraction-assignment-operator.md)
+
+
+## [Operador *=](multiplication-assignment-operator.md)
+
+
+## [Operador /=](division-assignment-operator.md)
+
+
+## [Operador %=](modulus-assignment-operator.md)
+
+
+## [Operador &=](and-assignment-operator.md)
+
+
+## [Operador |=](or-assignment-operator.md)
+
+
+## [Operador ^=](xor-assignment-operator.md)
+
+
+## [Operador <<=](left-shift-assignment-operator.md)
+
+
+## [Operador >>=](right-shift-assignment-operator.md)
+
+
+## [Operador ->](dereference-operator.md)
+
+
+## [Operador ??](null-conditional-operator.md)
+
+
+## [Operador =>](lambda-operator.md)
+
+
+## [Operadores condicionais nulos](null-conditional-operators.md)

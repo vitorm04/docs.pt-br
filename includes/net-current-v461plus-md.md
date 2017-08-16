@@ -1,0 +1,1 @@
+Disponível desde o 4.6.1

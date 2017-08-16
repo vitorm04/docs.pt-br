@@ -1,0 +1,1 @@
+funcionalidades de hospedagem do Windows Server AppFabric

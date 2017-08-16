@@ -1,0 +1,1 @@
+Você acessa indiretamente cada evento e propriedade pública deste tipo pela resolução de uma propriedade de dependência correspondente. Essa propriedade de dependência é o campo estático público chamado **XProperty** ou **XEvent**, em que X é a propriedade correspondente.

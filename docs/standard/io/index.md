@@ -1,0 +1,186 @@
+---
+title: E/S de arquivo e fluxo | Microsoft Docs
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- IO namespace
+- files, I/O
+- System.IO namespace
+- I/O [.NET Framework]
+- streams, I/O
+- data streams, I/O
+ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
+caps.latest.revision: 33
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/08/2017
+
+---
+# <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
+E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados de ou para uma mídia de armazenamento. No .NET Framework, os namespaces [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) contêm tipos que permitem a leitura e a gravação, de forma síncrona e assíncrona, em fluxos de dados e arquivos. Esses namespaces também contêm tipos que executam compactação e descompactação em arquivos e tipos que possibilitam a comunicação por meio de pipes e portas seriais.  
+  
+ Um arquivo é uma coleção ordenada e nomeada de bytes com armazenamento persistente. Ao trabalhar com arquivos, você trabalha com caminhos de diretórios, armazenamento em disco e nomes de arquivos e diretórios. Por outro lado, um fluxo é uma sequência de bytes que você pode usar para ler e gravar em um repositório, o qual pode ser uma entre vários tipos de mídia de armazenamento (por exemplo, discos ou memória). Assim como há vários repositórios diferentes de discos, há vários tipos diferentes de fluxos diferentes de fluxos de arquivos, como os fluxos de rede, memória e pipes.  
+  
+## <a name="files-and-directories"></a>Arquivos e Diretórios  
+ Você pode usar os tipos no namespace <xref:System.IO?displayProperty=fullName> para interagir com arquivos e diretórios. Por exemplo, você pode obter e definir propriedades para arquivos e diretórios e recuperar coleções de arquivos e diretórios com base em critérios de pesquisa.  
+  
+ Aqui estão algumas classes de arquivos e diretórios comumente usadas:  
+  
+-   <xref:System.IO.File> – fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.  
+  
+-   <xref:System.IO.FileInfo> – fornece métodos de instância para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.  
+  
+-   <xref:System.IO.Directory> – fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.  
+  
+-   <xref:System.IO.DirectoryInfo> – fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.  
+  
+-   <xref:System.IO.Path> – fornece métodos e propriedades para processar cadeias de caracteres de diretório em plataformas cruzadas.  
+  
+ Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidos pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> para E/S de arquivo.  
+  
+ Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+  
+## <a name="streams"></a>Fluxos  
+ A classe base abstrata <xref:System.IO.Stream> dá suporte a bytes de leitura e gravação. Todas as classes que representam fluxos são herdadas da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  
+  
+ Fluxos envolvem estas três operações fundamentais:  
+  
+-   Leitura – Transferência de dados de um fluxo para uma estrutura de dados, como uma matriz de bytes.  
+  
+-   Gravação – Transferência de dados para um fluxo a partir de uma fonte de dados.  
+  
+-   Busca – Consulta e modificação da posição atual em um fluxo.  
+  
+ Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem oferecer suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não dá suporte à busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações compatíveis com o fluxo.  
+  
+ Algumas classes de fluxo comumente usadas são:  
+  
+-   <xref:System.IO.FileStream> – para leitura e gravação em um arquivo.  
+  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – para leitura e gravação em um arquivo em armazenamento isolado.  
+  
+-   <xref:System.IO.MemoryStream> – para leitura e gravação na memória como o repositório de backup.  
+  
+-   <xref:System.IO.BufferedStream> – para aprimoramento de desempenho das operações de leitura e gravação.  
+  
+-   <xref:System.Net.Sockets.NetworkStream> – para leitura e gravação por soquetes de rede.  
+  
+-   <xref:System.IO.Pipes.PipeStream> – para leitura e gravação por pipes nomeados e anônimos.  
+  
+-   <xref:System.Security.Cryptography.CryptoStream> – para vinculação de fluxos de dados às transformações criptográficas.  
+  
+ Para um exemplo de como trabalhar com fluxos de forma assíncrona, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).  
+  
+## <a name="readers-and-writers"></a>Leitores e Gravadores  
+ O namespace <xref:System.IO?displayProperty=fullName> também fornece tipos para ler caracteres codificados de fluxos e gravá-los em fluxos. Normalmente, os fluxos são criados para a entrada e a saída de bytes. Os tipos de leitor e de gravador tratam a conversão dos caracteres codificados de/para bytes para que o fluxo possa concluir a operação. Cada classe de leitor e gravador é associada a um fluxo, o qual pode ser recuperado pela propriedade `BaseStream` da classe.  
+  
+ Algumas classes de leitores e gravadores comumente usadas são:  
+  
+-   <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – para leitura e gravação de tipos de dados primitivos como valores binários.  
+  
+-   <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres em bytes.  
+  
+-   <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – para leitura e gravação de caracteres em cadeias de caracteres.  
+  
+-   <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – atuam como as classes base abstratas para outros leitores e gravadores que leem e gravam caracteres e cadeias de caracteres, mas não dados binários.  
+  
+ Confira [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md), [Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md), [Como ler caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-read-characters-from-a-string.md) e [Como gravar caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-write-characters-to-a-string.md).  
+  
+## <a name="asynchronous-io-operations"></a>Operações de E/S Assíncronas  
+ A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use operações de E/S assíncronas durante o desenvolvimento de aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para evitar causar a impressão de que o aplicativo parou de funcionar.  
+  
+ Os membros assíncronos contêm `Async` em seus nomes, como os métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. Você usa esses métodos com as palavras-chave `async` e `await`.  
+  
+ Para saber mais, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).  
+  
+## <a name="compression"></a>Compactação  
+ A compactação refere-se ao processo de reduzir o tamanho de um arquivo para fins de armazenamento. A descompactação é o processo de extrair o conteúdo de um arquivo compactado para um formato utilizável. O namespace <xref:System.IO.Compression?displayProperty=fullName> contém tipos para compactar e descompactar arquivos e fluxos.  
+  
+ As classes a seguir são frequentemente usadas para compactar e descompactar arquivos e fluxos:  
+  
+-   <xref:System.IO.Compression.ZipArchive> – para criação e recuperação de entradas no arquivo zip.  
+  
+-   <xref:System.IO.Compression.ZipArchiveEntry> – para representação de um arquivo compactado.  
+  
+-   <xref:System.IO.Compression.ZipFile> – para criação, extração e abertura de um pacote compactado.  
+  
+-   <xref:System.IO.Compression.ZipFileExtensions> – para criação e extração de entradas em um pacote compactado.  
+  
+-   <xref:System.IO.Compression.DeflateStream> – para compactação e descompactação de fluxos usando o algoritmo Deflate.  
+  
+-   <xref:System.IO.Compression.GZipStream> – para compactação e descompactação de fluxos no formato de dados gzip.  
+  
+ Confira [How to: Compress and Extract Files](../../../docs/standard/io/how-to-compress-and-extract-files.md) (Como compactar e extrair arquivos).  
+  
+## <a name="isolated-storage"></a>Armazenamentos isolado  
+ Um armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos a dados salvos. O armazenamento fornece um sistema de arquivos virtual que é isolado por usuário, assembly e (opcionalmente) domínio. O armazenamento isolado é particularmente útil quando o aplicativo não tem permissão para acessar arquivos de usuários. Você pode salvar configurações ou arquivos para seu aplicativo de modo que ele seja controlado pela política de segurança do computador.  
+  
+ O armazenamento isolado não está disponível para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados do aplicativo no namespace [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx). Para saber mais, confira [Dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) no Centro de Desenvolvimento do Windows.  
+  
+ As classes a seguir são usadas com frequência na implementação do armazenamento isolado:  
+  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorage> – fornece a classe base para implementações de armazenamento isolado.  
+  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – fornece uma área de armazenamento isolado que contém arquivos e diretórios.  
+  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – expõe um arquivo dentro do armazenamento isolado.  
+  
+ Confira [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md).  
+  
+## <a name="io-operations-in-windows-store-apps"></a>Operações de E/S em aplicativos da Windows Store  
+ O [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contém muitos dos tipos para leitura e gravação em fluxos. No entanto, esse conjunto não inclui todos os tipos de E/S do .NET Framework.  
+  
+ Algumas diferenças importantes que devem ser observadas ao usar operações de E/S em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:  
+  
+-   Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Use os tipos no namespace [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) do [!INCLUDE[wrt](../../../includes/wrt-md.md)], como [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) e [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+  
+-   O armazenamento isolado não está disponível. Use [dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175).  
+  
+-   Use métodos assíncronos, como <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, para evitar o bloqueio do thread da interface do usuário.  
+  
+-   Os tipos de compactação baseados em caminho <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions> não estão disponíveis. Use os tipos no namespace [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+  
+ É possível converter entre fluxos do .NET Framework e fluxos do Tempo de Execução do Windows, se necessário. Para saber mais, confira [Como converter entre fluxos do .NET Framework e do Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
+  
+ Para saber mais sobre operações de E/S em um aplicativo da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], confira [Guia de início rápido: lendo e gravando arquivos](http://go.microsoft.com/fwlink/p/?LinkId=243072) no Centro de Desenvolvimento do Windows.  
+  
+## <a name="io-and-security"></a>E/S e segurança  
+ Ao usar as classes no namespace <xref:System.IO?displayProperty=fullName>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse requisito é uma complementação a qualquer requisito <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+  
+ As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](../../../docs/standard/io/isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+  
+ Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.  
+  
+## <a name="related-topics"></a>Tópicos relacionados  
+  
+-   [Tarefas comuns de E/S](../../../docs/standard/io/common-i-o-tasks.md)  
+  
+ Fornece uma lista das tarefas de E/S associadas a arquivos, diretórios e fluxos, além de links para conteúdo e exemplos relevantes para cada tarefa.  
+  
+-   [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md)  
+  
+ Descreve as vantagens de desempenho e a operação básica da E/S assíncrona.  
+  
+-   [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md)  
+  
+ Descreve um mecanismo de armazenamento isolado que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos aos dados salvos.  
+  
+-   [Pipes](../../../docs/standard/io/pipe-operations.md)  
+  
+ Descreve operações de pipes anônimos e nomeados no .NET Framework.  
+  
+-   [Arquivos mapeados em memória](../../../docs/standard/io/memory-mapped-files.md)  
+  
+ Descreve arquivos mapeados na memória, os quais armazenam o conteúdo de arquivos do disco na memória virtual. Você pode usar arquivos mapeados na memória para editar arquivos muito grandes e para criar memória compartilhada para a comunicação entre processos.
+

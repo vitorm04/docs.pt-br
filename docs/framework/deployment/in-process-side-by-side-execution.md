@@ -1,0 +1,194 @@
+---
+title: "Execução lado a lado em processo | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- in-process side-by-side execution
+- side-by-side execution, in-process
+ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
+caps.latest.revision: 25
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 09044e2f604ba9b1b87850eea001492c111d45c9
+ms.contentlocale: pt-br
+ms.lasthandoff: 06/02/2017
+
+---
+# <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
+Desde o [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], você pode usar a hospedagem lado a lado em processos para executar várias versões do CLR (Common Language Runtime) em um único processo. Por padrão, os componentes COM gerenciados são executados com a versão do .NET Framework com a qual eles foram criados, independentemente da versão do .NET Framework carregada para o processo.  
+  
+## <a name="background"></a>Informações preliminares  
+ O .NET Framework sempre forneceu a hospedagem lado a lado para aplicativos de código gerenciado, mas antes do [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], ele não fornecia essa funcionalidade para componentes COM gerenciados. No passado, os componentes COM gerenciados que eram carregados em um processo eram executados com a versão do tempo de execução que já estava carregada ou com a versão mais recente instalada do .NET Framework. Se essa versão não era compatível com o componente COM, ele falhava.  
+  
+ O [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] fornece uma nova abordagem para hospedagem lado a lado que garante o seguinte:  
+  
+-   Instalar uma nova versão do .NET Framework não tem nenhum efeito em aplicativos existentes.  
+  
+-   Os aplicativos são executados na versão do .NET Framework com a qual foram criados. Eles não usar a nova versão do .NET Framework, exceto quando expressamente determinado para fazer isso. No entanto, é mais fácil para os aplicativos fazerem a transição para usar uma nova versão do .NET Framework.  
+  
+## <a name="effects-on-users-and-developers"></a>Efeitos em usuários e desenvolvedores  
+  
+-   **Usuários finais e administradores de sistema**. Esses usuários agora podem ter uma confiança maior de que quando instalarem uma nova versão do tempo de execução, independentemente ou com um aplicativo, ela não terá impacto em seus computadores. Os aplicativos existentes continuarão a ser executados como eram antes.  
+  
+-   **Desenvolvedores de aplicativos**. A hospedagem lado a lado quase não tem efeito sobre os desenvolvedores de aplicativos. Por padrão, os aplicativos sempre são executados na versão do .NET Framework em que foram criados, isso não mudou. No entanto, os desenvolvedores podem substituir esse comportamento e direcionar o aplicativo para ser executado em uma versão mais recente do .NET Framework (consulte o [cenário 2](#scenarios)).  
+  
+-   **Desenvolvedores de bibliotecas e consumidores**. A hospedagem lado a lado não resolve os problemas de compatibilidade que os desenvolvedores de bibliotecas enfrentam. Uma biblioteca que é carregada diretamente por um aplicativo, por meio de uma referência direta ou uma chamada <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>, continua a usar o tempo de execução do <xref:System.AppDomain> em que foi carregada. Você deve testar suas bibliotecas em todas as versões do .NET Framework para as quais você deseja dar suporte. Se um aplicativo for compilado usando o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], mas incluir uma biblioteca que foi criada usando um tempo de execução anterior, essa biblioteca usará o tempo de execução [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] também. No entanto, se você tiver um aplicativo que foi criado usando um tempo de execução mais recente e a biblioteca que foi criada usando o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], será necessário forçar o aplicativo a também usar o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (consulte o [cenário 3](#scenarios)).  
+  
+-   **Desenvolvedores de componente COM gerenciado**. No passado, componentes COM gerenciados eram executados automaticamente usando a versão mais recente do tempo de execução instalado no computador. Agora você pode executar componentes COM na versão do tempo de execução em que eles foram criados.  
+  
+     Conforme mostrado pela tabela a seguir, os componentes que foram criados com o .NET Framework versão 1.1 podem ser executados lado a lado com os componentes da versão 4, mas não podem ser executados com componentes da versão 2.0, 3.0 ou 3.5, pois a hospedagem lado a lado não está disponível para essas versões.  
+  
+    |Versão do .NET Framework|1.1|2.0 – 3.5|4|  
+    |----------------------------|---------|----------------|-------|  
+    |1.1|Não aplicável|Não|Sim|  
+    |2.0 – 3.5|Não|Não aplicável|Sim|  
+    |4|Sim|Sim|Não aplicável|  
+  
+> [!NOTE]
+>  As versões 3.0 e 3.5 do .NET Framework são criadas de forma incremental na versão 2.0 e não precisam ser executadas lado a lado. Elas são inerentemente a mesma versão.  
+  
+<a name="scenarios"></a>   
+## <a name="common-side-by-side-hosting-scenarios"></a>Cenários comuns de hospedagem lado a lado  
+  
+-   **Cenário 1:** aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework.  
+  
+     Versões do .NET Framework instaladas: a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] e todas as outras versões do .NET Framework usadas pelos componentes COM.  
+  
+     O que fazer: nesse cenário, não faça nada. Os componentes COM serão executados com a versão do .NET Framework com a qual foram registrados.  
+  
+-   **Cenário 2**: aplicativo gerenciado criado com a [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] com a qual você preferiria executar o [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], mas deseja executar na [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] se a versão 2.0 não estiver presente.  
+  
+     Versões do .NET Framework instaladas: uma versão anterior do .NET Framework e o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+  
+     O que fazer: no [arquivo de configuração de aplicativo](../../../docs/framework/configure-apps/index.md) no diretório do aplicativo, use o [elemento \<startup](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) e o [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) definidos da seguinte forma:  
+  
+    ```xml  
+    <configuration>  
+      <startup >  
+        <supportedRuntime version="v2.0.50727" />  
+        <supportedRuntime version="v4.0" />  
+      </startup>  
+    </configuration>  
+    ```  
+  
+-   **Cenário 3:** aplicativo nativo que usa componentes COM criados com versões anteriores do .NET Framework com as quais você deseja executar o [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+  
+     Versões do .NET Framework instaladas: a [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+  
+     O que fazer: no arquivo de configuração de aplicativo no diretório do aplicativo, use o elemento `<startup>` com o atributo `useLegacyV2RuntimeActivationPolicy` definido como `true` e o elemento `<supportedRuntime>` definido da seguinte forma:  
+  
+    ```xml  
+    <configuration>  
+      <startup useLegacyV2RuntimeActivationPolicy="true">  
+        <supportedRuntime version="v4.0" />  
+      </startup>  
+    </configuration>  
+    ```  
+  
+## <a name="example"></a>Exemplo  
+ O exemplo a seguir demonstra um host COM não gerenciado que está executando um componente COM gerenciado usando a versão do .NET Framework que o componente foi compilado para usar.  
+  
+ Para executar o exemplo a seguir, compile e registre o seguinte componente COM gerenciado usando o [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Para registrar o componente, no menu **Projeto**, clique em **Propriedades**, clique na guia **Compilar** e marque a caixa de seleção **Registrar para interoperabilidade COM**.  
+  
+```  
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+using System.Runtime.InteropServices;  
+  
+namespace BasicComObject  
+{  
+    [ComVisible(true), Guid("9C99C4B5-CA54-4c58-8988-49B6811BA53B")]  
+    public class MyObject : SimpleObjectModel.IPrintInfo  
+    {  
+        public MyObject()  
+        {  
+        }  
+        public void PrintInfo()  
+        {  
+            Console.WriteLine("MyObject was activated in {0} runtime in:\n\tAppDomain {1}:{2}", System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion(), AppDomain.CurrentDomain.Id, AppDomain.CurrentDomain.FriendlyName);  
+        }  
+    }  
+}  
+```  
+  
+ Compile o seguinte aplicativo C++ não gerenciado, que ativa o objeto COM criado pelo exemplo anterior.  
+  
+```  
+#include "stdafx.h"  
+#include <string>  
+#include <iostream>  
+#include <objbase.h>  
+#include <string.h>  
+#include <process.h>  
+  
+using namespace std;  
+  
+int _tmain(int argc, _TCHAR* argv[])  
+{  
+    char input;  
+    CoInitialize(NULL) ;  
+    CLSID clsid;  
+    HRESULT hr;  
+    HRESULT clsidhr = CLSIDFromString(L"{9C99C4B5-CA54-4c58-8988-49B6811BA53B}",&clsid);  
+    hr = -1;  
+    if (FAILED(clsidhr))  
+    {  
+        printf("Failed to construct CLSID from String\n");  
+    }  
+    UUID id = __uuidof(IUnknown);  
+    IUnknown * pUnk = NULL;  
+    hr = ::CoCreateInstance(clsid,NULL,CLSCTX_INPROC_SERVER,id,(void **) &pUnk);  
+    if (FAILED(hr))  
+    {  
+        printf("Failed CoCreateInstance\n");  
+    }else  
+    {  
+        pUnk->AddRef();  
+        printf("Succeeded\n");  
+    }  
+  
+    DISPID dispid;  
+    IDispatch* pPrintInfo;  
+    pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
+    OLECHAR FAR* szMethod[1];  
+    szMethod[0]=OLESTR("PrintInfo");   
+    hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
+    DISPPARAMS dispparams;  
+    dispparams.cNamedArgs = 0;  
+    dispparams.cArgs = 0;  
+    VARIANTARG* pvarg = NULL;  
+    EXCEPINFO * pexcepinfo = NULL;  
+    WORD wFlags = DISPATCH_METHOD ;  
+;  
+    LPVARIANT pvRet = NULL;  
+    UINT * pnArgErr = NULL;  
+    hr = pPrintInfo->Invoke(dispid,IID_NULL, LOCALE_USER_DEFAULT, wFlags,  
+        &dispparams, pvRet, pexcepinfo, pnArgErr);  
+    printf("Press Enter to exit");  
+    scanf_s("%c",&input);  
+    CoUninitialize();  
+    return 0;  
+}  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+Elemento  [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

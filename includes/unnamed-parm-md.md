@@ -1,0 +1,1 @@
+Alguns métodos, principalmente operadores, declaram um tipo para um parâmetro, mas não especificam um nome de parâmetro. Esse parâmetro é conhecido como *parâmetro sem nome*. Na documentação desses métodos, o espaço reservado *__unnamed0* representa o parâmetro sem nome.
