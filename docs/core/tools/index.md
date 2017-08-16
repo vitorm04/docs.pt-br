@@ -4,20 +4,19 @@ description: "Uma visão geral das ferramentas e recursos da CLI (Interface de l
 keywords: CLI, ferramentas da CLI, .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.sourcegitcommit: 61dedb132a34cf97894e77bb20d47694b2c0c104
+ms.openlocfilehash: adde2922a6e98cc4ced7ea7313fa8eb702932471
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/13/2017
 
 ---
-
 # <a name="net-core-command-line-interface-cli-tools"></a>Ferramentas da CLI (Interface de linha de comando) do .NET Core
 
 A CLI (Interface de linha de comando) do .NET Core é uma nova cadeia de ferramentas de plataforma cruzada para desenvolvimento de aplicativos em .NET Core. A CLI é a base na qual outras ferramentas de nível superior, como IDEs (Ambientes de Desenvolvimento Integrado), editores e orquestradores de build, se baseiam.
@@ -48,6 +47,7 @@ Os comandos a seguir são instalados por padrão:
 * [migrate](dotnet-migrate.md)
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
+* [store](dotnet-store.md) – disponível com o SDK do .NET Core 2.0 e versões posteriores.
 
 ### <a name="project-modification-commands"></a>Comandos de modificação de projeto
 
