@@ -113,7 +113,7 @@ foreach (var word in words)
 yield return Environment.NewLine;
 ```
 
-Em seguida, será necessário modificar a forma como você consume as linhas do arquivo, e adicionar um atraso depois de escrever cada palavra. Substitua a instrução `Console.WriteLine(line)` no método `Main` pelo seguinte bloco:
+Em seguida, será necessário modificar a forma como você consome as linhas do arquivo, e adicionar um atraso depois de escrever cada palavra. Substitua a instrução `Console.WriteLine(line)` no método `Main` pelo seguinte bloco:
 
 ```csharp
 Console.Write(line);
