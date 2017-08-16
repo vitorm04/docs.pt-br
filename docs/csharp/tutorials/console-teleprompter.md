@@ -153,7 +153,7 @@ if (lineLength > 70)
 Execute o exemplo e você poderá ler em voz alta de acordo com o ritmo pré-configurado.
 
 ## <a name="async-tasks"></a>Tarefas assíncronas
-Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, casos ele queira acelerar ou diminuir o ritmo da exibição do texto. Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
+Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, caso ele queira acelerar ou diminuir o ritmo da exibição do texto. Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
 A primeira etapa é criar um método de retorno @System.Threading.Tasks.Task assíncrono que representa o código que você criou até agora para ler e exibir o arquivo.
 
 Adicione este método à sua classe `Program` (ele é obtido do corpo de seu método `Main`):
