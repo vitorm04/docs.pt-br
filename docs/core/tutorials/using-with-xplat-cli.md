@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5cb697703ad117a131ca8cea1dd19e3acc8cca84
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -54,7 +54,7 @@ Vejamos um breve passo a passo:
    O arquivo de projeto especifica tudo o que é necessário para restaurar as dependências e compilar o programa.
 
    * A marca `OutputType` especifica que estamos copilando um executável, em outras palavras, um aplicativo de console.
-   * A marca `TargetFramework` especifica o tempo de execução do .NET que estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar todos eles em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 1.0.
+   * A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, você pode especificar várias estruturas de destino e compilar todos eles em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 1.0.
 
    `Program.cs`:
 

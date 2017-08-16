@@ -1,5 +1,5 @@
 ---
-title: "Executando a Conversão Boxing de Tipos que Permitem Valor Nulo (Guia de Programação em C#) | Microsoft Docs"
+title: "Executando a conversão boxing de tipos anuláveis (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e4ff2e8a31ca5a59494f80597460e90107e78c8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Executando a conversão boxing de tipos anuláveis (Guia de Programação em C#)
@@ -94,3 +94,4 @@ int? i2 = (int?)iBoxed;
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)   
  [Como identificar um tipo que permite valor nulo](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+

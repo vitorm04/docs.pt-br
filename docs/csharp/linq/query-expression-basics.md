@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fd0ef3c71d66ceca28d3ae7025058df469655c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-basics"></a>Noções básicas sobre expressões de consulta
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
   
  Em geral, os dados de origem são organizados de forma lógica como uma sequência de elementos do mesmo tipo. Por exemplo, uma tabela de banco de dados SQL contém uma sequência de linhas. Em um arquivo XML, há uma "sequência" de elementos XML (embora eles estejam organizados hierarquicamente em uma estrutura de árvore). Uma coleção na memória contém uma sequência de objetos. 
   
- Do ponto de vista do aplicativo, o tipo específico e a estrutura dos dados de origem original não são importantes. O aplicativo sempre vê os dados de origem como uma coleção <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Linq.IQueryable%601>. Por exemplo, no LINQ to XML, os dados de origem ficam visíveis como um `IEnumerable`\<<xref:System.Xml.Linq.XElement>>.  
+ Do ponto de vista do aplicativo, o tipo específico e a estrutura dos dados de origem original não são importantes. O aplicativo sempre vê os dados de origem como uma coleção de <xref:System.Collections.Generic.IEnumerable%601> ou de <xref:System.Linq.IQueryable%601>. Por exemplo, no LINQ to XML, os dados de origem ficam visíveis como um `IEnumerable`\<<xref:System.Xml.Linq.XElement>>.  
   
  Dada essa sequência de origem, uma consulta pode executar uma das três ações:  
   

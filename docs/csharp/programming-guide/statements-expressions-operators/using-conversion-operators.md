@@ -1,5 +1,5 @@
 ---
-title: "Usando operadores de conversão (Guia de Programação em C#) | Microsoft Docs"
+title: "Usando operadores de conversão (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b8de1ee6c21b0be28fe6301814553d6f2c896ed0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2561b680da567623b8dab13e9e5294c3dd2c1012
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a>Usando operadores de conversão (Guia de Programação em C#)
@@ -59,3 +60,4 @@ ms.lasthandoff: 03/13/2017
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Operadores de conversão](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)   
  [is](../../../csharp/language-reference/keywords/is.md)
+

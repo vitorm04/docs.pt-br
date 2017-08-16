@@ -1,5 +1,5 @@
 ---
-title: "-win32icon (Opções do compilador do C#) | Microsoft Docs"
+title: "-win32icon (opções do compilador C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c2ea7aaae78816b93fcba62799cd7fd1fe62a3ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: af5b9c3a44163167d932d378cbac4976e07eacbf
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon (opções do compilador C#)
@@ -64,7 +64,7 @@ A opção **/win32icon** insere um arquivo .ico no arquivo de saída, que fornec
   
 3.  Modifique a propriedade **Ícone do aplicativo**.  
   
- Para obter informações sobre como definir essa opção do compilador de maneira programática, consulte <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
+ Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>.  
   
 ## <a name="example"></a>Exemplo  
  Compilar `in.cs` e anexar um arquivo .ico `rf.ico` para produzir `in.exe`:  
@@ -75,4 +75,5 @@ csc /win32icon:rf.ico in.cs
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB: como modificar as propriedades do projeto e as definições de configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+

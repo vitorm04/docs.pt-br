@@ -1,5 +1,5 @@
 ---
-title: Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#) | Microsoft Docs
+title: Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#)
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 99d3c0c166f53cd0609a9d6e0641d7faa9cde14b
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa9a222f7fc32f278968461b30ba7ed8c7f40f9a
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a>Como localizar uma lista dos elementos filho (XPath-LINQ to XML) (C#)
-Este tópico compara o eixo de elementos filho do XPath com o eixo <xref:System.Xml.Linq.XContainer.Elements%2A> do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].  
+Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
   
  A expressão XPath é: `./*`  
   
@@ -64,3 +64,4 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também  
  [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

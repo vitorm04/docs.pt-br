@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2d95d281655c33927030666f101570da2d3e42ca
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -50,7 +50,7 @@ Nesse artigo, há uma tabela que mapeia as versões do .NET Standard para vária
 
 Veja aqui o que essa tabela significa para fins de criação de uma biblioteca:
 
-A versão do .NET Platform Standard que você escolher será uma escolha entre acessar as APIs mais recentes e a capacidade de direcionar para mais plataformas .NET e versões do Framework. Você controla o intervalo das plataformas que podem ser destinos e as versões escolhendo uma versão de `netstandardX.X` (em que `X.X` é um número de versão) e a adicionando ao seu arquivo de projeto (`.csproj` ou `.fsproj`).
+A versão do .NET Standard que você escolher será uma escolha entre acessar as APIs mais recentes e a capacidade de direcionar para mais implementações do .NET e versões do .NET Standard. Você controla o intervalo das plataformas que podem ser destinos e as versões escolhendo uma versão de `netstandardX.X` (em que `X.X` é um número de versão) e a adicionando ao seu arquivo de projeto (`.csproj` ou `.fsproj`).
 
 Você tem três opções principais ao direcionar para o .NET Standard, dependendo das suas necessidades.
 

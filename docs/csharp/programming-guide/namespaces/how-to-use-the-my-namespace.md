@@ -1,5 +1,5 @@
 ---
-title: "Como usar o My Namespace (Guia de Programação em C#) | Microsoft Docs"
+title: "Como usar o My Namespace (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ee8970c5ce2cc3c8857a3036f0334954ca13e2fa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 56577ff61c3f637c8e5a0969ae75d65d24ddaef7
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Como usar o My Namespace (Guia de Programação em C#)
@@ -64,3 +65,4 @@ O namespace <xref:Microsoft.VisualBasic.MyServices> (`My` no Visual Basic) ofere
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Namespaces](../../../csharp/programming-guide/namespaces/index.md)   
  [Usando namespaces](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+

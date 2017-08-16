@@ -1,6 +1,6 @@
 ---
 title: "Programação assíncrona"
-description: "Programação assíncrona"
+description: "Saiba mais sobre o modelo de programação assíncrona em nível linguagem do C# fornecido pelo .NET Core."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -32,7 +32,7 @@ Para o código vinculado à E/S, você `await` uma operação que retorna um `Ta
 
 Para o código vinculado à CPU, você `await` uma operação que é iniciada em um thread em segundo plano com o método `Task.Run`.
 
-A palavra-chave `await` é onde a mágica acontece, porque ela transfere o controle para o chamador do método que executou o `await`.  É o que, basicamente, permite que uma interface do usuário seja dinâmica ou que um serviço seja elástico.
+É na palavra-chave `await` que a mágica acontece. Ela cede o controle para o chamador do método que executou `await` e, em última instância, permite que uma interface do usuário tenha capacidade de resposta ou que um serviço seja elástico.
 
 Existem outras maneiras de abordar o código assíncrono, diferentes de `async` e `await`, como mencionado no artigo TAP no link acima, mas este documento se concentrará nos constructos de nível de linguagem daqui em diante.
 
@@ -74,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -180,7 +180,6 @@ Você pode encontrar em uma situação em que precisa recuperar várias partes d
 Este exemplo mostra como você pode obter os dados `User` para um conjunto de `userId`s.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -205,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 Aqui está outro jeito de escrever isso, de forma um pouco mais sucinta, usando LINQ:
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

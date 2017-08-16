@@ -1,5 +1,5 @@
 ---
-title: "Genéricos na biblioteca de classes .NET Framework (Guia de Programação em C#) | Microsoft Docs"
+title: "Genéricos na biblioteca de classes .NET Framework (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 35a6c53b089872076028e8ec82f55de2a90962a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3d5f15c92031301b68c6a702cf8d6b135cca36d
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generics-in-the-net-framework-class-library-c-programming-guide"></a>Genéricos na biblioteca de classes .NET Framework (Guia de Programação em C#)
@@ -41,3 +42,4 @@ A versão 2.0 da biblioteca de classes .NET Framework fornece um novo namespace,
  [Quando usar coleções genéricas](../../../standard/collections/when-to-use-generic-collections.md)   
  [Coleções e estruturas de dados](../../../standard/collections/index.md)   
  [Introdução aos genéricos](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "ulong (Referência de C#) | Microsoft Docs"
+title: "ulong (Referência de C#)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong (Referência de C#)
@@ -47,7 +47,7 @@ A palavra-chave `ulong` indica um tipo integral que armazena valores de acordo c
   
 ## <a name="literals"></a>Literais  
 
-Você pode declarar e inicializar uma variável `ulong` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela.  Se o literal inteiro estiver fora do intervalo de `ulong` (ou seja, se ele for menor que <xref:System.UInt64.MinValue?displayProperty=fullName> ou maior que <xref:System.UInt64.MaxValue?displayProperty=fullName>, ocorrerá um erro de compilação. 
+Você pode declarar e inicializar uma variável `ulong` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela.  Se o literal inteiro estiver fora do intervalo de `ulong` (ou seja, se for menor que <xref:System.UInt64.MinValue?displayProperty=fullName> ou maior que <xref:System.UInt64.MaxValue?displayProperty=fullName>), ocorrerá um erro de compilação. 
 
 No exemplo a seguir, inteiros iguais a 7.934.076.125 representados como literais decimais, hexadecimais e binários são atribuídos a valores `ulong`.  
   
@@ -60,7 +60,7 @@ Começando com o C# 7, você também pode usar o caractere de sublinhado, `_`, c
 
 [!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- Literais inteiros também podem incluir um sufixo que indica o tipo. O sufixo `UL` ou `ul` identifica inequivocamente um literal numérico como um valor `ulong`. O sufixo `L` indica um `ulong` se o valor literal excede <xref:System.Int64.MaxValue?displayProperty=fullName>. E o sufixo `U` ou `ulong` indica um `u` se o valor literal excede <xref:System.UInt32.MaxValue?displayProperty=fullName>. O exemplo a seguir usa o sufixo `ul` para indicar um inteiro longo:
+ Literais inteiros também podem incluir um sufixo que indica o tipo. O sufixo `UL` ou `ul` identifica inequivocamente um literal numérico como um valor `ulong`. O sufixo `L` denota um `ulong` se o valor literal excede <xref:System.Int64.MaxValue?displayProperty=fullName>. E o sufixo `U` ou `u` denota um `ulong` se o valor literal excede <xref:System.UInt32.MaxValue?displayProperty=fullName>. O exemplo a seguir usa o sufixo `ul` para indicar um inteiro longo:
  
 [!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
@@ -112,7 +112,7 @@ ulong y = (ulong)3.0;
  Para obter mais informações sobre as regras de conversão numérica implícita, consulte a [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.UInt64>   
@@ -123,3 +123,4 @@ ulong y = (ulong)3.0;
  [Tabela de Tipos Internos](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [Tabela de conversões numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [Tabela de conversões numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

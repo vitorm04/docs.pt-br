@@ -1,5 +1,5 @@
 ---
-title: "Como copiar, excluir e mover arquivos e pastas (Guia de Programação em C#) | Microsoft Docs"
+title: "Como copiar, excluir e mover arquivos e pastas (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7e9a170882c4e8dbb04dc014642a28ad4365e39
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4cfec46e0af0056a0de20a1ed83a370cd010055
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-copy-delete-and-move-files-and-folders-c-programming-guide"></a>Como copiar, excluir e mover arquivos e pastas (Guia de Programação em C#)
@@ -60,3 +61,4 @@ Os exemplos a seguir mostram como copiar, mover e excluir arquivos e pastas de m
  [Como fornecer uma caixa de diálogo de progresso para operações de arquivo](how-to-provide-a-progress-dialog-box-for-file-operations.md)   
  [E/S de arquivo e de fluxo](https://msdn.microsoft.com/library/k3352a4t)   
  [Tarefas comuns de E/S](https://msdn.microsoft.com/library/ms404278)
+

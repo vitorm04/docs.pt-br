@@ -1,5 +1,5 @@
 ---
-title: "Assemblies amigáveis (C#) | Microsoft Docs"
+title: "Assemblies amigáveis (C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ca01b9e91de08f3bdf53cd0572a3e1d1af0cf0af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e2680b5799c552a063ff7c539a31a5dd00b90a75
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="friend-assemblies-c"></a>Assemblies amigáveis (C#)
@@ -33,7 +34,7 @@ Um *assembly amigável* é um assembly que pode acessar os membros e tipos [inte
 -   Quando você está desenvolvendo uma biblioteca de classes e as adições à biblioteca estão contidas em assemblies separados, mas exigem acesso a membros em assemblies existentes que são marcados como `internal`.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para identificar um ou mais assemblies amigáveis para um determinado assembly. O exemplo a seguir usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> em um assembly A e especifica o assembly `AssemblyB` como um assembly amigável. Isso fornece ao assembly `AssemblyB` acesso a todos os tipos e membros no assembly A que são marcados como `internal`.  
+ Você pode usar o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> para identificar um ou mais assemblies amigáveis para um determinado assembly. O exemplo a seguir usa o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> no assembly A e especifica o assembly `AssemblyB` como um assembly amigável. Isso fornece ao assembly `AssemblyB` acesso a todos os tipos e membros no assembly A que são marcados como `internal`.  
   
 > [!NOTE]
 >  Quando você compila um assembly (assembly `AssemblyB`) que acessará tipos internos ou membros internos de outro assembly (assembly *A*), deve especificar explicitamente o nome do arquivo de saída (.exe ou .dll) usando a opção do compilador **/out**. Isso é necessário porque o compilador ainda não gerou o nome do assembly que está compilando no momento em que ele está se associando às referências externas. Para obter mais informações, consulte [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
@@ -66,7 +67,7 @@ public class ClassWithFriendMethod
   
  Apenas os assemblies que você especificar explicitamente como amigáveis podem acessar os membros e tipos `internal`. Por exemplo, se o assembly B é um amigo do assembly A e o assembly C faz referência ao assembly B, C não tem acesso aos tipos `internal` em A.  
   
- O compilador executa uma validação básica do nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Se o assembly *A* declara o *B* como um assembly amigável, as regras de validação são as seguintes:  
+ O compilador executa algumas validações básicas do nome do assembly amigável passado para o atributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Se o assembly *A* declara o *B* como um assembly amigável, as regras de validação são as seguintes:  
   
 -   Se o assembly *A* for fortemente nomeado, o assembly *B* também deverá ser fortemente nomeado. O nome do assembly amigável passado para o atributo deve consistir no nome do assembly e a chave pública da chave de nome forte usada para assinar o assembly *B*.  
   
@@ -78,11 +79,11 @@ public class ClassWithFriendMethod
   
  A classe <xref:System.Security.Permissions.StrongNameIdentityPermission> também fornece a capacidade de compartilhar tipos, com as seguintes diferenças:  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission> se aplica a um tipo individual, enquanto um assembly amigável se aplica a todo o assembly.  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission> aplica-se a um tipo individual, enquanto um assembly amigável se aplica ao assembly inteiro.  
   
--   Se houver centenas de tipos no assembly *A* que você deseja compartilhar como o assembly *B*, é necessário adicionar <xref:System.Security.Permissions.StrongNameIdentityPermission> a todos eles. Se usar um assembly amigável, você precisará declarar a relação de amigo uma vez.  
+-   Se há centenas de tipos no assembly *A* que você deseja compartilhar como o assembly *B*, é necessário adicionar <xref:System.Security.Permissions.StrongNameIdentityPermission> a todos eles. Se usar um assembly amigável, você precisará declarar a relação de amigo uma vez.  
   
--   Se você usar <xref:System.Security.Permissions.StrongNameIdentityPermission>, os tipos que deseja compartilhar devem ser declarados como públicos. Se você usar um assembly amigável, os tipos compartilhados serão declarados como `internal`.  
+-   Se você usar <xref:System.Security.Permissions.StrongNameIdentityPermission>, os tipos que você desejar compartilhar precisarão ser declarados como públicos. Se você usar um assembly amigável, os tipos compartilhados serão declarados como `internal`.  
   
  Para obter informações sobre como acessar os métodos e tipos `internal` de um assembly de um arquivo de módulo (um arquivo com a extensão .netmodule), consulte [/moduleassemblyname (C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md).  
   
@@ -93,3 +94,4 @@ public class ClassWithFriendMethod
  [Como criar assemblies amigáveis assinados (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [Assemblies e o Cache de Assembly Global (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
  [Guia de Programação em C#](../../../../csharp/programming-guide/index.md)
+

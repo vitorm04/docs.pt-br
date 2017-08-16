@@ -1,8 +1,8 @@
 ---
-title: "Controle de versão de C# | Guia de C#"
+title: "Controle de versão de C# – Guia de C#"
 description: "Compreender o funcionamento do controle de versão em C# e .NET"
 keywords: .NET, .NET Core, C#
-author: tsolarin
+author: BillWagner
 manager: wpickett
 ms.date: 01/08/2017
 ms.topic: article
@@ -10,10 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfa94e6d994f63adb13bdeea9b23f7130799b438
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 

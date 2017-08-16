@@ -11,15 +11,16 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f504c9dabcd7ca2d198d58c6d81e1fde1052e3be
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e3e860729ca9267d29ba105ac03ebe22a70b1762
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="join-by-using-composite-keys"></a>Unir usando chaves compostas
 
-Este exemplo mostra como realizar operações de junção nas quais você deseja usar mais de uma chave para definir uma correspondência. Isso é realizado por meio de uma chave composta. Uma chave composta é criada como um tipo anônimo ou como um tipo nomeado com os valores que você deseja comparar. Se a variável de consulta será transmitida além dos limites do método, use um tipo nomeado que substitui <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> pela chave. Os nomes das propriedades e a ordem em que elas ocorrem, devem ser idênticas em cada chave.  
+Este exemplo mostra como realizar operações de junção nas quais você deseja usar mais de uma chave para definir uma correspondência. Isso é realizado por meio de uma chave composta. Uma chave composta é criada como um tipo anônimo ou como um tipo nomeado com os valores que você deseja comparar. Se a variável de consulta será passada entre limites de método, use um tipo nomeado que substitui <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A> para a chave. Os nomes das propriedades e a ordem em que elas ocorrem, devem ser idênticas em cada chave.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar uma chave composta para unir dados de três tabelas:  
@@ -46,3 +47,4 @@ join...on new {Name = o.CustomerName, ID = o.CustID} equals
  [Expressões de consulta LINQ](index.md)   
  [Cláusula join](../language-reference/keywords/join-clause.md)   
  [Cláusula group](../language-reference/keywords/group-clause.md)
+

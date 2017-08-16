@@ -1,5 +1,5 @@
 ---
-title: "Como executar conversão cast com segurança usando operadores as e is (Guia de Programação em C#) | Microsoft Docs"
+title: "Como executar conversão cast com segurança usando operadores as e is (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6382859968cbf72005de0cfa6b9b0fa0d9ce1032
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5daa8525f45c123dabb0f59dfd29385b9e50354
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-safely-cast-by-using-as-and-is-operators-c-programming-guide"></a>Como executar conversão cast com segurança usando operadores as e is (Guia de Programação em C#)
@@ -47,3 +48,4 @@ Como os objetos são polimórficos, é possível que uma variável de tipo de cl
  [Tipos](../../../csharp/programming-guide/types/index.md)   
  [Conversões cast e conversões de tipo](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
  [Tipos que permitem valor nulo](../../../csharp/programming-guide/nullable-types/index.md)
+

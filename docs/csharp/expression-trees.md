@@ -1,6 +1,6 @@
 ---
 title: "Árvores de expressão"
-description: "Árvores de expressão"
+description: "Saiba mais sobre árvores de expressão no .NET Core e como usá-las para representar o código como estruturas que você pode examinar, modificar e executar."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ Provavelmente, você já escreveu código usando Árvores de expressão. APIs do
 Isso permite que o [Entity Framework](http://docs.efproject.net/en/latest/) converta a consulta que você escreveu em C# em SQL, que é executado no mecanismo do banco de dados. Outro exemplo é [Moq](https://github.com/Moq/moq), que é uma estrutura de simulação popular para .NET.
 
 As seções restantes deste tutorial explorarão o que são as árvores de expressão, examinarão as classes de estrutura que dão suporte a árvores de expressão e mostrarão como trabalhar com árvores de expressão. Você aprenderá a ler árvores de expressão, criar árvores de expressão, criar árvores de expressão modificadas e executar o código representado pelas árvores de expressão. Após a leitura, você estará pronto para usar essas estruturas para criar algoritmos adaptáveis avançados.
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
-1. [Árvores de expressão explicadas](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+1. [Árvores de Expressão Explicadas](expression-trees-explained.md)
+
+    Compreender a estrutura e os conceitos por trás das *Árvores de Expressão*.
     
 2. [Tipos de Framework com Suporte a Árvores de Expressão](expression-classes.md)
     

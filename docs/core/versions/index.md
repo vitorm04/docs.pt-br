@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 4708abcbd14f47089859ea1dba143a6648c845e5
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -83,7 +83,7 @@ Há dois metapacotes principais para o .NET Core.
 
 - v1.6 a partir do .NET Core 1.0 (essas versões normalmente e intencionalmente não coincidem).
 - É mapeado para a estrutura `netstandard`. 
-- Descreve os pacotes que são considerados necessários para o desenvolvimento de aplicativos modernos e que plataformas .NET devem implementar para serem consideradas uma plataforma [.NET Standard](../../standard/net-standard.md).
+- Descreve os pacotes considerados necessários para o desenvolvimento de aplicativos modernos e que as implementações do .NET devem implementar para serem consideradas uma plataforma [.NET Standard](../../standard/net-standard.md).
 
 **Microsoft.NETCore.App**
 
@@ -97,7 +97,7 @@ Observação: [`Microsoft.NETCore.Portable.Compatibility`](https://www.nuget.org
 
 As versões de estruturas são atualizadas quando novas APIs são adicionadas. Elas não têm conceito de versão de patch, visto que representam a forma da API e não as questões de implementação. O controle de versão principal e secundária seguirá as regras de SemVer especificadas anteriormente.
 
-A estrutura `netcoreapp` está vinculada à distribuição .NET Core. Ele seguirá os números de versão usados pelo .NET Core. Por exemplo, quando o .NET Core 2.0 for lançado, ele será direcionada para o `netcoreapp2.0`. A estrutura `netstandard` não coincidirá com o esquema de controle de versão de qualquer tempo de execução do .NET, visto que é igualmente aplicável a todos eles.
+A estrutura `netcoreapp` está vinculada à distribuição .NET Core. Ele seguirá os números de versão usados pelo .NET Core. Por exemplo, quando o .NET Core 2.0 for lançado, ele será direcionada para o `netcoreapp2.0`. A estrutura `netstandard` não coincidirá com o esquema de controle de versão de qualquer implementação do .NET, visto que é igualmente aplicável a todos eles.
 
 ## <a name="versioning-in-practice"></a>Controle de Versão na Prática
 

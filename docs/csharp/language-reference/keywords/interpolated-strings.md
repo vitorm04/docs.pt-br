@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres interpoladas (C#) | Microsoft Docs
+title: Cadeias de caracteres interpoladas (C#)
 ms.date: 2017-02-03
 ms.prod: .net
 ms.technology:
@@ -26,11 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 29790cadd30e9aca56d7ba4c8d7a945b4f891f35
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>Cadeias de caracteres interpoladas (Referência de C#)
@@ -91,7 +91,7 @@ Há três conversões de tipo implícitas de uma cadeia de caracteres interpolad
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 
 ## <a name="language-specification"></a>Especificação da linguagem  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.IFormattable?displayProperty=fullName>   

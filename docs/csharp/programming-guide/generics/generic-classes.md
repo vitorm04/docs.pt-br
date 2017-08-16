@@ -1,5 +1,5 @@
 ---
-title: "Classes genéricas (Guia de programação em C#) | Microsoft Docs"
+title: "Classes genéricas (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b285703b920bf29f0b7b220900b063a0c328837
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17ec9f5d26c01b7f7f7f95026bfdfaa88d709b60
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="generic-classes-c-programming-guide"></a>Classes genéricas (Guia de Programação em C#)
@@ -93,3 +94,4 @@ As classes genéricas encapsulam operações que não são específicas de um de
  [Genéricos](../../../csharp/programming-guide/generics/index.md)   
  [Salvar o estado de enumeradores](http://go.microsoft.com/fwlink/?LinkId=112390)   
  [Um enigma de herança, parte 1](http://go.microsoft.com/fwlink/?LinkId=112380)
+

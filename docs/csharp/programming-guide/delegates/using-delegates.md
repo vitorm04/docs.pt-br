@@ -1,5 +1,5 @@
 ---
-title: "Usando delegados (Guia de Programação em C#) | Microsoft Docs"
+title: "Usando delegados (Guia de Programação em C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6ecdd8701c8c7c2e674d70bcfd0eb72109987e35
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a003ead83e4eba547981b7156f5d33885d40989
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-delegates-c-programming-guide"></a>Usando delegados (Guia de Programação em C#)
@@ -44,7 +45,7 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
   
  [!code-cs[csProgGuideDelegates#23](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_3.cs)]  
   
- Tipos delegados são derivados da classe <xref:System.Delegate> no .NET Framework. Tipos delegados são [selados](../../../csharp/language-reference/keywords/sealed.md) — não podem ser derivados — e não é possível derivar classes personalizadas de <xref:System.Delegate>. Como o delegado instanciado é um objeto, ele pode ser passado como um parâmetro ou atribuído a uma propriedade. Isso permite que um método aceite um delegado como um parâmetro e chame o delegado posteriormente. Isso é conhecido como um retorno de chamada assíncrono e é um método comum de notificação de um chamador quando um processo longo for concluído. Quando um delegado é usado dessa maneira, o código que usa o delegado não precisa de conhecimento algum da implementação do método que está sendo usado. A funcionalidade é semelhante ao encapsulamento que as interfaces fornecem.  
+ Tipos de delegado são derivados da classe <xref:System.Delegate> do .NET Framework. Tipos de delegado são [lacrados](../../../csharp/language-reference/keywords/sealed.md) – não podem ser derivados de – e não é possível derivar classes personalizadas de <xref:System.Delegate>. Como o delegado instanciado é um objeto, ele pode ser passado como um parâmetro ou atribuído a uma propriedade. Isso permite que um método aceite um delegado como um parâmetro e chame o delegado posteriormente. Isso é conhecido como um retorno de chamada assíncrono e é um método comum de notificação de um chamador quando um processo longo for concluído. Quando um delegado é usado dessa maneira, o código que usa o delegado não precisa de conhecimento algum da implementação do método que está sendo usado. A funcionalidade é semelhante ao encapsulamento que as interfaces fornecem.  
   
  Outro uso comum de chamadas de retorno é definir um método de comparação personalizada e passar esse delegado para um método de classificação. Ele permite que o código do chamador se torne parte do algoritmo de classificação. O método de exemplo a seguir usa o tipo `Del` como um parâmetro:  
   
@@ -93,3 +94,4 @@ Um [delegado](../../../csharp/language-reference/keywords/delegate.md) é um tip
  [Variação em delegados](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)   
  [Usando variação para delegados genéricos Func e Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)   
  [Eventos](../../../csharp/programming-guide/events/index.md)
+

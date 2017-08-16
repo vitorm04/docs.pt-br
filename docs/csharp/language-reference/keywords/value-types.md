@@ -1,5 +1,5 @@
 ---
-title: "Tipos de valor (Referência de C#) | Microsoft Docs"
+title: "Tipos de valor (Referência de C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 88ea757310fd6d4b652efc829f12650e3c251fb5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
+ms.contentlocale: pt-br
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
@@ -61,7 +62,7 @@ Os tipos de valor consistem em duas categorias principais:
 ## <a name="main-features-of-value-types"></a>Principais recursos dos tipos de valor  
  As variáveis que são baseadas diretamente em tipos de valor contêm valores. Atribuir uma variável de tipo de valor à outra, copia o valor contido. Isso difere da atribuição de variáveis de tipo de referência, que copiam uma referência para o objeto, mas não o próprio objeto.  
   
- Todos os tipos de valor são implicitamente derivados de <xref:System.ValueType?displayProperty=fullName>.  
+ Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?displayProperty=fullName>.  
   
  Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor. No entanto, assim como com tipos de referência, os structs podem implementar interfaces.  
   
@@ -128,3 +129,4 @@ Point p = new Point(); // Invoke default constructor for the struct.
  [Tipos](../../../csharp/language-reference/keywords/types.md)   
  [Tabelas de Referência de Tipos](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
  [Tipos de referência](../../../csharp/language-reference/keywords/reference-types.md)
+
