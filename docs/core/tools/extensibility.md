@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
+ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
+ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -162,7 +162,7 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-No macOS, podemos eliminar esse script como `dotnet-hello` e definir o bit executável com `chmod +x dotnet-hello`. Podemos então criar um link simbólico para ele em `/usr/local/bin` usando o comando `ln -s dotnet-hello /usr/local/bin/`. Isso tornará possível invocar o comando usando a sintaxe `dotnet hello`.
+No macOS, podemos eliminar esse script como `dotnet-hello` e definir o bit executável com `chmod +x dotnet-hello`. Podemos então criar um link simbólico para ele em `/usr/local/bin` usando o comando `ln -s <full_path>/dotnet-hello /usr/local/bin/`. Isso tornará possível invocar o comando usando a sintaxe `dotnet hello`.
 
 No Windows, podemos eliminar esse script como `dotnet-hello.cmd` e colocá-lo em um local que está em um caminho do sistema (ou você pode adicioná-lo a uma pasta que já está no caminho). Depois disso, você pode simplesmente usar `dotnet hello` para executar este exemplo.
 
