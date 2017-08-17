@@ -1,10 +1,7 @@
 ---
 title: "Removendo elementos, atributos e nós de uma árvore XML (C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
@@ -15,10 +12,10 @@ caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Removendo elementos, atributos e nós de uma árvore XML (C#)
@@ -32,8 +29,8 @@ Você pode modificar uma árvore XML, remover elementos, atributos e outros tipo
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|Remove uma classe <xref:System.Xml.Linq.XAttribute> de seu pai.|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|Remove os nós filho de uma classe <xref:System.Xml.Linq.XContainer>.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|Remove uma classe <xref:System.Xml.Linq.XAttribute> de seu pai.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|Remove os nós filho de uma classe <xref:System.Xml.Linq.XContainer>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|Remove o conteúdo e os atributos de uma classe <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|Remove os atributos de uma classe <xref:System.Xml.Linq.XElement>.|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|Se você passar `null` para o valor, esse método removerá o atributo.|  
