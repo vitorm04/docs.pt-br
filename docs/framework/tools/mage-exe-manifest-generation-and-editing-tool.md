@@ -1,5 +1,5 @@
 ---
-title: Mage.exe (Manifest Generation and Editing Tool) | Microsoft Docs
+title: "Mage.exe (Ferramenta de Geração e Edição de Manifesto)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 68
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: caa06be840f0612e94742e7ea167f02b8b8d657d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
@@ -215,3 +215,4 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
  [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview)   
  [MageUI.exe (Manifest Generation and Editing Tool, Cliente Gráfico)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
  [Prompts de Comando](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

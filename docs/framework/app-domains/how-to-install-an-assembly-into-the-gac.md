@@ -1,5 +1,5 @@
 ---
-title: Como instalar um assembly no cache de assembly global | Microsoft Docs
+title: Como instalar um assembly no cache de assemblies global
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 63e1c2273e85117fd5419e63e823da6d2137726a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c1a0eb5034c10b84b02f493cd21bccd121c8315c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Como instalar um assembly no cache de assemblies global
@@ -93,3 +93,4 @@ gacutil -i hello.dll
  [Gacutil.exe (Ferramenta do Cache de Assemblies Global)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)   
  [Como assinar um assembly com um nome forte](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)   
  [implantação do Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)
+

@@ -1,5 +1,5 @@
 ---
-title: "Como compilar um assembly de vários arquivos | Microsoft Docs"
+title: "Como compilar um assembly de vários arquivos"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -25,11 +25,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: daca0f9acb9dab393d1b2142f37e288f7f1329f9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dd9de26f083209a0e8da79562f914023e008251
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Como compilar um assembly de vários arquivos
@@ -95,3 +95,4 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
  [Como exibir o conteúdo do assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)   
  [Como o tempo de execução localiza assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [Assemblies de vários arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)
+

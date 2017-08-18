@@ -1,5 +1,5 @@
 ---
-title: "Instruções passo a passo: uso de serviços de aplicativo cliente | Microsoft Docs"
+title: "Instruções passo a passo: usando serviços de aplicativo cliente"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: c5c36c371c43e6cba8875c0b6bea98c228438218
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-using-client-application-services"></a>Instruções passo a passo: usando serviços de aplicativo cliente

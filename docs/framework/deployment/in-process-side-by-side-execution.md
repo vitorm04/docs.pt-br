@@ -1,5 +1,5 @@
 ---
-title: "Execução lado a lado em processo | Microsoft Docs"
+title: "Execução lado a lado em processo"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 25
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 09044e2f604ba9b1b87850eea001492c111d45c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ad204e06868b21ac6f37bbdf02d29670a284496
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="in-process-side-by-side-execution"></a>Execução lado a lado em processo
@@ -190,5 +190,5 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
-Elemento  [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+ Elemento [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Recursos em aplicativos de área de trabalho | Microsoft Docs"
+title: "Recursos em aplicativos de área de trabalho"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 3bbfaf3272444fbd2127f01ae4d5c9ca0db7bd39
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 95ca72a6da8def7c98a978650c60a27722141527
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>Recursos em aplicativos de área de trabalho
@@ -53,21 +53,21 @@ Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um
 ## <a name="retrieving-resources"></a>Recuperando recursos  
  No tempo de execução, um aplicativo carrega os recursos localizados apropriados por thread, com base na cultura especificada pela propriedade <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>. Esse valor da propriedade é derivado da seguinte maneira:  
   
--   Atribuindo um objeto <xref:System.Globalization.CultureInfo> que representa a cultura localizada para a propriedade <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
+-   Atribuindo diretamente um objeto <xref:System.Globalization.CultureInfo> que representa a cultura localizada para a propriedade <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>.  
   
--   Se uma cultura não for explicitamente atribuída, recuperando a cultura de interface do usuário do thread padrão da propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
+-   Se não houver uma cultura explicitamente designada, recuperando a cultura padrão da interface do usuário do thread pela propriedade <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName>.  
   
 -   Se uma cultura de interface do usuário do thread padrão não for explicitamente atribuída, recuperando a cultura para o usuário atual no computador local chamando a função `GetUserDefaultUILanguage` do Windows.  
   
- Para saber mais sobre como a cultura de interface do usuário atual é definida, veja as páginas de referência de <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
+ Para saber mais sobre a configuração da cultura da interface do usuário atual, confira as páginas de referência <xref:System.Globalization.CultureInfo> e <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>.  
   
- Você pode recuperar recursos para a cultura de interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=fullName>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos nos aplicativos da área de trabalho, o namespace <xref:System.Resources?displayProperty=fullName> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:  
+ Você pode recuperar recursos para a cultura da interface do usuário atual ou para uma cultura específica usando a classe <xref:System.Resources.ResourceManager?displayProperty=fullName>. Embora a classe <xref:System.Resources.ResourceManager> seja mais frequentemente usada para recuperar recursos nos aplicativos da área de trabalho, o namespace <xref:System.Resources?displayProperty=fullName> contém tipos adicionais que podem ser usados para recuperar recursos. Elas incluem:  
   
--   A classe <xref:System.Resources.ResourceReader>, que permite enumerar recursos inseridos em um assembly ou armazenados em um arquivo de recursos binário autônomo. Ela é útil quando você desconhece os nomes exatos dos recursos que estão disponíveis no tempo de execução.  
+-   A classe <xref:System.Resources.ResourceReader>, que permite enumerar recursos inseridos em um assembly ou armazenados em um arquivo de recurso binário autônomo. Ela é útil quando você desconhece os nomes exatos dos recursos que estão disponíveis no tempo de execução.  
   
 -   A classe <xref:System.Resources.ResXResourceReader>, que permite recuperar recursos de um arquivo XML (.resx).  
   
--   A classe <xref:System.Resources.ResourceSet>, que permite recuperar os recursos de uma cultura específica sem observar regras de fallback. Os recursos podem ser armazenados em um assembly ou em um arquivo de recursos binário autônomo. Também é possível desenvolver uma implementação de <xref:System.Resources.IResourceReader> que permite usar a classe <xref:System.Resources.ResourceSet> para recuperar recursos de alguma outra fonte.  
+-   A classe <xref:System.Resources.ResourceSet>, que permite recuperar os recursos de uma cultura específica sem observar regras de fallback. Os recursos podem ser armazenados em um assembly ou em um arquivo de recursos binário autônomo. Você também pode desenvolver uma implementação <xref:System.Resources.IResourceReader> que permite usar a classe <xref:System.Resources.ResourceSet> para recuperar recursos de outra fonte.  
   
 -   A classe <xref:System.Resources.ResXResourceSet>, que permite recuperar todos os itens em um arquivo de recurso XML na memória.  
   
@@ -79,3 +79,4 @@ Quase todos os aplicativos de qualidade de produção precisam usar recursos. Um
  [Empacotar e implantar recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)   
  [Criação de assemblies satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
  [Recuperando recursos](../../../docs/framework/resources/retrieving-resources-in-desktop-apps.md)
+

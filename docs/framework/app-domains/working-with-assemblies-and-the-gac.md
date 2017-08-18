@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com assemblies e com o cache de assembly global | Microsoft Docs
+title: Trabalhando com assemblies e o cache de assemblies global
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 5a3312180542df8d59e30c6fc803d7ba24c7757e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c656cbad746e044a6dbf187ce86fd4738d6ef98
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabalhando com assemblies e o cache de assemblies global
@@ -83,3 +83,4 @@ Se você pretender compartilhar um assembly com vários aplicativos, será neces
   
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Descreve assemblies, os blocos de construção de aplicativos gerenciados.
+

@@ -1,5 +1,5 @@
 ---
-title: "Implantação do .NET Framework e de aplicativos | Microsoft Docs"
+title: Implantando o .NET Framework e aplicativos
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
@@ -175,7 +175,7 @@ Este artigo ajuda você a começar a implantar o .NET Framework com seu aplicati
 |[Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|  
 |[Guia de implantação para administradores](../../../docs/framework/deployment/guide-for-administrators.md)|Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).|  
 |[Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.|  
-|[Implantando aplicativos, serviços e componentes](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|Aborda as opções de implantação no Visual Studio, incluindo instruções para publicar um aplicativo usando as tecnologias ClickOnce e Windows Installer.| 
+|[Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components)|Aborda as opções de implantação no Visual Studio, incluindo instruções para publicar um aplicativo usando as tecnologias ClickOnce e Windows Installer.| 
 |[Publicando aplicativos ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descreve como empacotar um aplicativo do Windows Forms e implantá-lo com o ClickOnce em computadores cliente em uma rede.|  
 |[Empacotando e implantando recursos](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|Descreve o modelo de hub e spoke usado pelo .NET Framework para empacotar e implantar recursos; aborda convenções de nomenclatura de recurso, processo de fallback e alternativas de empacotamento.|  
 |[Implantação de um aplicativo de interoperabilidade](../../../docs/framework/interop/deploying-an-interop-application.md)|Explica como enviar e instalar aplicativos de interoperabilidade, que geralmente incluem um assembly de cliente do .NET Framework, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipo COM e um ou mais componentes COM registrados.|  
