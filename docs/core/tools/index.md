@@ -1,20 +1,17 @@
 ---
 title: Ferramentas da CLI (Interface de Linha de Comando) do .NET Core
-description: "Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando)."
-keywords: CLI, ferramentas da CLI, .NET, .NET Core
-author: blackdwarf
+description: "Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando) do .NET Core."
+author: mairaw
 ms.author: mairaw
-ms.date: 08/12/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 61dedb132a34cf97894e77bb20d47694b2c0c104
-ms.openlocfilehash: adde2922a6e98cc4ced7ea7313fa8eb702932471
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/13/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Ferramentas da CLI (Interface de linha de comando) do .NET Core
@@ -34,7 +31,9 @@ Por padrão, a CLI instala lado a lado (SxS), para que várias versões das ferr
 
 Os comandos a seguir são instalados por padrão:
 
-### <a name="basic-commands"></a>Comandos básicos
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+**Comandos básicos**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
@@ -47,9 +46,10 @@ Os comandos a seguir são instalados por padrão:
 * [migrate](dotnet-migrate.md)
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
-* [store](dotnet-store.md) – disponível com o SDK do .NET Core 2.0 e versões posteriores.
+* [ajuda](dotnet-help.md)
+* [repositório](dotnet-store.md)
 
-### <a name="project-modification-commands"></a>Comandos de modificação de projeto
+**Comandos de modificação de projeto**
 
 * [add package](dotnet-add-package.md)
 * [add reference](dotnet-add-reference.md)
@@ -57,7 +57,7 @@ Os comandos a seguir são instalados por padrão:
 * [remove reference](dotnet-remove-reference.md)
 * [list reference](dotnet-list-reference.md)
 
-### <a name="advanced-commands"></a>Comandos avançados
+**Comandos avançados**
 
 * [nuget delete](dotnet-nuget-delete.md)
 * [nuget locals](dotnet-nuget-locals.md)
@@ -65,11 +65,55 @@ Os comandos a seguir são instalados por padrão:
 * [msbuild](dotnet-msbuild.md)
 * [dotnet install script](dotnet-install-script.md)
 
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**Comandos básicos**
+
+* [new](dotnet-new.md)
+* [restore](dotnet-restore.md)
+* [build](dotnet-build.md)
+* [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
+* [vstest](dotnet-vstest.md)
+* [pack](dotnet-pack.md)
+* [migrate](dotnet-migrate.md)
+* [clean](dotnet-clean.md)
+* [sln](dotnet-sln.md)
+
+**Comandos de modificação de projeto**
+
+* [add package](dotnet-add-package.md)
+* [add reference](dotnet-add-reference.md)
+* [remove package](dotnet-remove-package.md)
+* [remove reference](dotnet-remove-reference.md)
+* [list reference](dotnet-list-reference.md)
+
+**Comandos avançados**
+
+* [nuget delete](dotnet-nuget-delete.md)
+* [nuget locals](dotnet-nuget-locals.md)
+* [nuget push](dotnet-nuget-push.md)
+* [msbuild](dotnet-msbuild.md)
+* [dotnet install script](dotnet-install-script.md)
+
+---
+
 A CLI adota um modelo de extensibilidade que permite especificar ferramentas adicionais para seus projetos. Para saber mais, confira o tópico [Modelo de extensibilidade da CLI do .NET Core](extensibility.md).
 
 ## <a name="command-structure"></a>Estrutura de comando
 
 A estrutura de comando da CLI é composta pelo [driver ("dotnet")](#driver), [o comando (ou "verbo")](#command-verb) e [argumentos](#arguments) e [opções](#options) possíveis do comando. É possível ver esse padrão na maioria das operações de CLI, como ao criar um novo aplicativo de console e executá-lo a partir da linha de comando, como mostram os comandos a seguir quando executados a partir de um diretório chamado *my_app*:
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```console
+dotnet new console
+dotnet build --output /build_output
+dotnet /build_output/my_app.dll
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -78,17 +122,19 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+---
+
 ### <a name="driver"></a>Driver
 
 O driver é chamado [dotnet](dotnet.md) e tem duas responsabilidades, executar um [aplicativo dependente da estrutura](../deploying/index.md) ou executar um comando. A única vez em que `dotnet` é usado sem um comando é para iniciar um aplicativo.
 
 Para executar um aplicativo dependente da estrutura, especifique o aplicativo após o driver, por exemplo, `dotnet /path/to/my_app.dll`. Ao executar o comando na pasta onde está a DLL do aplicativo, basta executar `dotnet my_app.dll`.
 
-Quando você fornece um comando para o driver, `dotnet.exe` inicia o processo de execução do comando da CLI. Primeiro, o driver determina a versão das ferramentas a ser usada. Se a versão não for especificada nas opções de comando, o driver usará a versão mais recente disponível. Para especificar uma versão diferente da versão instalada mais recentemente, use a opção `--fx-version <VERSION>` (veja a referência ao [comando dotnet](dotnet.md)). Depois que a versão do SDK for determinada, o driver executará o comando.
+Quando você fornece um comando para o driver, `dotnet.exe` inicia o processo de execução do comando da CLI. Primeiro, o driver determina a versão do SDK a ser usada. Se a versão não for especificada nas opções de comando, o driver usará a versão mais recente disponível. Para especificar uma versão diferente da versão instalada mais recentemente, use a opção `--fx-version <VERSION>` (veja a referência ao [comando dotnet](dotnet.md)). Depois que a versão do SDK for determinada, o driver executará o comando.
 
 ### <a name="command-verb"></a>Comando ("verbo")
 
-O comando (ou "verbo") é simplesmente um comando que executa uma ação. Por exemplo, `dotnet build` compila seu código. `dotnet publish` publica o código. Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet-{verb}`. 
+O comando (ou "verbo") é simplesmente um comando que executa uma ação. Por exemplo, `dotnet build` compila seu código. `dotnet publish` publica o código. Os comandos são implementados como um aplicativo de console usando uma convenção `dotnet {verb}`.
 
 ### <a name="arguments"></a>Arguments
 
@@ -102,8 +148,7 @@ As opções que você passa na linha de comando são aquelas do comando invocado
 
 Se você tiver usado as ferramentas da Visualização 2 para produzir projetos baseados em *project.json*, veja o tópico [dotnet migrate](dotnet-migrate.md) para saber mais sobre como migrar seu projeto para MSBuild/*.csproj* para uso com as ferramentas de versão. Para projetos do .NET Core criados antes do lançamento das ferramentas do Preview 2, atualize manualmente o projeto seguindo as orientações em [Migrar do DNX para a CLI do .NET Core (Project)](../migration/from-dnx.md) e, em seguida, use `dotnet migrate` ou atualize diretamente seus projetos.
 
-## <a name="additional-resources"></a>Recursos adicionais
+## <a name="see-also"></a>Consulte também
 
-* [Repositório do GitHub dotnet/CLI](https://github.com/dotnet/cli/)
-* [Guia de instalação do .NET Core](https://aka.ms/dotnetcoregs)
-
+ [Repositório do GitHub dotnet/CLI](https://github.com/dotnet/cli/)   
+ [Guia de instalação do .NET Core](https://aka.ms/dotnetcoregs)   
