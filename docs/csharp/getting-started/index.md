@@ -1,6 +1,6 @@
 ---
 title: "Guia de introdução – Guia do C#"
-description: "Introdução ao C#"
+description: "Localize tutoriais curtos e simples que permitem que você aprenda rapidamente os conceitos básicos de C# e como escrever aplicativos .NET Core."
 keywords: "C#, Introdução, Aquisição, Instalação"
 author: rpetrusha
 ms.author: ronpet
@@ -9,12 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="get-started-with-c"></a>Introdução ao C# #
@@ -33,7 +32,7 @@ Os seguintes tópicos estão disponíveis:
 
    Uma biblioteca de classes permite definir tipos e membros de tipo que podem ser chamados de outro aplicativo. Este tópico permite criar uma biblioteca de classes com um único método que determina se uma cadeia de caracteres começa com um caractere maiúsculo. Após criar a biblioteca, você pode desenvolver um [teste de unidade](../../core/tutorials/testing-library-with-visual-studio.md) para garantir que ela funciona conforme o esperado e, em seguida, você pode torná-la disponível para [aplicativos que desejam consumi-la](../../core/tutorials/consuming-library-with-visual-studio.md).
 
-- [Introdução ao Código do Visual Studio e C#](../../core/tutorials/with-visual-studio-code.md)
+* [Introdução ao Código do Visual Studio e C#](../../core/tutorials/with-visual-studio-code.md)
 
    O Visual Studio Code é um editor de código gratuito e otimizado para compilação e depuração de aplicativos Web e de nuvem modernos. Ele dá suporte ao IntelliSense e está disponível para Windows, Linux e macOS.
 

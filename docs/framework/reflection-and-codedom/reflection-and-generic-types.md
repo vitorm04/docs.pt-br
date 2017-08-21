@@ -1,5 +1,5 @@
 ---
-title: "Reflexão e tipos genéricos | Microsoft Docs"
+title: "Reflexão e tipos genéricos"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -24,11 +24,11 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 6860a46bfb2d8959e1db2b4714874081a156b76f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bc98ffad2f34be503f649f5331400f59689eea09
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reflection-and-generic-types"></a>Reflexão e tipos genéricos
@@ -160,3 +160,4 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso de genéricos e como ele tem suporte no .NET Framework.|  
 |[Como definir um tipo genérico com a emissão de reflexão](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Mostra como usar a emissão de reflexão para gerar tipos genéricos nos assemblies dinâmicos.|  
 |[Exibindo informações de tipo](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|
+

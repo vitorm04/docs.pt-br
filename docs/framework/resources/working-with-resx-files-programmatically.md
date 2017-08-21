@@ -1,5 +1,5 @@
 ---
-title: "Trabalhando com arquivos .resx com programação | Microsoft Docs"
+title: "Trabalhando com arquivos .resx de forma programática"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c74a79b06503e105dd9ba47cc8079019e038b11f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 361559ab3ea5b09e5568a94692ca6cf374fe5ecf
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-resx-files-programmatically"></a>Trabalhando com arquivos .resx de forma programática
@@ -92,3 +92,4 @@ Como arquivos de recurso XML (.resx) devem conter XML bem definido, incluindo um
  [Criando arquivos de recurso](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
  [Resgen.exe (Gerador de Arquivo de Recurso)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)   
  [Al.exe (Assembly Linker)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+

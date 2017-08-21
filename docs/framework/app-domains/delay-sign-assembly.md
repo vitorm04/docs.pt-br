@@ -1,13 +1,9 @@
 ---
-title: Atrasando a assinatura de um assembly | Microsoft Docs
-ms.custom: 
-ms.date: 03/30/2017
+title: Atrasando a assinatura de um assembly
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>Atrasando a assinatura de um assembly
@@ -62,8 +58,8 @@ Uma organização pode ter um par de chaves bem protegido ao qual os desenvolved
   
      Com a opção **–Vr** ou a **–Vk**, você pode, opcionalmente, incluir um arquivo .snk para a assinatura da chave de teste.  
   
-    > [!CAUTION]
-    >  Use a opção **-Vr** ou a **–Vk** somente durante o desenvolvimento. A adição de um conjunto à lista de verificação para ignorar cria uma vulnerabilidade de segurança. Um assembly mal-intencionado pode usar o nome do assembly totalmente especificado (nome de assembly, versão, cultura e token de chave pública) do assembly adicionado à lista de verificação para forjar sua identidade. Isso permitiria que o assembly mal-intencionado também ignorasse a verificação.  
+    > [!WARNING]
+    > Por segurança, não confie em nomes fortes. Eles apenas fornecem uma identidade exclusiva.
   
     > [!NOTE]
     >  Se você usar o atraso de assinatura durante o desenvolvimento com o Visual Studio em um computador de 64 bits e compilar um assembly para **Qualquer CPU**, talvez seja necessário aplicar a opção **-Vr** duas vezes. (No Visual Studio, **Qualquer CPU** é um valor da propriedade de build **Destino de Plataforma**, quando você compila da linha de comando, esse é o padrão.) Para executar seu aplicativo da linha de comando ou do Explorador de Arquivos, use a versão de 64 bits do [Sn.exe (ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) para aplicar a opção **-Vr** ao assembly. Para carregar o assembly no Visual Studio no tempo de design (por exemplo, se o assembly contiver componentes que são usados por outros assemblies em seu aplicativo), use a versão de 32 bits da ferramenta de nome forte. Isso ocorre porque o compilador JIT (Just-in-time) compila o assembly para código nativo de 64 bits quando o assembly é executado da linha de comando e para código nativo de 32 bits quando o assembly é carregado no ambiente de tempo de design.  
@@ -81,3 +77,4 @@ Uma organização pode ter um par de chaves bem protegido ao qual os desenvolved
  [Como criar um par de chaves pública/privada](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe (Ferramenta Nome Forte)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "SqlMetal.exe (Ferramenta de Geração de Código) | Microsoft Docs"
+title: "SqlMetal.exe (ferramenta de geração de código)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 43
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b4f700a285017e5e759b4e9b8e840a893592e7f4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d0ac9c682c60db8eb9e5188a71916dc5d97de60
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (ferramenta de geração de código)
@@ -153,3 +153,4 @@ sqlmetal [options] [<input file>]
  [Como gerar o modelo de objeto em Visual Basic ou C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)   
  [Geração de código em LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)   
  [Mapeamento Externo](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+

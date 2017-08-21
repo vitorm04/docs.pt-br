@@ -11,15 +11,19 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3ea221cfe71256ac44238f99f272c55c5810d0c3
+ms.sourcegitcommit: 195b2206eec0a8f070454aed1ddefe56ee92adc9
+ms.openlocfilehash: 7b7cb235e2ba5bc3c9a21603058eb20475766ea7
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 
 # <a name="whats-new-in-c"></a>Novidades no C# #
 
+Esta página fornece um roteiro de novos recursos em cada versão principal da linguagem C#. Os links a seguir fornecem informações detalhadas sobre os principais recursos adicionados a cada versão.
+
+> [!IMPORTANT]
+> A linguagem C# depende de tipos e métodos em uma *biblioteca padrão* para alguns dos recursos. Um exemplo é o processamento de exceção. Cada instrução ou expressão `throw` é verificada para garantir que o objeto que está sendo gerado é derivado de @System.Exception. Da mesma forma, cada `catch` é verificado para garantir que o tipo que está sendo capturado é derivado de @System.Exception. Cada versão pode adicionar novos requisitos. Para usar os recursos de linguagem mais recentes em ambientes mais antigos, talvez seja necessário instalar bibliotecas específicas. Elas estão documentadas na página de cada versão específica. Saiba mais sobre as [relações entre linguagem e biblioteca](relationships-between-language-and-library.md) para obter informações sobre essa dependência. 
 
 * [C# 7](csharp-7.md):
     - Esta página descreve os recursos mais recentes na linguagem C#. Isso abrange o C# 7, disponível atualmente no [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/).

@@ -1,5 +1,5 @@
 ---
-title: "Como compilar um assembly de arquivo único | Microsoft Docs"
+title: "Como compilar um assembly de arquivo único"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,18 +22,18 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0ddf25f1d588c0972381a54ee0da4b35e3c0dc33
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Como compilar um assembly de arquivo único
 Um assembly de arquivo único, que é o tipo mais simples de assembly, contém informações sobre o tipo e a implementação, bem como o [manifesto do assembly](../../../docs/framework/app-domains/assembly-manifest.md). Você pode usar compiladores de linha de comando ou [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para criar um assembly de arquivo único. Por padrão, o compilador cria um arquivo do assembly com uma extensão de .exe.  
   
 > [!NOTE]
-> O  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para C# e Visual Basic pode ser usado para criar assemblies de arquivo único. Se quiser criar assemblies de vários arquivos, você precisará usar os compiladores de linha de comando ou [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para Visual C++.  
+>  O [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para C# e Visual Basic pode ser usado para criar assemblies de arquivo único. Se quiser criar assemblies de vários arquivos, você precisará usar os compiladores de linha de comando ou [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] para Visual C++.  
   
  Os procedimentos a seguir mostram como criar assemblies de arquivo único usando compiladores de linha de comando.  
   
@@ -99,3 +99,4 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
  [Assemblies de Vários Arquivos](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [Como compilar um assembly de vários arquivos](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [Programação com assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

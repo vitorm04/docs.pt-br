@@ -1,5 +1,5 @@
 ---
-title: Mensagens de erro do Winmdexp.exe | Microsoft Docs
+title: Mensagens de erro do winmdexp.exe
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -174,11 +174,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 62745b203ec5c9db121c3c84578f16ba9c35738d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3797621322fd88d57133602b1cb3c3173fedbe6e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="winmdexpexe-error-messages"></a>Mensagens de erro do winmdexp.exe
@@ -191,3 +191,4 @@ O processo de build chama [Winmdexp.exe (Ferramenta de Exportação de Metadados
 ## <a name="see-also"></a>Consulte também  
  [Winmdexp.exe (Ferramenta de Exportação de Metadados do Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
  [Diagnosticando condições de erro do componente do Tempo de Execução do Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+

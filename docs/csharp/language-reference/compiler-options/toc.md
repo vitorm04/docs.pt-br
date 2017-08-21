@@ -40,6 +40,8 @@
 ### [-preferreduilang (opções do compilador do C#)](preferreduilang-compiler-option.md)
 ### [-recurse (opções do compilador do C#)](recurse-compiler-option.md)
 ### [-reference (opções do compilador do C#)](reference-compiler-option.md)
+### [-refout (opções do compilador do C#)](refout-compiler-option.md)
+### [-refonly (opções do compilador do C#)](refonly-compiler-option.md)
 ### [-resource (opções do compilador do C#)](resource-compiler-option.md)
 ### [-subsystemversion (opções do compilador do C#)](subsystemversion-compiler-option.md)
 ### [-target (opções do compilador do C#)](target-compiler-option.md)

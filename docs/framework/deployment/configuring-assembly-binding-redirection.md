@@ -1,5 +1,5 @@
 ---
-title: "Configurando o redirecionamento de associação de assembly | Microsoft Docs"
+title: "Configurando o redirecionamento de associações de assemblies"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 8
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 0abc314673f995c57cc7d139ebeb0ee0c558f0c0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6cd1e2d621d133f80a2f6e650ae6aed94e6bbe33
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurando o redirecionamento de associações de assemblies
@@ -74,3 +74,4 @@ Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que 
   
 ## <a name="see-also"></a>Consulte também  
  [Como habilitar e desabilitar o redirecionamento automático de associações](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+
