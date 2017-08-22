@@ -1,13 +1,9 @@
 ---
 title: "Como determinar quais versões do .NET Framework estão instaladas"
-ms.custom: 
-ms.date: 04/07/2017
+ms.date: 08/09/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions, determining for .NET Framework
@@ -18,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cddee407d1245568054871d71f2840f463859535
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: afb01fd47ed2ce3b9c5838f3a8f61c8d34147378
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Como determinar quais versões do .NET Framework estão instaladas
@@ -37,6 +33,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
  [Visualizar o Registro (versões 4.5 e posteriores)](#net_b)  
  [Usar o código para consultar o Registro (versões 1 a 4)](#net_c)  
  [Usar o código para consultar o Registro (versões 4.5 e posteriores)](#net_d)  
+ [Uso do PowerShell para consultar o Registro (versões 4.5 e posteriores)](#ps_a)  
   
  Para encontrar a versão CLR, é possível usar uma ferramenta ou código:  
   
@@ -153,6 +150,27 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
     - Ele verifica se o valor da entrada `Release` é *maior ou igual* ao valor das chaves de versão conhecidas.
 
     - Ele verifica na ordem da versão mais recente para a versão mais antiga.
+
+<a name="ps_a"></a> 
+#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>Para verificar se há uma versão do .NET Framework mínima necessária consultando o Registro no PowerShell (.NET Framework 4.5 e versões posteriores)
+
+- O exemplo a seguir verificará o valor da palavra-chave `Release` para determinar se o .NET Framework 4.6.2 ou superior estiver instalado, independentemente da versão do sistema operacional Windows (retornando `True` se ele for e `False` caso contrário).
+
+    ```PowerShell
+    Get-ChildItem "hklm:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | % { $_ -ge 394802 } 
+    ```
+
+    É possível substituir `394802` no exemplo anterior por outro valor da tabela a seguir para verificar se há uma versão mínima necessária do .NET Framework diferente.
+  
+    |Versão|Valor mínimo da versão DWORD|
+    |-------------|--------------------------------|
+    |.NET Framework 4.5|378389|
+    |.NET Framework 4.5.1|378675|
+    |.NET Framework 4.5.2|379893|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
+    |.NET Framework 4.7|460798|
 
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Para localizar a versão de tempo de execução atual usando a ferramenta Clrver
