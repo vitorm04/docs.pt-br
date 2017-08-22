@@ -10,15 +10,15 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 753c620e1352dfc5fc57c380c66479c8e2d9b0ee
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
-Começando com o C# 7, o C# dá suporte a valores retornados por referência (ref returns). Um valor retornado por referência permite que um método retorne uma referência a um objeto, em vez de um valor, de volta para um chamador. O chamador pode optar por tratar o objeto retornado como se ele tivesse sido retornado por valor ou por referência. Um valor retornado por referência que o chamador trata como uma referência em vez de um valor é um ref local).
+Começando com o C# 7, o C# dá suporte a valores retornados por referência (ref returns). Um valor retornado por referência permite que um método retorne uma referência a um objeto, em vez de um valor, de volta para um chamador. O chamador pode optar por tratar o objeto retornado como se ele tivesse sido retornado por valor ou por referência. Um valor retornado por referência que o chamador trata como uma referência em vez de um valor é um ref local.
 
 ## <a name="what-is-a-reference-return-value"></a>O que é um valor retornado por referência?
 
@@ -44,7 +44,7 @@ Há algumas restrições quanto ao valor que um método pode retornar como um va
  
 - O valor retornado não pode ser uma constante, um membro de enumeração ou uma propriedade de um `class` ou `struct`. A tentativa de retornar um deles gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
-Além disso, já que um método assíncrono pode retornar antes de sua execução ser concluída e seu valor retornado é conhecido, os valores retornados por referência não são permitidos em métodos `async`.
+Além disso, como um método assíncrono pode ser retornado antes de sua execução ser concluída, embora seu valor retornado ainda seja desconhecido, os valores retornados de referência não são permitidos em métodos assíncronos.
  
 ## <a name="defining-a-ref-return-value"></a>Definindo um valor retornado ref
 
