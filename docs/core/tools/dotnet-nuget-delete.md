@@ -1,28 +1,26 @@
 ---
-title: "Comando dotnet-nuget-delete – CLI do .NET Core"
+title: "Comando dotnet nuget delete – CLI do .NET Core"
 description: O comando dotnet-nuget-delete exclui ou retira da lista um pacote do servidor.
-keywords: dotnet-nuget-delete, CLI, comando da CLI, .NET Core
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ce6886f2f4cc8cc633cfc61215fe17550f746c91
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 65fe52f07ed823b4f7518c5b1f2da1f7a61b0371
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-# <a name="dotnet-nuget-delete"></a>dotnet-nuget delete
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-nuget-delete` – Exclui ou retira da lista um pacote do servidor.
+`dotnet nuget delete` – Exclui ou retira da lista um pacote do servidor.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -46,7 +44,7 @@ Versão do pacote a ser excluído.
 
 `-h|--help`
 
-Imprime uma ajuda breve para o comando.  
+Imprime uma ajuda breve para o comando.
 
 `-s|--source <SOURCE>`
 
@@ -73,4 +71,3 @@ Exclui a versão 1.0 do pacote `Microsoft.AspNetCore.Mvc`:
 Exclui a versão 1.0 do pacote `Microsoft.AspNetCore.Mvc`, não solicita ao usuário credenciais ou outra entrada:
 
 `dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive`
-

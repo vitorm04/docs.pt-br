@@ -1,32 +1,40 @@
 ---
-title: "Comando dotnet-clean – CLI do .NET Core"
-description: "O comando dotnet-clean limpa o diretório atual."
-keywords: dotnet-clean, CLI, comando da CLI, .NET Core
-author: blackdwarf
+title: "Comando dotnet clean – CLI do .NET Core"
+description: "O comando dotnet clean limpa o diretório atual."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 4836f07ec1a8b59c343b4d0181587e602f61d45e
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="dotnet-clean"></a>dotnet-clean
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-clean` – limpa a saída de um projeto. 
+`dotnet clean` – limpa a saída de um projeto.
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet clean [<PROJECT>] [-o|--output] [-f|--framework] [-c|--configuration] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+```
+dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [-h|--help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
+dotnet clean [-h|--help]
+```
+---
 
 ## <a name="description"></a>Descrição
 
@@ -40,6 +48,16 @@ O projeto do MSBuild a ser limpo. Se um arquivo de projeto não for especificado
 
 ## <a name="options"></a>Opções
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+Define a configuração da compilação. O valor padrão é `Debug`. Essa opção só será exigida na limpeza se você especificá-la durante o momento do build.
+
+`-f|--framework <FRAMEWORK>`
+
+A [estrutura](../../standard/frameworks.md) que foi especificada no momento da compilação. A estrutura precisa ser definida no [arquivo de projeto](csproj.md). Se você especificou a estrutura no momento da compilação, especifique a estrutura ao limpar.
+
 `-h|--help`
 
 Imprime uma ajuda breve para o comando.
@@ -48,17 +66,37 @@ Imprime uma ajuda breve para o comando.
 
 O diretório no qual as saídas compiladas são colocadas. Especifique a opção `-f|--framework <FRAMEWORK>` com a opção de diretório de saída se você tiver especificado a estrutura durante a compilação do projeto.
 
-`-f|--framework <FRAMEWORK>`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
-A [estrutura](../../standard/frameworks.md) que foi especificada no momento da compilação. A estrutura precisa ser definida no [arquivo de projeto](csproj.md). Se você especificou a estrutura no momento da compilação, especifique a estrutura ao limpar.
-
-`-c|--configuration <CONFIGURATION>`
-
-Define a configuração. Se omitido, o padrão é `Debug`. Essa propriedade só será exigida na limpeza se você especificá-la durante o momento de compilação.
+Limpa a pasta de saída do tempo de execução especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#self-contained-deployments-scd) foi criada.
 
 `-v|--verbosity <LEVEL>`
 
 Define o nível de detalhes do comando. Os níveis permitidos são q[uiet], m[inimal], n[ormal], d[etailed] e diag[nostic].
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+Define a configuração da compilação. O valor padrão é `Debug`. Essa opção só será exigida na limpeza se você especificá-la durante o momento do build.
+
+`-f|--framework <FRAMEWORK>`
+
+A [estrutura](../../standard/frameworks.md) que foi especificada no momento da compilação. A estrutura precisa ser definida no [arquivo de projeto](csproj.md). Se você especificou a estrutura no momento da compilação, especifique a estrutura ao limpar.
+
+`-h|--help`
+
+Imprime uma ajuda breve para o comando.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+O diretório no qual as saídas compiladas são colocadas. Especifique a opção `-f|--framework <FRAMEWORK>` com a opção de diretório de saída se você tiver especificado a estrutura durante a compilação do projeto.
+
+`-v|--verbosity <LEVEL>`
+
+Define o nível de detalhes do comando. Os níveis permitidos são q[uiet], m[inimal], n[ormal], d[etailed] e diag[nostic].
+
+---
 
 ## <a name="examples"></a>Exemplos
 

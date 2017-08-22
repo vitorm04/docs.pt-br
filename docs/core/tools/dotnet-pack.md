@@ -1,36 +1,46 @@
 ---
-title: "Comando dotnet-pack – CLI do .NET Core"
-description: O comando dotnet-pack cria pacotes NuGet para seu projeto .NET Core.
-keywords: dotnet-pack, CLI, comando da CLI, .NET Core
-author: blackdwarf
+title: "Comando dotnet pack – CLI do .NET Core"
+description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 04b967fdf6578098caae8c21604c5d6160eb6775
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-pack"></a>dotnet pack
 
-# <a name="dotnet-pack"></a>dotnet-pack
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-pack` – Empacota o código em um pacote NuGet.
+`dotnet pack` – Empacota o código em um pacote NuGet.
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet pack [<PROJECT>] [-o|--output] [--no-build] [--include-symbols] [--include-source] [-c|--configuration] [--version-suffix <VERSION_SUFFIX>] [-s|--serviceable] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+```
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [-h|--help]
+```
+---
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote do NuGet. Se a opção `--include-symbols` estiver presente, outro pacote que contém os símbolos de depuração será criado. 
+O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote do NuGet. Se a opção `--include-symbols` estiver presente, outro pacote que contém os símbolos de depuração será criado.
 
 As dependências do NuGet do projeto empacotado são adicionadas ao arquivo *.nuspec* para que possam ser resolvidas apropriadamente quando o pacote for instalado. As referências de projeto a projeto não são empacotadas dentro do projeto. No momento, você precisa ter um pacote por projeto se tiver dependências de projeto a projeto.
 
@@ -40,47 +50,103 @@ Você pode fornecer as propriedades de MSBuild para o comando `dotnet pack` para
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT` 
-    
-O projeto a ser empacotado. Pode ser um caminho para um [arquivo csproj](csproj.md) ou para um diretório. Se for omitido, o padrão será o diretório atual. 
+`PROJECT`
+
+O projeto a ser empacotado. Pode ser um caminho para um [arquivo csproj](csproj.md) ou para um diretório. Se for omitido, o padrão será o diretório atual.
 
 ## <a name="options"></a>Opções
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+`-c|--configuration {Debug|Release}`
+
+Define a configuração da compilação. O valor padrão é `Debug`.
+
+`--force` Forçará todas as dependências a serem resolvidas mesmo se a última restauração tiver sido bem-sucedida. Isso é equivalente a excluir o arquivo *project.assets.json*.
+
 `-h|--help`
 
-Imprime uma ajuda breve para o comando.  
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Coloca os pacotes compilados no diretório especificado. 
-
-`--no-build`
-
-Não compile o projeto antes do empacotamento. 
-
-`--include-symbols`
-
-Gera os símbolos `nupkg`. 
+Imprime uma ajuda breve para o comando.
 
 `--include-source`
 
-Inclui os arquivos de origem no pacote do NuGet. Os arquivos de origem são incluídos na pasta `src` dentro de `nupkg`. 
+Inclui os arquivos de origem no pacote do NuGet. Os arquivos de origem são incluídos na pasta `src` dentro de `nupkg`.
 
-`-c|--configuration <CONFIGURATION>`
+`--include-symbols`
 
-Configuração a ser usada ao compilar o projeto. Se não for especificado, a configuração assumirá o padrão de `Debug`.
+Gera os símbolos `nupkg`.
 
-`--version-suffix <VERSION_SUFFIX>`
+`--no-build`
 
-Define o valor da propriedade do MSBuild `$(VersionSuffix)` no projeto.
+Não compila o projeto antes do empacotamento.
+
+`--no-dependencies`
+
+Ignora as referências projeto a projeto e só restaura o projeto raiz.
+
+`--no-restore`
+
+Não executa uma restauração implícita ao executar o comando.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Coloca os pacotes compilados no diretório especificado.
+
+`-r|--runtime <RUNTIME_IDENTIFIER>`
+
+Especifica o tempo de execução de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
 
 `-s|--serviceable`
 
 Define o sinalizador operacional no pacote. Para saber mais, veja [Blog do .NET: .NET 4.5.1 oferece suporte às Atualizações de segurança da Microsoft para Bibliotecas do .NET NuGet](https://aka.ms/nupkgservicing).
 
-`--verbosity <LEVEL>`
+`--version-suffix <VERSION_SUFFIX>`
+
+Define o valor da propriedade do MSBuild `$(VersionSuffix)` no projeto.
+
+`-v|--verbosity <LEVEL>`
 
 Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-c|--configuration {Debug|Release}`
+
+Define a configuração da compilação. O valor padrão é `Debug`.
+
+`-h|--help`
+
+Imprime uma ajuda breve para o comando.
+
+`--include-source`
+
+Inclui os arquivos de origem no pacote do NuGet. Os arquivos de origem são incluídos na pasta `src` dentro de `nupkg`.
+
+`--include-symbols`
+
+Gera os símbolos `nupkg`.
+
+`--no-build`
+
+Não compila o projeto antes do empacotamento.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Coloca os pacotes compilados no diretório especificado.
+
+`-s|--serviceable`
+
+Define o sinalizador operacional no pacote. Para saber mais, veja [Blog do .NET: .NET 4.5.1 oferece suporte às Atualizações de segurança da Microsoft para Bibliotecas do .NET NuGet](https://aka.ms/nupkgservicing).
+
+`--version-suffix <VERSION_SUFFIX>`
+
+Define o valor da propriedade do MSBuild `$(VersionSuffix)` no projeto.
+
+`-v|--verbosity <LEVEL>`
+
+Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Exemplos
 

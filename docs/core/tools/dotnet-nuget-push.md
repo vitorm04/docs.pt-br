@@ -1,28 +1,26 @@
 ---
-title: "Comando dotnet-nuget-push – CLI do .NET Core"
-description: O comando dotnet-nuget-push envia um pacote ao servidor e os publica.
-keywords: dotnet-nuget-push, CLI, comando da CLI, .NET Core
+title: "Comando dotnet nuget push – CLI do .NET Core"
+description: O comando dotnet nuget push efetua push de um pacote no servidor e o publica.
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 83da967d9d7432fcb422b88344ff597d45fc9e85
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-# <a name="dotnet-nuget-push"></a>dotnet-nuget push
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-nuget push` – Envia um pacote ao servidor e os publica.
+`dotnet nuget push` – Envia um pacote ao servidor e os publica.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -42,7 +40,7 @@ Especifique o caminho até o pacote e sua chave de API para enviar o pacote por 
 
 `-h|--help`
 
-Imprime uma ajuda breve para o comando.  
+Imprime uma ajuda breve para o comando.
 
 `-s|--source <SOURCE>`
 
@@ -84,11 +82,11 @@ Envia por push *foo.nupkg* à origem de push padrão, fornecendo uma chave de AP
 
 Envia por push *foo.nupkg* à origem de push personalizada `http://customsource`, fornecendo uma chave de API:
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/` 
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
 Envia por push *foo.nupkg* à origem de push padrão:
 
-`dotnet nuget push foo.nupkg` 
+`dotnet nuget push foo.nupkg`
 
 Envia por push *foo.nupkg* à origem de símbolos padrão:
 
