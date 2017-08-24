@@ -46,7 +46,7 @@ Uma instrução `foreach` repete um grupo de instruções inseridas para cada el
   
  Em qualquer ponto dentro do bloco `foreach`, você pode sair do loop usando a palavra-chave [break](../../../csharp/language-reference/keywords/break.md) ou seguir para a próxima iteração no loop, usando a palavra-chave [continue](../../../csharp/language-reference/keywords/continue.md).  
   
- Um loop `foreach` também pode ser encerrado pelas instruções [goto](../../../csharp/language-reference/keywords/goto.md), [retorn](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
+ Um loop `foreach` também pode ser encerrado pelas instruções [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
   
  Para obter mais informações sobre a palavra-chave `foreach` e exemplos de códigos, consulte os seguintes tópicos:  
   
