@@ -1,5 +1,5 @@
 ---
-title: "Visão geral do Dynamic Language Runtime | Microsoft Docs"
+title: "Visão geral do Dynamic Language Runtime"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-language-runtime-overview"></a>Visão geral do Dynamic Language Runtime
@@ -60,7 +60,7 @@ O DLR (*Dynamic Language Runtime*) é um ambiente de tempo de execução que adi
   
  Exemplos de linguagens desenvolvidos usando o DLR incluem:  
   
--   IronPython. Disponível como um software livre no site da Web do [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040).  
+-   IronPython. Disponível como um software livre no site [GitHub](https://github.com/IronLanguages/ironpython2).  
   
 -   IronRuby. Disponível como um software livre no site da Web do [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044).  
   
@@ -85,7 +85,7 @@ O DLR (*Dynamic Language Runtime*) é um ambiente de tempo de execução que adi
 ## <a name="dlr-architecture"></a>Arquitetura do DLR  
  A ilustração a seguir mostra a arquitetura do dynamic language runtime.  
   
- ![Visão geral da arquitetura do Dynamic Language Runtime](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
+ ![Dynamic Language Runtime Architecture Overview (Visão geral da arquitetura do Dynamic Language Runtime)](../../../docs/framework/reflection-and-codedom/media/dlr-archoverview.png "DLR_ArchOverview")  
 Arquitetura do DLR  
   
  O DLR agrega um conjunto de serviços ao CLR para melhorar o suporte a linguagens dinâmicas. Tais serviços incluem os seguintes:  
@@ -107,3 +107,4 @@ Arquitetura do DLR
  [Common Language Runtime](../../../docs/standard/clr.md)   
  [Árvores de Expressão](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [Passo a passo: Criando e usando objetos dinâmicos](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

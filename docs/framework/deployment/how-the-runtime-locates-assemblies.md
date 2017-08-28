@@ -1,5 +1,5 @@
 ---
-title: "Como o tempo de execução localiza assemblies | Microsoft Docs"
+title: "Como o tempo de execução localiza assemblies"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 78805f7139bff90127885af267c8ade9090fbd62
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
@@ -48,7 +48,7 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
   
  Você também pode fazer uma referência dinâmica a um assembly fornecendo o método de chamada apenas com informações parciais sobre o assembly, como especificando apenas o nome do assembly. Nesse caso, somente o diretório do aplicativo é pesquisado par ao assembly e não ocorre nenhuma outra verificação. Você faz uma referência parcial usando qualquer um dos vários métodos para carregar assemblies como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> ou <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
   
- Por fim, você pode fazer uma referência dinâmica usando um método como [System.Reflection.Assembly.Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) e fornecer apenas uma informação parcial. Em seguida, você qualifica a referência usando o elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) no arquivo de configuração de aplicativo. Esse elemento permite que você forneça as informações de referência completa (nome, versão, cultura e, se aplicável, o token de chave pública) em seu arquivo de configuração de aplicativo em vez de no seu código. Você usaria essa técnica se desejasse qualificar completamente uma referência a um assembly fora do diretório do aplicativo ou se desejasse referenciar um assembly no cache de assembly global, mas quisesse a conveniência de especificar a referência completa no arquivo de configuração em vez de no código.  
+ Por fim, você pode fazer uma referência dinâmica usando um método como <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> e fornecer apenas uma informação parcial. Em seguida, você qualifica a referência usando o elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) no arquivo de configuração de aplicativo. Esse elemento permite que você forneça as informações de referência completa (nome, versão, cultura e, se aplicável, o token de chave pública) em seu arquivo de configuração de aplicativo em vez de no seu código. Você usaria essa técnica se desejasse qualificar completamente uma referência a um assembly fora do diretório do aplicativo ou se desejasse referenciar um assembly no cache de assembly global, mas quisesse a conveniência de especificar a referência completa no arquivo de configuração em vez de no código.  
   
 > [!NOTE]
 >  Esse tipo de referência parcial não deve ser usado com assemblies que são compartilhados entre vários aplicativos. Como as definições de configuração são aplicadas por aplicativo e não por assembly, um assembly compartilhado usando esse tipo de referência parcial exigiria que cada aplicativo usando o assembly compartilhado tivesse as informações de qualificação no seu arquivo de configuração.  
@@ -265,3 +265,4 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="see-also"></a>Consulte também  
  [Práticas recomendadas para carregamento de assemblies](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
  [Implantação](../../../docs/framework/deployment/index.md)
+
