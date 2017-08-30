@@ -193,16 +193,18 @@ static void DoIfAorB()
   
  Para alcançar o efeito da vinculação lógica de símbolos usando o operador AND, você pode definir métodos condicionais em série. Por exemplo, o segundo método abaixo será executado somente se `A` e `B` estiverem definidos:  
   
-```csharp  
-<Conditional("A")>   
-Shared Sub DoIfA()  
-    DoIfAandB()  
-End Sub  
+```csharp
+[Conditional("A")]  
+static void DoIfA()  
+{  
+    DoIfAandB();  
+}  
   
-<Conditional("B")>   
-Shared Sub DoIfAandB()  
-    ' Code to execute when both A and B are defined...  
-End Sub  
+[Conditional("B")]  
+static void DoIfAandB()  
+{  
+    // Code to execute when both A and B are defined...  
+}  
 ```  
   
 ### <a name="using-conditional-with-attribute-classes"></a>Usando condicional com classes de atributos  
