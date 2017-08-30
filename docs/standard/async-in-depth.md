@@ -1,6 +1,6 @@
 ---
 title: Assincronia detalhada
-description: "Explicação detalhada de como o código assíncrono funciona no .NET"
+description: "Saiba como escrever código assíncrono associado à CPU ou à E/S é simples usando o modelo assíncrono baseado em tarefas do .NET."
 keywords: .NET, .NET Core, .NET Standard
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: 88492a5db66977f3b914123aa8489c079aff59c5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="async-in-depth"></a>Assincronia detalhada
 
-Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o modelo assíncrono baseado em Tarefas do .NET. O modelo é exposto pelos tipos `Task` e `Task<T>` e as palavras-chave de linguagem `async` e `await`. Este artigo explica como usar a assincronia do .NET e fornece informações sobre a estrutura de assincronia usada nos bastidores.
+Escrever código assíncrono vinculado à CPU ou à E/S é simples usando o modelo assíncrono baseado em Tarefas do .NET. O modelo é exposto pelos tipos `Task` e `Task<T>` e pelas palavras-chave `async` e `await` no C# e no Visual Basic. (Recursos específicos a um idioma podem ser encontrados na seção [Consulte também](#see-also)). Este artigo explica como usar a assincronia do .NET e fornece informações sobre a estrutura de assincronia usada nos bastidores.
 
 ## <a name="task-and-tasklttgt"></a>Task e Task&lt;T&gt;
 
@@ -32,9 +33,9 @@ Tarefas são constructos usados para implementar o que é conhecido como o [mode
 
 As tarefas expõem um protocolo de API para monitoramento, aguardando e acessando o valor do resultado (no caso de `Task<T>`) de uma tarefa. A integração de linguagem, com a palavra-chave `await`, fornece uma abstração de nível mais alto para o uso de tarefas. 
 
-O uso de `await` permite que seu aplicativo ou serviço realize um trabalho útil enquanto uma tarefa estiver em execução gerando o controle para seu chamador até que a tarefa seja concluída. Seu código não precisa contar com retornos de chamada ou eventos para continuar a execução após a tarefa ter sido concluída. A integração da API da tarefa e da linguagem faz isso para você. Se você estiver usando `Task<T>`, a palavra-chave `await` “desencapsulará” adicionalmente o valor retornado quando a tarefa for concluída.  Os detalhes de como isso funciona são explicados mais abaixo.
+O uso de `await` permite que seu aplicativo ou serviço realize um trabalho útil enquanto uma tarefa estiver em execução gerando o controle para seu chamador até que a tarefa seja concluída. Seu código não precisa contar com retornos de chamada ou eventos para continuar a execução após a tarefa ter sido concluída. A integração da API da tarefa e da linguagem faz isso para você. Se você estiver usando `Task<T>`, a palavra-chave `await` "desencapsulará" adicionalmente o valor retornado quando a Tarefa for concluída.  Os detalhes de como isso funciona são explicados mais abaixo.
 
-Você pode aprender mais sobre as tarefas e as diferentes maneiras de interagir com elas no [artigo Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) (TAP (Padrão Assíncrono Baseado em Tarefa)).
+Você pode aprender mais sobre as tarefas e as diferentes maneiras de interagir com elas no tópico [Padrão assíncrono baseado em tarefa (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Aprofundamento em tarefas para uma operação vinculada à E/S
 
@@ -45,7 +46,7 @@ O primeiro exemplo chama um método assíncrono e retorna uma tarefa ativa, prov
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -147,3 +148,10 @@ Uma vez que `await` é encontrado, a execução de `CalculateResult()` é gerada
 ### <a name="why-does-async-help-here"></a>Por que a assincronia ajuda aqui?
 
 `async` e `await` são a melhor prática para gerenciar o trabalho vinculado à CPU quando você precisar de capacidade de resposta. Existem vários padrões para usar a assincronia com o trabalho vinculado à CPU. É importante observar que há um pequeno custo para usar a assincronia e não é recomendado para loops estreitos.  Cabe a você determinar como escrever seu código em torno dessa nova capacidade.
+
+## <a name="see-also"></a>Consulte também
+
+[Programação assíncrona em C#](~/docs/csharp/async.md)   
+[Programação assíncrona em F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
+[Programação assíncrona com Async e Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

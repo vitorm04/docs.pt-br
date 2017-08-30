@@ -1,6 +1,6 @@
 ---
 title: Interoperabilidade nativa
-description: Interoperabilidade nativa
+description: Saiba como fazer interface com componentes nativos no .NET.
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-translationtype: Human Translation
-ms.sourcegitcommit: d18b21b67c154c4a8cf8211aa5d1473066c53656
-ms.openlocfilehash: 13a4e4e7a588d55e82c5c4cde8f825c3b4502bb4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="native-interoperability"></a>Interoperabilidade nativa
 
-Neste documento, encontraremos mais detalhes sobre as três maneiras de fazer “interoperabilidade nativa” que estão disponíveis na plataforma .NET.
+Neste documento, encontraremos mais detalhes sobre as três maneiras de fazer "interoperabilidade nativa" que estão disponíveis com o uso do .NET.
 
 Existem alguns motivos para chamar em código nativo:
 
@@ -30,7 +31,7 @@ Existem alguns motivos para chamar em código nativo:
 Evidentemente, a lista acima não abrange todas as possíveis situações e cenários em que o desenvolvedor desejaria/gostaria de/precisaria fazer interface com componentes nativos. A biblioteca de classes do .NET, por exemplo, usa o suporte para interoperabilidade nativa para implementar um número razoável de APIs, como suporte ao console e manipulação, acesso ao sistema de arquivos e outras. No entanto, é importante observar que há uma opção, se necessário.
 
 > [!NOTE]
-> A maioria dos exemplos deste documento será apresentada para todas as três plataformas com suporte para .NET Core (Windows, Linux e macOS). No entanto, para alguns exemplos ilustrativos e curtos, é exibida apenas uma amostra que usa nomes de arquivo e extensões do Windows (ou seja, “dll” para bibliotecas). Isso não significa que tais recursos não estão disponíveis em Linux ou macOS; foi feito simplesmente para maior conveniência.
+> A maioria dos exemplos deste documento será apresentada para todas as três plataformas com suporte para .NET Core (Windows, Linux e macOS). No entanto, para alguns exemplos ilustrativos e curtos, é exibida apenas uma amostra que usa nomes de arquivo e extensões do Windows (ou seja, "dll" para bibliotecas). Isso não significa que tais recursos não estão disponíveis em Linux ou macOS; foi feito simplesmente para maior conveniência.
 
 ## <a name="platform-invoke-pinvoke"></a>Invocação de plataforma (P/Invoke)
 
@@ -53,7 +54,6 @@ public class Program {
         MessageBox(IntPtr.Zero, "Command-line message box", "Attention!", 0);
     }
 }
-
 ```
 
 O exemplo acima é muito simples, mas mostra o que é necessário para invocar funções não gerenciadas do código gerenciado. Vamos analisar o exemplo:
@@ -84,7 +84,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 É semelhante no Linux, evidentemente. O nome da função é o mesmo, já que `getpid(2)` é uma chamada do sistema [POSIX](https://en.wikipedia.org/wiki/POSIX).
@@ -107,7 +106,6 @@ namespace PInvokeSamples {
         }
     }
 }
-
 ```
 
 ### <a name="invoking-managed-code-from-unmanaged-code"></a>Chamando código gerenciado do código não gerenciado
@@ -130,7 +128,7 @@ namespace ConsoleApplication1 {
         // Import user32.dll (containing the function we need) and define
         // the method corresponding to the native function.
         [DllImport("user32.dll")]
-        static extern int EnumWindows(EnumWC hWnd, IntPtr lParam);
+        static extern int EnumWindows(EnumWC lpEnumFunc, IntPtr lParam);
 
         // Define the implementation of the delegate; here, we simply output the window handle.
         static bool OutputWindow(IntPtr hwnd, IntPtr lParam) {
@@ -144,7 +142,6 @@ namespace ConsoleApplication1 {
         }
     }
 }
-
 ```
 
 Antes de analisarmos nosso exemplo, é bom examinar as assinaturas das funções não gerenciadas com as quais precisamos trabalhar. A função que desejamos chamar para enumerar todas as janelas tem esta assinatura: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
@@ -208,7 +205,6 @@ namespace PInvokeSamples {
             public long TimeLastStatusChange;
     }
 }
-
 ```
 
 O exemplo do macOS usa a mesma função; a única diferença é o argumento para o atributo `DllImport`, pois o macOS mantém `libc` em um local diferente.
@@ -261,21 +257,19 @@ namespace PInvokeSamples {
                 public long TimeLastStatusChange;
         }
 }
-
 ```
 
-Os exemplos acima dependem de parâmetros e, em ambos os casos, os parâmetros são fornecidos como tipos gerenciados. O tempo de execução faz a “coisa certa” e processa em equivalentes no outro lado. Como esse processo é realmente importante para escrever código de interoperabilidade nativa de qualidade, vamos ver o que acontece quando o tempo de execução _realiza marshalling_ dos tipos.
+Os exemplos acima dependem de parâmetros e, em ambos os casos, os parâmetros são fornecidos como tipos gerenciados. O tempo de execução faz a "coisa certa" e processa esses parâmetros em seus equivalentes no outro lado. Como esse processo é realmente importante para escrever código de interoperabilidade nativa de qualidade, vamos ver o que acontece quando o tempo de execução _realiza marshalling_ dos tipos.
 
 ## <a name="type-marshalling"></a>Marshalling dos tipos
 
 **Marshalling** é o processo de transformar tipos quando precisam atravessar o limite gerenciado para nativo e vice-versa.
 
-O marshalling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem um `String`; no mundo não gerenciado, as cadeias de caracteres podem ser Unicode (“horizontais”), não Unicode, finalizadas com null, ASCII, etc. Por padrão, o subsistema do P/Invoke tentará fazer a coisa certa com base no comportamento padrão que você pode ver no [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo `MarshalAs` para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se quisermos que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI finalizada com null, poderemos fazer o seguinte:
+O marshalling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem uma `String`; no mundo não gerenciado, as cadeias de caracteres podem ser Unicode ("larga"), não Unicode, terminada em nulo, ASCII, etc. Por padrão, o subsistema do P/Invoke tentará fazer a coisa certa com base no comportamento padrão que você pode ver no [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo `MarshalAs` para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se quisermos que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI finalizada com null, poderemos fazer o seguinte:
 
 ```csharp
-[DllImport("somenativelibrary.dll"]
+[DllImport("somenativelibrary.dll")]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
-
 ```
 
 ### <a name="marshalling-classes-and-structs"></a>Marshalling de classes e structs
@@ -303,10 +297,9 @@ public static void Main(string[] args) {
     GetSystemTime(st);
     Console.WriteLine(st.Year);
 }
-
 ```
 
-O exemplo acima mostra um exemplo simples de chamar para a função `GetSystemTime()`. A parte interessante está na linha 4\. O atributo especifica que os campos da classe devem apontar em sequência para o struct no outro lado (não gerenciado). Isso significa que os nomes dos campos não são importantes, apenas sua ordem é importante, já que precisa corresponder ao struct não gerenciado, mostrado abaixo:
+O exemplo acima mostra um exemplo simples de chamar para a função `GetSystemTime()`. A parte interessante está na linha 4. O atributo especifica que os campos da classe devem ser mapeados em sequência até o struct no outro lado (não gerenciado). Isso significa que os nomes dos campos não são importantes, apenas sua ordem é importante, já que precisa corresponder ao struct não gerenciado, mostrado abaixo:
 
 ```c
 typedef struct _SYSTEMTIME {
@@ -319,7 +312,6 @@ typedef struct _SYSTEMTIME {
   WORD wSecond;
   WORD wMilliseconds;
 } SYSTEMTIME, *PSYSTEMTIME*;
-
 ```
 
 Já vimos o exemplo de Linux e macOS no exemplo anterior. Ele é mostrado novamente abaixo.
@@ -341,7 +333,6 @@ public class StatClass {
         public long TimeLastModification;
         public long TimeLastStatusChange;
 }
-
 ```
 
 A classe `StatClass` representa uma estrutura que é retornada pela chamada do sistema `stat` em sistemas UNIX. Representa informações sobre um arquivo específico. A classe acima é a representação de struct stat no código gerenciado. Novamente, os campos na classe precisam estar na mesma ordem que o struct nativo (você pode encontrá-los analisando páginas do manual na sua implementação de UNIX favorita) e precisam ser do mesmo tipo subjacente.

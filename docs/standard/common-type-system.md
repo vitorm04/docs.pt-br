@@ -1,6 +1,6 @@
 ---
 title: Common Type System e Common Language Specification
-description: Common Type System e Common Language Specification
+description: "Saiba como o CTS (Common Type System) e a CLS (Common Language Specification) possibilitam ao .NET dar suporte a várias linguagens."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,25 +10,26 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 1680934b40c3055d2c33ed7457d8734dccbd0a8c
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="common-type-system--common-language-specification"></a>Common Type System e Common Language Specification
 
-Novamente, dois termos que são usados livremente no mundo do .NET, eles realmente são essenciais para compreender como a plataforma do .NET permite o desenvolvimento para várias linguagens e para entender como ela funciona.
+Novamente, dois termos que são usados livremente no mundo do .NET, eles realmente são essenciais para compreender como uma implementação do .NET possibilita o desenvolvimento para várias linguagens e para entender como ela funciona.
 
 ## <a name="common-type-system"></a>Common Type System
 
-Para começar do zero, lembre-se de que a plataforma .NET é _independente de idioma_. Isso não significa apenas que um programador pode escrever seu código em qualquer idioma que pode ser compilada para IL. Isso também significa que ela precisa ser capaz de interagir com o código escrito em outros idiomas que podem ser usados na plataforma do .NET.
+Para começar do zero, lembre-se que uma implementação do .NET é _independente de linguagem_. Isso não significa apenas que um programador pode escrever seu código em qualquer idioma que pode ser compilada para IL. Isso também significa que ela precisa ser capaz de interagir com o código escrito em outras linguagens que podem ser usadas em uma implementação do .NET.
 
 Para fazer isso de forma transparente, deve haver uma maneira comum de descrever todos os tipos com suporte. Isso é o que o CTS (Common Type System) é responsável por fazer. Ele foi feito de várias maneiras:
 
 *   Estabelecer uma estrutura para a execução em qualquer idioma.
-*   Fornecer um modelo orientado a objeto para dar suporte à implementação de vários idiomas na plataforma .NET.
+*   Fornecer um modelo orientado a objetos para dar suporte à implementação de várias linguagens em uma implementação do .NET.
 *   Definir um conjunto de regras que todas as linguagens devem seguir quando se trata de trabalhar com tipos.
 *   Fornecer uma biblioteca que contém os tipos primitivos básicos que são usados no desenvolvimento de aplicativos (por exemplo, `Boolean`, `Byte`, `Char` etc.)
 
@@ -50,9 +51,9 @@ O CTS também define todas as outras propriedades de tipos, como modificadores d
 
 ## <a name="common-language-specification"></a>Common Language Specification
 
-Para habilitar cenários de interoperabilidade completa, todos os objetos que são criados em código devem se basear em alguns pontos em comum nos idiomas que estão consumindo eles (são seus _chamadores_). Como há vários idiomas diferentes, a plataforma .NET especificou essas semelhanças em algo chamado de CLS **(Common Language Specification)**. A CLS define um conjunto de recursos que são necessários para muitos aplicativos comuns. Ela também fornece uma espécie de receita para qualquer idioma que é implementado na plataforma .NET no que precisar dar suporte.
+Para habilitar cenários de interoperabilidade completa, todos os objetos que são criados em código devem se basear em alguns pontos em comum nos idiomas que estão consumindo eles (são seus _chamadores_). Como há várias linguagens diferentes, o .NET especificou essas semelhanças em algo chamado de CLS **(Common Language Specification)**. A CLS define um conjunto de recursos que são necessários para muitos aplicativos comuns. Ela também fornece uma espécie de receita para qualquer linguagem que é implementada no .NET, no que ela precisar dar suporte.
 
-A CLS é um subconjunto do CTS. Isso significa que todas as regras no CTS também se aplicam à CLS, a menos que as regras da CLS sejam mais estritas. Se um componente é criado usando apenas as regras na CLS, ou seja, ele expõe apenas os recursos da CLS em sua API, ele é chamado de **compatível com CLS**. Por exemplo, os `<framework-librares>` são compatíveis com CLS precisamente porque precisam funcionar em todos os idiomas com suporte na plataforma .NET.
+A CLS é um subconjunto do CTS. Isso significa que todas as regras no CTS também se aplicam à CLS, a menos que as regras da CLS sejam mais estritas. Se um componente é criado usando apenas as regras na CLS, ou seja, ele expõe apenas os recursos da CLS em sua API, ele é chamado de **compatível com CLS**. Por exemplo, as `<framework-librares>` estão em conformidade com CLS precisamente porque precisam funcionar em todas as linguagens com suporte no .NET.
 
 Você pode consultar os documentos na seção [Mais recursos](#more-resources) abaixo para obter uma visão geral de todos os recursos na CLS.
 

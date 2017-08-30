@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas do Framework
-description: Bibliotecas do Framework
+description: "Saiba como as bibliotecas fornecem implementações para muitos algoritmos, funcionalidades do utilitário e tipos gerais e específicos do aplicativo."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
-ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
+ms.translationtype: HT
+ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
+ms.openlocfilehash: 9c38237a8e729155c443298814f4c98bec61016b
 ms.contentlocale: pt-br
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -32,33 +32,33 @@ As BCL fornecem a funcionalidade de utilitário e tipos mais básicos e são a b
 
 O .NET inclui um conjunto de tipos primitivos, que são usados (em graus variáveis) em todos os programas. Esses tipos contêm dados, como números, cadeias de caracteres, bytes e objetos arbitrários. A linguagem C# inclui palavras-chave para esses tipos. Um conjunto de amostra desses tipos é listado abaixo, com palavras-chave do C# correspondentes.
 
-* [System.Object](https://msdn.microsoft.com/library/system.object.aspx) ([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)) – a classe base ultimate no sistema de tipos CLR. É a raiz da hierarquia de tipos.
-* [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx) ([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)) – tipo inteiro com sinal de 16 bits. O [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx) sem sinal também existe.
-* [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx) ([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)) – tipo inteiro com sinal de 32 bits. O [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx) sem sinal também existe.
-* [System.Single](https://msdn.microsoft.com/library/system.single.aspx) ([float](https://msdn.microsoft.com/library/b1e65aza.aspx)) – um tipo de ponto flutuante de 32 bits.
-* [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx) ([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)) – um tipo decimal de 128 bits.
-* [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx) ([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)) – um inteiro de 8 bits sem sinal que representa um byte de memória.
-* [System. Boolean](https://msdn.microsoft.com/library/system.boolean.aspx) ([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)) – um tipo booliano representando 'true' ou 'false'.
-* [System.Char](https://msdn.microsoft.com/library/system.char.aspx) ([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)) – um tipo numérico de 16 bits que representa um caractere Unicode.
-* [System.String](https://msdn.microsoft.com/library/system.string.aspx) ([string](https://msdn.microsoft.com/library/362314fe.aspx)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
+* <xref:System.Object?displayProperty=fullName> ([object](../csharp/language-reference/keywords/object.md)) – a classe base ultimate no sistema de tipos CLR. É a raiz da hierarquia de tipos.
+* <xref:System.Int16?displayProperty=fullName> ([short](../csharp/language-reference/keywords/short.md)) – tipo inteiro com sinal de 16 bits. O <xref:System.UInt16> sem sinal também existe.
+* <xref:System.Int32?displayProperty=fullName> ([int](../csharp/language-reference/keywords/int.md)) – um tipo inteiro com sinal de 32 bits. O [UInt32](../csharp/language-reference/keywords/uint.md) sem sinal também existe.
+* <xref:System.Single?displayProperty=fullName> ([float](../csharp/language-reference/keywords/float.md)) – um tipo de ponto flutuante de 32 bits.
+* <xref:System.Decimal?displayProperty=fullName> ([decimal](../csharp/language-reference/keywords/decimal.md)) – um tipo decimal de 128 bits.
+* <xref:System.Byte?displayProperty=fullName> ([byte](../csharp/language-reference/keywords/byte.md)) – um inteiro de 8 bits sem sinal que representa um byte de memória.
+* <xref:System.Boolean?displayProperty=fullName>([bool](../csharp/language-reference/keywords/bool.md)) – um tipo booliano que representa `true` ou `false`.
+* <xref:System.Char?displayProperty=fullName> ([char](../csharp/language-reference/keywords/char.md)) – um tipo numérico de 16 bits que representa um caractere Unicode.
+* <xref:System.String?displayProperty=fullName> ([string](../csharp/language-reference/keywords/string.md)) – representa uma série de caracteres. Diferente de um `char[]`, mas permite a indexação em cada `char` individual em `string`.
 
 ## <a name="data-structures"></a>Estruturas de dados
 
 O .NET inclui um conjunto de estruturas de dados que são fundamentais para quase todos os aplicativos .NET.  Elas são em sua maioria coleções, mas também incluem outros tipos.
 
-*   [Matriz](https://msdn.microsoft.com/library/system.array.aspx) – representa uma matriz de objetos fortemente tipados que podem ser acessados por índice. Tem um tamanho fixo, de acordo com sua construção.
-*   [Lista](https://msdn.microsoft.com/library/6sh2ey19.aspx) – representa uma lista fortemente tipada de objetos que podem ser acessados por índice. É redimensionado automaticamente conforme necessário.
-*   [Dicionário](https://msdn.microsoft.com/library/xfhwa508.aspx) – representa uma coleção de valores que são indexados por uma chave. Os valores podem ser acessados via chave. É redimensionado automaticamente conforme necessário.
-*   [Uri](https://msdn.microsoft.com/library/system.uri.aspx) – fornece uma representação de objeto de um URI (Uniform Resource Identifier) e fácil acesso às partes do URI.
-*   [DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) – representa um momento no tempo, geralmente expresso como uma data e hora do dia.
+*   <xref:System.Array> – representa uma matriz de objetos fortemente tipados que podem ser acessados por índice. Tem um tamanho fixo, de acordo com sua construção.
+*   <xref:System.Collections.Generic.List%601> – representa uma lista fortemente tipada de objetos que podem ser acessados por índice. É redimensionado automaticamente conforme necessário.
+*   <xref:System.Collections.Generic.Dictionary%602> – representa uma coleção de valores que são indexados por uma chave. Os valores podem ser acessados via chave. É redimensionado automaticamente conforme necessário.
+*   <xref:System.Uri> – fornece uma representação de objeto de um URI (Uniform Resource Identifier) e fácil acesso às partes do URI.
+*   <xref:System.DateTime> – representa um momento no tempo, geralmente expresso como uma data e hora do dia.
 
 ## <a name="utility-apis"></a>APIs utilitárias
 
 O .NET inclui um conjunto de APIs utilitárias que fornecem funcionalidade para várias tarefas importantes.
 
-*   [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient.aspx) – uma API para enviar solicitações HTTP e receber respostas HTTP de um recurso identificado por um URI.
-*   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) – Uma API para carregar e consultar documentos XML com o LINQ.
-*   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) – Uma API para ler arquivos ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx) pode ser usado para gravar arquivos).
+*   <xref:System.Net.Http.HttpClient> – uma API para enviar solicitações HTTP e receber respostas HTTP de um recurso identificado por um URI.
+*   <xref:System.Xml.Linq.XDocument> – uma API para carregar e consultar documentos XML com o LINQ.
+*   <xref:System.IO.StreamReader> – uma API para ler arquivos (<xref:System.IO.StringWriter>). Pode ser usada para gravar arquivos.
 
 ## <a name="app-model-apis"></a>APIs do modelo de aplicativo
 
