@@ -3,16 +3,16 @@ title: "Controle de versão do .NET Core"
 description: "Compreenda como o controle de versão do .NET Core funciona."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>Controle de versão do .NET Core
@@ -103,7 +103,7 @@ O .NET Core pode ser distribuído por outras entidades que não a Microsoft. Em 
 
 ##### <a name="preview-versions"></a>Versões prévias
 
-Os mantenedores do pacote podem decidir incluir versões prévias do SDK e do tempo de execução. Não inclua essas versões prévias no pacote `dotnet-sdk` sem controle de versão, mas você pode liberá-las como pacotes com controle de versão com um marcador de versão prévia adicional anexado às seções da versão principal e secundária do nome. Por exemplo, pode haver um pacote `dotnet-sdk-2.0-preview-1-final`.
+Os mantenedores do pacote podem decidir incluir versões prévias do SDK e do tempo de execução. Não inclua essas versões prévias no pacote `dotnet-sdk` sem controle de versão, mas você pode liberá-las como pacotes com controle de versão com um marcador de versão prévia adicional anexado às seções da versão principal e secundária do nome. Por exemplo, pode haver um pacote `dotnet-sdk-2.0-preview1-final`.
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ Quando há várias alterações, o elemento mais alto afetado por alterações i
 
 ### <a name="preview-versions"></a>Versões prévias
 
-As versões prévias têm um `-preview-[number]-([build]|"final")` anexado à versão. Por exemplo, `2.0.0-preview-1-final`.
+As versões prévias têm um `-preview[number]-([build]|"final")` anexado à versão. Por exemplo, `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versões de manutenção
 
