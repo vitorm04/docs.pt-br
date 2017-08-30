@@ -37,10 +37,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4da026d7ad38976565cbaad930652670aed2854
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos nomeados e opcionais (Guia de Programação em C#)
@@ -85,7 +85,7 @@ ms.lasthandoff: 07/28/2017
   
 -   uma expressão da forma `new ValType()`, em que `ValType` é um tipo de valor, como um [enum](../../../csharp/language-reference/keywords/enum.md) ou um [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
   
--   uma expressão da forma [default(ValType)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md), em que `ValType` é um tipo de valor.  
+-   uma expressão da forma [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), em que `ValType` é um tipo de valor.  
   
  Os parâmetros opcionais são definidos no final da lista de parâmetros, depois de todos os parâmetros obrigatórios. Se o chamador fornecer um argumento para qualquer um de uma sucessão de parâmetros opcionais, ele deverá fornecer argumentos para todos os parâmetros opcionais anteriores. Não há suporte para intervalos separados por vírgula na lista de argumentos. Por exemplo, no código a seguir, método de instância `ExampleMethod` está definido com um parâmetro obrigatório e dois opcionais.  
   
