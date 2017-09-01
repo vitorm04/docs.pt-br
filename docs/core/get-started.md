@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.translationtype: HT
-ms.sourcegitcommit: 0dc28adab90f56befc925eb895d00a3cd5966928
-ms.openlocfilehash: 8e3e53c4febd05d8dcd970cea9429a8cce95b7b6
+ms.sourcegitcommit: 1f016b73a375c5ab63bba28accf57c5572d581c8
+ms.openlocfilehash: 694800954134888a511a90f069f55004bb2a2dce
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
@@ -40,7 +40,7 @@ Consulte o tópico de [Desenvolvimento de pré-requisitos para o Windows](window
 
 Instale o .NET Core na sua distribuição/versão:
 
-* [Servidor Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
+* [Red Hat Enterprise Linux 7](https://www.microsoft.com/net/core#linuxredhat)
 * [Ubuntu 14.04, 16.04, 16.10, 17.04 e Linux Mint 17, 18](https://www.microsoft.com/net/core#linuxubuntu)
 * [Debian 8.2+, 8.7+, 9](https://www.microsoft.com/net/core#linuxdebian)
 * [Fedora 24, 25, 26](https://www.microsoft.com/net/core#linuxfedora)

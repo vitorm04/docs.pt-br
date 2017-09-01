@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: e9f122c71330f93e02157e36f9fbbc92a0dddfce
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="dotnet-restore"></a>dotnet restore
@@ -89,7 +89,7 @@ Especifica para não armazenar os pacotes e solicitações HTTP em cache.
 
 `--no-dependencies`
 
-Ao restaurar um projeto com referências de P2P (projeto a projeto), não restaure as referências, apenas o projeto raiz.
+Ao restaurar um projeto com referências de P2P (projeto a projeto), restaura o projeto raiz, não as referências.
 
 `--packages <PACKAGES_DIRECTORY>`
 
@@ -107,7 +107,7 @@ Especifica uma origem de pacote NuGet a ser usada durante a operação de restau
 
 Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--configfile <FILE>`
 
@@ -131,7 +131,7 @@ Especifica para não armazenar os pacotes e solicitações HTTP em cache.
 
 `--no-dependencies`
 
-Ao restaurar um projeto com referências de P2P (projeto a projeto), não restaure as referências, apenas o projeto raiz.
+Ao restaurar um projeto com referências de P2P (projeto a projeto), restaura o projeto raiz, não as referências.
 
 `--packages <PACKAGES_DIRECTORY>`
 
@@ -170,3 +170,4 @@ Restaure as dependências e as ferramentas para o projeto no diretório atual us
 Restaure as dependências e as ferramentas do projeto no diretório atual e mostre apenas a saída mínima:
 
 `dotnet restore --verbosity minimal`
+

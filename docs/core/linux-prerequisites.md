@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: HT
-ms.sourcegitcommit: dd1557d3a43a13c8103c82dfa467aa889fcf3bbb
-ms.openlocfilehash: 2ee303424721b7e1ecb8473c5f957ca929a8742f
+ms.sourcegitcommit: c30888895275ce18628ea341fee2d5a77080b8f6
+ms.openlocfilehash: ff2b85372208e76c6c3becb551c41cdfb275d272
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -82,7 +82,7 @@ As distribuições do CentOS requerem que as seguintes bibliotecas estejam insta
 Os instaladores nativos do .NET Core estão disponíveis para versões/distribuições do Linux com suporte. Os instaladores nativos exigem acesso de administrador (sudo) ao servidor. A vantagem de usar um instalador nativo é que todas as dependências nativas do .NET Core são instaladas. Os instaladores nativos também instalam o SDK do .NET Core em todo o sistema.
 
 No Linux, há duas opções de pacote de instalador: 
-* Usando um gerenciador de pacotes baseado no feed, como apt-get para o Ubuntu ou yum para o CentOS. 
+* Usando um gerenciador de pacotes baseado em feed, como apt-get para Ubuntu ou yum para CentOS/RHEL.
 * Usando os próprios pacotes, DEB ou RPM. 
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Instalações de script com o script do instalador do .NET Core 
@@ -94,15 +94,11 @@ O script bash do instalador é usado em cenários de automação e em instalaç�
 > [!IMPORTANT]
 > Antes de executar o script, instale as [dependências](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) necessárias.
 
-## <a name="install-net-core-dependencies-for-red-hat-enterprise-linux-rhel-7-server"></a>Instalar dependências do .NET Core para o RHEL (Red Hat Enterprise Linux) 7 Server
+## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>Instalar o .NET Core para RHEL (Red Hat Enterprise Linux) 7
 
-> [!Warning]
-> Antes de começar, remova as versões anteriores do .NET Core do seu sistema.
+Para instalar o .NET Core no RHEL 7:
 
-### <a name="verify-and-enable-the-net-channel-for-rhel-7-server"></a>Verificar e habilitar o canal do .NET para o RHEL 7 Server
-Para instalar dependências do .NET Core no RHEL Server:
-
-1. Habilite o canal de .NET do Red Hat, disponível em sua assinatura do RHEL 7 Server. 
+1. Habilite o canal do .NET no Red Hat, disponível em sua assinatura do RHEL 7 Server.
     * Para o Red Hat Enterprise 7 Server, use:
          ```bash
         subscription-manager repos --enable=rhel-7-server-dotnet-rpms
@@ -120,11 +116,42 @@ Para instalar dependências do .NET Core no RHEL Server:
     ```bash
     yum install scl-utils
     ```
-3. Instale o .NET Core 1.1 (e todas as dependências):
-    ```bash
-    yum install rh-dotnetcore11
-    scl enable rh-dotnetcore11 bash
-    ```
+3. Instale o .NET Core
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+Instale o SDK e o tempo de execução do .NET Core 2.0:
+```bash
+yum install rh-dotnet20
+```
+Habilite o SDK/tempo de execução do .NET Core 2.0 para o seu ambiente:
+```bash
+scl enable rh-dotnet20 bash
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**.NET Core 1.1**
+
+Instale o SDK e o tempo de execução do .NET Core 1.1:
+```bash
+yum install rh-dotnetcore11
+```
+Habilite o SDK e o tempo de execução do .NET Core 1.1 para o seu ambiente:
+```bash
+scl enable rh-dotnetcore11 bash
+```
+
+**.NET Core 1.0**
+
+Instale o SDK e o tempo de execução do .NET Core 1.0:
+```bash
+yum install rh-dotnetcore10
+```
+Habilite o SDK e o tempo de execução do .NET Core 1.0 para o seu ambiente:
+```bash
+scl enable rh-dotnetcore10 bash
+```
+---
 4. Execute o comando `dotnet --help` para comprovar que a instalação foi bem-sucedida.
 
      ```bash

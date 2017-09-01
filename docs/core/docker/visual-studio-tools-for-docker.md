@@ -11,10 +11,10 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 ms.translationtype: HT
-ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
-ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 113d470a55fd92704de0e6def392a6e0a1a3a118
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
@@ -24,12 +24,14 @@ O [Microsoft Visual Studio 2017](https://www.visualstudio.com/) com [Docker para
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
+- [Microsoft Visual Studio 2017](https://www.visualstudio.com/) com carga de trabalho do .NET Core
 - [Docker para Windows](https://docs.docker.com/docker-for-windows/install/)
 
 ## <a name="installation-and-setup"></a>Instalação e configuração
 
-Instale o [Microsoft Visual Studio 2017](https://www.visualstudio.com/) com a carga de trabalho do .NET Core. Examine as informações em [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker para Windows: o que saber antes de instalar) e instale o [Docker para Windows](https://docs.docker.com/docker-for-windows/install/).
+Instale o [Microsoft Visual Studio 2017](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio) com a carga de trabalho do .NET Core.
+
+Para a instalação do Docker, examine as informações em [Docker for Windows: What to know before you install](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) (Docker para Windows: o que saber antes de instalar) e instale o [Docker para Windows](https://docs.docker.com/docker-for-windows/install/).
 
 É uma configuração necessária para instalação de **[Unidades Compartilhadas](https://docs.docker.com/docker-for-windows/#shared-drives)** no Docker para Windows. A configuração é necessária para o mapeamento do volume e suporte à depuração.
 
