@@ -11,10 +11,10 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
-ms.openlocfilehash: 88492a5db66977f3b914123aa8489c079aff59c5
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -29,7 +29,7 @@ Tarefas são constructos usados para implementar o que é conhecido como o [mode
 *   `Task` representa uma única operação que não retorna um valor.
 *   `Task<T>` representa uma única operação que retorna um valor do tipo `T`.
 
-É importante pensar nas tarefas como abstrações do trabalho ocorrendo de maneira assíncrona e *não* uma abstração de threading. Por padrão, as tarefas são executadas no thread atual e delegam o trabalho para o sistema operacional, conforme apropriado. Opcionalmente, as tarefas podem ser explicitamente solicitadas a serem executadas em um thread separado por meio da API `Task.Run`.
+É importante pensar nas tarefas como abstrações do trabalho ocorrendo de maneira assíncrona e *não* uma abstração de threading. Por padrão, as tarefas são executadas no thread atual e delegam o trabalho para o sistema operacional, conforme apropriado. Opcionalmente, as tarefas podem ser solicitadas explicitamente para serem executadas em um thread separado por meio da API `Task.Run`.
 
 As tarefas expõem um protocolo de API para monitoramento, aguardando e acessando o valor do resultado (no caso de `Task<T>`) de uma tarefa. A integração de linguagem, com a palavra-chave `await`, fornece uma abstração de nível mais alto para o uso de tarefas. 
 
