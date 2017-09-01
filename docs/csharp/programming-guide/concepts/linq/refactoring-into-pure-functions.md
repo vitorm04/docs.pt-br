@@ -1,27 +1,23 @@
 ---
 title: "Refatoração em funções puras (C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e3bb704cab77d4ad9895624bf7f721920000378
+ms.sourcegitcommit: 9bb17207ba72bb22f5d6db55e9d1bd77e3013445
+ms.openlocfilehash: 2bce781df80a777203ed8e713bedf83f1c7779a8
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refatoração em funções puras (C#)
+
 Um aspecto importante de transformações e puras é aprender como o código do refatorar usando funções puras.  
   
 > [!NOTE]
@@ -95,7 +91,7 @@ public class Program
 >  Para tipos de referência, se você passa um parâmetro por valor, ele resulta em uma cópia de referência a um objeto que está sendo passado. Esta cópia ainda está associada com os mesmos dados de instância que a referência original (até que a variável de referência é atribuído a um novo objeto). a Atendimento-por- referência não necessariamente é necessária para uma função modifique um parâmetro.  
   
 ### <a name="pure-function"></a>Função pura  
- Seguir essa versão de hows de programa como implementar a função de `HypenatedConcat` como uma função pura.  
+Esta próxima versão do programa mostra como implementar a função `HypenatedConcat` como uma função pura.  
   
 ```csharp  
 class Program  

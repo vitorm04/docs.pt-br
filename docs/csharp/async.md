@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -128,7 +128,7 @@ Os exemplos a seguir demonstram várias maneiras para escrever código assíncro
 Este trecho de código baixa o HTML de www.dotnetfoundation.org e conta o número de vezes que a cadeia de caracteres ".NET" ocorre no HTML.  Ele usa o ASP.NET MVC para definir um método do controlador da Web que realiza essa tarefa, retornando o número.
 
 > [!NOTE]
-> Você nunca deve usar expressões regulares se planeja fazer a análise de HTML real.  Use uma biblioteca de análise se esse for seu objetivo no código de produção.
+> Se você pretende fazer análise de HTML no código de produção, não use expressões regulares. Use uma biblioteca de análise.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();
