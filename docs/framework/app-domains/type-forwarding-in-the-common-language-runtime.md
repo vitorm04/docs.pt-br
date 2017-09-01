@@ -45,7 +45,7 @@ O encaminhamento de tipo permite que você mova um tipo para outro assembly sem 
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
     ```  
   
-    ```cpp#  
+    ```cpp  
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
