@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 9ade8dc5dad0ac542de8c2ed1249a5361bcffc97
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: 37b81a6d4cf53dcf17158ccc4df6aca488f9a26b
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -88,7 +88,7 @@ Você criou e executou seu aplicativo. Para desenvolver um aplicativo profission
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes com o .NET Core e o Visual Studio 2017. Para obter uma introdução passo a passo, consulte [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](../../csharp/getting-started/library-with-visual-studio.md).
+Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes com o .NET Core e o Visual Studio 2017. Para obter uma introdução passo a passo, consulte [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md).
 
 Você também pode desenvolver um aplicativo de console .NET Core no Mac, Linux e Windows usando o [Visual Studio Code](https://code.visualstudio.com/), um editor de código que pode ser baixado. Para obter um tutorial passo a passo, consulte [Introdução ao Visual Studio Code](with-visual-studio-code.md).
 
