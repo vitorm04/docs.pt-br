@@ -26,10 +26,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a396280e1095497b86e4792f4debb9cf0435f50
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Operadores condicionais nulos (C# e Visual Basic)
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- O último exemplo demonstra que os operadores condicionais nulos estão em curto-circuito.  Se uma operação em uma cadeia de operações de índice e acesso de membro condicionais retornar nulo, o restante da execução da cadeia será interrompido.  Outras operações com menor precedência na expressão continuarão.  Por exemplo, `E` a seguir sempre é executado e as operações `??` e `==` são executadas.  
+ O último exemplo demonstra que os operadores condicionais nulos estão em curto-circuito.  Se uma operação em uma cadeia de operações de índice e acesso de membro condicionais retornar nulo, o restante da execução da cadeia será interrompido.  Outras operações com menor precedência na expressão continuarão.  Por exemplo, `E` a seguir, executa na segunda linha, e as operações `??` e `==` são executadas.  Na primeira linha, o `??` entra em curto circuito e `E` não é executado quando o lado esquerdo é avaliado como não nulo.
   
 ```csharp
 A?.B?.C?[0] ?? E  
