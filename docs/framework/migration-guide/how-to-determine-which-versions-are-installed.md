@@ -81,7 +81,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
 
      Procure um valor DWORD chamado `Release`. A existência da DWORD `Release` indica que o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou mais recente foi instalado naquele computador.
 
-     ![A entrada do Registro para o .NET Framework 4.5. ](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")
+     ![A entrada do Registro para o .NET Framework 4.5.](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")
 
      O valor do DWORD de `Release` indica qual versão do .NET Framework está instalada.
 
@@ -106,7 +106,7 @@ Você pode instalar e executar várias versões do .NET Framework em seus comput
     > [!NOTE]
     > Este código não mostra como detectar o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou posterior. Verifique a DWORD `Release` para detectar as versões, conforme descrito na seção anterior. Para saber o código que detecta o [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou versões posteriores, veja a próxima seção deste artigo.
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
      O exemplo produz uma saída semelhante à seguinte:
 
