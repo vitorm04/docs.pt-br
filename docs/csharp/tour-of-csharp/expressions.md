@@ -45,7 +45,7 @@ O item a seguir resume os operadores do C#, listando as categorias de operador e
     - `new T(...){...}`: criação de objeto com inicializador
     - `new {...}`: inicializador de objeto anônimo
     - `new T[...]`: criação de matriz
-    - `typeof(T)`: obter objeto @System.Type para `T`
+    - `typeof(T)`: obter @System.Type objeto para `T`
     - `checked(x)`: avaliar expressão no contexto marcado
     - `unchecked(x)`: avaliar expressão no contexto desmarcado
     - `default(T)`: obter valor padrão do tipo `T`
