@@ -1,4 +1,4 @@
----
+﻿---
 title: "Herança em C#"
 description: "Aprenda a usar a herança em bibliotecas e aplicativos em C#."
 keywords: "herança (C#), classes base, classes derivadas, classes base abstratas"
@@ -301,4 +301,3 @@ O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de obje
 
 [Classes e objetos](../tour-of-csharp/classes-and-objects.md)   
 [Herança (Guia de programação em C#)](../programming-guide/classes-and-structs/inheritance.md)
-
