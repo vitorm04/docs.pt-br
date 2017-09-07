@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="discards---c-guide"></a>Descartes – Guia do C#
@@ -33,7 +33,7 @@ No C# 7, há suporte a descartes em atribuições nos seguintes contextos:
 - Chamadas para métodos com parâmetros `out`.
 - Um `_` autônomo quando nenhum `_` está no escopo.
 
-Quando `_` é um descarte válido, tentar recuperar seu valor ou usá-lo em uma operação de atribuição gera o erro do compilador CS0301, "O nome '_' não existe no contexto atual". Isso ocorre porque não há um valor atribuído a `_` e pode não haver nem mesmo um local de armazenamento atribuído a ela. Se ela fosse uma variável real, você não poderia descartar mais de um valor, tal como ocorreu no exemplo anterior.
+Quando `_` é um descarte válido, tentar recuperar seu valor ou usá-lo em uma operação de atribuição gera o erro do compilador CS0301, "O nome '\_' não existe no contexto atual". Isso ocorre porque não há um valor atribuído a `_` e pode não haver nem mesmo um local de armazenamento atribuído a ela. Se ela fosse uma variável real, você não poderia descartar mais de um valor, tal como ocorreu no exemplo anterior.
 
 ## <a name="tuple-and-object-deconstruction"></a>Desconstrução de objeto e de tupla
 

@@ -1,7 +1,7 @@
 ---
-title: Desconstruir tuplas e outros tipos | Microsoft Docs
-description: Saiba como desconstruir tuplas e outros tipos
-keywords: .NET, .NET Core, C#0
+title: Desconstruindo tuplas e outros tipos
+description: Saiba como desconstruir tuplas e outros tipos.
+keywords: .NET,.NET Core,C#
 author: rpetrusha
 ms-author: ronpet
 ms.date: 07/18/2016
@@ -11,13 +11,12 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: f0946db700301a63109f23be5536f3a0505f4d60
+ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
+ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/12/2017
 
 ---
-
 # <a name="deconstructing-tuples-and-other-types"></a>Desconstruindo tuplas e outros tipos #
 
 Uma tupla fornece uma maneira leve de recuperar vários valores de uma chamada de método. Mas depois de recuperar a tupla, você precisa lidar com seus elementos individuais. Fazer isso para cada elemento é incômodo, conforme mostra o exemplo a seguir. O método `QueryCityData` retorna uma tupla de 3 e cada um de seus elementos é atribuído a uma variável em uma operação separada.
@@ -44,21 +43,21 @@ Há duas maneiras para desconstruir uma tupla:
 
 - Você pode usar a palavra-chave `var` de modo que o C# infira o tipo de cada variável. Você coloca a palavra-chave `var` fora dos parênteses. O exemplo a seguir usa a inferência de tipos ao desconstruir a tupla de 3 retornada pelo método `QueryCityData`.
  
-      [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
+    [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
     Você também pode usar a palavra-chave `var` individualmente com qualquer uma ou todas as declarações de variável dentro dos parênteses. 
 
-      [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
+    [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
     Isso é difícil e não é recomendado.
 
-Observe que você não poderá especificar um tipo específico fora dos parênteses, mesmo se todos os campos na tupla tiverem o mesmo tipo. Isso gera o erro do compilador CS8136, "O formulário `var (...)` não permite um tipo específico para `var`.
+Observe que você não poderá especificar um tipo específico fora dos parênteses, mesmo se todos os campos na tupla tiverem o mesmo tipo. Isso gera o erro do compilador CS8136, "O formulário de desconstrução 'var (...)' não permite um tipo específico para 'var'.".
 
 Observe que você também deve atribuir cada elemento da tupla a uma variável. Se você omitir qualquer elemento, o compilador gerará o erro CS8132, "Não é possível desconstruir uma tupla de 'x' elementos em 'y' variáveis."
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Desconstruir elementos de tupla com descartes
 
-Geralmente, ao desconstruir uma tupla, você está interessado nos valores de apenas alguns elementos. Do C# 7 em diante, você pode tirar proveito do suporte do C# a *descartes*, que são variáveis somente gravação cujos valores você optou por ignorar. Um descarte é designado por um caractere de sublinhado ("_") em uma atribuição. Você pode descartar tantos valores quantos desejar; todos são representados pelo descarte único, `_`.
+Geralmente, ao desconstruir uma tupla, você está interessado nos valores de apenas alguns elementos. Do C# 7 em diante, você pode tirar proveito do suporte do C# a *descartes*, que são variáveis somente gravação cujos valores você optou por ignorar. Um descarte é designado por um caractere de sublinhado ("\_") em uma atribuição. Você pode descartar tantos valores quantos desejar; todos são representados pelo descarte único, `_`.
 
 O exemplo a seguir ilustra o uso de tuplas com descartes. O método `QueryCityDataForYears` a seguir retorna uma tupla de 6 com o nome de uma cidade, sua área, um ano, a população da cidade nesse ano, um segundo ano e população da cidade nesse segundo ano. O exemplo mostra a alteração na população entre esses dois anos. Entre os dados disponíveis da tupla, não estamos preocupados com a área da cidade e sabemos o nome da cidade e as duas datas em tempo de design. Como resultado, estamos interessados apenas nos dois valores de população armazenados na tupla e podemos lidar com seus valores restantes como descartes.  
 
@@ -90,7 +89,7 @@ O método `Deconstruct` sobrecarregado no exemplo a seguir ilustra uma possível
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>Desconstruir um tipo definido pelo usuário com descartes
 
-Assim como você faria com [tuplas](#deconstructing-tuple-elements-with-discards), você pode usar descartes para ignorar os itens selecionados retornados por um método `Deconstruct`. Cada descarte é definido por uma variável chamada "_", sendo que uma única operação de desconstrução pode incluir vários descartes.
+Assim como você faria com [tuplas](#deconstructing-tuple-elements-with-discards), você pode usar descartes para ignorar os itens selecionados retornados por um método `Deconstruct`. Cada descarte é definido por uma variável chamada "\_" e uma única operação de desconstrução pode incluir vários descartes.
 
 O exemplo a seguir desconstrói um objeto `Person` em quatro cadeias de caracteres (os nomes e sobrenomes, a cidade e o estado), mas descarta o sobrenome e o estado.
 

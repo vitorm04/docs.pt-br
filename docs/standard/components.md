@@ -1,86 +1,98 @@
 ---
 title: Componentes de arquitetura do .NET
-description: "Descreve os principais componentes de arquitetura do .NET, como a .NET Standard Library, tempos de execução do .NET e ferramentas."
-keywords: .NET, .NET Standard Library, .NET Standard, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB e compiladores
+description: "Descreve os componentes de arquitetura do .NET, como o .NET Standard, as implementações do .NET, os tempos de execução do .NET e as ferramentas."
 author: cartermp
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
-ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
-ms.lasthandoff: 01/18/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/23/2017
 
 ---
-
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
-O .NET é composto por diversos componentes-chave.  Um deles é a biblioteca padrão, denominada .NET Standard Library, que é um grande conjunto de APIs executados em todos os lugares.  Essa biblioteca padrão é implementada por três tempos de execução do .NET – .NET Framework, .NET Core e Mono para Xamarin.  As linguagens .NET também são executadas em qualquer tempo de execução do .NET.  Além disso, existem ferramentas em todas as plataformas que permitem criar projetos.  Essas ferramentas são as mesmas, independentemente do tempo de execução escolhido.
+Um aplicativo .NET é desenvolvido para e é executado em uma ou mais *implementações do .NET*.  Implementações do .NET incluem o .NET Framework, o .NET Core e o Mono. Há uma especificação de API comum a todas as implementações de .NET que é chamada de .NET Standard. Este artigo fornece uma breve introdução a cada um desses conceitos.
 
-Veja uma visão geral gráfica de cada um dos componentes do .NET mencionados anteriormente e como eles se ajustam.
+## <a name="net-standard"></a>.NET Standard
 
-![Todos os componentes de arquitetura do .NET juntos](media/components.png)
+O .NET Standard é um conjunto de APIs que são implementadas pela Biblioteca de classes base de uma implementação do .NET. De maneira mais formal, é uma especificação das APIs do .NET que compõem um conjunto uniforme de contratos nos quais você compila seu código. Esses contratos são implementados em cada implementação do .NET. Isso permite a portabilidade entre diferentes implementações de .NET, possibilitando efetivamente que seu código seja executado em qualquer lugar.
 
-O que vem a seguir é uma breve explicação de cada um dos principais componentes mostrados acima.  
+O .NET Standard também é uma [estrutura de destino](glossary.md#target-framework). Se seu código se destina a uma versão do .NET Standard, ele pode ser executado em qualquer implementação do .NET que dê suporte a essa versão do .NET Standard.
 
-## <a name="net-standard-library"></a>.NET Standard Library
+Para saber mais sobre o NET Standard e como destinar a ele, consulte o tópico [.NET Standard](net-standard.md).
 
-A .NET Standard Library é um conjunto de APIs implementados por um tempo de execução do .NET.
+## <a name="net-implementations"></a>Implementações do .NET
 
-De maneira mais formal, é uma especificação das APIs do .NET que compõem um conjunto uniforme de contratos nos quais você compila seu código.  Esses contratos têm implementações subjacentes para cada tempo de execução do .NET.  Isso possibilita portabilidade em diferentes tempos de execução do .NET, para que seu código possa ser "executado efetivamente em qualquer lugar".
+Cada implementação do .NET inclui os seguintes componentes:
 
-A .NET Standard Library também é um destino de build, em que é conhecida como .NET Standard.  Atualmente, é possível direcionar o .NET Standard 1.0-1.6.  Caso o seu código tenha como alvo uma versão do .NET Standard, ele será executado em todos os tempos de execução que implementam essa versão.
+- Um ou mais tempos de execução. Exemplos: o CLR para o .NET Framework, o CoreCLR e o CoreRT para o .NET Core.
+- Uma biblioteca de classes que implemente o .NET Standard e possa implementar APIs adicionais. Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.
+- Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) estão incluídos no .NET Framework.
+- Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
 
-Para saber mais sobre a biblioteca do .NET Standard e o direcionamento para o .NET Standard, consulte [.NET Standard Library](library.md).
-
-## <a name="net-runtimes"></a>Tempos de execução do .NET
-
-Há três tempos de execução primários do .NET que a Microsoft mantém e desenvolve ativamente: .NET Core, .NET Framework e Mono para Xamarin.
+Há quatro implementações principais de .NET que a Microsoft desenvolve e mantém ativamente: .NET Core, .NET Framework, Mono e UWP.
 
 ### <a name="net-core"></a>.NET Core
 
-O .NET Core é um tempo de execução otimizado de plataforma cruzada para cargas de trabalho do servidor.  Ele implementa a .NET Standard Library, o que significa que códigos direcionados para o .NET Standard podem ser executados no .NET Core.  É o tempo de execução usado pelo ASP.NET Core e pela Plataforma Universal do Windows (UWP).  É moderno, eficiente e projetado para lidar com cargas de trabalho de servidor e nuvem em escala.
+O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, no Linux e no macOS. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O ASP.NET Core é executado no .NET Core. 
 
-Para saber mais sobre o .NET Core, consulte o [Guia do .NET Core](../core/index.md).
+Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
 ### <a name="net-framework"></a>.NET Framework
 
-O .NET Framework é o histórico tempo de execução do .NET, que existe desde 2002.  É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram.  Ele implementa a .NET Standard Library, o que significa que códigos direcionados para o .NET Standard podem ser executados no .NET Framework.  Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF.  O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.
+O.NET Framework é a implementação original do .NET que existe desde 2002. É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram. As versões 4.5 e posteriores implementam o .NET Standard, assim, o código que se destina ao .NET Standard pode ser executado nessas versões do .NET Framework. Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF. O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.
 
 Para saber mais sobre o .NET Framework, consulte o [Guia do .NET Framework](../framework/index.md).
 
-### <a name="mono-for-xamarin"></a>Mono para Xamarin
+### <a name="mono"></a>Mono
 
-O Mono é o tempo de execução utilizado por aplicativos do Xamarin.  Ele implementa a .NET Standard Library, o que significa que códigos direcionados para o .NET Standard podem ser executados nos aplicativos do Xamarin.  Ele contém APIs adicionais para iOS, Android, Xamarin.Forms e Xamarin.Mac.  É otimizado para compilar aplicativos móveis no iOS e Android.
+O Mono é uma implementação do .NET que é usada principalmente quando um pequeno tempo de execução é necessário. É o tempo de execução que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em um impacto pequeno.
+
+Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.
+
+Historicamente, o Mono implementava a maior API do .NET Framework e emulava alguns dos recursos mais populares do Unix. Às vezes, ele é usado para executar aplicativos .NET que dependem desses recursos no Unix.
+
+O Mono normalmente é usado com um compilador Just-In-Time, mas ele também apresenta um compilador estático completo (compilação Ahead Of Time) que é usado em plataformas como iOS.
 
 Para saber mais sobre o Mono, consulte a [Documentação do Mono](http://www.mono-project.com/docs/).
 
+### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
+
+A UWP é uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, VB.NET e JavaScript. Ao usar o C# e VB.NET, as APIs do .NET são fornecidas pelo .NET Core.
+
+Para saber mais sobre a UWP, consulte [Introdução à Plataforma Universal do Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+
+## <a name="net-runtimes"></a>Tempos de execução do .NET
+
+Um tempo de execução é o ambiente de execução de um programa gerenciado. O SO faz parte do ambiente do tempo de execução, mas não faz parte do tempo de execução do .NET. Aqui estão alguns exemplos de tempos de execução do .NET:
+ 
+ - CLR (Common Language Runtime) para o .NET Framework
+ - Core Common Language Runtime (CoreCLR) para o .NET Core
+ - .NET Native para a Plataforma Universal do Windows 
+ - O tempo de execução Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
+
 ## <a name="net-tooling-and-common-infrastructure"></a>Ferramentas do .NET e infraestrutura comum
 
-As ferramentas para .NET também são comuns em cada implementação do .NET.  Elas incluem (mas não se limitam a):
+Você tem acesso a um amplo conjunto de ferramentas e componentes de infraestrutura que funcionam com todas as implementações do .NET. Elas incluem, mas não são limitadas a, o seguinte:
 
-* As linguagens do .NET e seus compiladores
-* Componentes de tempo de execução, como o JIT e o Coletor de Lixo
-* Sistema de projeto do .NET (também conhecido como "csproj", "vbproj" ou "fsproj")
-* MSBuild, o mecanismo de compilação usado para compilar projetos
-* NuGet, o gerenciador de pacotes da Microsoft para o .NET
-* A CLI do .NET, uma interface de linha de comando de plataforma cruzada para a compilação de projetos do .NET
-* Ferramentas de orquestração compiladas em software livre, como CAKE e FAKE
+- As linguagens do .NET e seus compiladores
+- O sistema de projetos do .NET (com base em arquivos *.csproj*, *.vbproj* e *.fsproj*)
+- [MSBuild](/visualstudio/msbuild/msbuild), o mecanismo de build usado para compilar projetos
+- [NuGet](/nuget/), o gerenciador de pacotes da Microsoft para o .NET
+- Ferramentas de orquestração de build em software livre, como [CAKE](http://cakebuild.net/) e [FAKE](https://fake.build/)
 
-A principal vantagem é que há uma grande quantidade de ferramentas e infraestrutura comuns para cada “versão” do .NET que você escolha para compilar seus aplicativos.
+## <a name="see-also"></a>Consulte também
+[Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)   
+[.NET Standard](net-standard.md)  
+[Guia do .NET Core](../core/index.md)  
+[Guia do .NET Framework](../framework/index.md)  
+[Guia do C#](../csharp/index.md)  
+[Guia do F#](../fsharp/index.md)  
+[Guia do VB.NET](../visual-basic/index.md)  
 
-## <a name="next-steps"></a>Próximas etapas
-
-Para saber mais, visite:
-
-* [.NET Standard Library](library.md)
-* [Guia do .NET Core](../core/index.md)
-* [Guia do .NET Framework](../framework/index.md)
-* [Guia do C#](../csharp/index.md)
-* [Guia do F#](../fsharp/index.md)
-* [Guia do VB.NET](../visual-basic/index.md)
 

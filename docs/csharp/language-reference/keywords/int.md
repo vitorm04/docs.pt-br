@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2722ddad74023cb8c1be86d3a628313a45d35d8a
+ms.sourcegitcommit: 935428cc9442a3e1d15eeb8942176c237bff4e22
+ms.openlocfilehash: 6e87893bcd9800b61297e71b782028fec5116479
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="int-c-reference"></a>int (Referência de C#)
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/28/2017
  
 Você pode declarar e inicializar uma variável `int` atribuindo um literal decimal, um literal hexadecimal ou (começando com C# 7) um literal binário a ela.  Se o literal inteiro estiver fora do intervalo de `int` (ou seja, se for menor que <xref:System.Int32.MinValue?displayProperty=fullName> ou maior que <xref:System.Int32.MaxValue?displayProperty=fullName>), ocorrerá um erro de compilação. 
 
-No exemplo a seguir, inteiros iguais a 16.342 representados como literais decimais, hexadecimais e binários são atribuídos a valores `int`.  
+No exemplo a seguir, inteiros iguais a 90.946 representados como literais decimais, hexadecimais e binários são atribuídos a valores `int`.  
   
 [!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
 

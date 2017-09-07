@@ -1,6 +1,6 @@
 ---
-title: "O que é “código gerenciado”?"
-description: "O que é “código gerenciado”?"
+title: "O que é código gerenciado?"
+description: "Saiba como o código gerenciado é o código cuja execução é gerenciada por um tempo de execução, o CLR (Common Language Runtime)."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,22 +10,23 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-translationtype: Human Translation
-ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
-ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
-ms.lasthandoff: 01/26/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="what-is-managed-code"></a>O que é “código gerenciado”?
 
-Ao trabalhar com o .NET Framework, geralmente você encontrará o termo “código gerenciado”. Este documento explicará o que esse termo significa e obterá informações adicionais sobre ele.
+Ao trabalhar com o .NET Framework, geralmente você encontrará o termo "código gerenciado". Este documento explicará o que esse termo significa e obterá informações adicionais sobre ele.
 
 Em resumo, código gerenciado é exatamente isso: código cuja execução é gerenciada por um tempo de execução. Nesse caso, o tempo de execução em questão é chamado de **Common Language Runtime** ou CLR, independentemente da implementação ([Mono](http://www.mono-project.com/) ou do .NET Framework ou .NET Core). CLR é responsável por pegar o código gerenciado, compilá-lo em código de computador e, em seguida, executá-lo. Além disso, o tempo de execução fornece vários serviços importantes, como gerenciamento automático de memória, limites de segurança, segurança de digitação etc.
 
 Compare isso à maneira pela qual você executaria um programa C/C++, também chamado de "código não gerenciado". No mundo não gerenciado, o programador é responsável por quase tudo. O programa real é, essencialmente, um binário que o sistema operacional (SO) carrega na memória e inicia. Tudo, desde o gerenciamento da memória até as considerações de segurança, é responsabilidade do programador.
 
-Código gerenciado é gravado em uma das linguagens de alto nível que podem ser executadas na plataforma do .NET, como C#, Visual Basic, F# e outros. Quando você compila o código gravado nessas linguagens com seu respectivo compilador, não obtém o código do computador. Você obtém o código de **Linguagem intermediária** que o tempo de execução compila e executa. C++ é a única exceção a essa regra, já que também pode produzir binários nativos e não gerenciados que são executados no Windows.
+O código gerenciado é escrito em uma das linguagens de alto nível que podem ser executadas sobre o .NET, como C#, Visual Basic, F# e outras. Quando você compila o código gravado nessas linguagens com seu respectivo compilador, não obtém o código do computador. Você obtém o código de **Linguagem intermediária** que o tempo de execução compila e executa. C++ é a única exceção a essa regra, já que também pode produzir binários nativos e não gerenciados que são executados no Windows.
 
 ## <a name="intermediate-language--execution"></a>Linguagem intermediária e execução
 

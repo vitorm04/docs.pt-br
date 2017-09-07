@@ -1,26 +1,26 @@
 ---
 title: "Componentes de independência de linguagem e componentes independentes da linguagem"
-description: "Componentes de independência de linguagem e componentes independentes da linguagem"
+description: "Saiba como você pode desenvolver em uma das muitas linguagens com suporte no .NET, como C#, C++/CLI, F#, IronPython, VB, Visual COBOL e PowerShell."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/10/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
-A plataforma .NET é independente de linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens direcionadas à plataforma .NET, como C#, F# e Visual Basic. É possível acessar tipos e membros de bibliotecas de classes desenvolvidas para a plataforma .NET sem que seja necessário conhecer a linguagem em que foram originalmente gravadas e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo .NET, independentemente da linguagem.
+O .NET é independente de linguagem. Isso significa que, como desenvolvedor, você pode desenvolver em uma das muitas linguagens direcionadas às implementações do .NET, como C#, F# e Visual Basic. É possível acessar tipos e membros de bibliotecas de classes desenvolvidas para implementações do .NET sem que seja necessário conhecer a linguagem em que foram originalmente escritas e sem precisar seguir as convenções da linguagem original. Se você for um desenvolvedor de componentes, o componente poderá ser acessado por qualquer aplicativo .NET, independentemente da linguagem.
 
 > [!NOTE]
 > A primeira parte deste artigo descreve como criar componentes independentes de linguagem, ou seja, componentes que podem ser consumidos por aplicativos gravados em qualquer linguagem. Você também pode criar um único componente ou aplicativo de código-fonte gravado em várias linguagens; consulte [Interoperabilidade em qualquer idioma](#cross-language-interoperability) na segunda parte deste artigo. 
@@ -172,7 +172,7 @@ Enumerações | [Enumerações](#enumerations) | Campos estáticos de literais d
 Eventos | [Eventos](#events) | Os métodos que implementam um evento deverão ser marcados como `SpecialName` nos metadados. |29
 Eventos | [Eventos](#events) | A acessibilidade de um evento e de seus acessadores deverá ser idêntica. |30
 Eventos | [Eventos](#events) | Os métodos `add` e `remove` de um evento deverão estar presentes ou ausentes. |31
-Eventos | [Eventos](#events) | Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um cujo tipo define o tipo do evento e ele deverá ser derivado de [System.Delegate](xref:System.Delegate). |32
+Eventos | [Eventos](#events) | Os métodos `add` e `remove` de um evento deverão utilizar um parâmetro cada um, cujo tipo defina o tipo do evento e ele deverá ser derivado de [System.Delegate](xref:System.Delegate). |32
 Eventos | [Eventos](#events) | Os eventos deverão respeitar um padrão de nomenclatura específico. O atributo SpecialName mencionado na regra 29 da CLS deverá ser ignorado em comparações de nome apropriadas e respeitar as regras do identificador.  |33
 Exceções | [Exceções](#exceptions) | Os atributos acionados deverão ser do tipo [System.Exception](xref:System.Exception) ou de um tipo herdado dele. Mesmo assim, os métodos compatíveis com CLS não precisam bloquear a propagação de outros tipos de exceção. | 40
 Geral | [Regras de conformidade da CLS](#cls-compliance-rules) | As regras CLS só se aplicam a essas partes de um tipo acessíveis ou visíveis fora do assembly de definição. | 1
@@ -347,7 +347,7 @@ Tipo não compatível | Descrição | Alternativa compatível com CLS
  
  A biblioteca de classes .NET Framework ou qualquer outra biblioteca de classes pode incluir outros tipos que não sejam compatíveis com CLS; por exemplo: 
  
- * Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int` *named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como não compatível com CLS.
+ * Tipos de valor demarcado. O exemplo de C# a seguir cria uma classe que tem uma propriedade pública do tipo `int`* named `Value`. Como um `int`* é um tipo de valor demarcado, o compilador o sinaliza como sem conformidade com CLS.
 
   ```csharp
   using System;
@@ -1110,7 +1110,7 @@ As matrizes compatíveis com CLS estão em conformidade com as seguintes regras:
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>Interfaces
 
@@ -1660,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 Se um tipo genérico for derivado de um tipo de base genérico, ele deverá redeclarar todas as restrições, para assegurar que as restrições no tipo de base também sejam atendidas. O exemplo a seguir define um `Number<T>` que pode representar qualquer tipo numérico. Ele também define uma classe `FloatingPoint<T>` que representa um valor de ponto flutuante. No entanto, o código-fonte falha na compilação porque não aplica a restrição em `Number<T>` (esse T deve ser um tipo de valor) a `FloatingPoint<T>`.
@@ -1938,7 +1937,7 @@ Os construtores em classes compatíveis com CLS e em estruturas devem seguir est
 
 * Um construtor de uma classe derivada deve chamar o construtor de instância de sua classe base antes de acessar quaisquer dados de instância herdados. Esse requisito deve-se ao fato de que construtores de classe base não são herdados por suas classes derivadas. Essa regra não se aplica a estruturas que não dão suporte a herança direta. 
 
-  Normalmente, os compiladores aplicam essa regra independentemente da conformidade com CLS, conforme mostrado no exemplo a seguir. Eles crias uma classe `Doctor` que é derivada de uma classe `Person`, mas a classe `Doctor` falha ao chamar o construtor de classe `Person` para inicializar campos herdados da instância. 
+  Normalmente, os compiladores aplicam essa regra independentemente da conformidade com CLS, conforme mostrado no exemplo a seguir. Ele cria uma classe `Doctor` que é derivada de uma classe `Person`, mas a classe `Doctor` falha ao chamar o construtor de classe `Person` para inicializar campos herdados da instância. 
 
     ```csharp
     using System;

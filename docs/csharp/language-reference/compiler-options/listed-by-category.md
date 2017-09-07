@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bf0b4a4130fe69a15e6db438ac1d58b676c9ee8b
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Opções do compilador de C# listadas por categoria
@@ -55,6 +55,8 @@ As opções do compilador a seguir são classificadas por categoria. Para obter 
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|Especifica o nome de arquivo e a localização do arquivo .pdb.|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|Especifique a plataforma de saída.|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Especifique uma linguagem para a saída do compilador.|  
+|[/refout](refout-compiler-option.md)|Gere um assembly de referência além de um assembly principal.|  
+|[/refonly](refonly-compiler-option.md)|Gere um assembly de referência em vez de um assembly principal.|  
 |[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|Especifica o formato do arquivo de saída usando uma das cinco opções: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md) ou [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).|  
 |/modulename:\<string>|Especificar o nome do módulo de origem|  
   

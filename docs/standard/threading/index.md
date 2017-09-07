@@ -1,5 +1,5 @@
 ---
-title: Threading gerenciado | Microsoft Docs
+title: Threading gerenciado
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,11 +16,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f2a8792818e837f019403aa84c2c2e98db0b2b89
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="managed-threading"></a>Threading gerenciado
@@ -70,3 +70,4 @@ Quer você esteja desenvolvendo para computadores com um processador, quer para 
   
  [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
  Descreve um sistema para executar consultas paralelamente, de modo a aproveitar vários processadores.
+

@@ -1,32 +1,44 @@
 ---
-title: "Comando dotnet-test – CLI do .NET Core"
-description: "O comando “dotnet test” é usado para executar testes de unidade em um determinado projeto."
-keywords: dotnet-test, CLI, comando da CLI, .NET Core
-author: blackdwarf
+title: "Comando dotnet test – CLI do .NET Core"
+description: "O comando dotnet test é usado para executar testes de unidade em um determinado projeto."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/25/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3308488672df2621c04de40f642c732f81284019
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 55329bed71be21a787d6e77d8c0ea67d607676b8
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-test"></a>dotnet test
 
-#<a name="dotnet-test"></a>dotnet-test
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-test` - driver de teste do .NET usado para executar testes de unidade.
+`dotnet test` - driver de teste do .NET usado para executar testes de unidade.
 
 ## <a name="synopsis"></a>Sinopse
 
-`dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+dotnet test [-h|--help]
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+dotnet test [-h|--help]
+```
+---
 
 ## <a name="description"></a>Descrição
 
@@ -36,65 +48,133 @@ Projetos de teste também precisam especificar o executor de teste. Isso é espe
 
 [!code-xml[Modelo Básico do XUnit](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>Opções
+## <a name="arguments"></a>Arguments
 
 `PROJECT`
-    
+
 Especifica um caminho para o projeto de teste. Se for omitido, o padrão será o diretório atual.
 
-`-h|--help`
+## <a name="options"></a>Opções
 
-Imprime uma ajuda breve para o comando.
-
-`-s|--settings <SETTINGS_FILE>`
-
-Configurações para usar ao executar testes. 
-
-`-t|--list-tests`
-
-Lista todos os testes descobertos no projeto atual. 
-
-`--filter <EXPRESSION>`
-
-Filtra os testes no projeto atual usando a expressão especificada. Para saber mais, confira a seção [Filtrar detalhes da opção](#filter-option-details). Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-Usa os adaptadores de teste personalizado do caminho especificado na execução de teste. 
+Usa os adaptadores de teste personalizado do caminho especificado na execução de teste.
 
-`-l|--logger <LoggerUri/FriendlyName>`
+`-c|--configuration {Debug|Release}`
 
-Especifica um agente para resultados do teste. 
+Define a configuração da compilação. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
 
-`-c|--configuration <CONFIGURATION>`
+`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-Configuração de build. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
+Habilita o coletor de dados para a execução de teste. Para obter mais informações, consulte [Monitor and analyze test run](https://aka.ms/vstest-collect) (Monitorar e analisar a execução de teste).
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico para o arquivo especificado.
 
 `-f|--framework <FRAMEWORK>`
 
 Procura os binários de teste para uma [estrutura](../../standard/frameworks.md) específica.
 
+`--filter <EXPRESSION>`
+
+Filtra os testes no projeto atual usando a expressão especificada. Para saber mais, confira a seção [Filtrar detalhes da opção](#filter-option-details). Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Imprime uma ajuda breve para o comando.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Especifica um agente para resultados do teste.
+
+`--no-build`
+
+Não compila o projeto de teste antes de executá-lo.
+
+`--no-restore`
+
+Não executa uma restauração implícita ao executar o comando.
+
 `-o|--output <OUTPUT_DIRECTORY>`
 
 Diretório no qual encontram-se os binários para execução.
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+`-r|--results-directory <PATH>`
 
-Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico para o arquivo especificado. 
+O diretório em que os resultados de teste serão colocados. O diretório especificado será criado se ele não existir.
 
-`--no-build` 
+`-s|--settings <SETTINGS_FILE>`
 
-Não compila o projeto de teste antes de executá-lo.
+Configurações para usar ao executar testes.
+
+`-t|--list-tests`
+
+Lista todos os testes descobertos no projeto atual.
 
 `-v|--verbosity <LEVEL>`
 
 Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
 
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+
+Usa os adaptadores de teste personalizado do caminho especificado na execução de teste.
+
+`-c|--configuration {Debug|Release}`
+
+Define a configuração da compilação. O valor padrão é `Debug`, mas a configuração do seu projeto pode substituir essa configuração padrão do SDK.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+Habilita o modo de diagnóstico para a plataforma de teste e grava mensagens de diagnóstico para o arquivo especificado.
+
+`-f|--framework <FRAMEWORK>`
+
+Procura os binários de teste para uma [estrutura](../../standard/frameworks.md) específica.
+
+`--filter <EXPRESSION>`
+
+Filtra os testes no projeto atual usando a expressão especificada. Para saber mais, confira a seção [Filtrar detalhes da opção](#filter-option-details). Para obter mais informações e exemplos sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
+
+`-h|--help`
+
+Imprime uma ajuda breve para o comando.
+
+`-l|--logger <LoggerUri/FriendlyName>`
+
+Especifica um agente para resultados do teste.
+
+`--no-build`
+
+Não compila o projeto de teste antes de executá-lo.
+
+`-o|--output <OUTPUT_DIRECTORY>`
+
+Diretório no qual encontram-se os binários para execução.
+
+`-s|--settings <SETTINGS_FILE>`
+
+Configurações para usar ao executar testes.
+
+`-t|--list-tests`
+
+Lista todos os testes descobertos no projeto atual.
+
+`-v|--verbosity <LEVEL>`
+
+Define o nível de detalhes do comando. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`.
+
+---
+
 ## <a name="examples"></a>Exemplos
 
 Execute os testes no projeto no diretório atual:
 
-`dotnet test` 
+`dotnet test`
 
 Execute os testes no projeto `test1`:
 
@@ -138,6 +218,6 @@ Para obter mais informações e exemplos sobre como usar a filtragem de teste de
 
 ## <a name="see-also"></a>Consulte também
 
-[Estruturas e Destinos](../../standard/frameworks.md)   
-[Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+ [Estruturas e Destinos](../../standard/frameworks.md)   
+ [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
 

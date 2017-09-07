@@ -1,156 +1,146 @@
 ---
-title: Estruturas de destino | Microsoft Docs
-description: "As informações sobre estruturas de destino para os aplicativos e bibliotecas do .NET Core."
+title: Frameworks de destino
+description: Saiba mais sobre estruturas de destino para aplicativos e bibliotecas do .NET Core.
 keywords: .NET, .NET Core, estrutura, TFM
 author: richlander
 ms.author: mairaw
-ms.date: 04/27/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 45835eb80642253f80ea630ae9db1ac766b72b9c
-ms.openlocfilehash: 11c1f11e4f8354b7573d03e680cf4a8a16fa26d9
+ms.translationtype: HT
+ms.sourcegitcommit: 18b2f7a1c0857abb5f7e09a39ca120b521ba4ddc
+ms.openlocfilehash: 7f25cdd52cf5249d3b201978eacb98aaa4a74fa9
 ms.contentlocale: pt-br
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 08/25/2017
 
 ---
 
 # <a name="target-frameworks"></a>Frameworks de destino
 
-*Estruturas* definem os objetos, métodos e ferramentas que você usa para criar aplicativos e bibliotecas. O .NET Framework é usado para criar aplicativos e bibliotecas principalmente para execução em sistemas que executam um sistema operacional Windows. O .NET core inclui uma estrutura que permite a compilação de aplicativos e bibliotecas executados em diversos sistemas operacionais.
+Ao destinar a uma estrutura em um aplicativo ou uma biblioteca, você está especificando o conjunto de APIs que deseja disponibilizar para o aplicativo ou a biblioteca. Você especifica a estrutura de destino em seu arquivo de projeto usando os TFMs (Monikers da Estrutura de Destino).
 
-Às vezes, os termos de *estrutura* e *plataforma* são confusos de acordo com a forma como são usados em frases. Piorando ainda mais a interpretação, o termo *plataforma* tem significados diferentes em contextos diferentes. Por exemplo, você verá ".NET Core" descrito como "estrutura do .NET Core" no contexto da compilação de aplicativos e bibliotecas e também descrito como "plataforma .NET Core" no contexto em que o código da biblioteca e do aplicativo é executado. A *plataforma de computação* descreve *onde e como* um aplicativo é executado. Como o .NET Core executa código com o [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr), ele também é uma plataforma. O mesmo vale para o .NET Framework, que tem o [Common Language Runtime (CLR)](clr.md) para executar o código do aplicativo e da biblioteca que foi desenvolvido com os objetos de estrutura, métodos e ferramentas do .NET Framework. Você verá com frequência o termo "multiplataforma" na documentação; mas quando você vir esse termo, pense "múltiplos sistemas operacionais e múltiplas arquiteturas (x86, x64, arm)", pois esse é o significado que o autor geralmente pretende transmitir.
+Um aplicativo ou uma biblioteca pode ser destinada a uma versão do [.NET Standard](~/docs/standard/net-standard.md). As versões do .NET Standard representam conjuntos de APIs padronizadas entre todas as implementações do .NET. Por exemplo, uma biblioteca pode se destinar ao NET Standard 1.6 e obter acesso a APIs que funcionam no .NET Core e .NET Framework usando a mesma base de código.
 
-Os objetos e métodos das estruturas são chamados de APIs (Interfaces de programação de aplicativo). As APIs de Estrutura são usadas no [Visual Studio](https://www.visualstudio.com/), [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/), [Visual Studio Code](https://code.visualstudio.com/) e outros IDEs (Ambientes de desenvolvimento integrados) e editores para fornecer o conjunto correto de objetos e métodos para desenvolvimento. As estruturas também são usadas pelo [NuGet](https://www.nuget.org/) para produção e consumo de pacotes do NuGet, para garantir que você produza e use pacotes apropriados para as estruturas direcionadas em seu aplicativo ou biblioteca.
+Um aplicativo ou uma biblioteca também pode se destinar a uma implementação específica do .NET para obter acesso a APIs específicas de implementação. Por exemplo, um aplicativo que tem como destino o Xamarin.iOS (por exemplo, `Xamarin.iOS10`) obtém acesso aos wrappers da API fornecidos para Xamarin iOS do iOS 10 ou um aplicativo que tem como destino a UWP (Plataforma Universal do Windows, `uap10.0`) tem acesso a APIs que são compiladas para dispositivos que executam o Windows 10.
 
-Quando você *direciona uma estrutura* ou várias delas, decida quais conjuntos de APIs e quais versões dessas APIs você deseja usar. As estruturas são referenciadas de várias maneiras: por nome de produto, nomes de estrutura longos ou curtos e por família.
+Para algumas estruturas de destino (por exemplo, o .NET Framework), as APIs são definidas pelos assemblies que a estrutura instala em um sistema e pode incluir as APIs da estrutura do aplicativo (por exemplo, ASP.NET).
 
-## <a name="referring-to-frameworks"></a>Referindo-se a estruturas
+Para estruturas de destino com base em pacote (por exemplo, .NET Standard e .NET Core), as APIs são definidas pelos pacotes incluídos no aplicativo ou na biblioteca. Um *metapacote* é um pacote NuGet que não tem nenhum conteúdo próprio, mas é uma lista de dependências (outros pacotes). Uma estrutura de destino com base em pacote NuGet especifica implicitamente um metapacote que faz referência a todos os pacotes que, juntos, compõem a estrutura.
 
-Há várias maneiras para fazer referência a estruturas, a maioria delas é usada em toda a documentação do .NET Core. Usando o .NET Framework 4.6.2 como exemplo, os formatos a seguir podem ser usados:
+## <a name="latest-target-framework-versions"></a>Versões mais recentes de estrutura de destino
 
-**Referindo-se a um produto**
+A tabela a seguir define as estruturas de destino mais comuns, como elas são referenciadas e qual versão do [.NET Standard](~/docs/standard/net-standard.md) elas implementam. Estas versões de estrutura de destino são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas. Um TFM (Moniker da Estrutura de Destino) é um formato de token padronizado para especificar a estrutura de destino de um aplicativo ou uma biblioteca do .NET. 
 
-Você pode se referir a um tempo de execução ou plataforma .NET. Ambos são igualmente válidos.
+| Estrutura de Destino      | Última Versão | TFM (Moniker de Estrutura de Destino) | Versão do .NET Standard | Metapacote |
+| :-------------------: | :------------: | :----------------------------: | :-------------------: | :---------: |
+| .NET Standard         | 2.0.0          | netstandard2.0                 | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
+| .NET Core Application | 2.0.0          | netcoreapp2.0                  | 2.0                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
+| .NET Framework        | 4.7            | net47                          | 1.5                   | N/D |
 
-* .NET Framework 4.6.2
-* .NET 4.6.2
+## <a name="supported-target-framework-versions"></a>Versões de estrutura de destino com suporte
 
-**Referindo-se a uma estrutura**
+Normalmente, uma estrutura de destino é referenciada por um TFM. A tabela a seguir mostra as estruturas de destino com suporte pelo SDK do .NET Core e o cliente do NuGet. Equivalentes estão mostrados entre colchetes. Por exemplo, `win81` é um TFM equivalente ao `netcore451`.
 
-Você pode se referir a uma estrutura ou ao direcionamento de uma estrutura usando formas longas ou curtas do TFM. Ambos são igualmente válidos.
+| Estrutura de Destino           | TFM |
+| -------------------------- | --- |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47 |
+| Windows Store              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
+| .NET Micro Framework       | netmf |
+| Silverlight                | sl4<br>sl5 |
+| Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
+| Plataforma Universal do Windows | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
-* `.NETFramework,Version=4.6.2`
-* `net462`
+## <a name="how-to-specify-target-frameworks"></a>Como especificar estruturas de destino
 
-**Referindo-se a uma família de estruturas**
+As estruturas de destino são especificadas no arquivo de projeto. Quando uma única estrutura de destino é especificada, use o elemento **TargetFramework**. O seguinte arquivo de projeto de aplicativo do console demonstra como destinar ao .NET Core 2.0:
 
-Você pode se referir a uma família estruturas usando formas longas ou curtas da ID da estrutura. Ambos são igualmente válidos.
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-* `.NETFramework`
-* `net`
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
 
-## <a name="latest-framework-versions"></a>Versões mais recentes da estrutura
+</Project>
+```
 
-A tabela a seguir define o conjunto de estruturas que podem ser usadas, como elas são chamadas e qual versão do [.NET Standard Library](library.md) elas implementam. Estas versões do Framework são as versões estáveis mais recentes. As versões de pré-lançamento não são mostradas.
+Ao especificar várias estruturas de destino, você pode fazer referência a assemblies para cada estrutura de destino de forma condicional. Em seu código, você pode condicionalmente compilar em relação a esses assemblies usando símbolos de pré-processador com a lógica *if-then-else*.
 
-| Framework             | Última Versão | TFM (Moniker de Estrutura de Destino) | TFM (Moniker de Estrutura de Destino) Compacto | Versão do .NET Standard | Metapacote |
-| :-------------------: | :------------: | :----------------------------: | :------------------------------------: | :-------------------: | :---------: |
-| .NET Standard         | 1.6.1          | .NETStandard,Version=1.6       | netstandard1.6                         | N/D                   | [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) |
-| .NET Core Application | 1.1.1          | .NETCoreApp,Version=1.1        | netcoreapp1.1                          | 1.6                   | [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) |
-| .NET Framework        | 4.6.2          | .NETFramework,Version=4.6.2    | net462                                 | 1.5                   | N/A |
+O seguinte arquivo de projeto de biblioteca tem como destino as APIs do .NET Standard (`netstandard1.4`) e APIs do .NET Framework (`net40` e `net45`). Use o elemento **TargetFrameworks** plural com várias estruturas de destino. Observe como os atributos `Condition` incluem pacotes específicos de implementação quando a biblioteca é compilada para os dois TFMs de .NET Framework:
 
-## <a name="supported-frameworks"></a>Estruturas com suporte
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
 
-Normalmente, uma estrutura é referenciada por um moniker curto de estrutura de destino ou *TFM*. No .NET Standard, isso também é generalizado para *TxM* a fim de permitir uma única referência para várias estruturas. Os clientes do NuGet oferecem suporte às seguintes estruturas. Equivalentes são mostrados entre colchetes (`[]`).
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.4;net40;net45</TargetFrameworks>
+  </PropertyGroup>
 
-| Nome                       | Abreviação de | TFMs/TxMs                                    |
-| -------------------------- | ------------ | -------------------------------------------- |
-| .NET Standard              | netstandard  | netstandard1.0                               |
-|                            |              | netstandard1.1                               |
-|                            |              | netstandard1.2                               |
-|                            |              | netstandard1.3                               |
-|                            |              | netstandard1.4                               |
-|                            |              | netstandard1.5                               |
-|                            |              | netstandard1.6                               |
-| .NET Core                  | netcoreapp   | netcoreapp1.0                                |
-|                            |              | netcoreapp1.1                                |
-| .NET Framework             | net          | net11                                        |
-|                            |              | net20                                        |
-|                            |              | net35                                        |
-|                            |              | net40                                        |
-|                            |              | net403                                       |
-|                            |              | net45                                        |
-|                            |              | net451                                       |
-|                            |              | net452                                       |
-|                            |              | net46                                        |
-|                            |              | net461                                       |
-|                            |              | net462                                       |
-| Windows Store              | netcore      | netcore [netcore45]                          |
-|                            |              | netcore45 [win, win8]                        |
-|                            |              | netcore451 [win81]                           |
-| .NET Micro Framework       | netmf        | netmf                                        |
-| Silverlight                | sl           | sl4                                          |
-|                            |              | sl5                                          |
-| Windows Phone              | wp           | wp [wp7]                                     |
-|                            |              | wp7                                          |
-|                            |              | wp75                                         |
-|                            |              | wp8                                          |
-|                            |              | wp81                                         |
-|                            |              | wpa81                                        |
-| Plataforma Universal do Windows | uap          | uap [uap10.0]                                |
-|                            |              | uap10.0 [win10] [netcore50]                  |
+  <!-- Conditionally obtain references for the .NET Framework 4.0 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="System.Net" />
+  </ItemGroup>
 
-## <a name="deprecated-frameworks"></a>Estruturas preteridas
+  <!-- Conditionally obtain references for the .NET Framework 4.5 target -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
 
-As seguintes estruturas são preteridas. Os pacotes direcionados a essas estruturas devem ser migrados para as substituições indicadas.
+</Project>
+```
 
-| Estrutura preterida | Substituição |
-| -------------------- | ----------- |
-| aspnet50             | netcoreapp  |
-| aspnetcore50         |             |
-| dnxcore50            |             |
-| dnx                  |             |
-| dnx45                |             |
-| dnx451               |             |
-| dnx452               |             |
-| dotnet               | netstandard |
-| dotnet50             |             |
-| dotnet51             |             |
-| dotnet52             |             |
-| dotnet53             |             |
-| dotnet54             |             |
-| dotnet55             |             |
-| dotnet56             |             |
-| netcore50            | uap10.0     |
-| win                  | netcore45   |
-| win8                 | netcore45   |
-| win81                | netcore451  |
-| win10                | uap10.0     |
-| winrt                | netcore45   |
+No aplicativo ou na biblioteca, você escreve código condicional para compilar para cada estrutura de destino:
 
-## <a name="precedence"></a>Precedência
+```csharp
+public class MyClass
+{
+    static void Main()
+    {
+#if NET40
+        Console.WriteLine("Target framework: .NET Framework 4.0");
+#elif NET45  
+        Console.WriteLine("Target framework: .NET Framework 4.5");
+#else
+        Console.WriteLine("Target framework: .NET Standard 1.4");
+#endif
+    }
+}
+```
 
-Várias estruturas relacionadas e compatíveis entre si, mas não necessariamente equivalentes:
+O sistema de build reconhece os símbolos de pré-processador que representam as estruturas de destino mostradas na tabela [Versões de estrutura de destino com suporte](#supported-target-framework-versions). Ao usar um símbolo que representa um TFM do .NET Standard ou .NET Core, substitua o ponto por um sublinhado e altere as letras minúsculas por maiúsculas (por exemplo, o símbolo de `netstandard1.4` é `NETSTANDARD1_4`).
 
-| Framework                        | Pode usar   |
-| -------------------------------- | --------- |
-| uap (Plataforma Universal do Windows) | win81     |
-|                                  | wpa81     |
-|                                  | netcore50 |
-| win (Windows Store)              | winrt     |
-|                                  | winrt45   |
+A lista completa de símbolos de pré-processador para estruturas de destino do .NET Core é:
 
-## <a name="net-standard"></a>.NET Standard
+[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
-O [.NET Standard](https://github.com/dotnet/standard) simplifica referências entre estruturas compatíveis com o binário, permitindo que uma estrutura de destino única faça referência a uma combinação de outras. Para saber mais, veja o tópico [.NET Standard Library](library.md).
+## <a name="deprecated-target-frameworks"></a>Estruturas de destino preteridas
 
-[Ferramentas NuGet Obter a ferramenta de estrutura mais próxima](http://nugettoolsdev.azurewebsites.net/) simula a lógica do NuGet usada para a seleção de uma estrutura de muitos ativos de estrutura disponíveis em um pacote com base na estrutura do projeto. Para usar a ferramenta, entra em uma estrutura de projeto e um ou mais estruturas de pacote. Selecione o botão **Enviar**. A ferramenta indica se as estruturas de pacote listadas são compatíveis com a estrutura de projeto que você fornecer.
+As seguintes estruturas de destino estão preteridas. Os pacotes direcionados a essas estruturas de destino devem ser migrados para as substituições indicadas.
 
-## <a name="portable-class-libraries"></a>Bibliotecas de Classes Portáteis
+| TFM preterido                                                                             | Substituição |
+| ------------------------------------------------------------------------------------------ | ----------- |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
+| dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
+| netcore50                                                                                  | uap10.0     |
+| win                                                                                        | netcore45   |
+| win8                                                                                       | netcore45   |
+| win81                                                                                      | netcore451  |
+| win10                                                                                      | uap10.0     |
+| winrt                                                                                      | netcore45   |
 
-Para obter informações sobre as Bibliotecas de Classe Portáteis, veja a seção [Bibliotecas de Classes Portáteis](https://docs.microsoft.com/nuget/schema/target-frameworks#portable-class-libraries) do tópico *Estrutura de Destino* na documentação do NuGet. Stephen Cleary criou uma ferramenta que lista as PCLs com suporte. Para saber mais, confira [Perfis de estrutura no .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html).
+## <a name="see-also"></a>Consulte também
+
+[Pacotes, Metapacotes e Estruturas](~/docs/core/packages.md)  
+[Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](~/docs/core/tutorials/libraries.md)  
+[.NET Standard](~/docs/standard/net-standard.md)  
+[Controle de versão do .NET Core](~/docs/core/versions/index.md)  
+[Repositório GitHub dotnet/standard](https://github.com/dotnet/standard)  
+[Repositório GitHub de Ferramentas NuGet](https://github.com/joelverhagen/NuGetTools)  
+[Perfis de estrutura no .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
 

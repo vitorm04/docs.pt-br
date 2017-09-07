@@ -1,6 +1,6 @@
 ---
 title: "default (Referência de C#)"
-ms.date: 2015-07-20
+ms.date: 2017-08-04
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -31,23 +31,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b4167f53d64f80fc4665a9f1171c050bf0fa433
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 60607855e4a947af694c8ad8a9a3f0515ebb1700
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
+
 # <a name="default-c-reference"></a>default (Referência de C#)
-A palavra-chave `default`.  
-  
- A palavra-chave `default` pode ser utilizada na instrução `switch` ou no código genérico:  
-  
--   [A instrução switch](../../../csharp/language-reference/keywords/switch.md): especifica o rótulo padrão.  
-  
--   [Código genérico](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md): especifica o valor padrão do parâmetro de tipo. Será nulo para tipos de referência e zero para tipos de valor.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave do C#](../../../csharp/language-reference/keywords/index.md)
+
+A palavra-chave `default`.
+
+A palavra-chave `default` pode ser usada na instrução `switch` ou na expressão de valor padrão:
+
+- [A instrução switch](switch.md): especifica o rótulo padrão.
+
+- [Expressões de valor padrão](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produz o valor padrão do tipo. Será nulo para tipos de referência, zero para tipos de valor e o padrão de bit 0 para structs.
+
+## <a name="see-also"></a>Consulte também
+
+ [Referência de C#](../index.md)   
+ [Guia de Programação em C#](../../programming-guide/index.md)   
+ [Palavras-chave do C#](index.md)   
 

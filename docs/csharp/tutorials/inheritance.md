@@ -5,17 +5,17 @@ keywords: "herança (C#), classes base, classes derivadas, classes base abstrata
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>Herança em C# e .NET
@@ -216,13 +216,13 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
 - Duas propriedades relacionadas à publicação
 
-  `Title` é uma propriedade <xref:System.String> somente leitura cujo valor é fornecido pela chamada do construtor `Publication`, que armazena o valor em um campo privado chamado `pubTitle`.
+  `Title` é uma propriedade <xref:System.String> somente leitura cujo valor é fornecido pela chamada do construtor `Publication`.
 
-  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. Ele deve ser um número positivo, caso contrário, será gerada uma exceção do tipo <xref:System.ArgumentOutOfRangeException>.
+  `Pages` é uma propriedade <xref:System.Int32> de leitura-gravação que indica o número total de páginas da publicação. O valor é armazenado em um campo privado chamado `totalPages`. O lançamento deve ser de um número positivo ou de um <xref:System.ArgumentOutOfRangeException>.
 
 - Membros relacionados ao publicador
 
-  Duas propriedades somente leitura, `Publisher` e `Type`, retornam o valor dos campos `pubName` e `pubType` privados. Originalmente, os valores eram fornecidos pela chamada para o construtor da classe `Publication`.
+  Duas propriedades somente leitura, `Publisher` e `Type`. Originalmente, os valores eram fornecidos pela chamada para o construtor da classe `Publication`.
 
 - Membros relacionados à publicação
 
@@ -230,7 +230,7 @@ O exemplo a seguir mostra o código-fonte para a classe `Publication`, bem como 
 
 - Membros relacionados a direitos autorais
 
-  O método `Copyright` usa o nome do proprietário dos direitos autorais e o ano dos direitos autorais como argumentos, e os atribui aos campos `copyrName` e `copyrDate` privados. Os valores podem ser recuperados das propriedades `CopyrightName` e `CopyrightDate`.
+  O método `Copyright` usa o nome do proprietário dos direitos autorais e o ano dos direitos autorais como argumentos e os atribui às propriedades `CopyrightName` e `CopyrightDate`.
 
 - Uma substituição do método `ToString`
 
@@ -250,13 +250,13 @@ Além dos membros herdados de `Publication`, a classe `Book` define os seguintes
 
 - Dois construtores
 
-  Os dois construtores `Book` compartilham três parâmetros comuns. Dois, *title* e *publisher*, correspondem aos parâmetros do construtor `Publication`. O terceiro é *author*, que é armazenado como um campo `authorName` privado. Um construtor inclui um parâmetro *isbn*, que é armazenado no campo `id` privado.
+  Os dois construtores `Book` compartilham três parâmetros comuns. Dois, *title* e *publisher*, correspondem aos parâmetros do construtor `Publication`. O terceiro é *author*, que é armazenado como um campo `authorName` privado. Um construtor inclui um parâmetro *isbn*, que é armazenado na propriedade automática `ISBN`.
 
-  O primeiro construtor usa a palavra-chave [this](../language-reference/keywords/this.md) para chamar o outro construtor. Esse é um padrão comum na definição de construtores; construtores com menos parâmetros fornecem valores padrão ao chamar o construtor com o maior número de parâmetros.
+  O primeiro construtor usa a palavra-chave [this](../language-reference/keywords/this.md) para chamar o outro construtor. Este é um padrão comum ao definir construtores. Construtores com menos parâmetros fornecem valores padrão ao chamar o construtor com o maior número de parâmetros.
 
   O segundo construtor usa a palavra-chave [base](../language-reference/keywords/base.md) para passar o título e o nome do publicador para o construtor da classe base. Se você não fizer uma chamada explícita para um construtor de classe base em seu código-fonte, o compilador de C# fornecerá automaticamente uma chamada para a classe base padrão ou para o construtor sem parâmetros.
 
-- Uma propriedade `ISBN` somente leitura, que retorna o ISBN (International Standard Book Number) do objeto `Book`, um número exclusivo com 10 ou 13 dígitos. O ISBN é fornecido como um argumento para um dos construtores `Book` e é armazenado no campo `id` privado.
+- Uma propriedade `ISBN` somente leitura, que retorna o ISBN (International Standard Book Number) do objeto `Book`, um número exclusivo com 10 ou 13 dígitos. O ISBN é fornecido como um argumento para um dos construtores `Book`. O ISBN é armazenado em um campo de suporte particular, gerado automaticamente pelo compilador.
 
 - Uma propriedade `Author` somente leitura. O nome do autor é fornecido como um argumento para os dois construtores `Book` e é armazenado no campo `authorName` privado.
 
@@ -301,4 +301,3 @@ O exemplo a seguir usa objetos derivados de `Shape`. Ele cria uma matriz de obje
 
 [Classes e objetos](../tour-of-csharp/classes-and-objects.md)   
 [Herança (Guia de programação em C#)](../programming-guide/classes-and-structs/inheritance.md)
-

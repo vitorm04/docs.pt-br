@@ -1,28 +1,26 @@
 ---
 title: "Comando dotnet-add reference – CLI do .NET Core"
-description: "O comando de referência dotnet-add fornece uma opção conveniente para adicionar referências projeto a projeto."
-keywords: dotnet-add, CLI, comando da CLI, .NET Core
-author: spboyer
+description: "O comando dotnet add reference fornece uma opção conveniente para adicionar referências projeto a projeto."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 5e2a3efd-443c-4f23-a1b1-a662a5387879
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98491efc183ad62f47275d0832a32dde5899373d
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="dotnet-add-reference"></a>Referência dotnet-add
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nome
 
-`dotnet-add reference` – Adiciona as referências P2P (projeto a projeto).
+`dotnet add reference` – Adiciona as referências P2P (projeto a projeto).
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -73,4 +71,3 @@ Adicionar várias referências de projeto:
 Adicionar várias referências de projeto usando um padrão de recurso de curinga no Linux/Unix:
 
 `dotnet add app/app.csproj reference **/*.csproj`
-

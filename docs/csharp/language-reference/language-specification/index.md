@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>Especificação da linguagem de rascunho de C# 6.0
@@ -47,7 +47,8 @@ A versão 6.0 da especificação não foi aprovada como um padrão. Este site co
 Problemas na especificação de rascunho devem ser criados no repositório [dotnet/csharplang](https://github.com/dotnet/csharplang/issues). Ou, se estiver interessado em corrigir os erros que encontrar, envie uma [Solicitação de pull](https://github.com/dotnet/csharplang/pulls) para o mesmo repositório.
 
 ## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../language-reference/index.md) [Guia de programação em C#](../../programming-guide/index.md)
+ [Referência de C#](../../language-reference/index.md)  
+ [Guia de Programação em C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [Avançar](../../../../_csharplang/spec/lexical-structure.md)

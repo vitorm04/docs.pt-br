@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de Classe do .NET
-description: Bibliotecas de Classe do .NET
+description: "Saiba como as bibliotecas de classes do .NET permitem que você agrupe funcionalidades úteis em módulos que podem ser usados por vários aplicativos."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
-ms.lasthandoff: 03/03/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -29,29 +30,29 @@ Há três tipos de bibliotecas de classes que você pode usar:
 
 ## <a name="platform-specific-class-libraries"></a>Bibliotecas de classes específicas da plataforma
 
-Bibliotecas específicas da plataforma estão associadas a uma única plataforma .NET (por exemplo, .NET Framework no Windows) e, portanto, podem levar a dependências significativas em um ambiente de execução conhecido. Esse ambiente exporá um conjunto conhecido de APIs (.NET e APIs de SO) e manterá e exporá o estado esperado (por exemplo, o Registro do Windows).
+Bibliotecas específicas da plataforma estão associadas a uma única implementação do .NET (por exemplo, .NET Framework no Windows) e, portanto, podem assumir dependências significativas em um ambiente de execução conhecido. Esse ambiente exporá um conjunto conhecido de APIs (.NET e APIs de SO) e manterá e exporá o estado esperado (por exemplo, o Registro do Windows).
 
 Os desenvolvedores que criam bibliotecas específicas de plataforma podem aproveitar ao máximo a plataforma subjacente. As bibliotecas só serão executadas na plataforma específica, fazendo verificações de plataforma ou outras formas de código condicional desnecessários (módulo de códigos de fornecimento únicos para várias plataformas).
 
-Bibliotecas específicas da plataforma são o tipo de biblioteca de classes principal para o .NET Framework. Mesmo que outras plataformas .NET tenham surgido, as bibliotecas específicas da plataforma permaneceram o tipo de biblioteca dominante.
+Bibliotecas específicas da plataforma são o tipo de biblioteca de classes principal para o .NET Framework. Mesmo que outras implementações do .NET tenham surgido, as bibliotecas específicas da plataforma permaneceram o tipo de biblioteca dominante.
 
 ## <a name="portable-class-libraries"></a>Bibliotecas de Classes Portáteis
 
-Há suporte para bibliotecas portáteis em várias plataformas .NET. Elas ainda podem assumir dependências em um ambiente de execução conhecido, no entanto, o ambiente é sintético e é gerado pela interseção de um conjunto de plataformas .NET concretas. Isso significa que suposições de plataforma e APIs expostas são um subconjunto que estaria disponível em uma biblioteca específica da plataforma.
+Há suporte para bibliotecas portáteis em várias implementações do .NET. Elas ainda podem assumir dependências em um ambiente de execução conhecido, no entanto, o ambiente é sintético e é gerado pela intersecção de um conjunto de implementações de .NET concretas. Isso significa que suposições de plataforma e APIs expostas são um subconjunto que estaria disponível em uma biblioteca específica da plataforma.
 
 Você escolhe uma configuração de plataforma ao criar uma biblioteca portátil. Esses são os conjuntos de plataformas que você precisa dar suporte (por exemplo, .NET Framework 4.5+, Windows Phone 8.0+). Quanto mais plataformas você escolher dar suporte, menos suposições de plataforma terá que fazer e menor será o denominador comum. Essa característica pode ser confusa a princípio, já que as pessoas geralmente pensam que "mais é melhor", mas descobrem que mais plataformas com suporte resultam em menos APIs disponíveis.
 
 Muitos desenvolvedores de biblioteca mudam de produzir várias bibliotecas específicas de plataforma de uma origem (usando as diretivas de compilação condicional) para bibliotecas portáteis. Há [várias abordagens](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) para acessar a funcionalidade específica da plataforma nas bibliotecas portáteis com a técnica [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/), a mais amplamente aceita neste momento.
 
-### <a name="net-core-class-libraries"></a>Bibliotecas de Classes do .NET Core
+### <a name="net-standard-class-libraries"></a>Bibliotecas de classes do .NET Standard
 
-As bibliotecas do .NET Core são uma substituição dos conceitos de bibliotecas específicas da plataforma e portáteis. Elas são específicas da plataforma no sentido de que expõem toda a funcionalidade da plataforma subjacente (sem plataformas sintéticas ou interseções de plataforma). Elas são portáteis no sentido de que funcionam em todas as plataformas de suporte.
+As bibliotecas do .NET Standard são uma substituição dos conceitos de bibliotecas específicas da plataforma e portáteis. Elas são específicas da plataforma no sentido de que expõem toda a funcionalidade da plataforma subjacente (sem plataformas sintéticas ou interseções de plataforma). Elas são portáteis no sentido de que funcionam em todas as plataformas de suporte.
 
-O .NET Core expõe um conjunto _contratos_ de biblioteca. Plataformas .NET devem dar suporte a cada contrato completo ou não. Cada plataforma, portanto, dá suporte a um conjunto de contratos do .NET Core. O resultado é que há suporte para cada biblioteca de classes do .NET Core nas plataformas que dão suporte às dependências de contrato.
+O .NET Standard expõe um conjunto de _contratos_ de biblioteca. As implementações do .NET devem dar suporte a cada contrato, completamente ou não dar nenhum suporte. Cada implementação, portanto, dá suporte a um conjunto de contratos do .NET Standard. O resultado é que há suporte para cada biblioteca de classes do .NET Standard nas plataformas que dão suporte às dependências de contrato.
 
-Os contratos do .NET Core não expõem toda a funcionalidade do .NET Framework (nem são que uma meta), no entanto, eles expõem mais APIs que as Bibliotecas de Classe Portáteis. Mais APIs serão adicionadas ao longo do tempo.
+O .NET Standard não expõe toda a funcionalidade do .NET Framework (isso nem é uma meta), no entanto, ele expõe mais APIs que as Bibliotecas de classes portáteis. Mais APIs serão adicionadas ao longo do tempo.
 
-As seguintes plataformas dão suporte a bibliotecas de classes do .NET Core:
+As seguintes plataformas dão suporte às bibliotecas de classes do .NET Standard:
 
 *   .NET Core
 *   ASP.NET Core

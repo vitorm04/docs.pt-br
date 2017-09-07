@@ -1,5 +1,5 @@
 ---
-title: "Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5 | Microsoft Docs"
+title: "Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 18
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0b39f793d2bc3b3fb73594320d533ebb411fa128
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d3f54e3794d1595ed120685a452478791e0ad37c
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
@@ -53,3 +53,4 @@ Prompt para fechar os aplicativos do .NET Framework que estão em uso
  [Implantação](../../../docs/framework/deployment/index.md)   
  [Guia de implantação para desenvolvedores](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
  [Como acompanhar o progresso do instalador do .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

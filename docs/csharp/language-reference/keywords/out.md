@@ -32,16 +32,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fb4e78fc7d8b292d36e548ece9f6efab0d8d6323
+ms.sourcegitcommit: 710c1a8031a9f598b1879ebb6306ba3a072a7de1
+ms.openlocfilehash: bcd8e7ad1b60f520536653cdcb67192da470699a
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="out-c-reference"></a>out (Referência de C#)
 Você pode usar a palavra-chave contextual `out` em dois contextos:
 
-- Como um [modificador de parâmetro](../../../csharp/language-reference/keywords/out-parameter-modifier.md), que permite passar um argumento para um método por referência, e não por valor.
+- Como um [modificador de parâmetro](../../../csharp/language-reference/keywords/out-parameter-modifier.md), que permite passar um argumento para um método por referência, não por valor.
 
 - Em [declarações de parâmetro de tipo genérico](../../../csharp/language-reference/keywords/out-generic-modifier.md) para interfaces e representantes, que especificam que um parâmetro de tipo é covariante.
    

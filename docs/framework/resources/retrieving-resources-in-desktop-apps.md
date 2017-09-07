@@ -1,5 +1,5 @@
 ---
-title: "Recuperando recursos em aplicativos de área de trabalho | Microsoft Docs"
+title: "Recuperando recursos em aplicativos de área de trabalho"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: ad3d323968e2c75d1e347bd56bc2762a99da4d9a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f4c2527b7ef1e673d578f8c1e9a30fdacdea4046
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
@@ -152,7 +152,7 @@ GetObject.exe
 ### <a name="deploying-resources-files"></a>Implantando arquivos .resources  
  Quando você incorporar arquivos .resources em um assembly de aplicativo e assemblies satélites, cada assembly satélite possui o mesmo nome de arquivo, mas é colocado em um subdiretório que reflete a cultura do assembly satélite. Por outro lado, quando você acessar diretamente os recursos dos arquivos .resources, você pode colocar todos os arquivos .resources em um único diretório, geralmente um subdiretório do diretório do aplicativo. O nome do arquivo .resources do aplicativo padrão consiste em um nome de raiz, sem nenhuma indicação de sua cultura (por exemplo, strings.resources). Os recursos de cada cultura localizada são armazenados em um arquivo cujo nome consiste no nome de raiz seguido pela cultura (por exemplo, strings.ja.resources ou strings.de-DE.resources). A ilustração a seguir mostra onde os arquivos de recurso devem estar localizados na estrutura de diretórios.  
   
- ![Diretório principal para o seu aplicativo](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
+ ![Diretório principal do seu aplicativo](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
 Estrutura de diretório e convenções de nomenclatura para arquivos .resources  
   
 ### <a name="using-the-resource-manager"></a>Usando o Gerenciador de Recursos  
