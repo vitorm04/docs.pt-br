@@ -1,5 +1,5 @@
 ---
-title: "Programação paralela no .NET Framework | Microsoft Docs"
+title: "Programação paralela no .NET Framework"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,10 +15,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 6a163776f358691c0f61c90dce98c15bebe4052a
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3509229efc57b1f6b1244671df65b2f21964e65
+ms.contentlocale: pt-br
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="parallel-programming-in-the-net-framework"></a>Programação paralela no .NET Framework
@@ -30,10 +31,10 @@ Muitos computadores pessoais e estações de trabalho possuem dois ou quatro nú
   
 |Tecnologia|Descrição|  
 |----------------|-----------------|  
-|[TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Fornece documentação para a classe <xref:System.Threading.Tasks.Parallel?displayProperty=fullName>, que inclui versões paralelas dos loops `For` e `ForEach`, bem como para a classe <xref:System.Threading.Tasks.Task?displayProperty=fullName>, que representa a maneira preferida de expressar operações assíncronas.|  
+|[TPL (Biblioteca de Paralelismo de Tarefas)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Fornece documentação para a classe <xref:System.Threading.Tasks.Parallel?displayProperty=fullName>, a qual inclui versões paralelas de `For` e loops `ForEach`, e também para a classe <xref:System.Threading.Tasks.Task?displayProperty=fullName>, a qual representa a forma preferencial de expressar operações assíncronas.|  
 |[PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|Uma implementação paralela do LINQ em Objects que melhora significativamente o desempenho em muitos cenários.|  
 |[Estruturas de dados para programação paralela](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|Fornece links para a documentação de classes de coleta com threads seguros, tipos de sincronização leves e tipos para inicialização lenta.|  
-|[Ferramentas de diagnóstico paralelo](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Fornece links para a documentação de janelas do depurador do Visual Studio para tarefas e pilhas paralelas, bem como o [Visualizador Simultâneo](http://msdn.microsoft.com/library/ae5879a0-1e1a-455a-ba72-148e57f59289), que consiste em um conjunto de exibições no Criador de Perfil do [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] que você pode usar para depurar e ajustar o desempenho do código paralelo.|  
+|[Ferramentas de diagnóstico paralelo](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Fornece links para a documentação de janelas do depurador do Visual Studio para tarefas e pilhas paralelas, bem como o [Visualizador Simultâneo](/visualstudio/profiling/concurrency-visualizer), que consiste em um conjunto de exibições no Criador de Perfil do [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] que você pode usar para depurar e ajustar o desempenho do código paralelo.|  
 |[Particionadores personalizados para PLINQ e TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Descreve como os particionadores funcionam e como configurar os particionadores padrão ou criar um novo particionador.|  
 |[Agendadores de tarefas](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Descreve como os agendadores funcionam e como os agendadores padrão podem ser configurados.|  
 |[Expressões lambda em PLINQ e TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Fornece uma visão geral das expressões lambda em C# e Visual Basic e mostra como elas são usadas em PLINQ e na Biblioteca Paralela de Tarefas.|  
@@ -42,3 +43,4 @@ Muitos computadores pessoais e estações de trabalho possuem dois ou quatro nú
 ## <a name="see-also"></a>Consulte também  
  [Padrões para programação paralela: noções básicas e aplicação de padrões paralelos com o .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)   
  [Amostras de programação paralela com o .NET Framework](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+
