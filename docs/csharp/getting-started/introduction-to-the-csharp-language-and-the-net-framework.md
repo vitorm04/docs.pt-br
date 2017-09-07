@@ -1,5 +1,6 @@
 ---
 title: "Introdução à linguagem C# e ao .NET Framework"
+description: "Aprenda as noções básicas de C# e .NET. Confira uma visão geral da linguagem C# e do ecossistema .NET."
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: c7fac541dd233111bfffb9c0f67ba048f8d271be
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
@@ -88,6 +89,5 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
  Para saber mais sobre o .NET Framework, confira [Visão geral do Microsoft .NET Framework](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355).  
   
 ## <a name="see-also"></a>Consulte também  
- [C#](../../csharp/csharp.md)   
- [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [C#](../../csharp/index.md) [Introdução ao Visual C# e ao Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
 
