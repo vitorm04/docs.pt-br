@@ -68,4 +68,3 @@ Results are identical
 ## <a name="see-also"></a>Consulte também  
  [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 
-<!--aaa>
