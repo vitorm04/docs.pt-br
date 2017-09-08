@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e82af926b9f040fb7c7cabf0dd9babe0b5d44901
+ms.sourcegitcommit: d74c1d0760d4e776c2cf4c7dea1dac060c85a83c
+ms.openlocfilehash: 19701ede37845249cf4d50a34eb4ab487cdeb76b
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)
@@ -71,33 +71,47 @@ Objetos dinâmicos expõem membros como métodos e propriedades em tempo de exec
   
 5.  Na parte superior do arquivo ReadOnlyFile.cs ou ReadOnlyFile.vb, adicione o código a seguir para importar os namespaces <xref:System.IO?displayProperty=fullName> e <xref:System.Dynamic?displayProperty=fullName>.  
   
-     [!code-cs[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_1.cs)]  [!code-vb[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_1.vb)]  
+     [!code-cs[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_1.cs)]
+
+     [!code-vb[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_1.vb)]  
   
 6.  O objeto dinâmico personalizado usa um enum para determinar os critérios de pesquisa. Antes da instrução de classe, adicione a seguinte definição de enum.  
   
-     [!code-cs[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_2.cs)]  [!code-vb[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_2.vb)]  
+     [!code-cs[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_2.cs)]
+
+     [!code-vb[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_2.vb)]  
   
 7.  Atualize a instrução de classe para herdar a classe `DynamicObject`, conforme mostrado no exemplo de código a seguir.  
   
-     [!code-cs[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_3.cs)]  [!code-vb[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_3.vb)]  
+     [!code-cs[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_3.cs)]
+
+     [!code-vb[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_3.vb)]  
   
 8.  Adicione o código a seguir para a classe `ReadOnlyFile` para definir um campo particular para o caminho do arquivo e um construtor para a classe `ReadOnlyFile`.  
   
-     [!code-cs[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_4.cs)]  [!code-vb[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_4.vb)]  
+     [!code-cs[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_4.cs)]
+     
+     [!code-vb[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_4.vb)]  
   
 9. Adicione o seguinte método de `GetPropertyValue` a classe de `ReadOnlyFile` . O método `GetPropertyValue` usa, como entrada, critérios de pesquisa e retorna as linhas de um arquivo de texto que correspondem a esse critério de pesquisa. Os métodos dinâmicos fornecidos pela classe `ReadOnlyFile` chamam o método `GetPropertyValue` para recuperar seus respectivos resultados.  
   
-     [!code-cs[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_5.cs)]   [!code-vb[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_5.vb)]  
+     [!code-cs[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_5.cs)]
+     
+     [!code-vb[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_5.vb)]  
   
 10. Após o método `GetPropertyValue`, adicione o seguinte código para substituir o método <xref:System.Dynamic.DynamicObject.TryGetMember%2A> da classe <xref:System.Dynamic.DynamicObject>. O método <xref:System.Dynamic.DynamicObject.TryGetMember%2A> é chamado quando um membro de uma classe dinâmica é solicitado e nenhum argumento é especificado. O argumento `binder` contém informações sobre o membro referenciado e o argumento `result` faz referência ao resultado retornado para o membro especificado. O método <xref:System.Dynamic.DynamicObject.TryGetMember%2A> retorna um valor booliano que retorna `true` se o membro solicitado existe; caso contrário, ele retorna `false`.  
   
-     [!code-cs[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_6.cs)]  [!code-vb[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_6.vb)]  
+     [!code-cs[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_6.cs)]
+     
+     [!code-vb[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_6.vb)]  
   
 11. Após o método `TryGetMember`, adicione o seguinte código para substituir o método <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> da classe <xref:System.Dynamic.DynamicObject>. O método <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> é chamado quando um membro de uma classe dinâmica é solicitado com argumentos. O argumento `binder` contém informações sobre o membro referenciado e o argumento `result` faz referência ao resultado retornado para o membro especificado. O argumento `args` contém uma matriz de argumentos que são passados ao membro. O método <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> retorna um valor booliano que retorna `true` se o membro solicitado existe; caso contrário, ele retorna `false`.  
   
      A versão personalizada do método `TryInvokeMember` espera que o primeiro argumento seja um valor do enum `StringSearchOption` que você definiu na etapa anterior. O método `TryInvokeMember` espera que o segundo argumento seja um valor booliano. Se um ou os dois argumentos forem valores válidos, eles serão passados para o método `GetPropertyValue` para recuperar os resultados.  
   
-     [!code-cs[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_7.cs)]  [!code-vb[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_7.vb)]  
+     [!code-cs[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_7.cs)]
+     
+     [!code-vb[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_7.vb)]  
   
 12. Salve e feche o arquivo.  
   
@@ -130,7 +144,9 @@ Objetos dinâmicos expõem membros como métodos e propriedades em tempo de exec
   
 2.  Adicione o código a seguir ao procedimento Main para criar uma instância da classe `ReadOnlyFile` para o arquivo TextFile1.txt. O código usa associação tardia para chamar membros dinâmicos e recuperar linhas de texto que contêm a cadeia de caracteres "Customer".  
   
-     [!code-cs[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_8.cs)]  [!code-vb[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_8.vb)]  
+     [!code-cs[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_8.cs)]
+     
+     [!code-vb[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_8.vb)]  
   
 3.  Salve o arquivo e pressione CTRL+F5 para compilar e executar o aplicativo.  
   
@@ -151,15 +167,21 @@ Objetos dinâmicos expõem membros como métodos e propriedades em tempo de exec
   
 6.  Na parte superior do arquivo, adicione o código a seguir para importar os namespaces `Microsoft.Scripting.Hosting` e `IronPython.Hosting` das bibliotecas do IronPython.  
   
-     [!code-cs[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_9.cs)]  [!code-vb[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_9.vb)]  
+     [!code-cs[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_9.cs)]
+     
+     [!code-vb[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_9.vb)]  
   
 7.  No método Main, adicione o código a seguir para criar um novo objeto `Microsoft.Scripting.Hosting.ScriptRuntime` para hospedar as bibliotecas do IronPython. O objeto `ScriptRuntime` carrega o módulo random.py da biblioteca do IronPython.  
   
-     [!code-cs[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_10.cs)]  [!code-vb[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_10.vb)]  
+     [!code-cs[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_10.cs)]
+     
+     [!code-vb[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_10.vb)]  
   
 8.  Após o código carregar o módulo random.py, adicione o seguinte código para criar uma matriz de inteiros. A matriz é passada para o método `shuffle` do módulo random.py, que classifica aleatoriamente os valores na matriz.  
   
-     [!code-cs[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_11.cs)]  [!code-vb[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_11.vb)]  
+     [!code-cs[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_11.cs)]
+     
+     [!code-vb[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_11.vb)]  
   
 9. Salve o arquivo e pressione CTRL+F5 para compilar e executar o aplicativo.  
   
