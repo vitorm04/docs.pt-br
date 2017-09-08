@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 91d76cb823bd16b716889a8ef52dc1c6d2c94ee3
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="wif-how-to39s-index"></a>Índice de Instruções do WIF
