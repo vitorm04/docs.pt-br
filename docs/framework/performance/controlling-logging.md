@@ -1,0 +1,124 @@
+---
+title: Controlando o registro em log no .NET Framework
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CLR ETW events, logging
+ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
+caps.latest.revision: 40
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aebeb1bb1257599cc3fb9b8be7bf2595ccca0f13
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
+
+---
+# <a name="controlling-net-framework-logging"></a>Controlando o registro em log no .NET Framework
+Você pode usar o ETW (Rastreamento de Eventos para Windows) para registrar eventos de CLR (Common Language Runtime). Você pode criar e exibir rastros usando as seguintes ferramentas:  
+  
+-   As ferramentas de linha de comando [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) e [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919), ambas incluídas no sistema operacional Windows.  
+  
+-   As ferramentas [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) no [Windows Performance Toolkit](http://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Para obter mais informações sobre o Xperf, visite o [blog de Desempenho do Windows](http://go.microsoft.com/fwlink/?LinkId=179509).  
+  
+ Para capturar informações de eventos de CLR, o provedor de CLR deve estar instalado em seu computador. Para confirmar que o provedor está instalado, digite `logman query providers` no prompt de comando. Uma lista de provedores é exibida. Essa lista deve conter uma entrada para o provedor CLR, conforme mostrado a seguir.  
+  
+```  
+Provider                                 GUID  
+-------------------------------------------------------------------------------  
+.NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
+```  
+  
+ Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915) do Windows. Abra a janela do Prompt de Comando como administrador. Altere o diretório do prompt para a pasta [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:  
+  
+ `wevtutil im CLR-ETW.man`  
+  
+## <a name="capturing-clr-etw-events"></a>Capturando eventos de CLR com o ETW  
+ Use as ferramentas de linha de comando [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) e [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) para capturar eventos ETW e as ferramentas [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) e [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) para decodificar eventos de rastreamento.  
+  
+ Para ativar o log, um usuário deve especificar três coisas:  
+  
+-   O provedor com o qual a comunicação será feita.  
+  
+-   Um número de 64 bits que representa um conjunto de palavra-chave. Cada palavra-chave representa um conjunto de eventos que o provedor pode ativar. O número representa um conjunto combinado de palavras-chave para ativar.  
+  
+-   Um número pequeno representando o nível (detalhamento) em que o registro será feito. O nível 1 é o menos detalhado, enquanto que o nível 5 é o mais detalhado. O nível 0 é um padrão cujo significado é específico do provedor.  
+  
+#### <a name="to-capture-clr-etw-events-using-logman"></a>Para capturar eventos ETW de CLR usando o Logman  
+  
+1.  No prompt de comando, digite:  
+  
+     `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
+  
+     em que:  
+  
+    -   O parâmetro `-p` identifica o GUID do provedor.  
+  
+    -   `0x1CCBD` especifica as categorias de eventos que serão geradas.  
+  
+    -   `0x5` define o nível do log (nesse caso, detalhado (5)).  
+  
+    -   O parâmetro `-ets` instrui o Logman a enviar comandos para a seções de rastreamento de eventos.  
+  
+    -   O parâmetro `-ct perf` especifica que a função `QueryPerformanceCounter` será usada para registrar o carimbo de data/hora para cada evento.  
+  
+2.  Para parar de registrar os eventos, digite:  
+  
+     `logman stop clrevents -ets`  
+  
+     Este comando cria um arquivo binário de rastreamento chamado clrevents.etl.  
+  
+#### <a name="to-capture-clr-etw-events-using-xperf"></a>Para capturar eventos CLR ETW usando o Xperf  
+  
+1.  No prompt de comando, digite:  
+  
+     `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
+  
+     Onde o GUID é o GUID do provedor ETW de CLR, e `0x1CCBD:5` rastreia tudo no nível 5 (detalhado) e nos níveis inferiores.  
+  
+2.  Para parar o rastreamento, digite:  
+  
+     `Xperf -stop clr`  
+  
+     Este comando cria um arquivo de rastreamento chamado clrevents.etl.  
+  
+## <a name="viewing-clr-etw-events"></a>Exibindo eventos ETW de CLR  
+ Use os comandos listados abaixo para exibir os eventos ETW de CLR. Para obter uma descrição dos eventos, consulte [Eventos CLR ETW](../../../docs/framework/performance/clr-etw-events.md).  
+  
+#### <a name="to-view-clr-etw-events-using-tracerpt"></a>Para exibir eventos ETW de CLR usando o Tracerpt  
+  
+-   No prompt de comando, digite:  
+  
+     `tracerpt clrevents.etl`  
+  
+     Este comando cria dois arquivos: dumpfile.xml e summary.txt. O arquivo dumpfile.xml lista todos os eventos, enquanto que summary.txt fornece um resumo dos eventos.  
+  
+#### <a name="to-view-clr-etw-events-using-xperf"></a>Para exibir eventos ETW de CLR usando Xperf  
+  
+-   No prompt de comando, digite:  
+  
+     `xperf clrevents.etl`  
+  
+     Este comando abre o visualizador de arquivos Xperf ETL. Nesse visualizador, os eventos CLR são mostrados na exibição **Eventos Genéricos**. Para exibir uma grade de dados de eventos categorizados por tipo, selecione uma região de tempo nessa exibição e, em seguida, clique com o botão direito do mouse e selecione **Resumo**.  
+  
+#### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Para converter o arquivo .etl em um arquivo de valores separados por vírgula.  
+  
+-   No prompt de comando, digite:  
+  
+     `xperf -i clrevents.etl -f clrevents.csv`  
+  
+     Este comando faz com que XPerf despeje os eventos na forma de um arquivo de valores separados por vírgula (CSV) que você pode abrir. Porque eventos diferentes possuem campos diferentes, esse arquivo CSV contém mais de uma linha de cabeçalho antes dos dados. O primeiro campo de cada linha é o tipo de evento, que indica qual cabeçalho deve ser usado para determinar o restante dos campos.  
+  
+## <a name="see-also"></a>Consulte também  
+ [Windows Performance Toolkit](http://go.microsoft.com/fwlink/?LinkID=161141)   
+ [Eventos ETW no Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+

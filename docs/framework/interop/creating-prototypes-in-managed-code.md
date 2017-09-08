@@ -1,0 +1,244 @@
+---
+title: "Criando protótipos em código gerenciado"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- prototypes in managed code
+- COM interop, DLL functions
+- unmanaged functions
+- platform invoke, creating prototypes
+- COM interop, platform invoke
+- interoperation with unmanaged code, DLL functions
+- interoperation with unmanaged code, platform invoke
+- platform invoke, object fields
+- DLL functions
+- object fields in platform invoke
+ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
+caps.latest.revision: 22
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9a3dcc625a838dc8823930e31541543b9c4c7f8f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
+
+---
+# <a name="creating-prototypes-in-managed-code"></a>Criando protótipos em código gerenciado
+Este tópico descreve como acessar funções não gerenciadas e apresenta vários campos de atributo que anotam a definição de método no código gerenciado. Para obter exemplos que demonstram como construir declarações baseadas no .NET a serem usadas com a invocação de plataforma, consulte [Realizando marshaling de dados com a invocação de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+  
+ Antes de poder acessar uma função de DLL não gerenciada no código gerenciado, você precisa saber o nome da função e o nome da DLL que a exporta. Com essas informações, você pode começar a escrever a definição gerenciada para uma função não gerenciada que é implementada em uma DLL. Além disso, você pode ajustar a maneira como essa invocação de plataforma cria a função e realiza marshaling dos dados bidirecionalmente na função.  
+  
+> [!NOTE]
+>  As funções de API do Win32 que alocam uma cadeia de caracteres permitem liberar a cadeia de caracteres usando um método como `LocalFree`. A invocação de plataforma manipula esses parâmetros de maneira diferente. Para chamadas de invocação de plataforma, torne o parâmetro um tipo `IntPtr`, em vez de um tipo `String`. Use métodos que são fornecidos pela classe <xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName> para converter o tipo em uma cadeia de caracteres manualmente e libere-a manualmente.  
+  
+## <a name="declaration-basics"></a>Noções básicas sobre a declaração  
+ As definições gerenciadas para funções não gerenciadas são dependentes de idioma, como é possível ver nos exemplos a seguir. Para obter exemplos de código mais completos, consulte [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md).  
+  
+```vb  
+Imports System.Runtime.InteropServices  
+Public Class Win32  
+    Declare Auto Function MessageBox Lib "user32.dll" _  
+       (ByVal hWnd As Integer, _  
+        ByVal txt As String, ByVal caption As String, _  
+        ByVal Typ As Integer) As IntPtr  
+End Class  
+```  
+  
+ Para aplicar os campos <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> ou <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> a uma declaração [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], use o atributo <xref:System.Runtime.InteropServices.DllImportAttribute>, em vez da instrução `Declare`.  
+  
+```vb  
+Imports System.Runtime.InteropServices  
+Public Class Win32  
+   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
+   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
+        ByVal txt As String, ByVal caption As String, _  
+        ByVal Typ As Integer) As IntPtr  
+   End Function  
+End Class  
+```  
+  
+```csharp  
+using System.Runtime.InteropServices;  
+[DllImport("user32.dll")]  
+    public static extern IntPtr MessageBox(int hWnd, String text,   
+                                       String caption, uint type);  
+```  
+  
+```cpp  
+using namespace System::Runtime::InteropServices;  
+[DllImport("user32.dll")]  
+    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
+    String* pCaption unsigned int uType);  
+```  
+  
+## <a name="adjusting-the-definition"></a>Ajustando a definição  
+ Independentemente de você defini-los explicitamente ou não, os campos de atributo estão trabalhando, definindo o comportamento do código gerenciado. A invocação de plataforma funciona de acordo com os valores padrão definidos em vários campos que existem como metadados em um assembly. Altere esse comportamento padrão ajustando os valores de um ou mais campos. Em muitos casos, use o <xref:System.Runtime.InteropServices.DllImportAttribute> para definir um valor.  
+  
+ A tabela a seguir lista o conjunto completo de campos de atributo que pertencem à invocação de plataforma. Para cada campo, a tabela inclui o valor padrão e um link para informações sobre como usar esses campos para definir funções de DLL não gerenciadas.  
+  
+|Campo|Descrição|  
+|-----------|-----------------|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Habilita ou desabilita o mapeamento de melhor ajuste.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Especifica a convenção de chamada a ser usada ao passar argumentos de método. O padrão é `WinAPI`, que corresponde a `__stdcall` nas plataformas Intel de 32 bits.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|Controla a desconfiguração de nome e a maneira como os argumentos de cadeia de caracteres devem ter o marshaling realizado para a função. O padrão é `CharSet.Ansi`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|Especifica o ponto de entrada de DLL a ser chamado.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|Controla se um ponto de entrada deve ser modificado para que ele corresponda ao conjunto de caracteres. O valor padrão varia de acordo com a linguagem de programação.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|Controla se a assinatura de método gerenciada deve ser transformada em uma assinatura não gerenciada que retorna um HRESULT e que tem um argumento adicional [out, retval] para o valor retornado.<br /><br /> O padrão é `true` (a assinatura não deve ser transformada).|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|Permite ao chamador usar a função de API `Marshal.GetLastWin32Error` para determinar se ocorreu um erro ao executar o método. No Visual Basic, o padrão é `true`; no C# e no C++, o padrão é `false`.|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|Controla a geração de uma exceção em um caractere Unicode não mapeável que é convertido em um caractere “?” ANSI.|  
+  
+ Para obter informações detalhadas sobre a referência, consulte <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+  
+## <a name="platform-invoke-security-considerations"></a>Considerações sobre segurança da invocação de plataforma  
+ Os membros `Assert`, `Deny` e `PermitOnly` da enumeração <xref:System.Security.Permissions.SecurityAction> são chamados de *modificadores de movimentação de pilha*. Esses membros serão ignorados se forem usados como atributos declarativos em declarações da invocação de plataforma e em instruções COM da linguagem IDL.  
+  
+### <a name="platform-invoke-examples"></a>Exemplos de invocação de plataforma  
+ As amostras de invocação de plataforma desta seção ilustram o uso do atributo `RegistryPermission` com os modificadores de movimentação de pilha.  
+  
+ No exemplo de código a seguir, os modificadores <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` e `PermitOnly` são ignorados.  
+  
+```  
+[DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+[RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
+    private static extern bool CallRegistryPermissionAssert();  
+  
+[DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+[RegistryPermission(SecurityAction.Deny, Unrestricted = true)]  
+    private static extern bool CallRegistryPermissionDeny();  
+  
+[DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+[RegistryPermission(SecurityAction.PermitOnly, Unrestricted = true)]  
+    private static extern bool CallRegistryPermissionDeny();  
+```  
+  
+ No entanto, o modificador `Demand` no exemplo a seguir é aceito.  
+  
+```  
+[DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+[RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
+    private static extern bool CallRegistryPermissionDeny();  
+```  
+  
+ Os modificadores <xref:System.Security.Permissions.SecurityAction> funcionam corretamente se são colocados em uma classe que contém (encapsula) a chamada da invocação de plataforma.  
+  
+```cpp  
+      [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
+public ref class PInvokeWrapper  
+{  
+public:  
+[DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+    private static extern bool CallRegistryPermissionDeny();  
+};  
+```  
+  
+```csharp  
+[RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
+class PInvokeWrapper  
+{  
+[DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+    private static extern bool CallRegistryPermissionDeny();  
+}  
+```  
+  
+ Os modificadores <xref:System.Security.Permissions.SecurityAction> também funcionam corretamente em um cenário aninhado em que são colocados no chamador da chamada de invocação de plataforma:  
+  
+```cpp  
+      {  
+public ref class PInvokeWrapper  
+public:  
+    [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+    private static extern bool CallRegistryPermissionDeny();  
+  
+    [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
+    public static bool CallRegistryPermission()  
+    {  
+     return CallRegistryPermissionInternal();  
+    }  
+};  
+```  
+  
+```csharp  
+class PInvokeScenario  
+{  
+    [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
+    private static extern bool CallRegistryPermissionInternal();  
+  
+    [RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
+    public static bool CallRegistryPermission()  
+    {  
+     return CallRegistryPermissionInternal();  
+    }  
+}  
+```  
+  
+#### <a name="com-interop-examples"></a>Exemplos de interoperabilidade COM  
+ As amostras de interoperabilidade COM desta seção ilustram o uso do atributo `RegistryPermission` com os modificadores de movimentação de pilha.  
+  
+ As declarações da interface de interoperabilidade COM a seguir ignoram os modificadores `Assert`, `Deny` e `PermitOnly`, da mesma forma que os exemplos da invocação de plataforma da seção anterior.  
+  
+```  
+[ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
+interface IAssertStubsItf  
+{  
+[RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
+    bool CallRegistryPermission();  
+[FileIOPermission(SecurityAction.Assert, Unrestricted = true)]  
+    bool CallFileIoPermission();  
+}  
+  
+[ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
+interface IDenyStubsItf  
+{  
+[RegistryPermission(SecurityAction.Deny, Unrestricted = true)]  
+    bool CallRegistryPermission();  
+[FileIOPermission(SecurityAction.Deny, Unrestricted = true)]  
+    bool CallFileIoPermission();  
+}  
+  
+[ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
+interface IAssertStubsItf  
+{  
+[RegistryPermission(SecurityAction.PermitOnly, Unrestricted = true)]  
+    bool CallRegistryPermission();  
+[FileIOPermission(SecurityAction.PermitOnly, Unrestricted = true)]  
+    bool CallFileIoPermission();  
+}  
+```  
+  
+ Além disso, o modificador `Demand` não é aceito em cenários de declaração da interface de interoperabilidade COM, conforme mostrado no exemplo a seguir.  
+  
+```  
+[ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
+interface IDemandStubsItf  
+{  
+[RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
+    bool CallRegistryPermission();  
+[FileIOPermission(SecurityAction.Demand, Unrestricted = true)]  
+    bool CallFileIoPermission();  
+}  
+```  
+  
+## <a name="see-also"></a>Consulte também  
+ [Consumindo funções de DLL não gerenciadas](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
+ [Especificando um ponto de entrada](../../../docs/framework/interop/specifying-an-entry-point.md)   
+ [Especificando um conjunto de caracteres](../../../docs/framework/interop/specifying-a-character-set.md)   
+ [Exemplos de invocação de plataforma](../../../docs/framework/interop/platform-invoke-examples.md)   
+ [Considerações sobre Segurança da Invocação de Plataforma](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)   
+ [Identificando funções em DLLs](../../../docs/framework/interop/identifying-functions-in-dlls.md)   
+ [Criando uma classe para conter funções de DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
+ [Chamando uma função de DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+
