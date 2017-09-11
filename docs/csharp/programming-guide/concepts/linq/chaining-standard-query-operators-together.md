@@ -101,3 +101,4 @@ Main: str >GHI!!!<
 ## <a name="see-also"></a>Consulte também  
  [Tutorial: encadear consultas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
 
+<!--aaa-->
