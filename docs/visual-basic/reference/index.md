@@ -35,36 +35,36 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="reference-visual-basic"></a>Referência (Visual Basic)
-Esta seção fornece links para informações de referência sobre vários aspectos da programação [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+# <a name="reference-visual-basic"></a><span data-ttu-id="bb917-102">Referência (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bb917-102">Reference (Visual Basic)</span></span>
+<span data-ttu-id="bb917-103">Esta seção fornece links para informações de referência sobre vários aspectos da programação [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bb917-103">This section provides links to reference information about various aspects of [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programming.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)  
- Fornece informações de referência para vários aspectos do idioma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+## <a name="in-this-section"></a><span data-ttu-id="bb917-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="bb917-104">In This Section</span></span>  
+ [<span data-ttu-id="bb917-105">Referência da linguagem Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bb917-105">Visual Basic Language Reference</span></span>](../../visual-basic/language-reference/index.md)  
+ <span data-ttu-id="bb917-106">Fornece informações de referência para vários aspectos do idioma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bb917-106">Provides reference information for various aspects of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language.</span></span>  
   
- [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Fornece links para informações sobre o compilador de linha de comando, que fornece uma alternativa para compilar programas de IDE do Visual Studio.  
+ [<span data-ttu-id="bb917-107">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bb917-107">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="bb917-108">Fornece links para informações sobre o compilador de linha de comando, que fornece uma alternativa para compilar programas de IDE do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="bb917-108">Provides links to information about the command-line compiler, which provides an alternative to compiling programs from the Visual Studio IDE.</span></span>  
   
- [Informações de Referência do .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
- Fornece links para informações sobre como trabalhar com a biblioteca de classe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ [<span data-ttu-id="bb917-109">Informações de Referência do .NET Framework</span><span class="sxs-lookup"><span data-stu-id="bb917-109">.NET Framework Reference Information</span></span>](../../visual-basic/reference/net-framework-reference-information.md)  
+ <span data-ttu-id="bb917-110">Fornece links para informações sobre como trabalhar com a biblioteca de classe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bb917-110">Provides links to information on working with the [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] class library.</span></span>  
   
- [Especificação da linguagem do Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Fornece links para a conclusão da especificação do idioma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que contêm informações detalhadas sobre todos os aspectos do idioma.  
+ [<span data-ttu-id="bb917-111">Especificação da linguagem do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="bb917-111">Visual Basic Language Specification</span></span>](../../visual-basic/reference/language-specification/index.md)  
+ <span data-ttu-id="bb917-112">Fornece links para a conclusão da especificação do idioma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que contêm informações detalhadas sobre todos os aspectos do idioma.</span><span class="sxs-lookup"><span data-stu-id="bb917-112">Provides links to the complete [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] language specification, which contains detailed information on all aspects of the language.</span></span>  
   
-## <a name="reference"></a>Referência  
+## <a name="reference"></a><span data-ttu-id="bb917-113">Referência</span><span class="sxs-lookup"><span data-stu-id="bb917-113">Reference</span></span>  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
- Esse namespace contém classes para os controles do Visual Basic Power Packs. Controles do Visual Basic Power Packs são adicionais aos controles do Windows Forms.  
+ <span data-ttu-id="bb917-114">Esse namespace contém classes para os controles do Visual Basic Power Packs.</span><span class="sxs-lookup"><span data-stu-id="bb917-114">This namespace contains classes for the Visual Basic Power Packs controls.</span></span> <span data-ttu-id="bb917-115">Controles do Visual Basic Power Packs são adicionais aos controles do Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="bb917-115">Visual Basic Power Packs controls are additional Windows Forms controls.</span></span>  
   
  <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
- Este namespace fornece um componente que habilita você a imprimir um fax de forma conforme aparece na tela.  
+ <span data-ttu-id="bb917-116">Este namespace fornece um componente que habilita você a imprimir um fax de forma conforme aparece na tela.</span><span class="sxs-lookup"><span data-stu-id="bb917-116">This namespace provides a component that enables you to print a facsimile of the form as it appears on screen.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Elementos gerais de interface do usuário (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contém tópicos para caixas de diálogo e janelas usadas no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+## <a name="related-sections"></a><span data-ttu-id="bb917-117">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="bb917-117">Related Sections</span></span>  
+ [<span data-ttu-id="bb917-118">Elementos gerais de interface do usuário (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="bb917-118">General User Interface Elements (Visual Studio)</span></span>](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ <span data-ttu-id="bb917-119">Contém tópicos para caixas de diálogo e janelas usadas no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bb917-119">Contains topics for dialog boxes and windows used in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
- [Ferramentas XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Fornece links para tópicos em várias ferramentas XML disponíveis em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ [<span data-ttu-id="bb917-120">Ferramentas XML no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="bb917-120">XML Tools in Visual Studio</span></span>](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ <span data-ttu-id="bb917-121">Fornece links para tópicos em várias ferramentas XML disponíveis em [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bb917-121">Provides links to topics on various XML tools available in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].</span></span>  
   
- [Referência de automação e extensibilidade](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Fornece links para tópicos abrangendo automação e extensibilidade no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], para componentes compartilhados e de idioma específico.
+ [<span data-ttu-id="bb917-122">Referência de automação e extensibilidade</span><span class="sxs-lookup"><span data-stu-id="bb917-122">Automation and Extensibility Reference</span></span>](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ <span data-ttu-id="bb917-123">Fornece links para tópicos abrangendo automação e extensibilidade no [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], para componentes compartilhados e de idioma específico.</span><span class="sxs-lookup"><span data-stu-id="bb917-123">Provides links to topics covering automation and extensibility in [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], for both shared and language-specific components.</span></span>
 

@@ -43,16 +43,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 122a59cd118a4a74f7bcb38415d887aa66fc691e
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 945afeede802b017472e0b34420ba8e6175a25cf
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/15/2017
 
 ---
-# <a name="operator-statement"></a>Instrução Operator
-Declara o símbolo do operador, operandos e código que definem um procedimento de operador em uma classe ou estrutura.  
+# <a name="operator-statement"></a><span data-ttu-id="7003d-102">Instrução Operator</span><span class="sxs-lookup"><span data-stu-id="7003d-102">Operator Statement</span></span>
+<span data-ttu-id="7003d-103">Declara o símbolo do operador, operandos e código que definem um procedimento de operador em uma classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="7003d-103">Declares the operator symbol, operands, and code that define an operator procedure on a class or structure.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="7003d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7003d-104">Syntax</span></span>  
   
 ```  
 [ <attrlist> ] Public [ Overloads ] Shared [ Shadows ] [ Widening | Narrowing ]   
@@ -64,146 +64,146 @@ Operator operatorsymbol ( operand1 [, operand2 ]) [ As [ <attrlist> ] type ]
 End Operator  
 ```  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="7003d-105">Partes</span><span class="sxs-lookup"><span data-stu-id="7003d-105">Parts</span></span>  
  `attrlist`  
- Opcional. Consulte [lista atributo](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ <span data-ttu-id="7003d-106">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7003d-106">Optional.</span></span> <span data-ttu-id="7003d-107">Consulte [lista atributo](../../../visual-basic/language-reference/statements/attribute-list.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-107">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>  
   
  `Public`  
- Necessário. Indica que esse procedimento de operador tem [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso.  
+ <span data-ttu-id="7003d-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-108">Required.</span></span> <span data-ttu-id="7003d-109">Indica que esse procedimento de operador tem [pública](../../../visual-basic/language-reference/modifiers/public.md) acesso.</span><span class="sxs-lookup"><span data-stu-id="7003d-109">Indicates that this operator procedure has [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span>  
   
  `Overloads`  
- Opcional. Consulte [sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md).  
+ <span data-ttu-id="7003d-110">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7003d-110">Optional.</span></span> <span data-ttu-id="7003d-111">Consulte [sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-111">See [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md).</span></span>  
   
  `Shared`  
- Necessário. Indica que esse procedimento de operador é um [compartilhado](../../../visual-basic/language-reference/modifiers/shared.md) procedimento.  
+ <span data-ttu-id="7003d-112">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-112">Required.</span></span> <span data-ttu-id="7003d-113">Indica que esse procedimento de operador é um [compartilhado](../../../visual-basic/language-reference/modifiers/shared.md) procedimento.</span><span class="sxs-lookup"><span data-stu-id="7003d-113">Indicates that this operator procedure is a [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procedure.</span></span>  
   
  `Shadows`  
- Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ <span data-ttu-id="7003d-114">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7003d-114">Optional.</span></span> <span data-ttu-id="7003d-115">Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-115">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>  
   
  `Widening`  
- Necessário para um operador de conversão, a menos que você especifique `Narrowing`. Indica que esse procedimento de operador define uma [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversão. Consulte "Widening e Narrowing conversões" nesta página de Ajuda.  
+ <span data-ttu-id="7003d-116">Necessário para um operador de conversão, a menos que você especifique `Narrowing`.</span><span class="sxs-lookup"><span data-stu-id="7003d-116">Required for a conversion operator unless you specify `Narrowing`.</span></span> <span data-ttu-id="7003d-117">Indica que esse procedimento de operador define uma [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversão.</span><span class="sxs-lookup"><span data-stu-id="7003d-117">Indicates that this operator procedure defines a [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion.</span></span> <span data-ttu-id="7003d-118">Consulte "Widening e Narrowing conversões" nesta página de Ajuda.</span><span class="sxs-lookup"><span data-stu-id="7003d-118">See "Widening and Narrowing Conversions" on this Help page.</span></span>  
   
  `Narrowing`  
- Necessário para um operador de conversão, a menos que você especifique `Widening`. Indica que esse procedimento de operador define uma [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversão. Consulte "Widening e Narrowing conversões" nesta página de Ajuda.  
+ <span data-ttu-id="7003d-119">Necessário para um operador de conversão, a menos que você especifique `Widening`.</span><span class="sxs-lookup"><span data-stu-id="7003d-119">Required for a conversion operator unless you specify `Widening`.</span></span> <span data-ttu-id="7003d-120">Indica que esse procedimento de operador define uma [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversão.</span><span class="sxs-lookup"><span data-stu-id="7003d-120">Indicates that this operator procedure defines a [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion.</span></span> <span data-ttu-id="7003d-121">Consulte "Widening e Narrowing conversões" nesta página de Ajuda.</span><span class="sxs-lookup"><span data-stu-id="7003d-121">See "Widening and Narrowing Conversions" on this Help page.</span></span>  
   
  `operatorsymbol`  
- Necessário. O identificador do operador que define este procedimento de operador ou símbolo.  
+ <span data-ttu-id="7003d-122">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-122">Required.</span></span> <span data-ttu-id="7003d-123">O identificador do operador que define este procedimento de operador ou símbolo.</span><span class="sxs-lookup"><span data-stu-id="7003d-123">The symbol or identifier of the operator that this operator procedure defines.</span></span>  
   
  `operand1`  
- Necessário. O nome e o tipo de operando único de um operador unário (incluindo um operador de conversão) ou o operando esquerdo de um operador binário.  
+ <span data-ttu-id="7003d-124">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-124">Required.</span></span> <span data-ttu-id="7003d-125">O nome e o tipo de operando único de um operador unário (incluindo um operador de conversão) ou o operando esquerdo de um operador binário.</span><span class="sxs-lookup"><span data-stu-id="7003d-125">The name and type of the single operand of a unary operator (including a conversion operator) or the left operand of a binary operator.</span></span>  
   
  `operand2`  
- Necessário para operadores binários. O nome e o tipo do operando à direita de um operador binário.  
+ <span data-ttu-id="7003d-126">Necessário para operadores binários.</span><span class="sxs-lookup"><span data-stu-id="7003d-126">Required for binary operators.</span></span> <span data-ttu-id="7003d-127">O nome e o tipo do operando à direita de um operador binário.</span><span class="sxs-lookup"><span data-stu-id="7003d-127">The name and type of the right operand of a binary operator.</span></span>  
   
- `operand1`e `operand2` tem a seguinte sintaxe e partes:  
+ <span data-ttu-id="7003d-128">`operand1`e `operand2` tem a seguinte sintaxe e partes:</span><span class="sxs-lookup"><span data-stu-id="7003d-128">`operand1` and `operand2` have the following syntax and parts:</span></span>  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
-|Parte|Descrição|  
+|<span data-ttu-id="7003d-129">Parte</span><span class="sxs-lookup"><span data-stu-id="7003d-129">Part</span></span>|<span data-ttu-id="7003d-130">Descrição</span><span class="sxs-lookup"><span data-stu-id="7003d-130">Description</span></span>|  
 |----------|-----------------|  
-|`ByVal`|Opcional, mas o mecanismo de passagem deve ser [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|  
-|`operandname`|Necessário. Nome da variável que representa este operando. Consulte [nomes de elemento declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`operandtype`|Opcional, a menos que `Option Strict` é `On`. Tipo de dados deste operando.|  
+|`ByVal`|<span data-ttu-id="7003d-131">Opcional, mas o mecanismo de passagem deve ser [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-131">Optional, but the passing mechanism must be [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).</span></span>|  
+|`operandname`|<span data-ttu-id="7003d-132">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-132">Required.</span></span> <span data-ttu-id="7003d-133">Nome da variável que representa este operando.</span><span class="sxs-lookup"><span data-stu-id="7003d-133">Name of the variable representing this operand.</span></span> <span data-ttu-id="7003d-134">Consulte [nomes de elemento declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-134">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`operandtype`|<span data-ttu-id="7003d-135">Opcional, a menos que `Option Strict` é `On`.</span><span class="sxs-lookup"><span data-stu-id="7003d-135">Optional unless `Option Strict` is `On`.</span></span> <span data-ttu-id="7003d-136">Tipo de dados deste operando.</span><span class="sxs-lookup"><span data-stu-id="7003d-136">Data type of this operand.</span></span>|  
   
  `type`  
- Opcional, a menos que `Option Strict` é `On`. Tipo de dados do valor de procedimento de operador retorna.  
+ <span data-ttu-id="7003d-137">Opcional, a menos que `Option Strict` é `On`.</span><span class="sxs-lookup"><span data-stu-id="7003d-137">Optional unless `Option Strict` is `On`.</span></span> <span data-ttu-id="7003d-138">Tipo de dados do valor de procedimento de operador retorna.</span><span class="sxs-lookup"><span data-stu-id="7003d-138">Data type of the value the operator procedure returns.</span></span>  
   
  `statements`  
- Opcional. Bloco de instruções que executa o procedimento de operador.  
+ <span data-ttu-id="7003d-139">Opcional.</span><span class="sxs-lookup"><span data-stu-id="7003d-139">Optional.</span></span> <span data-ttu-id="7003d-140">Bloco de instruções que executa o procedimento de operador.</span><span class="sxs-lookup"><span data-stu-id="7003d-140">Block of statements that the operator procedure runs.</span></span>  
   
  `returnvalue`  
- Necessário. O valor que o procedimento de operador retorna para o código de chamada.  
+ <span data-ttu-id="7003d-141">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-141">Required.</span></span> <span data-ttu-id="7003d-142">O valor que o procedimento de operador retorna para o código de chamada.</span><span class="sxs-lookup"><span data-stu-id="7003d-142">The value that the operator procedure returns to the calling code.</span></span>  
   
- `End` `Operator`  
- Necessário. Finaliza a definição desse procedimento de operador.  
+ <span data-ttu-id="7003d-143">`End` `Operator`</span><span class="sxs-lookup"><span data-stu-id="7003d-143">`End` `Operator`</span></span>  
+ <span data-ttu-id="7003d-144">Necessário.</span><span class="sxs-lookup"><span data-stu-id="7003d-144">Required.</span></span> <span data-ttu-id="7003d-145">Finaliza a definição desse procedimento de operador.</span><span class="sxs-lookup"><span data-stu-id="7003d-145">Terminates the definition of this operator procedure.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Você pode usar `Operator` somente em uma classe ou estrutura. Isso significa que o *contexto declaração* para um operador não pode ser um arquivo fonte, namespace, módulo, interface, procedimento ou bloco. Para obter mais informações, consulte [contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+## <a name="remarks"></a><span data-ttu-id="7003d-146">Comentários</span><span class="sxs-lookup"><span data-stu-id="7003d-146">Remarks</span></span>  
+ <span data-ttu-id="7003d-147">Você pode usar `Operator` somente em uma classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="7003d-147">You can use `Operator` only in a class or structure.</span></span> <span data-ttu-id="7003d-148">Isso significa que o *contexto declaração* para um operador não pode ser um arquivo fonte, namespace, módulo, interface, procedimento ou bloco.</span><span class="sxs-lookup"><span data-stu-id="7003d-148">This means the *declaration context* for an operator cannot be a source file, namespace, module, interface, procedure, or block.</span></span> <span data-ttu-id="7003d-149">Para obter mais informações, consulte [contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-149">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- Todos os operadores devem ser `Public Shared`. Não é possível especificar `ByRef`, `Optional`, ou `ParamArray` para qualquer um dos operandos.  
+ <span data-ttu-id="7003d-150">Todos os operadores devem ser `Public Shared`.</span><span class="sxs-lookup"><span data-stu-id="7003d-150">All operators must be `Public Shared`.</span></span> <span data-ttu-id="7003d-151">Não é possível especificar `ByRef`, `Optional`, ou `ParamArray` para qualquer um dos operandos.</span><span class="sxs-lookup"><span data-stu-id="7003d-151">You cannot specify `ByRef`, `Optional`, or `ParamArray` for either operand.</span></span>  
   
- Você não pode usar o símbolo do operador ou o identificador para armazenar um valor de retorno. Você deve usar o `Return` statement e ela devem especificar um valor. Qualquer número de `Return` declarações podem aparecer em qualquer lugar no procedimento.  
+ <span data-ttu-id="7003d-152">Você não pode usar o símbolo do operador ou o identificador para armazenar um valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="7003d-152">You cannot use the operator symbol or identifier to hold a return value.</span></span> <span data-ttu-id="7003d-153">Você deve usar o `Return` statement e ela devem especificar um valor.</span><span class="sxs-lookup"><span data-stu-id="7003d-153">You must use the `Return` statement, and it must specify a value.</span></span> <span data-ttu-id="7003d-154">Qualquer número de `Return` declarações podem aparecer em qualquer lugar no procedimento.</span><span class="sxs-lookup"><span data-stu-id="7003d-154">Any number of `Return` statements can appear anywhere in the procedure.</span></span>  
   
- Definir um operador dessa maneira é chamado *sobrecarregamento*, quer você use ou não o `Overloads` palavra-chave. A tabela a seguir lista os operadores que você pode definir.  
+ <span data-ttu-id="7003d-155">Definir um operador dessa maneira é chamado *sobrecarregamento*, quer você use ou não o `Overloads` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="7003d-155">Defining an operator in this way is called *operator overloading*, whether or not you use the `Overloads` keyword.</span></span> <span data-ttu-id="7003d-156">A tabela a seguir lista os operadores que você pode definir.</span><span class="sxs-lookup"><span data-stu-id="7003d-156">The following table lists the operators you can define.</span></span>  
   
-|Tipo|Operadores|  
+|<span data-ttu-id="7003d-157">Tipo</span><span class="sxs-lookup"><span data-stu-id="7003d-157">Type</span></span>|<span data-ttu-id="7003d-158">Operadores</span><span class="sxs-lookup"><span data-stu-id="7003d-158">Operators</span></span>|  
 |----------|---------------|  
-|Unário|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
-|Binário|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
-|Conversão (unário)|`CType`|  
+|<span data-ttu-id="7003d-159">Unário</span><span class="sxs-lookup"><span data-stu-id="7003d-159">Unary</span></span>|<span data-ttu-id="7003d-160">`+`, `-`, `IsFalse`, `IsTrue`, `Not`</span><span class="sxs-lookup"><span data-stu-id="7003d-160">`+`, `-`, `IsFalse`, `IsTrue`, `Not`</span></span>|  
+|<span data-ttu-id="7003d-161">Binário</span><span class="sxs-lookup"><span data-stu-id="7003d-161">Binary</span></span>|<span data-ttu-id="7003d-162">`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`</span><span class="sxs-lookup"><span data-stu-id="7003d-162">`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`</span></span>|  
+|<span data-ttu-id="7003d-163">Conversão (unário)</span><span class="sxs-lookup"><span data-stu-id="7003d-163">Conversion (unary)</span></span>|`CType`|  
   
- Observe que o `=` operador na lista binária é o operador de comparação, não o operador de atribuição.  
+ <span data-ttu-id="7003d-164">Observe que o `=` operador na lista binária é o operador de comparação, não o operador de atribuição.</span><span class="sxs-lookup"><span data-stu-id="7003d-164">Note that the `=` operator in the binary list is the comparison operator, not the assignment operator.</span></span>  
   
- Quando você define `CType`, você deve especificar `Widening` ou `Narrowing`.  
+ <span data-ttu-id="7003d-165">Quando você define `CType`, você deve especificar `Widening` ou `Narrowing`.</span><span class="sxs-lookup"><span data-stu-id="7003d-165">When you define `CType`, you must specify either `Widening` or `Narrowing`.</span></span>  
   
-## <a name="matched-pairs"></a>Pares correspondentes  
- Você deve definir determinados operadores como pares correspondentes. Se você definir um operador de tal par, você deve definir o outro também. Os pares correspondentes são os seguintes:  
+## <a name="matched-pairs"></a><span data-ttu-id="7003d-166">Pares correspondentes</span><span class="sxs-lookup"><span data-stu-id="7003d-166">Matched Pairs</span></span>  
+ <span data-ttu-id="7003d-167">Você deve definir determinados operadores como pares correspondentes.</span><span class="sxs-lookup"><span data-stu-id="7003d-167">You must define certain operators as matched pairs.</span></span> <span data-ttu-id="7003d-168">Se você definir um operador de tal par, você deve definir o outro também.</span><span class="sxs-lookup"><span data-stu-id="7003d-168">If you define either operator of such a pair, you must define the other as well.</span></span> <span data-ttu-id="7003d-169">Os pares correspondentes são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="7003d-169">The matched pairs are the following:</span></span>  
   
--   `=` e `<>`  
+-   <span data-ttu-id="7003d-170">`=` e `<>`</span><span class="sxs-lookup"><span data-stu-id="7003d-170">`=` and `<>`</span></span>  
   
--   `>` e `<`  
+-   <span data-ttu-id="7003d-171">`>` e `<`</span><span class="sxs-lookup"><span data-stu-id="7003d-171">`>` and `<`</span></span>  
   
--   `>=` e `<=`  
+-   <span data-ttu-id="7003d-172">`>=` e `<=`</span><span class="sxs-lookup"><span data-stu-id="7003d-172">`>=` and `<=`</span></span>  
   
--   `IsTrue` e `IsFalse`  
+-   <span data-ttu-id="7003d-173">`IsTrue` e `IsFalse`</span><span class="sxs-lookup"><span data-stu-id="7003d-173">`IsTrue` and `IsFalse`</span></span>  
   
-## <a name="data-type-restrictions"></a>Restrições de tipo de dados  
- Cada operador que você definir deve envolver a classe ou estrutura em que você define. Isso significa que a classe ou estrutura deve aparecer como o tipo de dados das seguintes opções:  
+## <a name="data-type-restrictions"></a><span data-ttu-id="7003d-174">Restrições de tipo de dados</span><span class="sxs-lookup"><span data-stu-id="7003d-174">Data Type Restrictions</span></span>  
+ <span data-ttu-id="7003d-175">Cada operador que você definir deve envolver a classe ou estrutura em que você define.</span><span class="sxs-lookup"><span data-stu-id="7003d-175">Every operator you define must involve the class or structure on which you define it.</span></span> <span data-ttu-id="7003d-176">Isso significa que a classe ou estrutura deve aparecer como o tipo de dados das seguintes opções:</span><span class="sxs-lookup"><span data-stu-id="7003d-176">This means that the class or structure must appear as the data type of the following:</span></span>  
   
--   O operando de um operador unário.  
+-   <span data-ttu-id="7003d-177">O operando de um operador unário.</span><span class="sxs-lookup"><span data-stu-id="7003d-177">The operand of a unary operator.</span></span>  
   
--   Pelo menos um dos operandos de um operador binário.  
+-   <span data-ttu-id="7003d-178">Pelo menos um dos operandos de um operador binário.</span><span class="sxs-lookup"><span data-stu-id="7003d-178">At least one of the operands of a binary operator.</span></span>  
   
--   O operando ou tipo de retorno de um operador de conversão.  
+-   <span data-ttu-id="7003d-179">O operando ou tipo de retorno de um operador de conversão.</span><span class="sxs-lookup"><span data-stu-id="7003d-179">Either the operand or the return type of a conversion operator.</span></span>  
   
- Determinados operadores têm dados adicionais digite restrições, como a seguir:  
+ <span data-ttu-id="7003d-180">Determinados operadores têm dados adicionais digite restrições, como a seguir:</span><span class="sxs-lookup"><span data-stu-id="7003d-180">Certain operators have additional data type restrictions, as follows:</span></span>  
   
--   Se você definir o `IsTrue` e `IsFalse` operadores, eles devem ambos retornam o `Boolean` tipo.  
+-   <span data-ttu-id="7003d-181">Se você definir o `IsTrue` e `IsFalse` operadores, eles devem ambos retornam o `Boolean` tipo.</span><span class="sxs-lookup"><span data-stu-id="7003d-181">If you define the `IsTrue` and `IsFalse` operators, they must both return the `Boolean` type.</span></span>  
   
--   Se você definir o `<<` e `>>` operadores, ele devem especificar o `Integer` tipo para o `operandtype` de `operand2`.  
+-   <span data-ttu-id="7003d-182">Se você definir o `<<` e `>>` operadores, ele devem especificar o `Integer` tipo para o `operandtype` de `operand2`.</span><span class="sxs-lookup"><span data-stu-id="7003d-182">If you define the `<<` and `>>` operators, they must both specify the `Integer` type for the `operandtype` of `operand2`.</span></span>  
   
- O tipo de retorno não precisa corresponder ao tipo de ambos os operandos. Por exemplo, um operador de comparação como `=` ou `<>` pode retornar `Boolean` mesmo se nenhum dos operandos é `Boolean`.  
+ <span data-ttu-id="7003d-183">O tipo de retorno não precisa corresponder ao tipo de ambos os operandos.</span><span class="sxs-lookup"><span data-stu-id="7003d-183">The return type does not have to correspond to the type of either operand.</span></span> <span data-ttu-id="7003d-184">Por exemplo, um operador de comparação como `=` ou `<>` pode retornar `Boolean` mesmo se nenhum dos operandos é `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="7003d-184">For example, a comparison operator such as `=` or `<>` can return `Boolean` even if neither operand is `Boolean`.</span></span>  
   
-## <a name="logical-and-bitwise-operators"></a>Operadores lógicos e bit a bit  
- O `And`, `Or`, `Not`, e `Xor` operadores podem executar operações de lógicas ou bit a bit no Visual Basic. No entanto, se você definir um desses operadores em uma classe ou estrutura, você pode definir apenas sua operação bit a bit.  
+## <a name="logical-and-bitwise-operators"></a><span data-ttu-id="7003d-185">Operadores lógicos e bit a bit</span><span class="sxs-lookup"><span data-stu-id="7003d-185">Logical and Bitwise Operators</span></span>  
+ <span data-ttu-id="7003d-186">O `And`, `Or`, `Not`, e `Xor` operadores podem executar operações de lógicas ou bit a bit no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="7003d-186">The `And`, `Or`, `Not`, and `Xor` operators can perform either logical or bitwise operations in Visual Basic.</span></span> <span data-ttu-id="7003d-187">No entanto, se você definir um desses operadores em uma classe ou estrutura, você pode definir apenas sua operação bit a bit.</span><span class="sxs-lookup"><span data-stu-id="7003d-187">However, if you define one of these operators on a class or structure, you can define only its bitwise operation.</span></span>  
   
- Não é possível definir o `AndAlso` operador diretamente com um `Operator` instrução. No entanto, você pode usar `AndAlso` se você cumpriu as seguintes condições:  
+ <span data-ttu-id="7003d-188">Não é possível definir o `AndAlso` operador diretamente com um `Operator` instrução.</span><span class="sxs-lookup"><span data-stu-id="7003d-188">You cannot define the `AndAlso` operator directly with an `Operator` statement.</span></span> <span data-ttu-id="7003d-189">No entanto, você pode usar `AndAlso` se você cumpriu as seguintes condições:</span><span class="sxs-lookup"><span data-stu-id="7003d-189">However, you can use `AndAlso` if you have fulfilled the following conditions:</span></span>  
   
--   Você definiu `And` nos mesmos tipos de operando que você deseja usar para `AndAlso`.  
+-   <span data-ttu-id="7003d-190">Você definiu `And` nos mesmos tipos de operando que você deseja usar para `AndAlso`.</span><span class="sxs-lookup"><span data-stu-id="7003d-190">You have defined `And` on the same operand types you want to use for `AndAlso`.</span></span>  
   
--   Sua definição de `And` retorna o mesmo tipo da classe ou estrutura na qual você o define.  
+-   <span data-ttu-id="7003d-191">Sua definição de `And` retorna o mesmo tipo da classe ou estrutura na qual você o define.</span><span class="sxs-lookup"><span data-stu-id="7003d-191">Your definition of `And` returns the same type as the class or structure on which you have defined it.</span></span>  
   
--   Você definiu o `IsFalse` operador na classe ou estrutura na qual você definiu `And`.  
+-   <span data-ttu-id="7003d-192">Você definiu o `IsFalse` operador na classe ou estrutura na qual você definiu `And`.</span><span class="sxs-lookup"><span data-stu-id="7003d-192">You have defined the `IsFalse` operator on the class or structure on which you have defined `And`.</span></span>  
   
- Da mesma forma, você pode usar `OrElse` se você tiver definido `Or` nos operandos mesmo, com o tipo de retorno da classe ou estrutura e você tiver definido `IsTrue` na classe ou estrutura.  
+ <span data-ttu-id="7003d-193">Da mesma forma, você pode usar `OrElse` se você tiver definido `Or` nos operandos mesmo, com o tipo de retorno da classe ou estrutura e você tiver definido `IsTrue` na classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="7003d-193">Similarly, you can use `OrElse` if you have defined `Or` on the same operands, with the return type of the class or structure, and you have defined `IsTrue` on the class or structure.</span></span>  
   
-## <a name="widening-and-narrowing-conversions"></a>Conversões de Widening e Narrowing  
- A *conversões ampliadoras* sempre terá êxito em tempo de execução, enquanto um *conversão de redução* pode falhar em tempo de execução. Para obter mais informações, consulte [Widening e conversões de estreitamento](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+## <a name="widening-and-narrowing-conversions"></a><span data-ttu-id="7003d-194">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="7003d-194">Widening and Narrowing Conversions</span></span>  
+ <span data-ttu-id="7003d-195">A *conversões ampliadoras* sempre terá êxito em tempo de execução, enquanto um *conversão de redução* pode falhar em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="7003d-195">A *widening conversion* always succeeds at run time, while a *narrowing conversion* can fail at run time.</span></span> <span data-ttu-id="7003d-196">Para obter mais informações, consulte [Widening e conversões de estreitamento](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="7003d-196">For more information, see [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
   
- Se você declarar um procedimento de conversão para ser `Widening`, o código de procedimento não deve gerar falhas. Isso significa que o seguinte:  
+ <span data-ttu-id="7003d-197">Se você declarar um procedimento de conversão para ser `Widening`, o código de procedimento não deve gerar falhas.</span><span class="sxs-lookup"><span data-stu-id="7003d-197">If you declare a conversion procedure to be `Widening`, your procedure code must not generate any failures.</span></span> <span data-ttu-id="7003d-198">Isso significa que o seguinte:</span><span class="sxs-lookup"><span data-stu-id="7003d-198">This means the following:</span></span>  
   
--   Ele sempre deve retornar um valor válido do tipo `type`.  
+-   <span data-ttu-id="7003d-199">Ele sempre deve retornar um valor válido do tipo `type`.</span><span class="sxs-lookup"><span data-stu-id="7003d-199">It must always return a valid value of type `type`.</span></span>  
   
--   Ele deve tratar todas as exceções possíveis e outras condições de erro.  
+-   <span data-ttu-id="7003d-200">Ele deve tratar todas as exceções possíveis e outras condições de erro.</span><span class="sxs-lookup"><span data-stu-id="7003d-200">It must handle all possible exceptions and other error conditions.</span></span>  
   
--   Ele deve tratar retorna qualquer erro de qualquer procedimento chama.  
+-   <span data-ttu-id="7003d-201">Ele deve tratar retorna qualquer erro de qualquer procedimento chama.</span><span class="sxs-lookup"><span data-stu-id="7003d-201">It must handle any error returns from any procedures it calls.</span></span>  
   
- Se há possibilidade de um procedimento de conversão talvez não seja bem-sucedida, ou que ele pode causar uma exceção sem tratamento, você deve declará-la `Narrowing`.  
+ <span data-ttu-id="7003d-202">Se há possibilidade de um procedimento de conversão talvez não seja bem-sucedida, ou que ele pode causar uma exceção sem tratamento, você deve declará-la `Narrowing`.</span><span class="sxs-lookup"><span data-stu-id="7003d-202">If there is any possibility that a conversion procedure might not succeed, or that it might cause an unhandled exception, you must declare it to be `Narrowing`.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O seguinte exemplo de código usa o `Operator` instrução para definir o contorno de uma estrutura que inclui procedimentos de operador para o `And`, `Or`, `IsFalse`, e `IsTrue` operadores. `And`e `Or` cada usam dois operandos do tipo `abc` e tipo de retorno `abc`. `IsFalse`e `IsTrue` recebem um único operando do tipo `abc` e retornar `Boolean`. Essas definições permitem que o código use `And`, `AndAlso`, `Or`, e `OrElse` com operandos do tipo `abc`.  
+## <a name="example"></a><span data-ttu-id="7003d-203">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7003d-203">Example</span></span>  
+ <span data-ttu-id="7003d-204">O seguinte exemplo de código usa o `Operator` instrução para definir o contorno de uma estrutura que inclui procedimentos de operador para o `And`, `Or`, `IsFalse`, e `IsTrue` operadores.</span><span class="sxs-lookup"><span data-stu-id="7003d-204">The following code example uses the `Operator` statement to define the outline of a structure that includes operator procedures for the `And`, `Or`, `IsFalse`, and `IsTrue` operators.</span></span> <span data-ttu-id="7003d-205">`And`e `Or` cada usam dois operandos do tipo `abc` e tipo de retorno `abc`.</span><span class="sxs-lookup"><span data-stu-id="7003d-205">`And` and `Or` each take two operands of type `abc` and return type `abc`.</span></span> <span data-ttu-id="7003d-206">`IsFalse`e `IsTrue` recebem um único operando do tipo `abc` e retornar `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="7003d-206">`IsFalse` and `IsTrue` each take a single operand of type `abc` and return `Boolean`.</span></span> <span data-ttu-id="7003d-207">Essas definições permitem que o código use `And`, `AndAlso`, `Or`, e `OrElse` com operandos do tipo `abc`.</span><span class="sxs-lookup"><span data-stu-id="7003d-207">These definitions allow the calling code to use `And`, `AndAlso`, `Or`, and `OrElse` with operands of type `abc`.</span></span>  
   
- [!code-vb[VbVbalrStatements&#44;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
+ <span data-ttu-id="7003d-208">[!code-vb[VbVbalrStatements&#44;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="7003d-208">[!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Operador IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)   
- [Operador IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)   
- [Ampliação](../../../visual-basic/language-reference/modifiers/widening.md)   
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)   
- [Conversões entre](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   
- [Como: definir um operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)   
- [Como: definir um operador de conversão](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [Como: chamar um procedimento de operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)   
- [Como usar uma classe que define operadores](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a><span data-ttu-id="7003d-209">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7003d-209">See Also</span></span>  
+ <span data-ttu-id="7003d-210">[Operador IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-210">[IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md) </span></span>  
+<span data-ttu-id="7003d-211"> [Operador IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-211"> [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md) </span></span>  
+<span data-ttu-id="7003d-212"> [Ampliação](../../../visual-basic/language-reference/modifiers/widening.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-212"> [Widening](../../../visual-basic/language-reference/modifiers/widening.md) </span></span>  
+<span data-ttu-id="7003d-213"> [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-213"> [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) </span></span>  
+<span data-ttu-id="7003d-214"> [Conversões entre](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-214"> [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span></span>  
+<span data-ttu-id="7003d-215"> [Procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-215"> [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md) </span></span>  
+<span data-ttu-id="7003d-216"> [Como: definir um operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-216"> [How to: Define an Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md) </span></span>  
+<span data-ttu-id="7003d-217"> [Como: definir um operador de conversão](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-217"> [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md) </span></span>  
+<span data-ttu-id="7003d-218"> [Como: chamar um procedimento de operador](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md) </span><span class="sxs-lookup"><span data-stu-id="7003d-218"> [How to: Call an Operator Procedure](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md) </span></span>  
+<span data-ttu-id="7003d-219"> [Como usar uma classe que define operadores](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)</span><span class="sxs-lookup"><span data-stu-id="7003d-219"> [How to: Use a Class that Defines Operators](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)</span></span>
 

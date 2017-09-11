@@ -35,16 +35,16 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="visual-basic-breaking-changes-in-visual-studio"></a>Alterações significativas do Visual Basic no Visual Studio
-Para obter a documentação mais recente do Visual Studio 2017, consulte a [documentação do Visual Studio 2017](http://docs.microsoft.com/visualstudio/).
+# <a name="visual-basic-breaking-changes-in-visual-studio"></a><span data-ttu-id="5ff5c-102">Alterações significativas do Visual Basic no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="5ff5c-102">Visual Basic Breaking Changes in Visual Studio</span></span>
+<span data-ttu-id="5ff5c-103">Para obter a documentação mais recente do Visual Studio 2017, consulte a [documentação do Visual Studio 2017](http://docs.microsoft.com/visualstudio/).</span><span class="sxs-lookup"><span data-stu-id="5ff5c-103">For the latest documentation on Visual Studio 2017, see [Visual Studio 2017 Documentation](http://docs.microsoft.com/visualstudio/).</span></span>
 
-Nenhuma alteração do Visual Basic no Visual Studio 2015 impedirá que um aplicativo criado no Visual Basic do Visual Studio 2013 compile ou altere o comportamento de tempo de execução desse aplicativo.  
+<span data-ttu-id="5ff5c-104">Nenhuma alteração do Visual Basic no Visual Studio 2015 impedirá que um aplicativo criado no Visual Basic do Visual Studio 2013 compile ou altere o comportamento de tempo de execução desse aplicativo.</span><span class="sxs-lookup"><span data-stu-id="5ff5c-104">No changes in Visual Basic in Visual Studio 2015 will prevent an application that was created in Visual Basic in Visual Studio 2013 from compiling or change the run-time behavior of such an application.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Matrizes](../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Expressões Lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [Instrução For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [Introdução](../../visual-basic/getting-started/index.md)   
- [Quando uma correção de linguagem sem interrupção interrompe?](http://go.microsoft.com/fwlink/?LinkId=259542)
+## <a name="see-also"></a><span data-ttu-id="5ff5c-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5ff5c-105">See Also</span></span>  
+ <span data-ttu-id="5ff5c-106">[Matrizes](../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="5ff5c-106">[Arrays](../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+ <span data-ttu-id="5ff5c-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span><span class="sxs-lookup"><span data-stu-id="5ff5c-107">[LINQ](../../visual-basic/programming-guide/language-features/linq/index.md) </span></span>  
+ <span data-ttu-id="5ff5c-108">[Expressões Lambda](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span><span class="sxs-lookup"><span data-stu-id="5ff5c-108">[Lambda Expressions](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) </span></span>  
+ <span data-ttu-id="5ff5c-109">[Instrução For Each...Next](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="5ff5c-109">[For Each...Next Statement](../../visual-basic/language-reference/statements/for-each-next-statement.md) </span></span>  
+ <span data-ttu-id="5ff5c-110">[Introdução](../../visual-basic/getting-started/index.md) </span><span class="sxs-lookup"><span data-stu-id="5ff5c-110">[Getting Started](../../visual-basic/getting-started/index.md) </span></span>  
+ [<span data-ttu-id="5ff5c-111">Quando uma correção de linguagem sem interrupção interrompe?</span><span class="sxs-lookup"><span data-stu-id="5ff5c-111">When is a non-breaking language fix breaking?</span></span>](http://go.microsoft.com/fwlink/?LinkId=259542)
 

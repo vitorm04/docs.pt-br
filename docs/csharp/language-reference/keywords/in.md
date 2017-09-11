@@ -37,15 +37,15 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="in-c-reference"></a>in (Referência de C#)
-A palavra-chave contextual `in` é usada em três contextos:  
+# <a name="in-c-reference"></a><span data-ttu-id="6bc8a-102">in (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="6bc8a-102">in (C# Reference)</span></span>
+<span data-ttu-id="6bc8a-103">A palavra-chave contextual `in` é usada em três contextos:</span><span class="sxs-lookup"><span data-stu-id="6bc8a-103">The `in` contextual keyword is used in three contexts:</span></span>  
   
--   Instruções [foreach](../../../csharp/language-reference/keywords/foreach-in.md)  
+-   <span data-ttu-id="6bc8a-104">Instruções [foreach](../../../csharp/language-reference/keywords/foreach-in.md)</span><span class="sxs-lookup"><span data-stu-id="6bc8a-104">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) statements</span></span>  
   
--   [cláusulas join](../../../csharp/language-reference/keywords/join-clause.md) em expressões de consulta  
+-   <span data-ttu-id="6bc8a-105">[cláusulas join](../../../csharp/language-reference/keywords/join-clause.md) em expressões de consulta</span><span class="sxs-lookup"><span data-stu-id="6bc8a-105">[join clauses](../../../csharp/language-reference/keywords/join-clause.md) in query expressions</span></span>  
   
--   [parâmetros de tipo genérico](../../../csharp/language-reference/keywords/in-generic-modifier.md) em interfaces e delegados genéricos.  
+-   <span data-ttu-id="6bc8a-106">[parâmetros de tipo genérico](../../../csharp/language-reference/keywords/in-generic-modifier.md) em interfaces e delegados genéricos.</span><span class="sxs-lookup"><span data-stu-id="6bc8a-106">[generic type parameters](../../../csharp/language-reference/keywords/in-generic-modifier.md) in generic interfaces and delegates.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="6bc8a-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6bc8a-107">See Also</span></span>  
+ [<span data-ttu-id="6bc8a-108">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="6bc8a-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 

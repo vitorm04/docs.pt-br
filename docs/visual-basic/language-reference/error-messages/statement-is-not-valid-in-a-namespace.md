@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8ad350f26c3f46bf5bff4af7033108ac84b6c10
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cfa26e3ada141f3d9702950821958a6ce04ed5cd
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="statement-is-not-valid-in-a-namespace"></a>A instrução não é válida em um namespace
-A instrução não pode aparecer no nível de um namespace. As únicas declarações permitidas no nível de namespace são módulo, interface, classe, representante, enumeração e declarações de estrutura.  
+# <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="991e6-102">A instrução não é válida em um namespace</span><span class="sxs-lookup"><span data-stu-id="991e6-102">Statement is not valid in a namespace</span></span>
+<span data-ttu-id="991e6-103">A instrução não pode aparecer no nível de um namespace.</span><span class="sxs-lookup"><span data-stu-id="991e6-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="991e6-104">As únicas declarações permitidas no nível de namespace são módulo, interface, classe, representante, enumeração e declarações de estrutura.</span><span class="sxs-lookup"><span data-stu-id="991e6-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  
   
- **ID do erro:** BC30001  
+ <span data-ttu-id="991e6-105">**ID do erro:** BC30001</span><span class="sxs-lookup"><span data-stu-id="991e6-105">**Error ID:** BC30001</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="991e6-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="991e6-106">To correct this error</span></span>  
   
--   Mova a instrução para um local dentro de um módulo, classe, interface, estrutura, enumeração ou definição de representante.  
+-   <span data-ttu-id="991e6-107">Mova a instrução para um local dentro de um módulo, classe, interface, estrutura, enumeração ou definição de representante.</span><span class="sxs-lookup"><span data-stu-id="991e6-107">Move the statement to a location within a module, class, interface, structure, enumeration, or delegate definition.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Escopo no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="991e6-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="991e6-108">See Also</span></span>  
+ <span data-ttu-id="991e6-109">[Escopo no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md) </span><span class="sxs-lookup"><span data-stu-id="991e6-109">[Scope in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md) </span></span>  
+<span data-ttu-id="991e6-110"> [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)</span><span class="sxs-lookup"><span data-stu-id="991e6-110"> [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)</span></span>

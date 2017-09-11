@@ -29,27 +29,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ecb1f2e003c09b0b497f491e3106d75709ec8609
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a3f2376c3a69365e21faf208e20dae77c9dde634
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="myapplicationinfo-object"></a>Objeto My.Application.Info
-Fornece propriedades para obter informações sobre o aplicativo, como o número de versão, descrição, assemblies carregados e assim por diante.  
+# <a name="myapplicationinfo-object"></a><span data-ttu-id="cfe52-102">Objeto My.Application.Info</span><span class="sxs-lookup"><span data-stu-id="cfe52-102">My.Application.Info Object</span></span>
+<span data-ttu-id="cfe52-103">Fornece propriedades para obter informações sobre o aplicativo, como o número de versão, descrição, assemblies carregados e assim por diante.</span><span class="sxs-lookup"><span data-stu-id="cfe52-103">Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e propriedades do `My.Application.Info` de objeto, consulte <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.</xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+## <a name="remarks"></a><span data-ttu-id="cfe52-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="cfe52-104">Remarks</span></span>  
+ <span data-ttu-id="cfe52-105">Para obter informações sobre os métodos e propriedades do `My.Application.Info` de objeto, consulte <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.</xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span><span class="sxs-lookup"><span data-stu-id="cfe52-105">For information about the methods and properties of the `My.Application.Info` object, see <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.</span></span>  
   
 > [!NOTE]
->  Você pode usar propriedades da <xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName>classe para obter informações sobre um arquivo no disco.</xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName>  
+>  <span data-ttu-id="cfe52-106">Você pode usar propriedades da <xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName>classe para obter informações sobre um arquivo no disco.</xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="cfe52-106">You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=fullName> class to obtain information about a file on disk.</span></span>  
   
-## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.ApplicationServices></xref:Microsoft.VisualBasic.ApplicationServices>  
+## <a name="requirements"></a><span data-ttu-id="cfe52-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cfe52-107">Requirements</span></span>  
+ <span data-ttu-id="cfe52-108">**Namespace:**<xref:Microsoft.VisualBasic.ApplicationServices></xref:Microsoft.VisualBasic.ApplicationServices></span><span class="sxs-lookup"><span data-stu-id="cfe52-108">**Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices></span></span>  
   
- **Classe:**<xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ <span data-ttu-id="cfe52-109">**Classe:**<xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span><span class="sxs-lookup"><span data-stu-id="cfe52-109">**Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo></span></span>  
   
- **Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)  
+ <span data-ttu-id="cfe52-110">**Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="cfe52-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto My. Application](../../../visual-basic/language-reference/objects/my-application-object.md)
+## <a name="see-also"></a><span data-ttu-id="cfe52-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cfe52-111">See Also</span></span>  
+ [<span data-ttu-id="cfe52-112">Objeto My. Application</span><span class="sxs-lookup"><span data-stu-id="cfe52-112">My.Application Object</span></span>](../../../visual-basic/language-reference/objects/my-application-object.md)

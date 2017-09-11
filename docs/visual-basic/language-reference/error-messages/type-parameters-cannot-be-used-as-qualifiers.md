@@ -32,18 +32,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1931945b1ae58019096a7ed1a27d2aeda76f4e45
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: aa7d9f0d7d4253539f43de6817cc48f06812e16a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Não é possível usar parâmetros de tipo como qualificadores
-Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.  
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="1b45b-102">Não é possível usar parâmetros de tipo como qualificadores</span><span class="sxs-lookup"><span data-stu-id="1b45b-102">Type parameters cannot be used as qualifiers</span></span>
+<span data-ttu-id="1b45b-103">Um elemento de programação é qualificado com uma cadeia de caracteres de qualificação que inclui um parâmetro de tipo.</span><span class="sxs-lookup"><span data-stu-id="1b45b-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>  
   
- Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído. Ele não representa um tipo específico de definidos. Uma cadeia de caracteres de qualificação deve incluir somente os elementos que são definidos em tempo de compilação.  
+ <span data-ttu-id="1b45b-104">Um parâmetro de tipo representa um requisito para um tipo que deve ser fornecido quando o tipo genérico é construído.</span><span class="sxs-lookup"><span data-stu-id="1b45b-104">A type parameter represents a requirement for a type that is to be supplied when the generic type is constructed.</span></span> <span data-ttu-id="1b45b-105">Ele não representa um tipo específico de definidos.</span><span class="sxs-lookup"><span data-stu-id="1b45b-105">It does not represent a specific defined type.</span></span> <span data-ttu-id="1b45b-106">Uma cadeia de caracteres de qualificação deve incluir somente os elementos que são definidos em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="1b45b-106">A qualification string must include only elements that are defined at compile time.</span></span>  
   
- As instruções a seguir podem gerar esse erro.  
+ <span data-ttu-id="1b45b-107">As instruções a seguir podem gerar esse erro.</span><span class="sxs-lookup"><span data-stu-id="1b45b-107">The following statements can generate this error.</span></span>  
   
 ```  
 Public Function checkText(Of c As System.Windows.Forms.Control)(  
@@ -54,15 +55,15 @@ Public Function checkText(Of c As System.Windows.Forms.Control)(
 End Function  
 ```  
   
- **ID do erro:** BC32098  
+ <span data-ttu-id="1b45b-108">**ID do erro:** BC32098</span><span class="sxs-lookup"><span data-stu-id="1b45b-108">**Error ID:** BC32098</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1b45b-109">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1b45b-109">To correct this error</span></span>  
   
-1.  Remova o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.  
+1.  <span data-ttu-id="1b45b-110">Remova o parâmetro de tipo de cadeia de caracteres de qualificação ou substituí-lo com um tipo definido.</span><span class="sxs-lookup"><span data-stu-id="1b45b-110">Remove the type parameter from the qualification string, or replace it with a defined type.</span></span>  
   
-2.  Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.  
+2.  <span data-ttu-id="1b45b-111">Se você precisar usar um tipo construído para localizar o elemento de programação que está sendo qualificado, você deve usar lógica adicional do programa.</span><span class="sxs-lookup"><span data-stu-id="1b45b-111">If you need to use a constructed type to locate the programming element being qualified, you must use additional program logic.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a><span data-ttu-id="1b45b-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1b45b-112">See Also</span></span>  
+ <span data-ttu-id="1b45b-113">[Referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md) </span><span class="sxs-lookup"><span data-stu-id="1b45b-113">[References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md) </span></span>  
+<span data-ttu-id="1b45b-114"> [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md) </span><span class="sxs-lookup"><span data-stu-id="1b45b-114"> [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md) </span></span>  
+<span data-ttu-id="1b45b-115"> [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)</span><span class="sxs-lookup"><span data-stu-id="1b45b-115"> [Type List](../../../visual-basic/language-reference/statements/type-list.md)</span></span>

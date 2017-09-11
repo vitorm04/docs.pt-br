@@ -35,87 +35,88 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: abadaa8e035bfa4c92acc30ab633d6a7e958676c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: cc56d90db9a732928773fa549cb1456d368e1dbe
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="parameter-list-visual-basic"></a>Lista de parâmetros (Visual Basic)
-Especifica os parâmetros do procedimento quando é chamado. Vários parâmetros são separados por vírgulas. A seguir está a sintaxe de um parâmetro.  
+# <a name="parameter-list-visual-basic"></a><span data-ttu-id="219f0-102">Lista de parâmetros (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="219f0-102">Parameter List (Visual Basic)</span></span>
+<span data-ttu-id="219f0-103">Especifica os parâmetros do procedimento quando é chamado.</span><span class="sxs-lookup"><span data-stu-id="219f0-103">Specifies the parameters a procedure expects when it is called.</span></span> <span data-ttu-id="219f0-104">Vários parâmetros são separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="219f0-104">Multiple parameters are separated by commas.</span></span> <span data-ttu-id="219f0-105">A seguir está a sintaxe de um parâmetro.</span><span class="sxs-lookup"><span data-stu-id="219f0-105">The following is the syntax for one parameter.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="219f0-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="219f0-106">Syntax</span></span>  
   
 ```  
 [ <attributelist> ] [ Optional ] [{ ByVal | ByRef }] [ ParamArray ]   
 parametername[( )] [ As parametertype ] [ = defaultvalue ]  
 ```  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="219f0-107">Partes</span><span class="sxs-lookup"><span data-stu-id="219f0-107">Parts</span></span>  
  `attributelist`  
- Opcional. Lista de atributos que se aplicam a esse parâmetro. Você deve colocar o [a lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre colchetes angulares ("`<`"e"`>`").  
+ <span data-ttu-id="219f0-108">Opcional.</span><span class="sxs-lookup"><span data-stu-id="219f0-108">Optional.</span></span> <span data-ttu-id="219f0-109">Lista de atributos que se aplicam a esse parâmetro.</span><span class="sxs-lookup"><span data-stu-id="219f0-109">List of attributes that apply to this parameter.</span></span> <span data-ttu-id="219f0-110">Você deve colocar o [a lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre colchetes angulares ("`<`"e"`>`").</span><span class="sxs-lookup"><span data-stu-id="219f0-110">You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").</span></span>  
   
  `Optional`  
- Opcional. Especifica que este parâmetro não é necessário quando o procedimento é chamado.  
+ <span data-ttu-id="219f0-111">Opcional.</span><span class="sxs-lookup"><span data-stu-id="219f0-111">Optional.</span></span> <span data-ttu-id="219f0-112">Especifica que este parâmetro não é necessário quando o procedimento é chamado.</span><span class="sxs-lookup"><span data-stu-id="219f0-112">Specifies that this parameter is not required when the procedure is called.</span></span>  
   
  `ByVal`  
- Opcional. Especifica que o procedimento não pode substituir ou reatribuir o elemento variável subjacente ao argumento correspondente no código de chamada.  
+ <span data-ttu-id="219f0-113">Opcional.</span><span class="sxs-lookup"><span data-stu-id="219f0-113">Optional.</span></span> <span data-ttu-id="219f0-114">Especifica que o procedimento não pode substituir ou reatribuir o elemento variável subjacente ao argumento correspondente no código de chamada.</span><span class="sxs-lookup"><span data-stu-id="219f0-114">Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.</span></span>  
   
  `ByRef`  
- Opcional. Especifica que o procedimento pode modificar o elemento variável subjacente no código de chamada da mesma forma que o código de chamada em si pode.  
+ <span data-ttu-id="219f0-115">Opcional.</span><span class="sxs-lookup"><span data-stu-id="219f0-115">Optional.</span></span> <span data-ttu-id="219f0-116">Especifica que o procedimento pode modificar o elemento variável subjacente no código de chamada da mesma forma que o código de chamada em si pode.</span><span class="sxs-lookup"><span data-stu-id="219f0-116">Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.</span></span>  
   
  `ParamArray`  
- Opcional. Especifica que o último parâmetro na lista de parâmetros é uma matriz opcional de elementos do tipo de dados especificado. Isso permite que o código de chamada passe um número arbitrário de argumentos para o procedimento.  
+ <span data-ttu-id="219f0-117">Opcional.</span><span class="sxs-lookup"><span data-stu-id="219f0-117">Optional.</span></span> <span data-ttu-id="219f0-118">Especifica que o último parâmetro na lista de parâmetros é uma matriz opcional de elementos do tipo de dados especificado.</span><span class="sxs-lookup"><span data-stu-id="219f0-118">Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type.</span></span> <span data-ttu-id="219f0-119">Isso permite que o código de chamada passe um número arbitrário de argumentos para o procedimento.</span><span class="sxs-lookup"><span data-stu-id="219f0-119">This lets the calling code pass an arbitrary number of arguments to the procedure.</span></span>  
   
  `parametername`  
- Necessário. Nome da variável local representando o parâmetro.  
+ <span data-ttu-id="219f0-120">Necessário.</span><span class="sxs-lookup"><span data-stu-id="219f0-120">Required.</span></span> <span data-ttu-id="219f0-121">Nome da variável local representando o parâmetro.</span><span class="sxs-lookup"><span data-stu-id="219f0-121">Name of the local variable representing the parameter.</span></span>  
   
  `parametertype`  
- Necessário se `Option Strict` é `On`. Tipo de dados da variável local representando o parâmetro.  
+ <span data-ttu-id="219f0-122">Necessário se `Option Strict` é `On`.</span><span class="sxs-lookup"><span data-stu-id="219f0-122">Required if `Option Strict` is `On`.</span></span> <span data-ttu-id="219f0-123">Tipo de dados da variável local representando o parâmetro.</span><span class="sxs-lookup"><span data-stu-id="219f0-123">Data type of the local variable representing the parameter.</span></span>  
   
  `defaultvalue`  
- Necessário para `Optional` parâmetros. Qualquer constante ou expressão constante que é avaliada como o tipo de dados do parâmetro. Se o tipo for `Object`, ou uma classe, interface, matriz ou estrutura, o valor padrão só pode ser `Nothing`.  
+ <span data-ttu-id="219f0-124">Necessário para `Optional` parâmetros.</span><span class="sxs-lookup"><span data-stu-id="219f0-124">Required for `Optional` parameters.</span></span> <span data-ttu-id="219f0-125">Qualquer constante ou expressão constante que é avaliada como o tipo de dados do parâmetro.</span><span class="sxs-lookup"><span data-stu-id="219f0-125">Any constant or constant expression that evaluates to the data type of the parameter.</span></span> <span data-ttu-id="219f0-126">Se o tipo for `Object`, ou uma classe, interface, matriz ou estrutura, o valor padrão só pode ser `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="219f0-126">If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Parâmetros estão entre parênteses e separados por vírgulas. Um parâmetro pode ser declarado com qualquer tipo de dados. Se você não especificar `parametertype`, o padrão é `Object`.  
+## <a name="remarks"></a><span data-ttu-id="219f0-127">Comentários</span><span class="sxs-lookup"><span data-stu-id="219f0-127">Remarks</span></span>  
+ <span data-ttu-id="219f0-128">Parâmetros estão entre parênteses e separados por vírgulas.</span><span class="sxs-lookup"><span data-stu-id="219f0-128">Parameters are surrounded by parentheses and separated by commas.</span></span> <span data-ttu-id="219f0-129">Um parâmetro pode ser declarado com qualquer tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="219f0-129">A parameter can be declared with any data type.</span></span> <span data-ttu-id="219f0-130">Se você não especificar `parametertype`, o padrão é `Object`.</span><span class="sxs-lookup"><span data-stu-id="219f0-130">If you do not specify `parametertype`, it defaults to `Object`.</span></span>  
   
- Quando o código de chamada chama o procedimento, ele passa um *argumento* para cada parâmetro necessário. Para obter mais informações, consulte [as diferenças entre parâmetros e argumentos](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).  
+ <span data-ttu-id="219f0-131">Quando o código de chamada chama o procedimento, ele passa um *argumento* para cada parâmetro necessário.</span><span class="sxs-lookup"><span data-stu-id="219f0-131">When the calling code calls the procedure, it passes an *argument* to each required parameter.</span></span> <span data-ttu-id="219f0-132">Para obter mais informações, consulte [as diferenças entre parâmetros e argumentos](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).</span><span class="sxs-lookup"><span data-stu-id="219f0-132">For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).</span></span>  
   
- O argumento que o código de chamada passa para cada parâmetro é um ponteiro para um elemento subjacente no código de chamada. Se este elemento é *invariável* (uma constante, literal, enumeração ou expressão), é impossível para qualquer código mudá-lo. Se for um *variável* elemento (uma variável declarada, campo, propriedade, elemento de matriz ou elemento de estrutura), o código de chamada pode alterá-lo. Para obter mais informações, consulte [as diferenças entre modificáveis e não modificáveis argumentos](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).  
+ <span data-ttu-id="219f0-133">O argumento que o código de chamada passa para cada parâmetro é um ponteiro para um elemento subjacente no código de chamada.</span><span class="sxs-lookup"><span data-stu-id="219f0-133">The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code.</span></span> <span data-ttu-id="219f0-134">Se este elemento é *invariável* (uma constante, literal, enumeração ou expressão), é impossível para qualquer código mudá-lo.</span><span class="sxs-lookup"><span data-stu-id="219f0-134">If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it.</span></span> <span data-ttu-id="219f0-135">Se for um *variável* elemento (uma variável declarada, campo, propriedade, elemento de matriz ou elemento de estrutura), o código de chamada pode alterá-lo.</span><span class="sxs-lookup"><span data-stu-id="219f0-135">If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it.</span></span> <span data-ttu-id="219f0-136">Para obter mais informações, consulte [as diferenças entre modificáveis e não modificáveis argumentos](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).</span><span class="sxs-lookup"><span data-stu-id="219f0-136">For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).</span></span>  
   
- Se um elemento variável é passado `ByRef`, o procedimento pode alterá-lo também. Para obter mais informações, consulte [as diferenças entre passar um argumento por valor e por referência](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).  
+ <span data-ttu-id="219f0-137">Se um elemento variável é passado `ByRef`, o procedimento pode alterá-lo também.</span><span class="sxs-lookup"><span data-stu-id="219f0-137">If a variable element is passed `ByRef`, the procedure can change it as well.</span></span> <span data-ttu-id="219f0-138">Para obter mais informações, consulte [as diferenças entre passar um argumento por valor e por referência](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).</span><span class="sxs-lookup"><span data-stu-id="219f0-138">For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).</span></span>  
   
-## <a name="rules"></a>Regras  
+## <a name="rules"></a><span data-ttu-id="219f0-139">Regras</span><span class="sxs-lookup"><span data-stu-id="219f0-139">Rules</span></span>  
   
--   **Parênteses.** Se você especificar uma lista de parâmetros, você deve colocá-la entre parênteses. Se não houver nenhum parâmetro, você ainda pode usar parênteses delimitando uma lista vazia. Isso melhora a legibilidade do código deixando mais claro que o elemento é um procedimento.  
+-   <span data-ttu-id="219f0-140">**Parênteses.**</span><span class="sxs-lookup"><span data-stu-id="219f0-140">**Parentheses.**</span></span> <span data-ttu-id="219f0-141">Se você especificar uma lista de parâmetros, você deve colocá-la entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="219f0-141">If you specify a parameter list, you must enclose it in parentheses.</span></span> <span data-ttu-id="219f0-142">Se não houver nenhum parâmetro, você ainda pode usar parênteses delimitando uma lista vazia.</span><span class="sxs-lookup"><span data-stu-id="219f0-142">If there are no parameters, you can still use parentheses enclosing an empty list.</span></span> <span data-ttu-id="219f0-143">Isso melhora a legibilidade do código deixando mais claro que o elemento é um procedimento.</span><span class="sxs-lookup"><span data-stu-id="219f0-143">This improves the readability of your code by clarifying that the element is a procedure.</span></span>  
   
--   **Parâmetros opcionais.** Se você usar o `Optional` modificador em um parâmetro, todos os parâmetros subsequentes na lista também deve ser opcionais e sejam declarados usando o `Optional` modificador.  
+-   <span data-ttu-id="219f0-144">**Parâmetros opcionais.**</span><span class="sxs-lookup"><span data-stu-id="219f0-144">**Optional Parameters.**</span></span> <span data-ttu-id="219f0-145">Se você usar o `Optional` modificador em um parâmetro, todos os parâmetros subsequentes na lista também deve ser opcionais e sejam declarados usando o `Optional` modificador.</span><span class="sxs-lookup"><span data-stu-id="219f0-145">If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.</span></span>  
   
-     Cada declaração de parâmetro opcional deve fornecer a `defaultvalue` cláusula.  
+     <span data-ttu-id="219f0-146">Cada declaração de parâmetro opcional deve fornecer a `defaultvalue` cláusula.</span><span class="sxs-lookup"><span data-stu-id="219f0-146">Every optional parameter declaration must supply the `defaultvalue` clause.</span></span>  
   
-     Para obter mais informações, consulte [parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
+     <span data-ttu-id="219f0-147">Para obter mais informações, consulte [parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="219f0-147">For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).</span></span>  
   
--   **Matrizes de parâmetros.** Você deve especificar `ByVal` para um `ParamArray` parâmetro.  
+-   <span data-ttu-id="219f0-148">**Matrizes de parâmetros.**</span><span class="sxs-lookup"><span data-stu-id="219f0-148">**Parameter Arrays.**</span></span> <span data-ttu-id="219f0-149">Você deve especificar `ByVal` para um `ParamArray` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="219f0-149">You must specify `ByVal` for a `ParamArray` parameter.</span></span>  
   
-     Não é possível usar ambos `Optional` e `ParamArray` na mesma lista de parâmetros.  
+     <span data-ttu-id="219f0-150">Não é possível usar ambos `Optional` e `ParamArray` na mesma lista de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="219f0-150">You cannot use both `Optional` and `ParamArray` in the same parameter list.</span></span>  
   
-     Para obter mais informações, consulte [matrizes de parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+     <span data-ttu-id="219f0-151">Para obter mais informações, consulte [matrizes de parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).</span><span class="sxs-lookup"><span data-stu-id="219f0-151">For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).</span></span>  
   
--   **Mecanismo de passagem.** É o mecanismo padrão para cada argumento `ByVal`, que significa que o procedimento não pode alterar o elemento variável subjacente. No entanto, se o elemento for um tipo de referência, o procedimento pode modificar os conteúdos ou membros do objeto subjacente, mesmo que não é possível substituir ou reatribuir o objeto.  
+-   <span data-ttu-id="219f0-152">**Mecanismo de passagem.**</span><span class="sxs-lookup"><span data-stu-id="219f0-152">**Passing Mechanism.**</span></span> <span data-ttu-id="219f0-153">É o mecanismo padrão para cada argumento `ByVal`, que significa que o procedimento não pode alterar o elemento variável subjacente.</span><span class="sxs-lookup"><span data-stu-id="219f0-153">The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element.</span></span> <span data-ttu-id="219f0-154">No entanto, se o elemento for um tipo de referência, o procedimento pode modificar os conteúdos ou membros do objeto subjacente, mesmo que não é possível substituir ou reatribuir o objeto.</span><span class="sxs-lookup"><span data-stu-id="219f0-154">However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.</span></span>  
   
--   **Nomes de parâmetro.** Se o tipo de dados do parâmetro é uma matriz, execute `parametername` imediatamente por parênteses. Para obter mais informações sobre nomes de parâmetro, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+-   <span data-ttu-id="219f0-155">**Nomes de parâmetro.**</span><span class="sxs-lookup"><span data-stu-id="219f0-155">**Parameter Names.**</span></span> <span data-ttu-id="219f0-156">Se o tipo de dados do parâmetro é uma matriz, execute `parametername` imediatamente por parênteses.</span><span class="sxs-lookup"><span data-stu-id="219f0-156">If the parameter's data type is an array, follow `parametername` immediately by parentheses.</span></span> <span data-ttu-id="219f0-157">Para obter mais informações sobre nomes de parâmetro, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span><span class="sxs-lookup"><span data-stu-id="219f0-157">For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- A exemplo a seguir mostra uma `Function` procedimento que define dois parâmetros.  
+## <a name="example"></a><span data-ttu-id="219f0-158">Exemplo</span><span class="sxs-lookup"><span data-stu-id="219f0-158">Example</span></span>  
+ <span data-ttu-id="219f0-159">A exemplo a seguir mostra uma `Function` procedimento que define dois parâmetros.</span><span class="sxs-lookup"><span data-stu-id="219f0-159">The following example shows a `Function` procedure that defines two parameters.</span></span>  
   
- [!code-vb[VbVbalrStatements n º&2;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
+ <span data-ttu-id="219f0-160">[!code-vb[VbVbalrStatements n º&2;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="219f0-160">[!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute>   
- [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Instrução sub](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md)   
- [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
- [Como quebrar e combinar instruções no código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a><span data-ttu-id="219f0-161">Consulte também</span><span class="sxs-lookup"><span data-stu-id="219f0-161">See Also</span></span>  
+ <span data-ttu-id="219f0-162"><xref:System.Runtime.InteropServices.DllImportAttribute></xref:System.Runtime.InteropServices.DllImportAttribute></span><span class="sxs-lookup"><span data-stu-id="219f0-162"><xref:System.Runtime.InteropServices.DllImportAttribute></span></span>   
+<span data-ttu-id="219f0-163"> [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md) </span><span class="sxs-lookup"><span data-stu-id="219f0-163"> [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) </span></span>  
+<span data-ttu-id="219f0-164"> [Instrução sub](../../../visual-basic/language-reference/statements/sub-statement.md) </span><span class="sxs-lookup"><span data-stu-id="219f0-164"> [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md) </span></span>  
+<span data-ttu-id="219f0-165"> [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) </span><span class="sxs-lookup"><span data-stu-id="219f0-165"> [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) </span></span>  
+<span data-ttu-id="219f0-166"> [Instrução Structure](../../../visual-basic/language-reference/statements/structure-statement.md) </span><span class="sxs-lookup"><span data-stu-id="219f0-166"> [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) </span></span>  
+<span data-ttu-id="219f0-167"> [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md) </span><span class="sxs-lookup"><span data-stu-id="219f0-167"> [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) </span></span>  
+<span data-ttu-id="219f0-168"> [Visão geral de atributos](../../../visual-basic/programming-guide/concepts/attributes/index.md) </span><span class="sxs-lookup"><span data-stu-id="219f0-168"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md) </span></span>  
+<span data-ttu-id="219f0-169"> [Como quebrar e combinar instruções no código](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)</span><span class="sxs-lookup"><span data-stu-id="219f0-169"> [How to: Break and Combine Statements in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)</span></span>

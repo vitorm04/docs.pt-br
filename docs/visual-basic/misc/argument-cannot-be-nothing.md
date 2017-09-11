@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1ec9bb196637055c40920fb45ff350663f86ead
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8080b9381a1c333e83ef1ce96d30ac769e156687
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="argument-cannot-be-nothing"></a>Argumento não pode ser nada
-Um valor nulo foi fornecido para um argumento que deve ter um valor.  
+# <a name="argument-cannot-be-nothing"></a><span data-ttu-id="d90c7-102">Argumento não pode ser nada</span><span class="sxs-lookup"><span data-stu-id="d90c7-102">Argument cannot be Nothing</span></span>
+<span data-ttu-id="d90c7-103">Um valor nulo foi fornecido para um argumento que deve ter um valor.</span><span class="sxs-lookup"><span data-stu-id="d90c7-103">A null value has been supplied for an argument that must have a value.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d90c7-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="d90c7-104">To correct this error</span></span>  
   
--   Você pode ter tentado usar um objeto sem fornecer uma instância do objeto. Nesse caso, use o `New` palavra-chave para criar a instância.  
+-   <span data-ttu-id="d90c7-105">Você pode ter tentado usar um objeto sem fornecer uma instância do objeto.</span><span class="sxs-lookup"><span data-stu-id="d90c7-105">You might have tried to use an object without providing an instance of the object.</span></span> <span data-ttu-id="d90c7-106">Nesse caso, use o `New` palavra-chave para criar a instância.</span><span class="sxs-lookup"><span data-stu-id="d90c7-106">In such a case, use the `New` keyword to create the instance.</span></span>  
   
--   Verifique se o valor é calculado corretamente.  
+-   <span data-ttu-id="d90c7-107">Verifique se o valor é calculado corretamente.</span><span class="sxs-lookup"><span data-stu-id="d90c7-107">Check that the value is calculated correctly.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Solução de problemas de exceções: System.NullReferenceException](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)
+## <a name="see-also"></a><span data-ttu-id="d90c7-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d90c7-108">See Also</span></span>  
+ [<span data-ttu-id="d90c7-109">Solução de problemas de exceções: System.NullReferenceException</span><span class="sxs-lookup"><span data-stu-id="d90c7-109">Troubleshooting Exceptions: System.NullReferenceException</span></span>](http://msdn.microsoft.com/library/4822b0b4-8105-43fb-887a-3cc51ff02899)

@@ -38,19 +38,19 @@ ms.lasthandoff: 08/29/2017
 
 ---
 
-# <a name="default-c-reference"></a>default (Referência de C#)
+# <a name="default-c-reference"></a><span data-ttu-id="339f9-102">default (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="339f9-102">default (C# Reference)</span></span>
 
-A palavra-chave `default`.
+<span data-ttu-id="339f9-103">A palavra-chave `default`.</span><span class="sxs-lookup"><span data-stu-id="339f9-103">The `default` keyword.</span></span>
 
-A palavra-chave `default` pode ser usada na instrução `switch` ou na expressão de valor padrão:
+<span data-ttu-id="339f9-104">A palavra-chave `default` pode ser usada na instrução `switch` ou na expressão de valor padrão:</span><span class="sxs-lookup"><span data-stu-id="339f9-104">The `default` keyword can be used in the `switch` statement or in a default value expression:</span></span>
 
-- [A instrução switch](switch.md): especifica o rótulo padrão.
+- <span data-ttu-id="339f9-105">[A instrução switch](switch.md): especifica o rótulo padrão.</span><span class="sxs-lookup"><span data-stu-id="339f9-105">[The switch statement](switch.md): Specifies the default label.</span></span>
 
-- [Expressões de valor padrão](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produz o valor padrão do tipo. Será nulo para tipos de referência, zero para tipos de valor e o padrão de bit 0 para structs.
+- <span data-ttu-id="339f9-106">[Expressões de valor padrão](../../programming-guide/statements-expressions-operators/default-value-expressions.md): produz o valor padrão do tipo.</span><span class="sxs-lookup"><span data-stu-id="339f9-106">[Default value expressions](../../programming-guide/statements-expressions-operators/default-value-expressions.md): Produces the default value of the type.</span></span> <span data-ttu-id="339f9-107">Será nulo para tipos de referência, zero para tipos de valor e o padrão de bit 0 para structs.</span><span class="sxs-lookup"><span data-stu-id="339f9-107">This will be null for reference types and zero for value types, and the 0 bit pattern for structs.</span></span>
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a><span data-ttu-id="339f9-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="339f9-108">See Also</span></span>
 
- [Referência de C#](../index.md)   
- [Guia de Programação em C#](../../programming-guide/index.md)   
- [Palavras-chave do C#](index.md)   
+ <span data-ttu-id="339f9-109">[Referência de C#](../index.md) </span><span class="sxs-lookup"><span data-stu-id="339f9-109">[C# Reference](../index.md) </span></span>  
+ <span data-ttu-id="339f9-110">[Guia de Programação em C#](../../programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="339f9-110">[C# Programming Guide](../../programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="339f9-111">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="339f9-111">C# Keywords</span></span>](index.md)   
 

@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 953895a2462610b277dcc01c6b7dede57e331e86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6debad770cdcdade32ec7ea683c708a812545707
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39optional39-expected"></a>'Optional' esperado
-Um argumento opcional na declaração de procedimento é seguido por um argumento necessário. Cada argumento após um argumento opcional também deve ser opcional.  
+# <a name="39optional39-expected"></a><span data-ttu-id="2dd96-102">'Optional' esperado</span><span class="sxs-lookup"><span data-stu-id="2dd96-102">&#39;Optional&#39; expected</span></span>
+<span data-ttu-id="2dd96-103">Um argumento opcional na declaração de procedimento é seguido por um argumento necessário.</span><span class="sxs-lookup"><span data-stu-id="2dd96-103">An optional argument in a procedure declaration is followed by a required argument.</span></span> <span data-ttu-id="2dd96-104">Cada argumento após um argumento opcional também deve ser opcional.</span><span class="sxs-lookup"><span data-stu-id="2dd96-104">Every argument following an optional argument must also be optional.</span></span>  
   
- **ID do erro:** BC30202  
+ <span data-ttu-id="2dd96-105">**ID do erro:** BC30202</span><span class="sxs-lookup"><span data-stu-id="2dd96-105">**Error ID:** BC30202</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="2dd96-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="2dd96-106">To correct this error</span></span>  
   
-1.  Se o argumento destina-se a ser necessários, movê-la para preceder o primeiro argumento opcional na lista de argumentos.  
+1.  <span data-ttu-id="2dd96-107">Se o argumento destina-se a ser necessários, movê-la para preceder o primeiro argumento opcional na lista de argumentos.</span><span class="sxs-lookup"><span data-stu-id="2dd96-107">If the argument is intended to be required, move it to precede the first optional argument in the argument list.</span></span>  
   
-2.  Se o argumento destina-se a ser opcional, use o `Optional` palavra-chave.  
+2.  <span data-ttu-id="2dd96-108">Se o argumento destina-se a ser opcional, use o `Optional` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="2dd96-108">If the argument is intended to be optional, use the `Optional` keyword.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Parâmetros Opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+## <a name="see-also"></a><span data-ttu-id="2dd96-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2dd96-109">See Also</span></span>  
+ [<span data-ttu-id="2dd96-110">Parâmetros Opcionais</span><span class="sxs-lookup"><span data-stu-id="2dd96-110">Optional Parameters</span></span>](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

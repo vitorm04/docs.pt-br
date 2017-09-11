@@ -1,1 +1,1 @@
-**Este tópico aplica-se ao: ✓** .NET Core 1.x **✓** .NET Core 2.x
+<span data-ttu-id="3065a-101">**Este tópico aplica-se ao: ✓** .NET Core 1.x **✓** .NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="3065a-101">**This topic applies to: ✓** .NET Core 1.x **✓** .NET Core 2.x</span></span>

@@ -36,33 +36,33 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="appconfig-c-compiler-options"></a>/appconfig (opções do compilador C#)
-A opção do compilador **/appconfig** habilita um aplicativo em C# a especificar o local de um arquivo de configuração de aplicativo (app.config) de um assembly para o Common Language Runtime (CLR) no tempo de associação do assembly.  
+# <a name="appconfig-c-compiler-options"></a><span data-ttu-id="09c91-102">/appconfig (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="09c91-102">/appconfig (C# Compiler Options)</span></span>
+<span data-ttu-id="09c91-103">A opção do compilador **/appconfig** habilita um aplicativo em C# a especificar o local de um arquivo de configuração de aplicativo (app.config) de um assembly para o Common Language Runtime (CLR) no tempo de associação do assembly.</span><span class="sxs-lookup"><span data-stu-id="09c91-103">The **/appconfig** compiler option enables a C# application to specify the location of an assembly's application configuration (app.config) file to the common language runtime (CLR) at assembly binding time.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="09c91-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="09c91-104">Syntax</span></span>  
   
 ```console  
 /appconfig:file  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a><span data-ttu-id="09c91-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="09c91-105">Arguments</span></span>  
  `file`  
- Necessário. O arquivo de configuração de aplicativo que contém as configurações de associação de assembly.  
+ <span data-ttu-id="09c91-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="09c91-106">Required.</span></span> <span data-ttu-id="09c91-107">O arquivo de configuração de aplicativo que contém as configurações de associação de assembly.</span><span class="sxs-lookup"><span data-stu-id="09c91-107">The application configuration file that contains assembly binding settings.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O **/appconfig** pode ser usado em cenários avançados, nos quais é necessário que um assembly referencie simultaneamente a versão do .NET Framework e a versão do .NET Framework para o Silverlight de um assembly de referência específico. Por exemplo, um designer XAML gravado no Windows Presentation Foundation (WPF) pode ter que referenciar a Área de Trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF incluído no Silverlight. O mesmo assembly do designer deve acessar ambos os assemblies. Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes.  
+## <a name="remarks"></a><span data-ttu-id="09c91-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="09c91-108">Remarks</span></span>  
+ <span data-ttu-id="09c91-109">O **/appconfig** pode ser usado em cenários avançados, nos quais é necessário que um assembly referencie simultaneamente a versão do .NET Framework e a versão do .NET Framework para o Silverlight de um assembly de referência específico.</span><span class="sxs-lookup"><span data-stu-id="09c91-109">One use of **/appconfig** is advanced scenarios in which an assembly has to reference both the .NET Framework version and the .NET Framework for Silverlight version of a particular reference assembly at the same time.</span></span> <span data-ttu-id="09c91-110">Por exemplo, um designer XAML gravado no Windows Presentation Foundation (WPF) pode ter que referenciar a Área de Trabalho do WPF, para a interface do usuário do designer e o subconjunto do WPF incluído no Silverlight.</span><span class="sxs-lookup"><span data-stu-id="09c91-110">For example, a XAML designer written in Windows Presentation Foundation (WPF) might have to reference both the WPF Desktop, for the designer's user interface, and the subset of WPF that is included with Silverlight.</span></span> <span data-ttu-id="09c91-111">O mesmo assembly do designer deve acessar ambos os assemblies.</span><span class="sxs-lookup"><span data-stu-id="09c91-111">The same designer assembly has to access both assemblies.</span></span> <span data-ttu-id="09c91-112">Por padrão, as referências separadas causam um erro do compilador, pois a associação de assembly considera os dois assemblies equivalentes.</span><span class="sxs-lookup"><span data-stu-id="09c91-112">By default, the separate references cause a compiler error, because assembly binding sees the two assemblies as equivalent.</span></span>  
   
- A opção do compilador **/appconfig** habilita a especificação do local de um arquivo app.config que desabilita o comportamento padrão por meio de uma marca `<supportPortability>`, conforme mostrado no exemplo a seguir.  
+ <span data-ttu-id="09c91-113">A opção do compilador **/appconfig** habilita a especificação do local de um arquivo app.config que desabilita o comportamento padrão por meio de uma marca `<supportPortability>`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="09c91-113">The **/appconfig** compiler option enables you to specify the location of an app.config file that disables the default behavior by using a `<supportPortability>` tag, as shown in the following example.</span></span>  
   
  `<supportPortability PKT="7cec85d7bea7798e" enable="false"/>`  
   
- O compilador passa o local do arquivo para a lógica de associação de assembly do CLR.  
+ <span data-ttu-id="09c91-114">O compilador passa o local do arquivo para a lógica de associação de assembly do CLR.</span><span class="sxs-lookup"><span data-stu-id="09c91-114">The compiler passes the location of the file to the CLR's assembly-binding logic.</span></span>  
   
 > [!NOTE]
->  Caso o Microsoft Build Engine (MSBuild) seja usado para compilar o aplicativo, é possível definir a opção do compilador **/appconfig** adicionando uma marca de propriedade ao arquivo .csproj. Para usar o arquivo app.config que já está definido no projeto, adicione a marca de propriedade `<UseAppConfigForCompiler>` ao arquivo .csproj e defina seu valor para `true`. Para especificar um arquivo app.config diferente, adicione a marca de propriedade `<AppConfigForCompiler>` e defina seu valor para o local do arquivo.  
+>  <span data-ttu-id="09c91-115">Caso o Microsoft Build Engine (MSBuild) seja usado para compilar o aplicativo, é possível definir a opção do compilador **/appconfig** adicionando uma marca de propriedade ao arquivo .csproj.</span><span class="sxs-lookup"><span data-stu-id="09c91-115">If you are using the Microsoft Build Engine (MSBuild) to build your application, you can set the **/appconfig** compiler option by adding a property tag to the .csproj file.</span></span> <span data-ttu-id="09c91-116">Para usar o arquivo app.config que já está definido no projeto, adicione a marca de propriedade `<UseAppConfigForCompiler>` ao arquivo .csproj e defina seu valor para `true`.</span><span class="sxs-lookup"><span data-stu-id="09c91-116">To use the app.config file that is already set in the project, add property tag `<UseAppConfigForCompiler>` to the .csproj file and set its value to `true`.</span></span> <span data-ttu-id="09c91-117">Para especificar um arquivo app.config diferente, adicione a marca de propriedade `<AppConfigForCompiler>` e defina seu valor para o local do arquivo.</span><span class="sxs-lookup"><span data-stu-id="09c91-117">To specify a different app.config file, add property tag `<AppConfigForCompiler>` and set its value to the location of the file.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra um arquivo app.config que habilita um aplicativo a referenciar as implementações do .NET Framework e do .NET Framework para Silverlight de qualquer assembly do .NET Framework que exista em ambas as implementações. A opção do compilador **/appconfig** especifica o local desse arquivo app.config.  
+## <a name="example"></a><span data-ttu-id="09c91-118">Exemplo</span><span class="sxs-lookup"><span data-stu-id="09c91-118">Example</span></span>  
+ <span data-ttu-id="09c91-119">O exemplo a seguir mostra um arquivo app.config que habilita um aplicativo a referenciar as implementações do .NET Framework e do .NET Framework para Silverlight de qualquer assembly do .NET Framework que exista em ambas as implementações.</span><span class="sxs-lookup"><span data-stu-id="09c91-119">The following example shows an app.config file that enables an application to have references to both the .NET Framework implementation and the .NET Framework for Silverlight implementation of any .NET Framework assembly that exists in both implementations.</span></span> <span data-ttu-id="09c91-120">A opção do compilador **/appconfig** especifica o local desse arquivo app.config.</span><span class="sxs-lookup"><span data-stu-id="09c91-120">The **/appconfig** compiler option specifies the location of this app.config file.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ A opção do compilador **/appconfig** habilita um aplicativo em C# a especifica
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Visão Geral da Unificação de Assemblies no .NET Framework](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)   
- [\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md)   
- [Opções do compilador de C# listadas em ordem alfabética](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+## <a name="see-also"></a><span data-ttu-id="09c91-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="09c91-121">See Also</span></span>  
+ <span data-ttu-id="09c91-122">[Visão Geral da Unificação de Assemblies no .NET Framework](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48) </span><span class="sxs-lookup"><span data-stu-id="09c91-122">[.NET Framework Assembly Unification Overview](http://msdn.microsoft.com/en-us/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48) </span></span>  
+ <span data-ttu-id="09c91-123">[\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md) </span><span class="sxs-lookup"><span data-stu-id="09c91-123">[\<supportPortability> Element](../../../framework/configure-apps/file-schema/runtime/supportportability-element.md) </span></span>  
+ [<span data-ttu-id="09c91-124">Opções do compilador de C# listadas em ordem alfabética</span><span class="sxs-lookup"><span data-stu-id="09c91-124">C# Compiler Options Listed Alphabetically</span></span>](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
 

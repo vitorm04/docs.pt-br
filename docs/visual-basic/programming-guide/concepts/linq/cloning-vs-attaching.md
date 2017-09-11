@@ -20,17 +20,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81cbcb066d60851ba83bd4d783d34f8dd3bd1fac
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9c86a75b1c9b4dc25e29d8323d23f89232b8de80
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>Clonagem contra. Anexando (Visual Basic)
-Ao adicionar <xref:System.Xml.Linq.XNode>(incluindo <xref:System.Xml.Linq.XElement>) ou <xref:System.Xml.Linq.XAttribute>objetos para uma nova árvore, se o novo conteúdo não tem nenhum pai, os objetos serão simplesmente anexados à árvore XML.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode> Se o novo conteúdo já parented, e é parte de outra árvore XML, o novo conteúdo são clonados. O conteúdo recentemente clonado é anexado a árvore XML.  
+# <a name="cloning-vs-attaching-visual-basic"></a><span data-ttu-id="99d95-102">Clonagem contra. Anexando (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99d95-102">Cloning vs. Attaching (Visual Basic)</span></span>
+<span data-ttu-id="99d95-103">Ao adicionar <xref:System.Xml.Linq.XNode>(incluindo <xref:System.Xml.Linq.XElement>) ou <xref:System.Xml.Linq.XAttribute>objetos para uma nova árvore, se o novo conteúdo não tem nenhum pai, os objetos serão simplesmente anexados à árvore XML.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XNode></span><span class="sxs-lookup"><span data-stu-id="99d95-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="99d95-104">Se o novo conteúdo já parented, e é parte de outra árvore XML, o novo conteúdo são clonados.</span><span class="sxs-lookup"><span data-stu-id="99d95-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="99d95-105">O conteúdo recentemente clonado é anexado a árvore XML.</span><span class="sxs-lookup"><span data-stu-id="99d95-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O código a seguir demonstra o comportamento quando você adiciona um elemento parented a uma árvore, e quando você adiciona um elemento sem o pai a uma árvore.  
+## <a name="example"></a><span data-ttu-id="99d95-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="99d95-106">Example</span></span>  
+ <span data-ttu-id="99d95-107">O código a seguir demonstra o comportamento quando você adiciona um elemento parented a uma árvore, e quando você adiciona um elemento sem o pai a uma árvore.</span><span class="sxs-lookup"><span data-stu-id="99d95-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -60,12 +61,12 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ <span data-ttu-id="99d95-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="99d95-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Criando árvores XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="99d95-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="99d95-109">See Also</span></span>  
+ [<span data-ttu-id="99d95-110">Criando árvores XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99d95-110">Creating XML Trees (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

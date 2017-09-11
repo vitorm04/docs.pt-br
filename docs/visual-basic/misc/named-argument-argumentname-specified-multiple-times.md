@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c29a243db0c187222e3696221e33fbbc06b3c925
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4e339243a6c65a357744a38620481ada4379c62a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a>Argumento nomeado '&lt;argumentname&gt;' especificado várias vezes
-Você especificou um argumento nomeado mais de uma vez.  
+# <a name="named-argument-39ltargumentnamegt39-specified-multiple-times"></a><span data-ttu-id="6ec69-102">Argumento nomeado '&lt;argumentname&gt;' especificado várias vezes</span><span class="sxs-lookup"><span data-stu-id="6ec69-102">Named argument &#39;&lt;argumentname&gt;&#39; specified multiple times</span></span>
+<span data-ttu-id="6ec69-103">Você especificou um argumento nomeado mais de uma vez.</span><span class="sxs-lookup"><span data-stu-id="6ec69-103">You specified a named argument more than once.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6ec69-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6ec69-104">To correct this error</span></span>  
   
--   Remover tudo exceto uma das especificações.  
+-   <span data-ttu-id="6ec69-105">Remover tudo exceto uma das especificações.</span><span class="sxs-lookup"><span data-stu-id="6ec69-105">Remove all but one of the specifications.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passando Argumentos por Posição e Nome](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+## <a name="see-also"></a><span data-ttu-id="6ec69-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6ec69-106">See Also</span></span>  
+ [<span data-ttu-id="6ec69-107">Passando Argumentos por Posição e Nome</span><span class="sxs-lookup"><span data-stu-id="6ec69-107">Passing Arguments by Position and by Name</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)

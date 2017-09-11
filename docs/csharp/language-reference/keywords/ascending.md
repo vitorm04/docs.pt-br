@@ -37,16 +37,16 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="ascending-c-reference"></a>ascending (Referência de C#)
-A palavra-chave contextual `ascending` é usada na [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md) em expressões de consulta para especificar que a ordem de classificação é do menor para o maior. Como `ascending` é a ordem de classificação padrão, não é necessário especificá-la.  
+# <a name="ascending-c-reference"></a><span data-ttu-id="4a270-102">ascending (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="4a270-102">ascending (C# Reference)</span></span>
+<span data-ttu-id="4a270-103">A palavra-chave contextual `ascending` é usada na [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md) em expressões de consulta para especificar que a ordem de classificação é do menor para o maior.</span><span class="sxs-lookup"><span data-stu-id="4a270-103">The `ascending` contextual keyword is used in the [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md) in query expressions to specify that the sort order is from smallest to largest.</span></span> <span data-ttu-id="4a270-104">Como `ascending` é a ordem de classificação padrão, não é necessário especificá-la.</span><span class="sxs-lookup"><span data-stu-id="4a270-104">Because `ascending` is the default sort order, you do not have to specify it.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o uso de `ascending` em uma [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md).  
+## <a name="example"></a><span data-ttu-id="4a270-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4a270-105">Example</span></span>  
+ <span data-ttu-id="4a270-106">O exemplo a seguir mostra o uso de `ascending` em uma [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md).</span><span class="sxs-lookup"><span data-stu-id="4a270-106">The following example shows the use of `ascending` in an [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md).</span></span>  
   
- [!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]  
+ <span data-ttu-id="4a270-107">[!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="4a270-107">[!code-cs[csrefKeywordsContextual#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/ascending_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [descending](../../../csharp/language-reference/keywords/descending.md)
+## <a name="see-also"></a><span data-ttu-id="4a270-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4a270-108">See Also</span></span>  
+ <span data-ttu-id="4a270-109">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="4a270-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="4a270-110">[Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="4a270-110">[LINQ Query Expressions](../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ [<span data-ttu-id="4a270-111">descending</span><span class="sxs-lookup"><span data-stu-id="4a270-111">descending</span></span>](../../../csharp/language-reference/keywords/descending.md)
 

@@ -1,1 +1,1 @@
-CSS (folhas de estilos em cascata)
+<span data-ttu-id="4c511-101">CSS (folhas de estilos em cascata)</span><span class="sxs-lookup"><span data-stu-id="4c511-101">Cascading Style Sheets (CSS)</span></span>

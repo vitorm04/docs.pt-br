@@ -29,18 +29,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9df0fbb1fcd3b588c1c256b6f76e336d7968935c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b957e384c8cf099aed300f42ece804996c48371b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a>A função 'Dir' deve ser chamada primeiro com um argumento 'PathName'
-Uma chamada inicial para o `Dir` função não inclui o `PathName` argumento. A primeira chamada para `Dir` deve incluir uma `PathName`, mas subsequentes chamadas para `Dir` não precisa incluir parâmetros para recuperar o próximo item.  
+# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a><span data-ttu-id="f968d-102">A função 'Dir' deve ser chamada primeiro com um argumento 'PathName'</span><span class="sxs-lookup"><span data-stu-id="f968d-102">&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument</span></span>
+<span data-ttu-id="f968d-103">Uma chamada inicial para o `Dir` função não inclui o `PathName` argumento.</span><span class="sxs-lookup"><span data-stu-id="f968d-103">An initial call to the `Dir` function does not include the `PathName` argument.</span></span> <span data-ttu-id="f968d-104">A primeira chamada para `Dir` deve incluir uma `PathName`, mas subsequentes chamadas para `Dir` não precisa incluir parâmetros para recuperar o próximo item.</span><span class="sxs-lookup"><span data-stu-id="f968d-104">The first call to `Dir` must include a `PathName`, but subsequent calls to `Dir` do not need to include parameters to retrieve the next item.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f968d-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f968d-105">To correct this error</span></span>  
   
-1.  Forneça um `PathName` argumento na chamada de função.  
+1.  <span data-ttu-id="f968d-106">Forneça um `PathName` argumento na chamada de função.</span><span class="sxs-lookup"><span data-stu-id="f968d-106">Supply a `PathName` argument in the function call.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileSystem.Dir%2A></xref:Microsoft.VisualBasic.FileSystem.Dir%2A>
+## <a name="see-also"></a><span data-ttu-id="f968d-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f968d-107">See Also</span></span>  
+ <span data-ttu-id="f968d-108"><xref:Microsoft.VisualBasic.FileSystem.Dir%2A></xref:Microsoft.VisualBasic.FileSystem.Dir%2A></span><span class="sxs-lookup"><span data-stu-id="f968d-108"><xref:Microsoft.VisualBasic.FileSystem.Dir%2A></span></span>

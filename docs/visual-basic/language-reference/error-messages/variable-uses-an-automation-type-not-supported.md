@@ -29,22 +29,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 58403a9aacc00e659807aff83031fe2ac80bbb40
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 74c4472230a3a8c54859771c0b2f7fc954ac0966
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>A variável usa um tipo de automação sem suporte no Visual Basic
-Você tentou usar uma variável definida em uma biblioteca de tipos ou biblioteca de objeto que tem um tipo de dados não suportado pelo [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="558ba-102">A variável usa um tipo de automação sem suporte no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="558ba-102">Variable uses an Automation type not supported in Visual Basic</span></span>
+<span data-ttu-id="558ba-103">Você tentou usar uma variável definida em uma biblioteca de tipos ou biblioteca de objeto que tem um tipo de dados não suportado pelo [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="558ba-103">You tried to use a variable defined in a type library or object library that has a data type not supported by [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="558ba-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="558ba-104">To correct this error</span></span>  
   
--   Usar uma variável de um tipo reconhecido pelo [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+-   <span data-ttu-id="558ba-105">Usar uma variável de um tipo reconhecido pelo [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="558ba-105">Use a variable of a type recognized by [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-     -ou-  
+     <span data-ttu-id="558ba-106">-ou-</span><span class="sxs-lookup"><span data-stu-id="558ba-106">-or-</span></span>  
   
--   Se você encontrar esse erro ao usar `FileGet` ou `FileGetOBject`, verifique se o arquivo que você está tentando usar foi gravado com `FilePut` ou `FilePutObject`.  
+-   <span data-ttu-id="558ba-107">Se você encontrar esse erro ao usar `FileGet` ou `FileGetOBject`, verifique se o arquivo que você está tentando usar foi gravado com `FilePut` ou `FilePutObject`.</span><span class="sxs-lookup"><span data-stu-id="558ba-107">If you encounter this error while using `FileGet` or `FileGetOBject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Dados](../../../visual-basic/language-reference/data-types/data-type-summary.md)
+## <a name="see-also"></a><span data-ttu-id="558ba-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="558ba-108">See Also</span></span>  
+ [<span data-ttu-id="558ba-109">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="558ba-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)

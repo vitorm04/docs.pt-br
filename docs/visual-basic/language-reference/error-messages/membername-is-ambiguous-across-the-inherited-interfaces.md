@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a40ad42bc5cacd447fe80d670efe4964b8f3768
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 64b30fc1b1637ce52a6cd6faa89373297e2bf5c3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>'&lt;membername&gt;'é ambíguo nas interfaces herdadas'&lt;interfacename1&gt;'e'&lt;interfacename2&gt;'
-A interface herda dois ou mais membros com o mesmo nome de várias interfaces.  
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="7ca4c-102">'&lt;membername&gt;'é ambíguo nas interfaces herdadas'&lt;interfacename1&gt;'e'&lt;interfacename2&gt;'</span><span class="sxs-lookup"><span data-stu-id="7ca4c-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
+<span data-ttu-id="7ca4c-103">A interface herda dois ou mais membros com o mesmo nome de várias interfaces.</span><span class="sxs-lookup"><span data-stu-id="7ca4c-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- **ID do erro:** BC30685  
+ <span data-ttu-id="7ca4c-104">**ID do erro:** BC30685</span><span class="sxs-lookup"><span data-stu-id="7ca4c-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7ca4c-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="7ca4c-105">To correct this error</span></span>  
   
--   Converter o valor para a interface base que você deseja usar; Por exemplo:  
+-   <span data-ttu-id="7ca4c-106">Converter o valor para a interface base que você deseja usar; Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="7ca4c-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -70,5 +71,5 @@ A interface herda dois ou mais membros com o mesmo nome de várias interfaces.
     End Module  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="7ca4c-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7ca4c-107">See Also</span></span>  
+ [<span data-ttu-id="7ca4c-108">Interfaces</span><span class="sxs-lookup"><span data-stu-id="7ca4c-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

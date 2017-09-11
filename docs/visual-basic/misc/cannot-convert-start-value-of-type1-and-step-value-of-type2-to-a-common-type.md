@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b1a1eca9f75725cc75e6138941b7991416a69b2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>Não é possível converter o valor inicial do tipo '&lt;type1&gt;'e o incremento do tipo'&lt;type2&gt;' em um tipo comum
-Especificado `For...Next` valores de controle tem tipos diferentes e, portanto, não são válidos porque eles não podem ser convertidos em um tipo comum.  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="55e9e-102">Não é possível converter o valor inicial do tipo '&lt;type1&gt;'e o incremento do tipo'&lt;type2&gt;' em um tipo comum</span><span class="sxs-lookup"><span data-stu-id="55e9e-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="55e9e-103">Especificado `For...Next` valores de controle tem tipos diferentes e, portanto, não são válidos porque eles não podem ser convertidos em um tipo comum.</span><span class="sxs-lookup"><span data-stu-id="55e9e-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="55e9e-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="55e9e-104">To correct this error</span></span>  
   
-1.  Altere o tipo de um ou mais dos valores de forma que todos os valores podem ser convertidos em um tipo comum.  
+1.  <span data-ttu-id="55e9e-105">Altere o tipo de um ou mais dos valores de forma que todos os valores podem ser convertidos em um tipo comum.</span><span class="sxs-lookup"><span data-stu-id="55e9e-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Navegar pelo código com o depurador](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [Alterações de depuração no Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [Instrução For...Next](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="55e9e-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="55e9e-106">See Also</span></span>  
+ <span data-ttu-id="55e9e-107">[Navegar pelo código com o depurador](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span><span class="sxs-lookup"><span data-stu-id="55e9e-107">[Navigating through Code with the Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span></span>  
+<span data-ttu-id="55e9e-108"> [Alterações de depuração no Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span><span class="sxs-lookup"><span data-stu-id="55e9e-108"> [Debugging Changes in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span></span>  
+<span data-ttu-id="55e9e-109"> [Instrução For...Next](../../visual-basic/language-reference/statements/for-next-statement.md)</span><span class="sxs-lookup"><span data-stu-id="55e9e-109"> [For...Next Statement](../../visual-basic/language-reference/statements/for-next-statement.md)</span></span>

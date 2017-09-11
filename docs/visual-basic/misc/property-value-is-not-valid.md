@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd9c86e2ac8648a84b9cf3328d1ce058436b6f2f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e775d2eef7f953c20695b9f75071f9accdd95754
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="property-value-is-not-valid"></a>O valor da propriedade não é válido
-Uma das propriedades de um objeto ou controle foi definida como um valor fora de seu intervalo.  
+# <a name="property-value-is-not-valid"></a><span data-ttu-id="158b4-102">O valor da propriedade não é válido</span><span class="sxs-lookup"><span data-stu-id="158b4-102">Property value is not valid</span></span>
+<span data-ttu-id="158b4-103">Uma das propriedades de um objeto ou controle foi definida como um valor fora de seu intervalo.</span><span class="sxs-lookup"><span data-stu-id="158b4-103">One of the properties of an object or control was set to a value outside its range.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="158b4-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="158b4-104">To correct this error</span></span>  
   
--   Altere o valor da propriedade para uma configuração válida.  
+-   <span data-ttu-id="158b4-105">Altere o valor da propriedade para uma configuração válida.</span><span class="sxs-lookup"><span data-stu-id="158b4-105">Change the property value to a valid setting.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="158b4-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="158b4-106">See Also</span></span>  
+ [<span data-ttu-id="158b4-107">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="158b4-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

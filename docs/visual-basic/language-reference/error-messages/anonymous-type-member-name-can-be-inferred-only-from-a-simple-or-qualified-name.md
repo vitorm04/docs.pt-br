@@ -31,14 +31,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 55ca8f04359b65601ce95d7ed14e2e591de60989
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 42d5047d887320b8edc84b56b50bff04a103cf39
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>O nome do membro de tipo anônimo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos
-Não é possível inferir um nome de membro de tipo anônimo de uma expressão complexa.  
+# <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="829fe-102">O nome do membro de tipo anônimo só pode ser inferido a partir de um nome simples ou qualificado sem argumentos</span><span class="sxs-lookup"><span data-stu-id="829fe-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
+<span data-ttu-id="829fe-103">Não é possível inferir um nome de membro de tipo anônimo de uma expressão complexa.</span><span class="sxs-lookup"><span data-stu-id="829fe-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  
   
 ```vb  
 Dim numbers() As Integer = {1, 2, 3, 4, 5}  
@@ -46,18 +47,18 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
 ' Dim instanceName1 = New With {numbers(3)}  
 ```  
   
- Para obter mais informações sobre fontes de onde tipos anônimos podem e não é possível inferir nomes e tipos, consulte [como: inferir nomes de propriedade e tipos nas declarações de tipo anônimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+ <span data-ttu-id="829fe-104">Para obter mais informações sobre fontes de onde tipos anônimos podem e não é possível inferir nomes e tipos, consulte [como: inferir nomes de propriedade e tipos nas declarações de tipo anônimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span><span class="sxs-lookup"><span data-stu-id="829fe-104">For more information about sources from which anonymous types can and cannot infer member names and types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).</span></span>  
   
- **ID do erro:** BC36556  
+ <span data-ttu-id="829fe-105">**ID do erro:** BC36556</span><span class="sxs-lookup"><span data-stu-id="829fe-105">**Error ID:** BC36556</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="829fe-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="829fe-106">To correct this error</span></span>  
   
--   Atribua a expressão a um nome de membro, conforme mostrado no código a seguir:  
+-   <span data-ttu-id="829fe-107">Atribua a expressão a um nome de membro, conforme mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="829fe-107">Assign the expression to a member name, as shown in the following code:</span></span>  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Como inferir nomes e tipos de propriedade na declaração de tipo anônimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+## <a name="see-also"></a><span data-ttu-id="829fe-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="829fe-108">See Also</span></span>  
+ <span data-ttu-id="829fe-109">[Tipos anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="829fe-109">[Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) </span></span>  
+<span data-ttu-id="829fe-110"> [Como inferir nomes e tipos de propriedade na declaração de tipo anônimo](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)</span><span class="sxs-lookup"><span data-stu-id="829fe-110"> [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)</span></span>

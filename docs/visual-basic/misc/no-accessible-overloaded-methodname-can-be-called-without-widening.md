@@ -26,21 +26,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3bba37cfe5e7c09582b6d4ed816a13be6b3300da
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 03c15788df6dc955db09346c4795d0ab851b4277
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com esses argumentos sem uma conversão de ampliação: &lt;lista&gt;
-Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista dos argumentos fornecidos sem uma conversão de ampliação.  
+# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a><span data-ttu-id="3208b-102">Não acessível '&lt;methodname&gt;' pode ser chamado com esses argumentos sem uma conversão de ampliação: &lt;lista&gt;</span><span class="sxs-lookup"><span data-stu-id="3208b-102">No accessible overloaded &#39;&lt;methodname&gt;&#39; can be called with these arguments without a widening conversion: &lt;list&gt;</span></span>
+<span data-ttu-id="3208b-103">Um método sobrecarregado foi chamado, mas nenhum método foi compatível com a lista dos argumentos fornecidos sem uma conversão de ampliação.</span><span class="sxs-lookup"><span data-stu-id="3208b-103">An overloaded method was called, but no method could be matched with the list of provided arguments without a widening conversion.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3208b-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="3208b-104">To correct this error</span></span>  
   
--   Especifique `Option Strict Off`.  
+-   <span data-ttu-id="3208b-105">Especifique `Option Strict Off`.</span><span class="sxs-lookup"><span data-stu-id="3208b-105">Specify `Option Strict Off`.</span></span>  
   
--   Altere os argumentos para coincidir com as assinaturas do método sobrecarregado.  
+-   <span data-ttu-id="3208b-106">Altere os argumentos para coincidir com as assinaturas do método sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="3208b-106">Change the arguments to match one of the signatures of the overloaded method.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Conversões entre](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Instrução Option Strict](../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="3208b-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3208b-107">See Also</span></span>  
+ <span data-ttu-id="3208b-108">[Conversões entre](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="3208b-108">[Widening and Narrowing Conversions](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span></span>  
+<span data-ttu-id="3208b-109"> [Instrução Option Strict](../../visual-basic/language-reference/statements/option-strict-statement.md)</span><span class="sxs-lookup"><span data-stu-id="3208b-109"> [Option Strict Statement](../../visual-basic/language-reference/statements/option-strict-statement.md)</span></span>

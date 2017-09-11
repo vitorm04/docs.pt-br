@@ -1,1 +1,1 @@
-Input Method Editor (IME)
+<span data-ttu-id="c6a61-101">Input Method Editor (IME)</span><span class="sxs-lookup"><span data-stu-id="c6a61-101">Input Method Editor (IME)</span></span>

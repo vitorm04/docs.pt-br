@@ -24,18 +24,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0d59a5e9f1c295ec76630cd1055cb2ff6f659f5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bc963b8f6bae28b8038bb9b68ad6302da6d99d85
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="access-denied-to-39ltnamegt39"></a>Acesso negado a '&lt;nome&gt;'
-Um dispositivo, arquivo ou disco não está acessível porque as permissões de segurança do seu computador são insuficientes.  
+# <a name="access-denied-to-39ltnamegt39"></a><span data-ttu-id="6e784-102">Acesso negado a '&lt;nome&gt;'</span><span class="sxs-lookup"><span data-stu-id="6e784-102">Access denied to &#39;&lt;name&gt;&#39;</span></span>
+<span data-ttu-id="6e784-103">Um dispositivo, arquivo ou disco não está acessível porque as permissões de segurança do seu computador são insuficientes.</span><span class="sxs-lookup"><span data-stu-id="6e784-103">A device, file, or disk is not accessible because your computer's security permissions are insufficient.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6e784-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6e784-104">To correct this error</span></span>  
   
-1.  Verifique se você tem as permissões necessárias.  
+1.  <span data-ttu-id="6e784-105">Verifique se você tem as permissões necessárias.</span><span class="sxs-lookup"><span data-stu-id="6e784-105">Ensure that you have the necessary permissions.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Permissões de segurança](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0)
+## <a name="see-also"></a><span data-ttu-id="6e784-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6e784-106">See Also</span></span>  
+ [<span data-ttu-id="6e784-107">Permissões de segurança</span><span class="sxs-lookup"><span data-stu-id="6e784-107">Security Permissions</span></span>](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0)

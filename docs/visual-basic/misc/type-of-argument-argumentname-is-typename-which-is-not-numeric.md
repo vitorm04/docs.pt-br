@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c263edea9109c0ddb4e3cd15e2b200eb287bf04b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a2f173cd543f886dca3131c21d7819624162fbc3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a>Tipo de argumento '&lt;argumentname&gt;'é'&lt;typename&gt;', que não é numérico
-Um argumento não numérico ocorre em uma situação na qual um argumento numérico é esperado.  
+# <a name="type-of-argument-39ltargumentnamegt39-is-39lttypenamegt39-which-is-not-numeric"></a><span data-ttu-id="ab388-102">Tipo de argumento '&lt;argumentname&gt;'é'&lt;typename&gt;', que não é numérico</span><span class="sxs-lookup"><span data-stu-id="ab388-102">Type of argument &#39;&lt;argumentname&gt;&#39; is &#39;&lt;typename&gt;&#39;, which is not numeric</span></span>
+<span data-ttu-id="ab388-103">Um argumento não numérico ocorre em uma situação na qual um argumento numérico é esperado.</span><span class="sxs-lookup"><span data-stu-id="ab388-103">A non-numeric argument occurs in a situation in which a numeric argument is expected.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ab388-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="ab388-104">To correct this error</span></span>  
   
--   Certifique-se de que o argumento é numérico.  
+-   <span data-ttu-id="ab388-105">Certifique-se de que o argumento é numérico.</span><span class="sxs-lookup"><span data-stu-id="ab388-105">Ensure that the argument is numeric.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Parâmetro de mecanismo de passagem para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+## <a name="see-also"></a><span data-ttu-id="ab388-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ab388-106">See Also</span></span>  
+ <span data-ttu-id="ab388-107">[Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md) </span><span class="sxs-lookup"><span data-stu-id="ab388-107">[Passing Arguments by Value and by Reference](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md) </span></span>  
+<span data-ttu-id="ab388-108"> [Parâmetro de mecanismo de passagem para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)</span><span class="sxs-lookup"><span data-stu-id="ab388-108"> [Parameter Passing Mechanism for Visual Basic 6.0 Users](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)</span></span>

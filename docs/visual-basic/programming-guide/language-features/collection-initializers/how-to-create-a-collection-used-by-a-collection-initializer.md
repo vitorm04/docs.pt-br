@@ -30,26 +30,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c670b27d46a884a64d13f6a5404425d142ce9a8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f6e9aabf3e5709f7645c8dfb1edf37dadb77052d
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>Como criar uma coleção usada por um inicializador de coleção (Visual Basic)
-Quando você usa um inicializador de coleção para criar uma coleção, o compilador do Visual Basic procura um `Add` método do tipo de coleção para a qual os parâmetros para o `Add` método correspondem aos tipos de valores no inicializador de coleção. Isso `Add` método é usado para preencher a coleção com os valores do inicializador de coleção.  
+# <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a><span data-ttu-id="53f53-102">Como criar uma coleção usada por um inicializador de coleção (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="53f53-102">How to: Create a Collection Used by a Collection Initializer (Visual Basic)</span></span>
+<span data-ttu-id="53f53-103">Quando você usa um inicializador de coleção para criar uma coleção, o compilador do Visual Basic procura um `Add` método do tipo de coleção para a qual os parâmetros para o `Add` método correspondem aos tipos de valores no inicializador de coleção.</span><span class="sxs-lookup"><span data-stu-id="53f53-103">When you use a collection initializer to create a collection, the Visual Basic compiler searches for an `Add` method of the collection type for which the parameters for the `Add` method match the types of the values in the collection initializer.</span></span> <span data-ttu-id="53f53-104">Isso `Add` método é usado para preencher a coleção com os valores do inicializador de coleção.</span><span class="sxs-lookup"><span data-stu-id="53f53-104">This `Add` method is used to populate the collection with the values from the collection initializer.</span></span>  
   
-## <a name="example"></a>Exemplo  
- A exemplo a seguir mostra um `OrderCollection` coleção que contém um público `Add` método que pode usar um inicializador de coleção para adicionar objetos do tipo `Order`. O `Add` método permite que você use a sintaxe do inicializador de coleção reduzido.  
+## <a name="example"></a><span data-ttu-id="53f53-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="53f53-105">Example</span></span>  
+ <span data-ttu-id="53f53-106">A exemplo a seguir mostra um `OrderCollection` coleção que contém um público `Add` método que pode usar um inicializador de coleção para adicionar objetos do tipo `Order`.</span><span class="sxs-lookup"><span data-stu-id="53f53-106">The following example shows an `OrderCollection` collection that contains a public `Add` method that a collection initializer can use to add objects of type `Order`.</span></span> <span data-ttu-id="53f53-107">O `Add` método permite que você use a sintaxe do inicializador de coleção reduzido.</span><span class="sxs-lookup"><span data-stu-id="53f53-107">The `Add` method enables you to use the shortened collection initializer syntax.</span></span>  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo2 n º&4;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_1.vb)]  
+ <span data-ttu-id="53f53-108">[!code-vb[VbVbalrCollectionInitializersHowTo2 n º&4;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="53f53-108">[!code-vb[VbVbalrCollectionInitializersHowTo2#4](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_1.vb)]</span></span>  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo2 n º&1;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_2.vb)]  
+ <span data-ttu-id="53f53-109">[!code-vb[VbVbalrCollectionInitializersHowTo2 n º&1;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="53f53-109">[!code-vb[VbVbalrCollectionInitializersHowTo2#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_2.vb)]</span></span>  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo2 n º&2;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_3.vb)]  
+ <span data-ttu-id="53f53-110">[!code-vb[VbVbalrCollectionInitializersHowTo2 n º&2;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="53f53-110">[!code-vb[VbVbalrCollectionInitializersHowTo2#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_3.vb)]</span></span>  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo2 n º&3;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_4.vb)]  
+ <span data-ttu-id="53f53-111">[!code-vb[VbVbalrCollectionInitializersHowTo2 n º&3;](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="53f53-111">[!code-vb[VbVbalrCollectionInitializersHowTo2#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-a-collection-used-by-a-collection-initializer_4.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Inicializadores de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [Como criar um método para adicionar extensão usado por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)
+## <a name="see-also"></a><span data-ttu-id="53f53-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="53f53-112">See Also</span></span>  
+ <span data-ttu-id="53f53-113">[Inicializadores de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md) </span><span class="sxs-lookup"><span data-stu-id="53f53-113">[Collection Initializers](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md) </span></span>  
+<span data-ttu-id="53f53-114"> [Como criar um método para adicionar extensão usado por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)</span><span class="sxs-lookup"><span data-stu-id="53f53-114"> [How to: Create an Add Extension Method Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)</span></span>

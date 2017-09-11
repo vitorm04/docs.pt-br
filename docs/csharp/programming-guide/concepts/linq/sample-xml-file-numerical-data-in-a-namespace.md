@@ -26,10 +26,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Arquivo XML de Exemplo: Dados numéricos em um namespace
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento. XML é em um namespace.  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="d5a06-102">Arquivo XML de Exemplo: Dados numéricos em um namespace</span><span class="sxs-lookup"><span data-stu-id="d5a06-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="d5a06-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d5a06-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d5a06-104">Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.</span><span class="sxs-lookup"><span data-stu-id="d5a06-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="d5a06-105">XML é em um namespace.</span><span class="sxs-lookup"><span data-stu-id="d5a06-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a>Dados  
+## <a name="data"></a><span data-ttu-id="d5a06-106">Dados</span><span class="sxs-lookup"><span data-stu-id="d5a06-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -72,6 +72,6 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d5a06-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d5a06-107">See Also</span></span>  
+ [<span data-ttu-id="d5a06-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d5a06-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -41,39 +41,39 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Como carregar um arquivo no Visual Basic
-O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser usado para carregar um arquivo e armazená-lo em um local remoto. Se o parâmetro `ShowUI` for definido como `True`, uma caixa de diálogo será exibida mostrando o andamento do upload e permitirá que os usuários cancelem a operação.  
+# <a name="how-to-upload-a-file-in-visual-basic"></a><span data-ttu-id="54a4c-102">Como carregar um arquivo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="54a4c-102">How to: Upload a File in Visual Basic</span></span>
+<span data-ttu-id="54a4c-103">O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser usado para carregar um arquivo e armazená-lo em um local remoto.</span><span class="sxs-lookup"><span data-stu-id="54a4c-103">The <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> method can be used to upload a file and store it to a remote location.</span></span> <span data-ttu-id="54a4c-104">Se o parâmetro `ShowUI` for definido como `True`, uma caixa de diálogo será exibida mostrando o andamento do upload e permitirá que os usuários cancelem a operação.</span><span class="sxs-lookup"><span data-stu-id="54a4c-104">If the `ShowUI` parameter is set to `True`, a dialog box is displayed that shows the progress of the upload and allows users to cancel the operation.</span></span>  
   
-### <a name="to-upload-a-file"></a>Para carregar um arquivo  
+### <a name="to-upload-a-file"></a><span data-ttu-id="54a4c-105">Para carregar um arquivo</span><span class="sxs-lookup"><span data-stu-id="54a4c-105">To upload a file</span></span>  
   
--   Use o método `UploadFile` para carregar um arquivo, especificando o local do arquivo de origem e o local do diretório de destino como uma cadeia de caracteres ou URI (Uniform Resource Identifier). Este exemplo carrega o arquivo `Order.txt` para `http://www.cohowinery.com/uploads.aspx`.  
+-   <span data-ttu-id="54a4c-106">Use o método `UploadFile` para carregar um arquivo, especificando o local do arquivo de origem e o local do diretório de destino como uma cadeia de caracteres ou URI (Uniform Resource Identifier). Este exemplo carrega o arquivo `Order.txt` para `http://www.cohowinery.com/uploads.aspx`.</span><span class="sxs-lookup"><span data-stu-id="54a4c-106">Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI (Uniform Resource Identifier).This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`.</span></span>  
   
-     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]  
+     <span data-ttu-id="54a4c-107">[!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="54a4c-107">[!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]</span></span>  
   
-### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a>Para carregar um arquivo e mostrar o andamento da operação  
+### <a name="to-upload-a-file-and-show-the-progress-of-the-operation"></a><span data-ttu-id="54a4c-108">Para carregar um arquivo e mostrar o andamento da operação</span><span class="sxs-lookup"><span data-stu-id="54a4c-108">To upload a file and show the progress of the operation</span></span>  
   
--   Use o método `UploadFile` para carregar um arquivo, especificando o local do arquivo de origem e o local do diretório de destino como uma cadeia de caracteres ou URI. Este exemplo carrega o arquivo `Order.txt` para `http://www.cohowinery.com/uploads.aspx` sem fornecer um nome de usuário ou senha, mostra o andamento do upload e tem um intervalo de tempo limite de 500 milissegundos.  
+-   <span data-ttu-id="54a4c-109">Use o método `UploadFile` para carregar um arquivo, especificando o local do arquivo de origem e o local do diretório de destino como uma cadeia de caracteres ou URI.</span><span class="sxs-lookup"><span data-stu-id="54a4c-109">Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI.</span></span> <span data-ttu-id="54a4c-110">Este exemplo carrega o arquivo `Order.txt` para `http://www.cohowinery.com/uploads.aspx` sem fornecer um nome de usuário ou senha, mostra o andamento do upload e tem um intervalo de tempo limite de 500 milissegundos.</span><span class="sxs-lookup"><span data-stu-id="54a4c-110">This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx` without supplying a user name or password, shows the progress of the upload, and has a time-out interval of 500 milliseconds.</span></span>  
   
-     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]  
+     <span data-ttu-id="54a4c-111">[!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="54a4c-111">[!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]</span></span>  
   
-### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>Para carregar um arquivo, fornecendo um nome de usuário e senha  
+### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a><span data-ttu-id="54a4c-112">Para carregar um arquivo, fornecendo um nome de usuário e senha</span><span class="sxs-lookup"><span data-stu-id="54a4c-112">To upload a file, supplying a user name and password</span></span>  
   
--   Use o método `UploadFile` para carregar um arquivo, especificando o local do arquivo de origem e o local do diretório de destino como uma cadeia de caracteres ou URI e especificando o nome de usuário e senha. Este exemplo carrega o arquivo `Order.txt` para `http://www.cohowinery.com/uploads.aspx`, fornecendo o nome de usuário `anonymous` e uma senha em branco.  
+-   <span data-ttu-id="54a4c-113">Use o método `UploadFile` para carregar um arquivo, especificando o local do arquivo de origem e o local do diretório de destino como uma cadeia de caracteres ou URI e especificando o nome de usuário e senha.</span><span class="sxs-lookup"><span data-stu-id="54a4c-113">Use the `UploadFile` method to upload a file, specifying the source file's location and the target directory location as a string or URI, and specifying the user name and the password.</span></span> <span data-ttu-id="54a4c-114">Este exemplo carrega o arquivo `Order.txt` para `http://www.cohowinery.com/uploads.aspx`, fornecendo o nome de usuário `anonymous` e uma senha em branco.</span><span class="sxs-lookup"><span data-stu-id="54a4c-114">This example uploads the file `Order.txt` to `http://www.cohowinery.com/uploads.aspx`, supplying the user name `anonymous` and a blank password.</span></span>  
   
-     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]  
+     <span data-ttu-id="54a4c-115">[!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="54a4c-115">[!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]</span></span>  
   
-## <a name="robust-programming"></a>Programação robusta  
- As seguintes condições podem lançar uma exceção:  
+## <a name="robust-programming"></a><span data-ttu-id="54a4c-116">Programação robusta</span><span class="sxs-lookup"><span data-stu-id="54a4c-116">Robust Programming</span></span>  
+ <span data-ttu-id="54a4c-117">As seguintes condições podem lançar uma exceção:</span><span class="sxs-lookup"><span data-stu-id="54a4c-117">The following conditions may throw an exception:</span></span>  
   
--   O caminho do arquivo local não é válido (<xref:System.ArgumentException>).  
+-   <span data-ttu-id="54a4c-118">O caminho do arquivo local não é válido (<xref:System.ArgumentException>).</span><span class="sxs-lookup"><span data-stu-id="54a4c-118">The local file path is not valid (<xref:System.ArgumentException>).</span></span>  
   
--   Falha na autenticação (<xref:System.Security.SecurityException>).  
+-   <span data-ttu-id="54a4c-119">Falha na autenticação (<xref:System.Security.SecurityException>).</span><span class="sxs-lookup"><span data-stu-id="54a4c-119">Authentication failed (<xref:System.Security.SecurityException>).</span></span>  
   
--   A conexão ultrapassou o tempo limite (<xref:System.TimeoutException>).  
+-   <span data-ttu-id="54a4c-120">A conexão ultrapassou o tempo limite (<xref:System.TimeoutException>).</span><span class="sxs-lookup"><span data-stu-id="54a4c-120">The connection timed out (<xref:System.TimeoutException>).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>   
- [Como baixar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)   
- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a><span data-ttu-id="54a4c-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54a4c-121">See Also</span></span>  
+ <span data-ttu-id="54a4c-122"><xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="54a4c-122"><xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName></span></span>   
+ <span data-ttu-id="54a4c-123"><xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A></span><span class="sxs-lookup"><span data-stu-id="54a4c-123"><xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A></span></span>   
+ <span data-ttu-id="54a4c-124">[Como baixar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md) </span><span class="sxs-lookup"><span data-stu-id="54a4c-124">[How to: Download a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md) </span></span>  
+ [<span data-ttu-id="54a4c-125">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="54a4c-125">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 

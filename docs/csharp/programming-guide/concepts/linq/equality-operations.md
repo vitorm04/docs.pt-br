@@ -26,17 +26,17 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="equality-operations-c"></a>Operações de Igualdade (C#)
-Duas sequências cujos elementos correspondentes são iguais e que têm o mesmo número de elementos são consideradas iguais.  
+# <a name="equality-operations-c"></a><span data-ttu-id="d1405-102">Operações de Igualdade (C#)</span><span class="sxs-lookup"><span data-stu-id="d1405-102">Equality Operations (C#)</span></span>
+<span data-ttu-id="d1405-103">Duas sequências cujos elementos correspondentes são iguais e que têm o mesmo número de elementos são consideradas iguais.</span><span class="sxs-lookup"><span data-stu-id="d1405-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a><span data-ttu-id="d1405-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="d1405-104">Methods</span></span>  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
+|<span data-ttu-id="d1405-105">Nome do método</span><span class="sxs-lookup"><span data-stu-id="d1405-105">Method Name</span></span>|<span data-ttu-id="d1405-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="d1405-106">Description</span></span>|<span data-ttu-id="d1405-107">Sintaxe de expressão de consulta C#</span><span class="sxs-lookup"><span data-stu-id="d1405-107">C# Query Expression Syntax</span></span>|<span data-ttu-id="d1405-108">Mais informações</span><span class="sxs-lookup"><span data-stu-id="d1405-108">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|Determina se duas sequências são iguais comparando seus elementos por pares.|Não aplicável.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|<span data-ttu-id="d1405-109">SequenceEqual</span><span class="sxs-lookup"><span data-stu-id="d1405-109">SequenceEqual</span></span>|<span data-ttu-id="d1405-110">Determina se duas sequências são iguais comparando seus elementos por pares.</span><span class="sxs-lookup"><span data-stu-id="d1405-110">Determines whether two sequences are equal by comparing elements in a pair-wise manner.</span></span>|<span data-ttu-id="d1405-111">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="d1405-111">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Linq>   
- [Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [Como comparar o conteúdo de duas pastas (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+## <a name="see-also"></a><span data-ttu-id="d1405-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d1405-112">See Also</span></span>  
+ <span data-ttu-id="d1405-113"><xref:System.Linq></span><span class="sxs-lookup"><span data-stu-id="d1405-113"><xref:System.Linq></span></span>   
+ <span data-ttu-id="d1405-114">[Visão geral de operadores de consulta padrão (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) </span><span class="sxs-lookup"><span data-stu-id="d1405-114">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) </span></span>  
+ [<span data-ttu-id="d1405-115">Como comparar o conteúdo de duas pastas (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d1405-115">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
 

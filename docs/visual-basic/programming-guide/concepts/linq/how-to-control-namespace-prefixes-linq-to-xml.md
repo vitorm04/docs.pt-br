@@ -20,21 +20,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9b559b54ffaa53b2ae5cd3b6c6d2d4db3ebe0a04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 87db9e5384bee835ca4fde141765eabf9a7cfedb
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)
-Este tópico descreve como você pode controlar prefixos de namespace.  
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a><span data-ttu-id="13b91-102">Como: Controle prefixos de namespace (Visual Basic) (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="13b91-102">How to: Control Namespace Prefixes (Visual Basic) (LINQ to XML)</span></span>
+<span data-ttu-id="13b91-103">Este tópico descreve como você pode controlar prefixos de namespace.</span><span class="sxs-lookup"><span data-stu-id="13b91-103">This topic describes how you can control namespace prefixes.</span></span>  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a><span data-ttu-id="13b91-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="13b91-104">Example</span></span>  
   
-### <a name="description"></a>Descrição  
- Esse exemplo declara dois namespaces. Especifica que o `http://www.adventure-works.com` namespace tem o prefixo `aw`e que o `www.fourthcoffee.com` namespace tem o prefixo `fc`.  
+### <a name="description"></a><span data-ttu-id="13b91-105">Descrição</span><span class="sxs-lookup"><span data-stu-id="13b91-105">Description</span></span>  
+ <span data-ttu-id="13b91-106">Esse exemplo declara dois namespaces.</span><span class="sxs-lookup"><span data-stu-id="13b91-106">This example declares two namespaces.</span></span> <span data-ttu-id="13b91-107">Especifica que o `http://www.adventure-works.com` namespace tem o prefixo `aw`e que o `www.fourthcoffee.com` namespace tem o prefixo `fc`.</span><span class="sxs-lookup"><span data-stu-id="13b91-107">It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.</span></span>  
   
-### <a name="code"></a>Código  
+### <a name="code"></a><span data-ttu-id="13b91-108">Código</span><span class="sxs-lookup"><span data-stu-id="13b91-108">Code</span></span>  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -57,8 +58,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Comentários  
- Este exemplo gera a seguinte saída:  
+### <a name="comments"></a><span data-ttu-id="13b91-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="13b91-109">Comments</span></span>  
+ <span data-ttu-id="13b91-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="13b91-110">This example produces the following output:</span></span>  
   
 ```xml  
 <aw:Root xmlns:fc="www.fourthcoffee.com" xmlns:aw="http://www.adventure-works.com">  
@@ -70,5 +71,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Trabalhando com Namespaces XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a><span data-ttu-id="13b91-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="13b91-111">See Also</span></span>  
+ [<span data-ttu-id="13b91-112">Trabalhando com Namespaces XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="13b91-112">Working with XML Namespaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

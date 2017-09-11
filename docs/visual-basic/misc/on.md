@@ -30,31 +30,32 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ade59c9412a386249dca23772246518d5dece0f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e09bdd3383de6180a1925d66f448da735267cb31
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="on-visual-basic"></a>On (Visual Basic)
-Introduz uma resposta a um erro de tempo de execução ou ativa uma opção do compilador.  
+# <a name="on-visual-basic"></a><span data-ttu-id="e973a-102">On (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e973a-102">On (Visual Basic)</span></span>
+<span data-ttu-id="e973a-103">Introduz uma resposta a um erro de tempo de execução ou ativa uma opção do compilador.</span><span class="sxs-lookup"><span data-stu-id="e973a-103">Introduces a response to a run-time error or turns a compiler option on.</span></span>  
   
- Em consultas, identifica chaves para as coleções que estão sendo combinadas.  
+ <span data-ttu-id="e973a-104">Em consultas, identifica chaves para as coleções que estão sendo combinadas.</span><span class="sxs-lookup"><span data-stu-id="e973a-104">In queries, identifies keys for the collections being joined.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `On` palavra-chave é usada nesses contextos:  
+## <a name="remarks"></a><span data-ttu-id="e973a-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="e973a-105">Remarks</span></span>  
+ <span data-ttu-id="e973a-106">O `On` palavra-chave é usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="e973a-106">The `On` keyword is used in these contexts:</span></span>  
   
- [Cláusula Group Join](../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="e973a-107">Cláusula Group Join</span><span class="sxs-lookup"><span data-stu-id="e973a-107">Group Join Clause</span></span>](../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [Cláusula Join](../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="e973a-108">Cláusula Join</span><span class="sxs-lookup"><span data-stu-id="e973a-108">Join Clause</span></span>](../../visual-basic/language-reference/queries/join-clause.md)  
   
- [Instrução On Error](../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [<span data-ttu-id="e973a-109">Instrução On Error</span><span class="sxs-lookup"><span data-stu-id="e973a-109">On Error Statement</span></span>](../../visual-basic/language-reference/statements/on-error-statement.md)  
   
- [Instrução Option Explicit](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="e973a-110">Instrução Option Explicit</span><span class="sxs-lookup"><span data-stu-id="e973a-110">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [Instrução Option Infer](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="e973a-111">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="e973a-111">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
- [Instrução Option Strict](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="e973a-112">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="e973a-112">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="e973a-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e973a-113">See Also</span></span>  
+ [<span data-ttu-id="e973a-114">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="e973a-114">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

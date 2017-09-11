@@ -36,17 +36,17 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>Operador = (Referência de C#)
-O operador de atribuição (`=`) armazena o valor do operando direito no local de armazenamento, propriedade ou indexador indicado pelo operando esquerdo e retorna o valor como resultado. Os operandos devem ser do mesmo tipo (ou o operando direito deve ser implicitamente conversível para o tipo do operando esquerdo).  
+# <a name="-operator-c-reference"></a><span data-ttu-id="22dc4-102">Operador = (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="22dc4-102">= Operator (C# Reference)</span></span>
+<span data-ttu-id="22dc4-103">O operador de atribuição (`=`) armazena o valor do operando direito no local de armazenamento, propriedade ou indexador indicado pelo operando esquerdo e retorna o valor como resultado.</span><span class="sxs-lookup"><span data-stu-id="22dc4-103">The assignment operator (`=`) stores the value of its right-hand operand in the storage location, property, or indexer denoted by its left-hand operand and returns the value as its result.</span></span> <span data-ttu-id="22dc4-104">Os operandos devem ser do mesmo tipo (ou o operando direito deve ser implicitamente conversível para o tipo do operando esquerdo).</span><span class="sxs-lookup"><span data-stu-id="22dc4-104">The operands must be of the same type (or the right-hand operand must be implicitly convertible to the type of the left-hand operand).</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O operador de atribuição não pode ser sobrecarregado. No entanto, é possível definir operadores de conversão implícita para um tipo, o que permite usar o operador de atribuição com esses tipos. Para obter mais informações, consulte [Usando Operadores de Conversão](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).  
+## <a name="remarks"></a><span data-ttu-id="22dc4-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="22dc4-105">Remarks</span></span>  
+ <span data-ttu-id="22dc4-106">O operador de atribuição não pode ser sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="22dc4-106">The assignment operator cannot be overloaded.</span></span> <span data-ttu-id="22dc4-107">No entanto, é possível definir operadores de conversão implícita para um tipo, o que permite usar o operador de atribuição com esses tipos.</span><span class="sxs-lookup"><span data-stu-id="22dc4-107">However, you can define implicit conversion operators for a type, which enable you to use the assignment operator with those types.</span></span> <span data-ttu-id="22dc4-108">Para obter mais informações, consulte [Usando Operadores de Conversão](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).</span><span class="sxs-lookup"><span data-stu-id="22dc4-108">For more information, see [Using Conversion Operators](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="22dc4-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="22dc4-109">Example</span></span>  
+ <span data-ttu-id="22dc4-110">[!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="22dc4-110">[!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="22dc4-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="22dc4-111">See Also</span></span>  
+ <span data-ttu-id="22dc4-112">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="22dc4-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="22dc4-113">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="22dc4-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="22dc4-114">Operadores do C#</span><span class="sxs-lookup"><span data-stu-id="22dc4-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
 

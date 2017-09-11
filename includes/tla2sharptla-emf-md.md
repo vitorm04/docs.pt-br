@@ -1,1 +1,1 @@
-EMF
+<span data-ttu-id="fcbca-101">EMF</span><span class="sxs-lookup"><span data-stu-id="fcbca-101">EMF</span></span>

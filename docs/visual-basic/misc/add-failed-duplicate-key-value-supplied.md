@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b993680061ad8faa52eda82467f06da7b01d52c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9773b1e3849ff589284ac07c06dff7049d55d419
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="add-failed-duplicate-key-value-supplied"></a>Falha ao adicione. Valor de chave duplicado fornecido
-Um `Add` operação falhou porque o valor da chave é o mesmo que outro valor de chave. Valores de chave devem ser exclusivos.  
+# <a name="add-failed-duplicate-key-value-supplied"></a><span data-ttu-id="eef8e-103">Falha ao adicione.</span><span class="sxs-lookup"><span data-stu-id="eef8e-103">Add failed.</span></span> <span data-ttu-id="eef8e-104">Valor de chave duplicado fornecido</span><span class="sxs-lookup"><span data-stu-id="eef8e-104">Duplicate key value supplied</span></span>
+<span data-ttu-id="eef8e-105">Um `Add` operação falhou porque o valor da chave é o mesmo que outro valor de chave.</span><span class="sxs-lookup"><span data-stu-id="eef8e-105">An `Add` operation failed because the key value is the same as another key value.</span></span> <span data-ttu-id="eef8e-106">Valores de chave devem ser exclusivos.</span><span class="sxs-lookup"><span data-stu-id="eef8e-106">Key values must be unique.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="eef8e-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="eef8e-107">To correct this error</span></span>  
   
--   Verifique se o valor da chave é exclusivo.  
+-   <span data-ttu-id="eef8e-108">Verifique se o valor da chave é exclusivo.</span><span class="sxs-lookup"><span data-stu-id="eef8e-108">Ensure that the key value is unique.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="eef8e-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="eef8e-109">See Also</span></span>  
+ [<span data-ttu-id="eef8e-110">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="eef8e-110">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

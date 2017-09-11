@@ -26,10 +26,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a>Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é uma ordem de compra típica.  
+# <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="a0b5f-102">Arquivo XML de exemplo: ordem de compra típica (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a0b5f-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
+<span data-ttu-id="a0b5f-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a0b5f-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="a0b5f-104">Este arquivo é uma ordem de compra típica.</span><span class="sxs-lookup"><span data-stu-id="a0b5f-104">This file is a typical purchase order.</span></span>  
   
-## <a name="purchaseorderxml"></a>PurchaseOrder.xml  
+## <a name="purchaseorderxml"></a><span data-ttu-id="a0b5f-105">PurchaseOrder.xml</span><span class="sxs-lookup"><span data-stu-id="a0b5f-105">PurchaseOrder.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -68,6 +68,6 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a0b5f-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a0b5f-106">See Also</span></span>  
+ [<span data-ttu-id="a0b5f-107">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a0b5f-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

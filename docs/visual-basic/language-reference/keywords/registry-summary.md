@@ -28,24 +28,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1b74a8eb3983b4e6a96233e95250d86d4d38c51
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 52c852003acd327b5cae9d888dac42824dfd8460
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="registry-summary-visual-basic"></a>Resumo do registro (Visual Basic)
-[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]palavras-chave e membros da biblioteca em tempo de execução são organizados por propósito e usam.  
+# <a name="registry-summary-visual-basic"></a><span data-ttu-id="765db-102">Resumo do registro (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="765db-102">Registry Summary (Visual Basic)</span></span>
+[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]<span data-ttu-id="765db-103">palavras-chave e membros da biblioteca em tempo de execução são organizados por propósito e usam.</span><span class="sxs-lookup"><span data-stu-id="765db-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
- Usando o `My` recurso fornece maior produtividade e desempenho em operações de registro que esses elementos. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <span data-ttu-id="765db-104">Usando o `My` recurso fornece maior produtividade e desempenho em operações de registro que esses elementos.</span><span class="sxs-lookup"><span data-stu-id="765db-104">Using the `My` feature provides you with greater productivity and performance in registry operations than these elements.</span></span> <span data-ttu-id="765db-105">Para obter mais informações, consulte <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</xref:Microsoft.VisualBasic.MyServices.RegistryProxy></span><span class="sxs-lookup"><span data-stu-id="765db-105">For more information, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
   
-|**Ação**|**Elemento de linguagem**|  
+|<span data-ttu-id="765db-106">**Ação**</span><span class="sxs-lookup"><span data-stu-id="765db-106">**Action**</span></span>|<span data-ttu-id="765db-107">**Elemento de linguagem**</span><span class="sxs-lookup"><span data-stu-id="765db-107">**Language element**</span></span>|  
 |----------------|--------------------------|  
-|Exclua configurações do programa.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Ler as configurações do programa.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>,<xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>|  
-|Salve configurações do programa.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|<span data-ttu-id="765db-108">Exclua configurações do programa.</span><span class="sxs-lookup"><span data-stu-id="765db-108">Delete program settings.</span></span>|<span data-ttu-id="765db-109"><xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></span><span class="sxs-lookup"><span data-stu-id="765db-109"><xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A></span></span>|  
+|<span data-ttu-id="765db-110">Ler as configurações do programa.</span><span class="sxs-lookup"><span data-stu-id="765db-110">Read program settings.</span></span>|<span data-ttu-id="765db-111"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>,<xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></xref:Microsoft.VisualBasic.Interaction.GetSetting%2A></span><span class="sxs-lookup"><span data-stu-id="765db-111"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></span></span>|  
+|<span data-ttu-id="765db-112">Salve configurações do programa.</span><span class="sxs-lookup"><span data-stu-id="765db-112">Save program settings.</span></span>|<span data-ttu-id="765db-113"><xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></span><span class="sxs-lookup"><span data-stu-id="765db-113"><xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A></span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)   
- [Membros de biblioteca de tempo de execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)   
- [Lendo e Gravando do Registro](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a><span data-ttu-id="765db-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="765db-114">See Also</span></span>  
+ <span data-ttu-id="765db-115">[Palavras-chave](../../../visual-basic/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="765db-115">[Keywords](../../../visual-basic/language-reference/keywords/index.md) </span></span>  
+<span data-ttu-id="765db-116"> [Membros de biblioteca de tempo de execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md) </span><span class="sxs-lookup"><span data-stu-id="765db-116"> [Visual Basic Runtime Library Members](../../../visual-basic/language-reference/runtime-library-members.md) </span></span>  
+<span data-ttu-id="765db-117"> [Lendo e Gravando do Registro](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)</span><span class="sxs-lookup"><span data-stu-id="765db-117"> [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)</span></span>

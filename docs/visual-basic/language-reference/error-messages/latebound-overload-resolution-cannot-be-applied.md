@@ -33,27 +33,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 861aa0514dcf77af45daee15a91e521a2ccda9ea
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f3a72b07b1e0f71613bfd1f703e3a2d6f4cc347e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Resolução de sobrecarga com associação tardia não pode ser aplicada a '&lt;procedurename&gt;' porque a instância de acesso é um tipo de interface
-O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência possui o tipo de dados de uma interface. O `Object` argumento força o compilador a resolver a referência de ligação tardia.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a><span data-ttu-id="568c6-102">Resolução de sobrecarga com associação tardia não pode ser aplicada a '&lt;procedurename&gt;' porque a instância de acesso é um tipo de interface</span><span class="sxs-lookup"><span data-stu-id="568c6-102">Latebound overload resolution cannot be applied to &#39;&lt;procedurename&gt;&#39; because the accessing instance is an interface type</span></span>
+<span data-ttu-id="568c6-103">O compilador está tentando resolver uma referência a uma propriedade ou procedimento sobrecarregado, mas a referência falha porque um argumento é do tipo `Object` e o objeto da referência possui o tipo de dados de uma interface.</span><span class="sxs-lookup"><span data-stu-id="568c6-103">The compiler is attempting to resolve a reference to an overloaded property or procedure, but the reference fails because an argument is of type `Object` and the referring object has the data type of an interface.</span></span> <span data-ttu-id="568c6-104">O `Object` argumento força o compilador a resolver a referência de ligação tardia.</span><span class="sxs-lookup"><span data-stu-id="568c6-104">The `Object` argument forces the compiler to resolve the reference as late-bound.</span></span>  
   
- Nessas circunstâncias, o compilador resolve o sobrecarregamento através da classe de implementação, em vez de por meio da interface subjacente. Se a classe renomeia uma das versões sobrecarregadas, o compilador não considera que aquela versão seja um sobrecarregamento porque seu nome é diferente. Isso por sua vez faz o compilador ignorar a versão renomeada quando ela pode ter sido a escolha correta para resolver a referência.  
+ <span data-ttu-id="568c6-105">Nessas circunstâncias, o compilador resolve o sobrecarregamento através da classe de implementação, em vez de por meio da interface subjacente.</span><span class="sxs-lookup"><span data-stu-id="568c6-105">In these circumstances, the compiler resolves the overload through the implementing class instead of through the underlying interface.</span></span> <span data-ttu-id="568c6-106">Se a classe renomeia uma das versões sobrecarregadas, o compilador não considera que aquela versão seja um sobrecarregamento porque seu nome é diferente.</span><span class="sxs-lookup"><span data-stu-id="568c6-106">If the class renames one of the overloaded versions, the compiler does not consider that version to be an overload because its name is different.</span></span> <span data-ttu-id="568c6-107">Isso por sua vez faz o compilador ignorar a versão renomeada quando ela pode ter sido a escolha correta para resolver a referência.</span><span class="sxs-lookup"><span data-stu-id="568c6-107">This in turn causes the compiler to ignore the renamed version when it might have been the correct choice to resolve the reference.</span></span>  
   
- **ID do erro:** BC30933  
+ <span data-ttu-id="568c6-108">**ID do erro:** BC30933</span><span class="sxs-lookup"><span data-stu-id="568c6-108">**Error ID:** BC30933</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="568c6-109">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="568c6-109">To correct this error</span></span>  
   
--   Use `CType` para lançar um argumento de `Object` para o tipo especificado pela assinatura do sobrecarregamento que você deseja chamar.  
+-   <span data-ttu-id="568c6-110">Use `CType` para lançar um argumento de `Object` para o tipo especificado pela assinatura do sobrecarregamento que você deseja chamar.</span><span class="sxs-lookup"><span data-stu-id="568c6-110">Use `CType` to cast the argument from `Object` to the type specified by the signature of the overload you want to call.</span></span>  
   
-     Observe que isso não ajuda a converter o objeto que faz referência a interface subjacente. Você deve converter o argumento para evitar esse erro.  
+     <span data-ttu-id="568c6-111">Observe que isso não ajuda a converter o objeto que faz referência a interface subjacente.</span><span class="sxs-lookup"><span data-stu-id="568c6-111">Note that it does not help to cast the referring object to the underlying interface.</span></span> <span data-ttu-id="568c6-112">Você deve converter o argumento para evitar esse erro.</span><span class="sxs-lookup"><span data-stu-id="568c6-112">You must cast the argument to avoid this error.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma chamada para um sobrecarregado `Sub` procedimento que causa esse erro em tempo de compilação.  
+## <a name="example"></a><span data-ttu-id="568c6-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="568c6-113">Example</span></span>  
+ <span data-ttu-id="568c6-114">O exemplo a seguir mostra uma chamada para um sobrecarregado `Sub` procedimento que causa esse erro em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="568c6-114">The following example shows a call to an overloaded `Sub` procedure that causes this error at compile time.</span></span>  
   
 ```  
 Module m1  
@@ -77,18 +78,18 @@ Module m1
 End Module  
 ```  
   
- No exemplo anterior, se o compilador permitisse a chamada a `s1` como escrito, a resolução teria se realizado através da classe `c1` em vez da interface `i1`. Isso significa que o compilador não consideraria `s2` porque seu nome é diferente em `c1`, embora seja a escolha correta como definido pelo `i1`.  
+ <span data-ttu-id="568c6-115">No exemplo anterior, se o compilador permitisse a chamada a `s1` como escrito, a resolução teria se realizado através da classe `c1` em vez da interface `i1`.</span><span class="sxs-lookup"><span data-stu-id="568c6-115">In the preceding example, if the compiler allowed the call to `s1` as written, the resolution would take place through the class `c1` instead of the interface `i1`.</span></span> <span data-ttu-id="568c6-116">Isso significa que o compilador não consideraria `s2` porque seu nome é diferente em `c1`, embora seja a escolha correta como definido pelo `i1`.</span><span class="sxs-lookup"><span data-stu-id="568c6-116">This would mean that the compiler would not consider `s2` because its name is different in `c1`, even though it is the correct choice as defined by `i1`.</span></span>  
   
- Você pode corrigir o erro alterando a chamada para qualquer uma das seguintes linhas de código:  
+ <span data-ttu-id="568c6-117">Você pode corrigir o erro alterando a chamada para qualquer uma das seguintes linhas de código:</span><span class="sxs-lookup"><span data-stu-id="568c6-117">You can correct the error by changing the call to either of the following lines of code:</span></span>  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Cada uma das linhas de código explicitamente converte o `Object` variável `o1` para um dos tipos de parâmetro definido para as sobrecargas.  
+ <span data-ttu-id="568c6-118">Cada uma das linhas de código explicitamente converte o `Object` variável `o1` para um dos tipos de parâmetro definido para as sobrecargas.</span><span class="sxs-lookup"><span data-stu-id="568c6-118">Each of the preceding lines of code explicitly casts the `Object` variable `o1` to one of the parameter types defined for the overloads.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Sobrecarga de procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)   
- [Resolução de sobrecarga](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)   
- [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a><span data-ttu-id="568c6-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="568c6-119">See Also</span></span>  
+ <span data-ttu-id="568c6-120">[Sobrecarga de procedimento](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md) </span><span class="sxs-lookup"><span data-stu-id="568c6-120">[Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md) </span></span>  
+<span data-ttu-id="568c6-121"> [Resolução de sobrecarga](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md) </span><span class="sxs-lookup"><span data-stu-id="568c6-121"> [Overload Resolution](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md) </span></span>  
+<span data-ttu-id="568c6-122"> [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)</span><span class="sxs-lookup"><span data-stu-id="568c6-122"> [CType Function](../../../visual-basic/language-reference/functions/ctype-function.md)</span></span>

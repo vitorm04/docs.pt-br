@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 667c47e58b46d2efc94a8f8cdb832a283be3b0e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b084257b21a3778865aabf77a4719f80cf96d8c0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="no-files-found-matching-39ltfilenamegt39"></a>Nenhum arquivo encontrado correspondendo '&lt;filename&gt;'
-O nome de arquivo está incorreto ou o arquivo não existe.  
+# <a name="no-files-found-matching-39ltfilenamegt39"></a><span data-ttu-id="6a54b-102">Nenhum arquivo encontrado correspondendo '&lt;filename&gt;'</span><span class="sxs-lookup"><span data-stu-id="6a54b-102">No files found matching &#39;&lt;filename&gt;&#39;</span></span>
+<span data-ttu-id="6a54b-103">O nome de arquivo está incorreto ou o arquivo não existe.</span><span class="sxs-lookup"><span data-stu-id="6a54b-103">The file name is incorrect, or the file does not exist.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6a54b-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6a54b-104">To correct this error</span></span>  
   
-1.  Verifique se o nome do arquivo está correto.  
+1.  <span data-ttu-id="6a54b-105">Verifique se o nome do arquivo está correto.</span><span class="sxs-lookup"><span data-stu-id="6a54b-105">Ensure that the file name is correct.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a><span data-ttu-id="6a54b-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6a54b-106">See Also</span></span>  
+ [<span data-ttu-id="6a54b-107">Objeto My.Computer.FileSystem</span><span class="sxs-lookup"><span data-stu-id="6a54b-107">My.Computer.FileSystem Object</span></span>](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)

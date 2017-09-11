@@ -35,25 +35,25 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="pointer-expressions-c-programming-guide"></a>Expressões de ponteiro (Guia de Programação em C#)
-Nesta seção, as seguintes expressões de ponteiro são discutidas:  
+# <a name="pointer-expressions-c-programming-guide"></a><span data-ttu-id="291d7-102">Expressões de ponteiro (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="291d7-102">Pointer Expressions (C# Programming Guide)</span></span>
+<span data-ttu-id="291d7-103">Nesta seção, as seguintes expressões de ponteiro são discutidas:</span><span class="sxs-lookup"><span data-stu-id="291d7-103">In this section, the following pointer expressions are discussed:</span></span>  
   
- [Obtendo o valor de uma variável](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)  
+ [<span data-ttu-id="291d7-104">Obtendo o valor de uma variável</span><span class="sxs-lookup"><span data-stu-id="291d7-104">Obtaining the Value of a Variable</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md)  
   
- [Obtendo o endereço de uma variável](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)  
+ [<span data-ttu-id="291d7-105">Obtendo o endereço de uma variável</span><span class="sxs-lookup"><span data-stu-id="291d7-105">Obtaining the Address of a Variable</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)  
   
- [Como acessar um membro com um ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)  
+ [<span data-ttu-id="291d7-106">Como acessar um membro com um ponteiro</span><span class="sxs-lookup"><span data-stu-id="291d7-106">How to: Access a Member with a Pointer</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md)  
   
- [Como acessar um elemento de matriz com um ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)  
+ [<span data-ttu-id="291d7-107">Como acessar um elemento de matriz com um ponteiro</span><span class="sxs-lookup"><span data-stu-id="291d7-107">How to: Access an Array Element with a Pointer</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)  
   
- [Manipulando ponteiros](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
+ [<span data-ttu-id="291d7-108">Manipulando ponteiros</span><span class="sxs-lookup"><span data-stu-id="291d7-108">Manipulating Pointers</span></span>](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Conversões de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [Tipos de Ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)   
- [Tipos](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+## <a name="see-also"></a><span data-ttu-id="291d7-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="291d7-109">See Also</span></span>  
+ <span data-ttu-id="291d7-110">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="291d7-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="291d7-111">[Conversões de ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="291d7-111">[Pointer Conversions](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md) </span></span>  
+ <span data-ttu-id="291d7-112">[Tipos de Ponteiro](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span><span class="sxs-lookup"><span data-stu-id="291d7-112">[Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md) </span></span>  
+ <span data-ttu-id="291d7-113">[Tipos](../../../csharp/language-reference/keywords/types.md) </span><span class="sxs-lookup"><span data-stu-id="291d7-113">[Types](../../../csharp/language-reference/keywords/types.md) </span></span>  
+ <span data-ttu-id="291d7-114">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span><span class="sxs-lookup"><span data-stu-id="291d7-114">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) </span></span>  
+ <span data-ttu-id="291d7-115">[Instrução fixed](../../../csharp/language-reference/keywords/fixed-statement.md) </span><span class="sxs-lookup"><span data-stu-id="291d7-115">[fixed Statement](../../../csharp/language-reference/keywords/fixed-statement.md) </span></span>  
+ [<span data-ttu-id="291d7-116">stackalloc</span><span class="sxs-lookup"><span data-stu-id="291d7-116">stackalloc</span></span>](../../../csharp/language-reference/keywords/stackalloc.md)
 

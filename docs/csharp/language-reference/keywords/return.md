@@ -38,23 +38,23 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="return-c-reference"></a>return (Referência de C#)
-A instrução `return` finaliza a execução do método em que aparece e retorna o controle para o método de chamada. Ela também pode retornar um valor opcional. Se o método for um tipo `void`, a instrução `return` poderá ser omitida.  
+# <a name="return-c-reference"></a><span data-ttu-id="77833-102">return (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="77833-102">return (C# Reference)</span></span>
+<span data-ttu-id="77833-103">A instrução `return` finaliza a execução do método em que aparece e retorna o controle para o método de chamada.</span><span class="sxs-lookup"><span data-stu-id="77833-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="77833-104">Ela também pode retornar um valor opcional.</span><span class="sxs-lookup"><span data-stu-id="77833-104">It can also return an optional value.</span></span> <span data-ttu-id="77833-105">Se o método for um tipo `void`, a instrução `return` poderá ser omitida.</span><span class="sxs-lookup"><span data-stu-id="77833-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  
   
- Se a instrução return estiver dentro de um bloco `try`, o bloco `finally`, se houver, será executado antes que o controle retorne para o método de chamada.  
+ <span data-ttu-id="77833-106">Se a instrução return estiver dentro de um bloco `try`, o bloco `finally`, se houver, será executado antes que o controle retorne para o método de chamada.</span><span class="sxs-lookup"><span data-stu-id="77833-106">If the return statement is inside a `try` block, the `finally` block, if one exists, will be executed before control returns to the calling method.</span></span>  
   
-## <a name="example"></a>Exemplo  
- No exemplo a seguir, o método `A()` retorna a variável `Area` como um valor [double](../../../csharp/language-reference/keywords/double.md).  
+## <a name="example"></a><span data-ttu-id="77833-107">Exemplo</span><span class="sxs-lookup"><span data-stu-id="77833-107">Example</span></span>  
+ <span data-ttu-id="77833-108">No exemplo a seguir, o método `A()` retorna a variável `Area` como um valor [double](../../../csharp/language-reference/keywords/double.md).</span><span class="sxs-lookup"><span data-stu-id="77833-108">In the following example, the method `A()` returns the variable `Area` as a [double](../../../csharp/language-reference/keywords/double.md) value.</span></span>  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
+ <span data-ttu-id="77833-109">[!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="77833-109">[!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="77833-110">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="77833-110">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Instrução return](/cpp/cpp/return-statement-cpp)   
- [Instruções de atalho](../../../csharp/language-reference/keywords/jump-statements.md)
+## <a name="see-also"></a><span data-ttu-id="77833-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="77833-111">See Also</span></span>  
+ <span data-ttu-id="77833-112">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="77833-112">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="77833-113">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="77833-113">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="77833-114">[Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="77833-114">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="77833-115">[Instrução return](/cpp/cpp/return-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="77833-115">[return Statement](/cpp/cpp/return-statement-cpp) </span></span>  
+ [<span data-ttu-id="77833-116">Instruções de atalho</span><span class="sxs-lookup"><span data-stu-id="77833-116">Jump Statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)
 

@@ -21,19 +21,19 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Como localizar irmãos anteriores (XPath-LINQ to XML) (C#)
-Este tópico compara o eixo `preceding-sibling` de XPath ao eixo <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> filho do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a><span data-ttu-id="b9bcc-102">Como localizar irmãos anteriores (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="b9bcc-102">How to: Find Preceding Siblings (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="b9bcc-103">Este tópico compara o eixo `preceding-sibling` de XPath ao eixo <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> filho do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b9bcc-103">This topic compares the XPath `preceding-sibling` axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] child <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> axis.</span></span>  
   
- A expressão XPath é:  
+ <span data-ttu-id="b9bcc-104">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="b9bcc-104">The XPath expression is:</span></span>  
   
  `preceding-sibling::*`  
   
- Observe que os resultados de ambos <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> e <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> estão na ordem de documento.  
+ <span data-ttu-id="b9bcc-105">Observe que os resultados de ambos <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> e <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> estão na ordem de documento.</span><span class="sxs-lookup"><span data-stu-id="b9bcc-105">Note that the results of both <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> and <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName> are in document order.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir localiza o elemento de `FullAddress` , e então recuperar os elementos anteriores usando o eixo de `preceding-sibling` .  
+## <a name="example"></a><span data-ttu-id="b9bcc-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b9bcc-106">Example</span></span>  
+ <span data-ttu-id="b9bcc-107">O exemplo a seguir localiza o elemento de `FullAddress` , e então recuperar os elementos anteriores usando o eixo de `preceding-sibling` .</span><span class="sxs-lookup"><span data-stu-id="b9bcc-107">The following example finds the `FullAddress` element, and then retrieves the previous elements using the `preceding-sibling` axis.</span></span>  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ <span data-ttu-id="b9bcc-108">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="b9bcc-108">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -55,7 +55,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ <span data-ttu-id="b9bcc-109">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="b9bcc-109">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -65,6 +65,6 @@ Results are identical
 <Phone>(503) 555-7555</Phone>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="b9bcc-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b9bcc-110">See Also</span></span>  
+ [<span data-ttu-id="b9bcc-111">Usuários do LINQ to XML para XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="b9bcc-111">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

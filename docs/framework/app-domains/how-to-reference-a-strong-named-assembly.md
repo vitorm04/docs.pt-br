@@ -26,54 +26,54 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Como referenciar um assembly de nome forte
-O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente. Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.  
+# <a name="how-to-reference-a-strong-named-assembly"></a><span data-ttu-id="32b6b-102">Como referenciar um assembly de nome forte</span><span class="sxs-lookup"><span data-stu-id="32b6b-102">How to: Reference a Strong-Named Assembly</span></span>
+<span data-ttu-id="32b6b-103">O processo para referenciar tipos ou recursos em um assembly de nome forte é normalmente transparente.</span><span class="sxs-lookup"><span data-stu-id="32b6b-103">The process for referencing types or resources in a strong-named assembly is usually transparent.</span></span> <span data-ttu-id="32b6b-104">Você pode fazer a referência no tempo de compilação (vinculação inicial) ou no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="32b6b-104">You can make the reference either at compile time (early binding) or at run time.</span></span>  
   
- Uma referência de tempo de compilação ocorre quando você indica para o compilador que seu assembly faz referência explícita a outro assembly. Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.  
+ <span data-ttu-id="32b6b-105">Uma referência de tempo de compilação ocorre quando você indica para o compilador que seu assembly faz referência explícita a outro assembly.</span><span class="sxs-lookup"><span data-stu-id="32b6b-105">A compile-time reference occurs when you indicate to the compiler that your assembly explicitly references another assembly.</span></span> <span data-ttu-id="32b6b-106">Quando você usa a referência no tempo de compilação, o compilador obtém automaticamente a chave pública do assembly com nome forte direcionado e o coloca na referência de assembly do assembly que está sendo compilado.</span><span class="sxs-lookup"><span data-stu-id="32b6b-106">When you use compile-time referencing, the compiler automatically gets the public key of the targeted strong-named assembly and places it in the assembly reference of the assembly being compiled.</span></span>  
   
 > [!NOTE]
->  Assembly de nome forte só pode usar tipos de outros assemblies de nome forte. Caso contrário, a segurança do assembly de nome forte estaria comprometida.  
+>  <span data-ttu-id="32b6b-107">Assembly de nome forte só pode usar tipos de outros assemblies de nome forte.</span><span class="sxs-lookup"><span data-stu-id="32b6b-107">A strong-named assembly can only use types from other strong-named assemblies.</span></span> <span data-ttu-id="32b6b-108">Caso contrário, a segurança do assembly de nome forte estaria comprometida.</span><span class="sxs-lookup"><span data-stu-id="32b6b-108">Otherwise, the security of the strong-named assembly would be compromised.</span></span>  
   
-### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Para fazer uma referência no tempo de compilação a um assembly de nome forte  
+### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a><span data-ttu-id="32b6b-109">Para fazer uma referência no tempo de compilação a um assembly de nome forte</span><span class="sxs-lookup"><span data-stu-id="32b6b-109">To make a compile-time reference to a strong-named assembly</span></span>  
   
-1.  No prompt de comando, digite o seguinte comando:  
+1.  <span data-ttu-id="32b6b-110">No prompt de comando, digite o seguinte comando:</span><span class="sxs-lookup"><span data-stu-id="32b6b-110">At the command prompt, type the following command:</span></span>  
   
-     \<*comando do compilador*> **/reference:**\<*nome do assembly*>  
+     <span data-ttu-id="32b6b-111">\<*comando do compilador*> **/reference:**\<*nome do assembly*></span><span class="sxs-lookup"><span data-stu-id="32b6b-111">\<*compiler command*> **/reference:**\<*assembly name*></span></span>  
   
-     Nesse comando, o *comando do compilador* é o comando do compilador para a linguagem que você está usando, e *nome do assembly* é o nome do assembly de nome forte que está sendo referenciado. Você também pode usar outras opções de compilador, como a opção **/t:library** para criar um assembly de biblioteca.  
+     <span data-ttu-id="32b6b-112">Nesse comando, o *comando do compilador* é o comando do compilador para a linguagem que você está usando, e *nome do assembly* é o nome do assembly de nome forte que está sendo referenciado.</span><span class="sxs-lookup"><span data-stu-id="32b6b-112">In this command, *compiler command* is the compiler command for the language you are using, and *assembly name* is the name of the strong-named assembly being referenced.</span></span> <span data-ttu-id="32b6b-113">Você também pode usar outras opções de compilador, como a opção **/t:library** para criar um assembly de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="32b6b-113">You can also use other compiler options, such as the **/t:library** option for creating a library assembly.</span></span>  
   
- O exemplo a seguir cria um assembly chamado `myAssembly.dll` que faz referência a um assembly de nome forte chamado `myLibAssembly.dll` de um módulo de código chamado `myAssembly.cs`.  
+ <span data-ttu-id="32b6b-114">O exemplo a seguir cria um assembly chamado `myAssembly.dll` que faz referência a um assembly de nome forte chamado `myLibAssembly.dll` de um módulo de código chamado `myAssembly.cs`.</span><span class="sxs-lookup"><span data-stu-id="32b6b-114">The following example creates an assembly called `myAssembly.dll` that references a strong-named assembly called `myLibAssembly.dll` from a code module called `myAssembly.cs`.</span></span>  
   
 ```  
 csc /t:library myAssembly.cs /reference:myLibAssembly.dll  
 ```  
   
-### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>Para fazer uma referência no tempo de execução a um assembly de nome forte  
+### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a><span data-ttu-id="32b6b-115">Para fazer uma referência no tempo de execução a um assembly de nome forte</span><span class="sxs-lookup"><span data-stu-id="32b6b-115">To make a run-time reference to a strong-named assembly</span></span>  
   
-1.  Quando você faz uma referência de tempo de execução a um assembly de nome forte (por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> ou o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>), você deve usar o nome de exibição do assembly de nome forte referenciado. A sintaxe de um nome de exibição é a seguinte:  
+1.  <span data-ttu-id="32b6b-116">Quando você faz uma referência de tempo de execução a um assembly de nome forte (por exemplo, usando o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> ou o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName>), você deve usar o nome de exibição do assembly de nome forte referenciado.</span><span class="sxs-lookup"><span data-stu-id="32b6b-116">When you make a run-time reference to a strong-named assembly (for example, by using the <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> or <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> method), you must use the display name of the referenced strong-named assembly.</span></span> <span data-ttu-id="32b6b-117">A sintaxe de um nome de exibição é a seguinte:</span><span class="sxs-lookup"><span data-stu-id="32b6b-117">The syntax of a display name is as follows:</span></span>  
   
-     \<*nome do assembly*>**,** \<*número da versão*>**,** \<*cultura*>**,** \<*token de chave pública*>  
+     <span data-ttu-id="32b6b-118">\<*nome do assembly*>**,** \<*número da versão*>**,** \<*cultura*>**,** \<*token de chave pública*></span><span class="sxs-lookup"><span data-stu-id="32b6b-118">\<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*></span></span>  
   
-     Por exemplo:  
+     <span data-ttu-id="32b6b-119">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="32b6b-119">For example:</span></span>  
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
     ```  
   
-     Neste exemplo, `PublicKeyToken` é a forma hexadecimal do token de chave pública. Se não houver valor de cultura, use `Culture=neutral`.  
+     <span data-ttu-id="32b6b-120">Neste exemplo, `PublicKeyToken` é a forma hexadecimal do token de chave pública.</span><span class="sxs-lookup"><span data-stu-id="32b6b-120">In this example, `PublicKeyToken` is the hexadecimal form of the public key token.</span></span> <span data-ttu-id="32b6b-121">Se não houver valor de cultura, use `Culture=neutral`.</span><span class="sxs-lookup"><span data-stu-id="32b6b-121">If there is no culture value, use `Culture=neutral`.</span></span>  
   
- O exemplo de código a seguir mostra como usar essas informações com o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ <span data-ttu-id="32b6b-122">O exemplo de código a seguir mostra como usar essas informações com o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="32b6b-122">The following code example shows how to use this information with the <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> method.</span></span>  
   
- [!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)] [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)] [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]  
+ <span data-ttu-id="32b6b-123">[!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)] [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)] [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]</span><span class="sxs-lookup"><span data-stu-id="32b6b-123">[!code-cpp[Assembly.Load1#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Assembly.Load1/CPP/load2.cpp#3)] [!code-csharp[Assembly.Load1#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Assembly.Load1/CS/load2.cs#3)] [!code-vb[Assembly.Load1#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.Load1/VB/load2.vb#3)]</span></span>  
   
- Você pode imprimir o formato hexadecimal da chave pública e do token de chave pública para um assembly específico usando o seguinte comando [Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md):  
+ <span data-ttu-id="32b6b-124">Você pode imprimir o formato hexadecimal da chave pública e do token de chave pública para um assembly específico usando o seguinte comando [Nome Forte (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md):</span><span class="sxs-lookup"><span data-stu-id="32b6b-124">You can print the hexadecimal format of the public key and public key token for a specific assembly by using the following [Strong Name (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) command:</span></span>  
   
- **sn -Tp \<** *assembly* **>**  
+ <span data-ttu-id="32b6b-125">**sn -Tp \<** *assembly* **>**</span><span class="sxs-lookup"><span data-stu-id="32b6b-125">**sn -Tp \<** *assembly* **>**</span></span>  
   
- Se você tiver um arquivo de chave pública, use o comando a seguir (observe a diferença no caso da opção de linha de comando):  
+ <span data-ttu-id="32b6b-126">Se você tiver um arquivo de chave pública, use o comando a seguir (observe a diferença no caso da opção de linha de comando):</span><span class="sxs-lookup"><span data-stu-id="32b6b-126">If you have a public key file, you can use the following command instead (note the difference in case on the command-line option):</span></span>  
   
- **sn -tp \<** *assembly* **>**  
+ <span data-ttu-id="32b6b-127">**sn -tp \<** *assembly* **>**</span><span class="sxs-lookup"><span data-stu-id="32b6b-127">**sn -tp \<** *assembly* **>**</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Criar e usar assemblies de nomes fortes](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="32b6b-128">Consulte também</span><span class="sxs-lookup"><span data-stu-id="32b6b-128">See Also</span></span>  
+ [<span data-ttu-id="32b6b-129">Criar e usar assemblies de nomes fortes</span><span class="sxs-lookup"><span data-stu-id="32b6b-129">Creating and Using Strong-Named Assemblies</span></span>](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 

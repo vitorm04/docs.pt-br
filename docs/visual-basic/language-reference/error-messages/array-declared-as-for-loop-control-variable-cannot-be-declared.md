@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b72c08b8c925c85136e1f6fc0f23f08e2b0723c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d3b1b7e5ba158e6bdc9838cc8b50db482ca97454
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>A matriz declarada para a variável de controle do loop não pode ser declarada com um tamanho inicial
-A `For Each` usa uma matriz como seu *elemento* variável de iteração mas inicializa essa matriz.  
+# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="9a944-102">A matriz declarada para a variável de controle do loop não pode ser declarada com um tamanho inicial</span><span class="sxs-lookup"><span data-stu-id="9a944-102">Array declared as for loop control variable cannot be declared with an initial size</span></span>
+<span data-ttu-id="9a944-103">A `For Each` usa uma matriz como seu *elemento* variável de iteração mas inicializa essa matriz.</span><span class="sxs-lookup"><span data-stu-id="9a944-103">A `For Each` loop uses an array as its *element* iteration variable but initializes that array.</span></span>  
   
- As instruções a seguir mostram como esse erro pode ser gerado.  
+ <span data-ttu-id="9a944-104">As instruções a seguir mostram como esse erro pode ser gerado.</span><span class="sxs-lookup"><span data-stu-id="9a944-104">The following statements show how this error can be generated.</span></span>  
   
 ```  
 Dim arrayList As New List(Of Integer())  
@@ -48,15 +49,15 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- A primeira `For Each` instrução é a maneira correta de acessar elementos de `arrayList`. O segundo `For Each` instrução gera esse erro.  
+ <span data-ttu-id="9a944-105">A primeira `For Each` instrução é a maneira correta de acessar elementos de `arrayList`.</span><span class="sxs-lookup"><span data-stu-id="9a944-105">The first `For Each` statement is the correct way to access elements of `arrayList`.</span></span> <span data-ttu-id="9a944-106">O segundo `For Each` instrução gera esse erro.</span><span class="sxs-lookup"><span data-stu-id="9a944-106">The second `For Each` statement generates this error.</span></span>  
   
- **ID do erro:** BC32039  
+ <span data-ttu-id="9a944-107">**ID do erro:** BC32039</span><span class="sxs-lookup"><span data-stu-id="9a944-107">**Error ID:** BC32039</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9a944-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="9a944-108">To correct this error</span></span>  
   
--   Remova a inicialização da declaração do *elemento* variável de iteração.  
+-   <span data-ttu-id="9a944-109">Remova a inicialização da declaração do *elemento* variável de iteração.</span><span class="sxs-lookup"><span data-stu-id="9a944-109">Remove the initialization from the declaration of the *element* iteration variable.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Para... Próxima instrução](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)
+## <a name="see-also"></a><span data-ttu-id="9a944-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9a944-110">See Also</span></span>  
+ <span data-ttu-id="9a944-111">[Para... Próxima instrução](../../../visual-basic/language-reference/statements/for-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="9a944-111">[For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) </span></span>  
+<span data-ttu-id="9a944-112"> [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md) </span><span class="sxs-lookup"><span data-stu-id="9a944-112"> [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md) </span></span>  
+<span data-ttu-id="9a944-113"> [Coleções](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)</span><span class="sxs-lookup"><span data-stu-id="9a944-113"> [Collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)</span></span>

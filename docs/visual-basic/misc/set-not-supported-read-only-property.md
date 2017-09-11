@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81c5b2a9ab7aa828850e3c8421013600374a4bdd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1d44f9c88be5f27e1c49fa60bcd7cb079407ad75
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="set-not-supported-read-only-property"></a>Definições não suportadas (propriedade somente leitura)
-Você tentou definir ou alterar uma propriedade é somente leitura.  
+# <a name="set-not-supported-read-only-property"></a><span data-ttu-id="dbfb2-102">Definições não suportadas (propriedade somente leitura)</span><span class="sxs-lookup"><span data-stu-id="dbfb2-102">Set not supported (read-only property)</span></span>
+<span data-ttu-id="dbfb2-103">Você tentou definir ou alterar uma propriedade é somente leitura.</span><span class="sxs-lookup"><span data-stu-id="dbfb2-103">You tried to set or change a property that is read only.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dbfb2-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="dbfb2-104">To correct this error</span></span>  
   
-1.  Remova a referência à propriedade de seu código.  
+1.  <span data-ttu-id="dbfb2-105">Remova a referência à propriedade de seu código.</span><span class="sxs-lookup"><span data-stu-id="dbfb2-105">Remove the reference to the property from your code.</span></span>  
   
-2.  Altere a referência para retornar o valor da propriedade somente em tempo de execução.  
+2.  <span data-ttu-id="dbfb2-106">Altere a referência para retornar o valor da propriedade somente em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="dbfb2-106">Change the reference to only return the value of the property at run time.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [NIB: como modificar as propriedades do projeto e as definições de configuração](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a><span data-ttu-id="dbfb2-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dbfb2-107">See Also</span></span>  
+ [<span data-ttu-id="dbfb2-108">NIB: como modificar as propriedades do projeto e as definições de configuração</span><span class="sxs-lookup"><span data-stu-id="dbfb2-108">NIB How to: Modify Project Properties and Configuration Settings</span></span>](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)

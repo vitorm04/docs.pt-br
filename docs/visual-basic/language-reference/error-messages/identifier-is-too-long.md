@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 33ba4d8eeba30c40fe3dbcba2f542ea969049722
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e67d59bf9b02dfef4140260274d63f793666e37e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="identifier-is-too-long"></a>O identificador é muito longo
-O nome ou identificador de cada elemento de programação é limitado a 1023 caracteres. Além disso, um nome totalmente qualificado não pode exceder 1023 caracteres. Isso significa que a cadeia de caracteres do identificador inteiro (`<namespace>.<...>.<namespace>.<class>.<element>`) não pode ter mais de 1023 caracteres, incluindo o operador de acesso de membro (`.`) caracteres.  
+# <a name="identifier-is-too-long"></a><span data-ttu-id="6ff34-102">O identificador é muito longo</span><span class="sxs-lookup"><span data-stu-id="6ff34-102">Identifier is too long</span></span>
+<span data-ttu-id="6ff34-103">O nome ou identificador de cada elemento de programação é limitado a 1023 caracteres.</span><span class="sxs-lookup"><span data-stu-id="6ff34-103">The name, or identifier, of every programming element is limited to 1023 characters.</span></span> <span data-ttu-id="6ff34-104">Além disso, um nome totalmente qualificado não pode exceder 1023 caracteres.</span><span class="sxs-lookup"><span data-stu-id="6ff34-104">In addition, a fully qualified name cannot exceed 1023 characters.</span></span> <span data-ttu-id="6ff34-105">Isso significa que a cadeia de caracteres do identificador inteiro (`<namespace>.<...>.<namespace>.<class>.<element>`) não pode ter mais de 1023 caracteres, incluindo o operador de acesso de membro (`.`) caracteres.</span><span class="sxs-lookup"><span data-stu-id="6ff34-105">This means that the entire identifier string (`<namespace>.<...>.<namespace>.<class>.<element>`) cannot be more than 1023 characters long, including the member-access operator (`.`) characters.</span></span>  
   
- **ID do erro:** BC30033  
+ <span data-ttu-id="6ff34-106">**ID do erro:** BC30033</span><span class="sxs-lookup"><span data-stu-id="6ff34-106">**Error ID:** BC30033</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6ff34-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6ff34-107">To correct this error</span></span>  
   
--   Reduza o comprimento do identificador.  
+-   <span data-ttu-id="6ff34-108">Reduza o comprimento do identificador.</span><span class="sxs-lookup"><span data-stu-id="6ff34-108">Reduce the length of the identifier.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Nomes de Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a><span data-ttu-id="6ff34-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6ff34-109">See Also</span></span>  
+ [<span data-ttu-id="6ff34-110">Nomes de Elementos Declarados</span><span class="sxs-lookup"><span data-stu-id="6ff34-110">Declared Element Names</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

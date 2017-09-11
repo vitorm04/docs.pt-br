@@ -21,17 +21,17 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)
-Este tópico mostra como localizar todos os atributos de seus irmãos o nó de contexto. Somente os atributos com um nome específico são retornados na coleção.  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="baa49-102">Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="baa49-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="baa49-103">Este tópico mostra como localizar todos os atributos de seus irmãos o nó de contexto.</span><span class="sxs-lookup"><span data-stu-id="baa49-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="baa49-104">Somente os atributos com um nome específico são retornados na coleção.</span><span class="sxs-lookup"><span data-stu-id="baa49-104">Only attributes with a specific name are returned in the collection.</span></span>  
   
- A expressão XPath é:  
+ <span data-ttu-id="baa49-105">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="baa49-105">The XPath expression is:</span></span>  
   
  `../Book/@id`  
   
-## <a name="example"></a>Exemplo  
- Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`, e localiza em todos os atributos nomeados `id`. O resultado é uma coleção de atributos.  
+## <a name="example"></a><span data-ttu-id="baa49-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="baa49-106">Example</span></span>  
+ <span data-ttu-id="baa49-107">Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`, e localiza em todos os atributos nomeados `id`.</span><span class="sxs-lookup"><span data-stu-id="baa49-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="baa49-108">O resultado é uma coleção de atributos.</span><span class="sxs-lookup"><span data-stu-id="baa49-108">The result is a collection of attributes.</span></span>  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).  
+ <span data-ttu-id="baa49-109">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="baa49-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -59,7 +59,7 @@ foreach (XAttribute el in list1)
     Console.WriteLine(el);  
 ```  
   
- Este exemplo gera a seguinte saída:  
+ <span data-ttu-id="baa49-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="baa49-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -67,6 +67,6 @@ id="bk101"
 id="bk102"  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Usuários do LINQ to XML para XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="baa49-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="baa49-111">See Also</span></span>  
+ [<span data-ttu-id="baa49-112">Usuários do LINQ to XML para XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="baa49-112">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

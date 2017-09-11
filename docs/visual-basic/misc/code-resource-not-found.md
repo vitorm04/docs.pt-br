@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 91df1c56965aba8e12f56c2daf92b4eee6ff3fb4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 85528945e45a0f552f21808223c738e172227018
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="code-resource-not-found"></a>Recurso de código não encontrado
-Foi feita uma chamada para um procedimento em um recurso de código, mas não foi possível encontrar o recurso de código.  
+# <a name="code-resource-not-found"></a><span data-ttu-id="a5e1a-102">Recurso de código não encontrado</span><span class="sxs-lookup"><span data-stu-id="a5e1a-102">Code resource not found</span></span>
+<span data-ttu-id="a5e1a-103">Foi feita uma chamada para um procedimento em um recurso de código, mas não foi possível encontrar o recurso de código.</span><span class="sxs-lookup"><span data-stu-id="a5e1a-103">A call was made to a procedure in a code resource, but the code resource could not be found.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a5e1a-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="a5e1a-104">To correct this error</span></span>  
   
--   Verifique se o recurso está disponível e referenciado corretamente.  
+-   <span data-ttu-id="a5e1a-105">Verifique se o recurso está disponível e referenciado corretamente.</span><span class="sxs-lookup"><span data-stu-id="a5e1a-105">Check that the resource is available and properly referenced.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="a5e1a-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a5e1a-106">See Also</span></span>  
+ [<span data-ttu-id="a5e1a-107">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="a5e1a-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

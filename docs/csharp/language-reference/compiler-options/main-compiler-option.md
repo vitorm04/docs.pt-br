@@ -38,42 +38,42 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="main-c-compiler-options"></a>/main (opções do compilador C#)
-Esta opção especifica a classe que contém o ponto de entrada para o programa, se mais de uma classe contiver um método **Main**.  
+# <a name="main-c-compiler-options"></a><span data-ttu-id="37fd0-102">/main (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="37fd0-102">/main (C# Compiler Options)</span></span>
+<span data-ttu-id="37fd0-103">Esta opção especifica a classe que contém o ponto de entrada para o programa, se mais de uma classe contiver um método **Main**.</span><span class="sxs-lookup"><span data-stu-id="37fd0-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="37fd0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="37fd0-104">Syntax</span></span>  
   
 ```console  
 /main:class  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a><span data-ttu-id="37fd0-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="37fd0-105">Arguments</span></span>  
  `class`  
- O tipo que contém o método **Main**.  
+ <span data-ttu-id="37fd0-106">O tipo que contém o método **Main**.</span><span class="sxs-lookup"><span data-stu-id="37fd0-106">The type that contains the **Main** method.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Se sua compilação incluir mais de um tipo com um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md), você poderá especificar qual tipo contém o método **Main** que deseja usar como o ponto de entrada para o programa.  
+## <a name="remarks"></a><span data-ttu-id="37fd0-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="37fd0-107">Remarks</span></span>  
+ <span data-ttu-id="37fd0-108">Se sua compilação incluir mais de um tipo com um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md), você poderá especificar qual tipo contém o método **Main** que deseja usar como o ponto de entrada para o programa.</span><span class="sxs-lookup"><span data-stu-id="37fd0-108">If your compilation includes more than one type with a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method, you can specify which type contains the **Main** method that you want to use as the entry point into the program.</span></span>  
   
- Essa opção é para uso durante a compilação de um arquivo .exe.  
+ <span data-ttu-id="37fd0-109">Essa opção é para uso durante a compilação de um arquivo .exe.</span><span class="sxs-lookup"><span data-stu-id="37fd0-109">This option is for use when compiling an .exe file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="37fd0-110">Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="37fd0-110">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Abra a página **Propriedades** do projeto.  
+1.  <span data-ttu-id="37fd0-111">Abra a página **Propriedades** do projeto.</span><span class="sxs-lookup"><span data-stu-id="37fd0-111">Open the project's **Properties** page.</span></span>  
   
-2.  Clique na página de propriedades do **Aplicativo**.  
+2.  <span data-ttu-id="37fd0-112">Clique na página de propriedades do **Aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="37fd0-112">Click the **Application** property page.</span></span>  
   
-3.  Modifique a propriedade **Objeto de inicialização**.  
+3.  <span data-ttu-id="37fd0-113">Modifique a propriedade **Objeto de inicialização**.</span><span class="sxs-lookup"><span data-stu-id="37fd0-113">Modify the **Startup object** property.</span></span>  
   
-     Para definir programaticamente essa opção do compilador, confira <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.  
+     <span data-ttu-id="37fd0-114">Para definir programaticamente essa opção do compilador, confira <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="37fd0-114">To set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Compile `t2.cs` e `t3.cs`, especificando que o método **Main** será encontrado em `Test2`:  
+## <a name="example"></a><span data-ttu-id="37fd0-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="37fd0-115">Example</span></span>  
+ <span data-ttu-id="37fd0-116">Compile `t2.cs` e `t3.cs`, especificando que o método **Main** será encontrado em `Test2`:</span><span class="sxs-lookup"><span data-stu-id="37fd0-116">Compile `t2.cs` and `t3.cs`, specifying that the **Main** method will be found in `Test2`:</span></span>  
   
 ```console  
 csc t2.cs t3.cs /main:Test2  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md)   
- [Gerenciando propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="37fd0-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37fd0-117">See Also</span></span>  
+ <span data-ttu-id="37fd0-118">[Opções do compilador do C#](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="37fd0-118">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="37fd0-119">Gerenciando propriedades de solução e de projeto</span><span class="sxs-lookup"><span data-stu-id="37fd0-119">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

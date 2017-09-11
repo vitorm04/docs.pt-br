@@ -40,33 +40,34 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f21d4c7d9bd8f14bbe7284bc08399e7ba6b466c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6ba662a8cf9748b719bfbd7205ce65989e79d05a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="property-procedures-visual-basic"></a>Procedimentos de propriedade (Visual Basic)
-Um procedimento de propriedade é uma série de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] instruções que manipulam uma propriedade personalizada em um módulo, classe ou estrutura. Procedimentos de propriedade são também conhecidos como *acessadores de propriedade*.  
+# <a name="property-procedures-visual-basic"></a><span data-ttu-id="640a4-102">Procedimentos de propriedade (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="640a4-102">Property Procedures (Visual Basic)</span></span>
+<span data-ttu-id="640a4-103">Um procedimento de propriedade é uma série de [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] instruções que manipulam uma propriedade personalizada em um módulo, classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="640a4-103">A property procedure is a series of [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] statements that manipulate a custom property on a module, class, or structure.</span></span> <span data-ttu-id="640a4-104">Procedimentos de propriedade são também conhecidos como *acessadores de propriedade*.</span><span class="sxs-lookup"><span data-stu-id="640a4-104">Property procedures are also known as *property accessors*.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]fornece os seguintes procedimento de propriedade:  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="640a4-105">fornece os seguintes procedimento de propriedade:</span><span class="sxs-lookup"><span data-stu-id="640a4-105"> provides for the following property procedures:</span></span>  
   
--   Um `Get` procedimento retorna o valor de uma propriedade. Ele é chamado quando você acessa a propriedade em uma expressão.  
+-   <span data-ttu-id="640a4-106">Um `Get` procedimento retorna o valor de uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-106">A `Get` procedure returns the value of a property.</span></span> <span data-ttu-id="640a4-107">Ele é chamado quando você acessa a propriedade em uma expressão.</span><span class="sxs-lookup"><span data-stu-id="640a4-107">It is called when you access the property in an expression.</span></span>  
   
--   Um `Set` procedimento define uma propriedade com um valor, incluindo uma referência de objeto. Ele é chamado quando você atribui um valor à propriedade.  
+-   <span data-ttu-id="640a4-108">Um `Set` procedimento define uma propriedade com um valor, incluindo uma referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="640a4-108">A `Set` procedure sets a property to a value, including an object reference.</span></span> <span data-ttu-id="640a4-109">Ele é chamado quando você atribui um valor à propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-109">It is called when you assign a value to the property.</span></span>  
   
- Você geralmente define procedimentos de propriedade em pares, usando o `Get` e `Set` as instruções, mas você pode definir um procedimento sozinho se a propriedade é somente leitura ([instrução Get](../../../../visual-basic/language-reference/statements/get-statement.md)) ou somente gravação ([instrução Set](../../../../visual-basic/language-reference/statements/set-statement.md)).  
+ <span data-ttu-id="640a4-110">Você geralmente define procedimentos de propriedade em pares, usando o `Get` e `Set` as instruções, mas você pode definir um procedimento sozinho se a propriedade é somente leitura ([instrução Get](../../../../visual-basic/language-reference/statements/get-statement.md)) ou somente gravação ([instrução Set](../../../../visual-basic/language-reference/statements/set-statement.md)).</span><span class="sxs-lookup"><span data-stu-id="640a4-110">You usually define property procedures in pairs, using the `Get` and `Set` statements, but you can define either procedure alone if the property is read-only ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) or write-only ([Set Statement](../../../../visual-basic/language-reference/statements/set-statement.md)).</span></span>  
   
- Você pode omitir o `Get` e `Set` procedimento ao usar uma propriedade implementada automaticamente. Para obter mais informações, consulte [Auto-Implemented propriedades](./auto-implemented-properties.md).  
+ <span data-ttu-id="640a4-111">Você pode omitir o `Get` e `Set` procedimento ao usar uma propriedade implementada automaticamente.</span><span class="sxs-lookup"><span data-stu-id="640a4-111">You can omit the `Get` and `Set` procedure when using an auto-implemented property.</span></span> <span data-ttu-id="640a4-112">Para obter mais informações, consulte [Auto-Implemented propriedades](./auto-implemented-properties.md).</span><span class="sxs-lookup"><span data-stu-id="640a4-112">For more information, see [Auto-Implemented Properties](./auto-implemented-properties.md).</span></span>  
   
- Você pode definir propriedades em classes, estruturas e módulos. As propriedades são `Public` por padrão, que significa que você pode chamá-las de qualquer lugar no seu aplicativo que possa acessar o recipiente da propriedade.  
+ <span data-ttu-id="640a4-113">Você pode definir propriedades em classes, estruturas e módulos.</span><span class="sxs-lookup"><span data-stu-id="640a4-113">You can define properties in classes, structures, and modules.</span></span> <span data-ttu-id="640a4-114">As propriedades são `Public` por padrão, que significa que você pode chamá-las de qualquer lugar no seu aplicativo que possa acessar o recipiente da propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-114">Properties are `Public` by default, which means you can call them from anywhere in your application that can access the property's container.</span></span>  
   
- Para obter uma comparação entre propriedades e variáveis, consulte [as diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md).  
+ <span data-ttu-id="640a4-115">Para obter uma comparação entre propriedades e variáveis, consulte [as diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md).</span><span class="sxs-lookup"><span data-stu-id="640a4-115">For a comparison of properties and variables, see [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md).</span></span>  
   
-## <a name="declaration-syntax"></a>Sintaxe da Declaração  
- A propriedade em si é definida por um bloco de código entre o [declaração de propriedade](../../../../visual-basic/language-reference/statements/property-statement.md) e `End Property` instrução. Dentro deste bloco, cada procedimento de propriedade aparece como um bloco interno envolto em uma instrução de declaração (`Get` ou `Set`) e a correspondência `End` declaração.  
+## <a name="declaration-syntax"></a><span data-ttu-id="640a4-116">Sintaxe da Declaração</span><span class="sxs-lookup"><span data-stu-id="640a4-116">Declaration Syntax</span></span>  
+ <span data-ttu-id="640a4-117">A propriedade em si é definida por um bloco de código entre o [declaração de propriedade](../../../../visual-basic/language-reference/statements/property-statement.md) e `End Property` instrução.</span><span class="sxs-lookup"><span data-stu-id="640a4-117">A property itself is defined by a block of code enclosed within the [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) and the `End Property` statement.</span></span> <span data-ttu-id="640a4-118">Dentro deste bloco, cada procedimento de propriedade aparece como um bloco interno envolto em uma instrução de declaração (`Get` ou `Set`) e a correspondência `End` declaração.</span><span class="sxs-lookup"><span data-stu-id="640a4-118">Inside this block, each property procedure appears as an internal block enclosed within a declaration statement (`Get` or `Set`) and the matching `End` declaration.</span></span>  
   
- A sintaxe para declarar uma propriedade e seus procedimentos é da seguinte maneira:  
+ <span data-ttu-id="640a4-119">A sintaxe para declarar uma propriedade e seus procedimentos é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="640a4-119">The syntax for declaring a property and its procedures is as follows:</span></span>  
   
 ```  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
@@ -85,60 +86,60 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- O `Modifiers` pode especificar o nível de acesso e informações sobre a sobrecarga, substituindo, compartilhando e sombreando, bem como se a propriedade é somente leitura ou somente gravação. O `AccessLevel` sobre o `Get` ou `Set` procedimento pode ser qualquer nível que seja mais restritivo do que o nível de acesso especificado para a propriedade em si. Para obter mais informações, consulte [declaração de propriedade](../../../../visual-basic/language-reference/statements/property-statement.md).  
+ <span data-ttu-id="640a4-120">O `Modifiers` pode especificar o nível de acesso e informações sobre a sobrecarga, substituindo, compartilhando e sombreando, bem como se a propriedade é somente leitura ou somente gravação.</span><span class="sxs-lookup"><span data-stu-id="640a4-120">The `Modifiers` can specify access level and information regarding overloading, overriding, sharing, and shadowing, as well as whether the property is read-only or write-only.</span></span> <span data-ttu-id="640a4-121">O `AccessLevel` sobre o `Get` ou `Set` procedimento pode ser qualquer nível que seja mais restritivo do que o nível de acesso especificado para a propriedade em si.</span><span class="sxs-lookup"><span data-stu-id="640a4-121">The `AccessLevel` on the `Get` or `Set` procedure can be any level that is more restrictive than the access level specified for the property itself.</span></span> <span data-ttu-id="640a4-122">Para obter mais informações, consulte [declaração de propriedade](../../../../visual-basic/language-reference/statements/property-statement.md).</span><span class="sxs-lookup"><span data-stu-id="640a4-122">For more information, see [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).</span></span>  
   
-### <a name="data-type"></a>Tipo de dados  
- Tipo de dados da propriedade e o nível de acesso principal são definidos no `Property` instrução, não nos procedimentos de propriedade. Uma propriedade pode ter apenas um tipo de dados. Por exemplo, você não pode definir uma propriedade para armazenar um `Decimal` valor, mas recuperar um `Double` valor.  
+### <a name="data-type"></a><span data-ttu-id="640a4-123">Tipo de dados</span><span class="sxs-lookup"><span data-stu-id="640a4-123">Data Type</span></span>  
+ <span data-ttu-id="640a4-124">Tipo de dados da propriedade e o nível de acesso principal são definidos no `Property` instrução, não nos procedimentos de propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-124">A property's data type and principal access level are defined in the `Property` statement, not in the property procedures.</span></span> <span data-ttu-id="640a4-125">Uma propriedade pode ter apenas um tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="640a4-125">A property can have only one data type.</span></span> <span data-ttu-id="640a4-126">Por exemplo, você não pode definir uma propriedade para armazenar um `Decimal` valor, mas recuperar um `Double` valor.</span><span class="sxs-lookup"><span data-stu-id="640a4-126">For example, you cannot define a property to store a `Decimal` value but retrieve a `Double` value.</span></span>  
   
-### <a name="access-level"></a>Nível de acesso  
- No entanto, você pode definir um nível de acesso principal para uma propriedade e restringir ainda mais o nível de acesso em um dos seus procedimentos de propriedade. Por exemplo, você pode definir um `Public` propriedade e, em seguida, defina uma `Private Set` procedimento. O `Get` procedimento permanece `Public`. Você pode alterar o nível de acesso em apenas um dos procedimentos da propriedade e só pode torná-lo mais restritivo do que o nível de acesso principal. Para obter mais informações, consulte [como: declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md).  
+### <a name="access-level"></a><span data-ttu-id="640a4-127">Nível de acesso</span><span class="sxs-lookup"><span data-stu-id="640a4-127">Access Level</span></span>  
+ <span data-ttu-id="640a4-128">No entanto, você pode definir um nível de acesso principal para uma propriedade e restringir ainda mais o nível de acesso em um dos seus procedimentos de propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-128">However, you can define a principal access level for a property and further restrict the access level in one of its property procedures.</span></span> <span data-ttu-id="640a4-129">Por exemplo, você pode definir um `Public` propriedade e, em seguida, defina uma `Private Set` procedimento.</span><span class="sxs-lookup"><span data-stu-id="640a4-129">For example, you can define a `Public` property and then define a `Private Set` procedure.</span></span> <span data-ttu-id="640a4-130">O `Get` procedimento permanece `Public`.</span><span class="sxs-lookup"><span data-stu-id="640a4-130">The `Get` procedure remains `Public`.</span></span> <span data-ttu-id="640a4-131">Você pode alterar o nível de acesso em apenas um dos procedimentos da propriedade e só pode torná-lo mais restritivo do que o nível de acesso principal.</span><span class="sxs-lookup"><span data-stu-id="640a4-131">You can change the access level in only one of a property's procedures, and you can only make it more restrictive than the principal access level.</span></span> <span data-ttu-id="640a4-132">Para obter mais informações, consulte [como: declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md).</span><span class="sxs-lookup"><span data-stu-id="640a4-132">For more information, see [How to: Declare a Property with Mixed Access Levels](./how-to-declare-a-property-with-mixed-access-levels.md).</span></span>  
   
-## <a name="parameter-declaration"></a>Declaração de parâmetro  
- Você declara cada parâmetro da mesma maneira que faria para [subprocedimentos](./sub-procedures.md), exceto que o mecanismo de passagem deve ser `ByVal`.  
+## <a name="parameter-declaration"></a><span data-ttu-id="640a4-133">Declaração de parâmetro</span><span class="sxs-lookup"><span data-stu-id="640a4-133">Parameter Declaration</span></span>  
+ <span data-ttu-id="640a4-134">Você declara cada parâmetro da mesma maneira que faria para [subprocedimentos](./sub-procedures.md), exceto que o mecanismo de passagem deve ser `ByVal`.</span><span class="sxs-lookup"><span data-stu-id="640a4-134">You declare each parameter the same way you do for [Sub Procedures](./sub-procedures.md), except that the passing mechanism must be `ByVal`.</span></span>  
   
- A sintaxe para cada parâmetro na lista de parâmetros é da seguinte maneira:  
+ <span data-ttu-id="640a4-135">A sintaxe para cada parâmetro na lista de parâmetros é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="640a4-135">The syntax for each parameter in the parameter list is as follows:</span></span>  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- Se o parâmetro é opcional, você também deve fornecer um valor padrão como parte de sua declaração. A sintaxe para especificar um valor padrão é da seguinte maneira:  
+ <span data-ttu-id="640a4-136">Se o parâmetro é opcional, você também deve fornecer um valor padrão como parte de sua declaração.</span><span class="sxs-lookup"><span data-stu-id="640a4-136">If the parameter is optional, you must also supply a default value as part of its declaration.</span></span> <span data-ttu-id="640a4-137">A sintaxe para especificar um valor padrão é da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="640a4-137">The syntax for specifying a default value is as follows:</span></span>  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
-## <a name="property-value"></a>Valor de propriedade  
- Em uma `Get` procedimento, o valor de retorno é fornecido para a expressão de chamada como o valor da propriedade.  
+## <a name="property-value"></a><span data-ttu-id="640a4-138">Valor de propriedade</span><span class="sxs-lookup"><span data-stu-id="640a4-138">Property Value</span></span>  
+ <span data-ttu-id="640a4-139">Em uma `Get` procedimento, o valor de retorno é fornecido para a expressão de chamada como o valor da propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-139">In a `Get` procedure, the return value is supplied to the calling expression as the value of the property.</span></span>  
   
- Em um `Set` procedimento, o novo valor da propriedade é passado para o parâmetro de `Set` instrução. Se você declarar explicitamente um parâmetro, você deve declará-la com o mesmo tipo de dados da propriedade. Se você não declarar um parâmetro, o compilador usa o parâmetro implícito `Value` para representar o novo valor a ser atribuído à propriedade.  
+ <span data-ttu-id="640a4-140">Em um `Set` procedimento, o novo valor da propriedade é passado para o parâmetro de `Set` instrução.</span><span class="sxs-lookup"><span data-stu-id="640a4-140">In a `Set` procedure, the new property value is passed to the parameter of the `Set` statement.</span></span> <span data-ttu-id="640a4-141">Se você declarar explicitamente um parâmetro, você deve declará-la com o mesmo tipo de dados da propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-141">If you explicitly declare a parameter, you must declare it with the same data type as the property.</span></span> <span data-ttu-id="640a4-142">Se você não declarar um parâmetro, o compilador usa o parâmetro implícito `Value` para representar o novo valor a ser atribuído à propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-142">If you do not declare a parameter, the compiler uses the implicit parameter `Value` to represent the new value to be assigned to the property.</span></span>  
   
-## <a name="calling-syntax"></a>Sintaxe de chamada  
- Você chamar um procedimento de propriedade implicitamente fazendo referência à propriedade. Use o nome da propriedade da mesma maneira que você usaria o nome de uma variável, exceto que você deve fornecer valores para todos os argumentos que não são opcionais, e você deve colocar a lista de argumentos entre parênteses. Se não for fornecido nenhum argumento, opcionalmente, você pode omitir os parênteses.  
+## <a name="calling-syntax"></a><span data-ttu-id="640a4-143">Sintaxe de chamada</span><span class="sxs-lookup"><span data-stu-id="640a4-143">Calling Syntax</span></span>  
+ <span data-ttu-id="640a4-144">Você chamar um procedimento de propriedade implicitamente fazendo referência à propriedade.</span><span class="sxs-lookup"><span data-stu-id="640a4-144">You invoke a property procedure implicitly by making reference to the property.</span></span> <span data-ttu-id="640a4-145">Use o nome da propriedade da mesma maneira que você usaria o nome de uma variável, exceto que você deve fornecer valores para todos os argumentos que não são opcionais, e você deve colocar a lista de argumentos entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="640a4-145">You use the name of the property the same way you would use the name of a variable, except that you must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses.</span></span> <span data-ttu-id="640a4-146">Se não for fornecido nenhum argumento, opcionalmente, você pode omitir os parênteses.</span><span class="sxs-lookup"><span data-stu-id="640a4-146">If no arguments are supplied, you can optionally omit the parentheses.</span></span>  
   
- A sintaxe para uma chamada implícita para um `Set` procedimento é o seguinte:  
+ <span data-ttu-id="640a4-147">A sintaxe para uma chamada implícita para um `Set` procedimento é o seguinte:</span><span class="sxs-lookup"><span data-stu-id="640a4-147">The syntax for an implicit call to a `Set` procedure is as follows:</span></span>  
   
  `propertyname[(argumentlist)] = expression`  
   
- A sintaxe para uma chamada implícita para um `Get` procedimento é o seguinte:  
+ <span data-ttu-id="640a4-148">A sintaxe para uma chamada implícita para um `Get` procedimento é o seguinte:</span><span class="sxs-lookup"><span data-stu-id="640a4-148">The syntax for an implicit call to a `Get` procedure is as follows:</span></span>  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
-### <a name="illustration-of-declaration-and-call"></a>Ilustração da declaração e chamada  
- A propriedade a seguir armazena um nome completo como dois nomes constituintes, o primeiro nome e o sobrenome. Quando o código de chamada lê `fullName`, o `Get` procedimento combina as duas partes e retorna o nome completo. Quando o código de chamada atribui um novo nome completo, o `Set` procedimento tenta dividi-lo em duas partes. Se não encontrar um espaço, ele armazena como o nome.  
+### <a name="illustration-of-declaration-and-call"></a><span data-ttu-id="640a4-149">Ilustração da declaração e chamada</span><span class="sxs-lookup"><span data-stu-id="640a4-149">Illustration of Declaration and Call</span></span>  
+ <span data-ttu-id="640a4-150">A propriedade a seguir armazena um nome completo como dois nomes constituintes, o primeiro nome e o sobrenome.</span><span class="sxs-lookup"><span data-stu-id="640a4-150">The following property stores a full name as two constituent names, the first name and the last name.</span></span> <span data-ttu-id="640a4-151">Quando o código de chamada lê `fullName`, o `Get` procedimento combina as duas partes e retorna o nome completo.</span><span class="sxs-lookup"><span data-stu-id="640a4-151">When the calling code reads `fullName`, the `Get` procedure combines the two constituent names and returns the full name.</span></span> <span data-ttu-id="640a4-152">Quando o código de chamada atribui um novo nome completo, o `Set` procedimento tenta dividi-lo em duas partes.</span><span class="sxs-lookup"><span data-stu-id="640a4-152">When the calling code assigns a new full name, the `Set` procedure attempts to break it into two constituent names.</span></span> <span data-ttu-id="640a4-153">Se não encontrar um espaço, ele armazena como o nome.</span><span class="sxs-lookup"><span data-stu-id="640a4-153">If it does not find a space, it stores it all as the first name.</span></span>  
   
- [!code-vb[VbVbcnProcedures n º&8;](./codesnippet/VisualBasic/property-procedures_1.vb)]  
+ <span data-ttu-id="640a4-154">[!code-vb[VbVbcnProcedures n º&8;](./codesnippet/VisualBasic/property-procedures_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="640a4-154">[!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]</span></span>  
   
- O exemplo a seguir mostra chamadas típicas para os procedimentos de propriedade `fullName`.  
+ <span data-ttu-id="640a4-155">O exemplo a seguir mostra chamadas típicas para os procedimentos de propriedade `fullName`.</span><span class="sxs-lookup"><span data-stu-id="640a4-155">The following example shows typical calls to the property procedures of `fullName`.</span></span>  
   
- [!code-vb[VbVbcnProcedures n º&9;](./codesnippet/VisualBasic/property-procedures_2.vb)]  
+ <span data-ttu-id="640a4-156">[!code-vb[VbVbcnProcedures n º&9;](./codesnippet/VisualBasic/property-procedures_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="640a4-156">[!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Procedimentos](./index.md)   
- [Procedimentos de função](./function-procedures.md)   
- [Procedimentos de operador](./operator-procedures.md)   
- [Argumentos e parâmetros de procedimento](./procedure-parameters-and-arguments.md)   
- [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)   
- [Como: criar uma propriedade](./how-to-create-a-property.md)   
- [Como: chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)   
- [Como: declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)   
- [Como: inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)   
-Como obter um valor de uma propriedade (Visual Basic) [Como obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="640a4-157">Consulte também</span><span class="sxs-lookup"><span data-stu-id="640a4-157">See Also</span></span>  
+ <span data-ttu-id="640a4-158">[Procedimentos](./index.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-158">[Procedures](./index.md) </span></span>  
+<span data-ttu-id="640a4-159"> [Procedimentos de função](./function-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-159"> [Function Procedures](./function-procedures.md) </span></span>  
+<span data-ttu-id="640a4-160"> [Procedimentos de operador](./operator-procedures.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-160"> [Operator Procedures](./operator-procedures.md) </span></span>  
+<span data-ttu-id="640a4-161"> [Argumentos e parâmetros de procedimento](./procedure-parameters-and-arguments.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-161"> [Procedure Parameters and Arguments](./procedure-parameters-and-arguments.md) </span></span>  
+<span data-ttu-id="640a4-162"> [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-162"> [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md) </span></span>  
+<span data-ttu-id="640a4-163"> [Como: criar uma propriedade](./how-to-create-a-property.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-163"> [How to: Create a Property](./how-to-create-a-property.md) </span></span>  
+<span data-ttu-id="640a4-164"> [Como: chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-164"> [How to: Call a Property Procedure](./how-to-call-a-property-procedure.md) </span></span>  
+<span data-ttu-id="640a4-165"> [Como: declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-165"> [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md) </span></span>  
+<span data-ttu-id="640a4-166"> [Como: inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md) </span><span class="sxs-lookup"><span data-stu-id="640a4-166"> [How to: Put a Value in a Property](./how-to-put-a-value-in-a-property.md) </span></span>  
+<span data-ttu-id="640a4-167">Como obter um valor de uma propriedade (Visual Basic) [Como obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)</span><span class="sxs-lookup"><span data-stu-id="640a4-167"> [How to: Get a Value from a Property](./how-to-get-a-value-from-a-property.md)</span></span>

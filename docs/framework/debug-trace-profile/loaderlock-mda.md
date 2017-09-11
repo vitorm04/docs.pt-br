@@ -1,0 +1,75 @@
+---
+title: MDA loaderLock
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- deadlocks [.NET Framework]
+- LoaderLock MDA
+- MDAs (managed debugging assistants), loader locks
+- managed debugging assistants (MDAs), loader locks
+- operating system loader locks
+- loader locks
+- locks, threads
+ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
+caps.latest.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
+ms.contentlocale: pt-br
+ms.lasthandoff: 08/21/2017
+
+---
+# <a name="loaderlock-mda"></a><span data-ttu-id="65883-102">MDA loaderLock</span><span class="sxs-lookup"><span data-stu-id="65883-102">loaderLock MDA</span></span>
+<span data-ttu-id="65883-103">O MDA (Assistente de Depuração Gerenciado) de `loaderLock` detecta tentativas de executar código gerenciado em um thread que mantém o bloqueio do carregador do sistema operacional Microsoft Windows.</span><span class="sxs-lookup"><span data-stu-id="65883-103">The `loaderLock` managed debugging assistant (MDA) detects attempts to execute managed code on a thread that holds the Microsoft Windows operating system loader lock.</span></span>  <span data-ttu-id="65883-104">Qualquer execução desse tipo é inválida porque pode levar a deadlocks e ao uso de DLLs antes de elas terem sido inicializadas pelo carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="65883-104">Any such execution is illegal because it can lead to deadlocks and to use of DLLs before they have been initialized by the operating system's loader.</span></span>  
+  
+## <a name="symptoms"></a><span data-ttu-id="65883-105">Sintomas</span><span class="sxs-lookup"><span data-stu-id="65883-105">Symptoms</span></span>  
+ <span data-ttu-id="65883-106">A falha mais comum ao executar o código dentro do bloqueio do carregador do sistema operacional é que os threads enfrentarão deadlock ao tentar chamar outras funções do Win32 que também exijam o bloqueio do carregador.</span><span class="sxs-lookup"><span data-stu-id="65883-106">The most common failure when executing code inside the operating system's loader lock is that threads will deadlock when attempting to call other Win32 functions that also require the loader lock.</span></span>  <span data-ttu-id="65883-107">Exemplos dessas funções são `LoadLibrary`, `GetProcAddress`, `FreeLibrary` e `GetModuleHandle`.</span><span class="sxs-lookup"><span data-stu-id="65883-107">Examples of such functions are `LoadLibrary`, `GetProcAddress`, `FreeLibrary`, and `GetModuleHandle`.</span></span>  <span data-ttu-id="65883-108">O aplicativo não pode chamar diretamente essas funções; o CLR (Common Language Runtime) pode chamar essas funções como resultado de uma chamada de nível superior como <xref:System.Reflection.Assembly.Load%2A> ou a primeira chamada para uma plataforma de invocação de método.</span><span class="sxs-lookup"><span data-stu-id="65883-108">The application might not directly call these functions; the common language runtime (CLR) might call these functions as the result of a higher level call like <xref:System.Reflection.Assembly.Load%2A> or the first call to a platform invoke method.</span></span>  
+  
+ <span data-ttu-id="65883-109">Os deadlocks também podem ocorrer se um thread está aguardando o início ou término de outro thread.</span><span class="sxs-lookup"><span data-stu-id="65883-109">Deadlocks can also occur if a thread is waiting for another thread to start or finish.</span></span>  <span data-ttu-id="65883-110">Quando a execução de um thread é iniciada ou concluída, ele deve adquirir o bloqueio do carregador do sistema operacional para enviar eventos para as DLLs afetadas.</span><span class="sxs-lookup"><span data-stu-id="65883-110">When a thread starts or finishes executing, it must acquire the operating system's loader lock to deliver events to affected DLLs.</span></span>  
+  
+ <span data-ttu-id="65883-111">Por fim, há casos em que chamadas para DLLs podem ocorrer antes que essas DLLs tenham sido corretamente inicializadas pelo carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="65883-111">Finally, there are cases where calls into DLLs can occur before those DLLs have been properly initialized by the operating system's loader.</span></span>  <span data-ttu-id="65883-112">Ao contrário das falhas de deadlock, que podem ser diagnosticadas examinando as pilhas de todos os threads envolvidos no deadlock, é muito difícil diagnosticar o uso de DLLs não inicializadas sem usar esse MDA.</span><span class="sxs-lookup"><span data-stu-id="65883-112">Unlike the deadlock failures, which can be diagnosed by examining the stacks of all the threads involved in the deadlock, it is very difficult to diagnose the use of uninitialized DLLs without using this MDA.</span></span>  
+  
+## <a name="cause"></a><span data-ttu-id="65883-113">Causa</span><span class="sxs-lookup"><span data-stu-id="65883-113">Cause</span></span>  
+ <span data-ttu-id="65883-114">Assemblies C++ mistos gerenciados/não gerenciados criados para versões do .NET Framework 1.0 ou 1.1 geralmente tentam executar código gerenciado dentro do bloqueio do carregador, a menos que cuidado especial tenha sido tomado, por exemplo, vinculando com **/NOENTRY**.</span><span class="sxs-lookup"><span data-stu-id="65883-114">Mixed managed/unmanaged C++ assemblies built for .NET Framework versions 1.0 or 1.1 generally attempt to execute managed code inside the loader lock unless special care has been taken, for example, linking with **/NOENTRY**.</span></span>  <span data-ttu-id="65883-115">Para obter uma descrição detalhada desses problemas, consulte "Problema no carregamento de DLL mista" na biblioteca MSDN.</span><span class="sxs-lookup"><span data-stu-id="65883-115">For a detailed description of these problems, see "Mixed DLL Loading Problem" in the MSDN Library.</span></span>  
+  
+ <span data-ttu-id="65883-116">Assemblies C++ mistos gerenciados/não gerenciados criados para o .NET Framework versão 2.0 são menos suscetíveis a esses problemas, tendo o mesmo risco reduzido que aplicativos usando DLLs não gerenciadas que violam as regras do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="65883-116">Mixed managed/unmanaged C++ assemblies built for .NET Framework version 2.0 are less susceptible to these problems, having the same reduced risk as applications using unmanaged DLLs that violate the operating system's rules.</span></span>  <span data-ttu-id="65883-117">Por exemplo, se o ponto de entrada `DllMain` de uma DLL não gerenciada chama `CoCreateInstance` para obter um objeto gerenciado que foi exposto a COM, o resultado é uma tentativa de executar código gerenciado dentro do bloqueio do carregador.</span><span class="sxs-lookup"><span data-stu-id="65883-117">For example, if an unmanaged DLL's `DllMain` entry point calls `CoCreateInstance` to obtain a managed object that has been exposed to COM, the result is an attempt to execute managed code inside the loader lock.</span></span> <span data-ttu-id="65883-118">Para obter mais informações sobre problemas de bloqueio do carregador do .NET Framework versão 2.0 e posteriores, consulte [Inicialização de assemblies mistos](/cpp/dotnet/initialization-of-mixed-assemblies).</span><span class="sxs-lookup"><span data-stu-id="65883-118">For more information about loader lock issues in the .NET Framework version 2.0 and later, see [Initialization of Mixed Assemblies](/cpp/dotnet/initialization-of-mixed-assemblies).</span></span>  
+  
+## <a name="resolution"></a><span data-ttu-id="65883-119">Resolução</span><span class="sxs-lookup"><span data-stu-id="65883-119">Resolution</span></span>  
+ <span data-ttu-id="65883-120">No Visual C++ .NET 2002 e Visual C++ .NET 2003, DLLs compiladas com a opção do compilador `/clr` podem enfrentar um deadlock de forma não determinística quando carregadas; esse problema foi chamado de problema de carregamento de DLLs mistas ou de bloqueio do carregador.</span><span class="sxs-lookup"><span data-stu-id="65883-120">In Visual C++ .NET 2002 and Visual C++ .NET 2003, DLLs compiled with the `/clr` compiler option could non-deterministically deadlock when loaded; this issue was called the mixed DLL loading or loader lock issue.</span></span> <span data-ttu-id="65883-121">No Visual C++ 2005 e posterior, quase todo o não determinismo foi removido do processo de carregamento de DLLs mistas.</span><span class="sxs-lookup"><span data-stu-id="65883-121">In Visual C++ 2005 and later, almost all non-determinism has been removed from the mixed DLL loading process.</span></span> <span data-ttu-id="65883-122">No entanto, existem alguns cenários restantes para os quais o bloqueio de carregador pode ocorrer (de forma determinística).</span><span class="sxs-lookup"><span data-stu-id="65883-122">However, there are a few remaining scenarios for which loader lock can (deterministically) occur.</span></span> <span data-ttu-id="65883-123">Para obter detalhes das causas e resoluções para os problemas de bloqueio do carregador restantes, consulte [Inicialização de assemblies mistos](/cpp/dotnet/initialization-of-mixed-assemblies).</span><span class="sxs-lookup"><span data-stu-id="65883-123">For a detailed account of the causes and resolutions for the remaining loader lock issues, see [Initialization of Mixed Assemblies](/cpp/dotnet/initialization-of-mixed-assemblies).</span></span> <span data-ttu-id="65883-124">Se esse tópico não identifica o seu problema de bloqueio do carregador, você precisa examinar a pilha do thread para determinar por que o bloqueio do carregador está ocorrendo e como corrigir o problema.</span><span class="sxs-lookup"><span data-stu-id="65883-124">If that topic does not identify your loader lock problem, you have to examine the thread's stack to determine why the loader lock is occurring and how to correct the problem.</span></span> <span data-ttu-id="65883-125">Examine o rastreamento de pilha do thread que ativou esse MDA.</span><span class="sxs-lookup"><span data-stu-id="65883-125">Look at the stack trace for the thread that has activated this MDA.</span></span>  <span data-ttu-id="65883-126">O thread está tentando ilegalmente chamar código gerenciado, mantendo o bloqueio do carregador do sistema operacional.</span><span class="sxs-lookup"><span data-stu-id="65883-126">The thread is attempting to illegally call into managed code while holding the operating system's loader lock.</span></span>  <span data-ttu-id="65883-127">Você provavelmente verá um `DllMain` da DLL ou um ponto de entrada equivalente na pilha.</span><span class="sxs-lookup"><span data-stu-id="65883-127">You will probably see a DLL's `DllMain` or equivalent entry point on the stack.</span></span>  <span data-ttu-id="65883-128">As regras do sistema operacional para o que você pode fazer legalmente de dentro de um ponto de entrada desse tipo são muito limitadas.</span><span class="sxs-lookup"><span data-stu-id="65883-128">The operating system's rules for what you can legally do from inside such an entry point are quite limited.</span></span>  <span data-ttu-id="65883-129">Essas regras impedem qualquer execução gerenciada.</span><span class="sxs-lookup"><span data-stu-id="65883-129">These rules preclude any managed execution.</span></span>  
+  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="65883-130">Efeito sobre o tempo de execução</span><span class="sxs-lookup"><span data-stu-id="65883-130">Effect on the Runtime</span></span>  
+ <span data-ttu-id="65883-131">Normalmente, vários threads dentro do processo enfrentarão deadlock.</span><span class="sxs-lookup"><span data-stu-id="65883-131">Typically, several threads inside the process will deadlock.</span></span>  <span data-ttu-id="65883-132">Um desses threads provavelmente será um thread responsável pela execução de uma coleta de lixo, portanto, esse deadlock poderá ter um impacto significativo em todo o processo.</span><span class="sxs-lookup"><span data-stu-id="65883-132">One of those threads is likely to be a thread responsible for performing a garbage collection, so this deadlock can have a major impact on the entire process.</span></span>  <span data-ttu-id="65883-133">Além disso, ele impedirá todas as operações adicionais que exijam o bloqueio do carregador do sistema operacional, tais como carregar e descarregar assemblies ou DLLs e iniciar ou interromper threads.</span><span class="sxs-lookup"><span data-stu-id="65883-133">Furthermore, it will prevent any additional operations that require the operating system's loader lock, like loading and unloading assemblies or DLLs and starting or stopping threads.</span></span>  
+  
+ <span data-ttu-id="65883-134">Em alguns casos incomuns, também é possível que violações de acesso ou problemas semelhantes sejam disparados em DLLs que são chamadas antes de terem inicializadas.</span><span class="sxs-lookup"><span data-stu-id="65883-134">In some unusual cases, it is also possible for access violations or similar problems to be triggered in DLLs which are called before they have been initialized.</span></span>  
+  
+## <a name="output"></a><span data-ttu-id="65883-135">Saída</span><span class="sxs-lookup"><span data-stu-id="65883-135">Output</span></span>  
+ <span data-ttu-id="65883-136">Esse MDA relata que uma execução gerenciada inválida está sendo tentada.</span><span class="sxs-lookup"><span data-stu-id="65883-136">This MDA reports that an illegal managed execution is being attempted.</span></span>  <span data-ttu-id="65883-137">Você deve examinar a pilha do thread para determinar por que o bloqueio do carregador está acontecendo e como corrigir o problema.</span><span class="sxs-lookup"><span data-stu-id="65883-137">You need to examine the thread's stack to determine why the loader lock is occurring and how to correct the problem.</span></span>  
+  
+## <a name="configuration"></a><span data-ttu-id="65883-138">Configuração</span><span class="sxs-lookup"><span data-stu-id="65883-138">Configuration</span></span>  
+  
+```xml  
+<mdaConfig>  
+  <assistants>  
+    <loaderLock/>  
+  </assistants>  
+</mdaConfig>  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="65883-139">Consulte também</span><span class="sxs-lookup"><span data-stu-id="65883-139">See Also</span></span>  
+ [<span data-ttu-id="65883-140">Diagnosticando erros com Assistentes de Depuração Gerenciados</span><span class="sxs-lookup"><span data-stu-id="65883-140">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

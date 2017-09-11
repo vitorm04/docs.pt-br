@@ -29,21 +29,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 067ad059dc87b9c4ff7751201c71b1b41ac3c7e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c1242c5328c92a390eddddb34fcef7827ce96ff9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="then-statement"></a>Instrução Then
-Apresenta um bloco de instruções a ser compilado ou executado se uma condição testada for verdadeira.  
+# <a name="then-statement"></a><span data-ttu-id="1195c-102">Instrução Then</span><span class="sxs-lookup"><span data-stu-id="1195c-102">Then Statement</span></span>
+<span data-ttu-id="1195c-103">Apresenta um bloco de instruções a ser compilado ou executado se uma condição testada for verdadeira.</span><span class="sxs-lookup"><span data-stu-id="1195c-103">Introduces a statement block to be compiled or executed if a tested condition is true.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `Then` palavra-chave pode ser usada nesses contextos:  
+## <a name="remarks"></a><span data-ttu-id="1195c-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="1195c-104">Remarks</span></span>  
+ <span data-ttu-id="1195c-105">O `Then` palavra-chave pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="1195c-105">The `Then` keyword can be used in these contexts:</span></span>  
   
- [#If... Then... #Else diretiva](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="1195c-106">#If... Then... #Else diretiva</span><span class="sxs-lookup"><span data-stu-id="1195c-106">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="1195c-107">Instrução If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="1195c-107">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="1195c-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1195c-108">See Also</span></span>  
+ [<span data-ttu-id="1195c-109">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="1195c-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

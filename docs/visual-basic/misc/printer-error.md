@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d989d73eee0438495a6649e5de52ee3c2bf0d4f6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 093afb70f56da552a9ef4be483ffa1f01794a161
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="printer-error"></a>Erro de impressora
-Ocorreu um erro na impressora, mas nenhuma outra informação foi retornada ao computador que enviou o arquivo.  
+# <a name="printer-error"></a><span data-ttu-id="03abc-102">Erro de impressora</span><span class="sxs-lookup"><span data-stu-id="03abc-102">Printer error</span></span>
+<span data-ttu-id="03abc-103">Ocorreu um erro na impressora, mas nenhuma outra informação foi retornada ao computador que enviou o arquivo.</span><span class="sxs-lookup"><span data-stu-id="03abc-103">An error occurred at the printer, but no other information was returned to the computer that sent the file.</span></span>  
   
-### <a name="to-correct-the-error"></a>Para corrigir o erro  
+### <a name="to-correct-the-error"></a><span data-ttu-id="03abc-104">Para corrigir o erro</span><span class="sxs-lookup"><span data-stu-id="03abc-104">To correct the error</span></span>  
   
--   Examine fisicamente a impressora. Verifique se que todas as conexões entre o computador e a impressora estão sólidas. A maioria das impressoras possui um mostrador para informações de erro como "Offline" ou "sem"papel.  
+-   <span data-ttu-id="03abc-105">Examine fisicamente a impressora.</span><span class="sxs-lookup"><span data-stu-id="03abc-105">Physically examine the printer.</span></span> <span data-ttu-id="03abc-106">Verifique se que todas as conexões entre o computador e a impressora estão sólidas.</span><span class="sxs-lookup"><span data-stu-id="03abc-106">Make sure all connections between the computer and the printer are solid.</span></span> <span data-ttu-id="03abc-107">A maioria das impressoras possui um mostrador para informações de erro como "Offline" ou "sem"papel.</span><span class="sxs-lookup"><span data-stu-id="03abc-107">Most printers provide a display for error information such as "Offline" or "Out of paper."</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="03abc-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="03abc-108">See Also</span></span>  
+ [<span data-ttu-id="03abc-109">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="03abc-109">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,1 +1,1 @@
-Estrutura de Anotações da Microsoft
+<span data-ttu-id="a042f-101">Estrutura de Anotações da Microsoft</span><span class="sxs-lookup"><span data-stu-id="a042f-101">Microsoft Annotations Framework</span></span>

@@ -32,30 +32,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 732291ce9c4b83bb9fc7e83fbbc2a8da9748db59
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 299cc4bec00a4597a661c5da49135fe3b5357537
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>O valor do tipo '&lt;typename1&gt;'não pode ser convertido em'&lt;typename2&gt;' (várias referências de arquivo)
-O valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'. Incompatibilidade de tipo pode ser devido à combinação de uma referência de arquivo para '\<filepath1 >' no projeto '\<projectname1 >' com uma referência de arquivo para '\<filepath2 >' no projeto '\<projectname2 >'. Se os dois assemblies forem idênticos, tente substituir essas referências para que ambas sejam do mesmo local.  
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a><span data-ttu-id="f042f-102">O valor do tipo '&lt;typename1&gt;'não pode ser convertido em'&lt;typename2&gt;' (várias referências de arquivo)</span><span class="sxs-lookup"><span data-stu-id="f042f-102">Value of type &#39;&lt;typename1&gt;&#39; cannot be converted to &#39;&lt;typename2&gt;&#39; (Multiple file references)</span></span>
+<span data-ttu-id="f042f-103">O valor do tipo '\<typename1 >' não pode ser convertido em '\<typename2 >'.</span><span class="sxs-lookup"><span data-stu-id="f042f-103">Value of type '\<typename1>' cannot be converted to '\<typename2>'.</span></span> <span data-ttu-id="f042f-104">Incompatibilidade de tipo pode ser devido à combinação de uma referência de arquivo para '\<filepath1 >' no projeto '\<projectname1 >' com uma referência de arquivo para '\<filepath2 >' no projeto '\<projectname2 >'.</span><span class="sxs-lookup"><span data-stu-id="f042f-104">Type mismatch could be due to mixing a file reference to '\<filepath1>' in project '\<projectname1>' with a file reference to '\<filepath2>' in project '\<projectname2>'.</span></span> <span data-ttu-id="f042f-105">Se os dois assemblies forem idênticos, tente substituir essas referências para que ambas sejam do mesmo local.</span><span class="sxs-lookup"><span data-stu-id="f042f-105">If both assemblies are identical, try replacing these references so both references are from the same location.</span></span>  
   
- Em uma situação na qual um projeto faz mais de uma referência de arquivo para um assembly, o compilador não pode garantir que um tipo pode ser convertido para outro.  
+ <span data-ttu-id="f042f-106">Em uma situação na qual um projeto faz mais de uma referência de arquivo para um assembly, o compilador não pode garantir que um tipo pode ser convertido para outro.</span><span class="sxs-lookup"><span data-stu-id="f042f-106">In a situation where a project makes more than one file reference to an assembly, the compiler cannot guarantee that one type can be converted to another.</span></span>  
   
- Cada referência do arquivo Especifica um caminho de arquivo e um nome para o arquivo de saída de um projeto (geralmente um arquivo DLL). O compilador não pode garantir que os arquivos de saída vêm da mesma origem, ou que eles representam a mesma versão do mesmo assembly. Portanto, ele não pode garantir que os tipos em referências diferentes são do mesmo tipo, ou que um deles pode ser convertido para outro.  
+ <span data-ttu-id="f042f-107">Cada referência do arquivo Especifica um caminho de arquivo e um nome para o arquivo de saída de um projeto (geralmente um arquivo DLL).</span><span class="sxs-lookup"><span data-stu-id="f042f-107">Each file reference specifies a file path and name for the output file of a project (typically a DLL file).</span></span> <span data-ttu-id="f042f-108">O compilador não pode garantir que os arquivos de saída vêm da mesma origem, ou que eles representam a mesma versão do mesmo assembly.</span><span class="sxs-lookup"><span data-stu-id="f042f-108">The compiler cannot guarantee that the output files come from the same source, or that they represent the same version of the same assembly.</span></span> <span data-ttu-id="f042f-109">Portanto, ele não pode garantir que os tipos em referências diferentes são do mesmo tipo, ou que um deles pode ser convertido para outro.</span><span class="sxs-lookup"><span data-stu-id="f042f-109">Therefore, it cannot guarantee that the types in the different references are the same type, or even that one can be converted to the other.</span></span>  
   
- Se você souber que os assemblies referenciados têm a mesma identidade de assembly, você pode usar uma referência de arquivo único. O *identidade do assembly* inclui nome, versão, chave pública, se houver e cultura do assembly. Essa informação identifica unicamente o assembly.  
+ <span data-ttu-id="f042f-110">Se você souber que os assemblies referenciados têm a mesma identidade de assembly, você pode usar uma referência de arquivo único.</span><span class="sxs-lookup"><span data-stu-id="f042f-110">You can use a single file reference if you know that the referenced assemblies have the same assembly identity.</span></span> <span data-ttu-id="f042f-111">O *identidade do assembly* inclui nome, versão, chave pública, se houver e cultura do assembly.</span><span class="sxs-lookup"><span data-stu-id="f042f-111">The *assembly identity* includes the assembly's name, version, public key if any, and culture.</span></span> <span data-ttu-id="f042f-112">Essa informação identifica unicamente o assembly.</span><span class="sxs-lookup"><span data-stu-id="f042f-112">This information uniquely identifies the assembly.</span></span>  
   
- **ID do erro:** BC30961  
+ <span data-ttu-id="f042f-113">**ID do erro:** BC30961</span><span class="sxs-lookup"><span data-stu-id="f042f-113">**Error ID:** BC30961</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f042f-114">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f042f-114">To correct this error</span></span>  
   
--   Se os assemblies referenciados têm a mesma identidade de assembly, remova ou substitua uma das referências de arquivo de forma que apenas uma referência de arquivo único.  
+-   <span data-ttu-id="f042f-115">Se os assemblies referenciados têm a mesma identidade de assembly, remova ou substitua uma das referências de arquivo de forma que apenas uma referência de arquivo único.</span><span class="sxs-lookup"><span data-stu-id="f042f-115">If the referenced assemblies have the same assembly identity, then remove or replace one of the file references so that there is only a single file reference.</span></span>  
   
--   Se os assemblies referenciados não têm a mesma identidade de assembly, altere seu código para que ele não tentará converter um tipo em um tipo em outro.  
+-   <span data-ttu-id="f042f-116">Se os assemblies referenciados não têm a mesma identidade de assembly, altere seu código para que ele não tentará converter um tipo em um tipo em outro.</span><span class="sxs-lookup"><span data-stu-id="f042f-116">If the referenced assemblies do not have the same assembly identity, then change your code so that it does not attempt to convert a type in one to a type in the other.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Gerenciando referências em um projeto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
- [NIB: como adicionar ou remover referências usando a caixa de diálogo Adicionar Referência](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+## <a name="see-also"></a><span data-ttu-id="f042f-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f042f-117">See Also</span></span>  
+ <span data-ttu-id="f042f-118">[Conversões de tipo no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="f042f-118">[Type Conversions in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md) </span></span>  
+<span data-ttu-id="f042f-119"> [Gerenciando referências em um projeto](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project) </span><span class="sxs-lookup"><span data-stu-id="f042f-119"> [Managing references in a project](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project) </span></span>  
+<span data-ttu-id="f042f-120"> [NIB: como adicionar ou remover referências usando a caixa de diálogo Adicionar Referência](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)</span><span class="sxs-lookup"><span data-stu-id="f042f-120"> [NIB How to: Add or Remove References By Using the Add Reference Dialog Box](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)</span></span>

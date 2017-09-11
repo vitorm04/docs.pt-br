@@ -36,22 +36,22 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="partial-method-c-reference"></a>partial (método) (Referência de C#)
-Um método parcial tem sua assinatura definida em uma parte de um tipo parcial e sua implementação definida em outra parte do tipo. Os métodos parciais permitem que os designers de classe forneçam ganchos de método, semelhantes a manipuladores de eventos, que os desenvolvedores podem decidir implementar ou não. Se o desenvolvedor não fornecer uma implementação, o compilador removerá a assinatura no tempo de compilação. As seguintes condições são aplicáveis a métodos parciais:  
+# <a name="partial-method-c-reference"></a><span data-ttu-id="b82aa-102">partial (método) (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="b82aa-102">partial (Method) (C# Reference)</span></span>
+<span data-ttu-id="b82aa-103">Um método parcial tem sua assinatura definida em uma parte de um tipo parcial e sua implementação definida em outra parte do tipo.</span><span class="sxs-lookup"><span data-stu-id="b82aa-103">A partial method has its signature defined in one part of a partial type, and its implementation defined in another part of the type.</span></span> <span data-ttu-id="b82aa-104">Os métodos parciais permitem que os designers de classe forneçam ganchos de método, semelhantes a manipuladores de eventos, que os desenvolvedores podem decidir implementar ou não.</span><span class="sxs-lookup"><span data-stu-id="b82aa-104">Partial methods enable class designers to provide method hooks, similar to event handlers, that developers may decide to implement or not.</span></span> <span data-ttu-id="b82aa-105">Se o desenvolvedor não fornecer uma implementação, o compilador removerá a assinatura no tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="b82aa-105">If the developer does not supply an implementation, the compiler removes the signature at compile time.</span></span> <span data-ttu-id="b82aa-106">As seguintes condições são aplicáveis a métodos parciais:</span><span class="sxs-lookup"><span data-stu-id="b82aa-106">The following conditions apply to partial methods:</span></span>  
   
--   As assinaturas em ambas as partes do tipo parcial devem ser correspondentes.  
+-   <span data-ttu-id="b82aa-107">As assinaturas em ambas as partes do tipo parcial devem ser correspondentes.</span><span class="sxs-lookup"><span data-stu-id="b82aa-107">Signatures in both parts of the partial type must match.</span></span>  
   
--   O método deve retornar nulo.  
+-   <span data-ttu-id="b82aa-108">O método deve retornar nulo.</span><span class="sxs-lookup"><span data-stu-id="b82aa-108">The method must return void.</span></span>  
   
--   Não é permitido nenhum modificador de acesso. Métodos parciais são implicitamente privados.  
+-   <span data-ttu-id="b82aa-109">Não é permitido nenhum modificador de acesso.</span><span class="sxs-lookup"><span data-stu-id="b82aa-109">No access modifiers are allowed.</span></span> <span data-ttu-id="b82aa-110">Métodos parciais são implicitamente privados.</span><span class="sxs-lookup"><span data-stu-id="b82aa-110">Partial methods are implicitly private.</span></span>  
   
- O exemplo a seguir mostra um método parcial definido em duas partes de uma classe parcial:  
+ <span data-ttu-id="b82aa-111">O exemplo a seguir mostra um método parcial definido em duas partes de uma classe parcial:</span><span class="sxs-lookup"><span data-stu-id="b82aa-111">The following example shows a partial method defined in two parts of a partial class:</span></span>  
   
- [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-method_1.cs)]  
+ <span data-ttu-id="b82aa-112">[!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-method_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="b82aa-112">[!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-method_1.cs)]</span></span>  
   
- Para obter mais informações, consulte [Classes e métodos parciais](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
+ <span data-ttu-id="b82aa-113">Para obter mais informações, consulte [Classes e métodos parciais](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span><span class="sxs-lookup"><span data-stu-id="b82aa-113">For more information, see [Partial Classes and Methods](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [(partial (tipo)](../../../csharp/language-reference/keywords/partial-type.md)
+## <a name="see-also"></a><span data-ttu-id="b82aa-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b82aa-114">See Also</span></span>  
+ <span data-ttu-id="b82aa-115">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="b82aa-115">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ [<span data-ttu-id="b82aa-116">(partial (tipo)</span><span class="sxs-lookup"><span data-stu-id="b82aa-116">partial (Type)</span></span>](../../../csharp/language-reference/keywords/partial-type.md)
 

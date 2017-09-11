@@ -20,25 +20,26 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d22aa3ee7001fb9bde7b81398959888074349cc8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f719affb54f0e0be13febdb695cce1ae86aee996
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="getting-started-linq-to-xml"></a>Guia de introdução (LINQ to XML)
-Os tópicos a seguir apresentam LINQ to XML.  
+# <a name="getting-started-linq-to-xml"></a><span data-ttu-id="4fc06-102">Guia de introdução (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="4fc06-102">Getting Started (LINQ to XML)</span></span>
+<span data-ttu-id="4fc06-103">Os tópicos a seguir apresentam LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="4fc06-103">The following topics introduce LINQ to XML.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="4fc06-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="4fc06-104">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="4fc06-105">Tópico</span><span class="sxs-lookup"><span data-stu-id="4fc06-105">Topic</span></span>|<span data-ttu-id="4fc06-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="4fc06-106">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ para visão geral XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-overview.md)|Fornece uma visão geral do LINQ to tecnologia XML.|  
-|[LINQ to XML versus DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|Compara o LINQ to XML para o Document Object Model (DOM).|  
-|[LINQ to XML versus Outras Tecnologias XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|Compara o LINQ to XML com outras tecnologias de análise e manipulação XML: XmlReader, XSLT, MSXML e XmlLite.|  
+|[<span data-ttu-id="4fc06-107">LINQ para visão geral XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4fc06-107">LINQ to XML Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-overview.md)|<span data-ttu-id="4fc06-108">Fornece uma visão geral do LINQ to tecnologia XML.</span><span class="sxs-lookup"><span data-stu-id="4fc06-108">Provides an overview of the LINQ to XML technology.</span></span>|  
+|[<span data-ttu-id="4fc06-109">LINQ to XML versus DOM (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4fc06-109">LINQ to XML vs. DOM (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|<span data-ttu-id="4fc06-110">Compara o LINQ to XML para o Document Object Model (DOM).</span><span class="sxs-lookup"><span data-stu-id="4fc06-110">Compares LINQ to XML to the Document Object Model (DOM).</span></span>|  
+|[<span data-ttu-id="4fc06-111">LINQ to XML versus Outras Tecnologias XML</span><span class="sxs-lookup"><span data-stu-id="4fc06-111">LINQ to XML vs. Other XML Technologies</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|<span data-ttu-id="4fc06-112">Compara o LINQ to XML com outras tecnologias de análise e manipulação XML: XmlReader, XSLT, MSXML e XmlLite.</span><span class="sxs-lookup"><span data-stu-id="4fc06-112">Compares LINQ to XML to other XML parsing and manipulation technologies: XmlReader, XSLT, MSXML, and XmlLite.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)   
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)   
- [Visão geral de LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="4fc06-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4fc06-113">See Also</span></span>  
+ <span data-ttu-id="4fc06-114">[Referência (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="4fc06-114">[Reference (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md) </span></span>  
+<span data-ttu-id="4fc06-115"> [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="4fc06-115"> [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) </span></span>  
+<span data-ttu-id="4fc06-116"> [Visão geral de LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="4fc06-116"> [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md) </span></span>  
+<span data-ttu-id="4fc06-117"> [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)</span><span class="sxs-lookup"><span data-stu-id="4fc06-117"> [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)</span></span>

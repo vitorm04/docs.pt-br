@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cc146caf49e714fd58edfbe3bb267a532dc13f98
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4dc36d182e036c1c7fb7873a33436ec594f1bc2c
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="derived-classes-cannot-raise-base-class-events"></a>As classes derivadas não podem acionar eventos de classe base
-Um evento pode ser gerado apenas do espaço de declaração na qual ela é declarada. Portanto, uma classe não pode disparar eventos de qualquer outra classe, até mesmo uma da qual ela é derivada.  
+# <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="ec975-102">As classes derivadas não podem acionar eventos de classe base</span><span class="sxs-lookup"><span data-stu-id="ec975-102">Derived classes cannot raise base class events</span></span>
+<span data-ttu-id="ec975-103">Um evento pode ser gerado apenas do espaço de declaração na qual ela é declarada.</span><span class="sxs-lookup"><span data-stu-id="ec975-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="ec975-104">Portanto, uma classe não pode disparar eventos de qualquer outra classe, até mesmo uma da qual ela é derivada.</span><span class="sxs-lookup"><span data-stu-id="ec975-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  
   
- **ID do erro:** BC30029  
+ <span data-ttu-id="ec975-105">**ID do erro:** BC30029</span><span class="sxs-lookup"><span data-stu-id="ec975-105">**Error ID:** BC30029</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ec975-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="ec975-106">To correct this error</span></span>  
   
--   Mova o `Event` instrução ou o `RaiseEvent` instrução para que estejam na mesma classe.  
+-   <span data-ttu-id="ec975-107">Mova o `Event` instrução ou o `RaiseEvent` instrução para que estejam na mesma classe.</span><span class="sxs-lookup"><span data-stu-id="ec975-107">Move the `Event` statement or the `RaiseEvent` statement so they are in the same class.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Instrução RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ec975-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ec975-108">See Also</span></span>  
+ <span data-ttu-id="ec975-109">[Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md) </span><span class="sxs-lookup"><span data-stu-id="ec975-109">[Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) </span></span>  
+<span data-ttu-id="ec975-110"> [Instrução RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)</span><span class="sxs-lookup"><span data-stu-id="ec975-110"> [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md)</span></span>

@@ -32,16 +32,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a7faf0eb36fee114d5fed914484c7c5cda0ae399
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 09717206d102bac91a731303bf2b7c04c8314378
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Como chamar um método de extensão (Visual Basic)
-Métodos de extensão permitem adicionar métodos a uma classe existente. Depois que um método de extensão é declarado e colocado no escopo, você pode chamá-lo como um método de instância do tipo que ele estende. Para obter mais informações sobre como escrever um método de extensão, consulte [como: gravar um método de extensão](./how-to-write-an-extension-method.md).  
+# <a name="how-to-call-an-extension-method-visual-basic"></a><span data-ttu-id="f5a82-102">Como chamar um método de extensão (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5a82-102">How to: Call an Extension Method (Visual Basic)</span></span>
+<span data-ttu-id="f5a82-103">Métodos de extensão permitem adicionar métodos a uma classe existente.</span><span class="sxs-lookup"><span data-stu-id="f5a82-103">Extension methods enable you to add methods to an existing class.</span></span> <span data-ttu-id="f5a82-104">Depois que um método de extensão é declarado e colocado no escopo, você pode chamá-lo como um método de instância do tipo que ele estende.</span><span class="sxs-lookup"><span data-stu-id="f5a82-104">After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends.</span></span> <span data-ttu-id="f5a82-105">Para obter mais informações sobre como escrever um método de extensão, consulte [como: gravar um método de extensão](./how-to-write-an-extension-method.md).</span><span class="sxs-lookup"><span data-stu-id="f5a82-105">For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).</span></span>  
   
- Consultem as instruções a seguir para o método de extensão `PrintAndPunctuate`, que exibirá a instância de cadeia de caracteres que o chama, seguido por qualquer valor que será enviada para o segundo parâmetro, `punc`.  
+ <span data-ttu-id="f5a82-106">Consultem as instruções a seguir para o método de extensão `PrintAndPunctuate`, que exibirá a instância de cadeia de caracteres que o chama, seguido por qualquer valor que será enviada para o segundo parâmetro, `punc`.</span><span class="sxs-lookup"><span data-stu-id="f5a82-106">The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -56,40 +56,40 @@ Module StringExtensions
 End Module  
 ```  
   
- O método deve estar no escopo quando ele é chamado.  
+ <span data-ttu-id="f5a82-107">O método deve estar no escopo quando ele é chamado.</span><span class="sxs-lookup"><span data-stu-id="f5a82-107">The method must be in scope when it is called.</span></span>  
   
-### <a name="to-call-an-extension-method"></a>Para chamar um método de extensão  
+### <a name="to-call-an-extension-method"></a><span data-ttu-id="f5a82-108">Para chamar um método de extensão</span><span class="sxs-lookup"><span data-stu-id="f5a82-108">To call an extension method</span></span>  
   
-1.  Declare uma variável que tem o tipo de dados do primeiro parâmetro do método de extensão. Para `PrintAndPunctuate`, é necessário um <xref:System.String>variável:</xref:System.String>  
+1.  <span data-ttu-id="f5a82-109">Declare uma variável que tem o tipo de dados do primeiro parâmetro do método de extensão.</span><span class="sxs-lookup"><span data-stu-id="f5a82-109">Declare a variable that has the data type of the first parameter of the extension method.</span></span> <span data-ttu-id="f5a82-110">Para `PrintAndPunctuate`, é necessário um <xref:System.String>variável:</xref:System.String></span><span class="sxs-lookup"><span data-stu-id="f5a82-110">For `PrintAndPunctuate`, you need a <xref:System.String> variable:</span></span>  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Que variável invocará o método de extensão e seu valor é associado ao primeiro parâmetro, `aString`. Será exibida a seguinte instrução de chamada `Ready?`.  
+2.  <span data-ttu-id="f5a82-111">Que variável invocará o método de extensão e seu valor é associado ao primeiro parâmetro, `aString`.</span><span class="sxs-lookup"><span data-stu-id="f5a82-111">That variable will invoke the extension method, and its value is bound to the first parameter, `aString`.</span></span> <span data-ttu-id="f5a82-112">Será exibida a seguinte instrução de chamada `Ready?`.</span><span class="sxs-lookup"><span data-stu-id="f5a82-112">The following calling statement will display `Ready?`.</span></span>  
   
     ```  
     example.PrintAndPunctuate("?")  
     ```  
   
-     Observe que a chamada para esse método de extensão é apenas uma chamada para qualquer um dos, como o <xref:System.String>métodos que exigem um parâmetro da instância:</xref:System.String>  
+     <span data-ttu-id="f5a82-113">Observe que a chamada para esse método de extensão é apenas uma chamada para qualquer um dos, como o <xref:System.String>métodos que exigem um parâmetro da instância:</xref:System.String></span><span class="sxs-lookup"><span data-stu-id="f5a82-113">Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:</span></span>  
   
     ```  
     example.EndsWith("dy")  
     example.IndexOf("R")  
     ```  
   
-3.  Declarar outra variável string e chame o método novamente para ver se ele funciona com qualquer cadeia de caracteres.  
+3.  <span data-ttu-id="f5a82-114">Declarar outra variável string e chame o método novamente para ver se ele funciona com qualquer cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="f5a82-114">Declare another string variable and call the method again to see that it works with any string.</span></span>  
   
     ```  
     Dim example2 = " or not"  
     example2.PrintAndPunctuate("!!!")  
     ```  
   
-     Dessa vez, o resultado é: `or not!!!`.  
+     <span data-ttu-id="f5a82-115">Dessa vez, o resultado é: `or not!!!`.</span><span class="sxs-lookup"><span data-stu-id="f5a82-115">The result this time is: `or not!!!`.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O código a seguir é um exemplo completo da criação e uso de um método de extensão simples.  
+## <a name="example"></a><span data-ttu-id="f5a82-116">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f5a82-116">Example</span></span>  
+ <span data-ttu-id="f5a82-117">O código a seguir é um exemplo completo da criação e uso de um método de extensão simples.</span><span class="sxs-lookup"><span data-stu-id="f5a82-117">The following code is a complete example of the creation and use of a simple extension method.</span></span>  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -120,8 +120,8 @@ End Module
 ' Goodbye?  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Como: gravar um método de extensão](./how-to-write-an-extension-method.md)   
- [Métodos de extensão](./extension-methods.md)   
- [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a><span data-ttu-id="f5a82-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f5a82-118">See Also</span></span>  
+ <span data-ttu-id="f5a82-119">[Como: gravar um método de extensão](./how-to-write-an-extension-method.md) </span><span class="sxs-lookup"><span data-stu-id="f5a82-119">[How to: Write an Extension Method](./how-to-write-an-extension-method.md) </span></span>  
+<span data-ttu-id="f5a82-120"> [Métodos de extensão](./extension-methods.md) </span><span class="sxs-lookup"><span data-stu-id="f5a82-120"> [Extension Methods](./extension-methods.md) </span></span>  
+<span data-ttu-id="f5a82-121"> [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)</span><span class="sxs-lookup"><span data-stu-id="f5a82-121"> [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)</span></span>
 

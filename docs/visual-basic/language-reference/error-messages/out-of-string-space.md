@@ -29,21 +29,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e8b43794b2ef04aa4f5b9a4efcfa92484f82bf6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ff9b57a47dce1733f7a1994f1ae45d808d471fde
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="out-of-string-space-visual-basic"></a>Fora do espaço da cadeia de caracteres (Visual Basic)
-Com o Visual Basic, você pode usar cadeias de caracteres muito grandes. No entanto, os requisitos de outros programas e a maneira de trabalhar com suas cadeias de caracteres ainda podem causar esse erro.  
+# <a name="out-of-string-space-visual-basic"></a><span data-ttu-id="17320-102">Fora do espaço da cadeia de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="17320-102">Out of string space (Visual Basic)</span></span>
+<span data-ttu-id="17320-103">Com o Visual Basic, você pode usar cadeias de caracteres muito grandes.</span><span class="sxs-lookup"><span data-stu-id="17320-103">With Visual Basic, you can use very large strings.</span></span> <span data-ttu-id="17320-104">No entanto, os requisitos de outros programas e a maneira de trabalhar com suas cadeias de caracteres ainda podem causar esse erro.</span><span class="sxs-lookup"><span data-stu-id="17320-104">However, the requirements of other programs and the way you work with your strings can still cause this error.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="17320-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="17320-105">To correct this error</span></span>  
   
-1.  Certifique-se de que uma expressão que requer a criação temporária de cadeia de caracteres durante a avaliação não está causando o erro.  
+1.  <span data-ttu-id="17320-106">Certifique-se de que uma expressão que requer a criação temporária de cadeia de caracteres durante a avaliação não está causando o erro.</span><span class="sxs-lookup"><span data-stu-id="17320-106">Make sure that an expression requiring temporary string creation during evaluation is not causing the error.</span></span>  
   
-2.  Remova todos os aplicativos desnecessários da memória para criar mais espaço.  
+2.  <span data-ttu-id="17320-107">Remova todos os aplicativos desnecessários da memória para criar mais espaço.</span><span class="sxs-lookup"><span data-stu-id="17320-107">Remove any unnecessary applications from memory to create more space.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)   
- [Resumo de Manipulação da Cadeia de Caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a><span data-ttu-id="17320-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="17320-108">See Also</span></span>  
+ <span data-ttu-id="17320-109">[Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="17320-109">[Error Types](../../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="17320-110"> [Resumo de Manipulação da Cadeia de Caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)</span><span class="sxs-lookup"><span data-stu-id="17320-110"> [String Manipulation Summary](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)</span></span>

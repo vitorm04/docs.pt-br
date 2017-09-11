@@ -1,1 +1,1 @@
-ISS (Serviços de Informações da Internet da Microsoft) 6.0
+<span data-ttu-id="01677-101">ISS (Serviços de Informações da Internet da Microsoft) 6.0</span><span class="sxs-lookup"><span data-stu-id="01677-101">Microsoft Internet Information Services (IIS) 6.0</span></span>

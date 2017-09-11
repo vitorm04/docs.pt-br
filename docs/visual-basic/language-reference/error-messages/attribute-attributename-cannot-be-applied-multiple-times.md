@@ -31,28 +31,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 42d854393af2eecd0a624c7937a00b6912c898ac
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 10e6bf6d8412a9f73138d5fce7b0e4735c5b6ddf
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a>Atributo '&lt;attributename&gt;' não pode ser aplicado várias vezes
-O atributo só pode ser aplicado uma vez. O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.  
+# <a name="attribute-39ltattributenamegt39-cannot-be-applied-multiple-times"></a><span data-ttu-id="19418-102">Atributo '&lt;attributename&gt;' não pode ser aplicado várias vezes</span><span class="sxs-lookup"><span data-stu-id="19418-102">Attribute &#39;&lt;attributename&gt;&#39; cannot be applied multiple times</span></span>
+<span data-ttu-id="19418-103">O atributo só pode ser aplicado uma vez.</span><span class="sxs-lookup"><span data-stu-id="19418-103">The attribute can only be applied once.</span></span> <span data-ttu-id="19418-104">O `AttributeUsage` atributo determina se um atributo pode ser aplicado mais de uma vez.</span><span class="sxs-lookup"><span data-stu-id="19418-104">The `AttributeUsage` attribute determines whether an attribute can be applied more than once.</span></span>  
   
- **ID do erro:** BC30663  
+ <span data-ttu-id="19418-105">**ID do erro:** BC30663</span><span class="sxs-lookup"><span data-stu-id="19418-105">**Error ID:** BC30663</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="19418-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="19418-106">To correct this error</span></span>  
   
-1.  Verifique se que o atributo é aplicado somente uma vez.  
+1.  <span data-ttu-id="19418-107">Verifique se que o atributo é aplicado somente uma vez.</span><span class="sxs-lookup"><span data-stu-id="19418-107">Make sure the attribute is only applied once.</span></span>  
   
-2.  Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, como ocorre com o exemplo a seguir.  
+2.  <span data-ttu-id="19418-108">Se você estiver usando atributos personalizados que você desenvolveu, considere alterar seus `AttributeUsage` atributo para permitir que vários usos de atributo, como ocorre com o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="19418-108">If you are using custom attributes you developed, consider changing their `AttributeUsage` attribute to allow multiple attribute usage, as with the following example.</span></span>  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.AttributeUsageAttribute></xref:System.AttributeUsageAttribute>   
- [Criando atributos personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)
+## <a name="see-also"></a><span data-ttu-id="19418-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="19418-109">See Also</span></span>  
+ <span data-ttu-id="19418-110"><xref:System.AttributeUsageAttribute></xref:System.AttributeUsageAttribute></span><span class="sxs-lookup"><span data-stu-id="19418-110"><xref:System.AttributeUsageAttribute></span></span>   
+<span data-ttu-id="19418-111"> [Criando atributos personalizados](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) </span><span class="sxs-lookup"><span data-stu-id="19418-111"> [Creating Custom Attributes](../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) </span></span>  
+<span data-ttu-id="19418-112"> [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)</span><span class="sxs-lookup"><span data-stu-id="19418-112"> [AttributeUsage](../../../visual-basic/programming-guide/concepts/attributes/attributeusage.md)</span></span>

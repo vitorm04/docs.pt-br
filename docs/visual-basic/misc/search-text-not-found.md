@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b41c8768f1d43e84b7466ea1c822e8219e07af5d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5311cec5f1ca81a637e8c19436da91c5e5253e26
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="search-text-not-found"></a>Texto de pesquisa não encontrado
-O texto especificado não foi encontrado.  
+# <a name="search-text-not-found"></a><span data-ttu-id="0dbab-102">Texto de pesquisa não encontrado</span><span class="sxs-lookup"><span data-stu-id="0dbab-102">Search text not found</span></span>
+<span data-ttu-id="0dbab-103">O texto especificado não foi encontrado.</span><span class="sxs-lookup"><span data-stu-id="0dbab-103">The text you specified was not found.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0dbab-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0dbab-104">To correct this error</span></span>  
   
-1.  Verifique se o texto especificado está escrito corretamente.  
+1.  <span data-ttu-id="0dbab-105">Verifique se o texto especificado está escrito corretamente.</span><span class="sxs-lookup"><span data-stu-id="0dbab-105">Check that the specified text is spelled correctly.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Como: Pesquisar interativamente](http://msdn.microsoft.com/en-us/e9fdbfab-bd59-401a-92d3-7ce1652b243c)
+## <a name="see-also"></a><span data-ttu-id="0dbab-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0dbab-106">See Also</span></span>  
+ [<span data-ttu-id="0dbab-107">Como: Pesquisar interativamente</span><span class="sxs-lookup"><span data-stu-id="0dbab-107">How to: Search Interactively</span></span>](http://msdn.microsoft.com/en-us/e9fdbfab-bd59-401a-92d3-7ce1652b243c)

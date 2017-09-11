@@ -26,22 +26,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 54a28dcdb83100beaf9384b1030c99abc2d524e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3964a2a607ae6709545cd97610c2133beb7280d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a>Campo '&lt;fieldname&gt;'do tipo'&lt;typename&gt;' é 'ReadOnly'
-Você tentou gravar em um campo que é declarado `ReadOnly`.  
+# <a name="field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-39readonly39"></a><span data-ttu-id="0d1d2-102">Campo '&lt;fieldname&gt;'do tipo'&lt;typename&gt;' é 'ReadOnly'</span><span class="sxs-lookup"><span data-stu-id="0d1d2-102">Field &#39;&lt;fieldname&gt;&#39; of type &#39;&lt;typename&gt;&#39; is &#39;ReadOnly&#39;</span></span>
+<span data-ttu-id="0d1d2-103">Você tentou gravar em um campo que é declarado `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="0d1d2-103">You attempted to write to a field that is declared `ReadOnly`.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0d1d2-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0d1d2-104">To correct this error</span></span>  
   
--   Altere o campo para que ele não está declarado `ReadOnly`.  
+-   <span data-ttu-id="0d1d2-105">Altere o campo para que ele não está declarado `ReadOnly`.</span><span class="sxs-lookup"><span data-stu-id="0d1d2-105">Change the field so it is no longer declared `ReadOnly`.</span></span>  
   
--   —ou—  
+-   <span data-ttu-id="0d1d2-106">—ou—</span><span class="sxs-lookup"><span data-stu-id="0d1d2-106">—or—</span></span>  
   
--   Não tente escrever a esse campo.  
+-   <span data-ttu-id="0d1d2-107">Não tente escrever a esse campo.</span><span class="sxs-lookup"><span data-stu-id="0d1d2-107">Do not attempt to write to this field.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [ReadOnly](../../visual-basic/language-reference/modifiers/readonly.md)
+## <a name="see-also"></a><span data-ttu-id="0d1d2-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0d1d2-108">See Also</span></span>  
+ [<span data-ttu-id="0d1d2-109">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="0d1d2-109">ReadOnly</span></span>](../../visual-basic/language-reference/modifiers/readonly.md)

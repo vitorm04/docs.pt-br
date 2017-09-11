@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 880d099ea25da872a63835f73b7c2c486b6417e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bfaf62cfa746a173f0b22655168aa60b0fe5373e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Eventos de variáveis WithEvents compartilhadas não podem ser identificados por métodos não compartilhados
-Uma variável declarada com o `Shared` modificador é uma variável compartilhada. Uma variável compartilhada identifica exatamente um local de armazenamento. Uma variável declarada com o `WithEvents` modificador declara o tipo ao qual a variável pertence manipula o conjunto de eventos que a variável gera. Quando um valor é atribuído à variável, a propriedade criada pelo `WithEvents` declaração desengancha qualquer manipulador de eventos existente e conecta o novo manipulador de eventos por meio de `Add` método.  
+# <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a><span data-ttu-id="622df-102">Eventos de variáveis WithEvents compartilhadas não podem ser identificados por métodos não compartilhados</span><span class="sxs-lookup"><span data-stu-id="622df-102">Events of shared WithEvents variables cannot be handled by non-shared methods</span></span>
+<span data-ttu-id="622df-103">Uma variável declarada com o `Shared` modificador é uma variável compartilhada.</span><span class="sxs-lookup"><span data-stu-id="622df-103">A variable declared with the `Shared` modifier is a shared variable.</span></span> <span data-ttu-id="622df-104">Uma variável compartilhada identifica exatamente um local de armazenamento.</span><span class="sxs-lookup"><span data-stu-id="622df-104">A shared variable identifies exactly one storage location.</span></span> <span data-ttu-id="622df-105">Uma variável declarada com o `WithEvents` modificador declara o tipo ao qual a variável pertence manipula o conjunto de eventos que a variável gera.</span><span class="sxs-lookup"><span data-stu-id="622df-105">A variable declared with the `WithEvents` modifier asserts that the type to which the variable belongs handles the set of events the variable raises.</span></span> <span data-ttu-id="622df-106">Quando um valor é atribuído à variável, a propriedade criada pelo `WithEvents` declaração desengancha qualquer manipulador de eventos existente e conecta o novo manipulador de eventos por meio de `Add` método.</span><span class="sxs-lookup"><span data-stu-id="622df-106">When a value is assigned to the variable, the property created by the `WithEvents` declaration unhooks any existing event handler and hooks up the new event handler via the `Add` method.</span></span>  
   
- **ID do erro:** BC30594  
+ <span data-ttu-id="622df-107">**ID do erro:** BC30594</span><span class="sxs-lookup"><span data-stu-id="622df-107">**Error ID:** BC30594</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="622df-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="622df-108">To correct this error</span></span>  
   
--   Declarar o manipulador de eventos `Shared`.  
+-   <span data-ttu-id="622df-109">Declarar o manipulador de eventos `Shared`.</span><span class="sxs-lookup"><span data-stu-id="622df-109">Declare your event handler `Shared`.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)   
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
+## <a name="see-also"></a><span data-ttu-id="622df-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="622df-110">See Also</span></span>  
+ <span data-ttu-id="622df-111">[Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md) </span><span class="sxs-lookup"><span data-stu-id="622df-111">[Shared](../../../visual-basic/language-reference/modifiers/shared.md) </span></span>  
+<span data-ttu-id="622df-112"> [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)</span><span class="sxs-lookup"><span data-stu-id="622df-112"> [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)</span></span>

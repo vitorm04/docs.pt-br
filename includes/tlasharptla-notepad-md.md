@@ -1,1 +1,1 @@
-Microsoft Notepad
+<span data-ttu-id="4d2c5-101">Microsoft Notepad</span><span class="sxs-lookup"><span data-stu-id="4d2c5-101">Microsoft Notepad</span></span>

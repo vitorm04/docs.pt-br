@@ -34,18 +34,18 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="true-literal-c-reference"></a>Literal true (Referência de C#)
-Representa o valor booliano true.  
+# <a name="true-literal-c-reference"></a><span data-ttu-id="70298-102">Literal true (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="70298-102">true Literal (C# Reference)</span></span>
+<span data-ttu-id="70298-103">Representa o valor booliano true.</span><span class="sxs-lookup"><span data-stu-id="70298-103">Represents the boolean value true.</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csrefKeywordsOperator#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-literal_1.cs)]  
+## <a name="example"></a><span data-ttu-id="70298-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="70298-104">Example</span></span>  
+ <span data-ttu-id="70298-105">[!code-cs[csrefKeywordsOperator#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-literal_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="70298-105">[!code-cs[csrefKeywordsOperator#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-literal_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="70298-106">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="70298-106">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [false](../../../csharp/language-reference/keywords/false.md)
+## <a name="see-also"></a><span data-ttu-id="70298-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="70298-107">See Also</span></span>  
+ <span data-ttu-id="70298-108">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="70298-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="70298-109">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="70298-109">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="70298-110">[Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="70298-110">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="70298-111">false</span><span class="sxs-lookup"><span data-stu-id="70298-111">false</span></span>](../../../csharp/language-reference/keywords/false.md)
 

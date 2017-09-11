@@ -1,1 +1,1 @@
-Acessibilidade Ativa da Microsoft
+<span data-ttu-id="e7017-101">Acessibilidade Ativa da Microsoft</span><span class="sxs-lookup"><span data-stu-id="e7017-101">Microsoft Active Accessibility</span></span>

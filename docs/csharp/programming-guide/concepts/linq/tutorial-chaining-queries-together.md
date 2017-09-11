@@ -21,21 +21,21 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="tutorial-chaining-queries-together-c"></a>Tutorial: encadear consultas juntas (C#)
-Este tutorial mostra o modelo de processamento quando você encadea consultas juntos. Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais. É importante compreender exatamente como as consultas encadeadas funcionam.  
+# <a name="tutorial-chaining-queries-together-c"></a><span data-ttu-id="6bc98-102">Tutorial: encadear consultas juntas (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-102">Tutorial: Chaining Queries Together (C#)</span></span>
+<span data-ttu-id="6bc98-103">Este tutorial mostra o modelo de processamento quando você encadea consultas juntos.</span><span class="sxs-lookup"><span data-stu-id="6bc98-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="6bc98-104">Encadeamento consultas seja adjacente uma parte fundamental de escrever transformações funcionais.</span><span class="sxs-lookup"><span data-stu-id="6bc98-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="6bc98-105">É importante compreender exatamente como as consultas encadeadas funcionam.</span><span class="sxs-lookup"><span data-stu-id="6bc98-105">It is important to understand exactly how chained queries work.</span></span>  
   
- Consultas que processam documentos do Office Open XML usam essa técnica amplamente.  
+ <span data-ttu-id="6bc98-106">Consultas que processam documentos do Office Open XML usam essa técnica amplamente.</span><span class="sxs-lookup"><span data-stu-id="6bc98-106">The queries that process Office Open XML documents use this technique extensively.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
+## <a name="in-this-section"></a><span data-ttu-id="6bc98-107">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="6bc98-107">In This Section</span></span>  
   
-|Tópico|Descrição|  
+|<span data-ttu-id="6bc98-108">Tópico</span><span class="sxs-lookup"><span data-stu-id="6bc98-108">Topic</span></span>|<span data-ttu-id="6bc98-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="6bc98-109">Description</span></span>|  
 |-----------|-----------------|  
-|[Execução adiada e avaliação lenta em LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|Descreve os conceitos de execução adiada e de avaliação lazy.|  
-|[Exemplo de execução adiada (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)|Fornece um exemplo de execução adiada.|  
-|[Exemplo de encadeamento de consultas (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)|Mostra como execução adiada funciona para o encadeamento consulta juntamente.|  
-|[Materialização intermediária (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|Identifica e ilustra a semântica de materialization intermediária.|  
-|[Encadeando operadores de consulta padrão juntos (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|Descreve a semântica lazy dos operadores de consulta padrão.|  
+|[<span data-ttu-id="6bc98-110">Execução adiada e avaliação lenta em LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-110">Deferred Execution and Lazy Evaluation in LINQ to XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)|<span data-ttu-id="6bc98-111">Descreve os conceitos de execução adiada e de avaliação lazy.</span><span class="sxs-lookup"><span data-stu-id="6bc98-111">Describes the concepts of deferred execution and lazy evaluation.</span></span>|  
+|[<span data-ttu-id="6bc98-112">Exemplo de execução adiada (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-112">Deferred Execution Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)|<span data-ttu-id="6bc98-113">Fornece um exemplo de execução adiada.</span><span class="sxs-lookup"><span data-stu-id="6bc98-113">Provides an example of deferred execution.</span></span>|  
+|[<span data-ttu-id="6bc98-114">Exemplo de encadeamento de consultas (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-114">Chaining Queries Example (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)|<span data-ttu-id="6bc98-115">Mostra como execução adiada funciona para o encadeamento consulta juntamente.</span><span class="sxs-lookup"><span data-stu-id="6bc98-115">Shows how deferred execution works when chaining queries together.</span></span>|  
+|[<span data-ttu-id="6bc98-116">Materialização intermediária (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-116">Intermediate Materialization (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|<span data-ttu-id="6bc98-117">Identifica e ilustra a semântica de materialization intermediária.</span><span class="sxs-lookup"><span data-stu-id="6bc98-117">Identifies and illustrates the semantics of intermediate materialization.</span></span>|  
+|[<span data-ttu-id="6bc98-118">Encadeando operadores de consulta padrão juntos (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-118">Chaining Standard Query Operators Together (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|<span data-ttu-id="6bc98-119">Descreve a semântica lazy dos operadores de consulta padrão.</span><span class="sxs-lookup"><span data-stu-id="6bc98-119">Describes the lazy semantics of the standard query operators.</span></span>|  
   
-## <a name="see-also"></a>Consulte também  
- [Transformações funcionais puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a><span data-ttu-id="6bc98-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6bc98-120">See Also</span></span>  
+ [<span data-ttu-id="6bc98-121">Transformações funcionais puras de XML (C#)</span><span class="sxs-lookup"><span data-stu-id="6bc98-121">Pure Functional Transformations of XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 

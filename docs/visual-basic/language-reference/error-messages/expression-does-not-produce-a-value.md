@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 78f5966d946a6c766eccfea493015b59d3decbbd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b184042580a8ea10f4ee681aa3ff437166520738
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="expression-does-not-produce-a-value"></a>A expressão não produz um valor
-Você tentou usar uma expressão que não produz um valor no contexto de produção de valor, como chamar um `Sub` em um contexto onde um `Function` é esperado.  
+# <a name="expression-does-not-produce-a-value"></a><span data-ttu-id="b598a-102">A expressão não produz um valor</span><span class="sxs-lookup"><span data-stu-id="b598a-102">Expression does not produce a value</span></span>
+<span data-ttu-id="b598a-103">Você tentou usar uma expressão que não produz um valor no contexto de produção de valor, como chamar um `Sub` em um contexto onde um `Function` é esperado.</span><span class="sxs-lookup"><span data-stu-id="b598a-103">You have tried to use an expression that does not produce a value in a value-producing context, such as calling a `Sub` in a context where a `Function` is expected.</span></span>  
   
- **ID do erro:** BC30491  
+ <span data-ttu-id="b598a-104">**ID do erro:** BC30491</span><span class="sxs-lookup"><span data-stu-id="b598a-104">**Error ID:** BC30491</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b598a-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="b598a-105">To correct this error</span></span>  
   
--   Altere a expressão para uma que produza um valor.  
+-   <span data-ttu-id="b598a-106">Altere a expressão para uma que produza um valor.</span><span class="sxs-lookup"><span data-stu-id="b598a-106">Change the expression to one that produces a value.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="b598a-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b598a-107">See Also</span></span>  
+ [<span data-ttu-id="b598a-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="b598a-108">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

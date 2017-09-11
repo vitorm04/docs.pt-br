@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 77727b5d873a2b349a4661e1f7061f643311222e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d604791c404e65f3a958485468f62a1de21a18d7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>A instrução não pode finalizar um bloco fora de uma instrução 'If' de linha
-Uma única linha `If` instrução contém várias instruções separadas por dois-pontos (:), um dos quais é um `End` instrução para um bloco de controle de fora a linha `If`. Linha `If` instruções não use o `End If` instrução.  
+# <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a><span data-ttu-id="9c0cb-102">A instrução não pode finalizar um bloco fora de uma instrução 'If' de linha</span><span class="sxs-lookup"><span data-stu-id="9c0cb-102">Statement cannot end a block outside of a line &#39;If&#39; statement</span></span>
+<span data-ttu-id="9c0cb-103">Uma única linha `If` instrução contém várias instruções separadas por dois-pontos (:), um dos quais é um `End` instrução para um bloco de controle de fora a linha `If`.</span><span class="sxs-lookup"><span data-stu-id="9c0cb-103">A single-line `If` statement contains several statements separated by colons (:), one of which is an `End` statement for a control block outside the single-line `If`.</span></span> <span data-ttu-id="9c0cb-104">Linha `If` instruções não use o `End If` instrução.</span><span class="sxs-lookup"><span data-stu-id="9c0cb-104">Single-line `If` statements do not use the `End If` statement.</span></span>  
   
- **ID do erro:** BC32005  
+ <span data-ttu-id="9c0cb-105">**ID do erro:** BC32005</span><span class="sxs-lookup"><span data-stu-id="9c0cb-105">**Error ID:** BC32005</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="9c0cb-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="9c0cb-106">To correct this error</span></span>  
   
--   Mover a linha `If` instrução fora do bloco de controle que contém o `End If` instrução.  
+-   <span data-ttu-id="9c0cb-107">Mover a linha `If` instrução fora do bloco de controle que contém o `End If` instrução.</span><span class="sxs-lookup"><span data-stu-id="9c0cb-107">Move the single-line `If` statement outside the control block that contains the `End If` statement.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a><span data-ttu-id="9c0cb-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9c0cb-108">See Also</span></span>  
+ [<span data-ttu-id="9c0cb-109">Instrução If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="9c0cb-109">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

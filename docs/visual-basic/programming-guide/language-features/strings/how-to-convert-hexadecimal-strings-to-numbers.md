@@ -34,23 +34,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6f6219d93fcc236fad5379c54a026172ed63e5aa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 7a7a733783eb0fcd44cdbc9f1fe794e1192b9ed7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Como converter cadeias de caracteres hexadecimais em números (Visual Basic)
-Este exemplo converte uma cadeia de caracteres hexadecimal em um número inteiro usando o <xref:System.Convert.ToInt32%2A>método.</xref:System.Convert.ToInt32%2A>  
+# <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a><span data-ttu-id="56d63-102">Como converter cadeias de caracteres hexadecimais em números (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="56d63-102">How to: Convert Hexadecimal Strings to Numbers (Visual Basic)</span></span>
+<span data-ttu-id="56d63-103">Este exemplo converte uma cadeia de caracteres hexadecimal em um número inteiro usando o <xref:System.Convert.ToInt32%2A>método.</xref:System.Convert.ToInt32%2A></span><span class="sxs-lookup"><span data-stu-id="56d63-103">This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A> method.</span></span>  
   
-### <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Para converter uma cadeia de caracteres hexadecimal em um número  
+### <a name="to-convert-a-hexadecimal-string-to-a-number"></a><span data-ttu-id="56d63-104">Para converter uma cadeia de caracteres hexadecimal em um número</span><span class="sxs-lookup"><span data-stu-id="56d63-104">To convert a hexadecimal string to a number</span></span>  
   
--   Use o <xref:System.Convert.ToInt32%2A>método para converter o número expressado na base-16 a um inteiro.</xref:System.Convert.ToInt32%2A>  
+-   <span data-ttu-id="56d63-105">Use o <xref:System.Convert.ToInt32%2A>método para converter o número expressado na base-16 a um inteiro.</xref:System.Convert.ToInt32%2A></span><span class="sxs-lookup"><span data-stu-id="56d63-105">Use the <xref:System.Convert.ToInt32%2A> method to convert the number expressed in base-16 to an integer.</span></span>  
   
-     O primeiro argumento do <xref:System.Convert.ToInt32%2A>método é a cadeia de caracteres para converter.</xref:System.Convert.ToInt32%2A> O segundo argumento descreve em qual base o número é expresso; hexadecimal é base 16.  
+     <span data-ttu-id="56d63-106">O primeiro argumento do <xref:System.Convert.ToInt32%2A>método é a cadeia de caracteres para converter.</xref:System.Convert.ToInt32%2A></span><span class="sxs-lookup"><span data-stu-id="56d63-106">The first argument of the <xref:System.Convert.ToInt32%2A> method is the string to convert.</span></span> <span data-ttu-id="56d63-107">O segundo argumento descreve em qual base o número é expresso; hexadecimal é base 16.</span><span class="sxs-lookup"><span data-stu-id="56d63-107">The second argument describes what base the number is expressed in; hexadecimal is base 16.</span></span>  
   
-     [!code-vb[VbVbalrStrings&#62;](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
+     <span data-ttu-id="56d63-108">[!code-vb[VbVbalrStrings&#62;](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="56d63-108">[!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Conversion.Hex%2A></xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
- <xref:System.Convert.ToInt32%2A></xref:System.Convert.ToInt32%2A>
+## <a name="see-also"></a><span data-ttu-id="56d63-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="56d63-109">See Also</span></span>  
+ <span data-ttu-id="56d63-110"><xref:Microsoft.VisualBasic.Conversion.Hex%2A></xref:Microsoft.VisualBasic.Conversion.Hex%2A></span><span class="sxs-lookup"><span data-stu-id="56d63-110"><xref:Microsoft.VisualBasic.Conversion.Hex%2A></span></span>   
+ <span data-ttu-id="56d63-111"><xref:System.Convert.ToInt32%2A></xref:System.Convert.ToInt32%2A></span><span class="sxs-lookup"><span data-stu-id="56d63-111"><xref:System.Convert.ToInt32%2A></span></span>

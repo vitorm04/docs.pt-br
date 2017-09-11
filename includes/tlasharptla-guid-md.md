@@ -1,1 +1,1 @@
-GUID (identificador global exclusivo)
+<span data-ttu-id="c5d6c-101">GUID (identificador global exclusivo)</span><span class="sxs-lookup"><span data-stu-id="c5d6c-101">globally unique identifier (GUID)</span></span>

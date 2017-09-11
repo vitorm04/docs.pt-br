@@ -35,29 +35,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 83e29c8a57649525f1a2afda6898ddf3bb82787e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4af75cf83bc065325398551401b51e9d4b0ee446
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Como fazer referência à instância atual de um objeto (Visual Basic)
-O *atual instância* de um objeto é a instância na qual o código está sendo executado.  
+# <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a><span data-ttu-id="7d747-102">Como fazer referência à instância atual de um objeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7d747-102">How to: Refer to the Current Instance of an Object (Visual Basic)</span></span>
+<span data-ttu-id="7d747-103">O *atual instância* de um objeto é a instância na qual o código está sendo executado.</span><span class="sxs-lookup"><span data-stu-id="7d747-103">The *current instance* of an object is the instance in which the code is currently executing.</span></span>  
   
- Você usa o `Me` palavra-chave para se referir à instância atual.  
+ <span data-ttu-id="7d747-104">Você usa o `Me` palavra-chave para se referir à instância atual.</span><span class="sxs-lookup"><span data-stu-id="7d747-104">You use the `Me` keyword to refer to the current instance.</span></span>  
   
-### <a name="to-refer-to-the-current-instance"></a>Para fazer referência à instância atual  
+### <a name="to-refer-to-the-current-instance"></a><span data-ttu-id="7d747-105">Para fazer referência à instância atual</span><span class="sxs-lookup"><span data-stu-id="7d747-105">To refer to the current instance</span></span>  
   
--   Use o `Me` palavra-chave onde você normalmente usa o nome de uma variável de objeto.  
+-   <span data-ttu-id="7d747-106">Use o `Me` palavra-chave onde você normalmente usa o nome de uma variável de objeto.</span><span class="sxs-lookup"><span data-stu-id="7d747-106">Use the `Me` keyword where you would normally use the name of an object variable.</span></span>  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     Embora `Me` se comporta como um objeto variável, você não pode declará-la ou atribuir algo a ela. `Me`sempre refere-se à instância atual.  
+     <span data-ttu-id="7d747-107">Embora `Me` se comporta como um objeto variável, você não pode declará-la ou atribuir algo a ela.</span><span class="sxs-lookup"><span data-stu-id="7d747-107">Although `Me` behaves like an object variable, you cannot declare it or assign anything to it.</span></span> <span data-ttu-id="7d747-108">`Me`sempre refere-se à instância atual.</span><span class="sxs-lookup"><span data-stu-id="7d747-108">`Me` always refers to the current instance.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Variáveis de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [Atribuição de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a><span data-ttu-id="7d747-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7d747-109">See Also</span></span>  
+ <span data-ttu-id="7d747-110">[Variáveis de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md) </span><span class="sxs-lookup"><span data-stu-id="7d747-110">[Object Variables](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md) </span></span>  
+<span data-ttu-id="7d747-111"> [Atribuição de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md) </span><span class="sxs-lookup"><span data-stu-id="7d747-111"> [Object Variable Assignment](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md) </span></span>  
+<span data-ttu-id="7d747-112"> [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)</span><span class="sxs-lookup"><span data-stu-id="7d747-112"> [Me, My, MyBase, and MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)</span></span>

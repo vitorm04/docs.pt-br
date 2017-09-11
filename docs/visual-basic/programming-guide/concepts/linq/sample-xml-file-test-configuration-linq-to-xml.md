@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: addb3f40b0d995d320171cdcd5d2dd58ff5cfe0d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 192f6ca5796bb21c96b0d2f968793706749c7236
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Arquivo XML de Exemplo: Configuração de teste (LINQ to XML)
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Este é um arquivo de configuração de teste.  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="f38a5-102">Arquivo XML de Exemplo: Configuração de teste (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f38a5-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="f38a5-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</span><span class="sxs-lookup"><span data-stu-id="f38a5-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="f38a5-104">Este é um arquivo de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="f38a5-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="f38a5-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="f38a5-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,5 +74,5 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f38a5-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f38a5-106">See Also</span></span>  
+ [<span data-ttu-id="f38a5-107">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f38a5-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

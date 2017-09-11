@@ -20,24 +20,25 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25f504d862ef2176dc90a31fbccf18777b9d3d0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ab75113ca2609385db8be9d79563e7b71dfd0b5b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)
-Este exemplo mostra como mesclar dados de diferentes origens em uma sequência de novos tipos.  
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a><span data-ttu-id="27c31-102">Como: preencher coleções de objetos de várias fontes (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27c31-102">How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="27c31-103">Este exemplo mostra como mesclar dados de diferentes origens em uma sequência de novos tipos.</span><span class="sxs-lookup"><span data-stu-id="27c31-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  
   
 > [!NOTE]
->  Não tente unir dados na memória ou dados no sistema de arquivos com dados que ainda está em um banco de dados. Essas associações entre domínios podem gerar resultados indefinidos devido às diferentes formas em que as operações de associação podem ser definidas para consultas de banco de dados e outros tipos de fontes. Além disso, há um risco de que essa operação pode causar uma exceção de falta de memória, se a quantidade de dados no banco de dados é grande o suficiente. Para associar dados de um banco de dados para dados na memória, primeiro chame `ToList` ou `ToArray` no banco de dados de consulta e, em seguida, execute a junção na coleção retornada.  
+>  <span data-ttu-id="27c31-104">Não tente unir dados na memória ou dados no sistema de arquivos com dados que ainda está em um banco de dados.</span><span class="sxs-lookup"><span data-stu-id="27c31-104">Do not try to join in-memory data or data in the file system with data that is still in a database.</span></span> <span data-ttu-id="27c31-105">Essas associações entre domínios podem gerar resultados indefinidos devido às diferentes formas em que as operações de associação podem ser definidas para consultas de banco de dados e outros tipos de fontes.</span><span class="sxs-lookup"><span data-stu-id="27c31-105">Such cross-domain joins can yield undefined results because of different ways in which join operations might be defined for database queries and other types of sources.</span></span> <span data-ttu-id="27c31-106">Além disso, há um risco de que essa operação pode causar uma exceção de falta de memória, se a quantidade de dados no banco de dados é grande o suficiente.</span><span class="sxs-lookup"><span data-stu-id="27c31-106">Additionally, there is a risk that such an operation could cause an out-of-memory exception if the amount of data in the database is large enough.</span></span> <span data-ttu-id="27c31-107">Para associar dados de um banco de dados para dados na memória, primeiro chame `ToList` ou `ToArray` no banco de dados de consulta e, em seguida, execute a junção na coleção retornada.</span><span class="sxs-lookup"><span data-stu-id="27c31-107">To join data from a database to in-memory data, first call `ToList` or `ToArray` on the database query, and then perform the join on the returned collection.</span></span>  
   
-### <a name="to-create-the-data-file"></a>Para criar o arquivo de dados  
+### <a name="to-create-the-data-file"></a><span data-ttu-id="27c31-108">Para criar o arquivo de dados</span><span class="sxs-lookup"><span data-stu-id="27c31-108">To create the data file</span></span>  
   
--   Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [como: associar conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).  
+-   <span data-ttu-id="27c31-109">Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [como: associar conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span><span class="sxs-lookup"><span data-stu-id="27c31-109">Copy the names.csv and scores.csv files into your project folder, as described in [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar um tipo nomeado `Student` para armazenar dados mesclados de duas coleções na memória de cadeias de caracteres que simulam dados da planilha no formato. csv. O primeiro conjunto de cadeias de caracteres representando os nomes dos alunos e IDs e a segunda coleção representa a ID do aluno (na primeira coluna) e quatro pontuações de exame. A ID é usada como a chave estrangeira.  
+## <a name="example"></a><span data-ttu-id="27c31-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="27c31-110">Example</span></span>  
+ <span data-ttu-id="27c31-111">O exemplo a seguir mostra como usar um tipo nomeado `Student` para armazenar dados mesclados de duas coleções na memória de cadeias de caracteres que simulam dados da planilha no formato. csv.</span><span class="sxs-lookup"><span data-stu-id="27c31-111">The following example shows how to use a named type `Student` to store merged data from two in-memory collections of strings that simulate spreadsheet data in .csv format.</span></span> <span data-ttu-id="27c31-112">O primeiro conjunto de cadeias de caracteres representando os nomes dos alunos e IDs e a segunda coleção representa a ID do aluno (na primeira coluna) e quatro pontuações de exame.</span><span class="sxs-lookup"><span data-stu-id="27c31-112">The first collection of strings represents the student names and IDs, and the second collection represents the student ID (in the first column) and four exam scores.</span></span> <span data-ttu-id="27c31-113">A ID é usada como a chave estrangeira.</span><span class="sxs-lookup"><span data-stu-id="27c31-113">The ID is used as the foreign key.</span></span>  
   
 ```vb  
 Class Student  
@@ -112,9 +113,9 @@ End Class
 ' The average score of Tucker Michael is 92  
 ```  
   
- No [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, um inicializador de objeto é usada para criar uma instância de cada novo `Student` objeto usando os dados de duas origens.  
+ <span data-ttu-id="27c31-114">No [cláusula Select](../../../../visual-basic/language-reference/queries/select-clause.md) cláusula, um inicializador de objeto é usada para criar uma instância de cada novo `Student` objeto usando os dados de duas origens.</span><span class="sxs-lookup"><span data-stu-id="27c31-114">In the [Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md) clause, an object initializer is used to instantiate each new `Student` object by using the data from the two sources.</span></span>  
   
- Se você não tiver que armazenar os resultados de uma consulta, tipos anônimos podem ser mais convenientes que tipos nomeados. Tipos nomeados são necessários se você passar os resultados da consulta fora do método em que a consulta é executada. O exemplo a seguir executa a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:  
+ <span data-ttu-id="27c31-115">Se você não tiver que armazenar os resultados de uma consulta, tipos anônimos podem ser mais convenientes que tipos nomeados.</span><span class="sxs-lookup"><span data-stu-id="27c31-115">If you do not have to store the results of a query, anonymous types can be more convenient than named types.</span></span> <span data-ttu-id="27c31-116">Tipos nomeados são necessários se você passar os resultados da consulta fora do método em que a consulta é executada.</span><span class="sxs-lookup"><span data-stu-id="27c31-116">Named types are required if you pass the query results outside the method in which the query is executed.</span></span> <span data-ttu-id="27c31-117">O exemplo a seguir executa a mesma tarefa do exemplo anterior, mas usa tipos anônimos em vez de tipos nomeados:</span><span class="sxs-lookup"><span data-stu-id="27c31-117">The following example performs the same task as the previous example, but uses anonymous types instead of named types:</span></span>  
   
 ```vb  
 ' Merge the data by using an anonymous type.   
@@ -140,8 +141,8 @@ For Each s In queryNamesScores2
 Next  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e uma `Imports` declaração para o namespace System. Linq.  
+## <a name="compiling-the-code"></a><span data-ttu-id="27c31-118">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="27c31-118">Compiling the Code</span></span>  
+ <span data-ttu-id="27c31-119">Criar um projeto que tem como alvo o .NET Framework versão 3.5 ou superior com uma referência a System.Core.dll e uma `Imports` declaração para o namespace System. Linq.</span><span class="sxs-lookup"><span data-stu-id="27c31-119">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="27c31-120">Consulte também</span><span class="sxs-lookup"><span data-stu-id="27c31-120">See Also</span></span>  
+ [<span data-ttu-id="27c31-121">LINQ e cadeias de caracteres (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="27c31-121">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

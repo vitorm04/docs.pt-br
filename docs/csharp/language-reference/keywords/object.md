@@ -37,21 +37,21 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="object-c-reference"></a>object (Referência de C#)
-O tipo `object` é um alias para <xref:System.Object> no .NET Framework. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável do objeto do tipo é convertida para um tipo de valor, ela é chamada de *unboxed*. Para obter mais informações, consulte [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+# <a name="object-c-reference"></a><span data-ttu-id="db234-102">object (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="db234-102">object (C# Reference)</span></span>
+<span data-ttu-id="db234-103">O tipo `object` é um alias para <xref:System.Object> no .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="db234-103">The `object` type is an alias for <xref:System.Object> in the .NET Framework.</span></span> <span data-ttu-id="db234-104">No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="db234-104">In the unified type system of C#, all types, predefined and user-defined, reference types and value types, inherit directly or indirectly from <xref:System.Object>.</span></span> <span data-ttu-id="db234-105">Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`.</span><span class="sxs-lookup"><span data-stu-id="db234-105">You can assign values of any type to variables of type `object`.</span></span> <span data-ttu-id="db234-106">Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*.</span><span class="sxs-lookup"><span data-stu-id="db234-106">When a variable of a value type is converted to object, it is said to be *boxed*.</span></span> <span data-ttu-id="db234-107">Quando uma variável do objeto do tipo é convertida para um tipo de valor, ela é chamada de *unboxed*.</span><span class="sxs-lookup"><span data-stu-id="db234-107">When a variable of type object is converted to a value type, it is said to be *unboxed*.</span></span> <span data-ttu-id="db234-108">Para obter mais informações, consulte [Boxing e unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span><span class="sxs-lookup"><span data-stu-id="db234-108">For more information, see [Boxing and Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como variáveis do tipo `object` podem aceitar valores de qualquer tipo de dados e como as variáveis do tipo `object` pode usar métodos <xref:System.Object> do .NET Framework.  
+## <a name="example"></a><span data-ttu-id="db234-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="db234-109">Example</span></span>  
+ <span data-ttu-id="db234-110">O exemplo a seguir mostra como variáveis do tipo `object` podem aceitar valores de qualquer tipo de dados e como as variáveis do tipo `object` pode usar métodos <xref:System.Object> do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="db234-110">The following sample shows how variables of type `object` can accept values of any data type and how variables of type `object` can use methods on <xref:System.Object> from the .NET Framework.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]  
+ <span data-ttu-id="db234-111">[!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="db234-111">[!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="db234-112">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="db234-112">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Tipos de Referência](../../../csharp/language-reference/keywords/reference-types.md)   
- [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)
+## <a name="see-also"></a><span data-ttu-id="db234-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="db234-113">See Also</span></span>  
+ <span data-ttu-id="db234-114">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="db234-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="db234-115">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="db234-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="db234-116">[Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="db234-116">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="db234-117">[Tipos de Referência](../../../csharp/language-reference/keywords/reference-types.md) </span><span class="sxs-lookup"><span data-stu-id="db234-117">[Reference Types](../../../csharp/language-reference/keywords/reference-types.md) </span></span>  
+ [<span data-ttu-id="db234-118">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="db234-118">Value Types</span></span>](../../../csharp/language-reference/keywords/value-types.md)
 

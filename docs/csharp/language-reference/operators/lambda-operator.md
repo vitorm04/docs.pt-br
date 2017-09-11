@@ -39,10 +39,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="gt-operator-c-reference"></a>Operador =&gt; (Referência de C#)
-O token `=>` é chamado de operador lambda. Ele é usado em *expressões lambda* para separar as variáveis de entrada no lado esquerdo do corpo lambda no lado direito. As expressões lambda são expressões embutidas semelhantes aos métodos anônimos, mas mais flexíveis, elas são amplamente usadas em consultas LINQ que são expressas na sintaxe do método. Para obter mais informações, consulte [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+# <a name="gt-operator-c-reference"></a><span data-ttu-id="2f033-102">Operador =&gt; (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="2f033-102">=&gt; Operator (C# Reference)</span></span>
+<span data-ttu-id="2f033-103">O token `=>` é chamado de operador lambda.</span><span class="sxs-lookup"><span data-stu-id="2f033-103">The `=>` token is called the lambda operator.</span></span> <span data-ttu-id="2f033-104">Ele é usado em *expressões lambda* para separar as variáveis de entrada no lado esquerdo do corpo lambda no lado direito.</span><span class="sxs-lookup"><span data-stu-id="2f033-104">It is used in *lambda expressions* to separate the input variables on the left side from the lambda body on the right side.</span></span> <span data-ttu-id="2f033-105">As expressões lambda são expressões embutidas semelhantes aos métodos anônimos, mas mais flexíveis, elas são amplamente usadas em consultas LINQ que são expressas na sintaxe do método.</span><span class="sxs-lookup"><span data-stu-id="2f033-105">Lambda expressions are inline expressions similar to anonymous methods but more flexible; they are used extensively in LINQ queries that are expressed in method syntax.</span></span> <span data-ttu-id="2f033-106">Para obter mais informações, consulte [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="2f033-106">For more information, see [Lambda Expressions](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).</span></span>  
   
- O exemplo a seguir mostra duas maneiras de localizar e exibir o comprimento da cadeia de caracteres mais curta em uma matriz de cadeias de caracteres. A primeira parte do exemplo aplica uma expressão lambda (`w => w.Length`) a cada elemento da matriz `words` e, em seguida, usa o método <xref:System.Linq.Enumerable.Min%2A> para encontrar o menor tamanho. Para comparação, a segunda parte do exemplo mostra uma solução mais longa que usa a sintaxe de consulta para fazer o mesmo.  
+ <span data-ttu-id="2f033-107">O exemplo a seguir mostra duas maneiras de localizar e exibir o comprimento da cadeia de caracteres mais curta em uma matriz de cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="2f033-107">The following example shows two ways to find and display the length of the shortest string in an array of strings.</span></span> <span data-ttu-id="2f033-108">A primeira parte do exemplo aplica uma expressão lambda (`w => w.Length`) a cada elemento da matriz `words` e, em seguida, usa o método <xref:System.Linq.Enumerable.Min%2A> para encontrar o menor tamanho.</span><span class="sxs-lookup"><span data-stu-id="2f033-108">The first part of the example applies a lambda expression (`w => w.Length`) to each element of the `words` array and then uses the <xref:System.Linq.Enumerable.Min%2A> method to find the smallest length.</span></span> <span data-ttu-id="2f033-109">Para comparação, a segunda parte do exemplo mostra uma solução mais longa que usa a sintaxe de consulta para fazer o mesmo.</span><span class="sxs-lookup"><span data-stu-id="2f033-109">For comparison, the second part of the example shows a longer solution that uses query syntax to do the same thing.</span></span>  
   
 ```csharp  
 string[] words = { "cherry", "apple", "blueberry" };  
@@ -65,17 +65,17 @@ Console.WriteLine(shortestWordLength2);
 // 5  
 ```  
   
-## <a name="remarks"></a>Comentários  
- O operador `=>` tem a mesma precedência do operador de atribuição (`=`) e é associativo à direita.  
+## <a name="remarks"></a><span data-ttu-id="2f033-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="2f033-110">Remarks</span></span>  
+ <span data-ttu-id="2f033-111">O operador `=>` tem a mesma precedência do operador de atribuição (`=`) e é associativo à direita.</span><span class="sxs-lookup"><span data-stu-id="2f033-111">The `=>` operator has the same precedence as the assignment operator (`=`) and is right-associative.</span></span>  
   
- Você pode especificar o tipo da variável de entrada explicitamente ou deixar que o compilador o infira, em ambos os casos, a variável é fortemente tipada no tempo de compilação. Quando você especificar um tipo, deverá colocar o nome do tipo e o nome da variável entre parênteses, como mostra o exemplo a seguir.  
+ <span data-ttu-id="2f033-112">Você pode especificar o tipo da variável de entrada explicitamente ou deixar que o compilador o infira, em ambos os casos, a variável é fortemente tipada no tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="2f033-112">You can specify the type of the input variable explicitly or let the compiler infer it; in either case, the variable is strongly typed at compile time.</span></span> <span data-ttu-id="2f033-113">Quando você especificar um tipo, deverá colocar o nome do tipo e o nome da variável entre parênteses, como mostra o exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="2f033-113">When you specify a type, you must enclose the type name and the variable name in parentheses, as the following example shows.</span></span>  
   
 ```csharp  
 int shortestWordLength = words.Min((string w) => w.Length);  
 ```  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como escrever uma expressão lambda para a sobrecarga do operador de consulta padrão <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, que utiliza dois argumentos. Como a expressão lambda tem mais de um parâmetro, os parâmetros devem ser colocados entre parênteses. O segundo parâmetro, `index`, representa o índice do elemento atual na coleção. A expressão `Where` retorna todas as cadeias de caracteres cujos comprimentos são menores do que suas posições de índice na matriz.  
+## <a name="example"></a><span data-ttu-id="2f033-114">Exemplo</span><span class="sxs-lookup"><span data-stu-id="2f033-114">Example</span></span>  
+ <span data-ttu-id="2f033-115">O exemplo a seguir mostra como escrever uma expressão lambda para a sobrecarga do operador de consulta padrão <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName>, que utiliza dois argumentos.</span><span class="sxs-lookup"><span data-stu-id="2f033-115">The following example shows how to write a lambda expression for the overload of the standard query operator <xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName> that takes two arguments.</span></span> <span data-ttu-id="2f033-116">Como a expressão lambda tem mais de um parâmetro, os parâmetros devem ser colocados entre parênteses.</span><span class="sxs-lookup"><span data-stu-id="2f033-116">Because the lambda expression has more than one parameter, the parameters must be enclosed in parentheses.</span></span> <span data-ttu-id="2f033-117">O segundo parâmetro, `index`, representa o índice do elemento atual na coleção.</span><span class="sxs-lookup"><span data-stu-id="2f033-117">The second parameter, `index`, represents the index of the current element in the collection.</span></span> <span data-ttu-id="2f033-118">A expressão `Where` retorna todas as cadeias de caracteres cujos comprimentos são menores do que suas posições de índice na matriz.</span><span class="sxs-lookup"><span data-stu-id="2f033-118">The `Where` expression returns all the strings whose lengths are less than their index positions in the array.</span></span>  
   
 ```csharp  
 static void Main(string[] args)  
@@ -100,8 +100,8 @@ static void Main(string[] args)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Expressões Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="2f033-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2f033-119">See Also</span></span>  
+ <span data-ttu-id="2f033-120">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="2f033-120">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="2f033-121">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="2f033-121">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="2f033-122">Expressões Lambda</span><span class="sxs-lookup"><span data-stu-id="2f033-122">Lambda Expressions</span></span>](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 

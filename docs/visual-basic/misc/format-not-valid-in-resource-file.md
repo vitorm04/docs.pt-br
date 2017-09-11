@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6d9332c5a346ea17736d17812930bbae376d8f88
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8becf5b3c4d91ed376cce0a2bbd1bbe1b69cf214
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="format-not-valid-in-resource-file"></a>Formato inválido no arquivo de recurso
-Um arquivo de recursos em seu projeto não segue o formato padrão para um arquivo de recursos do Windows ou há uma incompatibilidade entre o arquivo de recurso e o [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] projeto.  
+# <a name="format-not-valid-in-resource-file"></a><span data-ttu-id="0890f-102">Formato inválido no arquivo de recurso</span><span class="sxs-lookup"><span data-stu-id="0890f-102">Format not valid in resource file</span></span>
+<span data-ttu-id="0890f-103">Um arquivo de recursos em seu projeto não segue o formato padrão para um arquivo de recursos do Windows ou há uma incompatibilidade entre o arquivo de recurso e o [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] projeto.</span><span class="sxs-lookup"><span data-stu-id="0890f-103">A resource file in your project does not follow the standard format for a Windows resource file or there is a mismatch between the resource file and the [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] project.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0890f-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0890f-104">To correct this error</span></span>  
   
-1.  Recriar a fonte de recursos e arquivos de recursos e de acordo com a sintaxe documentada no Windows Software Development Kit.  
+1.  <span data-ttu-id="0890f-105">Recriar a fonte de recursos e arquivos de recursos e de acordo com a sintaxe documentada no Windows Software Development Kit.</span><span class="sxs-lookup"><span data-stu-id="0890f-105">Recreate the resource source and resource files and adhere to the syntax documented in the Windows Software Development Kit.</span></span>  
   
-2.  Remova o arquivo de recurso inválido do projeto.  
+2.  <span data-ttu-id="0890f-106">Remova o arquivo de recurso inválido do projeto.</span><span class="sxs-lookup"><span data-stu-id="0890f-106">Remove the invalid resource file from the project.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="0890f-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0890f-107">See Also</span></span>  
+ [<span data-ttu-id="0890f-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="0890f-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

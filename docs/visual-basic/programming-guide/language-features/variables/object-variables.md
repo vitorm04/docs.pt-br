@@ -34,23 +34,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 49aa189c46bfad01c093c2afe16fa8a41bf09940
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 717378ee13114fcb980d66bbf1586956bae1148e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="object-variables-in-visual-basic"></a>Variáveis de objeto no Visual Basic
-Além de armazenar valores diretamente, uma variável pode se referir a um objeto. Você atribui um objeto a uma variável pelas mesmas razões que você atribui qualquer valor a uma variável:  
+# <a name="object-variables-in-visual-basic"></a><span data-ttu-id="b1710-102">Variáveis de objeto no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b1710-102">Object Variables in Visual Basic</span></span>
+<span data-ttu-id="b1710-103">Além de armazenar valores diretamente, uma variável pode se referir a um objeto.</span><span class="sxs-lookup"><span data-stu-id="b1710-103">In addition to storing values directly, a variable can refer to an object.</span></span> <span data-ttu-id="b1710-104">Você atribui um objeto a uma variável pelas mesmas razões que você atribui qualquer valor a uma variável:</span><span class="sxs-lookup"><span data-stu-id="b1710-104">You assign an object to a variable for the same reasons you assign any value to a variable:</span></span>  
   
--   Um nome de variável é geralmente mais curto e fácil de lembrar que o caminho completo de métodos e propriedades necessárias para acessar o próprio objeto.  
+-   <span data-ttu-id="b1710-105">Um nome de variável é geralmente mais curto e fácil de lembrar que o caminho completo de métodos e propriedades necessárias para acessar o próprio objeto.</span><span class="sxs-lookup"><span data-stu-id="b1710-105">A variable name is often shorter and easier to remember than the full path of methods and properties necessary to access the object itself.</span></span>  
   
--   Usando uma variável que faz referência a um objeto é mais eficiente do que repetidamente acessar o próprio objeto por meio de métodos ou propriedades necessários.  
+-   <span data-ttu-id="b1710-106">Usando uma variável que faz referência a um objeto é mais eficiente do que repetidamente acessar o próprio objeto por meio de métodos ou propriedades necessários.</span><span class="sxs-lookup"><span data-stu-id="b1710-106">Using a variable that refers to an object is more efficient than repeatedly accessing the object itself through the necessary methods or properties.</span></span>  
   
--   Você pode alterar uma variável para fazer referência a outros objetos enquanto seu código está em execução.  
+-   <span data-ttu-id="b1710-107">Você pode alterar uma variável para fazer referência a outros objetos enquanto seu código está em execução.</span><span class="sxs-lookup"><span data-stu-id="b1710-107">You can change a variable to refer to other objects while your code is running.</span></span>  
   
-## <a name="making-code-shorter"></a>Tornando o código menor  
- Você pode usar variáveis de objeto para diminuir o código que você tem que digitar. O exemplo a seguir usa o caminho completo de métodos e propriedades para acessar um <xref:System.Windows.Forms.Control>objeto.</xref:System.Windows.Forms.Control>  
+## <a name="making-code-shorter"></a><span data-ttu-id="b1710-108">Tornando o código menor</span><span class="sxs-lookup"><span data-stu-id="b1710-108">Making Code Shorter</span></span>  
+ <span data-ttu-id="b1710-109">Você pode usar variáveis de objeto para diminuir o código que você tem que digitar.</span><span class="sxs-lookup"><span data-stu-id="b1710-109">You can use object variables to shorten the code you have to type.</span></span> <span data-ttu-id="b1710-110">O exemplo a seguir usa o caminho completo de métodos e propriedades para acessar um <xref:System.Windows.Forms.Control>objeto.</xref:System.Windows.Forms.Control></span><span class="sxs-lookup"><span data-stu-id="b1710-110">The following example uses the full path of methods and properties to access a <xref:System.Windows.Forms.Control> object.</span></span>  
   
 ```  
 ' Assume Me is a valid Form, or replace Me with a valid Form.  
@@ -59,7 +60,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()  
 ```  
   
- Você pode reduzir esse código e acelerar a execução, se você usar uma variável de objeto para o controle. Você deve declarar a variável de objeto com a classe específica que você pretende atribuir a ela (`Control` nesse caso). Depois de atribuir um objeto à variável, você pode tratá-lo exatamente como você trata o objeto ao qual se refere. Você pode definir ou recuperar as propriedades do objeto ou usar qualquer um dos seus métodos. O exemplo a seguir usa uma variável de objeto para simplificar o código no exemplo anterior.  
+ <span data-ttu-id="b1710-111">Você pode reduzir esse código e acelerar a execução, se você usar uma variável de objeto para o controle.</span><span class="sxs-lookup"><span data-stu-id="b1710-111">You can shorten this code, and speed up execution, if you use an object variable for the control.</span></span> <span data-ttu-id="b1710-112">Você deve declarar a variável de objeto com a classe específica que você pretende atribuir a ela (`Control` nesse caso).</span><span class="sxs-lookup"><span data-stu-id="b1710-112">You should declare the object variable with the specific class that you intend to assign to it (`Control` in this case).</span></span> <span data-ttu-id="b1710-113">Depois de atribuir um objeto à variável, você pode tratá-lo exatamente como você trata o objeto ao qual se refere.</span><span class="sxs-lookup"><span data-stu-id="b1710-113">Once you assign an object to the variable, you can treat it exactly the same as you treat the object to which it refers.</span></span> <span data-ttu-id="b1710-114">Você pode definir ou recuperar as propriedades do objeto ou usar qualquer um dos seus métodos.</span><span class="sxs-lookup"><span data-stu-id="b1710-114">You can set or retrieve the properties of the object or use any of its methods.</span></span> <span data-ttu-id="b1710-115">O exemplo a seguir usa uma variável de objeto para simplificar o código no exemplo anterior.</span><span class="sxs-lookup"><span data-stu-id="b1710-115">The following example uses an object variable to simplify the code in the preceding example.</span></span>  
   
 ```  
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl  
@@ -68,9 +69,9 @@ ctrlActv.Location = New Point(100, 100)
 ctrlActv.Show()  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Declaração de variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Como: acelerar o acesso a um objeto com um longo caminho de qualificação](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)   
- [Declaração de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)   
- [Atribuição de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)   
- [Valores de Variável de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+## <a name="see-also"></a><span data-ttu-id="b1710-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b1710-116">See Also</span></span>  
+ <span data-ttu-id="b1710-117">[Declaração de variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md) </span><span class="sxs-lookup"><span data-stu-id="b1710-117">[Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md) </span></span>  
+<span data-ttu-id="b1710-118"> [Como: acelerar o acesso a um objeto com um longo caminho de qualificação](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md) </span><span class="sxs-lookup"><span data-stu-id="b1710-118"> [How to: Speed Up Access to an Object with a Long Qualification Path](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md) </span></span>  
+<span data-ttu-id="b1710-119"> [Declaração de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md) </span><span class="sxs-lookup"><span data-stu-id="b1710-119"> [Object Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md) </span></span>  
+<span data-ttu-id="b1710-120"> [Atribuição de variável de objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md) </span><span class="sxs-lookup"><span data-stu-id="b1710-120"> [Object Variable Assignment](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md) </span></span>  
+<span data-ttu-id="b1710-121"> [Valores de Variável de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)</span><span class="sxs-lookup"><span data-stu-id="b1710-121"> [Object Variable Values](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)</span></span>

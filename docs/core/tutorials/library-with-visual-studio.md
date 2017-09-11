@@ -14,56 +14,56 @@ ms.translationtype: HT
 ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
 ms.openlocfilehash: 8b86f8f9cd02484cb91af3206606aced8fed1ecd
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017
+# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a><span data-ttu-id="628b8-104">Criar uma biblioteca de classes com C# e .NET Core no Visual Studio 2017</span><span class="sxs-lookup"><span data-stu-id="628b8-104">Building a class library with C# and .NET Core in Visual Studio 2017</span></span>
 
-Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo. Uma biblioteca de classes que direciona o .NET Standard 2.0 permite que sua biblioteca seja chamada por qualquer implementação do .NET que dê suporte à versão do .NET Standard. Quando você finaliza sua biblioteca de classes, pode decidir se deseja distribuí-la como um componente de terceiros ou se quer incluí-la como um componente agrupado com um ou mais aplicativos.
+<span data-ttu-id="628b8-105">Uma *biblioteca de classes* define tipos e métodos que são chamados por um aplicativo.</span><span class="sxs-lookup"><span data-stu-id="628b8-105">A *class library* defines types and methods that are called by an application.</span></span> <span data-ttu-id="628b8-106">Uma biblioteca de classes que direciona o .NET Standard 2.0 permite que sua biblioteca seja chamada por qualquer implementação do .NET que dê suporte à versão do .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="628b8-106">A class library that targets the .NET Standard 2.0 allows your library to be called by any .NET implementation that supports that version of the .NET Standard.</span></span> <span data-ttu-id="628b8-107">Quando você finaliza sua biblioteca de classes, pode decidir se deseja distribuí-la como um componente de terceiros ou se quer incluí-la como um componente agrupado com um ou mais aplicativos.</span><span class="sxs-lookup"><span data-stu-id="628b8-107">When you finish your class library, you can decide whether you want to distribute it as a third-party component or whether you want to include it as a bundled component with one or more applications.</span></span>
 
 > [!NOTE]
-> Para obter uma lista das versões do .NET Standard e as plataformas às quais elas dão suporte, consulte [.NET Standard](../../standard/net-standard.md).
+> <span data-ttu-id="628b8-108">Para obter uma lista das versões do .NET Standard e as plataformas às quais elas dão suporte, consulte [.NET Standard](../../standard/net-standard.md).</span><span class="sxs-lookup"><span data-stu-id="628b8-108">For a list of the .NET Standard versions and the platforms they support, see [.NET Standard](../../standard/net-standard.md).</span></span>
 
-Neste tópico, você criará uma biblioteca de utilitários simples que contém um único método de manipulação de cadeia de caracteres. Você implementará essa biblioteca como um [método de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md), para que você possa chamá-la como se fosse membro da classe <xref:System.String>.
+<span data-ttu-id="628b8-109">Neste tópico, você criará uma biblioteca de utilitários simples que contém um único método de manipulação de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="628b8-109">In this topic, you'll create a simple utility library that contains a single string-handling method.</span></span> <span data-ttu-id="628b8-110">Você implementará essa biblioteca como um [método de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md), para que você possa chamá-la como se fosse membro da classe <xref:System.String>.</span><span class="sxs-lookup"><span data-stu-id="628b8-110">You'll implement it as an [extension method](../../csharp/programming-guide/classes-and-structs/extension-methods.md) so that you can call it as if it were a member of the <xref:System.String> class.</span></span>
 
-## <a name="creating-a-class-library-solution"></a>Criar uma solução de biblioteca de classes
+## <a name="creating-a-class-library-solution"></a><span data-ttu-id="628b8-111">Criar uma solução de biblioteca de classes</span><span class="sxs-lookup"><span data-stu-id="628b8-111">Creating a class library solution</span></span>
 
-Comece criando uma solução para seu projeto de biblioteca de classes e seus projetos relacionados. Uma solução do Visual Studio serve como um contêiner para um ou mais projetos. Para criar a solução:
+<span data-ttu-id="628b8-112">Comece criando uma solução para seu projeto de biblioteca de classes e seus projetos relacionados.</span><span class="sxs-lookup"><span data-stu-id="628b8-112">Start by creating a solution for your class library project and its related projects.</span></span> <span data-ttu-id="628b8-113">Uma solução do Visual Studio serve como um contêiner para um ou mais projetos.</span><span class="sxs-lookup"><span data-stu-id="628b8-113">A Visual Studio Solution just serves as a container for one or more projects.</span></span> <span data-ttu-id="628b8-114">Para criar a solução:</span><span class="sxs-lookup"><span data-stu-id="628b8-114">To create the solution:</span></span>
 
-1. Na barra de menus do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto**.
+1. <span data-ttu-id="628b8-115">Na barra de menus do Visual Studio, escolha **Arquivo** > **Novo** > **Projeto**.</span><span class="sxs-lookup"><span data-stu-id="628b8-115">On the Visual Studio menu bar, choose **File** > **New** > **Project**.</span></span>
 
-1. Na caixa de diálogo **Novo Projeto**, expanda o nó **Outros Tipos de Projeto** e selecione **Soluções Visual Studio**. Nomeie a solução "ClassLibraryProjects" e selecione o botão **OK**.
+1. <span data-ttu-id="628b8-116">Na caixa de diálogo **Novo Projeto**, expanda o nó **Outros Tipos de Projeto** e selecione **Soluções Visual Studio**.</span><span class="sxs-lookup"><span data-stu-id="628b8-116">In the **New Project** dialog, expand the **Other Project Types** node, and select **Visual Studio Solutions**.</span></span> <span data-ttu-id="628b8-117">Nomeie a solução "ClassLibraryProjects" e selecione o botão **OK**.</span><span class="sxs-lookup"><span data-stu-id="628b8-117">Name the solution "ClassLibraryProjects" and select the **OK** button.</span></span>
 
    ![Caixa de diálogo Novo projeto](./media/library-with-visual-studio/newproject.png)
 
-## <a name="creating-the-class-library-project"></a>Criar o projeto de biblioteca de classes
+## <a name="creating-the-class-library-project"></a><span data-ttu-id="628b8-119">Criar o projeto de biblioteca de classes</span><span class="sxs-lookup"><span data-stu-id="628b8-119">Creating the class library project</span></span>
 
-Crie seu projeto de biblioteca de classes:
+<span data-ttu-id="628b8-120">Crie seu projeto de biblioteca de classes:</span><span class="sxs-lookup"><span data-stu-id="628b8-120">Create your class library project:</span></span>
 
-1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo da solução **ClassLibraryProjects** e, no menu de contexto, selecione **Adicionar** > **Novo Projeto**.
+1. <span data-ttu-id="628b8-121">No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo da solução **ClassLibraryProjects** e, no menu de contexto, selecione **Adicionar** > **Novo Projeto**.</span><span class="sxs-lookup"><span data-stu-id="628b8-121">In **Solution Explorer**, right-click on the **ClassLibraryProjects** solution file and from the context menu, select **Add** > **New Project**.</span></span>
 
-1. Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual C#** e selecione o nó **.NET Standard** seguido pelo modelo de projeto **Biblioteca de classes (.NET Standard)**. Na caixa de texto **Nome**, digite "StringLibrary" como o nome do projeto. Selecione **OK** para criar o projeto de biblioteca de classes.
+1. <span data-ttu-id="628b8-122">Na caixa de diálogo **Adicionar novo projeto**, expanda o nó **Visual C#** e selecione o nó **.NET Standard** seguido pelo modelo de projeto **Biblioteca de classes (.NET Standard)**.</span><span class="sxs-lookup"><span data-stu-id="628b8-122">In the **Add New Project** dialog, expand the **Visual C#** node, then select the **.NET Standard** node followed by the **Class Library (.NET Standard)** project template.</span></span> <span data-ttu-id="628b8-123">Na caixa de texto **Nome**, digite "StringLibrary" como o nome do projeto.</span><span class="sxs-lookup"><span data-stu-id="628b8-123">In the **Name** text box, enter "StringLibrary" as the name of the project.</span></span> <span data-ttu-id="628b8-124">Selecione **OK** para criar o projeto de biblioteca de classes.</span><span class="sxs-lookup"><span data-stu-id="628b8-124">Select **OK** to create the class library project.</span></span>
 
    ![Caixa de diálogo Adicionar Novo Projeto](./media/library-with-visual-studio/libproject.png)
 
-   Em seguida, a janela de código é aberta no ambiente de desenvolvimento do Visual Studio.
+   <span data-ttu-id="628b8-126">Em seguida, a janela de código é aberta no ambiente de desenvolvimento do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="628b8-126">The code window then opens in the Visual Studio development environment.</span></span>
 
    ![Janela do aplicativo do Visual Studio mostrando o código de modelo de biblioteca de classes padrão](./media/library-with-visual-studio/stringlibrary.png)
 
-1. Certifique-se de que a nossa biblioteca direciona a versão correta do .NET Standard. Clique com o botão direito do mouse no projeto da biblioteca na janela **Gerenciador de Soluções** e, em seguida, selecione **Propriedades**. A caixa de texto **Estrutura de Destino** mostra que estamos direcionando o .NET Standard 2.0.
+1. <span data-ttu-id="628b8-128">Certifique-se de que a nossa biblioteca direciona a versão correta do .NET Standard.</span><span class="sxs-lookup"><span data-stu-id="628b8-128">Check to make sure that our library targets the correct version of the .NET Standard.</span></span> <span data-ttu-id="628b8-129">Clique com o botão direito do mouse no projeto da biblioteca na janela **Gerenciador de Soluções** e, em seguida, selecione **Propriedades**.</span><span class="sxs-lookup"><span data-stu-id="628b8-129">Right-click on the library project in the **Solution Explorer** windows, then select **Properties**.</span></span> <span data-ttu-id="628b8-130">A caixa de texto **Estrutura de Destino** mostra que estamos direcionando o .NET Standard 2.0.</span><span class="sxs-lookup"><span data-stu-id="628b8-130">The **Target Framework** text box shows that we're targeting .NET Standard 2.0.</span></span>
 
    ![Propriedades do projeto da biblioteca de classes](./media/library-with-visual-studio/properties.png)
 
-1. Substitua o código na janela de código pelo mostrado a seguir e salve o arquivo:
+1. <span data-ttu-id="628b8-132">Substitua o código na janela de código pelo mostrado a seguir e salve o arquivo:</span><span class="sxs-lookup"><span data-stu-id="628b8-132">Replace the code in the code window with the following code and save the file:</span></span>
 
-   [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
+   <span data-ttu-id="628b8-133">[!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]</span><span class="sxs-lookup"><span data-stu-id="628b8-133">[!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]</span></span>
 
-   A biblioteca de classes, `UtilityLibraries.StringLibrary`, contém um método chamado `StartsWithUpper`, que retorna um valor <xref:System.Boolean> indicando se a instância atual da cadeia de caracteres começa com um caractere maiúsculo. O padrão Unicode distingue caracteres maiúsculos de caracteres minúsculos. O método <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> retornará `true` se um caractere for maiúsculo.
+   <span data-ttu-id="628b8-134">A biblioteca de classes, `UtilityLibraries.StringLibrary`, contém um método chamado `StartsWithUpper`, que retorna um valor <xref:System.Boolean> indicando se a instância atual da cadeia de caracteres começa com um caractere maiúsculo.</span><span class="sxs-lookup"><span data-stu-id="628b8-134">The class library, `UtilityLibraries.StringLibrary`, contains a method named `StartsWithUpper`, which returns a <xref:System.Boolean> value that indicates whether the current string instance begins with an uppercase character.</span></span> <span data-ttu-id="628b8-135">O padrão Unicode distingue caracteres maiúsculos de caracteres minúsculos.</span><span class="sxs-lookup"><span data-stu-id="628b8-135">The Unicode standard distinguishes uppercase characters from lowercase characters.</span></span> <span data-ttu-id="628b8-136">O método <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> retornará `true` se um caractere for maiúsculo.</span><span class="sxs-lookup"><span data-stu-id="628b8-136">The <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> method returns `true` if a character is uppercase.</span></span>
 
-1. Na barra de menus, selecione **Compilar** > **Compilar Solução**. O projeto deve ser compilado sem erros.
+1. <span data-ttu-id="628b8-137">Na barra de menus, selecione **Compilar** > **Compilar Solução**.</span><span class="sxs-lookup"><span data-stu-id="628b8-137">On the menu bar, select **Build** > **Build Solution**.</span></span> <span data-ttu-id="628b8-138">O projeto deve ser compilado sem erros.</span><span class="sxs-lookup"><span data-stu-id="628b8-138">The project should compile without error.</span></span>
 
    ![Painel de saída mostrando que o build foi bem-sucedido](./media/library-with-visual-studio/buildsucceeds.png)
 
-## <a name="next-step"></a>Próximas etapas
+## <a name="next-step"></a><span data-ttu-id="628b8-140">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="628b8-140">Next step</span></span>
 
-Você compilou com êxito a biblioteca. Mas como você ainda não chamou nenhum de seus métodos, não sabe se ele funciona como esperado. A próxima etapa no desenvolvimento de sua biblioteca é testá-la usando um [Projeto de Teste de Unidade](testing-library-with-visual-studio.md).
+<span data-ttu-id="628b8-141">Você compilou com êxito a biblioteca.</span><span class="sxs-lookup"><span data-stu-id="628b8-141">You've successfully built the library.</span></span> <span data-ttu-id="628b8-142">Mas como você ainda não chamou nenhum de seus métodos, não sabe se ele funciona como esperado.</span><span class="sxs-lookup"><span data-stu-id="628b8-142">Because you haven't called any of its methods, you don't know whether it works as expected.</span></span> <span data-ttu-id="628b8-143">A próxima etapa no desenvolvimento de sua biblioteca é testá-la usando um [Projeto de Teste de Unidade](testing-library-with-visual-studio.md).</span><span class="sxs-lookup"><span data-stu-id="628b8-143">The next step in developing your library is to test it by using a [Unit Test Project](testing-library-with-visual-studio.md).</span></span>

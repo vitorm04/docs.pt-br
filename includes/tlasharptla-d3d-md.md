@@ -1,1 +1,1 @@
-Microsoft Direct3D
+<span data-ttu-id="c6e57-101">Microsoft Direct3D</span><span class="sxs-lookup"><span data-stu-id="c6e57-101">Microsoft Direct3D</span></span>

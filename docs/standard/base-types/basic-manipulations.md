@@ -9,20 +9,21 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 141d5c94-08db-469c-8a33-708c0d3bba42
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
 ms.openlocfilehash: a8c0433564c1922adf338d230c14d0d3a110f44a
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/02/2017
 
 ---
 
-# <a name="how-to-perform-basic-string-manipulations"></a>Como executar manipulações de cadeias de caracteres básicas
+# <a name="how-to-perform-basic-string-manipulations"></a><span data-ttu-id="26d3a-104">Como executar manipulações de cadeias de caracteres básicas</span><span class="sxs-lookup"><span data-stu-id="26d3a-104">How to: perform basic string manipulations</span></span>
 
-O exemplo a seguir usa alguns dos métodos discutidos nos tópicos de [Operações de cadeias de caracteres básicas](basic-string-operations.md) para construir uma classe que realiza manipulações de cadeia de caracteres de uma maneira que pode ser encontrada em um aplicativo real. A classe `MailToData` armazena o nome e endereço de um indivíduo em propriedades separadas e fornece uma maneira de combinar os campos `City`, `State` e `Zip` em uma única cadeia de caracteres para exibição para o usuário. Além disso, a classe permite que o usuário insira as informações de cidade, estado e CEP como uma única cadeia de caracteres. O aplicativo automaticamente analisa a única cadeia de caracteres e insere as informações adequadas na propriedade correspondente.
+<span data-ttu-id="26d3a-105">O exemplo a seguir usa alguns dos métodos discutidos nos tópicos de [Operações de cadeias de caracteres básicas](basic-string-operations.md) para construir uma classe que realiza manipulações de cadeia de caracteres de uma maneira que pode ser encontrada em um aplicativo real.</span><span class="sxs-lookup"><span data-stu-id="26d3a-105">The following example uses some of the methods discussed in the [Basic string operations](basic-string-operations.md) topics to construct a class that performs string manipulations in a manner that might be found in a real-world application.</span></span> <span data-ttu-id="26d3a-106">A classe `MailToData` armazena o nome e endereço de um indivíduo em propriedades separadas e fornece uma maneira de combinar os campos `City`, `State` e `Zip` em uma única cadeia de caracteres para exibição para o usuário.</span><span class="sxs-lookup"><span data-stu-id="26d3a-106">The `MailToData` class stores the name and address of an individual in separate properties and provides a way to combine the `City`, `State`, and `Zip` fields into a single string for display to the user.</span></span> <span data-ttu-id="26d3a-107">Além disso, a classe permite que o usuário insira as informações de cidade, estado e CEP como uma única cadeia de caracteres. O aplicativo automaticamente analisa a única cadeia de caracteres e insere as informações adequadas na propriedade correspondente.</span><span class="sxs-lookup"><span data-stu-id="26d3a-107">Furthermore, the class allows the user to enter the city, state, and ZIP Code information as a single string; the application automatically parses the single string and enters the proper information into the corresponding property.</span></span>
 
-Para simplificar, este exemplo usa um aplicativo de console com uma interface de linha de comando.
+<span data-ttu-id="26d3a-108">Para simplificar, este exemplo usa um aplicativo de console com uma interface de linha de comando.</span><span class="sxs-lookup"><span data-stu-id="26d3a-108">For simplicity, this example uses a console application with a command-line interface.</span></span>
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a><span data-ttu-id="26d3a-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="26d3a-109">Example</span></span>
 
 ```csharp
 using System;
@@ -299,9 +300,9 @@ Public Class MailToData
 End Class
 ```
 
-Quando o código anterior é executado, é solicitado que o usuário insira seu nome e endereço. O aplicativo coloca as informações nas propriedades adequadas e exibe as informações de volta para o usuário, criando uma única cadeia de caracteres que exibe as informações de cidade, estado e CEP.
+<span data-ttu-id="26d3a-110">Quando o código anterior é executado, é solicitado que o usuário insira seu nome e endereço.</span><span class="sxs-lookup"><span data-stu-id="26d3a-110">When the preceding code is executed, the user is asked to enter his or her name and address.</span></span> <span data-ttu-id="26d3a-111">O aplicativo coloca as informações nas propriedades adequadas e exibe as informações de volta para o usuário, criando uma única cadeia de caracteres que exibe as informações de cidade, estado e CEP.</span><span class="sxs-lookup"><span data-stu-id="26d3a-111">The application places the information in the appropriate properties and displays the information back to the user, creating a single string that displays the city, state, and ZIP Code information.</span></span>
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a><span data-ttu-id="26d3a-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="26d3a-112">See Also</span></span>
 
-[Operações básicas de cadeias de caracteres](basic-string-operations.md)
+[<span data-ttu-id="26d3a-113">Operações básicas de cadeias de caracteres</span><span class="sxs-lookup"><span data-stu-id="26d3a-113">Basic string operations</span></span>](basic-string-operations.md)
 

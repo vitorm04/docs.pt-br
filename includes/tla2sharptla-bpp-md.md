@@ -1,1 +1,1 @@
-BPP
+<span data-ttu-id="733b6-101">BPP</span><span class="sxs-lookup"><span data-stu-id="733b6-101">BPP</span></span>

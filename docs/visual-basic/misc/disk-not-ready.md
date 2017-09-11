@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e3d48f156a6903740cffe5014e84e99209123e37
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f9565950837c2a39e86eb63f8acf507434777d73
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="disk-not-ready"></a>Disco não está pronto
-Para a unidade especificada, não há nenhum disco ou a porta está aberta.  
+# <a name="disk-not-ready"></a><span data-ttu-id="ad960-102">Disco não está pronto</span><span class="sxs-lookup"><span data-stu-id="ad960-102">Disk not ready</span></span>
+<span data-ttu-id="ad960-103">Para a unidade especificada, não há nenhum disco ou a porta está aberta.</span><span class="sxs-lookup"><span data-stu-id="ad960-103">For the specified drive, either there is no disk or the drive door is open.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ad960-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="ad960-104">To correct this error</span></span>  
   
-1.  Verifique o drive especificado e insira um disco se necessário.  
+1.  <span data-ttu-id="ad960-105">Verifique o drive especificado e insira um disco se necessário.</span><span class="sxs-lookup"><span data-stu-id="ad960-105">Check the specified drive and insert a disk if necessary.</span></span>  
   
-2.  Feche a porta da unidade.  
+2.  <span data-ttu-id="ad960-106">Feche a porta da unidade.</span><span class="sxs-lookup"><span data-stu-id="ad960-106">Close the drive door.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="ad960-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ad960-107">See Also</span></span>  
+ [<span data-ttu-id="ad960-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="ad960-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -1,1 +1,1 @@
-RIFF
+<span data-ttu-id="2d3ee-101">RIFF</span><span class="sxs-lookup"><span data-stu-id="2d3ee-101">RIFF</span></span>

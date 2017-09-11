@@ -1,1 +1,1 @@
-ID (identificador)
+<span data-ttu-id="bbb20-101">ID (identificador)</span><span class="sxs-lookup"><span data-stu-id="bbb20-101">identifier (ID)</span></span>

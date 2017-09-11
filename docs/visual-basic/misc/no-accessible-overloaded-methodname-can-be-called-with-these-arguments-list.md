@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 549804a802332163dc7cc2729a5d85e3a0feeb95
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 57981991a0d2a447928f43ce154cd0cadeb46782
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a>Não acessível '&lt;methodname&gt;' pode ser chamado com esses argumentos: &lt;lista&gt;
-Um método sobrecarregado é chamado, mas nenhum método pode ser combinado com a lista de argumentos fornecidos.  
+# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-ltlistgt"></a><span data-ttu-id="6914f-102">Não acessível '&lt;methodname&gt;' pode ser chamado com esses argumentos: &lt;lista&gt;</span><span class="sxs-lookup"><span data-stu-id="6914f-102">No accessible overloaded &#39;&lt;methodname&gt;&#39; can be called with these arguments: &lt;list&gt;</span></span>
+<span data-ttu-id="6914f-103">Um método sobrecarregado é chamado, mas nenhum método pode ser combinado com a lista de argumentos fornecidos.</span><span class="sxs-lookup"><span data-stu-id="6914f-103">An overloaded method is called, but no method can be matched with the list of arguments provided.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6914f-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6914f-104">To correct this error</span></span>  
   
--   Corresponde a lista de argumentos contra a sobrecarga que você pretende chamar.  
+-   <span data-ttu-id="6914f-105">Corresponde a lista de argumentos contra a sobrecarga que você pretende chamar.</span><span class="sxs-lookup"><span data-stu-id="6914f-105">Match the argument list against the overload you intended to call.</span></span>  
   
--   Ajuste a lista de argumentos para que a assinatura coincida com a sobrecarga.  
+-   <span data-ttu-id="6914f-106">Ajuste a lista de argumentos para que a assinatura coincida com a sobrecarga.</span><span class="sxs-lookup"><span data-stu-id="6914f-106">Adjust the argument list so that the signature matches the overload.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="6914f-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6914f-107">See Also</span></span>  
+ [<span data-ttu-id="6914f-108">Passando Argumentos por Valor e por Referência</span><span class="sxs-lookup"><span data-stu-id="6914f-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

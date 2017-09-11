@@ -32,26 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7446e4046d8e63e98cfb3f8e11eab50a53ebe887
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 94b2be119c825ccdb871166fcd9d5d33feb50a16
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-write-output-to-memory"></a>Não foi possível gravar a saída na memória
-Houve um problema ao gravar a saída na memória.  
+# <a name="unable-to-write-output-to-memory"></a><span data-ttu-id="032cb-102">Não foi possível gravar a saída na memória</span><span class="sxs-lookup"><span data-stu-id="032cb-102">Unable to write output to memory</span></span>
+<span data-ttu-id="032cb-103">Houve um problema ao gravar a saída na memória.</span><span class="sxs-lookup"><span data-stu-id="032cb-103">There was a problem writing output to memory.</span></span>  
   
- **ID do erro:** BC31020  
+ <span data-ttu-id="032cb-104">**ID do erro:** BC31020</span><span class="sxs-lookup"><span data-stu-id="032cb-104">**Error ID:** BC31020</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="032cb-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="032cb-105">To correct this error</span></span>  
   
-1.  Compile o programa novamente para verificar se o erro persiste.  
+1.  <span data-ttu-id="032cb-106">Compile o programa novamente para verificar se o erro persiste.</span><span class="sxs-lookup"><span data-stu-id="032cb-106">Compile the program again to see if the error reoccurs.</span></span>  
   
-2.  Se o erro persistir, salve seu trabalho e reinicie o [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].  
+2.  <span data-ttu-id="032cb-107">Se o erro persistir, salve seu trabalho e reinicie o [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span><span class="sxs-lookup"><span data-stu-id="032cb-107">If the error continues, save your work and restart [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-3.  Se o erro persistir, reinstale o [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+3.  <span data-ttu-id="032cb-108">Se o erro persistir, reinstale o [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="032cb-108">If the error recurs, reinstall [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-4.  Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.  
+4.  <span data-ttu-id="032cb-109">Se o erro persistir após a reinstalação, notifique o Microsoft Product Support Services.</span><span class="sxs-lookup"><span data-stu-id="032cb-109">If the error persists after reinstallation, notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Fale conosco](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="032cb-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="032cb-110">See Also</span></span>  
+ [<span data-ttu-id="032cb-111">Fale conosco</span><span class="sxs-lookup"><span data-stu-id="032cb-111">Talk to Us</span></span>](https://docs.microsoft.com/visualstudio/ide/talk-to-us)

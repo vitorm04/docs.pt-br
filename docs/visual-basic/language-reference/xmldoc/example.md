@@ -32,34 +32,34 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 279b9e675e358ce8d5aa2171984c0e48afe66558
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 7b2027b255a7071944422dcac25b89e4d5531a52
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/01/2017
 
 ---
-# <a name="ltexamplegt-visual-basic"></a>&lt;exemplo&gt; (Visual Basic)
-Especifica um exemplo para o membro.  
+# <a name="ltexamplegt-visual-basic"></a><span data-ttu-id="c847c-102">&lt;exemplo&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c847c-102">&lt;example&gt; (Visual Basic)</span></span>
+<span data-ttu-id="c847c-103">Especifica um exemplo para o membro.</span><span class="sxs-lookup"><span data-stu-id="c847c-103">Specifies an example for the member.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="c847c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c847c-104">Syntax</span></span>  
   
 ```xml  
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a><span data-ttu-id="c847c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c847c-105">Parameters</span></span>  
  `description`  
- Uma descrição do código de exemplo.  
+ <span data-ttu-id="c847c-106">Uma descrição do código de exemplo.</span><span class="sxs-lookup"><span data-stu-id="c847c-106">A description of the code sample.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `<example>` marca permite que você especifique um exemplo de como usar um método ou outro membro da biblioteca. Isso normalmente envolve usar a [ \<código >](../../../visual-basic/language-reference/xmldoc/code.md) marca.  
+## <a name="remarks"></a><span data-ttu-id="c847c-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="c847c-107">Remarks</span></span>  
+ <span data-ttu-id="c847c-108">O `<example>` marca permite que você especifique um exemplo de como usar um método ou outro membro da biblioteca.</span><span class="sxs-lookup"><span data-stu-id="c847c-108">The `<example>` tag lets you specify an example of how to use a method or other library member.</span></span> <span data-ttu-id="c847c-109">Isso normalmente envolve usar a [ \<código >](../../../visual-basic/language-reference/xmldoc/code.md) marca.</span><span class="sxs-lookup"><span data-stu-id="c847c-109">This commonly involves using the [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) tag.</span></span>  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.  
+ <span data-ttu-id="c847c-110">Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.</span><span class="sxs-lookup"><span data-stu-id="c847c-110">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo usa o `<example>` tag para incluir um exemplo para usar o `ID` campo.  
+## <a name="example"></a><span data-ttu-id="c847c-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c847c-111">Example</span></span>  
+ <span data-ttu-id="c847c-112">Este exemplo usa o `<example>` tag para incluir um exemplo para usar o `ID` campo.</span><span class="sxs-lookup"><span data-stu-id="c847c-112">This example uses the `<example>` tag to include an example for using the `ID` field.</span></span>  
   
- [!code-vb[VbVbcnXmlDocComments n º&2;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
+ <span data-ttu-id="c847c-113">[!code-vb[VbVbcnXmlDocComments n º&2;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="c847c-113">[!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="c847c-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c847c-114">See Also</span></span>  
+ [<span data-ttu-id="c847c-115">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="c847c-115">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

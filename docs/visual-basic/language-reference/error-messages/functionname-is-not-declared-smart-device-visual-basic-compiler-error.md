@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 022640c1a06e21ea4d3d8d4d389f664881a5c70b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: df3e28a250f826a21075632ff0dd878e1fc0bdc2
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'&lt;functionname&gt;' não está declarado (dispositivo inteligente/básica compilador erro Visual)
-<`functionname`> não está declarado. A funcionalidade de e/s de arquivo está normalmente disponível no `Microsoft.VisualBasic` namespace, mas a versão de destino do .NET Compact Framework não oferecer suporte a ele.  
+# <a name="39ltfunctionnamegt39-is-not-declared-smart-devicevisual-basic-compiler-error"></a><span data-ttu-id="29679-102">'&lt;functionname&gt;' não está declarado (dispositivo inteligente/básica compilador erro Visual)</span><span class="sxs-lookup"><span data-stu-id="29679-102">&#39;&lt;functionname&gt;&#39; is not declared (Smart Device/Visual Basic Compiler Error)</span></span>
+<span data-ttu-id="29679-103"><`functionname`> não está declarado.</span><span class="sxs-lookup"><span data-stu-id="29679-103"><`functionname`> is not declared.</span></span> <span data-ttu-id="29679-104">A funcionalidade de e/s de arquivo está normalmente disponível no `Microsoft.VisualBasic` namespace, mas a versão de destino do .NET Compact Framework não oferecer suporte a ele.</span><span class="sxs-lookup"><span data-stu-id="29679-104">File I/O functionality is normally available in the `Microsoft.VisualBasic` namespace, but the targeted version of the .NET Compact Framework does not support it.</span></span>  
   
- **ID do erro:** BC30766  
+ <span data-ttu-id="29679-105">**ID do erro:** BC30766</span><span class="sxs-lookup"><span data-stu-id="29679-105">**Error ID:** BC30766</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="29679-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="29679-106">To correct this error</span></span>  
   
--   Executar operações de arquivo com funções definidas no `System.IO` namespace.  
+-   <span data-ttu-id="29679-107">Executar operações de arquivo com funções definidas no `System.IO` namespace.</span><span class="sxs-lookup"><span data-stu-id="29679-107">Perform file operations with functions defined in the `System.IO` namespace.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO></xref:System.IO>   
- [Access de arquivo com o Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+## <a name="see-also"></a><span data-ttu-id="29679-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="29679-108">See Also</span></span>  
+ <span data-ttu-id="29679-109"><xref:System.IO></xref:System.IO></span><span class="sxs-lookup"><span data-stu-id="29679-109"><xref:System.IO></span></span>   
+<span data-ttu-id="29679-110"> [Access de arquivo com o Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)</span><span class="sxs-lookup"><span data-stu-id="29679-110"> [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)</span></span>

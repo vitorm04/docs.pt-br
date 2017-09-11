@@ -26,11 +26,11 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>Parâmetros e valores retornados para procedimentos multi-threaded (C#)
-Fornecer e retornar valores em um aplicativo multithread é complicado porque o construtor para a classe thread deve ser passado como uma referência para um procedimento que não leva argumentos e não retorna nenhum valor. As seções a seguir mostram algumas maneiras simples de fornecer parâmetros e retornar valores de procedimentos em threads separados.  
+# <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a><span data-ttu-id="74c4c-102">Parâmetros e valores retornados para procedimentos multi-threaded (C#)</span><span class="sxs-lookup"><span data-stu-id="74c4c-102">Parameters and Return Values for Multithreaded Procedures (C#)</span></span>
+<span data-ttu-id="74c4c-103">Fornecer e retornar valores em um aplicativo multithread é complicado porque o construtor para a classe thread deve ser passado como uma referência para um procedimento que não leva argumentos e não retorna nenhum valor.</span><span class="sxs-lookup"><span data-stu-id="74c4c-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="74c4c-104">As seções a seguir mostram algumas maneiras simples de fornecer parâmetros e retornar valores de procedimentos em threads separados.</span><span class="sxs-lookup"><span data-stu-id="74c4c-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  
   
-## <a name="supplying-parameters-for-multithreaded-procedures"></a>Fornecendo parâmetros para procedimentos multithread  
- A melhor maneira de fornecer parâmetros para uma chamada de método multithread é encapsular o método de destino em uma classe e definir campos para essa classe que servirão de parâmetros para o novo thread. A vantagem dessa abordagem é que você pode criar uma nova instância da classe, com seus próprios parâmetros, toda vez que desejar iniciar um novo thread. Por exemplo, suponha que você tenha uma função que calcula a área de um triângulo, como no código a seguir:  
+## <a name="supplying-parameters-for-multithreaded-procedures"></a><span data-ttu-id="74c4c-105">Fornecendo parâmetros para procedimentos multithread</span><span class="sxs-lookup"><span data-stu-id="74c4c-105">Supplying Parameters for Multithreaded Procedures</span></span>  
+ <span data-ttu-id="74c4c-106">A melhor maneira de fornecer parâmetros para uma chamada de método multithread é encapsular o método de destino em uma classe e definir campos para essa classe que servirão de parâmetros para o novo thread.</span><span class="sxs-lookup"><span data-stu-id="74c4c-106">The best way to supply parameters for a multithreaded method call is to wrap the target method in a class and define fields for that class that will serve as parameters for the new thread.</span></span> <span data-ttu-id="74c4c-107">A vantagem dessa abordagem é que você pode criar uma nova instância da classe, com seus próprios parâmetros, toda vez que desejar iniciar um novo thread.</span><span class="sxs-lookup"><span data-stu-id="74c4c-107">The advantage of this approach is that you can create a new instance of the class, with its own parameters, every time you want to start a new thread.</span></span> <span data-ttu-id="74c4c-108">Por exemplo, suponha que você tenha uma função que calcula a área de um triângulo, como no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="74c4c-108">For example, suppose you have a function that calculates the area of a triangle, as in the following code:</span></span>  
   
 ```csharp  
 double CalcArea(double Base, double Height)  
@@ -39,7 +39,7 @@ double CalcArea(double Base, double Height)
 }  
 ```  
   
- Você pode escrever uma classe que encapsula a função `CalcArea` e cria campos para armazenar parâmetros de entrada, da seguinte maneira:  
+ <span data-ttu-id="74c4c-109">Você pode escrever uma classe que encapsula a função `CalcArea` e cria campos para armazenar parâmetros de entrada, da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="74c4c-109">You can write a class that wraps the `CalcArea` function and creates fields to store input parameters, as follows:</span></span>  
   
 ```csharp  
 class AreaClass  
@@ -55,7 +55,7 @@ class AreaClass
 }  
 ```  
   
- Para usar o `AreaClass`, você pode criar um objeto `AreaClass` e definir as propriedades `Base` e `Height` conforme mostrado no código a seguir:  
+ <span data-ttu-id="74c4c-110">Para usar o `AreaClass`, você pode criar um objeto `AreaClass` e definir as propriedades `Base` e `Height` conforme mostrado no código a seguir:</span><span class="sxs-lookup"><span data-stu-id="74c4c-110">To use the `AreaClass`, you can create an `AreaClass` object, and set the `Base` and `Height` properties as shown in the following code:</span></span>  
   
 ```csharp  
 protected void TestArea()  
@@ -70,12 +70,12 @@ protected void TestArea()
 }  
 ```  
   
- Observe que o procedimento `TestArea` não verifica o valor do campo `Area` após chamar o método `CalcArea`. Como o `CalcArea` é executado em um thread separado, não há garantia de que o campo `Area` estará definido se você o verificar imediatamente após chamar `Thread.Start`. A próxima seção discute uma maneira melhor de retornar valores de procedimentos multithread.  
+ <span data-ttu-id="74c4c-111">Observe que o procedimento `TestArea` não verifica o valor do campo `Area` após chamar o método `CalcArea`.</span><span class="sxs-lookup"><span data-stu-id="74c4c-111">Notice that the `TestArea` procedure does not check the value of the `Area` field after calling the `CalcArea` method.</span></span> <span data-ttu-id="74c4c-112">Como o `CalcArea` é executado em um thread separado, não há garantia de que o campo `Area` estará definido se você o verificar imediatamente após chamar `Thread.Start`.</span><span class="sxs-lookup"><span data-stu-id="74c4c-112">Because `CalcArea` runs on a separate thread, the `Area` field is not guaranteed to be set if you check it immediately after calling `Thread.Start`.</span></span> <span data-ttu-id="74c4c-113">A próxima seção discute uma maneira melhor de retornar valores de procedimentos multithread.</span><span class="sxs-lookup"><span data-stu-id="74c4c-113">The next section discusses a better way to return values from multithreaded procedures.</span></span>  
   
-## <a name="returning-values-from-multithreaded-procedures"></a>Retornando valores de procedimentos multithread  
- Retornar valores de procedimentos executados em threads separados é complicado pelo fato de que os procedimentos não podem ser funções e não podem usar argumentos `ByRef`. A maneira mais fácil de retornar valores é usar o componente <xref:System.ComponentModel.BackgroundWorker> para gerenciar os threads e acionar um evento quando a tarefa estiver concluída e processar os resultados com um manipulador de eventos.  
+## <a name="returning-values-from-multithreaded-procedures"></a><span data-ttu-id="74c4c-114">Retornando valores de procedimentos multithread</span><span class="sxs-lookup"><span data-stu-id="74c4c-114">Returning Values from Multithreaded Procedures</span></span>  
+ <span data-ttu-id="74c4c-115">Retornar valores de procedimentos executados em threads separados é complicado pelo fato de que os procedimentos não podem ser funções e não podem usar argumentos `ByRef`.</span><span class="sxs-lookup"><span data-stu-id="74c4c-115">Returning values from procedures that run on separate threads is complicated by the fact that the procedures cannot be functions and cannot use `ByRef` arguments.</span></span> <span data-ttu-id="74c4c-116">A maneira mais fácil de retornar valores é usar o componente <xref:System.ComponentModel.BackgroundWorker> para gerenciar os threads e acionar um evento quando a tarefa estiver concluída e processar os resultados com um manipulador de eventos.</span><span class="sxs-lookup"><span data-stu-id="74c4c-116">The easiest way to return values is to use the <xref:System.ComponentModel.BackgroundWorker> component to manage your threads and raise an event when the task is done, and process the results with an event handler.</span></span>  
   
- O exemplo a seguir retorna um valor acionando um evento de um procedimento em execução em um thread separado:  
+ <span data-ttu-id="74c4c-117">O exemplo a seguir retorna um valor acionando um evento de um procedimento em execução em um thread separado:</span><span class="sxs-lookup"><span data-stu-id="74c4c-117">The following example returns a value by raising an event from a procedure running on a separate thread:</span></span>  
   
 ```csharp  
 class AreaClass2  
@@ -132,14 +132,14 @@ private void BackgroundWorker1_RunWorkerCompleted(
 }  
 ```  
   
- Você pode fornecer parâmetros e retornar valores para threads de pool de threads usando a variável de objeto de estado `ByVal` do método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>. Os threads do temporizador de thread também dão suporte a um objeto de estado para essa finalidade. Para obter informações sobre o pooling de threads e os temporizadores de thread, consulte [Pooling de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) e [Temporizadores de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md).  
+ <span data-ttu-id="74c4c-118">Você pode fornecer parâmetros e retornar valores para threads de pool de threads usando a variável de objeto de estado `ByVal` do método <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>.</span><span class="sxs-lookup"><span data-stu-id="74c4c-118">You can provide parameters and return values to thread-pool threads by using the optional `ByVal` state-object variable of the <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> method.</span></span> <span data-ttu-id="74c4c-119">Os threads do temporizador de thread também dão suporte a um objeto de estado para essa finalidade.</span><span class="sxs-lookup"><span data-stu-id="74c4c-119">Thread-timer threads also support a state object for this purpose.</span></span> <span data-ttu-id="74c4c-120">Para obter informações sobre o pooling de threads e os temporizadores de thread, consulte [Pooling de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) e [Temporizadores de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md).</span><span class="sxs-lookup"><span data-stu-id="74c4c-120">For information on thread pooling and thread timers, see [Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) and [Thread Timers (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
- [Pooling de threads (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
- [Sincronização de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
- [Eventos](../../../../csharp/programming-guide/events/index.md)   
- [Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
- [Delegados](../../../../csharp/programming-guide/delegates/index.md)   
- [Multithreading em componentes](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+## <a name="see-also"></a><span data-ttu-id="74c4c-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="74c4c-121">See Also</span></span>  
+ <span data-ttu-id="74c4c-122">[Instruções passo a passo: multithreading com o componente BackgroundWorker (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md) </span><span class="sxs-lookup"><span data-stu-id="74c4c-122">[Walkthrough: Multithreading with the BackgroundWorker Component (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md) </span></span>  
+ <span data-ttu-id="74c4c-123">[Pooling de threads (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) </span><span class="sxs-lookup"><span data-stu-id="74c4c-123">[Thread Pooling (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) </span></span>  
+ <span data-ttu-id="74c4c-124">[Sincronização de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md) </span><span class="sxs-lookup"><span data-stu-id="74c4c-124">[Thread Synchronization (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md) </span></span>  
+ <span data-ttu-id="74c4c-125">[Eventos](../../../../csharp/programming-guide/events/index.md) </span><span class="sxs-lookup"><span data-stu-id="74c4c-125">[Events](../../../../csharp/programming-guide/events/index.md) </span></span>  
+ <span data-ttu-id="74c4c-126">[Aplicativos com multithread (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md) </span><span class="sxs-lookup"><span data-stu-id="74c4c-126">[Multithreaded Applications (C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md) </span></span>  
+ <span data-ttu-id="74c4c-127">[Delegados](../../../../csharp/programming-guide/delegates/index.md) </span><span class="sxs-lookup"><span data-stu-id="74c4c-127">[Delegates](../../../../csharp/programming-guide/delegates/index.md) </span></span>  
+ [<span data-ttu-id="74c4c-128">Multithreading em componentes</span><span class="sxs-lookup"><span data-stu-id="74c4c-128">Multithreading in Components</span></span>](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
 

@@ -24,22 +24,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b71d20fb2857a6de72354ae8e05708f502e7bc85
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f170d2be1e7f5e1296e4451b8757c06cb7526a5e
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>O caminho de entrada refere-se a um arquivo mas termina com um caractere separador de diretório
-Foi tentada uma operação exigir que um nome de arquivo fornecido, mas o nome fornecido termina com um caractere separador de diretório (`\`). Isso pode ser o resultado de um caminho do arquivo analisado incorretamente.  
+# <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a><span data-ttu-id="f0419-102">O caminho de entrada refere-se a um arquivo mas termina com um caractere separador de diretório</span><span class="sxs-lookup"><span data-stu-id="f0419-102">The input path refers to a file but ends with a directory separator character</span></span>
+<span data-ttu-id="f0419-103">Foi tentada uma operação exigir que um nome de arquivo fornecido, mas o nome fornecido termina com um caractere separador de diretório (`\`).</span><span class="sxs-lookup"><span data-stu-id="f0419-103">An operation was attempted requiring that a filename be supplied, but the supplied name ends with a directory separator character (`\`).</span></span> <span data-ttu-id="f0419-104">Isso pode ser o resultado de um caminho do arquivo analisado incorretamente.</span><span class="sxs-lookup"><span data-stu-id="f0419-104">This may be the result of an incorrectly parsed file path.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f0419-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f0419-105">To correct this error</span></span>  
   
--   Verifique o caminho do arquivo fornecido para garantir que ele está correto.  
+-   <span data-ttu-id="f0419-106">Verifique o caminho do arquivo fornecido para garantir que ele está correto.</span><span class="sxs-lookup"><span data-stu-id="f0419-106">Check the file path you supplied to ensure it is correct.</span></span>  
   
--   Remova os caracteres estranhos.  
+-   <span data-ttu-id="f0419-107">Remova os caracteres estranhos.</span><span class="sxs-lookup"><span data-stu-id="f0419-107">Remove the extraneous character.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Como: analisar caminhos de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)   
- [Leitura de arquivos](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [Gravando em arquivos](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a><span data-ttu-id="f0419-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f0419-108">See Also</span></span>  
+ <span data-ttu-id="f0419-109">[Como: analisar caminhos de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md) </span><span class="sxs-lookup"><span data-stu-id="f0419-109">[How to: Parse File Paths](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md) </span></span>  
+<span data-ttu-id="f0419-110"> [Leitura de arquivos](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md) </span><span class="sxs-lookup"><span data-stu-id="f0419-110"> [Reading from Files](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md) </span></span>  
+<span data-ttu-id="f0419-111"> [Gravando em arquivos](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)</span><span class="sxs-lookup"><span data-stu-id="f0419-111"> [Writing to Files](../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)</span></span>

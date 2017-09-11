@@ -32,44 +32,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ad40a538f12f05eae2fe3577d1208b407a4b966
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2d1e3b6adcca7e33e826ba69b23bbccfa0793ac7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Tipo ou Namespace especificado em Imports'&lt;qualifiedelementname&gt;' não contém nenhum membro público ou não foi encontrado
-Tipo ou Namespace especificado em Imports'\<qualifiedelementname >' não contém nenhum membro público ou não pode ser encontrado. Verifique se o namespace ou o tipo está definido e contém pelo menos um membro público. Verifique se que o nome do alias não contém outros aliases.  
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a><span data-ttu-id="210a9-102">Tipo ou Namespace especificado em Imports'&lt;qualifiedelementname&gt;' não contém nenhum membro público ou não foi encontrado</span><span class="sxs-lookup"><span data-stu-id="210a9-102">Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found</span></span>
+<span data-ttu-id="210a9-103">Tipo ou Namespace especificado em Imports'\<qualifiedelementname >' não contém nenhum membro público ou não pode ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="210a9-103">Namespace or type specified in the Imports '\<qualifiedelementname>' doesn't contain any public member or cannot be found.</span></span> <span data-ttu-id="210a9-104">Verifique se o namespace ou o tipo está definido e contém pelo menos um membro público.</span><span class="sxs-lookup"><span data-stu-id="210a9-104">Make sure the namespace or the type is defined and contains at least one public member.</span></span> <span data-ttu-id="210a9-105">Verifique se que o nome do alias não contém outros aliases.</span><span class="sxs-lookup"><span data-stu-id="210a9-105">Make sure the alias name doesn't contain other aliases.</span></span>  
   
- Um `Imports` instrução Especifica um elemento contido que não pode ser encontrado ou não define nenhum `Public` membros.  
+ <span data-ttu-id="210a9-106">Um `Imports` instrução Especifica um elemento contido que não pode ser encontrado ou não define nenhum `Public` membros.</span><span class="sxs-lookup"><span data-stu-id="210a9-106">An `Imports` statement specifies a containing element that either cannot be found or does not define any `Public` members.</span></span>  
   
- A *que contém o elemento* pode ser um namespace, classe, estrutura, módulo, interface ou enumeração. O elemento contido contém membros, como variáveis, procedimentos ou outros elementos contidos.  
+ <span data-ttu-id="210a9-107">A *que contém o elemento* pode ser um namespace, classe, estrutura, módulo, interface ou enumeração.</span><span class="sxs-lookup"><span data-stu-id="210a9-107">A *containing element* can be a namespace, class, structure, module, interface, or enumeration.</span></span> <span data-ttu-id="210a9-108">O elemento contido contém membros, como variáveis, procedimentos ou outros elementos contidos.</span><span class="sxs-lookup"><span data-stu-id="210a9-108">The containing element contains members, such as variables, procedures, or other containing elements.</span></span>  
   
- A finalidade da importação é permitir que seu código para acessar membros de namespace ou tipo sem ter que qualificá-los. Seu projeto também precisará adicionar uma referência para o namespace ou tipo. Para obter mais informações, consulte "Importing Containing Elements" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ <span data-ttu-id="210a9-109">A finalidade da importação é permitir que seu código para acessar membros de namespace ou tipo sem ter que qualificá-los.</span><span class="sxs-lookup"><span data-stu-id="210a9-109">The purpose of importing is to allow your code to access namespace or type members without having to qualify them.</span></span> <span data-ttu-id="210a9-110">Seu projeto também precisará adicionar uma referência para o namespace ou tipo.</span><span class="sxs-lookup"><span data-stu-id="210a9-110">Your project might also need to add a reference to the namespace or type.</span></span> <span data-ttu-id="210a9-111">Para obter mais informações, consulte "Importing Containing Elements" [referências a elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span><span class="sxs-lookup"><span data-stu-id="210a9-111">For more information, see "Importing Containing Elements" in [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
- Se o compilador não pode localizar o elemento contido, ele não pode resolver referências que o usam. Se ele acha o elemento mas o elemento não expõe nenhum `Public` membros, então nenhuma referência pode ser bem-sucedida. Em ambos os casos, faz sentido para o elemento de importação.  
+ <span data-ttu-id="210a9-112">Se o compilador não pode localizar o elemento contido, ele não pode resolver referências que o usam.</span><span class="sxs-lookup"><span data-stu-id="210a9-112">If the compiler cannot find the specified containing element, then it cannot resolve references that use it.</span></span> <span data-ttu-id="210a9-113">Se ele acha o elemento mas o elemento não expõe nenhum `Public` membros, então nenhuma referência pode ser bem-sucedida.</span><span class="sxs-lookup"><span data-stu-id="210a9-113">If it finds the element but the element does not expose any `Public` members, then no reference can be successful.</span></span> <span data-ttu-id="210a9-114">Em ambos os casos, faz sentido para o elemento de importação.</span><span class="sxs-lookup"><span data-stu-id="210a9-114">In either case it is meaningless to import the element.</span></span>  
   
- Tenha em mente que se você importar um elemento de recipiente e atribuir um alias de importação para ele, em seguida, é possível usar esse alias de importação para importar de outro elemento. O código a seguir gera um erro do compilador.  
+ <span data-ttu-id="210a9-115">Tenha em mente que se você importar um elemento de recipiente e atribuir um alias de importação para ele, em seguida, é possível usar esse alias de importação para importar de outro elemento.</span><span class="sxs-lookup"><span data-stu-id="210a9-115">Keep in mind that if you import a containing element and assign an import alias to it, then you cannot use that import alias to import another element.</span></span> <span data-ttu-id="210a9-116">O código a seguir gera um erro do compilador.</span><span class="sxs-lookup"><span data-stu-id="210a9-116">The following code generates a compiler error.</span></span>  
   
- `Imports`   `winfrm`   `= System.Windows.Forms`  
+ <span data-ttu-id="210a9-117">`Imports`   `winfrm`   `= System.Windows.Forms`</span><span class="sxs-lookup"><span data-stu-id="210a9-117">`Imports`   `winfrm`   `= System.Windows.Forms`</span></span>  
   
- `' The following statement is`   `INVALID`   `because it reuses an import alias.`  
+ <span data-ttu-id="210a9-118">`' The following statement is`   `INVALID`   `because it reuses an import alias.`</span><span class="sxs-lookup"><span data-stu-id="210a9-118">`' The following statement is`   `INVALID`   `because it reuses an import alias.`</span></span>  
   
- `Imports behav =`   `winfrm`  `.Design.Behavior`  
+ <span data-ttu-id="210a9-119">`Imports behav =`   `winfrm`  `.Design.Behavior`</span><span class="sxs-lookup"><span data-stu-id="210a9-119">`Imports behav =`   `winfrm`  `.Design.Behavior`</span></span>  
   
- **ID do erro:** BC40056  
+ <span data-ttu-id="210a9-120">**ID do erro:** BC40056</span><span class="sxs-lookup"><span data-stu-id="210a9-120">**Error ID:** BC40056</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="210a9-121">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="210a9-121">To correct this error</span></span>  
   
-1.  Verifique se o elemento contêiner está acessível do seu projeto.  
+1.  <span data-ttu-id="210a9-122">Verifique se o elemento contêiner está acessível do seu projeto.</span><span class="sxs-lookup"><span data-stu-id="210a9-122">Verify that the containing element is accessible from your project.</span></span>  
   
-2.  Verifique se a especificação do elemento contido não incluem qualquer alias de importação da importação de outro.  
+2.  <span data-ttu-id="210a9-123">Verifique se a especificação do elemento contido não incluem qualquer alias de importação da importação de outro.</span><span class="sxs-lookup"><span data-stu-id="210a9-123">Verify that the specification of the containing element does not include any import alias from another import.</span></span>  
   
-3.  Verifique se que o elemento contêiner expõe pelo menos um `Public` membro.  
+3.  <span data-ttu-id="210a9-124">Verifique se que o elemento contêiner expõe pelo menos um `Public` membro.</span><span class="sxs-lookup"><span data-stu-id="210a9-124">Verify that the containing element exposes at least one `Public` member.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Público](../../../visual-basic/language-reference/modifiers/public.md)   
- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a><span data-ttu-id="210a9-125">Consulte também</span><span class="sxs-lookup"><span data-stu-id="210a9-125">See Also</span></span>  
+ <span data-ttu-id="210a9-126">[Instrução Imports (tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) </span><span class="sxs-lookup"><span data-stu-id="210a9-126">[Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) </span></span>  
+<span data-ttu-id="210a9-127"> [Instrução Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md) </span><span class="sxs-lookup"><span data-stu-id="210a9-127"> [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md) </span></span>  
+<span data-ttu-id="210a9-128"> [Público](../../../visual-basic/language-reference/modifiers/public.md) </span><span class="sxs-lookup"><span data-stu-id="210a9-128"> [Public](../../../visual-basic/language-reference/modifiers/public.md) </span></span>  
+<span data-ttu-id="210a9-129"> [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span><span class="sxs-lookup"><span data-stu-id="210a9-129"> [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md) </span></span>  
+<span data-ttu-id="210a9-130"> [Referências a Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)</span><span class="sxs-lookup"><span data-stu-id="210a9-130"> [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)</span></span>

@@ -32,28 +32,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 193d14ae8df4d67ed22d44e1e4ca1983558c07f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9612ee72961235cae5feecbfdd19af0477e3fa4a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Como determinar a cadeia de caracteres associada a um valor de enumeração (Visual Basic)
-O <xref:System.Enum.GetValues%2A>e <xref:System.Enum.GetNames%2A>métodos permitem que você determine as cadeias de caracteres e valores associados a membros de enumeração.</xref:System.Enum.GetNames%2A> </xref:System.Enum.GetValues%2A>  
+# <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a><span data-ttu-id="c0ee2-102">Como determinar a cadeia de caracteres associada a um valor de enumeração (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0ee2-102">How to: Determine the String Associated with an Enumeration Value (Visual Basic)</span></span>
+<span data-ttu-id="c0ee2-103">O <xref:System.Enum.GetValues%2A>e <xref:System.Enum.GetNames%2A>métodos permitem que você determine as cadeias de caracteres e valores associados a membros de enumeração.</xref:System.Enum.GetNames%2A> </xref:System.Enum.GetValues%2A></span><span class="sxs-lookup"><span data-stu-id="c0ee2-103">The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.</span></span>  
   
-### <a name="to-determine-the-string-associated-with-an-enumeration"></a>Para determinar a cadeia de caracteres associada a uma enumeração  
+### <a name="to-determine-the-string-associated-with-an-enumeration"></a><span data-ttu-id="c0ee2-104">Para determinar a cadeia de caracteres associada a uma enumeração</span><span class="sxs-lookup"><span data-stu-id="c0ee2-104">To determine the string associated with an enumeration</span></span>  
   
--   Use o <xref:System.Enum.GetNames%2A>método para recuperar as cadeias de caracteres associadas com os membros de enumeração.</xref:System.Enum.GetNames%2A> Este exemplo declara uma enumeração, `flavorEnum`, em seguida, usa o <xref:System.Enum.GetNames%2A>método para exibir as cadeias de caracteres associadas a cada membro.</xref:System.Enum.GetNames%2A>  
+-   <span data-ttu-id="c0ee2-105">Use o <xref:System.Enum.GetNames%2A>método para recuperar as cadeias de caracteres associadas com os membros de enumeração.</xref:System.Enum.GetNames%2A></span><span class="sxs-lookup"><span data-stu-id="c0ee2-105">Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members.</span></span> <span data-ttu-id="c0ee2-106">Este exemplo declara uma enumeração, `flavorEnum`, em seguida, usa o <xref:System.Enum.GetNames%2A>método para exibir as cadeias de caracteres associadas a cada membro.</xref:System.Enum.GetNames%2A></span><span class="sxs-lookup"><span data-stu-id="c0ee2-106">This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.</span></span>  
   
-     [!code-vb[VbEnumsTask n º&2;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]  
+     <span data-ttu-id="c0ee2-107">[!code-vb[VbEnumsTask n º&2;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="c0ee2-107">[!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.Enum.GetValues%2A></xref:System.Enum.GetValues%2A>   
- <xref:System.Enum.GetNames%2A></xref:System.Enum.GetNames%2A>   
- <xref:System.Enum></xref:System.Enum>   
- [Como: declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [Como: fazer referência a um membro de enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Enumerações e qualificação de nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Como: iterar por uma enumeração no Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)   
- [Quando usar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [Instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)
+## <a name="see-also"></a><span data-ttu-id="c0ee2-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c0ee2-108">See Also</span></span>  
+ <span data-ttu-id="c0ee2-109"><xref:System.Enum.GetValues%2A></xref:System.Enum.GetValues%2A></span><span class="sxs-lookup"><span data-stu-id="c0ee2-109"><xref:System.Enum.GetValues%2A></span></span>   
+ <span data-ttu-id="c0ee2-110"><xref:System.Enum.GetNames%2A></xref:System.Enum.GetNames%2A></span><span class="sxs-lookup"><span data-stu-id="c0ee2-110"><xref:System.Enum.GetNames%2A></span></span>   
+ <span data-ttu-id="c0ee2-111"><xref:System.Enum></xref:System.Enum></span><span class="sxs-lookup"><span data-stu-id="c0ee2-111"><xref:System.Enum></span></span>   
+<span data-ttu-id="c0ee2-112"> [Como: declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md) </span><span class="sxs-lookup"><span data-stu-id="c0ee2-112"> [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md) </span></span>  
+<span data-ttu-id="c0ee2-113"> [Como: fazer referência a um membro de enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md) </span><span class="sxs-lookup"><span data-stu-id="c0ee2-113"> [How to: Refer to an Enumeration Member](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md) </span></span>  
+<span data-ttu-id="c0ee2-114"> [Enumerações e qualificação de nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md) </span><span class="sxs-lookup"><span data-stu-id="c0ee2-114"> [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md) </span></span>  
+<span data-ttu-id="c0ee2-115"> [Como: iterar por uma enumeração no Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md) </span><span class="sxs-lookup"><span data-stu-id="c0ee2-115"> [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md) </span></span>  
+<span data-ttu-id="c0ee2-116"> [Quando usar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md) </span><span class="sxs-lookup"><span data-stu-id="c0ee2-116"> [When to Use an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md) </span></span>  
+<span data-ttu-id="c0ee2-117"> [Instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)</span><span class="sxs-lookup"><span data-stu-id="c0ee2-117"> [Enum Statement](../../../../visual-basic/language-reference/statements/enum-statement.md)</span></span>

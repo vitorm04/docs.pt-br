@@ -26,10 +26,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>Arquivo XML de Exemplo: Pedidos de compra consolidados
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas. Os pedidos de compra de cada empresa em namespaces são separadas.  
+# <a name="sample-xml-file-consolidated-purchase-orders"></a><span data-ttu-id="cd293-102">Arquivo XML de Exemplo: Pedidos de compra consolidados</span><span class="sxs-lookup"><span data-stu-id="cd293-102">Sample XML File: Consolidated Purchase Orders</span></span>
+<span data-ttu-id="cd293-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd293-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="cd293-104">Este arquivo é um conjunto de pedidos de compra com várias formas diferentes de empresas.</span><span class="sxs-lookup"><span data-stu-id="cd293-104">This file is a set of purchase orders with different shapes from multiple companies.</span></span> <span data-ttu-id="cd293-105">Os pedidos de compra de cada empresa em namespaces são separadas.</span><span class="sxs-lookup"><span data-stu-id="cd293-105">Purchase orders from each company are in separate namespaces.</span></span>  
   
-## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
+## <a name="consolidatedpurchaseordersxml"></a><span data-ttu-id="cd293-106">ConsolidatedPurchaseOrders.xml</span><span class="sxs-lookup"><span data-stu-id="cd293-106">ConsolidatedPurchaseOrders.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -161,6 +161,6 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cd293-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cd293-107">See Also</span></span>  
+ [<span data-ttu-id="cd293-108">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="cd293-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

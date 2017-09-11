@@ -28,26 +28,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cec0d2b0519fef6d9ea5de35518ccc4c61001571
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d81565813ef1edf277961006b550ce50e8dbaa9b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="mycomputermouse-object"></a>Objeto My.Computer.Mouse
-Fornece propriedades para obter informações sobre o formato e a configuração do mouse instalado no computador local.  
+# <a name="mycomputermouse-object"></a><span data-ttu-id="0e38c-102">Objeto My.Computer.Mouse</span><span class="sxs-lookup"><span data-stu-id="0e38c-102">My.Computer.Mouse Object</span></span>
+<span data-ttu-id="0e38c-103">Fornece propriedades para obter informações sobre o formato e a configuração do mouse instalado no computador local.</span><span class="sxs-lookup"><span data-stu-id="0e38c-103">Provides properties for getting information about the format and configuration of the mouse installed on the local computer.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e propriedades do `My.Computer.Mouse` de objeto, consulte <xref:Microsoft.VisualBasic.Devices.Mouse>.</xref:Microsoft.VisualBasic.Devices.Mouse>  
+## <a name="remarks"></a><span data-ttu-id="0e38c-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="0e38c-104">Remarks</span></span>  
+ <span data-ttu-id="0e38c-105">Para obter informações sobre os métodos e propriedades do `My.Computer.Mouse` de objeto, consulte <xref:Microsoft.VisualBasic.Devices.Mouse>.</xref:Microsoft.VisualBasic.Devices.Mouse></span><span class="sxs-lookup"><span data-stu-id="0e38c-105">For information about the methods and properties of the `My.Computer.Mouse` object, see <xref:Microsoft.VisualBasic.Devices.Mouse>.</span></span>  
   
- Para obter mais informações, consulte [acessando o Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).  
+ <span data-ttu-id="0e38c-106">Para obter mais informações, consulte [acessando o Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).</span><span class="sxs-lookup"><span data-stu-id="0e38c-106">For more information, see [Accessing the Mouse](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md).</span></span>  
   
-## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.Devices></xref:Microsoft.VisualBasic.Devices>  
+## <a name="requirements"></a><span data-ttu-id="0e38c-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0e38c-107">Requirements</span></span>  
+ <span data-ttu-id="0e38c-108">**Namespace:**<xref:Microsoft.VisualBasic.Devices></xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="0e38c-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- **Classe:**<xref:Microsoft.VisualBasic.Devices.Mouse></xref:Microsoft.VisualBasic.Devices.Mouse>  
+ <span data-ttu-id="0e38c-109">**Classe:**<xref:Microsoft.VisualBasic.Devices.Mouse></xref:Microsoft.VisualBasic.Devices.Mouse></span><span class="sxs-lookup"><span data-stu-id="0e38c-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Mouse></span></span>  
   
- **Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)  
+ <span data-ttu-id="0e38c-110">**Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="0e38c-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="0e38c-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0e38c-111">See Also</span></span>  
+ [<span data-ttu-id="0e38c-112">Objeto My. Computer</span><span class="sxs-lookup"><span data-stu-id="0e38c-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

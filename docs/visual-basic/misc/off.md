@@ -30,23 +30,24 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a2fab4f872a6674d8cda205f459fc1c1bb12b260
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0df2a489895e5d67a7abc3f34814b5a1fffeb1d9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="off-visual-basic"></a>Off (Visual Basic)
-Desativa uma opção do compilador.  
+# <a name="off-visual-basic"></a><span data-ttu-id="68614-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="68614-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="68614-103">Desativa uma opção do compilador.</span><span class="sxs-lookup"><span data-stu-id="68614-103">Turns a compiler option off.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `Off` palavra-chave pode ser usada nesses contextos:  
+## <a name="remarks"></a><span data-ttu-id="68614-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="68614-104">Remarks</span></span>  
+ <span data-ttu-id="68614-105">O `Off` palavra-chave pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="68614-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [Instrução Option Explicit](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="68614-106">Instrução Option Explicit</span><span class="sxs-lookup"><span data-stu-id="68614-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [Instrução Option Strict](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="68614-107">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="68614-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [Instrução Option Infer](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="68614-108">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="68614-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="68614-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="68614-109">See Also</span></span>  
+ [<span data-ttu-id="68614-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="68614-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

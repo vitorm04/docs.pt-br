@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b5e37e00cc74d88479d646854e44e30095ae51b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: aaca16d5c33a4adcb8cbd16477a7c46e136622a9
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a>'&lt;eventname&gt;' é um evento e não pode ser chamado diretamente
-'`eventname`>' é um evento e por isso não pode ser chamado diretamente. Use um `RaiseEvent` instrução para disparar um evento.  
+# <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a><span data-ttu-id="4ee9d-102">'&lt;eventname&gt;' é um evento e não pode ser chamado diretamente</span><span class="sxs-lookup"><span data-stu-id="4ee9d-102">&#39;&lt;eventname&gt;&#39; is an event, and cannot be called directly</span></span>
+<span data-ttu-id="4ee9d-103">'`eventname`>' é um evento e por isso não pode ser chamado diretamente.</span><span class="sxs-lookup"><span data-stu-id="4ee9d-103">'<`eventname`>' is an event, and so cannot be called directly.</span></span> <span data-ttu-id="4ee9d-104">Use um `RaiseEvent` instrução para disparar um evento.</span><span class="sxs-lookup"><span data-stu-id="4ee9d-104">Use a `RaiseEvent` statement to raise an event.</span></span>  
   
- Uma chamada de procedimento especifica um evento para o nome do procedimento. Um manipulador de eventos é um procedimento, mas o evento em si é um dispositivo de sinalização, que deve ser gerado e manipulado.  
+ <span data-ttu-id="4ee9d-105">Uma chamada de procedimento especifica um evento para o nome do procedimento.</span><span class="sxs-lookup"><span data-stu-id="4ee9d-105">A procedure call specifies an event for the procedure name.</span></span> <span data-ttu-id="4ee9d-106">Um manipulador de eventos é um procedimento, mas o evento em si é um dispositivo de sinalização, que deve ser gerado e manipulado.</span><span class="sxs-lookup"><span data-stu-id="4ee9d-106">An event handler is a procedure, but the event itself is a signaling device, which must be raised and handled.</span></span>  
   
- **ID do erro:** BC32022  
+ <span data-ttu-id="4ee9d-107">**ID do erro:** BC32022</span><span class="sxs-lookup"><span data-stu-id="4ee9d-107">**Error ID:** BC32022</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4ee9d-108">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="4ee9d-108">To correct this error</span></span>  
   
-1.  Use um `RaiseEvent` instrução para sinalizar um evento e chamar o procedimento ou procedimentos que lidam com ele.  
+1.  <span data-ttu-id="4ee9d-109">Use um `RaiseEvent` instrução para sinalizar um evento e chamar o procedimento ou procedimentos que lidam com ele.</span><span class="sxs-lookup"><span data-stu-id="4ee9d-109">Use a `RaiseEvent` statement to signal an event and invoke the procedure or procedures that handle it.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+## <a name="see-also"></a><span data-ttu-id="4ee9d-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4ee9d-110">See Also</span></span>  
+ [<span data-ttu-id="4ee9d-111">Instrução RaiseEvent</span><span class="sxs-lookup"><span data-stu-id="4ee9d-111">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

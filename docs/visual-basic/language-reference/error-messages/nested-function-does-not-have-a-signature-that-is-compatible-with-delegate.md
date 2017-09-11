@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6a399e3ae7266e4bfd5afef1eb2fe039166f3d91
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: fa6736f0e9e31d4ec36abb92e2f1ee1771238039
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>Função aninhada não tem uma assinatura compatível com delegado '&lt;delegatename&gt;'
-Uma expressão lambda foi atribuída a um delegado que tem uma assinatura incompatível. Por exemplo, no código a seguir, delegar `Del` tem dois parâmetros inteiros.  
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a><span data-ttu-id="c8d4b-102">Função aninhada não tem uma assinatura compatível com delegado '&lt;delegatename&gt;'</span><span class="sxs-lookup"><span data-stu-id="c8d4b-102">Nested function does not have a signature that is compatible with delegate &#39;&lt;delegatename&gt;&#39;</span></span>
+<span data-ttu-id="c8d4b-103">Uma expressão lambda foi atribuída a um delegado que tem uma assinatura incompatível.</span><span class="sxs-lookup"><span data-stu-id="c8d4b-103">A lambda expression has been assigned to a delegate that has an incompatible signature.</span></span> <span data-ttu-id="c8d4b-104">Por exemplo, no código a seguir, delegar `Del` tem dois parâmetros inteiros.</span><span class="sxs-lookup"><span data-stu-id="c8d4b-104">For example, in the following code, delegate `Del` has two integer parameters.</span></span>  
   
 ```vb  
 Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer  
 ```  
   
- O erro é gerado se uma expressão lambda com um argumento é declarada como tipo `Del`:  
+ <span data-ttu-id="c8d4b-105">O erro é gerado se uma expressão lambda com um argumento é declarada como tipo `Del`:</span><span class="sxs-lookup"><span data-stu-id="c8d4b-105">The error is raised if a lambda expression with one argument is declared as type `Del`:</span></span>  
   
 ```vb  
 ' Neither of these is valid.   
@@ -53,12 +54,12 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 ' Dim lambda2 As Del = Function(n) n + 1  
 ```  
   
- **ID do erro:** BC36532  
+ <span data-ttu-id="c8d4b-106">**ID do erro:** BC36532</span><span class="sxs-lookup"><span data-stu-id="c8d4b-106">**Error ID:** BC36532</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c8d4b-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="c8d4b-107">To correct this error</span></span>  
   
--   Ajuste a definição de representante ou o expressão lambda atribuído para que as assinaturas sejam compatíveis.  
+-   <span data-ttu-id="c8d4b-108">Ajuste a definição de representante ou o expressão lambda atribuído para que as assinaturas sejam compatíveis.</span><span class="sxs-lookup"><span data-stu-id="c8d4b-108">Adjust either the delegate definition or the assigned lambda expression so that the signatures are compatible.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="c8d4b-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c8d4b-109">See Also</span></span>  
+ <span data-ttu-id="c8d4b-110">[Conversão de delegado reduzida](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) </span><span class="sxs-lookup"><span data-stu-id="c8d4b-110">[Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) </span></span>  
+<span data-ttu-id="c8d4b-111"> [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)</span><span class="sxs-lookup"><span data-stu-id="c8d4b-111"> [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)</span></span>

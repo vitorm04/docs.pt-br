@@ -32,34 +32,34 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 98ffc0635c3fcd97b5e5aa3ed6b573d15f7e79ef
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: fab820ac702c1868142b8f31783f1725cb07222f
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/01/2017
 
 ---
-# <a name="ltparagt-visual-basic"></a>&lt;para&gt; (Visual Basic)
-Especifica que o conteúdo é formatado como um parágrafo.  
+# <a name="ltparagt-visual-basic"></a><span data-ttu-id="29567-102">&lt;para&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29567-102">&lt;para&gt; (Visual Basic)</span></span>
+<span data-ttu-id="29567-103">Especifica que o conteúdo é formatado como um parágrafo.</span><span class="sxs-lookup"><span data-stu-id="29567-103">Specifies that the content is formatted as a paragraph.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="29567-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="29567-104">Syntax</span></span>  
   
 ```xml  
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a><span data-ttu-id="29567-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="29567-105">Parameters</span></span>  
  `content`  
- O texto do parágrafo.  
+ <span data-ttu-id="29567-106">O texto do parágrafo.</span><span class="sxs-lookup"><span data-stu-id="29567-106">The text of the paragraph.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `<para>` marca é para uso dentro de uma marca, como [ \<resumo >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<comentários >](../../../visual-basic/language-reference/xmldoc/remarks.md), ou [ \<retorna >](../../../visual-basic/language-reference/xmldoc/returns.md)e permite que você adicione estrutura ao texto.  
+## <a name="remarks"></a><span data-ttu-id="29567-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="29567-107">Remarks</span></span>  
+ <span data-ttu-id="29567-108">O `<para>` marca é para uso dentro de uma marca, como [ \<resumo >](../../../visual-basic/language-reference/xmldoc/summary.md), [ \<comentários >](../../../visual-basic/language-reference/xmldoc/remarks.md), ou [ \<retorna >](../../../visual-basic/language-reference/xmldoc/returns.md)e permite que você adicione estrutura ao texto.</span><span class="sxs-lookup"><span data-stu-id="29567-108">The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.</span></span>  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.  
+ <span data-ttu-id="29567-109">Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.</span><span class="sxs-lookup"><span data-stu-id="29567-109">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo usa o `<para>` marca para dividir a seção comentários para o `UpdateRecord` método em dois parágrafos.  
+## <a name="example"></a><span data-ttu-id="29567-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="29567-110">Example</span></span>  
+ <span data-ttu-id="29567-111">Este exemplo usa o `<para>` marca para dividir a seção comentários para o `UpdateRecord` método em dois parágrafos.</span><span class="sxs-lookup"><span data-stu-id="29567-111">This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.</span></span>  
   
- [!code-vb[VbVbcnXmlDocComments n º&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]  
+ <span data-ttu-id="29567-112">[!code-vb[VbVbcnXmlDocComments n º&6;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="29567-112">[!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/para_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="29567-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="29567-113">See Also</span></span>  
+ [<span data-ttu-id="29567-114">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="29567-114">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

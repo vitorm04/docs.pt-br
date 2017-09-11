@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b02bd01f4a297175b0251def142ff3d28f233fad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 974a5cffd464b1b5624128192c97b93c5aeac013
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a>Índice de coleção deve estar no intervalo entre 1 e o tamanho da coleção
-O valor de índice fornecido está fora do intervalo válido, que é 1 para o tamanho da coleção.  
+# <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a><span data-ttu-id="076bc-102">Índice de coleção deve estar no intervalo entre 1 e o tamanho da coleção</span><span class="sxs-lookup"><span data-stu-id="076bc-102">Collection index must be in the range 1 to the size of the collection</span></span>
+<span data-ttu-id="076bc-103">O valor de índice fornecido está fora do intervalo válido, que é 1 para o tamanho da coleção.</span><span class="sxs-lookup"><span data-stu-id="076bc-103">The supplied index value falls outside the valid range, which is 1 to the size of the collection.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="076bc-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="076bc-104">To correct this error</span></span>  
   
-1.  Altere o valor fornecido para um válido.  
+1.  <span data-ttu-id="076bc-105">Altere o valor fornecido para um válido.</span><span class="sxs-lookup"><span data-stu-id="076bc-105">Change the supplied value to a valid one.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Alterações da coleção de controles no Visual Basic .NET](http://msdn.microsoft.com/en-us/8eb5b458-8b39-4d79-9c97-2b29c527afa5)
+## <a name="see-also"></a><span data-ttu-id="076bc-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="076bc-106">See Also</span></span>  
+ [<span data-ttu-id="076bc-107">Alterações da coleção de controles no Visual Basic .NET</span><span class="sxs-lookup"><span data-stu-id="076bc-107">Controls Collection Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/8eb5b458-8b39-4d79-9c97-2b29c527afa5)

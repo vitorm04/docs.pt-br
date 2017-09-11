@@ -24,19 +24,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9cf59c1d6ccc41b6e2d8d87bb3f3cebf826d8773
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8922459b47c957d5da24e924c91b429adbad505f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="you-must-specify-a-name"></a>Você deve especificar um nome
-Ao executar operações de arquivo, como renomear um arquivo, você deve especificar o nome.  
+# <a name="you-must-specify-a-name"></a><span data-ttu-id="89340-102">Você deve especificar um nome</span><span class="sxs-lookup"><span data-stu-id="89340-102">You must specify a name</span></span>
+<span data-ttu-id="89340-103">Ao executar operações de arquivo, como renomear um arquivo, você deve especificar o nome.</span><span class="sxs-lookup"><span data-stu-id="89340-103">When performing file operations such as renaming a file, you must specify the name.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="89340-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="89340-104">To correct this error</span></span>  
   
--   Especifique o nome.  
+-   <span data-ttu-id="89340-105">Especifique o nome.</span><span class="sxs-lookup"><span data-stu-id="89340-105">Specify the name.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)   
- [Objeto My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a><span data-ttu-id="89340-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="89340-106">See Also</span></span>  
+ <span data-ttu-id="89340-107">[Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="89340-107">[Error Types](../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="89340-108"> [Objeto My.Computer.FileSystem](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)</span><span class="sxs-lookup"><span data-stu-id="89340-108"> [My.Computer.FileSystem Object](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)</span></span>

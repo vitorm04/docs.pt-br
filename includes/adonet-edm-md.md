@@ -1,1 +1,1 @@
-Modelo de Dados de Entidade
+<span data-ttu-id="3e2b1-101">Modelo de Dados de Entidade</span><span class="sxs-lookup"><span data-stu-id="3e2b1-101">Entity Data Model</span></span>

@@ -32,21 +32,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fde0800209deccb8c8326367a676ea1baae2b19c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3061d645a4211b3a6715cf2e7a797f4612d0e785
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a>Expressão de constante não representável no tipo '&lt;typename&gt;'
-Você está tentando avaliar uma constante que não irá caber no tipo de destino, normalmente porque ela está estourando os limites.  
+# <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a><span data-ttu-id="b91f9-102">Expressão de constante não representável no tipo '&lt;typename&gt;'</span><span class="sxs-lookup"><span data-stu-id="b91f9-102">Constant expression not representable in type &#39;&lt;typename&gt;&#39;</span></span>
+<span data-ttu-id="b91f9-103">Você está tentando avaliar uma constante que não irá caber no tipo de destino, normalmente porque ela está estourando os limites.</span><span class="sxs-lookup"><span data-stu-id="b91f9-103">You are trying to evaluate a constant that will not fit into the target type, usually because it is overflowing the range.</span></span>  
   
- **ID do erro:** BC30439  
+ <span data-ttu-id="b91f9-104">**ID do erro:** BC30439</span><span class="sxs-lookup"><span data-stu-id="b91f9-104">**Error ID:** BC30439</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b91f9-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="b91f9-105">To correct this error</span></span>  
   
-1.  Altere o tipo de destino para um que possa suportar a constante.  
+1.  <span data-ttu-id="b91f9-106">Altere o tipo de destino para um que possa suportar a constante.</span><span class="sxs-lookup"><span data-stu-id="b91f9-106">Change the target type to one that can handle the constant.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Visão geral de constantes](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Constantes e Enumerações](../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="b91f9-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b91f9-107">See Also</span></span>  
+ <span data-ttu-id="b91f9-108">[Visão geral de constantes](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md) </span><span class="sxs-lookup"><span data-stu-id="b91f9-108">[Constants Overview](../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md) </span></span>  
+<span data-ttu-id="b91f9-109"> [Constantes e Enumerações](../../../visual-basic/language-reference/constants-and-enumerations.md)</span><span class="sxs-lookup"><span data-stu-id="b91f9-109"> [Constants and Enumerations](../../../visual-basic/language-reference/constants-and-enumerations.md)</span></span>

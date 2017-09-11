@@ -32,20 +32,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6d81c761d983f493e4c2b8373ae71a657ec490da
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bdaa8ff8f115a5e99bcf85bc48f883ea0360b12b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a>Não é possível criar o assembly de nome forte do arquivo de chave '&lt;filename&gt;': &lt;erro&gt;
-Não foi possível criar um assembly de nome forte do arquivo de chave especificado.  
+# <a name="unable-to-create-strong-named-assembly-from-key-file-39ltfilenamegt39-lterrorgt"></a><span data-ttu-id="68e81-102">Não é possível criar o assembly de nome forte do arquivo de chave '&lt;filename&gt;': &lt;erro&gt;</span><span class="sxs-lookup"><span data-stu-id="68e81-102">Unable to create strong-named assembly from key file &#39;&lt;filename&gt;&#39;: &lt;error&gt;</span></span>
+<span data-ttu-id="68e81-103">Não foi possível criar um assembly de nome forte do arquivo de chave especificado.</span><span class="sxs-lookup"><span data-stu-id="68e81-103">A strong-named assembly could not be created from the specified key file.</span></span>  
   
- **ID do erro:** BC31026  
+ <span data-ttu-id="68e81-104">**ID do erro:** BC31026</span><span class="sxs-lookup"><span data-stu-id="68e81-104">**Error ID:** BC31026</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="68e81-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="68e81-105">To correct this error</span></span>  
   
-1.  Verifique se que o arquivo chave correto foi especificado e não está bloqueado por outro aplicativo.  
+1.  <span data-ttu-id="68e81-106">Verifique se que o arquivo chave correto foi especificado e não está bloqueado por outro aplicativo.</span><span class="sxs-lookup"><span data-stu-id="68e81-106">Verify that the correct key file has been specified, and that it is not locked by another application.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Sn.exe (ferramenta de nome forte)](https://msdn.microsoft.com/library/k5b5tt23)
+## <a name="see-also"></a><span data-ttu-id="68e81-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="68e81-107">See Also</span></span>  
+ [<span data-ttu-id="68e81-108">Sn.exe (ferramenta de nome forte)</span><span class="sxs-lookup"><span data-stu-id="68e81-108">Sn.exe (Strong Name Tool)</span></span>](https://msdn.microsoft.com/library/k5b5tt23)

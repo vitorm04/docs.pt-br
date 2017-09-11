@@ -37,16 +37,16 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="descending-c-reference"></a>descending (Referência de C#)
-A palavra-chave contextual `descending` é usada na [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md) em expressões de consulta para especificar que a ordem de classificação é do maior para o menor.  
+# <a name="descending-c-reference"></a><span data-ttu-id="10440-102">descending (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="10440-102">descending (C# Reference)</span></span>
+<span data-ttu-id="10440-103">A palavra-chave contextual `descending` é usada na [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md) em expressões de consulta para especificar que a ordem de classificação é do maior para o menor.</span><span class="sxs-lookup"><span data-stu-id="10440-103">The `descending` contextual keyword is used in the [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md) in query expressions to specify that the sort order is from largest to smallest.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra o uso de `descending` em uma [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md).  
+## <a name="example"></a><span data-ttu-id="10440-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="10440-104">Example</span></span>  
+ <span data-ttu-id="10440-105">O exemplo a seguir mostra o uso de `descending` em uma [cláusula orderby](../../../csharp/language-reference/keywords/orderby-clause.md).</span><span class="sxs-lookup"><span data-stu-id="10440-105">The following example shows the use of `descending` in an [orderby clause](../../../csharp/language-reference/keywords/orderby-clause.md).</span></span>  
   
- [!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/descending_1.cs)]  
+ <span data-ttu-id="10440-106">[!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/descending_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="10440-106">[!code-cs[csrefKeywordsContextual#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/descending_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [ascending](../../../csharp/language-reference/keywords/ascending.md)
+## <a name="see-also"></a><span data-ttu-id="10440-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="10440-107">See Also</span></span>  
+ <span data-ttu-id="10440-108">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="10440-108">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="10440-109">[Expressões de Consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md) </span><span class="sxs-lookup"><span data-stu-id="10440-109">[LINQ Query Expressions](../../../csharp/programming-guide/linq-query-expressions/index.md) </span></span>  
+ [<span data-ttu-id="10440-110">ascending</span><span class="sxs-lookup"><span data-stu-id="10440-110">ascending</span></span>](../../../csharp/language-reference/keywords/ascending.md)
 

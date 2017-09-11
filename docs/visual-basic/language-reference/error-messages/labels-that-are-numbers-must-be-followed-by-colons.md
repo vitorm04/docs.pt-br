@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5beb32c8e55c6984a68c5b61e64ac32a2bd32bbe
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 28cc9d000c1ffddbd8100b5f97a57ee3303eec2f
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="labels-that-are-numbers-must-be-followed-by-colons"></a>Rótulos que são números são seguidos de dois pontos
-Números de linha seguem as mesmas regras de outros tipos de rótulos e devem conter dois-pontos.  
+# <a name="labels-that-are-numbers-must-be-followed-by-colons"></a><span data-ttu-id="0cbc7-102">Rótulos que são números são seguidos de dois pontos</span><span class="sxs-lookup"><span data-stu-id="0cbc7-102">Labels that are numbers must be followed by colons</span></span>
+<span data-ttu-id="0cbc7-103">Números de linha seguem as mesmas regras de outros tipos de rótulos e devem conter dois-pontos.</span><span class="sxs-lookup"><span data-stu-id="0cbc7-103">Line numbers follow the same rules as other kinds of labels, and must contain a colon.</span></span>  
   
- **ID do erro:** BC30801  
+ <span data-ttu-id="0cbc7-104">**ID do erro:** BC30801</span><span class="sxs-lookup"><span data-stu-id="0cbc7-104">**Error ID:** BC30801</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0cbc7-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="0cbc7-105">To correct this error</span></span>  
   
--   Coloque o número seguido por dois-pontos no início de uma linha de código; Por exemplo:  
+-   <span data-ttu-id="0cbc7-106">Coloque o número seguido por dois-pontos no início de uma linha de código; Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="0cbc7-106">Place the number followed by a colon at the start of a line of code; for example:</span></span>  
   
     ```  
     400:    X += 1  
     ```  
   
-## <a name="see-also"></a>Consulte também  
- [Instrução GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)
+## <a name="see-also"></a><span data-ttu-id="0cbc7-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0cbc7-107">See Also</span></span>  
+ [<span data-ttu-id="0cbc7-108">Instrução GoTo</span><span class="sxs-lookup"><span data-stu-id="0cbc7-108">GoTo Statement</span></span>](../../../visual-basic/language-reference/statements/goto-statement.md)

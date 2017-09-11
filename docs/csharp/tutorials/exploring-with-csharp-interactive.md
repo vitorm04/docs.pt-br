@@ -17,16 +17,16 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-using-c-interactive-to-explore-and-experiment"></a>🔧 Usar o C# Interativo para exploração e experimentação
+# <a name="-using-c-interactive-to-explore-and-experiment"></a><span data-ttu-id="b415a-105">🔧 Usar o C# Interativo para exploração e experimentação</span><span class="sxs-lookup"><span data-stu-id="b415a-105">🔧 Using C# Interactive to explore and experiment</span></span>
 
-> **Observação**
+> <span data-ttu-id="b415a-106">**Observação**</span><span class="sxs-lookup"><span data-stu-id="b415a-106">**Note**</span></span>
 > 
-> Este tópico ainda não foi criado! 
+> <span data-ttu-id="b415a-107">Este tópico ainda não foi criado!</span><span class="sxs-lookup"><span data-stu-id="b415a-107">This topic hasn’t been written yet!</span></span> 
 >
-> Agradecemos a sua contribuição para ajudar a moldar o escopo e a abordagem. Você pode acompanhar o status e fornecer comentários sobre esse [problema](https://github.com/dotnet/docs/issues/949) no GitHub.
+> <span data-ttu-id="b415a-108">Agradecemos a sua contribuição para ajudar a moldar o escopo e a abordagem.</span><span class="sxs-lookup"><span data-stu-id="b415a-108">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="b415a-109">Você pode acompanhar o status e fornecer comentários sobre esse [problema](https://github.com/dotnet/docs/issues/949) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="b415a-109">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/949) at GitHub.</span></span>
 > 
-> Se você quiser examinar os primeiros rascunhos e esboços deste tópico, deixe uma nota com suas informações de contato no problema.
+> <span data-ttu-id="b415a-110">Se você quiser examinar os primeiros rascunhos e esboços deste tópico, deixe uma nota com suas informações de contato no problema.</span><span class="sxs-lookup"><span data-stu-id="b415a-110">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> Saiba mais sobre como você pode contribuir com o [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> <span data-ttu-id="b415a-111">Saiba mais sobre como você pode contribuir com o [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="b415a-111">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

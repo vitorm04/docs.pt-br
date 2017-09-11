@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5b293ec344d816e40d369757fa4d11710b7ecd8d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 1c2e0e322ff46b9e215a169cd4cf3805c7dc3943
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>O uso de uma variável de iteração em uma expressão lambda pode ter resultados inesperados
-Usar a variável de iteração em uma expressão lambda pode ter resultados inesperados. Em vez disso, crie uma variável local no loop e atribua o valor da variável de iteração.  
+# <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a><span data-ttu-id="37d06-102">O uso de uma variável de iteração em uma expressão lambda pode ter resultados inesperados</span><span class="sxs-lookup"><span data-stu-id="37d06-102">Using the iteration variable in a lambda expression may have unexpected results</span></span>
+<span data-ttu-id="37d06-103">Usar a variável de iteração em uma expressão lambda pode ter resultados inesperados.</span><span class="sxs-lookup"><span data-stu-id="37d06-103">Using the iteration variable in a lambda expression may have unexpected results.</span></span> <span data-ttu-id="37d06-104">Em vez disso, crie uma variável local no loop e atribua o valor da variável de iteração.</span><span class="sxs-lookup"><span data-stu-id="37d06-104">Instead, create a local variable within the loop and assign it the value of the iteration variable.</span></span>  
   
- Esse aviso é exibido quando você usa uma variável de iteração do loop em uma expressão lambda que é declarada dentro do loop. Por exemplo, o exemplo a seguir faz com que o aviso apareça.  
+ <span data-ttu-id="37d06-105">Esse aviso é exibido quando você usa uma variável de iteração do loop em uma expressão lambda que é declarada dentro do loop.</span><span class="sxs-lookup"><span data-stu-id="37d06-105">This warning appears when you use a loop iteration variable in a lambda expression that is declared inside the loop.</span></span> <span data-ttu-id="37d06-106">Por exemplo, o exemplo a seguir faz com que o aviso apareça.</span><span class="sxs-lookup"><span data-stu-id="37d06-106">For example, the following example causes the warning to appear.</span></span>  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -50,7 +51,7 @@ For i As Integer = 1 To 10
 Next  
 ```  
   
- O exemplo a seguir mostra os resultados inesperados podem ocorrer.  
+ <span data-ttu-id="37d06-107">O exemplo a seguir mostra os resultados inesperados podem ocorrer.</span><span class="sxs-lookup"><span data-stu-id="37d06-107">The following example shows the unexpected results that might occur.</span></span>  
   
 ```vb  
 Module Module1  
@@ -69,7 +70,7 @@ Module Module1
 End Module  
 ```  
   
- O `For` loop cria uma matriz de expressões lambda, cada um deles retorna o valor da variável de iteração de loop `i`. Quando as expressões lambda são avaliadas no `For Each` loop, você pode esperar ver 0, 1, 2, 3 e 4 exibido, os valores sucessivos de `i` no `For` loop. Em vez disso, você verá o valor final de `i` exibidos cinco vezes:  
+ <span data-ttu-id="37d06-108">O `For` loop cria uma matriz de expressões lambda, cada um deles retorna o valor da variável de iteração de loop `i`.</span><span class="sxs-lookup"><span data-stu-id="37d06-108">The `For` loop creates an array of lambda expressions, each of which returns the value of the loop iteration variable `i`.</span></span> <span data-ttu-id="37d06-109">Quando as expressões lambda são avaliadas no `For Each` loop, você pode esperar ver 0, 1, 2, 3 e 4 exibido, os valores sucessivos de `i` no `For` loop.</span><span class="sxs-lookup"><span data-stu-id="37d06-109">When the lambda expressions are evaluated in the `For Each` loop, you might expect to see 0, 1, 2, 3, and 4 displayed, the successive values of `i` in the `For` loop.</span></span> <span data-ttu-id="37d06-110">Em vez disso, você verá o valor final de `i` exibidos cinco vezes:</span><span class="sxs-lookup"><span data-stu-id="37d06-110">Instead, you see the final value of `i` displayed five times:</span></span>  
   
  `5`  
   
@@ -81,13 +82,13 @@ End Module
   
  `5`  
   
- Por padrão, esta mensagem é um aviso. Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ <span data-ttu-id="37d06-111">Por padrão, esta mensagem é um aviso.</span><span class="sxs-lookup"><span data-stu-id="37d06-111">By default, this message is a warning.</span></span> <span data-ttu-id="37d06-112">Para obter mais informações sobre como ocultar avisos ou tratar avisos como erros, consulte [Configurando avisos no Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="37d06-112">For more information about hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **ID do erro:** BC42324  
+ <span data-ttu-id="37d06-113">**ID do erro:** BC42324</span><span class="sxs-lookup"><span data-stu-id="37d06-113">**Error ID:** BC42324</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="37d06-114">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="37d06-114">To correct this error</span></span>  
   
--   Atribuir o valor da variável de iteração para uma variável local e use a variável local na expressão lambda.  
+-   <span data-ttu-id="37d06-115">Atribuir o valor da variável de iteração para uma variável local e use a variável local na expressão lambda.</span><span class="sxs-lookup"><span data-stu-id="37d06-115">Assign the value of the iteration variable to a local variable, and use the local variable in the lambda expression.</span></span>  
   
 ```vb  
 Module Module1  
@@ -107,5 +108,5 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a><span data-ttu-id="37d06-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="37d06-116">See Also</span></span>  
+ [<span data-ttu-id="37d06-117">Expressões Lambda</span><span class="sxs-lookup"><span data-stu-id="37d06-117">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

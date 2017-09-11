@@ -39,21 +39,21 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="-operator-c-reference"></a>Operador ~ (Referência de C#)
-O operador `~` executa uma operação de complemento bit a bit em seu operando, que tem o efeito de reverter cada bit. Operadores de complemento bit a bit são predefinidos para [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) e [ulong](../../../csharp/language-reference/keywords/ulong.md).  
+# <a name="-operator-c-reference"></a><span data-ttu-id="7289c-102">Operador ~ (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="7289c-102">~ Operator (C# Reference)</span></span>
+<span data-ttu-id="7289c-103">O operador `~` executa uma operação de complemento bit a bit em seu operando, que tem o efeito de reverter cada bit.</span><span class="sxs-lookup"><span data-stu-id="7289c-103">The `~` operator performs a bitwise complement operation on its operand, which has the effect of reversing each bit.</span></span> <span data-ttu-id="7289c-104">Operadores de complemento bit a bit são predefinidos para [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) e [ulong](../../../csharp/language-reference/keywords/ulong.md).</span><span class="sxs-lookup"><span data-stu-id="7289c-104">Bitwise complement operators are predefined for [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), and [ulong](../../../csharp/language-reference/keywords/ulong.md).</span></span>  
   
 > [!NOTE]
->  O símbolo `~` também é usado para declarar finalizadores. Para mais informações, consulte [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md).  
+>  <span data-ttu-id="7289c-105">O símbolo `~` também é usado para declarar finalizadores.</span><span class="sxs-lookup"><span data-stu-id="7289c-105">The `~` symbol also is used to declare finalizers.</span></span> <span data-ttu-id="7289c-106">Para mais informações, consulte [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md).</span><span class="sxs-lookup"><span data-stu-id="7289c-106">For more information, see [Finalizers](../../../csharp/programming-guide/classes-and-structs/destructors.md).</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Os tipos definidos pelo usuário podem sobrecarregar o operador `~`. Para obter mais informações, consulte [operador](../../../csharp/language-reference/keywords/operator.md). As operações em tipos integrais geralmente são permitidas na enumeração.  
+## <a name="remarks"></a><span data-ttu-id="7289c-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="7289c-107">Remarks</span></span>  
+ <span data-ttu-id="7289c-108">Os tipos definidos pelo usuário podem sobrecarregar o operador `~`.</span><span class="sxs-lookup"><span data-stu-id="7289c-108">User-defined types can overload the `~` operator.</span></span> <span data-ttu-id="7289c-109">Para obter mais informações, consulte [operador](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="7289c-109">For more information, see [operator](../../../csharp/language-reference/keywords/operator.md).</span></span> <span data-ttu-id="7289c-110">As operações em tipos integrais geralmente são permitidas na enumeração.</span><span class="sxs-lookup"><span data-stu-id="7289c-110">Operations on integral types are generally allowed on enumeration.</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="7289c-111">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7289c-111">Example</span></span>  
+ <span data-ttu-id="7289c-112">[!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="7289c-112">[!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)   
- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+## <a name="see-also"></a><span data-ttu-id="7289c-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7289c-113">See Also</span></span>  
+ <span data-ttu-id="7289c-114">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="7289c-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="7289c-115">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="7289c-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="7289c-116">[Operadores do C#](../../../csharp/language-reference/operators/index.md) </span><span class="sxs-lookup"><span data-stu-id="7289c-116">[C# Operators](../../../csharp/language-reference/operators/index.md) </span></span>  
+ [<span data-ttu-id="7289c-117">Finalizadores</span><span class="sxs-lookup"><span data-stu-id="7289c-117">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 

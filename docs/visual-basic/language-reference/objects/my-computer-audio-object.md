@@ -29,26 +29,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b60c9029bc2c057fdf0c83ea46a15615ef6e7c4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2f1d5b82e6cd6b4135b858f7d31e67d9a0ce3ba8
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="mycomputeraudio-object"></a>Objeto My.Computer.Audio
-Fornece métodos para reproduzir sons.  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="4430d-102">Objeto My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="4430d-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="4430d-103">Fornece métodos para reproduzir sons.</span><span class="sxs-lookup"><span data-stu-id="4430d-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e propriedades do `My.Computer.Audio` de objeto, consulte <xref:Microsoft.VisualBasic.Devices.Audio>.</xref:Microsoft.VisualBasic.Devices.Audio>  
+## <a name="remarks"></a><span data-ttu-id="4430d-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="4430d-104">Remarks</span></span>  
+ <span data-ttu-id="4430d-105">Para obter informações sobre os métodos e propriedades do `My.Computer.Audio` de objeto, consulte <xref:Microsoft.VisualBasic.Devices.Audio>.</xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="4430d-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- Para obter mais informações, consulte [atuação sons](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).  
+ <span data-ttu-id="4430d-106">Para obter mais informações, consulte [atuação sons](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="4430d-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a>Requisitos  
- **Namespace:**<xref:Microsoft.VisualBasic.Devices></xref:Microsoft.VisualBasic.Devices>  
+## <a name="requirements"></a><span data-ttu-id="4430d-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4430d-107">Requirements</span></span>  
+ <span data-ttu-id="4430d-108">**Namespace:**<xref:Microsoft.VisualBasic.Devices></xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="4430d-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- **Classe:**<xref:Microsoft.VisualBasic.Devices.Audio></xref:Microsoft.VisualBasic.Devices.Audio>  
+ <span data-ttu-id="4430d-109">**Classe:**<xref:Microsoft.VisualBasic.Devices.Audio></xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="4430d-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- **Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)  
+ <span data-ttu-id="4430d-110">**Assembly:** biblioteca de tempo de execução do Visual Basic (em Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="4430d-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Objeto My. Computer](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="4430d-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4430d-111">See Also</span></span>  
+ [<span data-ttu-id="4430d-112">Objeto My. Computer</span><span class="sxs-lookup"><span data-stu-id="4430d-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

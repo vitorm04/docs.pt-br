@@ -31,21 +31,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 756f1ff629b6cf3fb066c6a8a85c18560befa663
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e617b990b6e3a46de6307c5cc136d71325822a06
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="equals-clause-visual-basic"></a>Cláusula Equals (Visual Basic)
-Compara chaves das coleções sendo associadas.  
+# <a name="equals-clause-visual-basic"></a><span data-ttu-id="cde92-102">Cláusula Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cde92-102">Equals Clause (Visual Basic)</span></span>
+<span data-ttu-id="cde92-103">Compara chaves das coleções sendo associadas.</span><span class="sxs-lookup"><span data-stu-id="cde92-103">Compares keys from collections being joined.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `Equals` palavra-chave é usada nos seguintes contextos:  
+## <a name="remarks"></a><span data-ttu-id="cde92-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="cde92-104">Remarks</span></span>  
+ <span data-ttu-id="cde92-105">O `Equals` palavra-chave é usada nos seguintes contextos:</span><span class="sxs-lookup"><span data-stu-id="cde92-105">The `Equals` keyword is used in the following contexts:</span></span>  
   
- [Cláusula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="cde92-106">Cláusula Group Join</span><span class="sxs-lookup"><span data-stu-id="cde92-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [Cláusula Join](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="cde92-107">Cláusula Join</span><span class="sxs-lookup"><span data-stu-id="cde92-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="cde92-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cde92-108">See Also</span></span>  
+ [<span data-ttu-id="cde92-109">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="cde92-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

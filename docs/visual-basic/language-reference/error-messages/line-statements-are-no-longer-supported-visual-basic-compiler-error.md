@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fca2b3cae88f503f838c2c90554b0ca7ee004ea8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 92993a2a3d9ee34ab0071034b9e8ebe3b1180b0a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a>Instruções 'Line' não são mais compatíveis (erro do compilador Visual Basic)
-Não há suporte para instruções de linha. A funcionalidade de e/s de arquivo está disponível como `Microsoft.VisualBasic.FileSystem.LineInput` e funcionalidade de elementos gráficos está disponível como `System.Drawing.Graphics.DrawLine`.  
+# <a name="39line39-statements-are-no-longer-supported-visual-basic-compiler-error"></a><span data-ttu-id="f4998-102">Instruções 'Line' não são mais compatíveis (erro do compilador Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4998-102">&#39;Line&#39; statements are no longer supported (Visual Basic Compiler Error)</span></span>
+<span data-ttu-id="f4998-103">Não há suporte para instruções de linha.</span><span class="sxs-lookup"><span data-stu-id="f4998-103">Line statements are no longer supported.</span></span> <span data-ttu-id="f4998-104">A funcionalidade de e/s de arquivo está disponível como `Microsoft.VisualBasic.FileSystem.LineInput` e funcionalidade de elementos gráficos está disponível como `System.Drawing.Graphics.DrawLine`.</span><span class="sxs-lookup"><span data-stu-id="f4998-104">File I/O functionality is available as `Microsoft.VisualBasic.FileSystem.LineInput` and graphics functionality is available as `System.Drawing.Graphics.DrawLine`.</span></span>  
   
- **ID do erro:** BC30830  
+ <span data-ttu-id="f4998-105">**ID do erro:** BC30830</span><span class="sxs-lookup"><span data-stu-id="f4998-105">**Error ID:** BC30830</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f4998-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f4998-106">To correct this error</span></span>  
   
-1.  Se executar o acesso a arquivos, use `Microsoft.VisualBasic.FileSystem.LineInput`.  
+1.  <span data-ttu-id="f4998-107">Se executar o acesso a arquivos, use `Microsoft.VisualBasic.FileSystem.LineInput`.</span><span class="sxs-lookup"><span data-stu-id="f4998-107">If performing file access, use `Microsoft.VisualBasic.FileSystem.LineInput`.</span></span>  
   
-2.  Se executar gráficos, use `System.Drawing.Graphics.Drawline`.  
+2.  <span data-ttu-id="f4998-108">Se executar gráficos, use `System.Drawing.Graphics.Drawline`.</span><span class="sxs-lookup"><span data-stu-id="f4998-108">If performing graphics, use `System.Drawing.Graphics.Drawline`.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO></xref:System.IO>   
- <xref:System.Drawing></xref:System.Drawing>   
- [Access de arquivo com o Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)
+## <a name="see-also"></a><span data-ttu-id="f4998-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f4998-109">See Also</span></span>  
+ <span data-ttu-id="f4998-110"><xref:System.IO></xref:System.IO></span><span class="sxs-lookup"><span data-stu-id="f4998-110"><xref:System.IO></span></span>   
+ <span data-ttu-id="f4998-111"><xref:System.Drawing></xref:System.Drawing></span><span class="sxs-lookup"><span data-stu-id="f4998-111"><xref:System.Drawing></span></span>   
+<span data-ttu-id="f4998-112"> [Access de arquivo com o Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)</span><span class="sxs-lookup"><span data-stu-id="f4998-112"> [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)</span></span>

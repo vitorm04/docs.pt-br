@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: cbab7da8c97ca202f8a4d0a1a65b8fa240cca32d
+ms.contentlocale: pt-br
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="variance-in-delegates-visual-basic"></a>Variação em delegações (Visual Basic)
-.NET framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados em c# e Visual Basic. Isso significa que você pode atribuir a representantes não apenas métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos (covariância) mais derivados ou que aceitam parâmetros que têm menos tipos derivados (contravariância) que o especificado pelo tipo de delegado. Isso inclui delegados genéricos e não genérico.  
+# <a name="variance-in-delegates-visual-basic"></a><span data-ttu-id="244cf-102">Variação em delegações (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="244cf-102">Variance in Delegates (Visual Basic)</span></span>
+<span data-ttu-id="244cf-103">.NET framework 3.5 introduziu o suporte a variação para assinaturas de método correspondentes com tipos de delegados em todos os delegados em c# e Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="244cf-103">.NET Framework 3.5 introduced variance support for matching method signatures with delegate types in all delegates in C# and Visual Basic.</span></span> <span data-ttu-id="244cf-104">Isso significa que você pode atribuir a representantes não apenas métodos que têm assinaturas correspondentes, mas também métodos que retornam tipos (covariância) mais derivados ou que aceitam parâmetros que têm menos tipos derivados (contravariância) que o especificado pelo tipo de delegado.</span><span class="sxs-lookup"><span data-stu-id="244cf-104">This means that you can assign to delegates not only methods that have matching signatures, but also methods that return more derived types (covariance) or that accept parameters that have less derived types (contravariance) than that specified by the delegate type.</span></span> <span data-ttu-id="244cf-105">Isso inclui delegados genéricos e não genérico.</span><span class="sxs-lookup"><span data-stu-id="244cf-105">This includes both generic and non-generic delegates.</span></span>  
   
- Por exemplo, considere o código a seguir, que tem duas classes e dois delegados: genérico e não genérico.  
+ <span data-ttu-id="244cf-106">Por exemplo, considere o código a seguir, que tem duas classes e dois delegados: genérico e não genérico.</span><span class="sxs-lookup"><span data-stu-id="244cf-106">For example, consider the following code, which has two classes and two delegates: generic and non-generic.</span></span>  
   
 ```vb  
 Public Class First  
@@ -43,7 +44,7 @@ Public Delegate Function SampleDelegate(ByVal a As Second) As First
 Public Delegate Function SampleGenericDelegate(Of A, R)(ByVal a As A) As R  
 ```  
   
- Quando você cria delegados do `SampleDelegate` ou `SampleDelegate(Of A, R)` tipos, você pode atribuir qualquer um dos seguintes métodos para esses delegados.  
+ <span data-ttu-id="244cf-107">Quando você cria delegados do `SampleDelegate` ou `SampleDelegate(Of A, R)` tipos, você pode atribuir qualquer um dos seguintes métodos para esses delegados.</span><span class="sxs-lookup"><span data-stu-id="244cf-107">When you create delegates of the `SampleDelegate` or `SampleDelegate(Of A, R)` types, you can assign any one of the following methods to those delegates.</span></span>  
   
 ```vb  
 ' Matching signature.  
@@ -72,7 +73,7 @@ Public Shared Function AFirstRSecond(
 End Function  
 ```  
   
- O exemplo de código a seguir ilustra a conversão implícita entre a assinatura do método e o tipo de delegado.  
+ <span data-ttu-id="244cf-108">O exemplo de código a seguir ilustra a conversão implícita entre a assinatura do método e o tipo de delegado.</span><span class="sxs-lookup"><span data-stu-id="244cf-108">The following code example illustrates the implicit conversion between the method signature and the delegate type.</span></span>  
   
 ```vb  
 ' Assigning a method with a matching signature   
@@ -92,14 +93,14 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond  
 ```  
   
- Para obter mais exemplos, consulte [usando variação em delegações (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) e [usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ <span data-ttu-id="244cf-109">Para obter mais exemplos, consulte [usando variação em delegações (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) e [usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="244cf-109">For more examples, see [Using Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) and [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
-## <a name="variance-in-generic-type-parameters"></a>Variação em parâmetros de tipo genérico  
- No .NET Framework 4 e posterior, você pode habilitar a conversão implícita entre delegados, para que possam ser atribuídos representantes genéricos com diferentes tipos especificados pelos parâmetros de tipo genérico uns aos outros, se os tipos são herdados de si conforme exigido por variância.  
+## <a name="variance-in-generic-type-parameters"></a><span data-ttu-id="244cf-110">Variação em parâmetros de tipo genérico</span><span class="sxs-lookup"><span data-stu-id="244cf-110">Variance in Generic Type Parameters</span></span>  
+ <span data-ttu-id="244cf-111">No .NET Framework 4 e posterior, você pode habilitar a conversão implícita entre delegados, para que possam ser atribuídos representantes genéricos com diferentes tipos especificados pelos parâmetros de tipo genérico uns aos outros, se os tipos são herdados de si conforme exigido por variância.</span><span class="sxs-lookup"><span data-stu-id="244cf-111">In .NET Framework 4 and later you can enable implicit conversion between delegates, so that generic delegates that have different types specified by generic type parameters can be assigned to each other, if the types are inherited from each other as required by variance.</span></span>  
   
- Para habilitar a conversão implícita, você deve declarar explicitamente os parâmetros genéricos em um delegado como covariant ou contravariant usando o `in` ou `out` palavra-chave.  
+ <span data-ttu-id="244cf-112">Para habilitar a conversão implícita, você deve declarar explicitamente os parâmetros genéricos em um delegado como covariant ou contravariant usando o `in` ou `out` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="244cf-112">To enable implicit conversion, you must explicitly declare generic parameters in a delegate as covariant or contravariant by using the `in` or `out` keyword.</span></span>  
   
- O exemplo de código a seguir mostra como você pode criar um delegado que tem um parâmetro de tipo genérico covariante.  
+ <span data-ttu-id="244cf-113">O exemplo de código a seguir mostra como você pode criar um delegado que tem um parâmetro de tipo genérico covariante.</span><span class="sxs-lookup"><span data-stu-id="244cf-113">The following code example shows how you can create a delegate that has a covariant generic type parameter.</span></span>  
   
 ```vb  
 ' Type T is declared covariant by using the out keyword.  
@@ -112,9 +113,9 @@ Sub Test()
 End Sub  
 ```  
   
- Se você usar somente suporte a variação para corresponder assinaturas de método com tipos delegados e não use o `in` e `out` palavras-chave, você pode achar que, às vezes, você pode instanciar delegados com métodos ou expressões lambda idênticas, mas não é possível atribuir um delegado para outro.  
+ <span data-ttu-id="244cf-114">Se você usar somente suporte a variação para corresponder assinaturas de método com tipos delegados e não use o `in` e `out` palavras-chave, você pode achar que, às vezes, você pode instanciar delegados com métodos ou expressões lambda idênticas, mas não é possível atribuir um delegado para outro.</span><span class="sxs-lookup"><span data-stu-id="244cf-114">If you use only variance support to match method signatures with delegate types and do not use the `in` and `out` keywords, you may find that sometimes you can instantiate delegates with identical lambda expressions or methods, but you cannot assign one delegate to another.</span></span>  
   
- No exemplo de código a seguir, `SampleGenericDelegate(Of String)` não pode ser explicitamente convertido em `SampleGenericDelegate(Of Object)`, embora `String` herda `Object`. Você pode corrigir esse problema, marcando o parâmetro genérico `T` com o `out` palavra-chave.  
+ <span data-ttu-id="244cf-115">No exemplo de código a seguir, `SampleGenericDelegate(Of String)` não pode ser explicitamente convertido em `SampleGenericDelegate(Of Object)`, embora `String` herda `Object`.</span><span class="sxs-lookup"><span data-stu-id="244cf-115">In the following code example, `SampleGenericDelegate(Of String)` can't be explicitly converted to `SampleGenericDelegate(Of Object)`, although `String` inherits `Object`.</span></span> <span data-ttu-id="244cf-116">Você pode corrigir esse problema, marcando o parâmetro genérico `T` com o `out` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="244cf-116">You can fix this problem by marking the generic parameter `T` with the `out` keyword.</span></span>  
   
 ```vb  
 Public Delegate Function SampleGenericDelegate(Of T)() As T  
@@ -134,48 +135,48 @@ Sub Test()
 End Sub  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Parâmetros de tipo de delegados genéricos com Variant no .NET Framework  
- .NET framework 4 introduziu o suporte de variação de parâmetros de tipo genérico em vários representantes genéricos existentes:  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a><span data-ttu-id="244cf-117">Parâmetros de tipo de delegados genéricos com Variant no .NET Framework</span><span class="sxs-lookup"><span data-stu-id="244cf-117">Generic Delegates That Have Variant Type Parameters in the .NET Framework</span></span>  
+ <span data-ttu-id="244cf-118">.NET framework 4 introduziu o suporte de variação de parâmetros de tipo genérico em vários representantes genéricos existentes:</span><span class="sxs-lookup"><span data-stu-id="244cf-118">.NET Framework 4 introduced variance support for generic type parameters in several existing generic delegates:</span></span>  
   
--   `Action`delega a <xref:System>espaço para nome, por exemplo, <xref:System.Action%601>e <xref:System.Action%602></xref:System.Action%602> </xref:System.Action%601> </xref:System>  
+-   <span data-ttu-id="244cf-119">`Action`delega a <xref:System>espaço para nome, por exemplo, <xref:System.Action%601>e <xref:System.Action%602></xref:System.Action%602> </xref:System.Action%601> </xref:System></span><span class="sxs-lookup"><span data-stu-id="244cf-119">`Action` delegates from the <xref:System> namespace, for example, <xref:System.Action%601> and <xref:System.Action%602></span></span>  
   
--   `Func`delega a <xref:System>espaço para nome, por exemplo, <xref:System.Func%601>e <xref:System.Func%602></xref:System.Func%602> </xref:System.Func%601> </xref:System>  
+-   <span data-ttu-id="244cf-120">`Func`delega a <xref:System>espaço para nome, por exemplo, <xref:System.Func%601>e <xref:System.Func%602></xref:System.Func%602> </xref:System.Func%601> </xref:System></span><span class="sxs-lookup"><span data-stu-id="244cf-120">`Func` delegates from the <xref:System> namespace, for example, <xref:System.Func%601> and <xref:System.Func%602></span></span>  
   
--   O <xref:System.Predicate%601>delegado</xref:System.Predicate%601>  
+-   <span data-ttu-id="244cf-121">O <xref:System.Predicate%601>delegado</xref:System.Predicate%601></span><span class="sxs-lookup"><span data-stu-id="244cf-121">The <xref:System.Predicate%601> delegate</span></span>  
   
--   O <xref:System.Comparison%601>delegado</xref:System.Comparison%601>  
+-   <span data-ttu-id="244cf-122">O <xref:System.Comparison%601>delegado</xref:System.Comparison%601></span><span class="sxs-lookup"><span data-stu-id="244cf-122">The <xref:System.Comparison%601> delegate</span></span>  
   
--   O <xref:System.Converter%602>delegado</xref:System.Converter%602>  
+-   <span data-ttu-id="244cf-123">O <xref:System.Converter%602>delegado</xref:System.Converter%602></span><span class="sxs-lookup"><span data-stu-id="244cf-123">The <xref:System.Converter%602> delegate</span></span>  
   
- Para obter mais informações e exemplos, consulte [usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ <span data-ttu-id="244cf-124">Para obter mais informações e exemplos, consulte [usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span><span class="sxs-lookup"><span data-stu-id="244cf-124">For more information and examples, see [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).</span></span>  
   
-### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Declarar parâmetros de tipo Variant em delegados genéricos  
- Se um delegado genérico tem covariant ou contravariant parâmetros de tipo genérico, ele pode ser considerado um *delegado genérico variante*.  
+### <a name="declaring-variant-type-parameters-in-generic-delegates"></a><span data-ttu-id="244cf-125">Declarar parâmetros de tipo Variant em delegados genéricos</span><span class="sxs-lookup"><span data-stu-id="244cf-125">Declaring Variant Type Parameters in Generic Delegates</span></span>  
+ <span data-ttu-id="244cf-126">Se um delegado genérico tem covariant ou contravariant parâmetros de tipo genérico, ele pode ser considerado um *delegado genérico variante*.</span><span class="sxs-lookup"><span data-stu-id="244cf-126">If a generic delegate has covariant or contravariant generic type parameters, it can be referred to as a *variant generic delegate*.</span></span>  
   
- Você pode declarar um parâmetro de tipo genérico covariante um delegado genérico usando o `out` palavra-chave. O tipo de covariante pode ser usado apenas como um tipo de retorno do método e não como um tipo de argumentos do método. O exemplo de código a seguir mostra como declarar um delegado genérico covariante.  
+ <span data-ttu-id="244cf-127">Você pode declarar um parâmetro de tipo genérico covariante um delegado genérico usando o `out` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="244cf-127">You can declare a generic type parameter covariant in a generic delegate by using the `out` keyword.</span></span> <span data-ttu-id="244cf-128">O tipo de covariante pode ser usado apenas como um tipo de retorno do método e não como um tipo de argumentos do método.</span><span class="sxs-lookup"><span data-stu-id="244cf-128">The covariant type can be used only as a method return type and not as a type of method arguments.</span></span> <span data-ttu-id="244cf-129">O exemplo de código a seguir mostra como declarar um delegado genérico covariante.</span><span class="sxs-lookup"><span data-stu-id="244cf-129">The following code example shows how to declare a covariant generic delegate.</span></span>  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
- Você pode declarar um contravariant de parâmetro de tipo genérico em um delegado genérico usando o `in` palavra-chave. O tipo contravariant pode ser usado apenas como um tipo de argumentos de método e não como um tipo de retorno do método. O exemplo de código a seguir mostra como declarar um delegado genérico contravariant.  
+<span data-ttu-id="244cf-130"><CodeContentPlaceHolder>5</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="244cf-130"><CodeContentPlaceHolder>5</CodeContentPlaceHolder></span></span>  
+ <span data-ttu-id="244cf-131">Você pode declarar um contravariant de parâmetro de tipo genérico em um delegado genérico usando o `in` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="244cf-131">You can declare a generic type parameter contravariant in a generic delegate by using the `in` keyword.</span></span> <span data-ttu-id="244cf-132">O tipo contravariant pode ser usado apenas como um tipo de argumentos de método e não como um tipo de retorno do método.</span><span class="sxs-lookup"><span data-stu-id="244cf-132">The contravariant type can be used only as a type of method arguments and not as a method return type.</span></span> <span data-ttu-id="244cf-133">O exemplo de código a seguir mostra como declarar um delegado genérico contravariant.</span><span class="sxs-lookup"><span data-stu-id="244cf-133">The following code example shows how to declare a contravariant generic delegate.</span></span>  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+<span data-ttu-id="244cf-134"><CodeContentPlaceHolder>6</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="244cf-134"><CodeContentPlaceHolder>6</CodeContentPlaceHolder></span></span>  
 > [!IMPORTANT]
->  `ByRef`parâmetros no Visual Basic não podem ser marcados como variante.  
+> <span data-ttu-id="244cf-135"> `ByRef`parâmetros no Visual Basic não podem ser marcados como variante.</span><span class="sxs-lookup"><span data-stu-id="244cf-135"> `ByRef` parameters in Visual Basic can't be marked as variant.</span></span>  
   
- Também é possível oferecer suporte a variância e covariância o mesmo delegado, mas para os parâmetros de tipo diferente. Isso é mostrado no exemplo a seguir.  
+ <span data-ttu-id="244cf-136">Também é possível oferecer suporte a variância e covariância o mesmo delegado, mas para os parâmetros de tipo diferente.</span><span class="sxs-lookup"><span data-stu-id="244cf-136">It is also possible to support both variance and covariance in the same delegate, but for different type parameters.</span></span> <span data-ttu-id="244cf-137">Isso é mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="244cf-137">This is shown in the following example.</span></span>  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
-### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Instanciar e invocando delegados genéricos variantes  
- Você pode criar uma instância e invocam delegados variantes como instanciar e invocam delegados invariáveis. No exemplo a seguir, o delegado é instanciado por uma expressão lambda.  
+<span data-ttu-id="244cf-138"><CodeContentPlaceHolder>7</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="244cf-138"><CodeContentPlaceHolder>7</CodeContentPlaceHolder></span></span>  
+### <a name="instantiating-and-invoking-variant-generic-delegates"></a><span data-ttu-id="244cf-139">Instanciar e invocando delegados genéricos variantes</span><span class="sxs-lookup"><span data-stu-id="244cf-139">Instantiating and Invoking Variant Generic Delegates</span></span>  
+ <span data-ttu-id="244cf-140">Você pode criar uma instância e invocam delegados variantes como instanciar e invocam delegados invariáveis.</span><span class="sxs-lookup"><span data-stu-id="244cf-140">You can instantiate and invoke variant delegates just as you instantiate and invoke invariant delegates.</span></span> <span data-ttu-id="244cf-141">No exemplo a seguir, o delegado é instanciado por uma expressão lambda.</span><span class="sxs-lookup"><span data-stu-id="244cf-141">In the following example, the delegate is instantiated by a lambda expression.</span></span>  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
-### <a name="combining-variant-generic-delegates"></a>A combinação de delegados genéricos variantes  
- Você não deve combinar delegados variantes. O <xref:System.Delegate.Combine%2A>método não dá suporte a conversão de delegado variant e delegados a ser exatamente o mesmo tipo de espera.</xref:System.Delegate.Combine%2A> Isso pode levar a uma exceção de tempo de execução quando você combina delegados usando o <xref:System.Delegate.Combine%2A>método (em c# e Visual Basic) ou usando o `+` operador (em c#), conforme mostrado no exemplo de código a seguir.</xref:System.Delegate.Combine%2A>  
+<span data-ttu-id="244cf-142"><CodeContentPlaceHolder>8</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="244cf-142"><CodeContentPlaceHolder>8</CodeContentPlaceHolder></span></span>  
+### <a name="combining-variant-generic-delegates"></a><span data-ttu-id="244cf-143">A combinação de delegados genéricos variantes</span><span class="sxs-lookup"><span data-stu-id="244cf-143">Combining Variant Generic Delegates</span></span>  
+ <span data-ttu-id="244cf-144">Você não deve combinar delegados variantes.</span><span class="sxs-lookup"><span data-stu-id="244cf-144">You should not combine variant delegates.</span></span> <span data-ttu-id="244cf-145">O <xref:System.Delegate.Combine%2A>método não dá suporte a conversão de delegado variant e delegados a ser exatamente o mesmo tipo de espera.</xref:System.Delegate.Combine%2A></span><span class="sxs-lookup"><span data-stu-id="244cf-145">The <xref:System.Delegate.Combine%2A> method does not support variant delegate conversion and expects delegates to be of exactly the same type.</span></span> <span data-ttu-id="244cf-146">Isso pode levar a uma exceção de tempo de execução quando você combina delegados usando o <xref:System.Delegate.Combine%2A>método (em c# e Visual Basic) ou usando o `+` operador (em c#), conforme mostrado no exemplo de código a seguir.</xref:System.Delegate.Combine%2A></span><span class="sxs-lookup"><span data-stu-id="244cf-146">This can lead to a run-time exception when you combine delegates either by using the <xref:System.Delegate.Combine%2A> method (in C# and Visual Basic) or by using the `+` operator (in C#), as shown in the following code example.</span></span>  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
-## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Variância em parâmetros de tipo genérico para tipos de referência e valor  
- Variância de parâmetros de tipo genérico tem suporte para somente tipos de referência. Por exemplo, `DVariant(Of Int)`não pode ser convertido implicitamente em `DVariant(Of Object)` ou `DVariant(Of Long)`, pois inteiro é um tipo de valor.  
+<span data-ttu-id="244cf-147"><CodeContentPlaceHolder>9</CodeContentPlaceHolder></span><span class="sxs-lookup"><span data-stu-id="244cf-147"><CodeContentPlaceHolder>9</CodeContentPlaceHolder></span></span>  
+## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a><span data-ttu-id="244cf-148">Variância em parâmetros de tipo genérico para tipos de referência e valor</span><span class="sxs-lookup"><span data-stu-id="244cf-148">Variance in Generic Type Parameters for Value and Reference Types</span></span>  
+ <span data-ttu-id="244cf-149">Variância de parâmetros de tipo genérico tem suporte para somente tipos de referência.</span><span class="sxs-lookup"><span data-stu-id="244cf-149">Variance for generic type parameters is supported for reference types only.</span></span> <span data-ttu-id="244cf-150">Por exemplo, `DVariant(Of Int)`não pode ser convertido implicitamente em `DVariant(Of Object)` ou `DVariant(Of Long)`, pois inteiro é um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="244cf-150">For example, `DVariant(Of Int)`can't be implicitly converted to `DVariant(Of Object)` or `DVariant(Of Long)`, because integer is a value type.</span></span>  
   
- O exemplo a seguir demonstra essa variação no tipo genérico parâmetros não há suporte para tipos de valor.  
+ <span data-ttu-id="244cf-151">O exemplo a seguir demonstra essa variação no tipo genérico parâmetros não há suporte para tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="244cf-151">The following example demonstrates that variance in generic type parameters is not supported for value types.</span></span>  
   
 ```vb  
 ' The type T is covariant.  
@@ -197,9 +198,9 @@ Sub Test()
 End Sub  
 ```  
   
-## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Conversão de delegado reduzida no Visual Basic  
- Conversão de delegado reduzida permite mais flexibilidade na correspondência de assinaturas de método com tipos delegados. Por exemplo, ele permite omitir as especificações do parâmetro e omitir valores de retorno da função quando você atribui um método a um delegado. Para obter mais informações, consulte [conversão de delegado reduzida](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+## <a name="relaxed-delegate-conversion-in-visual-basic"></a><span data-ttu-id="244cf-152">Conversão de delegado reduzida no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="244cf-152">Relaxed Delegate Conversion in Visual Basic</span></span>  
+ <span data-ttu-id="244cf-153">Conversão de delegado reduzida permite mais flexibilidade na correspondência de assinaturas de método com tipos delegados.</span><span class="sxs-lookup"><span data-stu-id="244cf-153">Relaxed delegate conversion enables more flexibility in matching method signatures with delegate types.</span></span> <span data-ttu-id="244cf-154">Por exemplo, ele permite omitir as especificações do parâmetro e omitir valores de retorno da função quando você atribui um método a um delegado.</span><span class="sxs-lookup"><span data-stu-id="244cf-154">For example, it lets you omit parameter specifications and omit function return values when you assign a method to a delegate.</span></span> <span data-ttu-id="244cf-155">Para obter mais informações, consulte [conversão de delegado reduzida](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span><span class="sxs-lookup"><span data-stu-id="244cf-155">For more information, see [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Classes genéricas](https://msdn.microsoft.com/library/ms172192)   
- [Usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a><span data-ttu-id="244cf-156">Consulte também</span><span class="sxs-lookup"><span data-stu-id="244cf-156">See Also</span></span>  
+ <span data-ttu-id="244cf-157">[Classes genéricas](https://msdn.microsoft.com/library/ms172192) </span><span class="sxs-lookup"><span data-stu-id="244cf-157">[Generics](https://msdn.microsoft.com/library/ms172192) </span></span>  
+<span data-ttu-id="244cf-158"> [Usando variação para delegações Func e Action genérica (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)</span><span class="sxs-lookup"><span data-stu-id="244cf-158"> [Using Variance for Func and Action Generic Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)</span></span>

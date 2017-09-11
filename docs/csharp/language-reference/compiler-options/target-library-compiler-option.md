@@ -38,42 +38,42 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="targetlibrary-c-compiler-options"></a>/target:library (opções do compilador C#)
-A opção **/target:library** faz com que o compilador crie uma DLL (biblioteca de vínculo dinâmico) em vez de um arquivo executável (EXE).  
+# <a name="targetlibrary-c-compiler-options"></a><span data-ttu-id="d2457-102">/target:library (opções do compilador C#)</span><span class="sxs-lookup"><span data-stu-id="d2457-102">/target:library (C# Compiler Options)</span></span>
+<span data-ttu-id="d2457-103">A opção **/target:library** faz com que o compilador crie uma DLL (biblioteca de vínculo dinâmico) em vez de um arquivo executável (EXE).</span><span class="sxs-lookup"><span data-stu-id="d2457-103">The **/target:library** option causes the compiler to create a dynamic-link library (DLL) rather than an executable file (EXE).</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="d2457-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d2457-104">Syntax</span></span>  
   
 ```console  
 /target:library  
 ```  
   
-## <a name="remarks"></a>Comentários  
- A DLL será criada com a extensão .dll.  
+## <a name="remarks"></a><span data-ttu-id="d2457-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="d2457-105">Remarks</span></span>  
+ <span data-ttu-id="d2457-106">A DLL será criada com a extensão .dll.</span><span class="sxs-lookup"><span data-stu-id="d2457-106">The DLL will be created with the .dll extension.</span></span>  
   
- A menos que seja especificado de outra forma com a opção [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usa o nome do primeiro arquivo de entrada.  
+ <span data-ttu-id="d2457-107">A menos que seja especificado de outra forma com a opção [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), o nome do arquivo de saída usa o nome do primeiro arquivo de entrada.</span><span class="sxs-lookup"><span data-stu-id="d2457-107">Unless otherwise specified with the [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) option, the output file name takes the name of the first input file.</span></span>  
   
- Quando especificado na linha de comando, todos os arquivos até a próxima opção **/out** ou **/target:module** são usados para criar o arquivo .dll.  
+ <span data-ttu-id="d2457-108">Quando especificado na linha de comando, todos os arquivos até a próxima opção **/out** ou **/target:module** são usados para criar o arquivo .dll.</span><span class="sxs-lookup"><span data-stu-id="d2457-108">When specified at the command line, all files up to the next **/out** or **/target:module** option are used to create the .dll file.</span></span>  
   
- Ao criar um arquivo .dll, um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md) não é necessário.  
+ <span data-ttu-id="d2457-109">Ao criar um arquivo .dll, um método [Main](../../../csharp/programming-guide/main-and-command-args/index.md) não é necessário.</span><span class="sxs-lookup"><span data-stu-id="d2457-109">When building a .dll file, a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method is not required.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d2457-110">Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d2457-110">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  Abra a página **Propriedades** do projeto.  
+1.  <span data-ttu-id="d2457-111">Abra a página **Propriedades** do projeto.</span><span class="sxs-lookup"><span data-stu-id="d2457-111">Open the project's **Properties** page.</span></span>  
   
-2.  Clique na página de propriedades do **Aplicativo**.  
+2.  <span data-ttu-id="d2457-112">Clique na página de propriedades do **Aplicativo**.</span><span class="sxs-lookup"><span data-stu-id="d2457-112">Click the **Application** property page.</span></span>  
   
-3.  Modifique a propriedade **Tipo de saída**.  
+3.  <span data-ttu-id="d2457-113">Modifique a propriedade **Tipo de saída**.</span><span class="sxs-lookup"><span data-stu-id="d2457-113">Modify the **Output type** property.</span></span>  
   
- Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
+ <span data-ttu-id="d2457-114">Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span><span class="sxs-lookup"><span data-stu-id="d2457-114">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Compile `in.cs`, criando `in.dll`:  
+## <a name="example"></a><span data-ttu-id="d2457-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="d2457-115">Example</span></span>  
+ <span data-ttu-id="d2457-116">Compile `in.cs`, criando `in.dll`:</span><span class="sxs-lookup"><span data-stu-id="d2457-116">Compile `in.cs`, creating `in.dll`:</span></span>  
   
 ```console  
 csc /target:library in.cs  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [/target (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
- [Opções do compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a><span data-ttu-id="d2457-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d2457-117">See Also</span></span>  
+ <span data-ttu-id="d2457-118">[/target (Opções do compilador C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md) </span><span class="sxs-lookup"><span data-stu-id="d2457-118">[/target (C# Compiler Options)](../../../csharp/language-reference/compiler-options/target-compiler-option.md) </span></span>  
+ [<span data-ttu-id="d2457-119">Opções do compilador de C#</span><span class="sxs-lookup"><span data-stu-id="d2457-119">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
 

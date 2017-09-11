@@ -26,10 +26,10 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-test-configuration-linq-to-xml"></a>Arquivo XML de Exemplo: Configuração de teste (LINQ to XML)
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este é um arquivo de configuração de teste.  
+# <a name="sample-xml-file-test-configuration-linq-to-xml"></a><span data-ttu-id="35271-102">Arquivo XML de Exemplo: Configuração de teste (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="35271-102">Sample XML File: Test Configuration (LINQ to XML)</span></span>
+<span data-ttu-id="35271-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="35271-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="35271-104">Este é um arquivo de configuração de teste.</span><span class="sxs-lookup"><span data-stu-id="35271-104">This is a test configuration file.</span></span>  
   
-## <a name="testconfigxml"></a>TestConfig.xml  
+## <a name="testconfigxml"></a><span data-ttu-id="35271-105">TestConfig.xml</span><span class="sxs-lookup"><span data-stu-id="35271-105">TestConfig.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -73,6 +73,6 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="35271-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="35271-106">See Also</span></span>  
+ [<span data-ttu-id="35271-107">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="35271-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

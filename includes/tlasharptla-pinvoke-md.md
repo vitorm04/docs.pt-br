@@ -1,1 +1,1 @@
-Serviços PInvoke (Invocação de Plataforma)
+<span data-ttu-id="c949b-101">Serviços PInvoke (Invocação de Plataforma)</span><span class="sxs-lookup"><span data-stu-id="c949b-101">Platform Invocation Services (PInvoke)</span></span>

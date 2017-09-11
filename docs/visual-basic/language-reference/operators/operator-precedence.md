@@ -39,70 +39,71 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6532fc0c26db3b736c863be075571570a3d25eef
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f653dd83c9778dddfe0e52db27065f7d73866e37
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="operator-precedence-in-visual-basic"></a>Precedência do operador no Visual Basic
-Quando várias operações ocorrem em uma expressão, cada parte é avaliado e resolvido em uma ordem predeterminada chamada *precedência do operador*.  
+# <a name="operator-precedence-in-visual-basic"></a><span data-ttu-id="d8662-102">Precedência do operador no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d8662-102">Operator Precedence in Visual Basic</span></span>
+<span data-ttu-id="d8662-103">Quando várias operações ocorrem em uma expressão, cada parte é avaliado e resolvido em uma ordem predeterminada chamada *precedência do operador*.</span><span class="sxs-lookup"><span data-stu-id="d8662-103">When several operations occur in an expression, each part is evaluated and resolved in a predetermined order called *operator precedence*.</span></span>  
   
-## <a name="precedence-rules"></a>Regras de precedência  
- Quando as expressões contêm operadores de mais de uma categoria, eles são avaliados de acordo com as regras a seguir:  
+## <a name="precedence-rules"></a><span data-ttu-id="d8662-104">Regras de precedência</span><span class="sxs-lookup"><span data-stu-id="d8662-104">Precedence Rules</span></span>  
+ <span data-ttu-id="d8662-105">Quando as expressões contêm operadores de mais de uma categoria, eles são avaliados de acordo com as regras a seguir:</span><span class="sxs-lookup"><span data-stu-id="d8662-105">When expressions contain operators from more than one category, they are evaluated according to the following rules:</span></span>  
   
--   Os operadores aritméticos e concatenação têm a ordem de precedência descrita na seção a seguir, e todas têm precedência maior do que a comparação, lógicos e operadores bit a bit.  
+-   <span data-ttu-id="d8662-106">Os operadores aritméticos e concatenação têm a ordem de precedência descrita na seção a seguir, e todas têm precedência maior do que a comparação, lógicos e operadores bit a bit.</span><span class="sxs-lookup"><span data-stu-id="d8662-106">The arithmetic and concatenation operators have the order of precedence described in the following section, and all have greater precedence than the comparison, logical, and bitwise operators.</span></span>  
   
--   Todos os operadores de comparação têm a mesma precedência e todas têm precedência maior do que os operadores lógicos e bit a bit, mas menor precedência que os operadores aritméticos e concatenação.  
+-   <span data-ttu-id="d8662-107">Todos os operadores de comparação têm a mesma precedência e todas têm precedência maior do que os operadores lógicos e bit a bit, mas menor precedência que os operadores aritméticos e concatenação.</span><span class="sxs-lookup"><span data-stu-id="d8662-107">All comparison operators have equal precedence, and all have greater precedence than the logical and bitwise operators, but lower precedence than the arithmetic and concatenation operators.</span></span>  
   
--   Os operadores lógicos e bit a bit que a ordem de precedência descrita na seção a seguir, e todas têm precedência menor que a aritmética, concatenação e operadores de comparação.  
+-   <span data-ttu-id="d8662-108">Os operadores lógicos e bit a bit que a ordem de precedência descrita na seção a seguir, e todas têm precedência menor que a aritmética, concatenação e operadores de comparação.</span><span class="sxs-lookup"><span data-stu-id="d8662-108">The logical and bitwise operators have the order of precedence described in the following section, and all have lower precedence than the arithmetic, concatenation, and comparison operators.</span></span>  
   
--   Operadores com a mesma precedência são avaliados da esquerda para a direita na ordem em que aparecem na expressão.  
+-   <span data-ttu-id="d8662-109">Operadores com a mesma precedência são avaliados da esquerda para a direita na ordem em que aparecem na expressão.</span><span class="sxs-lookup"><span data-stu-id="d8662-109">Operators with equal precedence are evaluated left to right in the order in which they appear in the expression.</span></span>  
   
-## <a name="precedence-order"></a>Ordem de precedência  
- Operadores são avaliados na seguinte ordem de precedência:  
+## <a name="precedence-order"></a><span data-ttu-id="d8662-110">Ordem de precedência</span><span class="sxs-lookup"><span data-stu-id="d8662-110">Precedence Order</span></span>  
+ <span data-ttu-id="d8662-111">Operadores são avaliados na seguinte ordem de precedência:</span><span class="sxs-lookup"><span data-stu-id="d8662-111">Operators are evaluated in the following order of precedence:</span></span>  
   
-### <a name="await-operator"></a>Operador Await  
- À espera  
+### <a name="await-operator"></a><span data-ttu-id="d8662-112">Operador Await</span><span class="sxs-lookup"><span data-stu-id="d8662-112">Await Operator</span></span>  
+ <span data-ttu-id="d8662-113">À espera</span><span class="sxs-lookup"><span data-stu-id="d8662-113">Await</span></span>  
   
-### <a name="arithmetic-and-concatenation-operators"></a>Aritmética e operadores de concatenação  
- Exponenciação (`^`)  
+### <a name="arithmetic-and-concatenation-operators"></a><span data-ttu-id="d8662-114">Aritmética e operadores de concatenação</span><span class="sxs-lookup"><span data-stu-id="d8662-114">Arithmetic and Concatenation Operators</span></span>  
+ <span data-ttu-id="d8662-115">Exponenciação (`^`)</span><span class="sxs-lookup"><span data-stu-id="d8662-115">Exponentiation (`^`)</span></span>  
   
- Unários identidade e negação (`+`, `–`)  
+ <span data-ttu-id="d8662-116">Unários identidade e negação (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="d8662-116">Unary identity and negation (`+`, `–`)</span></span>  
   
- Multiplicação e divisão de ponto flutuante (`*`, `/`)  
+ <span data-ttu-id="d8662-117">Multiplicação e divisão de ponto flutuante (`*`, `/`)</span><span class="sxs-lookup"><span data-stu-id="d8662-117">Multiplication and floating-point division (`*`, `/`)</span></span>  
   
- Divisão de inteiros (`\`)  
+ <span data-ttu-id="d8662-118">Divisão de inteiros (`\`)</span><span class="sxs-lookup"><span data-stu-id="d8662-118">Integer division (`\`)</span></span>  
   
- Módulo aritmético (`Mod`)  
+ <span data-ttu-id="d8662-119">Módulo aritmético (`Mod`)</span><span class="sxs-lookup"><span data-stu-id="d8662-119">Modulus arithmetic (`Mod`)</span></span>  
   
- Adição e subtração (`+`, `–`)  
+ <span data-ttu-id="d8662-120">Adição e subtração (`+`, `–`)</span><span class="sxs-lookup"><span data-stu-id="d8662-120">Addition and subtraction (`+`, `–`)</span></span>  
   
- Concatenação de cadeia de caracteres (`&`)  
+ <span data-ttu-id="d8662-121">Concatenação de cadeia de caracteres (`&`)</span><span class="sxs-lookup"><span data-stu-id="d8662-121">String concatenation (`&`)</span></span>  
   
- Aritmética bit shift (`<<`, `>>`)  
+ <span data-ttu-id="d8662-122">Aritmética bit shift (`<<`, `>>`)</span><span class="sxs-lookup"><span data-stu-id="d8662-122">Arithmetic bit shift (`<<`, `>>`)</span></span>  
   
-### <a name="comparison-operators"></a>Operadores de comparação  
- All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
+### <a name="comparison-operators"></a><span data-ttu-id="d8662-123">Operadores de comparação</span><span class="sxs-lookup"><span data-stu-id="d8662-123">Comparison Operators</span></span>  
+ <span data-ttu-id="d8662-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)</span><span class="sxs-lookup"><span data-stu-id="d8662-124">All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`)</span></span>  
   
-### <a name="logical-and-bitwise-operators"></a>Operadores lógicos e bit a bit  
- Negação (`Not`)  
+### <a name="logical-and-bitwise-operators"></a><span data-ttu-id="d8662-125">Operadores lógicos e bit a bit</span><span class="sxs-lookup"><span data-stu-id="d8662-125">Logical and Bitwise Operators</span></span>  
+ <span data-ttu-id="d8662-126">Negação (`Not`)</span><span class="sxs-lookup"><span data-stu-id="d8662-126">Negation (`Not`)</span></span>  
   
- Conjunto (`And`, `AndAlso`)  
+ <span data-ttu-id="d8662-127">Conjunto (`And`, `AndAlso`)</span><span class="sxs-lookup"><span data-stu-id="d8662-127">Conjunction (`And`, `AndAlso`)</span></span>  
   
- Disjunção (`Or`, `OrElse`)  
+ <span data-ttu-id="d8662-128">Disjunção (`Or`, `OrElse`)</span><span class="sxs-lookup"><span data-stu-id="d8662-128">Inclusive disjunction (`Or`, `OrElse`)</span></span>  
   
- Disjunção (`Xor`)  
+ <span data-ttu-id="d8662-129">Disjunção (`Xor`)</span><span class="sxs-lookup"><span data-stu-id="d8662-129">Exclusive disjunction (`Xor`)</span></span>  
   
-### <a name="comments"></a>Comentários  
- O `=` operador é apenas o igualdade operador de comparação, não o operador de atribuição.  
+### <a name="comments"></a><span data-ttu-id="d8662-130">Comentários</span><span class="sxs-lookup"><span data-stu-id="d8662-130">Comments</span></span>  
+ <span data-ttu-id="d8662-131">O `=` operador é apenas o igualdade operador de comparação, não o operador de atribuição.</span><span class="sxs-lookup"><span data-stu-id="d8662-131">The `=` operator is only the equality comparison operator, not the assignment operator.</span></span>  
   
- O operador de concatenação de cadeia de caracteres (`&`) não é um operador aritmético, mas na prioridade é agrupado com os operadores aritméticos.  
+ <span data-ttu-id="d8662-132">O operador de concatenação de cadeia de caracteres (`&`) não é um operador aritmético, mas na prioridade é agrupado com os operadores aritméticos.</span><span class="sxs-lookup"><span data-stu-id="d8662-132">The string concatenation operator (`&`) is not an arithmetic operator, but in precedence it is grouped with the arithmetic operators.</span></span>  
   
- O `Is` e `IsNot` operadores são operadores de comparação de referência de objeto. Eles não são os valores dos dois objetos. eles verifique apenas para determinar se duas variáveis de objeto se referem à mesma instância de objeto.  
+ <span data-ttu-id="d8662-133">O `Is` e `IsNot` operadores são operadores de comparação de referência de objeto.</span><span class="sxs-lookup"><span data-stu-id="d8662-133">The `Is` and `IsNot` operators are object reference comparison operators.</span></span> <span data-ttu-id="d8662-134">Eles não são os valores dos dois objetos. eles verifique apenas para determinar se duas variáveis de objeto se referem à mesma instância de objeto.</span><span class="sxs-lookup"><span data-stu-id="d8662-134">They do not compare the values of two objects; they check only to determine whether two object variables refer to the same object instance.</span></span>  
   
-## <a name="associativity"></a>Associatividade  
- Quando operadores de precedência igual aparecem juntos em uma expressão, por exemplo, multiplicação e divisão, o compilador avalia cada operação conforme ele encontra da esquerda para a direita. O exemplo a seguir ilustra essa situação.  
+## <a name="associativity"></a><span data-ttu-id="d8662-135">Associatividade</span><span class="sxs-lookup"><span data-stu-id="d8662-135">Associativity</span></span>  
+ <span data-ttu-id="d8662-136">Quando operadores de precedência igual aparecem juntos em uma expressão, por exemplo, multiplicação e divisão, o compilador avalia cada operação conforme ele encontra da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="d8662-136">When operators of equal precedence appear together in an expression, for example multiplication and division, the compiler evaluates each operation as it encounters it from left to right.</span></span> <span data-ttu-id="d8662-137">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="d8662-137">The following example illustrates this.</span></span>  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -110,12 +111,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- A primeira expressão é avaliada a divisão 96 / 8 (o que resulta em 12) e, em seguida, a divisão de 12 / 4, o que resulta em três. Porque o compilador avalia as operações `n1` da esquerda para a direita, a avaliação é o mesmo quando a ordem é explicitamente indicada para `n2`. Ambos `n1` e `n2` tem um resultado de três. Por outro lado, `n3` possui um resultado de 48, porque os parênteses forçam o compilador para avaliar 8 / 4 primeiro.  
+ <span data-ttu-id="d8662-138">A primeira expressão é avaliada a divisão 96 / 8 (o que resulta em 12) e, em seguida, a divisão de 12 / 4, o que resulta em três.</span><span class="sxs-lookup"><span data-stu-id="d8662-138">The first expression evaluates the division 96 / 8 (which results in 12) and then the division 12 / 4, which results in three.</span></span> <span data-ttu-id="d8662-139">Porque o compilador avalia as operações `n1` da esquerda para a direita, a avaliação é o mesmo quando a ordem é explicitamente indicada para `n2`.</span><span class="sxs-lookup"><span data-stu-id="d8662-139">Because the compiler evaluates the operations for `n1` from left to right, the evaluation is the same when that order is explicitly indicated for `n2`.</span></span> <span data-ttu-id="d8662-140">Ambos `n1` e `n2` tem um resultado de três.</span><span class="sxs-lookup"><span data-stu-id="d8662-140">Both `n1` and `n2` have a result of three.</span></span> <span data-ttu-id="d8662-141">Por outro lado, `n3` possui um resultado de 48, porque os parênteses forçam o compilador para avaliar 8 / 4 primeiro.</span><span class="sxs-lookup"><span data-stu-id="d8662-141">By contrast, `n3` has a result of 48, because the parentheses force the compiler to evaluate 8 / 4 first.</span></span>  
   
- Devido a esse comportamento, operadores são considerados *permanecem associativos* em [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ <span data-ttu-id="d8662-142">Devido a esse comportamento, operadores são considerados *permanecem associativos* em [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="d8662-142">Because of this behavior, operators are said to be *left associative* in [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="overriding-precedence-and-associativity"></a>Substituição de precedência e associatividade  
- Você pode usar parênteses para forçar algumas partes de uma expressão a ser avaliada antes de outros. Isso pode substituir a ordem de precedência e a associatividade à esquerda. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]sempre executa operações que estão entre parênteses antes de fora. No entanto, dentro dos parênteses, ele mantém comum precedência e associatividade, a menos que você use parênteses dentro dos parênteses. O exemplo a seguir ilustra essa situação.  
+## <a name="overriding-precedence-and-associativity"></a><span data-ttu-id="d8662-143">Substituição de precedência e associatividade</span><span class="sxs-lookup"><span data-stu-id="d8662-143">Overriding Precedence and Associativity</span></span>  
+ <span data-ttu-id="d8662-144">Você pode usar parênteses para forçar algumas partes de uma expressão a ser avaliada antes de outros.</span><span class="sxs-lookup"><span data-stu-id="d8662-144">You can use parentheses to force some parts of an expression to be evaluated before others.</span></span> <span data-ttu-id="d8662-145">Isso pode substituir a ordem de precedência e a associatividade à esquerda.</span><span class="sxs-lookup"><span data-stu-id="d8662-145">This can override both the order of precedence and the left associativity.</span></span> [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="d8662-146">sempre executa operações que estão entre parênteses antes de fora.</span><span class="sxs-lookup"><span data-stu-id="d8662-146"> always performs operations that are enclosed in parentheses before those outside.</span></span> <span data-ttu-id="d8662-147">No entanto, dentro dos parênteses, ele mantém comum precedência e associatividade, a menos que você use parênteses dentro dos parênteses.</span><span class="sxs-lookup"><span data-stu-id="d8662-147">However, within parentheses, it maintains ordinary precedence and associativity, unless you use parentheses within the parentheses.</span></span> <span data-ttu-id="d8662-148">O exemplo a seguir ilustra essa situação.</span><span class="sxs-lookup"><span data-stu-id="d8662-148">The following example illustrates this.</span></span>  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -135,12 +136,12 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [= Operador](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Operador is](../../../visual-basic/language-reference/operators/is-operator.md)   
- [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Operador LIKE](../../../visual-basic/language-reference/operators/like-operator.md)   
- [Operador TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [Operador await](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="d8662-149">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d8662-149">See Also</span></span>  
+ <span data-ttu-id="d8662-150">[= Operador](../../../visual-basic/language-reference/operators/assignment-operator.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-150">[= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md) </span></span>  
+<span data-ttu-id="d8662-151"> [Operador is](../../../visual-basic/language-reference/operators/is-operator.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-151"> [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md) </span></span>  
+<span data-ttu-id="d8662-152"> [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-152"> [IsNot Operator](../../../visual-basic/language-reference/operators/isnot-operator.md) </span></span>  
+<span data-ttu-id="d8662-153"> [Operador LIKE](../../../visual-basic/language-reference/operators/like-operator.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-153"> [Like Operator](../../../visual-basic/language-reference/operators/like-operator.md) </span></span>  
+<span data-ttu-id="d8662-154"> [Operador TypeOf](../../../visual-basic/language-reference/operators/typeof-operator.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-154"> [TypeOf Operator](../../../visual-basic/language-reference/operators/typeof-operator.md) </span></span>  
+<span data-ttu-id="d8662-155"> [Operador await](../../../visual-basic/language-reference/operators/await-operator.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-155"> [Await Operator](../../../visual-basic/language-reference/operators/await-operator.md) </span></span>  
+<span data-ttu-id="d8662-156"> [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span><span class="sxs-lookup"><span data-stu-id="d8662-156"> [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span></span>  
+<span data-ttu-id="d8662-157"> [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)</span><span class="sxs-lookup"><span data-stu-id="d8662-157"> [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)</span></span>

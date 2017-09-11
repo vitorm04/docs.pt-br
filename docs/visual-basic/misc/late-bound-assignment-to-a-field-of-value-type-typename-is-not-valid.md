@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ee7570def92abf7b5cc9694dae1eeb6d6e7e2ea9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8c4b5cb633e0a36172adb59a77397a11bd8cf7df
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a>Atribuição de associação tardia a um campo de tipo de valor '&lt;typename&gt;'não é válida quando'&lt;nome&gt;' é o resultado de uma expressão de associação tardia
-Você tentou uma atribuição de ligação tardia que não é válida.  
+# <a name="late-bound-assignment-to-a-field-of-value-type-39lttypenamegt39-is-not-valid-when-39ltnamegt39-is-the-result-of-a-late-bound-expression"></a><span data-ttu-id="3a0c4-102">Atribuição de associação tardia a um campo de tipo de valor '&lt;typename&gt;'não é válida quando'&lt;nome&gt;' é o resultado de uma expressão de associação tardia</span><span class="sxs-lookup"><span data-stu-id="3a0c4-102">Late-bound assignment to a field of value type &#39;&lt;typename&gt;&#39; is not valid when &#39;&lt;name&gt;&#39; is the result of a late-bound expression</span></span>
+<span data-ttu-id="3a0c4-103">Você tentou uma atribuição de ligação tardia que não é válida.</span><span class="sxs-lookup"><span data-stu-id="3a0c4-103">You attempted a late-bound assignment that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3a0c4-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="3a0c4-104">To correct this error</span></span>  
   
--   Verifique a atribuição de início associadas.  
+-   <span data-ttu-id="3a0c4-105">Verifique a atribuição de início associadas.</span><span class="sxs-lookup"><span data-stu-id="3a0c4-105">Make the assignment early bound.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)   
- [Acessibilidade e suporte a produtos PAVEOVER](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="3a0c4-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3a0c4-106">See Also</span></span>  
+ <span data-ttu-id="3a0c4-107">[Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="3a0c4-107">[Error Types](../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="3a0c4-108"> [Acessibilidade e suporte a produtos PAVEOVER](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span><span class="sxs-lookup"><span data-stu-id="3a0c4-108"> [PAVEOVER Product Support and Accessibility](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span></span>

@@ -30,36 +30,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ed604db3fed8fcd8c8ec7f43e547442fc66bddb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: edd6741367963445dd864ca5560e2fd6cfb6ac18
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Como desenhar formas com os controles OvalShape e RectangleShape (Visual Studio)
-Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>controle para desenhar círculos ou elipses em um formulário ou contêiner, em tempo de design e tempo de execução.</xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>controle para desenhar quadrados, retângulos ou retângulos com cantos arredondados em um formulário ou contêiner.</xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> Você também pode usar esse controle para desenhar formas em tempo de design e em tempo de execução.  
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a><span data-ttu-id="45768-102">Como desenhar formas com os controles OvalShape e RectangleShape (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="45768-102">How to: Draw Shapes with the OvalShape and RectangleShape Controls (Visual Studio)</span></span>
+<span data-ttu-id="45768-103">Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>controle para desenhar círculos ou elipses em um formulário ou contêiner, em tempo de design e tempo de execução.</xref:Microsoft.VisualBasic.PowerPacks.OvalShape></span><span class="sxs-lookup"><span data-stu-id="45768-103">You can use the <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> control to draw circles or ovals on a form or container, both at design time and at run time.</span></span> <span data-ttu-id="45768-104">Você pode usar o <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>controle para desenhar quadrados, retângulos ou retângulos com cantos arredondados em um formulário ou contêiner.</xref:Microsoft.VisualBasic.PowerPacks.RectangleShape></span><span class="sxs-lookup"><span data-stu-id="45768-104">You can use the <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control to draw squares, rectangles, or rectangles with rounded corners on a form or container.</span></span> <span data-ttu-id="45768-105">Você também pode usar esse controle para desenhar formas em tempo de design e em tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="45768-105">You can also use this control to draw shapes both at design time and at run time.</span></span>  
   
- Você pode personalizar a aparência de uma forma alterando a largura, a cor e o estilo de borda. O plano de fundo de uma forma é transparente por padrão. Você pode personalizar o plano de fundo para exibir uma cor sólida, um padrão, um preenchimento gradual (transição de uma cor para outra) ou uma imagem.  
+ <span data-ttu-id="45768-106">Você pode personalizar a aparência de uma forma alterando a largura, a cor e o estilo de borda.</span><span class="sxs-lookup"><span data-stu-id="45768-106">You can customize the appearance of a shape by changing the width, color, and style of the border.</span></span> <span data-ttu-id="45768-107">O plano de fundo de uma forma é transparente por padrão. Você pode personalizar o plano de fundo para exibir uma cor sólida, um padrão, um preenchimento gradual (transição de uma cor para outra) ou uma imagem.</span><span class="sxs-lookup"><span data-stu-id="45768-107">The background of a shape is transparent by default; you can customize the background to display a solid color, a pattern, a gradient fill (transitioning from one color to another), or an image.</span></span>  
   
-### <a name="to-draw-a-simple-shape-at-design-time"></a>Para desenhar uma forma simples em tempo de design  
+### <a name="to-draw-a-simple-shape-at-design-time"></a><span data-ttu-id="45768-108">Para desenhar uma forma simples em tempo de design</span><span class="sxs-lookup"><span data-stu-id="45768-108">To draw a simple shape at design time</span></span>  
   
-1.  Arraste o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>ou <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>de controle do **Visual Basic PowerPacks** guia (para instalar, consulte [controles do Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) no **Toolbox** a um controle de formulário ou contêiner.</xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> </xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
+1.  <span data-ttu-id="45768-109">Arraste o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>ou <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>de controle do **Visual Basic PowerPacks** guia (para instalar, consulte [controles do Visual Basic Power Packs](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)) no **Toolbox** a um controle de formulário ou contêiner.</xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> </xref:Microsoft.VisualBasic.PowerPacks.OvalShape></span><span class="sxs-lookup"><span data-stu-id="45768-109">Drag the <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> or <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> control from the **Visual Basic PowerPacks** tab (to install, see [Visual Basic Power Packs Controls](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md))in the **Toolbox** to a form or container control.</span></span>  
   
-2.  Arraste o dimensionamento e mova as alças para dimensionar e posicionar a forma.  
+2.  <span data-ttu-id="45768-110">Arraste o dimensionamento e mova as alças para dimensionar e posicionar a forma.</span><span class="sxs-lookup"><span data-stu-id="45768-110">Drag the sizing and move handles to size and position the shape.</span></span>  
   
-     Você também pode redimensionar e posicionar a forma alterando o `Size` e `Position` propriedades no **propriedades** janela.  
+     <span data-ttu-id="45768-111">Você também pode redimensionar e posicionar a forma alterando o `Size` e `Position` propriedades no **propriedades** janela.</span><span class="sxs-lookup"><span data-stu-id="45768-111">You can also size and position the shape by changing the `Size` and `Position` properties in the **Properties** window.</span></span>  
   
-     Para criar um retângulo com cantos arredondados, selecione o `CornerRadius` propriedade o **propriedades** janela e defini-lo como um valor maior que 0.  
+     <span data-ttu-id="45768-112">Para criar um retângulo com cantos arredondados, selecione o `CornerRadius` propriedade o **propriedades** janela e defini-lo como um valor maior que 0.</span><span class="sxs-lookup"><span data-stu-id="45768-112">To create a rectangle with rounded corners, select the `CornerRadius` property in the **Properties** window and set it to a value that is greater than 0.</span></span>  
   
-3.  No **propriedades** janela, opcionalmente, conjunto de propriedades adicionais para alterar a aparência da forma.  
+3.  <span data-ttu-id="45768-113">No **propriedades** janela, opcionalmente, conjunto de propriedades adicionais para alterar a aparência da forma.</span><span class="sxs-lookup"><span data-stu-id="45768-113">In the **Properties** window, optionally set additional properties to change the appearance of the shape.</span></span>  
   
-### <a name="to-draw-a-simple-shape-at-run-time"></a>Para desenhar uma forma simples em tempo de execução  
+### <a name="to-draw-a-simple-shape-at-run-time"></a><span data-ttu-id="45768-114">Para desenhar uma forma simples em tempo de execução</span><span class="sxs-lookup"><span data-stu-id="45768-114">To draw a simple shape at run time</span></span>  
   
-1.  Sobre o **projeto** menu, clique em **adicionar referência**.  
+1.  <span data-ttu-id="45768-115">Sobre o **projeto** menu, clique em **adicionar referência**.</span><span class="sxs-lookup"><span data-stu-id="45768-115">On the **Project** menu, click **Add Reference**.</span></span>  
   
-2.  No **adicionar referência** caixa de diálogo, selecione **Microsoft.VisualBasic.PowerPacks.VS**e, em seguida, clique em **Okey**.  
+2.  <span data-ttu-id="45768-116">No **adicionar referência** caixa de diálogo, selecione **Microsoft.VisualBasic.PowerPacks.VS**e, em seguida, clique em **Okey**.</span><span class="sxs-lookup"><span data-stu-id="45768-116">In the **Add Reference** dialog box, select **Microsoft.VisualBasic.PowerPacks.VS**, and then click **OK**.</span></span>  
   
-3.  No **Editor de códigos**, adicione uma `Imports` ou `using` instrução na parte superior do módulo:  
+3.  <span data-ttu-id="45768-117">No **Editor de códigos**, adicione uma `Imports` ou `using` instrução na parte superior do módulo:</span><span class="sxs-lookup"><span data-stu-id="45768-117">In the **Code Editor**, add an `Imports` or `using` statement at the top of the module:</span></span>  
   
 ```vb  
 Imports Microsoft.VisualBasic.PowerPacks  
@@ -69,88 +70,89 @@ Imports Microsoft.VisualBasic.PowerPacks
 using Microsoft.VisualBasic.PowerPacks;  
 ```  
   
-4.  Adicione o seguinte código em um procedimento do `Event`:  
+4.  <span data-ttu-id="45768-118">Adicione o seguinte código em um procedimento do `Event`:</span><span class="sxs-lookup"><span data-stu-id="45768-118">Add the following code in an `Event` procedure:</span></span>  
   
-     [!code-cs[&#1; VbPowerpacksShape](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.cs) ] 
-     [!code-vb [VbPowerpacksShape n º&1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]  
+     <span data-ttu-id="45768-119">[!code-cs[&#1; VbPowerpacksShape](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.cs) ] 
+     [!code-vb [VbPowerpacksShape n º&1;](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="45768-119">[!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.cs)]
+ [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]</span></span>  
   
-## <a name="customizing-shapes"></a>Personalizando Formas  
- Quando você usa as configurações padrão, o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>e <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>controles são exibidos com uma borda preta sólida que é um pixel mais amplo e um plano de fundo transparente.</xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> </xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Você pode alterar a largura, o estilo e a cor da borda definindo as propriedades. As propriedades adicionais permitem que você altere o plano de fundo de uma forma para uma cor sólida, um padrão, um preenchimento gradual ou uma imagem.  
+## <a name="customizing-shapes"></a><span data-ttu-id="45768-120">Personalizando Formas</span><span class="sxs-lookup"><span data-stu-id="45768-120">Customizing Shapes</span></span>  
+ <span data-ttu-id="45768-121">Quando você usa as configurações padrão, o <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>e <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>controles são exibidos com uma borda preta sólida que é um pixel mais amplo e um plano de fundo transparente.</xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> </xref:Microsoft.VisualBasic.PowerPacks.OvalShape></span><span class="sxs-lookup"><span data-stu-id="45768-121">When you use the default settings, the <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> and <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> controls are displayed with a solid black border that is one pixel wide and a transparent background.</span></span> <span data-ttu-id="45768-122">Você pode alterar a largura, o estilo e a cor da borda definindo as propriedades.</span><span class="sxs-lookup"><span data-stu-id="45768-122">You can change the width, style, and color of the border by setting properties.</span></span> <span data-ttu-id="45768-123">As propriedades adicionais permitem que você altere o plano de fundo de uma forma para uma cor sólida, um padrão, um preenchimento gradual ou uma imagem.</span><span class="sxs-lookup"><span data-stu-id="45768-123">Additional properties enable you to change the background of a shape to a solid color, a pattern, a gradient fill, or an image.</span></span>  
   
- Antes de alterar o plano de fundo de uma forma, você deve saber como diversas propriedades interagem.  
+ <span data-ttu-id="45768-124">Antes de alterar o plano de fundo de uma forma, você deve saber como diversas propriedades interagem.</span><span class="sxs-lookup"><span data-stu-id="45768-124">Before you change the background of a shape, you should know how several of the properties interact.</span></span>  
   
--   O <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>configuração de propriedade não terá efeito se a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A>propriedade é definida como <xref:Microsoft.VisualBasic.PowerPacks.BackStyle>.</xref:Microsoft.VisualBasic.PowerPacks.BackStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>  
+-   <span data-ttu-id="45768-125">O <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>configuração de propriedade não terá efeito se a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A>propriedade é definida como <xref:Microsoft.VisualBasic.PowerPacks.BackStyle>.</xref:Microsoft.VisualBasic.PowerPacks.BackStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A></span><span class="sxs-lookup"><span data-stu-id="45768-125">The <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A> property setting has no effect unless the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> property is set to <xref:Microsoft.VisualBasic.PowerPacks.BackStyle>.</span></span>  
   
--   Se a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>propriedade é definida, <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>as <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>substituições <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>.</xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>  
+-   <span data-ttu-id="45768-126">Se a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>propriedade é definida, <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>as <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>substituições <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>.</xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A></span><span class="sxs-lookup"><span data-stu-id="45768-126">If the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> property is set to <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>, the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A> overrides the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>.</span></span>  
   
--   Se a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>propriedade é definida como um valor padrão como <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>ou <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>, o padrão será exibido em <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>.</xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> O plano de fundo será exibido <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>contanto que a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A>propriedade é definida como <xref:Microsoft.VisualBasic.PowerPacks.BackStyle>.</xref:Microsoft.VisualBasic.PowerPacks.BackStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>  
+-   <span data-ttu-id="45768-127">Se a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>propriedade é definida como um valor padrão como <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>ou <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>, o padrão será exibido em <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>.</xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A></span><span class="sxs-lookup"><span data-stu-id="45768-127">If the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> property is set to a pattern value such as <xref:Microsoft.VisualBasic.PowerPacks.FillStyle> or <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>, the pattern will be displayed in the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillColor%2A>.</span></span> <span data-ttu-id="45768-128">O plano de fundo será exibido <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>contanto que a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A>propriedade é definida como <xref:Microsoft.VisualBasic.PowerPacks.BackStyle>.</xref:Microsoft.VisualBasic.PowerPacks.BackStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A></span><span class="sxs-lookup"><span data-stu-id="45768-128">The background will be displayed in the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackColor%2A>, provided that the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackStyle%2A> property is set to <xref:Microsoft.VisualBasic.PowerPacks.BackStyle>.</span></span>  
   
--   Para exibir um preenchimento de gradiente, a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>propriedade deve ser definida e <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A>propriedade deve ser definida como um valor diferente de <xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle>.</xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>  
+-   <span data-ttu-id="45768-129">Para exibir um preenchimento de gradiente, a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A>propriedade deve ser definida e <xref:Microsoft.VisualBasic.PowerPacks.FillStyle>a <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A>propriedade deve ser definida como um valor diferente de <xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle>.</xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A> </xref:Microsoft.VisualBasic.PowerPacks.FillStyle> </xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A></span><span class="sxs-lookup"><span data-stu-id="45768-129">In order to display a gradient fill, the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillStyle%2A> property must be set to <xref:Microsoft.VisualBasic.PowerPacks.FillStyle> and the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.FillGradientStyle%2A> property must be set to a value other than <xref:Microsoft.VisualBasic.PowerPacks.FillGradientStyle>.</span></span>  
   
--   Definindo o <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A>propriedade a uma imagem substitui todas as outras configurações de plano de fundo.</xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A>  
+-   <span data-ttu-id="45768-130">Definindo o <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A>propriedade a uma imagem substitui todas as outras configurações de plano de fundo.</xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A></span><span class="sxs-lookup"><span data-stu-id="45768-130">Setting the <xref:Microsoft.VisualBasic.PowerPacks.SimpleShape.BackgroundImage%2A> property to an image overrides all other background settings.</span></span>  
   
-#### <a name="to-draw-a-circle-that-has-a-custom-border"></a>Para desenhar um círculo com uma borda personalizada  
+#### <a name="to-draw-a-circle-that-has-a-custom-border"></a><span data-ttu-id="45768-131">Para desenhar um círculo com uma borda personalizada</span><span class="sxs-lookup"><span data-stu-id="45768-131">To draw a circle that has a custom border</span></span>  
   
-1.  Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.  
+1.  <span data-ttu-id="45768-132">Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.</span><span class="sxs-lookup"><span data-stu-id="45768-132">Drag the `OvalShape` control from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span>  
   
-2.  No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.  
+2.  <span data-ttu-id="45768-133">No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.</span><span class="sxs-lookup"><span data-stu-id="45768-133">In the **Properties** window, in the `Size` property, set `Height` and `Width` to equal values.</span></span>  
   
-3.  Defina a propriedade `BorderColor` com a cor desejada.  
+3.  <span data-ttu-id="45768-134">Defina a propriedade `BorderColor` com a cor desejada.</span><span class="sxs-lookup"><span data-stu-id="45768-134">Set the `BorderColor` property to the color that you want.</span></span>  
   
-4.  Defina a propriedade `BorderStyle` como qualquer valor diferente de `Solid`.  
+4.  <span data-ttu-id="45768-135">Defina a propriedade `BorderStyle` como qualquer valor diferente de `Solid`.</span><span class="sxs-lookup"><span data-stu-id="45768-135">Set the `BorderStyle` property to any value other than `Solid`.</span></span>  
   
-5.  Defina o `BorderWidth` para o tamanho desejado, em pixels.  
+5.  <span data-ttu-id="45768-136">Defina o `BorderWidth` para o tamanho desejado, em pixels.</span><span class="sxs-lookup"><span data-stu-id="45768-136">Set the `BorderWidth` to the size that you want, in pixels.</span></span>  
   
-#### <a name="to-draw-a-circle-that-has-a-solid-fill"></a>Para desenhar um círculo que tenha um preenchimento sólido  
+#### <a name="to-draw-a-circle-that-has-a-solid-fill"></a><span data-ttu-id="45768-137">Para desenhar um círculo que tenha um preenchimento sólido</span><span class="sxs-lookup"><span data-stu-id="45768-137">To draw a circle that has a solid fill</span></span>  
   
-1.  Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.  
+1.  <span data-ttu-id="45768-138">Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.</span><span class="sxs-lookup"><span data-stu-id="45768-138">Drag the `OvalShape` control from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span>  
   
-2.  No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.  
+2.  <span data-ttu-id="45768-139">No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.</span><span class="sxs-lookup"><span data-stu-id="45768-139">In the **Properties** window, in the `Size` property, set `Height` and `Width` to equal values.</span></span>  
   
-3.  Defina a propriedade `BackColor` com a cor desejada.  
+3.  <span data-ttu-id="45768-140">Defina a propriedade `BackColor` com a cor desejada.</span><span class="sxs-lookup"><span data-stu-id="45768-140">Set the `BackColor` property to the color that you want.</span></span>  
   
-4.  Defina a propriedade `BackStyle` como `Opaque`.  
+4.  <span data-ttu-id="45768-141">Defina a propriedade `BackStyle` como `Opaque`.</span><span class="sxs-lookup"><span data-stu-id="45768-141">Set the `BackStyle` property to `Opaque`.</span></span>  
   
-#### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a>Para desenhar um círculo que tenha um preenchimento padronizado  
+#### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a><span data-ttu-id="45768-142">Para desenhar um círculo que tenha um preenchimento padronizado</span><span class="sxs-lookup"><span data-stu-id="45768-142">To draw a circle that has a patterned fill</span></span>  
   
-1.  Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.  
+1.  <span data-ttu-id="45768-143">Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.</span><span class="sxs-lookup"><span data-stu-id="45768-143">Drag the `OvalShape` control from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span>  
   
-2.  No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.  
+2.  <span data-ttu-id="45768-144">No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.</span><span class="sxs-lookup"><span data-stu-id="45768-144">In the **Properties** window, in the `Size` property, set `Height` and `Width` to equal values.</span></span>  
   
-3.  Defina a propriedade `BackColor` com a cor desejada para o plano de fundo.  
+3.  <span data-ttu-id="45768-145">Defina a propriedade `BackColor` com a cor desejada para o plano de fundo.</span><span class="sxs-lookup"><span data-stu-id="45768-145">Set the `BackColor` property to the color that you want for the background.</span></span>  
   
-4.  Defina a propriedade `BackStyle` como `Opaque`.  
+4.  <span data-ttu-id="45768-146">Defina a propriedade `BackStyle` como `Opaque`.</span><span class="sxs-lookup"><span data-stu-id="45768-146">Set the `BackStyle` property to `Opaque`.</span></span>  
   
-5.  Defina a propriedade `FillColor` com a cor desejada para o padrão.  
+5.  <span data-ttu-id="45768-147">Defina a propriedade `FillColor` com a cor desejada para o padrão.</span><span class="sxs-lookup"><span data-stu-id="45768-147">Set the `FillColor` property to the color that you want for the pattern.</span></span>  
   
-6.  Defina a propriedade `FillStyle` como qualquer valor diferente de `Transparent` ou `Solid`.  
+6.  <span data-ttu-id="45768-148">Defina a propriedade `FillStyle` como qualquer valor diferente de `Transparent` ou `Solid`.</span><span class="sxs-lookup"><span data-stu-id="45768-148">Set the `FillStyle` property to any value other than `Transparent` or `Solid`.</span></span>  
   
-#### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a>Para desenhar um círculo que tenha um preenchimento gradual  
+#### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a><span data-ttu-id="45768-149">Para desenhar um círculo que tenha um preenchimento gradual</span><span class="sxs-lookup"><span data-stu-id="45768-149">To draw a circle that has a gradient fill</span></span>  
   
-1.  Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.  
+1.  <span data-ttu-id="45768-150">Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.</span><span class="sxs-lookup"><span data-stu-id="45768-150">Drag the `OvalShape` control from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span>  
   
-2.  No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.  
+2.  <span data-ttu-id="45768-151">No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.</span><span class="sxs-lookup"><span data-stu-id="45768-151">In the **Properties** window, in the `Size` property, set `Height` and `Width` to equal values.</span></span>  
   
-3.  Defina a propriedade `FillColor` com a cor desejada para a cor inicial.  
+3.  <span data-ttu-id="45768-152">Defina a propriedade `FillColor` com a cor desejada para a cor inicial.</span><span class="sxs-lookup"><span data-stu-id="45768-152">Set the `FillColor` property to the color that you want for the starting color.</span></span>  
   
-4.  Defina a propriedade `FillGradientColor` com a cor desejada para a cor final.  
+4.  <span data-ttu-id="45768-153">Defina a propriedade `FillGradientColor` com a cor desejada para a cor final.</span><span class="sxs-lookup"><span data-stu-id="45768-153">Set the `FillGradientColor` property to the color that you want for the ending color.</span></span>  
   
-5.  Defina a propriedade `FillGradientStyle` como um valor diferente de `None`.  
+5.  <span data-ttu-id="45768-154">Defina a propriedade `FillGradientStyle` como um valor diferente de `None`.</span><span class="sxs-lookup"><span data-stu-id="45768-154">Set the `FillGradientStyle` property to a value other than `None`.</span></span>  
   
-#### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a>Para desenhar um círculo preenchido com uma imagem  
+#### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a><span data-ttu-id="45768-155">Para desenhar um círculo preenchido com uma imagem</span><span class="sxs-lookup"><span data-stu-id="45768-155">To draw a circle that is filled with an image</span></span>  
   
-1.  Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.  
+1.  <span data-ttu-id="45768-156">Arraste o `OvalShape` controle do **Visual Basic PowerPacks** guia o **Toolbox** a um controle de formulário ou contêiner.</span><span class="sxs-lookup"><span data-stu-id="45768-156">Drag the `OvalShape` control from the **Visual Basic PowerPacks** tab in the **Toolbox** to a form or container control.</span></span>  
   
-2.  No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.  
+2.  <span data-ttu-id="45768-157">No **propriedades** janela, no `Size` , definida `Height` e `Width` como valores iguais.</span><span class="sxs-lookup"><span data-stu-id="45768-157">In the **Properties** window, in the `Size` property, set `Height` and `Width` to equal values.</span></span>  
   
-3.  Selecione o `BackgroundImage` propriedade e clique no **reticências** botão (...).  
+3.  <span data-ttu-id="45768-158">Selecione o `BackgroundImage` propriedade e clique no **reticências** botão (...).</span><span class="sxs-lookup"><span data-stu-id="45768-158">Select the `BackgroundImage` property and click the **ellipsis** button (...).</span></span>  
   
-4.  No **selecionar recurso** caixa de diálogo, selecione uma imagem a ser exibida. Se nenhum recurso de imagem estiver listado, clique em **importação** para navegar até o local de uma imagem.  
+4.  <span data-ttu-id="45768-159">No **selecionar recurso** caixa de diálogo, selecione uma imagem a ser exibida.</span><span class="sxs-lookup"><span data-stu-id="45768-159">In the **Select Resource** dialog box, select an image to display.</span></span> <span data-ttu-id="45768-160">Se nenhum recurso de imagem estiver listado, clique em **importação** para navegar até o local de uma imagem.</span><span class="sxs-lookup"><span data-stu-id="45768-160">If no image resources are listed, click **Import** to browse to the location of an image.</span></span>  
   
-5.  Clique em **Okey** para inserir a imagem.  
+5.  <span data-ttu-id="45768-161">Clique em **Okey** para inserir a imagem.</span><span class="sxs-lookup"><span data-stu-id="45768-161">Click **OK** to insert the image.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape></xref:Microsoft.VisualBasic.PowerPacks.OvalShape>   
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape></xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>   
- [Introdução aos controles de linha e forma](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)   
- [Como desenhar linhas com o controle LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a><span data-ttu-id="45768-162">Consulte também</span><span class="sxs-lookup"><span data-stu-id="45768-162">See Also</span></span>  
+ <span data-ttu-id="45768-163"><xref:Microsoft.VisualBasic.PowerPacks.OvalShape></xref:Microsoft.VisualBasic.PowerPacks.OvalShape></span><span class="sxs-lookup"><span data-stu-id="45768-163"><xref:Microsoft.VisualBasic.PowerPacks.OvalShape></span></span>   
+ <span data-ttu-id="45768-164"><xref:Microsoft.VisualBasic.PowerPacks.RectangleShape></xref:Microsoft.VisualBasic.PowerPacks.RectangleShape></span><span class="sxs-lookup"><span data-stu-id="45768-164"><xref:Microsoft.VisualBasic.PowerPacks.RectangleShape></span></span>   
+<span data-ttu-id="45768-165"> [Introdução aos controles de linha e forma](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md) </span><span class="sxs-lookup"><span data-stu-id="45768-165"> [Introduction to the Line and Shape Controls](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md) </span></span>  
+<span data-ttu-id="45768-166"> [Como desenhar linhas com o controle LineShape](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)</span><span class="sxs-lookup"><span data-stu-id="45768-166"> [How to: Draw Lines with the LineShape Control](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)</span></span>

@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7e1f96262300e18dcadb425d37afc3829593f312
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 51dd789983d94fd386908805ef978dd7be42f929
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a>'&lt;membername&gt;'não pode expor o tipo'&lt;typename&gt;' fora do projeto por meio de &lt;containertype&gt; '&lt;containertypename&gt;'
-Uma variável, parâmetro de procedimento ou função de retorno é exposta fora de seu contêiner, mas ele é declarado como um tipo que não deve ser exposto fora do contêiner.  
+# <a name="39ltmembernamegt39-cannot-expose-type-39lttypenamegt39-outside-the-project-through-ltcontainertypegt-39ltcontainertypenamegt39"></a><span data-ttu-id="f3120-102">'&lt;membername&gt;'não pode expor o tipo'&lt;typename&gt;' fora do projeto por meio de &lt;containertype&gt; '&lt;containertypename&gt;'</span><span class="sxs-lookup"><span data-stu-id="f3120-102">&#39;&lt;membername&gt;&#39; cannot expose type &#39;&lt;typename&gt;&#39; outside the project through &lt;containertype&gt; &#39;&lt;containertypename&gt;&#39;</span></span>
+<span data-ttu-id="f3120-103">Uma variável, parâmetro de procedimento ou função de retorno é exposta fora de seu contêiner, mas ele é declarado como um tipo que não deve ser exposto fora do contêiner.</span><span class="sxs-lookup"><span data-stu-id="f3120-103">A variable, procedure parameter, or function return is exposed outside its container, but it is declared as a type that must not be exposed outside the container.</span></span>  
   
- O seguinte código de esqueleto mostra uma situação que gera esse erro.  
+ <span data-ttu-id="f3120-104">O seguinte código de esqueleto mostra uma situação que gera esse erro.</span><span class="sxs-lookup"><span data-stu-id="f3120-104">The following skeleton code shows a situation that generates this error.</span></span>  
   
 ```  
 Private Class privateClass  
@@ -51,13 +52,13 @@ Public Class mainClass
 End Class  
 ```  
   
- Um tipo que é declarado `Protected`, `Friend`, `Protected Friend`, ou `Private` destina-se para ter acesso limitado à fora de seu contexto de declaração. Usá-lo como dados de tipo de uma variável com acesso menos restrito acabaria com essa finalidade. No código anterior esqueleto, `exposedVar` é `Public` e poderia expor `privateClass` ao código que não deve ter acesso a ele.  
+ <span data-ttu-id="f3120-105">Um tipo que é declarado `Protected`, `Friend`, `Protected Friend`, ou `Private` destina-se para ter acesso limitado à fora de seu contexto de declaração.</span><span class="sxs-lookup"><span data-stu-id="f3120-105">A type that is declared `Protected`, `Friend`, `Protected Friend`, or `Private` is intended to have limited access outside its declaration context.</span></span> <span data-ttu-id="f3120-106">Usá-lo como dados de tipo de uma variável com acesso menos restrito acabaria com essa finalidade.</span><span class="sxs-lookup"><span data-stu-id="f3120-106">Using it as the data type of a variable with less restricted access would defeat this purpose.</span></span> <span data-ttu-id="f3120-107">No código anterior esqueleto, `exposedVar` é `Public` e poderia expor `privateClass` ao código que não deve ter acesso a ele.</span><span class="sxs-lookup"><span data-stu-id="f3120-107">In the preceding skeleton code, `exposedVar` is `Public` and would expose `privateClass` to code that should not have access to it.</span></span>  
   
- **ID do erro:** BC30909  
+ <span data-ttu-id="f3120-108">**ID do erro:** BC30909</span><span class="sxs-lookup"><span data-stu-id="f3120-108">**Error ID:** BC30909</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f3120-109">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f3120-109">To correct this error</span></span>  
   
--   Alterar o nível de acesso da variável, parâmetro de procedimento ou função de retorno para ser pelo menos tão restritivo quanto o nível de acesso de seu tipo de dados.  
+-   <span data-ttu-id="f3120-110">Alterar o nível de acesso da variável, parâmetro de procedimento ou função de retorno para ser pelo menos tão restritivo quanto o nível de acesso de seu tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="f3120-110">Change the access level of the variable, procedure parameter, or function return to be at least as restrictive as the access level of its data type.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+## <a name="see-also"></a><span data-ttu-id="f3120-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f3120-111">See Also</span></span>  
+ [<span data-ttu-id="f3120-112">Níveis de acesso no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f3120-112">Access Levels in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

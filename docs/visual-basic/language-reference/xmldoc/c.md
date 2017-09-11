@@ -31,36 +31,36 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5c3e82372bf14b41fd26cd840a1771fd017e44f
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: b43cef798f6a7a261ad40409d98fb4f9c0c56ac9
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 06/01/2017
 
 ---
-# <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
-Indica que o texto dentro uma descrição é o código.  
+# <a name="ltcgt-visual-basic"></a><span data-ttu-id="9d063-102">&lt;c&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d063-102">&lt;c&gt; (Visual Basic)</span></span>
+<span data-ttu-id="9d063-103">Indica que o texto dentro uma descrição é o código.</span><span class="sxs-lookup"><span data-stu-id="9d063-103">Indicates that text within a description is code.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="9d063-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9d063-104">Syntax</span></span>  
   
 ```xml  
 <c>text</c>  
 ```  
   
-#### <a name="parameters"></a>Parâmetros  
+#### <a name="parameters"></a><span data-ttu-id="9d063-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9d063-105">Parameters</span></span>  
   
-|Parâmetro|Descrição|  
+|<span data-ttu-id="9d063-106">Parâmetro</span><span class="sxs-lookup"><span data-stu-id="9d063-106">Parameter</span></span>|<span data-ttu-id="9d063-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="9d063-107">Description</span></span>|  
 |---|---|  
-|`text`|O texto que você deseja indicar como código.|  
+|`text`|<span data-ttu-id="9d063-108">O texto que você deseja indicar como código.</span><span class="sxs-lookup"><span data-stu-id="9d063-108">The text you would like to indicate as code.</span></span>|  
   
-## <a name="remarks"></a>Comentários  
- O `<c>` marca fornece uma maneira para indicar que o texto dentro uma descrição deve ser marcado como código. Use [ \<código >](../../../visual-basic/language-reference/xmldoc/code.md) para indicar várias linhas como código.  
+## <a name="remarks"></a><span data-ttu-id="9d063-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="9d063-109">Remarks</span></span>  
+ <span data-ttu-id="9d063-110">O `<c>` marca fornece uma maneira para indicar que o texto dentro uma descrição deve ser marcado como código.</span><span class="sxs-lookup"><span data-stu-id="9d063-110">The `<c>` tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="9d063-111">Use [ \<código >](../../../visual-basic/language-reference/xmldoc/code.md) para indicar várias linhas como código.</span><span class="sxs-lookup"><span data-stu-id="9d063-111">Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.</span></span>  
   
- Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.  
+ <span data-ttu-id="9d063-112">Compile com [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação para um arquivo.</span><span class="sxs-lookup"><span data-stu-id="9d063-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo usa o `<c>` marca na seção de resumo para indicar que `Counter` é o código.  
+## <a name="example"></a><span data-ttu-id="9d063-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9d063-113">Example</span></span>  
+ <span data-ttu-id="9d063-114">Este exemplo usa o `<c>` marca na seção de resumo para indicar que `Counter` é o código.</span><span class="sxs-lookup"><span data-stu-id="9d063-114">This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.</span></span>  
   
- [!code-vb[VbVbcnXmlDocComments n º&1;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
+ <span data-ttu-id="9d063-115">[!code-vb[VbVbcnXmlDocComments n º&1;](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="9d063-115">[!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Marcações de Comentário XML](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a><span data-ttu-id="9d063-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9d063-116">See Also</span></span>  
+ [<span data-ttu-id="9d063-117">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="9d063-117">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

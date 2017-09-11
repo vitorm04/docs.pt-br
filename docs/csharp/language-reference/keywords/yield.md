@@ -37,49 +37,49 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="yield-c-reference"></a>yield (Referência de C#)
-Quando você usa a palavra-chave `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador. Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita (a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.  
+# <a name="yield-c-reference"></a><span data-ttu-id="31785-102">yield (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="31785-102">yield (C# Reference)</span></span>
+<span data-ttu-id="31785-103">Quando você usa a palavra-chave `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador.</span><span class="sxs-lookup"><span data-stu-id="31785-103">When you use the `yield` keyword in a statement, you indicate that the method, operator, or `get` accessor in which it appears is an iterator.</span></span> <span data-ttu-id="31785-104">Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita (a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.</span><span class="sxs-lookup"><span data-stu-id="31785-104">Using `yield` to define an iterator removes the need for an explicit extra class (the class that holds the state for an enumeration, see <xref:System.Collections.Generic.IEnumerator%601> for an example) when you implement the <xref:System.Collections.IEnumerable> and <xref:System.Collections.IEnumerator> pattern for a custom collection type.</span></span>  
   
- O exemplo a seguir mostra as duas formas de instrução `yield`.  
+ <span data-ttu-id="31785-105">O exemplo a seguir mostra as duas formas de instrução `yield`.</span><span class="sxs-lookup"><span data-stu-id="31785-105">The following example shows the two forms of the `yield` statement.</span></span>  
   
 ```csharp  
 yield return <expression>;  
 yield break;  
 ```  
   
-## <a name="remarks"></a>Comentários  
- Você usa uma instrução `yield return` para retornar cada elemento individualmente.  
+## <a name="remarks"></a><span data-ttu-id="31785-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="31785-106">Remarks</span></span>  
+ <span data-ttu-id="31785-107">Você usa uma instrução `yield return` para retornar cada elemento individualmente.</span><span class="sxs-lookup"><span data-stu-id="31785-107">You use a `yield return` statement to return each element one at a time.</span></span>  
   
- Você consome um método iterador ao usar uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ou consulta LINQ. Cada iteração do loop `foreach` chama o método iterador. Quando uma instrução `yield return` é atingida no método iterador, `expression` é retornado e o local atual no código é retido. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.  
+ <span data-ttu-id="31785-108">Você consome um método iterador ao usar uma instrução [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ou consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="31785-108">You consume an iterator method by using a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement or LINQ query.</span></span> <span data-ttu-id="31785-109">Cada iteração do loop `foreach` chama o método iterador.</span><span class="sxs-lookup"><span data-stu-id="31785-109">Each iteration of the `foreach` loop calls the iterator method.</span></span> <span data-ttu-id="31785-110">Quando uma instrução `yield return` é atingida no método iterador, `expression` é retornado e o local atual no código é retido.</span><span class="sxs-lookup"><span data-stu-id="31785-110">When a `yield return` statement is reached in the iterator method, `expression` is returned, and the current location in code is retained.</span></span> <span data-ttu-id="31785-111">A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.</span><span class="sxs-lookup"><span data-stu-id="31785-111">Execution is restarted from that location the next time that the iterator function is called.</span></span>  
   
- Você pode usar uma instrução `yield break` para terminar a iteração.  
+ <span data-ttu-id="31785-112">Você pode usar uma instrução `yield break` para terminar a iteração.</span><span class="sxs-lookup"><span data-stu-id="31785-112">You can use a `yield break` statement to end the iteration.</span></span>  
   
- Para obter mais informações sobre iteradores, consulte [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ <span data-ttu-id="31785-113">Para obter mais informações sobre iteradores, consulte [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).</span><span class="sxs-lookup"><span data-stu-id="31785-113">For more information about iterators, see [Iterators](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).</span></span>  
   
-## <a name="iterator-methods-and-get-accessors"></a>Métodos de Iterador Acessadores get  
- A declaração de um iterador deve atender aos seguintes requisitos:  
+## <a name="iterator-methods-and-get-accessors"></a><span data-ttu-id="31785-114">Métodos de Iterador Acessadores get</span><span class="sxs-lookup"><span data-stu-id="31785-114">Iterator Methods and get Accessors</span></span>  
+ <span data-ttu-id="31785-115">A declaração de um iterador deve atender aos seguintes requisitos:</span><span class="sxs-lookup"><span data-stu-id="31785-115">The declaration of an iterator must meet the following requirements:</span></span>  
   
--   O tipo de retorno deve ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.  
+-   <span data-ttu-id="31785-116">O tipo de retorno deve ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.</span><span class="sxs-lookup"><span data-stu-id="31785-116">The return type must be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.</span></span>  
   
--   A declaração não pode ter nenhum parâmetro [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md).  
+-   <span data-ttu-id="31785-117">A declaração não pode ter nenhum parâmetro [ref](../../../csharp/language-reference/keywords/ref.md) ou [out](../../../csharp/language-reference/keywords/out.md).</span><span class="sxs-lookup"><span data-stu-id="31785-117">The declaration can't have any [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) parameters.</span></span>  
   
- O tipo `yield` de um iterador que retorna <xref:System.Collections.IEnumerable> ou <xref:System.Collections.IEnumerator> é `object`.  Se o iterador retornar <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.Generic.IEnumerator%601>, uma conversão implícita deverá existir do tipo da expressão na instrução `yield return` para o parâmetro de tipo genérico.  
+ <span data-ttu-id="31785-118">O tipo `yield` de um iterador que retorna <xref:System.Collections.IEnumerable> ou <xref:System.Collections.IEnumerator> é `object`.</span><span class="sxs-lookup"><span data-stu-id="31785-118">The `yield` type of an iterator that returns <xref:System.Collections.IEnumerable> or <xref:System.Collections.IEnumerator> is `object`.</span></span>  <span data-ttu-id="31785-119">Se o iterador retornar <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.Generic.IEnumerator%601>, uma conversão implícita deverá existir do tipo da expressão na instrução `yield return` para o parâmetro de tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="31785-119">If the iterator returns <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.Generic.IEnumerator%601>, there must be an implicit conversion from the type of the expression in the `yield return` statement to the generic type parameter .</span></span>  
   
- Você não pode incluir uma instrução `yield return` ou `yield break` nos métodos com as seguintes características:  
+ <span data-ttu-id="31785-120">Você não pode incluir uma instrução `yield return` ou `yield break` nos métodos com as seguintes características:</span><span class="sxs-lookup"><span data-stu-id="31785-120">You can't include a `yield return` or `yield break` statement in methods that have the following characteristics:</span></span>  
   
--   Métodos anônimos. Para obter mais informações, consulte [Métodos anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).  
+-   <span data-ttu-id="31785-121">Métodos anônimos.</span><span class="sxs-lookup"><span data-stu-id="31785-121">Anonymous methods.</span></span> <span data-ttu-id="31785-122">Para obter mais informações, consulte [Métodos anônimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span><span class="sxs-lookup"><span data-stu-id="31785-122">For more information, see [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span></span>  
   
--   Métodos que contêm blocos inseguros. Para obter mais informações, consulte [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
+-   <span data-ttu-id="31785-123">Métodos que contêm blocos inseguros.</span><span class="sxs-lookup"><span data-stu-id="31785-123">Methods that contain unsafe blocks.</span></span> <span data-ttu-id="31785-124">Para obter mais informações, consulte [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="31785-124">For more information, see [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
   
-## <a name="exception-handling"></a>Tratamento de Exceção  
- Uma instrução `yield return` não pode estar localizada em um bloco try-catch. Uma instrução `yield return` pode estar localizada no bloco try de uma instrução try-finally.  
+## <a name="exception-handling"></a><span data-ttu-id="31785-125">Tratamento de Exceção</span><span class="sxs-lookup"><span data-stu-id="31785-125">Exception Handling</span></span>  
+ <span data-ttu-id="31785-126">Uma instrução `yield return` não pode estar localizada em um bloco try-catch.</span><span class="sxs-lookup"><span data-stu-id="31785-126">A `yield return` statement can't be located in a try-catch block.</span></span> <span data-ttu-id="31785-127">Uma instrução `yield return` pode estar localizada no bloco try de uma instrução try-finally.</span><span class="sxs-lookup"><span data-stu-id="31785-127">A `yield return` statement can be located in the try block of a try-finally statement.</span></span>  
   
- Uma instrução `yield break` pode estar localizada em um bloco try ou em um bloco catch, mas não em um bloco finally.  
+ <span data-ttu-id="31785-128">Uma instrução `yield break` pode estar localizada em um bloco try ou em um bloco catch, mas não em um bloco finally.</span><span class="sxs-lookup"><span data-stu-id="31785-128">A `yield break` statement can be located in a try block or a catch block but not a finally block.</span></span>  
   
- Se o corpo `foreach` (fora do método iterador) acionar uma exceção, um bloco `finally` no método iterador será executado.  
+ <span data-ttu-id="31785-129">Se o corpo `foreach` (fora do método iterador) acionar uma exceção, um bloco `finally` no método iterador será executado.</span><span class="sxs-lookup"><span data-stu-id="31785-129">If the `foreach` body (outside of the iterator method) throws an exception, a `finally` block in the iterator method is executed.</span></span>  
   
-## <a name="technical-implementation"></a>Implementação Técnica  
- O código a seguir retorna uma `IEnumerable<string>` de um método iterador e itera através de seus elementos.  
+## <a name="technical-implementation"></a><span data-ttu-id="31785-130">Implementação Técnica</span><span class="sxs-lookup"><span data-stu-id="31785-130">Technical Implementation</span></span>  
+ <span data-ttu-id="31785-131">O código a seguir retorna uma `IEnumerable<string>` de um método iterador e itera através de seus elementos.</span><span class="sxs-lookup"><span data-stu-id="31785-131">The following code returns an `IEnumerable<string>` from an iterator method and then iterates through its elements.</span></span>  
   
 ```csharp  
 IEnumerable<string> elements = MyIteratorMethod();  
@@ -89,30 +89,30 @@ foreach (string element in elements)
 }  
 ```  
   
- A chamada a `MyIteratorMethod` não executa o corpo do método. Em vez disso, a chamada retorna `IEnumerable<string>` na variável `elements`.  
+ <span data-ttu-id="31785-132">A chamada a `MyIteratorMethod` não executa o corpo do método.</span><span class="sxs-lookup"><span data-stu-id="31785-132">The call to `MyIteratorMethod` doesn't execute the body of the method.</span></span> <span data-ttu-id="31785-133">Em vez disso, a chamada retorna `IEnumerable<string>` na variável `elements`.</span><span class="sxs-lookup"><span data-stu-id="31785-133">Instead the call returns an `IEnumerable<string>` into the `elements` variable.</span></span>  
   
- Em uma iteração do loop `foreach`, o método <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado para `elements`. Essa chamada executará o corpo de `MyIteratorMethod` até que a próxima instrução `yield return` seja atingida. A expressão retornada pela instrução `yield return` determina não apenas o valor da variável `element` para consumo pelo corpo do loop, mas também a propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A> dos elementos que é `IEnumerable<string>`.  
+ <span data-ttu-id="31785-134">Em uma iteração do loop `foreach`, o método <xref:System.Collections.IEnumerator.MoveNext%2A> é chamado para `elements`.</span><span class="sxs-lookup"><span data-stu-id="31785-134">On an iteration of the `foreach` loop, the <xref:System.Collections.IEnumerator.MoveNext%2A> method is called for `elements`.</span></span> <span data-ttu-id="31785-135">Essa chamada executará o corpo de `MyIteratorMethod` até que a próxima instrução `yield return` seja atingida.</span><span class="sxs-lookup"><span data-stu-id="31785-135">This call executes the body of `MyIteratorMethod` until the next `yield return` statement is reached.</span></span> <span data-ttu-id="31785-136">A expressão retornada pela instrução `yield return` determina não apenas o valor da variável `element` para consumo pelo corpo do loop, mas também a propriedade <xref:System.Collections.Generic.IEnumerator%601.Current%2A> dos elementos que é `IEnumerable<string>`.</span><span class="sxs-lookup"><span data-stu-id="31785-136">The expression returned by the `yield return` statement determines not only the value of the `element` variable for consumption by the loop body but also the <xref:System.Collections.Generic.IEnumerator%601.Current%2A> property of elements, which is an `IEnumerable<string>`.</span></span>  
   
- Em cada iteração subsequente do loop `foreach`, a execução do corpo do iterador continuará de onde parou, parando novamente quando atingir uma instrução `yield return`. O loop `foreach` é concluído quando o fim do método iterador ou uma instrução `yield break` é atingida.  
+ <span data-ttu-id="31785-137">Em cada iteração subsequente do loop `foreach`, a execução do corpo do iterador continuará de onde parou, parando novamente quando atingir uma instrução `yield return`.</span><span class="sxs-lookup"><span data-stu-id="31785-137">On each subsequent iteration of the `foreach` loop, the execution of the iterator body continues from where it left off, again stopping when it reaches a `yield return` statement.</span></span> <span data-ttu-id="31785-138">O loop `foreach` é concluído quando o fim do método iterador ou uma instrução `yield break` é atingida.</span><span class="sxs-lookup"><span data-stu-id="31785-138">The `foreach` loop completes when the end of the iterator method or a `yield break` statement is reached.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir contém uma instrução `yield return` dentro de um loop `for`. Cada iteração do corpo da instrução `foreach` em `Process` cria uma chamada à função iteradora `Power`. Cada chamada à função iteradora prossegue para a próxima execução da instrução `yield return` que ocorre durante a próxima iteração do loop `for`.  
+## <a name="example"></a><span data-ttu-id="31785-139">Exemplo</span><span class="sxs-lookup"><span data-stu-id="31785-139">Example</span></span>  
+ <span data-ttu-id="31785-140">O exemplo a seguir contém uma instrução `yield return` dentro de um loop `for`.</span><span class="sxs-lookup"><span data-stu-id="31785-140">The following example has a `yield return` statement that's inside a `for` loop.</span></span> <span data-ttu-id="31785-141">Cada iteração do corpo da instrução `foreach` em `Process` cria uma chamada à função iteradora `Power`.</span><span class="sxs-lookup"><span data-stu-id="31785-141">Each iteration of the `foreach` statement body in `Process` creates a call to the `Power` iterator function.</span></span> <span data-ttu-id="31785-142">Cada chamada à função iteradora prossegue para a próxima execução da instrução `yield return` que ocorre durante a próxima iteração do loop `for`.</span><span class="sxs-lookup"><span data-stu-id="31785-142">Each call to the iterator function proceeds to the next execution of the `yield return` statement, which occurs during the next iteration of the `for` loop.</span></span>  
   
- O tipo de retorno do método iterador é <xref:System.Collections.IEnumerable> que é um tipo de interface de iterador. Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.  
+ <span data-ttu-id="31785-143">O tipo de retorno do método iterador é <xref:System.Collections.IEnumerable> que é um tipo de interface de iterador.</span><span class="sxs-lookup"><span data-stu-id="31785-143">The return type of the iterator method is <xref:System.Collections.IEnumerable>, which is an iterator interface type.</span></span> <span data-ttu-id="31785-144">Quando o método iterador é chamado, ele retorna um objeto enumerável que contém as potências de um número.</span><span class="sxs-lookup"><span data-stu-id="31785-144">When the iterator method is called, it returns an enumerable object that contains the powers of a number.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
+ <span data-ttu-id="31785-145">[!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="31785-145">[!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra um acessador `get` que é um iterador. No exemplo, cada instrução `yield return` retorna uma instância de uma classe definida pelo usuário.  
+## <a name="example"></a><span data-ttu-id="31785-146">Exemplo</span><span class="sxs-lookup"><span data-stu-id="31785-146">Example</span></span>  
+ <span data-ttu-id="31785-147">O exemplo a seguir demonstra um acessador `get` que é um iterador.</span><span class="sxs-lookup"><span data-stu-id="31785-147">The following example demonstrates a `get` accessor that is an iterator.</span></span> <span data-ttu-id="31785-148">No exemplo, cada instrução `yield return` retorna uma instância de uma classe definida pelo usuário.</span><span class="sxs-lookup"><span data-stu-id="31785-148">In the example, each `yield return` statement returns an instance of a user-defined class.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
+ <span data-ttu-id="31785-149">[!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="31785-149">[!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="31785-150">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="31785-150">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [Iteradores](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a><span data-ttu-id="31785-151">Consulte também</span><span class="sxs-lookup"><span data-stu-id="31785-151">See Also</span></span>  
+ <span data-ttu-id="31785-152">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="31785-152">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="31785-153">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="31785-153">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="31785-154">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span><span class="sxs-lookup"><span data-stu-id="31785-154">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span></span>  
+ [<span data-ttu-id="31785-155">Iteradores</span><span class="sxs-lookup"><span data-stu-id="31785-155">Iterators</span></span>](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
 

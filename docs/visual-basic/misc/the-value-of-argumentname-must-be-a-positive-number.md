@@ -26,22 +26,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c37900d10489ba63128488b26bc3f1149714fcf8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 4e4cba5d69903fce564bbc0a4fcf7302223becbf
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a>O valor de &lt;argumentname&gt; deve ser um número positivo
-O valor de <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>propriedade deve ser maior que zero.</xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>  
+# <a name="the-value-of-ltargumentnamegt-must-be-a-positive-number"></a><span data-ttu-id="fad49-102">O valor de &lt;argumentname&gt; deve ser um número positivo</span><span class="sxs-lookup"><span data-stu-id="fad49-102">The value of &lt;argumentname&gt; must be a positive number</span></span>
+<span data-ttu-id="fad49-103">O valor de <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>propriedade deve ser maior que zero.</xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></span><span class="sxs-lookup"><span data-stu-id="fad49-103">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property must be greater than zero.</span></span>  
   
- A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>propriedade especifica a quantidade de espaço livre em disco, em bytes, necessários antes que as mensagens podem ser gravadas para o arquivo de log</xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>  
+ <span data-ttu-id="fad49-104">A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>propriedade especifica a quantidade de espaço livre em disco, em bytes, necessários antes que as mensagens podem ser gravadas para o arquivo de log</xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></span><span class="sxs-lookup"><span data-stu-id="fad49-104">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property specifies the amount of free disk space, in bytes, necessary before messages can be written to the log file</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fad49-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="fad49-105">To correct this error</span></span>  
   
--   Definir o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>propriedade como um número positivo.</xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>  
+-   <span data-ttu-id="fad49-106">Definir o <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>propriedade como um número positivo.</xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></span><span class="sxs-lookup"><span data-stu-id="fad49-106">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A> property to a positive number.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A>   
- [Objeto My.Application.Log](../../visual-basic/language-reference/objects/my-application-log-object.md)   
- [Objeto My.Log](../../visual-basic/language-reference/objects/my-log-object.md)
+## <a name="see-also"></a><span data-ttu-id="fad49-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fad49-107">See Also</span></span>  
+ <span data-ttu-id="fad49-108"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></span><span class="sxs-lookup"><span data-stu-id="fad49-108"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.ReserveDiskSpace%2A></span></span>   
+<span data-ttu-id="fad49-109"> [Objeto My.Application.Log](../../visual-basic/language-reference/objects/my-application-log-object.md) </span><span class="sxs-lookup"><span data-stu-id="fad49-109"> [My.Application.Log Object](../../visual-basic/language-reference/objects/my-application-log-object.md) </span></span>  
+<span data-ttu-id="fad49-110"> [Objeto My.Log](../../visual-basic/language-reference/objects/my-log-object.md)</span><span class="sxs-lookup"><span data-stu-id="fad49-110"> [My.Log Object](../../visual-basic/language-reference/objects/my-log-object.md)</span></span>

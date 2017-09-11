@@ -1,1 +1,1 @@
-Para saber mais, veja
+<span data-ttu-id="f11c5-101">Para saber mais, veja</span><span class="sxs-lookup"><span data-stu-id="f11c5-101">For more information, see</span></span>

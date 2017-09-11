@@ -32,29 +32,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 979b3dc058465c280469bff01d6ae95c1b99fa40
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8264de0e36642d684571c996de9f7a327e9b0824
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="initializer-expected"></a>Inicializador esperado
-Você tentou declarar uma instância de uma classe usando um inicializador de objeto no qual a lista de inicialização está vazia, conforme mostrado no exemplo a seguir.  
+# <a name="initializer-expected"></a><span data-ttu-id="c807e-102">Inicializador esperado</span><span class="sxs-lookup"><span data-stu-id="c807e-102">Initializer expected</span></span>
+<span data-ttu-id="c807e-103">Você tentou declarar uma instância de uma classe usando um inicializador de objeto no qual a lista de inicialização está vazia, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="c807e-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  
   
  `' Not valid.`  
   
  `' Dim aStudent As New Student With {}`  
   
- Pelo menos um campo ou propriedade deve ser inicializada na lista de inicializadores, conforme mostrado no exemplo a seguir.  
+ <span data-ttu-id="c807e-104">Pelo menos um campo ou propriedade deve ser inicializada na lista de inicializadores, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="c807e-104">At least one field or property must be initialized in the initializer list, as shown in the following example.</span></span>  
   
  `Dim aStudent As New Student With {.year = "Senior"}`  
   
- **ID do erro:** BC30996  
+ <span data-ttu-id="c807e-105">**ID do erro:** BC30996</span><span class="sxs-lookup"><span data-stu-id="c807e-105">**Error ID:** BC30996</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c807e-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="c807e-106">To correct this error</span></span>  
   
-1.  Inicializar pelo menos um campo ou propriedade no inicializador, ou não use um inicializador de objeto.  
+1.  <span data-ttu-id="c807e-107">Inicializar pelo menos um campo ou propriedade no inicializador, ou não use um inicializador de objeto.</span><span class="sxs-lookup"><span data-stu-id="c807e-107">Initialize at least one field or property in the initializer, or do not use an object initializer.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Como declarar um objeto usando um inicializador de objeto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+## <a name="see-also"></a><span data-ttu-id="c807e-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c807e-108">See Also</span></span>  
+ <span data-ttu-id="c807e-109">[Inicializadores de objeto: Tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="c807e-109">[Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) </span></span>  
+<span data-ttu-id="c807e-110"> [Como declarar um objeto usando um inicializador de objeto](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)</span><span class="sxs-lookup"><span data-stu-id="c807e-110"> [How to: Declare an Object by Using an Object Initializer](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)</span></span>

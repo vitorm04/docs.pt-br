@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 84953c852f9a30047b52b20cbe98429c4e18fd2c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 61d19676edec8204031abaa15114e3fe78be9624
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)
-O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]. Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="47921-102">Arquivo XML de Exemplo: Dados numéricos (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47921-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="47921-103">O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)].</span><span class="sxs-lookup"><span data-stu-id="47921-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] documentation.</span></span> <span data-ttu-id="47921-104">Este arquivo contém dados numéricos para somar, especifique intermediária, e agrupamento.</span><span class="sxs-lookup"><span data-stu-id="47921-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a>Data.xml  
+## <a name="dataxml"></a><span data-ttu-id="47921-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="47921-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -72,5 +73,5 @@ O arquivo XML a seguir é usado em vários exemplos na documentação do [!INCLU
 </Root>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Documentos XML de exemplo (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="47921-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="47921-106">See Also</span></span>  
+ [<span data-ttu-id="47921-107">Documentos XML de exemplo (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="47921-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

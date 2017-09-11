@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 787acc412044b19109d074e462428061238d2335
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9b2ad9b556db9edea9d8708f5be6447984531a44
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="operator-is-not-valid-for-type-39lttypenamegt39"></a>Operador não é válido para o tipo '&lt;typename&gt;'
-Um operador não é apropriado para os tipos.  
+# <a name="operator-is-not-valid-for-type-39lttypenamegt39"></a><span data-ttu-id="91003-102">Operador não é válido para o tipo '&lt;typename&gt;'</span><span class="sxs-lookup"><span data-stu-id="91003-102">Operator is not valid for type &#39;&lt;typename&gt;&#39;</span></span>
+<span data-ttu-id="91003-103">Um operador não é apropriado para os tipos.</span><span class="sxs-lookup"><span data-stu-id="91003-103">An operator is not appropriate for the types.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="91003-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="91003-104">To correct this error</span></span>  
   
--   Certifique-se de que o operador é apropriado para os tipos que estão sendo operados.  
+-   <span data-ttu-id="91003-105">Certifique-se de que o operador é apropriado para os tipos que estão sendo operados.</span><span class="sxs-lookup"><span data-stu-id="91003-105">Ensure that the operator is appropriate for the types being operated on.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores](../../visual-basic/language-reference/operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="91003-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="91003-106">See Also</span></span>  
+ [<span data-ttu-id="91003-107">Operadores</span><span class="sxs-lookup"><span data-stu-id="91003-107">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)

@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1e5a6e58acfa513f380fe2a1716740d78a38e0ea
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a0af79f6b4bbd7a61659d618b550b278b7be6ca5
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a>'Is' requer operandos que tenham tipos de referência, mas este operando tem o tipo de valor '&lt;typename&gt;'
-O `Is` operador de comparação que determina se duas variáveis de objeto referir-se à mesma instância. Essa comparação não está definida para tipos de valor.  
+# <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a><span data-ttu-id="826d6-102">'Is' requer operandos que tenham tipos de referência, mas este operando tem o tipo de valor '&lt;typename&gt;'</span><span class="sxs-lookup"><span data-stu-id="826d6-102">&#39;Is&#39; requires operands that have reference types, but this operand has the value type &#39;&lt;typename&gt;&#39;</span></span>
+<span data-ttu-id="826d6-103">O `Is` operador de comparação que determina se duas variáveis de objeto referir-se à mesma instância.</span><span class="sxs-lookup"><span data-stu-id="826d6-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="826d6-104">Essa comparação não está definida para tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="826d6-104">This comparison is not defined for value types.</span></span>  
   
- **ID do erro:** BC30020  
+ <span data-ttu-id="826d6-105">**ID do erro:** BC30020</span><span class="sxs-lookup"><span data-stu-id="826d6-105">**Error ID:** BC30020</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="826d6-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="826d6-106">To correct this error</span></span>  
   
--   Use o operador de comparação aritmética apropriado ou o `Like` operador para comparar dois tipos de valor.  
+-   <span data-ttu-id="826d6-107">Use o operador de comparação aritmética apropriado ou o `Like` operador para comparar dois tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="826d6-107">Use the appropriate arithmetic comparison operator or the `Like` operator to compare two value types.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Operador is](../../../visual-basic/language-reference/operators/is-operator.md)   
- [Operador LIKE](../../../visual-basic/language-reference/operators/like-operator.md)   
- [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)
+## <a name="see-also"></a><span data-ttu-id="826d6-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="826d6-108">See Also</span></span>  
+ <span data-ttu-id="826d6-109">[Operador is](../../../visual-basic/language-reference/operators/is-operator.md) </span><span class="sxs-lookup"><span data-stu-id="826d6-109">[Is Operator](../../../visual-basic/language-reference/operators/is-operator.md) </span></span>  
+<span data-ttu-id="826d6-110"> [Operador LIKE](../../../visual-basic/language-reference/operators/like-operator.md) </span><span class="sxs-lookup"><span data-stu-id="826d6-110"> [Like Operator](../../../visual-basic/language-reference/operators/like-operator.md) </span></span>  
+<span data-ttu-id="826d6-111"> [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)</span><span class="sxs-lookup"><span data-stu-id="826d6-111"> [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md)</span></span>

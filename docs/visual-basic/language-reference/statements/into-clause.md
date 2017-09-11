@@ -29,23 +29,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ff486602320664385243ec2c390338a45e047f4f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2357584f198998eba83b93e6c2de47ecaeaa9008
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="into-clause-visual-basic"></a>Cláusula Into (Visual Basic)
-Identifica as funções de agregação ou agrupamentos para aplicar a uma coleção.  
+# <a name="into-clause-visual-basic"></a><span data-ttu-id="8c01d-102">Cláusula Into (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8c01d-102">Into Clause (Visual Basic)</span></span>
+<span data-ttu-id="8c01d-103">Identifica as funções de agregação ou agrupamentos para aplicar a uma coleção.</span><span class="sxs-lookup"><span data-stu-id="8c01d-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `Each` palavra-chave é usada nos seguintes contextos:  
+## <a name="remarks"></a><span data-ttu-id="8c01d-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="8c01d-104">Remarks</span></span>  
+ <span data-ttu-id="8c01d-105">O `Each` palavra-chave é usada nos seguintes contextos:</span><span class="sxs-lookup"><span data-stu-id="8c01d-105">The `Each` keyword is used in the following contexts:</span></span>  
   
- [Cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [<span data-ttu-id="8c01d-106">Cláusula Aggregate</span><span class="sxs-lookup"><span data-stu-id="8c01d-106">Aggregate Clause</span></span>](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
- [Cláusula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ [<span data-ttu-id="8c01d-107">Cláusula Group By</span><span class="sxs-lookup"><span data-stu-id="8c01d-107">Group By Clause</span></span>](../../../visual-basic/language-reference/queries/group-by-clause.md)  
   
- [Cláusula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="8c01d-108">Cláusula Group Join</span><span class="sxs-lookup"><span data-stu-id="8c01d-108">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="8c01d-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8c01d-109">See Also</span></span>  
+ [<span data-ttu-id="8c01d-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="8c01d-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

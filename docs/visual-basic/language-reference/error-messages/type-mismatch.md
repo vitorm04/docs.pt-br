@@ -30,22 +30,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bd677c5a0f801396db6c1751ac6014586f7e11ac
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 9e4fa81f723befc38503e15e3c52b673edbeb220
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-mismatch-visual-basic"></a>Tipos incompatíveis (Visual Basic)
-Tentativa de converter um valor em outro tipo de forma que não é válido.  
+# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="7db89-102">Tipos incompatíveis (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7db89-102">Type mismatch (Visual Basic)</span></span>
+<span data-ttu-id="7db89-103">Tentativa de converter um valor em outro tipo de forma que não é válido.</span><span class="sxs-lookup"><span data-stu-id="7db89-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7db89-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="7db89-104">To correct this error</span></span>  
   
-1.  Verifique a atribuição para certificar-se de que ele é válido.  
+1.  <span data-ttu-id="7db89-105">Verifique a atribuição para certificar-se de que ele é válido.</span><span class="sxs-lookup"><span data-stu-id="7db89-105">Check the assignment to make sure it is valid.</span></span>  
   
-2.  Certifique-se de que não passou um objeto para um procedimento que espera um valor ou uma única propriedade.  
+2.  <span data-ttu-id="7db89-106">Certifique-se de que não passou um objeto para um procedimento que espera um valor ou uma única propriedade.</span><span class="sxs-lookup"><span data-stu-id="7db89-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
   
-3.  Verifique se que você não tiver usado um nome de módulo ou projeto em que uma expressão era esperada.  
+3.  <span data-ttu-id="7db89-107">Verifique se que você não tiver usado um nome de módulo ou projeto em que uma expressão era esperada.</span><span class="sxs-lookup"><span data-stu-id="7db89-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="7db89-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7db89-108">See Also</span></span>  
+ [<span data-ttu-id="7db89-109">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="7db89-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -40,35 +40,35 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8bc4735536444c7e3b361f2eaf1c43f7ca6584c
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 337bfb5e9f2329250e1d6116779b2023f6e52c71
 ms.contentlocale: pt-br
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="xor-operator-visual-basic"></a>Operador Xor (Visual Basic)
-Executa uma exclusão lógica em duas `Boolean` expressões ou uma exclusão bit a bit em duas expressões numéricas.  
+# <a name="xor-operator-visual-basic"></a><span data-ttu-id="a5994-102">Operador Xor (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5994-102">Xor Operator (Visual Basic)</span></span>
+<span data-ttu-id="a5994-103">Executa uma exclusão lógica em duas `Boolean` expressões ou uma exclusão bit a bit em duas expressões numéricas.</span><span class="sxs-lookup"><span data-stu-id="a5994-103">Performs a logical exclusion on two `Boolean` expressions, or a bitwise exclusion on two numeric expressions.</span></span>  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a><span data-ttu-id="a5994-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a5994-104">Syntax</span></span>  
   
 ```  
 result = expression1 Xor expression2  
 ```  
   
-## <a name="parts"></a>Partes  
+## <a name="parts"></a><span data-ttu-id="a5994-105">Partes</span><span class="sxs-lookup"><span data-stu-id="a5994-105">Parts</span></span>  
  `result`  
- Necessário. Qualquer `Boolean` ou variável numérica. Para comparação Boolean, `result` é a exclusão lógica (disjunção lógica exclusiva) de dois `Boolean` valores. Para operações bit a bit, `result` é um valor numérico que representa a exclusão bit a bit (disjunção bit a bit exclusiva) dos dois padrões numéricos de bits.  
+ <span data-ttu-id="a5994-106">Necessário.</span><span class="sxs-lookup"><span data-stu-id="a5994-106">Required.</span></span> <span data-ttu-id="a5994-107">Qualquer `Boolean` ou variável numérica.</span><span class="sxs-lookup"><span data-stu-id="a5994-107">Any `Boolean` or numeric variable.</span></span> <span data-ttu-id="a5994-108">Para comparação Boolean, `result` é a exclusão lógica (disjunção lógica exclusiva) de dois `Boolean` valores.</span><span class="sxs-lookup"><span data-stu-id="a5994-108">For Boolean comparison, `result` is the logical exclusion (exclusive logical disjunction) of two `Boolean` values.</span></span> <span data-ttu-id="a5994-109">Para operações bit a bit, `result` é um valor numérico que representa a exclusão bit a bit (disjunção bit a bit exclusiva) dos dois padrões numéricos de bits.</span><span class="sxs-lookup"><span data-stu-id="a5994-109">For bitwise operations, `result` is a numeric value that represents the bitwise exclusion (exclusive bitwise disjunction) of two numeric bit patterns.</span></span>  
   
  `expression1`  
- Necessário. Qualquer `Boolean` ou expressão numérica.  
+ <span data-ttu-id="a5994-110">Necessário.</span><span class="sxs-lookup"><span data-stu-id="a5994-110">Required.</span></span> <span data-ttu-id="a5994-111">Qualquer `Boolean` ou expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="a5994-111">Any `Boolean` or numeric expression.</span></span>  
   
  `expression2`  
- Necessário. Qualquer `Boolean` ou expressão numérica.  
+ <span data-ttu-id="a5994-112">Necessário.</span><span class="sxs-lookup"><span data-stu-id="a5994-112">Required.</span></span> <span data-ttu-id="a5994-113">Qualquer `Boolean` ou expressão numérica.</span><span class="sxs-lookup"><span data-stu-id="a5994-113">Any `Boolean` or numeric expression.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Para comparação Boolean, `result` é `True` se e somente se exatamente um `expression1` e `expression2` é avaliada como `True`. Isto é, se e somente se `expression1` e `expression2` avaliar oposta à `Boolean` valores. A tabela a seguir ilustra como `result` é determinado.  
+## <a name="remarks"></a><span data-ttu-id="a5994-114">Comentários</span><span class="sxs-lookup"><span data-stu-id="a5994-114">Remarks</span></span>  
+ <span data-ttu-id="a5994-115">Para comparação Boolean, `result` é `True` se e somente se exatamente um `expression1` e `expression2` é avaliada como `True`.</span><span class="sxs-lookup"><span data-stu-id="a5994-115">For Boolean comparison, `result` is `True` if and only if exactly one of `expression1` and `expression2` evaluates to `True`.</span></span> <span data-ttu-id="a5994-116">Isto é, se e somente se `expression1` e `expression2` avaliar oposta à `Boolean` valores.</span><span class="sxs-lookup"><span data-stu-id="a5994-116">That is, if and only if `expression1` and `expression2` evaluate to opposite `Boolean` values.</span></span> <span data-ttu-id="a5994-117">A tabela a seguir ilustra como `result` é determinado.</span><span class="sxs-lookup"><span data-stu-id="a5994-117">The following table illustrates how `result` is determined.</span></span>  
   
-|If `expression1` is|E `expression2` é|O valor de `result` é|  
+|<span data-ttu-id="a5994-118">If `expression1` is</span><span class="sxs-lookup"><span data-stu-id="a5994-118">If `expression1` is</span></span>|<span data-ttu-id="a5994-119">E `expression2` é</span><span class="sxs-lookup"><span data-stu-id="a5994-119">And `expression2` is</span></span>|<span data-ttu-id="a5994-120">O valor de `result` é</span><span class="sxs-lookup"><span data-stu-id="a5994-120">The value of `result` is</span></span>|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`False`|  
 |`True`|`False`|`True`|  
@@ -76,47 +76,47 @@ result = expression1 Xor expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  Em uma comparação Booleana, o `Xor` operador sempre avalia as duas expressões, que podem incluir chamadas de procedimento. Não há nenhum equivalente de curto-circuito para `Xor`, porque o resultado sempre depende dos dois operandos. Para *Short-circuiting* operadores lógicos, consulte [operador AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md) e [operador OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md).  
+>  <span data-ttu-id="a5994-121">Em uma comparação Booleana, o `Xor` operador sempre avalia as duas expressões, que podem incluir chamadas de procedimento.</span><span class="sxs-lookup"><span data-stu-id="a5994-121">In a Boolean comparison, the `Xor` operator always evaluates both expressions, which could include making procedure calls.</span></span> <span data-ttu-id="a5994-122">Não há nenhum equivalente de curto-circuito para `Xor`, porque o resultado sempre depende dos dois operandos.</span><span class="sxs-lookup"><span data-stu-id="a5994-122">There is no short-circuiting counterpart to `Xor`, because the result always depends on both operands.</span></span> <span data-ttu-id="a5994-123">Para *Short-circuiting* operadores lógicos, consulte [operador AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md) e [operador OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md).</span><span class="sxs-lookup"><span data-stu-id="a5994-123">For *short-circuiting* logical operators, see [AndAlso Operator](../../../visual-basic/language-reference/operators/andalso-operator.md) and [OrElse Operator](../../../visual-basic/language-reference/operators/orelse-operator.md).</span></span>  
   
- Para operações bit a bit, o `Xor` operador executa uma comparação bit a bit de bits posicionados identicamente em duas expressões numéricas e configura o bit no correspondente `result` acordo com a tabela a seguir.  
+ <span data-ttu-id="a5994-124">Para operações bit a bit, o `Xor` operador executa uma comparação bit a bit de bits posicionados identicamente em duas expressões numéricas e configura o bit no correspondente `result` acordo com a tabela a seguir.</span><span class="sxs-lookup"><span data-stu-id="a5994-124">For bitwise operations, the `Xor` operator performs a bitwise comparison of identically positioned bits in two numeric expressions and sets the corresponding bit in `result` according to the following table.</span></span>  
   
-|Se bit no `expression1` é|E o bit na `expression2` é|O bit no `result` é|  
+|<span data-ttu-id="a5994-125">Se bit no `expression1` é</span><span class="sxs-lookup"><span data-stu-id="a5994-125">If bit in `expression1` is</span></span>|<span data-ttu-id="a5994-126">E o bit na `expression2` é</span><span class="sxs-lookup"><span data-stu-id="a5994-126">And bit in `expression2` is</span></span>|<span data-ttu-id="a5994-127">O bit no `result` é</span><span class="sxs-lookup"><span data-stu-id="a5994-127">The bit in `result` is</span></span>|  
 |--------------------------------|---------------------------------|----------------------------|  
-|1|1|0|  
-|1|0|1|  
-|0|1|1|  
-|0|0|0|  
+|<span data-ttu-id="a5994-128">1</span><span class="sxs-lookup"><span data-stu-id="a5994-128">1</span></span>|<span data-ttu-id="a5994-129">1</span><span class="sxs-lookup"><span data-stu-id="a5994-129">1</span></span>|<span data-ttu-id="a5994-130">0</span><span class="sxs-lookup"><span data-stu-id="a5994-130">0</span></span>|  
+|<span data-ttu-id="a5994-131">1</span><span class="sxs-lookup"><span data-stu-id="a5994-131">1</span></span>|<span data-ttu-id="a5994-132">0</span><span class="sxs-lookup"><span data-stu-id="a5994-132">0</span></span>|<span data-ttu-id="a5994-133">1</span><span class="sxs-lookup"><span data-stu-id="a5994-133">1</span></span>|  
+|<span data-ttu-id="a5994-134">0</span><span class="sxs-lookup"><span data-stu-id="a5994-134">0</span></span>|<span data-ttu-id="a5994-135">1</span><span class="sxs-lookup"><span data-stu-id="a5994-135">1</span></span>|<span data-ttu-id="a5994-136">1</span><span class="sxs-lookup"><span data-stu-id="a5994-136">1</span></span>|  
+|<span data-ttu-id="a5994-137">0</span><span class="sxs-lookup"><span data-stu-id="a5994-137">0</span></span>|<span data-ttu-id="a5994-138">0</span><span class="sxs-lookup"><span data-stu-id="a5994-138">0</span></span>|<span data-ttu-id="a5994-139">0</span><span class="sxs-lookup"><span data-stu-id="a5994-139">0</span></span>|  
   
 > [!NOTE]
->  Como os operadores lógicos e bit a bit possuem uma precedência menor que outros operadores aritméticos e relacionais, quaisquer operações bit a bit devem ser colocadas entre parênteses para garantir execução precisa.  
+>  <span data-ttu-id="a5994-140">Como os operadores lógicos e bit a bit possuem uma precedência menor que outros operadores aritméticos e relacionais, quaisquer operações bit a bit devem ser colocadas entre parênteses para garantir execução precisa.</span><span class="sxs-lookup"><span data-stu-id="a5994-140">Since the logical and bitwise operators have a lower precedence than other arithmetic and relational operators, any bitwise operations should be enclosed in parentheses to ensure accurate execution.</span></span>  
   
- Por exemplo, 5 `Xor` 3 é 6. Para ver por que isso assim, converta 5 e 3 em suas representações binárias, 101 e 011. Em seguida, use a tabela anterior para determinar que 101 Xor 011 é 110, que é a representação binária do número decimal 6.  
+ <span data-ttu-id="a5994-141">Por exemplo, 5 `Xor` 3 é 6.</span><span class="sxs-lookup"><span data-stu-id="a5994-141">For example, 5 `Xor` 3 is 6.</span></span> <span data-ttu-id="a5994-142">Para ver por que isso assim, converta 5 e 3 em suas representações binárias, 101 e 011.</span><span class="sxs-lookup"><span data-stu-id="a5994-142">To see why this is so, convert 5 and 3 to their binary representations, 101 and 011.</span></span> <span data-ttu-id="a5994-143">Em seguida, use a tabela anterior para determinar que 101 Xor 011 é 110, que é a representação binária do número decimal 6.</span><span class="sxs-lookup"><span data-stu-id="a5994-143">Then use the previous table to determine that 101 Xor 011 is 110, which is the binary representation of the decimal number 6.</span></span>  
   
-## <a name="data-types"></a>Tipos de Dados  
- Se o operando consiste em uma `Boolean` expressão e uma expressão numérica, o Visual Basic converte o `Boolean` expressão para um valor numérico (-1 para `True` e 0 para `False`) e executa uma operação bit a bit.  
+## <a name="data-types"></a><span data-ttu-id="a5994-144">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="a5994-144">Data Types</span></span>  
+ <span data-ttu-id="a5994-145">Se o operando consiste em uma `Boolean` expressão e uma expressão numérica, o Visual Basic converte o `Boolean` expressão para um valor numérico (-1 para `True` e 0 para `False`) e executa uma operação bit a bit.</span><span class="sxs-lookup"><span data-stu-id="a5994-145">If the operands consist of one `Boolean` expression and one numeric expression, Visual Basic converts the `Boolean` expression to a numeric value (–1 for `True` and 0 for `False`) and performs a bitwise operation.</span></span>  
   
- Para uma `Boolean` comparação, o tipo de dados do resultado é `Boolean`. Para obter uma comparação bit a bit, o tipo de dados do resultado é um tipo numérico apropriado para os tipos de dados de `expression1` e `expression2`. Consulte a tabela "Comparações relacionais e bit a bit" [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ <span data-ttu-id="a5994-146">Para uma `Boolean` comparação, o tipo de dados do resultado é `Boolean`.</span><span class="sxs-lookup"><span data-stu-id="a5994-146">For a `Boolean` comparison, the data type of the result is `Boolean`.</span></span> <span data-ttu-id="a5994-147">Para obter uma comparação bit a bit, o tipo de dados do resultado é um tipo numérico apropriado para os tipos de dados de `expression1` e `expression2`.</span><span class="sxs-lookup"><span data-stu-id="a5994-147">For a bitwise comparison, the result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="a5994-148">Consulte a tabela "Comparações relacionais e bit a bit" [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span><span class="sxs-lookup"><span data-stu-id="a5994-148">See the "Relational and Bitwise Comparisons" table in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
   
-## <a name="overloading"></a>Sobrecarga  
- O `Xor` operador pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo de classe ou estrutura. Se seu código usa esse operador em uma classe ou estrutura, verifique se que você entende seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+## <a name="overloading"></a><span data-ttu-id="a5994-149">Sobrecarga</span><span class="sxs-lookup"><span data-stu-id="a5994-149">Overloading</span></span>  
+ <span data-ttu-id="a5994-150">O `Xor` operador pode ser *sobrecarregado*, que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo de classe ou estrutura.</span><span class="sxs-lookup"><span data-stu-id="a5994-150">The `Xor` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="a5994-151">Se seu código usa esse operador em uma classe ou estrutura, verifique se que você entende seu comportamento redefinido.</span><span class="sxs-lookup"><span data-stu-id="a5994-151">If your code uses this operator on such a class or structure, make sure you understand its redefined behavior.</span></span> <span data-ttu-id="a5994-152">Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="a5994-152">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Xor` operador para executar exclusão lógica (disjunção lógica exclusiva) em duas expressões. O resultado é um `Boolean` valor que representa se exatamente uma das expressões é `True`.  
+## <a name="example"></a><span data-ttu-id="a5994-153">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a5994-153">Example</span></span>  
+ <span data-ttu-id="a5994-154">O exemplo a seguir usa o `Xor` operador para executar exclusão lógica (disjunção lógica exclusiva) em duas expressões.</span><span class="sxs-lookup"><span data-stu-id="a5994-154">The following example uses the `Xor` operator to perform logical exclusion (exclusive logical disjunction) on two expressions.</span></span> <span data-ttu-id="a5994-155">O resultado é um `Boolean` valor que representa se exatamente uma das expressões é `True`.</span><span class="sxs-lookup"><span data-stu-id="a5994-155">The result is a `Boolean` value that represents whether exactly one of the expressions is `True`.</span></span>  
   
- [!code-vb[40 VbVbalrOperators](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
+ <span data-ttu-id="a5994-156">[!code-vb[40 VbVbalrOperators](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="a5994-156">[!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]</span></span>  
   
- O exemplo anterior produz resultados `False`, `True`, e `False`, respectivamente.  
+ <span data-ttu-id="a5994-157">O exemplo anterior produz resultados `False`, `True`, e `False`, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="a5994-157">The previous example produces results of `False`, `True`, and `False`, respectively.</span></span>  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o `Xor` operador para executar exclusão lógica (disjunção lógica exclusiva) nos bits individuais de duas expressões numéricas. O bit no padrão resultante é definido se exatamente um dos bits correspondentes nos dois operandos é definido como 1.  
+## <a name="example"></a><span data-ttu-id="a5994-158">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a5994-158">Example</span></span>  
+ <span data-ttu-id="a5994-159">O exemplo a seguir usa o `Xor` operador para executar exclusão lógica (disjunção lógica exclusiva) nos bits individuais de duas expressões numéricas.</span><span class="sxs-lookup"><span data-stu-id="a5994-159">The following example uses the `Xor` operator to perform logical exclusion (exclusive logical disjunction) on the individual bits of two numeric expressions.</span></span> <span data-ttu-id="a5994-160">O bit no padrão resultante é definido se exatamente um dos bits correspondentes nos dois operandos é definido como 1.</span><span class="sxs-lookup"><span data-stu-id="a5994-160">The bit in the result pattern is set if exactly one of the corresponding bits in the operands is set to 1.</span></span>  
   
- [!code-vb[41 VbVbalrOperators](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
+ <span data-ttu-id="a5994-161">[!code-vb[41 VbVbalrOperators](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="a5994-161">[!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]</span></span>  
   
- O exemplo anterior produz resultados 2, 12 e 14, respectivamente.  
+ <span data-ttu-id="a5994-162">O exemplo anterior produz resultados 2, 12 e 14, respectivamente.</span><span class="sxs-lookup"><span data-stu-id="a5994-162">The previous example produces results of 2, 12, and 14, respectively.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores lógicos/bit a bit (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   
- [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operadores lógicos e bit a bit no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a><span data-ttu-id="a5994-163">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a5994-163">See Also</span></span>  
+ <span data-ttu-id="a5994-164">[Operadores lógicos/bit a bit (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md) </span><span class="sxs-lookup"><span data-stu-id="a5994-164">[Logical/Bitwise Operators (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md) </span></span>  
+<span data-ttu-id="a5994-165"> [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md) </span><span class="sxs-lookup"><span data-stu-id="a5994-165"> [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md) </span></span>  
+<span data-ttu-id="a5994-166"> [Operadores listados por funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span><span class="sxs-lookup"><span data-stu-id="a5994-166"> [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md) </span></span>  
+<span data-ttu-id="a5994-167"> [Operadores lógicos e bit a bit no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)</span><span class="sxs-lookup"><span data-stu-id="a5994-167"> [Logical and Bitwise Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)</span></span>
 

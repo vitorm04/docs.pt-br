@@ -24,20 +24,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 090c000f91c6e7efdbd90f4aefcb6094bed45ad6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ecd6b4cbf322d59280a4b52f9e785fe3504d24b0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="the-specified-path-does-not-exist"></a>O caminho especificado não existe
-Um caminho especificado não existir, talvez devido a um erro combinar cadeias de caracteres.  
+# <a name="the-specified-path-does-not-exist"></a><span data-ttu-id="edf98-102">O caminho especificado não existe</span><span class="sxs-lookup"><span data-stu-id="edf98-102">The specified path does not exist</span></span>
+<span data-ttu-id="edf98-103">Um caminho especificado não existir, talvez devido a um erro combinar cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="edf98-103">A specified path does not exist, perhaps due to an error combining strings.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="edf98-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="edf98-104">To correct this error</span></span>  
   
--   Certifique-se de que o caminho está correto.  
+-   <span data-ttu-id="edf98-105">Certifique-se de que o caminho está correto.</span><span class="sxs-lookup"><span data-stu-id="edf98-105">Make sure that the path is correct.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Como: analisar caminhos de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)   
- [Conversões entre cadeias de caracteres e outros tipos](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)   
- [Analisando cadeias de caracteres no Visual Basic](http://msdn.microsoft.com/en-us/927a4b26-5388-458c-85d8-aaf0851457e3)
+## <a name="see-also"></a><span data-ttu-id="edf98-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="edf98-106">See Also</span></span>  
+ <span data-ttu-id="edf98-107">[Como: analisar caminhos de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md) </span><span class="sxs-lookup"><span data-stu-id="edf98-107">[How to: Parse File Paths](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md) </span></span>  
+<span data-ttu-id="edf98-108"> [Conversões entre cadeias de caracteres e outros tipos](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md) </span><span class="sxs-lookup"><span data-stu-id="edf98-108"> [Conversions Between Strings and Other Types](../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md) </span></span>  
+<span data-ttu-id="edf98-109"> [Analisando cadeias de caracteres no Visual Basic](http://msdn.microsoft.com/en-us/927a4b26-5388-458c-85d8-aaf0851457e3)</span><span class="sxs-lookup"><span data-stu-id="edf98-109"> [Parsing Strings in Visual Basic](http://msdn.microsoft.com/en-us/927a4b26-5388-458c-85d8-aaf0851457e3)</span></span>

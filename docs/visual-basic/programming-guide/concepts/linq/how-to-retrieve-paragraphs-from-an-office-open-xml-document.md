@@ -15,26 +15,27 @@ ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 303fffb8a548805f4ae7c1e66d683b35b9faf2b0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3a62f64f2c923f8f8c8f85f7f9e5e6b7dbcef3d1
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic)
-Este tópico apresenta um exemplo que abre um documento do Office Open XML, e retorna uma coleção de todos os parágrafos no documento.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a><span data-ttu-id="8da15-102">Como: recuperar parágrafos de um documento do Office Open XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8da15-102">How to: Retrieve Paragraphs from an Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="8da15-103">Este tópico apresenta um exemplo que abre um documento do Office Open XML, e retorna uma coleção de todos os parágrafos no documento.</span><span class="sxs-lookup"><span data-stu-id="8da15-103">This topic presents an example that opens an Office Open XML document, and retrieves a collection of all of the paragraphs in the document.</span></span>  
   
- Para obter mais informações sobre o Office Open XML, consulte [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).  
+ <span data-ttu-id="8da15-104">Para obter mais informações sobre o Office Open XML, consulte [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span><span class="sxs-lookup"><span data-stu-id="8da15-104">For more information on Office Open XML, see [www.openxmldeveloper.org](http://go.microsoft.com/fwlink/?LinkID=95573).</span></span>  
   
-## <a name="example"></a>Exemplo  
- Este exemplo abre um pacote do Office Open XML, usa os relacionamentos de pacote em Open XML para localizar o documento e partes de estilo. Consulta o documento, Projetando uma coleção de um tipo anônimo que contém os parágrafos <xref:System.Xml.Linq.XElement>nó, o nome do estilo de cada parágrafo e o texto de cada parágrafo.</xref:System.Xml.Linq.XElement>  
+## <a name="example"></a><span data-ttu-id="8da15-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="8da15-105">Example</span></span>  
+ <span data-ttu-id="8da15-106">Este exemplo abre um pacote do Office Open XML, usa os relacionamentos de pacote em Open XML para localizar o documento e partes de estilo.</span><span class="sxs-lookup"><span data-stu-id="8da15-106">This example opens an Office Open XML package, uses the relationships within the Open XML package to find the document and the style parts.</span></span> <span data-ttu-id="8da15-107">Consulta o documento, Projetando uma coleção de um tipo anônimo que contém os parágrafos <xref:System.Xml.Linq.XElement>nó, o nome do estilo de cada parágrafo e o texto de cada parágrafo.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="8da15-107">It then queries the document, projecting a collection of an anonymous type that contains the paragraph <xref:System.Xml.Linq.XElement> node, the style name of each paragraph, and the text of each paragraph.</span></span>  
   
- O exemplo usa um método de extensão chamado `StringConcatenate`, que é fornecido no exemplo também.  
+ <span data-ttu-id="8da15-108">O exemplo usa um método de extensão chamado `StringConcatenate`, que é fornecido no exemplo também.</span><span class="sxs-lookup"><span data-stu-id="8da15-108">The example uses an extension method named `StringConcatenate`, which is also supplied in the example.</span></span>  
   
- Para um tutorial detalhado que explica como este exemplo funciona, consulte [puro funcional transformações de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ <span data-ttu-id="8da15-109">Para um tutorial detalhado que explica como este exemplo funciona, consulte [puro funcional transformações de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span><span class="sxs-lookup"><span data-stu-id="8da15-109">For a detailed tutorial that explains how this example works, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).</span></span>  
   
- Este exemplo usa as classes encontradas no assembly WindowsBase. Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="8da15-110">Este exemplo usa as classes encontradas no assembly WindowsBase.</span><span class="sxs-lookup"><span data-stu-id="8da15-110">This example uses classes found in the WindowsBase assembly.</span></span> <span data-ttu-id="8da15-111">Ele usa tipos no <xref:System.IO.Packaging?displayProperty=fullName>namespace.</xref:System.IO.Packaging?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="8da15-111">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -165,7 +166,7 @@ Module Module1
 End Module  
 ```  
   
- Quando executado com o documento do Open XML de exemplo descrito na [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:  
+ <span data-ttu-id="8da15-112">Quando executado com o documento do Open XML de exemplo descrito na [criando o Office Open XML documento de origem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), este exemplo produz a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="8da15-112">When run with the sample Open XML document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), this example produces the following output:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -185,5 +186,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="8da15-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8da15-113">See Also</span></span>  
+ [<span data-ttu-id="8da15-114">Técnicas avançadas de consulta (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8da15-114">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

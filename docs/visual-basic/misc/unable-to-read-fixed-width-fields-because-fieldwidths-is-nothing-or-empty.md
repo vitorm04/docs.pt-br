@@ -26,21 +26,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4e3c19de5a53a3c2025b3a2d6d5fd72fc9f619df
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: bc53481ef66169e947b0947ffbe19df940179000
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a>Não é possível ler campos de largura fixa porque FieldWidths é Nothing ou vazio
-O `TextFieldParser` não pôde ler campos de largura fixa porque o `FieldWidths` está definida como `Nothing` ou está vazia.  
+# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a><span data-ttu-id="16c57-102">Não é possível ler campos de largura fixa porque FieldWidths é Nothing ou vazio</span><span class="sxs-lookup"><span data-stu-id="16c57-102">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>
+<span data-ttu-id="16c57-103">O `TextFieldParser` não pôde ler campos de largura fixa porque o `FieldWidths` está definida como `Nothing` ou está vazia.</span><span class="sxs-lookup"><span data-stu-id="16c57-103">The `TextFieldParser` is unable to read fixed-width fields because the `FieldWidths` property is set to `Nothing` or is empty.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="16c57-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="16c57-104">To correct this error</span></span>  
   
--   Definir `FieldWidths` para um valor válido.  
+-   <span data-ttu-id="16c57-105">Definir `FieldWidths` para um valor válido.</span><span class="sxs-lookup"><span data-stu-id="16c57-105">Set `FieldWidths` to a valid value.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Método TextFieldParser.SetFieldWidths](http://msdn.microsoft.com/en-us/958fed9f-e0f3-4fc5-83b4-386156bdf036)   
- [Propriedade TextFieldParser.FieldWidths](http://msdn.microsoft.com/en-us/c6985360-60c6-494e-89e7-43b6b73f2597)   
- [Como: ler arquivos de texto de largura fixa](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
- [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+## <a name="see-also"></a><span data-ttu-id="16c57-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="16c57-106">See Also</span></span>  
+ <span data-ttu-id="16c57-107">[Método TextFieldParser.SetFieldWidths](http://msdn.microsoft.com/en-us/958fed9f-e0f3-4fc5-83b4-386156bdf036) </span><span class="sxs-lookup"><span data-stu-id="16c57-107">[TextFieldParser.SetFieldWidths Method](http://msdn.microsoft.com/en-us/958fed9f-e0f3-4fc5-83b4-386156bdf036) </span></span>  
+<span data-ttu-id="16c57-108"> [Propriedade TextFieldParser.FieldWidths](http://msdn.microsoft.com/en-us/c6985360-60c6-494e-89e7-43b6b73f2597) </span><span class="sxs-lookup"><span data-stu-id="16c57-108"> [TextFieldParser.FieldWidths Property](http://msdn.microsoft.com/en-us/c6985360-60c6-494e-89e7-43b6b73f2597) </span></span>  
+<span data-ttu-id="16c57-109"> [Como: ler arquivos de texto de largura fixa](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md) </span><span class="sxs-lookup"><span data-stu-id="16c57-109"> [How to: Read From Fixed-width Text Files](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md) </span></span>  
+<span data-ttu-id="16c57-110"> [Objeto TextFieldParser](../../visual-basic/language-reference/objects/textfieldparser-object.md)</span><span class="sxs-lookup"><span data-stu-id="16c57-110"> [TextFieldParser Object](../../visual-basic/language-reference/objects/textfieldparser-object.md)</span></span>

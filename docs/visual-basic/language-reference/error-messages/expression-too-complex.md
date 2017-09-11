@@ -29,18 +29,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e2835bbb96baf8af8e1edcb71759e1d82b181236
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 48a27f226fd78f985461b2b3e24c7148cacf9b66
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="expression-too-complex"></a>Expressão muito complexa
-Uma expressão de ponto flutuante contém subexpressões aninhadas demais.  
+# <a name="expression-too-complex"></a><span data-ttu-id="7776a-102">Expressão muito complexa</span><span class="sxs-lookup"><span data-stu-id="7776a-102">Expression too complex</span></span>
+<span data-ttu-id="7776a-103">Uma expressão de ponto flutuante contém subexpressões aninhadas demais.</span><span class="sxs-lookup"><span data-stu-id="7776a-103">A floating-point expression contains too many nested subexpressions.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7776a-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="7776a-104">To correct this error</span></span>  
   
--   Divida a expressão em tantas expressões separadas conforme necessário, para evitar que o erro ocorra.  
+-   <span data-ttu-id="7776a-105">Divida a expressão em tantas expressões separadas conforme necessário, para evitar que o erro ocorra.</span><span class="sxs-lookup"><span data-stu-id="7776a-105">Break the expression into as many separate expressions as necessary to prevent the error from occurring.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a><span data-ttu-id="7776a-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7776a-106">See Also</span></span>  
+ [<span data-ttu-id="7776a-107">Operadores e Expressões</span><span class="sxs-lookup"><span data-stu-id="7776a-107">Operators and Expressions</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

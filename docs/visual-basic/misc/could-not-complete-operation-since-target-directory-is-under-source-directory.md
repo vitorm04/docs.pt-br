@@ -26,19 +26,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27666d69cd60cb64edec329491408d0134fbfb89
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f4843468a321b60d181ecd36dd6b7fd37b028b94
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Não foi possível concluir a operação pois o diretório de destino está sob o diretório de origem
-Uma operação cíclica falhou. Ciclo de operações cíclicas e, portanto, não é possível concluir. Por exemplo, um objeto pode tentar herdar do objeto B, que por sua vez herda do objeto A.  
+# <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a><span data-ttu-id="c46f6-102">Não foi possível concluir a operação pois o diretório de destino está sob o diretório de origem</span><span class="sxs-lookup"><span data-stu-id="c46f6-102">Could not complete operation since target directory is under source directory</span></span>
+<span data-ttu-id="c46f6-103">Uma operação cíclica falhou.</span><span class="sxs-lookup"><span data-stu-id="c46f6-103">A cyclic operation has failed.</span></span> <span data-ttu-id="c46f6-104">Ciclo de operações cíclicas e, portanto, não é possível concluir.</span><span class="sxs-lookup"><span data-stu-id="c46f6-104">Cyclic operations cycle and therefore cannot complete.</span></span> <span data-ttu-id="c46f6-105">Por exemplo, um objeto pode tentar herdar do objeto B, que por sua vez herda do objeto A.</span><span class="sxs-lookup"><span data-stu-id="c46f6-105">For example, Object A may attempt to inherit from Object B, which in turn inherits from Object A.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c46f6-106">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="c46f6-106">To correct this error</span></span>  
   
--   Quando herdar, certifique-se de que não há nenhuma referência cíclica.  
+-   <span data-ttu-id="c46f6-107">Quando herdar, certifique-se de que não há nenhuma referência cíclica.</span><span class="sxs-lookup"><span data-stu-id="c46f6-107">When inheriting, make sure that there are no cyclic references.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md)   
- [Noções básicas de depuração: pontos de interrupção](http://msdn.microsoft.com/en-us/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)
+## <a name="see-also"></a><span data-ttu-id="c46f6-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c46f6-108">See Also</span></span>  
+ <span data-ttu-id="c46f6-109">[Tipos de Erro](../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="c46f6-109">[Error Types](../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="c46f6-110"> [Noções básicas de depuração: pontos de interrupção](http://msdn.microsoft.com/en-us/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)</span><span class="sxs-lookup"><span data-stu-id="c46f6-110"> [Debugging Basics: Breakpoints](http://msdn.microsoft.com/en-us/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)</span></span>

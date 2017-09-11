@@ -31,23 +31,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 801428145c86a76d854e3236f8f162085e8a8fec
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b1a70acad3a123316ad7d14cabc8bd754bf64ac0
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="else-statement-visual-basic"></a>Instrução Else (Visual Basic)
-Apresenta um grupo de instruções para ser executado ou compilado se nenhum outro grupo condicional de instruções execute ou foi compilado.  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="40fdf-102">Instrução Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40fdf-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="40fdf-103">Apresenta um grupo de instruções para ser executado ou compilado se nenhum outro grupo condicional de instruções execute ou foi compilado.</span><span class="sxs-lookup"><span data-stu-id="40fdf-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- O `Else` palavra-chave pode ser usada nesses contextos:  
+## <a name="remarks"></a><span data-ttu-id="40fdf-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="40fdf-104">Remarks</span></span>  
+ <span data-ttu-id="40fdf-105">O `Else` palavra-chave pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="40fdf-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="40fdf-106">Instrução If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="40fdf-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [Instrução Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="40fdf-107">Instrução Select...Case</span><span class="sxs-lookup"><span data-stu-id="40fdf-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If... Then... #Else diretiva](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="40fdf-108">#If... Then... #Else diretiva</span><span class="sxs-lookup"><span data-stu-id="40fdf-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="40fdf-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="40fdf-109">See Also</span></span>  
+ [<span data-ttu-id="40fdf-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="40fdf-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

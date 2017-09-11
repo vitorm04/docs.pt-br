@@ -37,29 +37,29 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="while-c-reference"></a>while (Referência de C#)
-A instrução `while` executa uma instrução ou um bloco de instruções até que uma expressão especificada seja avaliada como `false`.  
+# <a name="while-c-reference"></a><span data-ttu-id="35cf9-102">while (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="35cf9-102">while (C# Reference)</span></span>
+<span data-ttu-id="35cf9-103">A instrução `while` executa uma instrução ou um bloco de instruções até que uma expressão especificada seja avaliada como `false`.</span><span class="sxs-lookup"><span data-stu-id="35cf9-103">The `while` statement executes a statement or a block of statements until a specified expression evaluates to `false`.</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]  
+## <a name="example"></a><span data-ttu-id="35cf9-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="35cf9-104">Example</span></span>  
+ <span data-ttu-id="35cf9-105">[!code-cs[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="35cf9-105">[!code-cs[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]  
+## <a name="example"></a><span data-ttu-id="35cf9-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="35cf9-106">Example</span></span>  
+ <span data-ttu-id="35cf9-107">[!code-cs[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="35cf9-107">[!code-cs[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]</span></span>  
   
-## <a name="example"></a>Exemplo  
- Uma vez que o teste da expressão `while` ocorre antes de cada execução do loop, um loop `while` é executado zero ou mais vezes. Isso difere do loop [do](../../../csharp/language-reference/keywords/do.md), que é executado uma ou mais vezes.  
+## <a name="example"></a><span data-ttu-id="35cf9-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="35cf9-108">Example</span></span>  
+ <span data-ttu-id="35cf9-109">Uma vez que o teste da expressão `while` ocorre antes de cada execução do loop, um loop `while` é executado zero ou mais vezes.</span><span class="sxs-lookup"><span data-stu-id="35cf9-109">Because the test of the `while` expression takes place before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="35cf9-110">Isso difere do loop [do](../../../csharp/language-reference/keywords/do.md), que é executado uma ou mais vezes.</span><span class="sxs-lookup"><span data-stu-id="35cf9-110">This differs from the [do](../../../csharp/language-reference/keywords/do.md) loop, which executes one or more times.</span></span>  
   
- Um loop `while` pode ser finalizado quando uma instrução [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md) transfere o controle para fora do loop. Para passar o controle para a próxima iteração sem sair do loop, use a instrução [continue](../../../csharp/language-reference/keywords/continue.md). Observe a diferença na saída nos três exemplos anteriores, dependendo de onde `int n` é incrementado. No exemplo abaixo, nenhuma saída é gerada.  
+ <span data-ttu-id="35cf9-111">Um loop `while` pode ser finalizado quando uma instrução [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md) transfere o controle para fora do loop.</span><span class="sxs-lookup"><span data-stu-id="35cf9-111">A `while` loop can be terminated when a [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statement transfers control outside the loop.</span></span> <span data-ttu-id="35cf9-112">Para passar o controle para a próxima iteração sem sair do loop, use a instrução [continue](../../../csharp/language-reference/keywords/continue.md).</span><span class="sxs-lookup"><span data-stu-id="35cf9-112">To pass control to the next iteration without exiting the loop, use the [continue](../../../csharp/language-reference/keywords/continue.md) statement.</span></span> <span data-ttu-id="35cf9-113">Observe a diferença na saída nos três exemplos anteriores, dependendo de onde `int n` é incrementado.</span><span class="sxs-lookup"><span data-stu-id="35cf9-113">Notice the difference in output in the three previous examples, depending on where `int n` is incremented.</span></span> <span data-ttu-id="35cf9-114">No exemplo abaixo, nenhuma saída é gerada.</span><span class="sxs-lookup"><span data-stu-id="35cf9-114">In the example below no output is generated.</span></span>  
   
- [!code-cs[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]  
+ <span data-ttu-id="35cf9-115">[!code-cs[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="35cf9-115">[!code-cs[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a><span data-ttu-id="35cf9-116">Especificação da Linguagem C#</span><span class="sxs-lookup"><span data-stu-id="35cf9-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md)   
- [Instrução while (C++)](/cpp/cpp/while-statement-cpp)   
- [Instruções de iteração](../../../csharp/language-reference/keywords/iteration-statements.md)
+## <a name="see-also"></a><span data-ttu-id="35cf9-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="35cf9-117">See Also</span></span>  
+ <span data-ttu-id="35cf9-118">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="35cf9-118">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="35cf9-119">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="35cf9-119">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="35cf9-120">[Palavras-chave de C#](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="35cf9-120">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="35cf9-121">[Instrução while (C++)](/cpp/cpp/while-statement-cpp) </span><span class="sxs-lookup"><span data-stu-id="35cf9-121">[while Statement (C++)](/cpp/cpp/while-statement-cpp) </span></span>  
+ [<span data-ttu-id="35cf9-122">Instruções de iteração</span><span class="sxs-lookup"><span data-stu-id="35cf9-122">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
 

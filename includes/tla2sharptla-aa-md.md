@@ -1,1 +1,1 @@
-Acessibilidade Ativa
+<span data-ttu-id="7e61a-101">Acessibilidade Ativa</span><span class="sxs-lookup"><span data-stu-id="7e61a-101">Active Accessibility</span></span>

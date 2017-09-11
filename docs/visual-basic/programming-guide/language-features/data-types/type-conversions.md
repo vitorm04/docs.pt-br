@@ -36,37 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b671fe0ded9bad75dbe6ecf98ccfdf8bc9fd8d87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 61606572dd1f10dc5df4ed4baec02f230a23c8d6
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-conversions-in-visual-basic"></a>Conversões de tipo no Visual Basic
-O processo de alterar um valor de um tipo de dados para outro tipo é chamado *conversão*. Conversões são *widening* ou *narrowing*, dependendo das capacidades de dados dos tipos envolvidos. Eles também são *implícita* ou *explícita*, dependendo da sintaxe no código-fonte.  
+# <a name="type-conversions-in-visual-basic"></a><span data-ttu-id="738f1-102">Conversões de tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="738f1-102">Type Conversions in Visual Basic</span></span>
+<span data-ttu-id="738f1-103">O processo de alterar um valor de um tipo de dados para outro tipo é chamado *conversão*.</span><span class="sxs-lookup"><span data-stu-id="738f1-103">The process of changing a value from one data type to another type is called *conversion*.</span></span> <span data-ttu-id="738f1-104">Conversões são *widening* ou *narrowing*, dependendo das capacidades de dados dos tipos envolvidos.</span><span class="sxs-lookup"><span data-stu-id="738f1-104">Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved.</span></span> <span data-ttu-id="738f1-105">Eles também são *implícita* ou *explícita*, dependendo da sintaxe no código-fonte.</span><span class="sxs-lookup"><span data-stu-id="738f1-105">They are also *implicit* or *explicit*, depending on the syntax in the source code.</span></span>  
   
-## <a name="in-this-section"></a>Nesta seção  
- [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- Explica as conversões classificadas por se o tipo de destino pode manter os dados.  
+## <a name="in-this-section"></a><span data-ttu-id="738f1-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="738f1-106">In This Section</span></span>  
+ [<span data-ttu-id="738f1-107">Conversões de Widening e Narrowing</span><span class="sxs-lookup"><span data-stu-id="738f1-107">Widening and Narrowing Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ <span data-ttu-id="738f1-108">Explica as conversões classificadas por se o tipo de destino pode manter os dados.</span><span class="sxs-lookup"><span data-stu-id="738f1-108">Explains conversions classified by whether the destination type can hold the data.</span></span>  
   
- [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- Descreve as conversões classificadas se [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] executa-los automaticamente.  
+ [<span data-ttu-id="738f1-109">Conversões Implícitas e Explícitas</span><span class="sxs-lookup"><span data-stu-id="738f1-109">Implicit and Explicit Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
+ <span data-ttu-id="738f1-110">Descreve as conversões classificadas se [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] executa-los automaticamente.</span><span class="sxs-lookup"><span data-stu-id="738f1-110">Discusses conversions classified by whether [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] performs them automatically.</span></span>  
   
- [Conversões entre Cadeias de Caracteres e Outros Tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Ilustra a conversão entre cadeias de caracteres e numéricos, `Boolean`, ou valores de data/hora.  
+ [<span data-ttu-id="738f1-111">Conversões entre Cadeias de Caracteres e Outros Tipos</span><span class="sxs-lookup"><span data-stu-id="738f1-111">Conversions Between Strings and Other Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ <span data-ttu-id="738f1-112">Ilustra a conversão entre cadeias de caracteres e numéricos, `Boolean`, ou valores de data/hora.</span><span class="sxs-lookup"><span data-stu-id="738f1-112">Illustrates converting between strings and numeric, `Boolean`, or date/time values.</span></span>  
   
- [Como: converter um objeto em outro tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Mostra como converter um `Object` variável em qualquer outro tipo de dados.  
+ [<span data-ttu-id="738f1-113">Como: converter um objeto em outro tipo no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="738f1-113">How to: Convert an Object to Another Type in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ <span data-ttu-id="738f1-114">Mostra como converter um `Object` variável em qualquer outro tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="738f1-114">Shows how to convert an `Object` variable to any other data type.</span></span>  
   
- [Conversões de Matriz](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Percorre o processo de conversão entre matrizes de tipos de dados diferentes.  
+ [<span data-ttu-id="738f1-115">Conversões de Matriz</span><span class="sxs-lookup"><span data-stu-id="738f1-115">Array Conversions</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
+ <span data-ttu-id="738f1-116">Percorre o processo de conversão entre matrizes de tipos de dados diferentes.</span><span class="sxs-lookup"><span data-stu-id="738f1-116">Steps you through the process of converting between arrays of different data types.</span></span>  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Apresenta o [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipos de dados e descreve como usá-los.  
+## <a name="related-sections"></a><span data-ttu-id="738f1-117">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="738f1-117">Related Sections</span></span>  
+ [<span data-ttu-id="738f1-118">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="738f1-118">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ <span data-ttu-id="738f1-119">Apresenta o [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] tipos de dados e descreve como usá-los.</span><span class="sxs-lookup"><span data-stu-id="738f1-119">Introduces the [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] data types and describes how to use them.</span></span>  
   
- [Tipos de Dados](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Lista os tipos de dados elementares fornecidos pelo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].  
+ [<span data-ttu-id="738f1-120">Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="738f1-120">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ <span data-ttu-id="738f1-121">Lista os tipos de dados elementares fornecidos pelo [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span><span class="sxs-lookup"><span data-stu-id="738f1-121">Lists the elementary data types supplied by [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- Aborda alguns problemas comuns que podem ocorrer ao trabalhar com tipos de dados.
+ [<span data-ttu-id="738f1-122">Solução de problemas de Tipos de Dados</span><span class="sxs-lookup"><span data-stu-id="738f1-122">Troubleshooting Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ <span data-ttu-id="738f1-123">Aborda alguns problemas comuns que podem ocorrer ao trabalhar com tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="738f1-123">Discusses some common problems that can arise when working with data types.</span></span>

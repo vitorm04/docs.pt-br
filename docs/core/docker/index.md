@@ -18,12 +18,12 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="docker-and-net-core"></a>Docker e .NET Core 
+# <a name="docker-and-net-core"></a><span data-ttu-id="853a3-104">Docker e .NET Core</span><span class="sxs-lookup"><span data-stu-id="853a3-104">Docker and .NET Core</span></span> 
 
-Os tutoriais a seguir estão disponíveis aprender mais sobre como usar o Docker com o .NET Core.
+<span data-ttu-id="853a3-105">Os tutoriais a seguir estão disponíveis aprender mais sobre como usar o Docker com o .NET Core.</span><span class="sxs-lookup"><span data-stu-id="853a3-105">The following tutorials are available for learning about using Docker with .NET Core.</span></span>
 
-- [Criando Imagens do Docker para .NET Core Applications](building-net-docker-images.md)
-- [Ferramentas do Visual Studio para Docker](visual-studio-tools-for-docker.md)
+- [<span data-ttu-id="853a3-106">Criando Imagens do Docker para .NET Core Applications</span><span class="sxs-lookup"><span data-stu-id="853a3-106">Building Docker Images for .NET Core Applications</span></span>](building-net-docker-images.md)
+- [<span data-ttu-id="853a3-107">Ferramentas do Visual Studio para Docker</span><span class="sxs-lookup"><span data-stu-id="853a3-107">Visual Studio Tools for Docker</span></span>](visual-studio-tools-for-docker.md)
 
-Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](/aspnet/core/).
+<span data-ttu-id="853a3-108">Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](/aspnet/core/).</span><span class="sxs-lookup"><span data-stu-id="853a3-108">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>
 

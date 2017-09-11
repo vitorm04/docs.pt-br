@@ -24,18 +24,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: acc6768261bc48dac1767e274ec5570e9e9712e3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 2bfd6b9153902d8f748a9be07722f534f1d65cad
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>Uma ou mais pastas no caminho de destino não existe
-Um ou mais dos diretórios fornecidos no caminho de destino não existe. Isso pode ser um resultado de um caminho analisado incorretamente, particularmente se fornecendo um caminho relativo.  
+# <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a><span data-ttu-id="c6d2c-102">Uma ou mais pastas no caminho de destino não existe</span><span class="sxs-lookup"><span data-stu-id="c6d2c-102">One or more folders in the target path do not exist</span></span>
+<span data-ttu-id="c6d2c-103">Um ou mais dos diretórios fornecidos no caminho de destino não existe.</span><span class="sxs-lookup"><span data-stu-id="c6d2c-103">One or more of the directories supplied in the target path do not exist.</span></span> <span data-ttu-id="c6d2c-104">Isso pode ser um resultado de um caminho analisado incorretamente, particularmente se fornecendo um caminho relativo.</span><span class="sxs-lookup"><span data-stu-id="c6d2c-104">This may be a result of an incorrectly parsed path, particularly if supplying a relative path.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c6d2c-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="c6d2c-105">To correct this error</span></span>  
   
--   Verifique se que você está fornecendo o caminho de destino correto.  
+-   <span data-ttu-id="c6d2c-106">Verifique se que você está fornecendo o caminho de destino correto.</span><span class="sxs-lookup"><span data-stu-id="c6d2c-106">Check to make sure you are supplying the correct target path.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Como analisar demarcadores de arquivo](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a><span data-ttu-id="c6d2c-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c6d2c-107">See Also</span></span>  
+ [<span data-ttu-id="c6d2c-108">Como analisar demarcadores de arquivo</span><span class="sxs-lookup"><span data-stu-id="c6d2c-108">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

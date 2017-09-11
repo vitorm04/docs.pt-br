@@ -1,1 +1,1 @@
-Biblioteca de Classes Portátil
+<span data-ttu-id="51be2-101">Biblioteca de Classes Portátil</span><span class="sxs-lookup"><span data-stu-id="51be2-101">Portable Class Library</span></span>

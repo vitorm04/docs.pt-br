@@ -1,1 +1,1 @@
-Designer Relacional de Objetos
+<span data-ttu-id="f3c33-101">Designer Relacional de Objetos</span><span class="sxs-lookup"><span data-stu-id="f3c33-101">O/R Designer</span></span>

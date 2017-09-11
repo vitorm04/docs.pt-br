@@ -26,23 +26,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27d19305689d90ad49c8355dd2b6b9b02ac28379
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 001421ce7bc3f0095609eb11ae9e5b271e7983aa
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="argument-39life39-cannot-be-zero"></a>O argumento 'Life' não pode ser zero
-Um argumento para `Life`, que deve ser um `Double` que especifica o período de vida útil do ativo, não é válido.  
+# <a name="argument-39life39-cannot-be-zero"></a><span data-ttu-id="ca480-102">O argumento 'Life' não pode ser zero</span><span class="sxs-lookup"><span data-stu-id="ca480-102">Argument &#39;Life&#39; cannot be zero</span></span>
+<span data-ttu-id="ca480-103">Um argumento para `Life`, que deve ser um `Double` que especifica o período de vida útil do ativo, não é válido.</span><span class="sxs-lookup"><span data-stu-id="ca480-103">An argument for `Life`, which must be a `Double` that specifies the length of useful life of the asset, is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ca480-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="ca480-104">To correct this error</span></span>  
   
--   Verifique a ortografia dos argumentos na expressão. Um nome de variável incorreta implicitamente pode criar uma variável numérica que é inicializada com zero.  
+-   <span data-ttu-id="ca480-105">Verifique a ortografia dos argumentos na expressão.</span><span class="sxs-lookup"><span data-stu-id="ca480-105">Check the spelling of arguments in the expression.</span></span> <span data-ttu-id="ca480-106">Um nome de variável incorreta implicitamente pode criar uma variável numérica que é inicializada com zero.</span><span class="sxs-lookup"><span data-stu-id="ca480-106">A misspelled variable name can implicitly create a numeric variable that is initialized to zero.</span></span>  
   
--   Cheque operações anteriores em variáveis na expressão, especialmente aquelas de outros procedimentos passadas para o procedimento como argumentos.  
+-   <span data-ttu-id="ca480-107">Cheque operações anteriores em variáveis na expressão, especialmente aquelas de outros procedimentos passadas para o procedimento como argumentos.</span><span class="sxs-lookup"><span data-stu-id="ca480-107">Check previous operations on variables in the expression, especially those passed into the procedure as arguments from other procedures.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [NÃO está em compilação: Função do BDD](http://msdn.microsoft.com/en-us/c7cf8929-d158-4399-b3cb-31d897d12556)   
- [NÃO está em compilação: Função SYD](http://msdn.microsoft.com/en-us/23c25672-f5dd-49ac-9893-4faa82634181)   
- [NÃO está em compilação: Função SLN](http://msdn.microsoft.com/en-us/8e06130a-056e-4266-a8a9-1592b86f58d2)   
- [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+## <a name="see-also"></a><span data-ttu-id="ca480-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ca480-108">See Also</span></span>  
+ <span data-ttu-id="ca480-109">[NÃO está em compilação: Função do BDD](http://msdn.microsoft.com/en-us/c7cf8929-d158-4399-b3cb-31d897d12556) </span><span class="sxs-lookup"><span data-stu-id="ca480-109">[NOT IN BUILD: DDB Function](http://msdn.microsoft.com/en-us/c7cf8929-d158-4399-b3cb-31d897d12556) </span></span>  
+<span data-ttu-id="ca480-110"> [NÃO está em compilação: Função SYD](http://msdn.microsoft.com/en-us/23c25672-f5dd-49ac-9893-4faa82634181) </span><span class="sxs-lookup"><span data-stu-id="ca480-110"> [NOT IN BUILD: SYD Function](http://msdn.microsoft.com/en-us/23c25672-f5dd-49ac-9893-4faa82634181) </span></span>  
+<span data-ttu-id="ca480-111"> [NÃO está em compilação: Função SLN](http://msdn.microsoft.com/en-us/8e06130a-056e-4266-a8a9-1592b86f58d2) </span><span class="sxs-lookup"><span data-stu-id="ca480-111"> [NOT IN BUILD: SLN Function](http://msdn.microsoft.com/en-us/8e06130a-056e-4266-a8a9-1592b86f58d2) </span></span>  
+<span data-ttu-id="ca480-112"> [Passando Argumentos por Valor e por Referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)</span><span class="sxs-lookup"><span data-stu-id="ca480-112"> [Passing Arguments by Value and by Reference](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)</span></span>

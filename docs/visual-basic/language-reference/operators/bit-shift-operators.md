@@ -31,18 +31,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 94e99ae4c42f79b5ae2b056b6c490a32d695ffbd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a14cc6520e2c3791665dd78c46832fe3525ecbd7
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="bit-shift-operators-visual-basic"></a>Operadores Bit Shift (Visual Basic)
-A seguir estão os operadores bit shift definidos no Visual Basic.  
+# <a name="bit-shift-operators-visual-basic"></a><span data-ttu-id="f5da1-102">Operadores Bit Shift (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f5da1-102">Bit Shift Operators (Visual Basic)</span></span>
+<span data-ttu-id="f5da1-103">A seguir estão os operadores bit shift definidos no Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f5da1-103">The following are the bit shift operators defined in Visual Basic.</span></span>  
   
- [<\<Operador](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
+ [<span data-ttu-id="f5da1-104"><\<Operador</span><span class="sxs-lookup"><span data-stu-id="f5da1-104"><\< Operator</span></span>](../../../visual-basic/language-reference/operators/left-shift-operator.md)  
   
- [Operador >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
+ [<span data-ttu-id="f5da1-105">Operador >></span><span class="sxs-lookup"><span data-stu-id="f5da1-105">>> Operator</span></span>](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="f5da1-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f5da1-106">See Also</span></span>  
+ [<span data-ttu-id="f5da1-107">Operadores Listados por Funcionalidade</span><span class="sxs-lookup"><span data-stu-id="f5da1-107">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

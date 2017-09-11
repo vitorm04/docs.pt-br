@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c036fbaaf7b634fba61516cb1455c6d7714b536
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ce4c891f438dbabc3325468d59fe2b8002b22f4a
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a>Nenhum método 'Main' acessível com uma assinatura apropriada foi encontrado em '&lt;nome&gt;'
-Aplicativos de linha de comando devem ter um `Sub Main` definido. `Main`deve ser declarado como `Public Shared` se ele for definido em uma classe, ou como `Public` se definido em um módulo.  
+# <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a><span data-ttu-id="3ad89-102">Nenhum método 'Main' acessível com uma assinatura apropriada foi encontrado em '&lt;nome&gt;'</span><span class="sxs-lookup"><span data-stu-id="3ad89-102">No accessible &#39;Main&#39; method with an appropriate signature was found in &#39;&lt;name&gt;&#39;</span></span>
+<span data-ttu-id="3ad89-103">Aplicativos de linha de comando devem ter um `Sub Main` definido.</span><span class="sxs-lookup"><span data-stu-id="3ad89-103">Command-line applications must have a `Sub Main` defined.</span></span> <span data-ttu-id="3ad89-104">`Main`deve ser declarado como `Public Shared` se ele for definido em uma classe, ou como `Public` se definido em um módulo.</span><span class="sxs-lookup"><span data-stu-id="3ad89-104">`Main` must be declared as `Public Shared` if it is defined in a class, or as `Public` if defined in a module.</span></span>  
   
- Para obter mais informações sobre `Main`, consulte [NIB: Visual Basic versão de Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c).  
+ <span data-ttu-id="3ad89-105">Para obter mais informações sobre `Main`, consulte [NIB: Visual Basic versão de Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c).</span><span class="sxs-lookup"><span data-stu-id="3ad89-105">For more information on `Main`, see [NIB: Visual Basic Version of Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c).</span></span>  
   
- **ID do erro:** BC30737  
+ <span data-ttu-id="3ad89-106">**ID do erro:** BC30737</span><span class="sxs-lookup"><span data-stu-id="3ad89-106">**Error ID:** BC30737</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3ad89-107">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="3ad89-107">To correct this error</span></span>  
   
--   Definir uma `Public Sub Main` procedimento para seu projeto. Declare-o como `Shared` somente se você defini-lo dentro de uma classe.  
+-   <span data-ttu-id="3ad89-108">Definir uma `Public Sub Main` procedimento para seu projeto.</span><span class="sxs-lookup"><span data-stu-id="3ad89-108">Define a `Public Sub Main` procedure for your project.</span></span> <span data-ttu-id="3ad89-109">Declare-o como `Shared` somente se você defini-lo dentro de uma classe.</span><span class="sxs-lookup"><span data-stu-id="3ad89-109">Declare it as `Shared` if and only if you define it inside a class.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [NIB: versão do Visual Basic do Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c)   
- [Estrutura de um programa Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)   
- [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+## <a name="see-also"></a><span data-ttu-id="3ad89-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3ad89-110">See Also</span></span>  
+ <span data-ttu-id="3ad89-111">[NIB: versão do Visual Basic do Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c) </span><span class="sxs-lookup"><span data-stu-id="3ad89-111">[NIB: Visual Basic Version of Hello, World](http://msdn.microsoft.com/en-us/9d030b60-e148-4366-a462-69532f02294c) </span></span>  
+<span data-ttu-id="3ad89-112"> [Estrutura de um programa Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md) </span><span class="sxs-lookup"><span data-stu-id="3ad89-112"> [Structure of a Visual Basic Program](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md) </span></span>  
+<span data-ttu-id="3ad89-113"> [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)</span><span class="sxs-lookup"><span data-stu-id="3ad89-113"> [Procedures](../../../visual-basic/programming-guide/language-features/procedures/index.md)</span></span>

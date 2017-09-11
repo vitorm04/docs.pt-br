@@ -1,1 +1,1 @@
-MSBuild
+<span data-ttu-id="7f1ac-101">MSBuild</span><span class="sxs-lookup"><span data-stu-id="7f1ac-101">MSBuild</span></span>

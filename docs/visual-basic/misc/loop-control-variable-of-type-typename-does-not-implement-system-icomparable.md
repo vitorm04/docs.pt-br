@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7849b2517de909131918940e9d26a4e58cf68f65
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 29b4f0df73fb75bd2531c96b757bf72a7fe9ab81
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="loop-control-variable-of-type-39lttypenamegt39-does-not-implement-the-39systemicomparable39-interface"></a>Variável de controle de loop do tipo '&lt;typename&gt;' não implementa a interface 'System. IComparable'
-Uma variável é de um tipo que implementa o `System.IComparable` interface. `System.IComparable`deve ser implementado por um tipo de valor ou classe.  
+# <a name="loop-control-variable-of-type-39lttypenamegt39-does-not-implement-the-39systemicomparable39-interface"></a><span data-ttu-id="a9080-102">Variável de controle de loop do tipo '&lt;typename&gt;' não implementa a interface 'System. IComparable'</span><span class="sxs-lookup"><span data-stu-id="a9080-102">Loop control variable of type &#39;&lt;typename&gt;&#39; does not implement the &#39;System.IComparable&#39; interface</span></span>
+<span data-ttu-id="a9080-103">Uma variável é de um tipo que implementa o `System.IComparable` interface.</span><span class="sxs-lookup"><span data-stu-id="a9080-103">A variable is of a type that does not implement the `System.IComparable` interface.</span></span> <span data-ttu-id="a9080-104">`System.IComparable`deve ser implementado por um tipo de valor ou classe.</span><span class="sxs-lookup"><span data-stu-id="a9080-104">`System.IComparable` must be implemented by a value type or a class.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a9080-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="a9080-105">To correct this error</span></span>  
   
-1.  Certifique-se de que a variável é um tipo de valor.  
+1.  <span data-ttu-id="a9080-106">Certifique-se de que a variável é um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="a9080-106">Ensure that the variable is a value type.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IComparable></xref:System.IComparable>
+## <a name="see-also"></a><span data-ttu-id="a9080-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a9080-107">See Also</span></span>  
+ <span data-ttu-id="a9080-108"><xref:System.IComparable></xref:System.IComparable></span><span class="sxs-lookup"><span data-stu-id="a9080-108"><xref:System.IComparable></span></span>

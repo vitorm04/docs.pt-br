@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 75de8823ceaf8173df86b6f4b233c390edc11d00
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 30ee49456f46ab1238698a97fa2d19d7f00641a3
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cannot-rename-with-different-drive"></a>Não é possível renomear com outra unidade
-O `Rename` instrução não é possível especificar uma letra de unidade no caminho do arquivo.  
+# <a name="cannot-rename-with-different-drive"></a><span data-ttu-id="1dcad-102">Não é possível renomear com outra unidade</span><span class="sxs-lookup"><span data-stu-id="1dcad-102">Cannot rename with different drive</span></span>
+<span data-ttu-id="1dcad-103">O `Rename` instrução não é possível especificar uma letra de unidade no caminho do arquivo.</span><span class="sxs-lookup"><span data-stu-id="1dcad-103">The `Rename` statement cannot specify a drive letter in the file path.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1dcad-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="1dcad-104">To correct this error</span></span>  
   
--   Remova a letra da unidade do caminho do arquivo.  
+-   <span data-ttu-id="1dcad-105">Remova a letra da unidade do caminho do arquivo.</span><span class="sxs-lookup"><span data-stu-id="1dcad-105">Remove the drive letter from the file path.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [NÃO está em compilação: Renomear função](http://msdn.microsoft.com/en-us/464062d8-2320-4305-8a8c-1f43e96c94df)
+## <a name="see-also"></a><span data-ttu-id="1dcad-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1dcad-106">See Also</span></span>  
+ [<span data-ttu-id="1dcad-107">NÃO está em compilação: Renomear função</span><span class="sxs-lookup"><span data-stu-id="1dcad-107">NOT IN BUILD: Rename Function</span></span>](http://msdn.microsoft.com/en-us/464062d8-2320-4305-8a8c-1f43e96c94df)

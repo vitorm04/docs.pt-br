@@ -37,18 +37,18 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="gt-operator-c-reference"></a>Operador &gt; (Referência de C#)
-Todos os tipos numéricos e de enumeração definem um operador relacional "maior que" (`>`) que retornará `true` se o primeiro operando for maior que o segundo, caso contrário, `false`.  
+# <a name="gt-operator-c-reference"></a><span data-ttu-id="4e97f-102">Operador &gt; (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="4e97f-102">&gt; Operator (C# Reference)</span></span>
+<span data-ttu-id="4e97f-103">Todos os tipos numéricos e de enumeração definem um operador relacional "maior que" (`>`) que retornará `true` se o primeiro operando for maior que o segundo, caso contrário, `false`.</span><span class="sxs-lookup"><span data-stu-id="4e97f-103">All numeric and enumeration types define a "greater than" relational operator (`>`) that returns `true` if the first operand is greater than the second, `false` otherwise.</span></span>  
   
-## <a name="remarks"></a>Comentários  
- Os tipos definidos pelo usuário podem sobrecarregar o operador `>` (consulte [operador](../../../csharp/language-reference/keywords/operator.md)). Se `>` estiver sobrecarregado, [<](../../../csharp/language-reference/operators/less-than-operator.md) também deverá estar sobrecarregado. Quando um operador binário está sobrecarregado, o operador de atribuição correspondente, se houver, também estará implicitamente sobrecarregado.  
+## <a name="remarks"></a><span data-ttu-id="4e97f-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="4e97f-104">Remarks</span></span>  
+ <span data-ttu-id="4e97f-105">Os tipos definidos pelo usuário podem sobrecarregar o operador `>` (consulte [operador](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="4e97f-105">User-defined types can overload the `>` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="4e97f-106">Se `>` estiver sobrecarregado, [<](../../../csharp/language-reference/operators/less-than-operator.md) também deverá estar sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="4e97f-106">If `>` is overloaded, [<](../../../csharp/language-reference/operators/less-than-operator.md) must also be overloaded.</span></span> <span data-ttu-id="4e97f-107">Quando um operador binário está sobrecarregado, o operador de atribuição correspondente, se houver, também estará implicitamente sobrecarregado.</span><span class="sxs-lookup"><span data-stu-id="4e97f-107">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>  
   
-## <a name="example"></a>Exemplo  
- [!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]  
+## <a name="example"></a><span data-ttu-id="4e97f-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4e97f-108">Example</span></span>  
+ <span data-ttu-id="4e97f-109">[!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="4e97f-109">[!code-cs[csRefOperators#29](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-operator_1.cs)]</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)   
- [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
- [Operadores do C#](../../../csharp/language-reference/operators/index.md)   
- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+## <a name="see-also"></a><span data-ttu-id="4e97f-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4e97f-110">See Also</span></span>  
+ <span data-ttu-id="4e97f-111">[Referência de C#](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="4e97f-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="4e97f-112">[Guia de Programação em C#](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="4e97f-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="4e97f-113">[Operadores do C#](../../../csharp/language-reference/operators/index.md) </span><span class="sxs-lookup"><span data-stu-id="4e97f-113">[C# Operators](../../../csharp/language-reference/operators/index.md) </span></span>  
+ [<span data-ttu-id="4e97f-114">explicit</span><span class="sxs-lookup"><span data-stu-id="4e97f-114">explicit</span></span>](../../../csharp/language-reference/keywords/explicit.md)
 

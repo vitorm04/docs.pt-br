@@ -17,16 +17,16 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-using-c-interactive-with-visual-studio"></a>🔧 Usando o C# interativo com o Visual Studio
+# <a name="-using-c-interactive-with-visual-studio"></a><span data-ttu-id="d55ff-104">🔧 Usando o C# interativo com o Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d55ff-104">🔧 Using C# Interactive with Visual Studio</span></span>
 
-> **Observação**
+> <span data-ttu-id="d55ff-105">**Observação**</span><span class="sxs-lookup"><span data-stu-id="d55ff-105">**Note**</span></span>
 > 
-> Este tópico ainda não foi criado! 
+> <span data-ttu-id="d55ff-106">Este tópico ainda não foi criado!</span><span class="sxs-lookup"><span data-stu-id="d55ff-106">This topic hasn’t been written yet!</span></span> 
 >
-> Agradecemos a sua contribuição para ajudar a moldar o escopo e a abordagem. Você pode acompanhar o status e fornecer comentários sobre esse [problema](https://github.com/dotnet/docs/issues/969) no GitHub.
+> <span data-ttu-id="d55ff-107">Agradecemos a sua contribuição para ajudar a moldar o escopo e a abordagem.</span><span class="sxs-lookup"><span data-stu-id="d55ff-107">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="d55ff-108">Você pode acompanhar o status e fornecer comentários sobre esse [problema](https://github.com/dotnet/docs/issues/969) no GitHub.</span><span class="sxs-lookup"><span data-stu-id="d55ff-108">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/969) at GitHub.</span></span>
 > 
-> Se você quiser examinar os primeiros rascunhos e esboços deste tópico, deixe uma nota com suas informações de contato no problema.
+> <span data-ttu-id="d55ff-109">Se você quiser examinar os primeiros rascunhos e esboços deste tópico, deixe uma nota com suas informações de contato no problema.</span><span class="sxs-lookup"><span data-stu-id="d55ff-109">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> Saiba mais sobre como você pode contribuir com o [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).
+> <span data-ttu-id="d55ff-110">Saiba mais sobre como você pode contribuir com o [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span><span class="sxs-lookup"><span data-stu-id="d55ff-110">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

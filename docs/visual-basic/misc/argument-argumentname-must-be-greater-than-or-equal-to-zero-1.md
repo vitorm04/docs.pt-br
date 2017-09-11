@@ -26,21 +26,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 24b7ce62300c64d94ec7bf829e687390f6c6e1a5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b6d25d40511e0b825241deab8342ebcd75a89a01
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a>Argumento &lt;argumentname&gt; deve ser maior ou igual a zero
-Um valor de argumento é menor que zero. Valores de argumento devem ser maior ou igual a zero.  
+# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to-zero"></a><span data-ttu-id="dde1d-102">Argumento &lt;argumentname&gt; deve ser maior ou igual a zero</span><span class="sxs-lookup"><span data-stu-id="dde1d-102">Argument &lt;argumentname&gt; must be greater than or equal to zero</span></span>
+<span data-ttu-id="dde1d-103">Um valor de argumento é menor que zero.</span><span class="sxs-lookup"><span data-stu-id="dde1d-103">An argument value is less than zero.</span></span> <span data-ttu-id="dde1d-104">Valores de argumento devem ser maior ou igual a zero.</span><span class="sxs-lookup"><span data-stu-id="dde1d-104">Argument values must be greater than or equal to zero.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="dde1d-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="dde1d-105">To correct this error</span></span>  
   
-1.  Verifique se o valor do argumento é maior que ou igual a zero.  
+1.  <span data-ttu-id="dde1d-106">Verifique se o valor do argumento é maior que ou igual a zero.</span><span class="sxs-lookup"><span data-stu-id="dde1d-106">Ensure that the argument's value is greater than or equal to zero.</span></span>  
   
-2.  Se o argumento é fornecido por um cálculo, verifique os valores que estão sendo processados pelo cálculo.  
+2.  <span data-ttu-id="dde1d-107">Se o argumento é fornecido por um cálculo, verifique os valores que estão sendo processados pelo cálculo.</span><span class="sxs-lookup"><span data-stu-id="dde1d-107">If the argument is supplied by a calculation, check the values being processed by the calculation.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)   
- [Parâmetro de mecanismo de passagem para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+## <a name="see-also"></a><span data-ttu-id="dde1d-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="dde1d-108">See Also</span></span>  
+ <span data-ttu-id="dde1d-109">[Passando argumentos por valor e por referência](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md) </span><span class="sxs-lookup"><span data-stu-id="dde1d-109">[Passing Arguments by Value and by Reference](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md) </span></span>  
+<span data-ttu-id="dde1d-110"> [Parâmetro de mecanismo de passagem para usuários do Visual Basic 6.0](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)</span><span class="sxs-lookup"><span data-stu-id="dde1d-110"> [Parameter Passing Mechanism for Visual Basic 6.0 Users](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)</span></span>

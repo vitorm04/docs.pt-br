@@ -29,18 +29,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d6de8585a82a29454be4814b57326850e5660b02
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 470c198dece64b533484caaddab318ec3af8ae98
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="property-array-index-is-not-valid"></a>O índice de matriz da propriedade não é válido
-O valor fornecido não é válido para um índice de matriz de propriedade.  
+# <a name="property-array-index-is-not-valid"></a><span data-ttu-id="96436-102">O índice de matriz da propriedade não é válido</span><span class="sxs-lookup"><span data-stu-id="96436-102">Property array index is not valid</span></span>
+<span data-ttu-id="96436-103">O valor fornecido não é válido para um índice de matriz de propriedade.</span><span class="sxs-lookup"><span data-stu-id="96436-103">The supplied value is not valid for a property array index.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="96436-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="96436-104">To correct this error</span></span>  
   
--   Verifique a documentação do componente para certificar-se de que o índice esteja dentro do intervalo válido para a propriedade especificada.  
+-   <span data-ttu-id="96436-105">Verifique a documentação do componente para certificar-se de que o índice esteja dentro do intervalo válido para a propriedade especificada.</span><span class="sxs-lookup"><span data-stu-id="96436-105">Check the component's documentation to make sure your index is within the valid range for the specified property.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a><span data-ttu-id="96436-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="96436-106">See Also</span></span>  
+ [<span data-ttu-id="96436-107">Matrizes</span><span class="sxs-lookup"><span data-stu-id="96436-107">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)

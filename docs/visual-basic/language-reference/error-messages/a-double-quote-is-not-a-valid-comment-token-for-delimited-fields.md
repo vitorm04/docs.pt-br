@@ -29,21 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a409349ff5f60d07a538c1eac22d3bb4d294a87d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 822d1f5d891fbeadd79b865066904cd02a7c1e36
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a>Aspas duplas não formam um token de comentário válido para campos delimitados em que EscapeQuote esteja definido como True
-Aspas foram fornecido como o delimitador para a `TextFieldParser`, mas `EscapeQuotes` é definido como `True`.  
+# <a name="a-double-quote-is-not-a-valid-comment-token-for-delimited-fields-where-escapequote-is-set-to-true"></a><span data-ttu-id="6acc2-102">Aspas duplas não formam um token de comentário válido para campos delimitados em que EscapeQuote esteja definido como True</span><span class="sxs-lookup"><span data-stu-id="6acc2-102">A double quote is not a valid comment token for delimited fields where EscapeQuote is set to True</span></span>
+<span data-ttu-id="6acc2-103">Aspas foram fornecido como o delimitador para a `TextFieldParser`, mas `EscapeQuotes` é definido como `True`.</span><span class="sxs-lookup"><span data-stu-id="6acc2-103">A quotation mark has been supplied as the delimiter for the `TextFieldParser`, but `EscapeQuotes` is set to `True`.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="6acc2-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="6acc2-104">To correct this error</span></span>  
   
--   Set `EscapeQuotes` to `False`.  
+-   <span data-ttu-id="6acc2-105">Set `EscapeQuotes` to `False`.</span><span class="sxs-lookup"><span data-stu-id="6acc2-105">Set `EscapeQuotes` to `False`.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A></xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A></xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser></xref:Microsoft.VisualBasic.FileIO.TextFieldParser>   
- [Como ler a partir de arquivos de texto separados por vírgulas](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+## <a name="see-also"></a><span data-ttu-id="6acc2-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="6acc2-106">See Also</span></span>  
+ <span data-ttu-id="6acc2-107"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A></xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A></span><span class="sxs-lookup"><span data-stu-id="6acc2-107"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A></span></span>   
+ <span data-ttu-id="6acc2-108"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A></xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A></span><span class="sxs-lookup"><span data-stu-id="6acc2-108"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A></span></span>   
+ <span data-ttu-id="6acc2-109"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser></xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span><span class="sxs-lookup"><span data-stu-id="6acc2-109"><xref:Microsoft.VisualBasic.FileIO.TextFieldParser></span></span>   
+<span data-ttu-id="6acc2-110"> [Como ler a partir de arquivos de texto separados por vírgulas](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)</span><span class="sxs-lookup"><span data-stu-id="6acc2-110"> [How to: Read From Comma-Delimited Text Files](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)</span></span>

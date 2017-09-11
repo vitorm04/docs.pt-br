@@ -24,20 +24,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bd389a50879696b423cf4687f1c2f24888d0ee0c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c0953b2629fb5ea3c692241acaf01659977fe76b
+ms.contentlocale: pt-br
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="file-information-cannot-be-queried-while-open-for-writing"></a>Não não possível consultar informações do arquivo ao abrir para gravação
-Foi feita uma tentativa para obter informações sobre um arquivo que está atualmente aberto para gravação.  
+# <a name="file-information-cannot-be-queried-while-open-for-writing"></a><span data-ttu-id="e6ed1-102">Não não possível consultar informações do arquivo ao abrir para gravação</span><span class="sxs-lookup"><span data-stu-id="e6ed1-102">File information cannot be queried while open for writing</span></span>
+<span data-ttu-id="e6ed1-103">Foi feita uma tentativa para obter informações sobre um arquivo que está atualmente aberto para gravação.</span><span class="sxs-lookup"><span data-stu-id="e6ed1-103">An attempt was made to obtain information about a file that is currently open for writing.</span></span>  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e6ed1-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="e6ed1-104">To correct this error</span></span>  
   
--   Feche o arquivo e tente a operação novamente.  
+-   <span data-ttu-id="e6ed1-105">Feche o arquivo e tente a operação novamente.</span><span class="sxs-lookup"><span data-stu-id="e6ed1-105">Close the file and attempt the operation again.</span></span>  
   
-## <a name="see-also"></a>Consulte também  
- <xref:System.IO.FileInfo></xref:System.IO.FileInfo>   
- <xref:System.Security.Permissions.FileIOPermission></xref:System.Security.Permissions.FileIOPermission>   
- [Como: obter informações sobre um arquivo no Visual Basic](http://msdn.microsoft.com/en-us/ca0720ec-f40e-4c11-9748-0ce1685c78f0)
+## <a name="see-also"></a><span data-ttu-id="e6ed1-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e6ed1-106">See Also</span></span>  
+ <span data-ttu-id="e6ed1-107"><xref:System.IO.FileInfo></xref:System.IO.FileInfo></span><span class="sxs-lookup"><span data-stu-id="e6ed1-107"><xref:System.IO.FileInfo></span></span>   
+ <span data-ttu-id="e6ed1-108"><xref:System.Security.Permissions.FileIOPermission></xref:System.Security.Permissions.FileIOPermission></span><span class="sxs-lookup"><span data-stu-id="e6ed1-108"><xref:System.Security.Permissions.FileIOPermission></span></span>   
+<span data-ttu-id="e6ed1-109"> [Como: obter informações sobre um arquivo no Visual Basic](http://msdn.microsoft.com/en-us/ca0720ec-f40e-4c11-9748-0ce1685c78f0)</span><span class="sxs-lookup"><span data-stu-id="e6ed1-109"> [How to: Get Information About a File in Visual Basic](http://msdn.microsoft.com/en-us/ca0720ec-f40e-4c11-9748-0ce1685c78f0)</span></span>

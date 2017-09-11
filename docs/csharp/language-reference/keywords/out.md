@@ -38,13 +38,13 @@ ms.contentlocale: pt-br
 ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="out-c-reference"></a>out (Referência de C#)
-Você pode usar a palavra-chave contextual `out` em dois contextos:
+# <a name="out-c-reference"></a><span data-ttu-id="e4f43-102">out (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="e4f43-102">out (C# Reference)</span></span>
+<span data-ttu-id="e4f43-103">Você pode usar a palavra-chave contextual `out` em dois contextos:</span><span class="sxs-lookup"><span data-stu-id="e4f43-103">You can use the `out` contextual keyword in two contexts:</span></span>
 
-- Como um [modificador de parâmetro](../../../csharp/language-reference/keywords/out-parameter-modifier.md), que permite passar um argumento para um método por referência, não por valor.
+- <span data-ttu-id="e4f43-104">Como um [modificador de parâmetro](../../../csharp/language-reference/keywords/out-parameter-modifier.md), que permite passar um argumento para um método por referência, não por valor.</span><span class="sxs-lookup"><span data-stu-id="e4f43-104">As a [parameter modifier](../../../csharp/language-reference/keywords/out-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
 
-- Em [declarações de parâmetro de tipo genérico](../../../csharp/language-reference/keywords/out-generic-modifier.md) para interfaces e representantes, que especificam que um parâmetro de tipo é covariante.
+- <span data-ttu-id="e4f43-105">Em [declarações de parâmetro de tipo genérico](../../../csharp/language-reference/keywords/out-generic-modifier.md) para interfaces e representantes, que especificam que um parâmetro de tipo é covariante.</span><span class="sxs-lookup"><span data-stu-id="e4f43-105">In [generic type parameter declarations](../../../csharp/language-reference/keywords/out-generic-modifier.md) for interfaces and delegates, which specifies that a type parameter is covariant.</span></span>
    
-## <a name="see-also"></a>Consulte também  
- [Referência de C#](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="e4f43-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e4f43-106">See Also</span></span>  
+ [<span data-ttu-id="e4f43-107">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="e4f43-107">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 
