@@ -4,17 +4,17 @@ description: Explore estes tutoriais do c# para aprender a criar programas em c#
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43d6efd6535e4002be79af1c51dd58e6d26d218d
+ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
+ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 
@@ -30,8 +30,6 @@ Os tutoriais a seguir permitem que você compile programas em C# usando [.NET Co
 * [Trabalhar com LINQ](working-with-linq.md): demonstra muitos recursos do LINQ e os elementos de linguagem que dão suporte a ele.
 
 * [Microsserviços hospedados no Docker](microservices.md): demonstra a criação de um microsserviço do ASP.NET Core e a sua hospedagem no Docker.
-
-* [Herança](inheritance.md): demonstra como a herança de classe e interface fornece reutilização de código em C#.
 
 * [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra muitos usos para a interpolação de cadeia de caracteres `$` em C#.
 
