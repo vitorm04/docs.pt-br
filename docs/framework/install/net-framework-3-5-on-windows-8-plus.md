@@ -13,10 +13,10 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 ms.translationtype: HT
-ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
-ms.openlocfilehash: 8a0395e28c01363eed27f327ea623feb4832c844
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
@@ -32,7 +32,7 @@ O .NET Framework 3.5, no entanto, não vem automaticamente instalado com o [!INC
   
 - [Baixar o instalador do .NET Framework 3.5](http://www.microsoft.com/en-us/download/details.aspx?id=21) (Observação: isso não baixa o .NET Framework diretamente; ele é um instalador que invoca o Windows Update.)  
   
-Durante a instalação, você pode encontrar o erro 0x800f0906, 0x800f0907 ou 0x800f081f, que se referem ao [Erro de instalação do .NET Framework 3.5: 0x800f0906, 0x800f0907 ou 0x800f081f](https://support.microsoft.com/en-us/kb/2734782). Observe que eles podem ser resolvidos instalando a [Atualização de segurança 3005628](https://support.microsoft.com/kb/3005628).  
+Durante a instalação, você pode encontrar o erro 0x800f0906, 0x800f0907 ou 0x800f081f, que se referem ao [Erro de instalação do .NET Framework 3.5: 0x800f0906, 0x800f0907 ou 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09). Observe que eles podem ser resolvidos instalando a [Atualização de segurança 3005628](https://support.microsoft.com/kb/3005628).  
   
 Se qualquer um dos métodos acima falhar ou se você não tiver uma conexão com a Internet, use a mídia de instalação do Windows. Para obter detalhes, veja o Método 3 do erro 0x800f0906 no [artigo Erro de instalação do .NET Framework 3.5](https://support.microsoft.com/en-us/kb/2734782). Se você não tiver a mídia de instalação, confira [Criar mídia para Windows 8.1](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0).  
   
