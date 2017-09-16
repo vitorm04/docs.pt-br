@@ -1,5 +1,5 @@
 ---
-title: E/S de arquivo e fluxo | Microsoft Docs
+title: E/S de arquivos e de fluxo
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
 ms.contentlocale: pt-br
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
@@ -37,22 +37,22 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
  Aqui estão algumas classes de arquivos e diretórios comumente usadas:  
   
--   <xref:System.IO.File> – fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.  
+-   <xref:System.IO.File> – Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.  
   
--   <xref:System.IO.FileInfo> – fornece métodos de instância para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.  
+-   <xref:System.IO.FileInfo> – Fornece métodos de instâncias para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.  
   
--   <xref:System.IO.Directory> – fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.  
+-   <xref:System.IO.Directory> – Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.  
   
--   <xref:System.IO.DirectoryInfo> – fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.  
+-   <xref:System.IO.DirectoryInfo> – Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.  
   
--   <xref:System.IO.Path> – fornece métodos e propriedades para processar cadeias de caracteres de diretório em plataformas cruzadas.  
+-   <xref:System.IO.Path> – Fornece métodos e propriedades para processar cadeias de caracteres de diretório de uma maneira compatível com várias plataformas.  
   
- Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidos pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> para E/S de arquivo.  
+ Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> para E/S de arquivo.  
   
  Confira [Como copiar diretórios](../../../docs/standard/io/how-to-copy-directories.md), [Como criar uma listagem de diretórios](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) e [Como enumerar diretórios e arquivos](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Fluxos  
- A classe base abstrata <xref:System.IO.Stream> dá suporte a bytes de leitura e gravação. Todas as classes que representam fluxos são herdadas da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  
+ A classe base abstrata <xref:System.IO.Stream> oferece suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.  
   
  Fluxos envolvem estas três operações fundamentais:  
   
@@ -62,45 +62,45 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
 -   Busca – Consulta e modificação da posição atual em um fluxo.  
   
- Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem oferecer suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não dá suporte à busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações compatíveis com o fluxo.  
+ Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem oferecer suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não oferece suporte à operação de busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações às quais o fluxo oferece suporte.  
   
  Algumas classes de fluxo comumente usadas são:  
   
--   <xref:System.IO.FileStream> – para leitura e gravação em um arquivo.  
+-   <xref:System.IO.FileStream> – Para leitura e gravação em um arquivo.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – para leitura e gravação em um arquivo em armazenamento isolado.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Para leitura e gravação em um arquivo no armazenamento isolado.  
   
--   <xref:System.IO.MemoryStream> – para leitura e gravação na memória como o repositório de backup.  
+-   <xref:System.IO.MemoryStream> – Para leitura e gravação na memória como o repositório de backup.  
   
--   <xref:System.IO.BufferedStream> – para aprimoramento de desempenho das operações de leitura e gravação.  
+-   <xref:System.IO.BufferedStream> – Para melhorar o desempenho das operações de leitura e gravação.  
   
--   <xref:System.Net.Sockets.NetworkStream> – para leitura e gravação por soquetes de rede.  
+-   <xref:System.Net.Sockets.NetworkStream> – Para leitura e gravação via soquetes de rede.  
   
--   <xref:System.IO.Pipes.PipeStream> – para leitura e gravação por pipes nomeados e anônimos.  
+-   <xref:System.IO.Pipes.PipeStream> – Para leitura e gravação sobre pipes anônimos e nomeados.  
   
--   <xref:System.Security.Cryptography.CryptoStream> – para vinculação de fluxos de dados às transformações criptográficas.  
+-   <xref:System.Security.Cryptography.CryptoStream> – Para vincular fluxos de dados a transformações criptográficas.  
   
  Para um exemplo de como trabalhar com fluxos de forma assíncrona, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
 ## <a name="readers-and-writers"></a>Leitores e Gravadores  
- O namespace <xref:System.IO?displayProperty=fullName> também fornece tipos para ler caracteres codificados de fluxos e gravá-los em fluxos. Normalmente, os fluxos são criados para a entrada e a saída de bytes. Os tipos de leitor e de gravador tratam a conversão dos caracteres codificados de/para bytes para que o fluxo possa concluir a operação. Cada classe de leitor e gravador é associada a um fluxo, o qual pode ser recuperado pela propriedade `BaseStream` da classe.  
+ O namespace <xref:System.IO?displayProperty=fullName> também fornece tipos usados para ler caracteres codificados de fluxos e gravá-los em fluxos. Normalmente, os fluxos são criados para a entrada e a saída de bytes. Os tipos de leitor e de gravador tratam a conversão dos caracteres codificados de/para bytes para que o fluxo possa concluir a operação. Cada classe de leitor e gravador é associada a um fluxo, o qual pode ser recuperado pela propriedade `BaseStream` da classe.  
   
  Algumas classes de leitores e gravadores comumente usadas são:  
   
--   <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – para leitura e gravação de tipos de dados primitivos como valores binários.  
+-   <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – Para leitura e gravação de tipos de dados primitivos como valores binários.  
   
--   <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres em bytes.  
+-   <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – Para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres para/de bytes.  
   
--   <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – para leitura e gravação de caracteres em cadeias de caracteres.  
+-   <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – Para leitura e gravação de caracteres e cadeias de caracteres.  
   
--   <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – atuam como as classes base abstratas para outros leitores e gravadores que leem e gravam caracteres e cadeias de caracteres, mas não dados binários.  
+-   <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – Funcionam como as classes base abstratas para outros leitores e gravadores que leem e gravam caracteres e cadeias de caracteres, mas não dados binários.  
   
  Confira [Como ler texto de um arquivo](../../../docs/standard/io/how-to-read-text-from-a-file.md), [Como gravar texto em um arquivo](../../../docs/standard/io/how-to-write-text-to-a-file.md), [Como ler caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-read-characters-from-a-string.md) e [Como gravar caracteres em uma cadeia de caracteres](../../../docs/standard/io/how-to-write-characters-to-a-string.md).  
   
 ## <a name="asynchronous-io-operations"></a>Operações de E/S Assíncronas  
  A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use operações de E/S assíncronas durante o desenvolvimento de aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para evitar causar a impressão de que o aplicativo parou de funcionar.  
   
- Os membros assíncronos contêm `Async` em seus nomes, como os métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. Você usa esses métodos com as palavras-chave `async` e `await`.  
+ Os membros assíncronas contêm `Async` em seus nomes, como os métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. Você usa esses métodos com as palavras-chave `async` e `await`.  
   
  Para saber mais, confira [E/S de arquivo assíncrona](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
@@ -109,17 +109,17 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
  As classes a seguir são frequentemente usadas para compactar e descompactar arquivos e fluxos:  
   
--   <xref:System.IO.Compression.ZipArchive> – para criação e recuperação de entradas no arquivo zip.  
+-   <xref:System.IO.Compression.ZipArchive> – Para criar e recuperar entradas em arquivos ZIP.  
   
--   <xref:System.IO.Compression.ZipArchiveEntry> – para representação de um arquivo compactado.  
+-   <xref:System.IO.Compression.ZipArchiveEntry> – Para representar um arquivo compactado.  
   
--   <xref:System.IO.Compression.ZipFile> – para criação, extração e abertura de um pacote compactado.  
+-   <xref:System.IO.Compression.ZipFile> – Para criar, extrair e abrir um pacote compactado.  
   
--   <xref:System.IO.Compression.ZipFileExtensions> – para criação e extração de entradas em um pacote compactado.  
+-   <xref:System.IO.Compression.ZipFileExtensions> – Para criar e extrair entradas em um pacote compactado.  
   
--   <xref:System.IO.Compression.DeflateStream> – para compactação e descompactação de fluxos usando o algoritmo Deflate.  
+-   <xref:System.IO.Compression.DeflateStream> – Para compactar e descompactar fluxos usando o algoritmo de Deflate.  
   
--   <xref:System.IO.Compression.GZipStream> – para compactação e descompactação de fluxos no formato de dados gzip.  
+-   <xref:System.IO.Compression.GZipStream> – Para compactar e descompactar fluxos no formato de dados GZIP.  
   
  Confira [How to: Compress and Extract Files](../../../docs/standard/io/how-to-compress-and-extract-files.md) (Como compactar e extrair arquivos).  
   
@@ -130,11 +130,11 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
  As classes a seguir são usadas com frequência na implementação do armazenamento isolado:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorage> – fornece a classe base para implementações de armazenamento isolado.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorage> – Fornece a classe base para implementações de armazenamento isolado.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – fornece uma área de armazenamento isolado que contém arquivos e diretórios.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – Fornece uma área de armazenamento isolado que contém arquivos e diretórios.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – expõe um arquivo dentro do armazenamento isolado.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Expõe um arquivo no armazenamento isolado.  
   
  Confira [Armazenamentos isolado](../../../docs/standard/io/isolated-storage.md).  
   
@@ -149,14 +149,14 @@ E/S (entrada/saída) de arquivos e fluxos refere-se à transferência de dados d
   
 -   Use métodos assíncronos, como <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>, para evitar o bloqueio do thread da interface do usuário.  
   
--   Os tipos de compactação baseados em caminho <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions> não estão disponíveis. Use os tipos no namespace [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+-   Os tipos de compactação com base em caminhos <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions> não estão disponíveis. Use os tipos no namespace [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
   
  É possível converter entre fluxos do .NET Framework e fluxos do Tempo de Execução do Windows, se necessário. Para saber mais, confira [Como converter entre fluxos do .NET Framework e do Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  Para saber mais sobre operações de E/S em um aplicativo da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], confira [Guia de início rápido: lendo e gravando arquivos](http://go.microsoft.com/fwlink/p/?LinkId=243072) no Centro de Desenvolvimento do Windows.  
   
 ## <a name="io-and-security"></a>E/S e segurança  
- Ao usar as classes no namespace <xref:System.IO?displayProperty=fullName>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse requisito é uma complementação a qualquer requisito <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+ Ao usar as classes no namespace <xref:System.IO?displayProperty=fullName>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
  As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](../../../docs/standard/io/isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativo](http://go.microsoft.com/fwlink/?LinkId=229175) para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
