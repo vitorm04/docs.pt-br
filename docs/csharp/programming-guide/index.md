@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 073c0600840ccc802b0481bf0023a6099821bec3
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 0c95459f21aebf1d5efe1482e74ca2724d283821
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
@@ -110,5 +110,5 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
 ## <a name="see-also"></a>Consulte também  
  [Referência de C#](../../csharp/language-reference/index.md)   
- [C#](../../csharp/csharp.md)
+ [C#](../../csharp/index.md)
 

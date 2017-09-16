@@ -2,18 +2,21 @@
 title: "Guia de introdução – Guia do C#"
 description: "Localize tutoriais curtos e simples que permitem que você aprenda rapidamente os conceitos básicos de C# e como escrever aplicativos .NET Core."
 keywords: "C#, Introdução, Aquisição, Instalação"
+helpviewer_keywords:
+- Visual C#, getting started
+- getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/02/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
-ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: c2e2408b2d7a02a1a75965f32888d240bafae0f0
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="get-started-with-c"></a>Introdução ao C# #
@@ -21,6 +24,10 @@ ms.lasthandoff: 08/17/2017
 Esta seção fornece breves tutoriais simples que permitem que você compile rapidamente um aplicativo usando C# e .NET Core. Há tópicos com introdução ao Visual Studio 2017 e ao Visual Studio Code. Você poderá compilar um aplicativo Olá, Mundo simples ou, se você tiver o Visual Studio 2017, uma biblioteca de classes simples que pode ser usada por outros aplicativos.
 
 Os seguintes tópicos estão disponíveis:
+
+* [Introdução à linguagem C# e ao .NET Framework](introduction-to-the-csharp-language-and-the-net-framework.md)
+
+     Fornece uma visão geral da linguagem C# e da plataforma .NET.
 
 * [Compilando um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
@@ -37,4 +44,33 @@ Os seguintes tópicos estão disponíveis:
    O Visual Studio Code é um editor de código gratuito e otimizado para compilação e depuração de aplicativos Web e de nuvem modernos. Ele dá suporte ao IntelliSense e está disponível para Windows, Linux e macOS.
 
    Este tópico mostra como criar e executar um aplicativo Olá, Mundo simples com o código do Visual Studio e do .NET Core.
+
+* [Recursos adicionais para programadores de Visual C#](additional-resources.md)
+
+   Fornece links para sites e grupos de notícias que podem ajudá-lo a encontrar respostas para problemas comuns.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+* [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+
+    Fornece um guia para usar o ambiente de desenvolvimento integrado [!INCLUDE[csprcs](~/includes/csprcs-md.md)].
+
+* [Guia de Programação em C#](../../csharp/programming-guide/index.md)
+
+    Fornece informações sobre conceitos de programação C# e descreve como executar várias tarefas no C#.
+
+* [Referência de C#](../../csharp/language-reference/index.md)
+
+    Fornece informações de referência detalhadas sobre palavras-chave, operadores, diretivas de pré-processamento, opções do compilador, erros do compilador e avisos do #C.
+
+* [Exemplos do Visual Studio](/visualstudio/ide/visual-studio-samples)
+
+    Fornece informações sobre como você pode acessar exemplos online.
+
+* [Explicações Passo a Passo](../../csharp/walkthroughs.md)
+
+    Fornece links para explicações passo a passo sobre programação em C# e uma breve descrição sobre cada explicação passo a passo.
+
+## <a name="see-also"></a>Consulte também
+ [Introdução ao Visual C# e ao Visual Basic usando o Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) [Central de Informações para Desenvolvedores Iniciantes](http://go.microsoft.com/fwlink/?LinkId=123826)
 

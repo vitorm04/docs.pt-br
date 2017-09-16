@@ -4,17 +4,17 @@ description: Saiba como compilar um aplicativo de console simples do .NET Core c
 keywords: .NET Core, aplicativo do console do .NET Core, Visual Studio 2017
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: HT
-ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
-ms.openlocfilehash: 37b81a6d4cf53dcf17158ccc4df6aca488f9a26b
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 
@@ -62,7 +62,7 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
 
 Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora. Para modificar e testar o programa, faça o seguinte:
 
-1. Insira o código C# a seguir na janela de código imediatamente após o colchete de abertura que segue a linha `public static void Main(string[] args)` e antes do primeiro colchete de fechamento:
+1. Insira o código C# a seguir na janela de código imediatamente após o colchete de abertura que segue a linha `static void Main(string[] args)` e antes do primeiro colchete de fechamento:
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 

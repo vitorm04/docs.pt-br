@@ -22,7 +22,7 @@
             - name: Estendendo metadados por meio de atributos
               tocHref: /dotnet/standard/attributes/
               topicHref: /dotnet/standard/attributes/index
-            - name: Trabalhando com tipos de base no .NET Framework
+            - name: Trabalhando com tipos base no .NET
               tocHref: /dotnet/standard/base-types/
               topicHref: /dotnet/standard/base-types/index
             - name: Coleções e estruturas de dados
@@ -32,7 +32,7 @@
                 - name: Coleções thread-safe
                   tocHref: /dotnet/standard/collections/thread-safe/
                   topicHref: /dotnet/standard/collections/thread-safe/index
-            - name: Desenvolvendo para várias plataformas com o .NET Framework
+            - name: Developing for Multiple Platforms with .NET (Desenvolvendo para várias plataformas com .NET)
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
             - name: Documentos e dados XML
@@ -53,16 +53,16 @@
             - name: Coleta de Lixo
               tocHref: /dotnet/standard/garbage-collection/
               topicHref: /dotnet/standard/garbage-collection/index
-            - name: Genéricos no .NET Framework
+            - name: Generics in .NET (Genéricos no .NET)
               tocHref: /dotnet/standard/generics/
               topicHref: /dotnet/standard/generics/index
-            - name: 'Globalização e localização: globalizando e localizando aplicativos do .NET Framework'
+            - name: Globalização e localização
               tocHref: /dotnet/standard/globalization-localization/
               topicHref: /dotnet/standard/globalization-localization/index
             - name: E/S de arquivo e de fluxo
               tocHref: /dotnet/standard/io/
               topicHref: /dotnet/standard/io/index
-            - name: Programação paralela no .NET Framework
+            - name: Parallel Programming in .NET (Programação paralela no .NET)
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
             - name: Segurança no .NET
@@ -91,10 +91,10 @@
             - name: APIs e Bibliotecas de Classes Adicionais
               tocHref: /dotnet/framework/additional-steps/
               topicHref: /dotnet/framework/additional-steps/index
-            - name: Programação com domínios do aplicativo e assemblies
+            - name: Domínios do aplicativo e assemblies
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index
-            - name: Tecnologias cliente comuns no .NET Framework
+            - name: Tecnologias cliente comuns
               tocHref: /dotnet/framework/common-client-technologies/
               topicHref: /dotnet/framework/common-client-technologies/index
             - name: 'Configurando aplicativos usando arquivos de configuração '
@@ -169,7 +169,7 @@
                 - name: Processamento de transações
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
-                - name: WCF Data Services 4.5
+                - name: WCF Data Services
                   tocHref: /dotnet/framework/data/wcf/
                   topicHref: /dotnet/framework/data/wcf/index
             - name: 'Depuração, rastreamento e criação de perfil'
@@ -193,7 +193,7 @@
             - name: MEF (Managed Extensibility Framework)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: Guia de migração para o .NET Framework 4.6 e 4.5
+            - name: Guia de Migração
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: Compilando aplicativos com o .NET Nativo
