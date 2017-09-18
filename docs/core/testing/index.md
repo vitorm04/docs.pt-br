@@ -1,29 +1,33 @@
 ---
 title: Teste de Unidade no .NET Core
-description: "Testes de unidade nunca foram tão fáceis. Saiba mais sobre como usar os testes de unidade em projetos do .NET Core."
-keywords: .NET, .NET Core
+description: "Testes de unidade nunca foram tão fáceis. Saiba como usar o teste de unidade em projetos do .NET Core e .NET Standard."
+keywords: .NET, .NET Core, .NET Standard, unidade de teste
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/20/2016
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22647a9ad7723bbfcf0d54530b3c0538198e7c35
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 
-# <a name="unit-testing-in-net-core"></a>Teste de Unidade no .NET Core
+# <a name="unit-testing-in-net-core-and-net-standard"></a>Teste de unidade no .NET Core e .NET Standard
 
-O .NET Core foi projetado com a capacidade de realizar testes em mente, para que a criação de testes de unidade para seus aplicativos seja mais fácil do que nunca. Este artigo apresenta brevemente os testes de unidade (e como eles diferem de outros tipos de testes). Recursos vinculados demonstram como adicionar um projeto de teste à sua solução e executar testes de unidade usando a linha de comando ou o Visual Studio.
+O .NET Core foi projetado com a capacidade de realizar testes em mente, para que a criação de testes de unidade para seus aplicativos seja mais fácil do que nunca. Este artigo apresenta brevemente os testes de unidade (e como eles diferem de outros tipos de testes). Os recursos vinculados demonstram como adicionar um projeto de teste à sua solução e executar testes de unidade usando a linha de comando ou o Visual Studio.
+
+O .NET Core 2.0 suporta o [.NET Standard 2.0](../../standard/net-standard.md). As bibliotecas usadas para demonstrar os testes de unidade nesta seção contam com o .NET Standard e também funcionarão em outros tipos de projeto.
+
+Começando no .NET Core 2.0, há modelos de projeto de teste de unidade para Visual Basic e F#, bem como para C#.
 
 ## <a name="getting-started-with-testing"></a>Introdução aos Testes
- 
-Ter um pacote de testes automatizados é uma das melhores maneiras de garantir que um aplicativo de software faça o que seus autores pretendiam. Há muitos tipos diferentes de testes diferentes para aplicativos de software, incluindo testes de integração, testes da Web, testes de carga e muitos outros. O nível mais baixo são os testes de unidade, que testam métodos ou componentes de software individuais. Testes de unidade só devem testar o código sob o controle do desenvolvedor e não questões de infraestrutura, como bancos de dados, sistemas de arquivos ou recursos de rede. Testes de unidade podem ser escritos usando [TDD (Desenvolvimento Orientado por Testes)](http://deviq.com/test-driven-development/) ou adicionados ao código existente para confirmar sua precisão. Em ambos os casos, eles devem ser pequenos, bem nomeados e rápidos, visto que o ideal é ser capaz de executar centenas deles antes de enviar as alterações por push para o repositório de código compartilhado do projeto.
+
+Ter um pacote de testes automatizados é uma das melhores maneiras de garantir que um aplicativo de software faça o que seus autores pretendiam. Há diferentes tipos de teste para aplicativos de software, incluindo testes de integração, testes da Web, testes de carga e muitos outros. Os testes de unidade que testam métodos ou componentes de software individuais são os testes de nível mais baixo. Testes de unidade só devem testar o código sob o controle do desenvolvedor e não questões de infraestrutura, como bancos de dados, sistemas de arquivos ou recursos de rede. Testes de unidade podem ser escritos usando [TDD (Desenvolvimento Orientado por Testes)](http://deviq.com/test-driven-development/) ou adicionados ao código existente para confirmar sua precisão. Em ambos os casos, eles devem ser pequenos, bem nomeados e rápidos, visto que o ideal é ser capaz de executar centenas deles antes de enviar as alterações por push para o repositório de códigos compartilhado do projeto.
 
 > [!NOTE]
 > Os desenvolvedores geralmente enfrentam problemas para inventar bons nomes para seus métodos e classe de teste. Como ponto de partida, a equipe de produto do ASP.NET segue [essas convenções](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
@@ -32,8 +36,20 @@ Ao escrever testes de unidade, tenha cuidado para não apresentar dependências 
 
 Saiba mais sobre testes de unidade em projetos do .NET Core:
 
-* Experimente seguir o [passo a passo para criar testes de unidade com xUnit e a CLI do .NET Core](unit-testing-with-dotnet-test.md). 
+Os projetos de Teste de Unidade para .NET Core são suportados para [C#](../../csharp/index.md), [F#](../../fsharp/index.md) e [Visual Basic](../../visual-basic/index.md). Você também pode escolher entre [xUnit](http://xunit.github.io) e [MSTest](https://github.com/Microsoft/vstest-docs).
+
+Você pode ler sobre as combinações nestes artigos passo a passo:
+
+* Criar testes de unidade usando [*XUnit* e *C#* com a CLI do .NET Core](unit-testing-with-dotnet-test.md).
+* Criar testes de unidade usando [*MSTest* e *C#* com a CLI do .NET Core](unit-testing-with-mstest.md).
+* Criar testes de unidade usando [*XUnit* e *F#* com a CLI do .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+* Criar testes de unidade usando [*MSTest* e *F#* com a CLI do .NET Core](unit-testing-fsharp-with-mstest.md).
+* Criar testes de unidade usando [*XUnit* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Criar testes de unidade usando [*MSTest* e *Visual Basic* com a CLI do .NET Core](unit-testing-visual-basic-with-mstest.md).
+
+É possível escolher idiomas diferentes para as bibliotecas de classe e as bibliotecas de teste de unidade. Você pode aprender como combinando e correspondendo os passo a passos mencionados acima.
+
+* Se você estiver usando o Visual Studio, confira apenas [Live Unit Testing in .NET Core](/visualstudio/test/live-unit-testing) (Teste de unidade ao vivo no .NET Core)
+* Para obter informações adicionais e exemplos de como usar a filtragem de teste de unidade, confira [Executando testes de unidade seletivos](selective-unit-tests.md) ou [including and excluding tests with Visual Studio](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods) (Incluindo e excluindo testes com o Visual Studio).
 * A equipe do XUnit criou um tutorial que mostra [como usar o xUnit com o .NET Core e Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
-* Se preferir usar o MSTest, tente as [instruções passo a passo para criar testes de unidade com o MSTest e a CLI do .NET Core](unit-testing-with-mstest.md).
-* Para obter informações e exemplos adicionais sobre como usar a filtragem de teste de unidade seletivo, confira [Executar testes de unidade seletivos](../testing/selective-unit-tests.md).
 
