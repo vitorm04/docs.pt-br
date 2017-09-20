@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="blockingcollection-overview"></a>Visão geral de BlockingCollection
@@ -50,7 +50,8 @@ ms.lasthandoff: 07/28/2017
   
  Várias tarefas ou threads podem adicionar itens à coleção simultaneamente e se a coleção atingir sua capacidade máxima especificada, os threads de produção serão bloqueados até que um item seja removido. Vários consumidores podem remover itens simultaneamente e, se a coleção ficar vazia, os threads de consumo serão bloqueados até que um produtor adicione um item. Um thread de produção pode chamar <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A> para indicar que não serão adicionados mais itens. Os consumidores monitoram a propriedade <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> para saber quando a coleção está vazia e não serão adicionados mais itens. O exemplo a seguir mostra uma BlockingCollection simples com uma capacidade limitada igual a 100. Uma tarefa de produtor adiciona itens à coleção contanto que algumas condições sejam verdadeiras e, em seguida, chama <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>. A tarefa de consumidor tira itens até que a propriedade <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> seja true.  
   
- [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)] [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
+ [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
+ [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
  Para obter um exemplo completo, consulte [Como adicionar e tirar itens individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
   
@@ -60,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="cancelling-add-and-take-operations"></a>Cancelando as operações Add e Take  
  As operações Add e Take normalmente são realizadas em um loop. Você pode cancelar um loop, passando um <xref:System.Threading.CancellationToken> para o método <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> ou <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> e, em seguida, verificando o valor da propriedade <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> do token em cada iteração. Se o valor for true, caberá a você responder à solicitação de cancelamento limpando os recursos e saindo do loop. O exemplo a seguir mostra uma sobrecarga de <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> que usa um token de cancelamento e o código que ele usa:  
   
- [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)] [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
+ [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
+ [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
  Para obter um exemplo de como adicionar suporte a cancelamento, veja o segundo exemplo em [Instruções: adicionar e remover itens individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md).  
   

@@ -14,7 +14,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 
@@ -73,15 +73,15 @@ Crie a seguinte estrutura de pasta com o conteúdo do arquivo indicado:
 
 *IPet.cs*:
 
-[!code-csharp[Interface IPet](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+[!code-csharp[IPet interface](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
 
 *Dog.cs*:
 
-[!code-csharp[Classe Dog](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+[!code-csharp[Dog class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
 
 *Cat.cs*:
 
-[!code-csharp[Classe Cat](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+[!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
 
 *Program.cs*:
 
@@ -89,7 +89,7 @@ Crie a seguinte estrutura de pasta com o conteúdo do arquivo indicado:
 
 *NewTypes.csproj*:
 
-[!code-xml[csproj NewTypes](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
 
 Execute os seguintes comandos:
 
@@ -129,7 +129,7 @@ Você também tem a opção de adicionar manualmente a referência de projeto ad
 
 *NewTypesTests.csproj*:
 
-[!code-xml[csproj NewTypesTests](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
 O arquivo *NewTypesTests.csproj* com o seguinte:
 
@@ -238,7 +238,7 @@ Test execution time: 2.1371 Seconds
 
 Altere as asserções de seus testes de `Assert.NotEqual` para `Assert.Equal`:
 
-[!code-csharp[Classe PetTests](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+[!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
 Execute novamente os testes com o comando `dotnet test` e obtenha a seguinte saída:
 
