@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: e31977c511f18737aef673c78a3e295d7c24782f
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: 243c924826a54907840b337a91cf1e5d19cff985
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -208,6 +208,10 @@ Se você tiver criado o modelo no seu sistema de arquivos local em *C:/Usuários
 ```console
 dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
 ```
+
+> [!NOTE]
+> Para desinstalar o modelo do seu sistema de arquivos local, você precisa qualificar totalmente o caminho. Por exemplo, *C:/Usuários/\<USUÁRIO>/Documentos/Modelos/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, mas *./GarciaSoftware.ConsoleTemplate.CSharp* da pasta que o contém, não.
+> Além disso, não inclua uma barra final de encerramento de diretório no caminho do modelo.
 
 ## <a name="see-also"></a>Consulte também
 

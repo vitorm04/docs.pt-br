@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 335902f26148d8201b7311b57370fd37280c68dd
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
 ms.contentlocale: pt-br
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="dotnet-new"></a>dotnet new
@@ -137,6 +137,10 @@ Filtra modelos com base em tipos disponíveis. Os valores predefinidos são "pro
 `-u|--uninstall <PATH|NUGET_ID>`
 
 Desinstala um pacote de origem ou de modelo no `PATH` ou `NUGET_ID` fornecido.
+
+> [!NOTE]
+> Para desinstalar um modelo usando um `PATH`, você precisa qualificar totalmente o caminho. Por exemplo, *C:/Usuários/\<USUÁRIO>/Documentos/Modelos/GarciaSoftware.ConsoleTemplate.CSharp* funcionará, mas *./GarciaSoftware.ConsoleTemplate.CSharp* da pasta que o contém, não.
+> Além disso, não inclua uma barra final de encerramento de diretório no caminho do modelo.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -278,7 +282,7 @@ Cada modelo de projeto pode ter opções adicionais disponíveis. Os principais 
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-**console, xunit, mstest, web, webapi** 
+**console, xunit, mstest, web, webapi **
 
 `-f|--framework` – especifica a qual [estrutura](../../standard/frameworks.md) se destina. Valores: `netcoreapp1.0` ou `netcoreapp1.1`. O valor padrão é `netcoreapp1.0`.
 
