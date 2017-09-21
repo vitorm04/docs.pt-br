@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Como adicionar e remover itens de um ConcurrentDictionary
@@ -36,7 +36,8 @@ Este exemplo mostra como adicionar, recuperar, atualizar e remover itens de um <
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir usa duas instâncias de <xref:System.Threading.Tasks.Task> para adicionar alguns elementos em um <xref:System.Collections.Concurrent.ConcurrentDictionary%602> simultaneamente e, em seguida, gera todo o conteúdo para mostrar que os elementos foram adicionados com êxito. O exemplo também mostra como usar os métodos <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> e <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> para adicionar, atualizar e recuperar itens da coleção.  
   
- [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)] [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
+ [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
+ [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> foi projetado para cenários multi-threaded. Você não precisa usar bloqueios em seu código para adicionar ou remover itens da coleção. No entanto, sempre é possível que um thread recupere um valor e que outro thread atualize imediatamente a coleção, dando um novo valor à mesma chave.  
   
