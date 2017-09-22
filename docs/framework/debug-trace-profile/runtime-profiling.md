@@ -76,10 +76,10 @@ Criação de perfil é um método de coleta de dados de desempenho em qualquer c
   
 |Classe|Descrição|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|Representa um componente do contador de desempenho do Windows NT. Use essa classe para ler contadores existentes predefinidos ou personalizados e publicar dados de desempenho (gravação) em contadores personalizados.|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|Fornece vários métodos para interagir com os contadores e categorias de contadores no computador.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|Especifica um instalador para o componente `PerformanceCounter`.|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|Especifica a fórmula para calcular o método `NextValue` para uma `PerformanceCounter`.|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Representa um componente do contador de desempenho do Windows NT. Use essa classe para ler contadores existentes predefinidos ou personalizados e publicar dados de desempenho (gravação) em contadores personalizados.|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Fornece vários métodos para interagir com os contadores e categorias de contadores no computador.|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Especifica um instalador para o componente `PerformanceCounter`.|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Especifica a fórmula para calcular o método `NextValue` para uma `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Contadores de desempenho](../../../docs/framework/debug-trace-profile/performance-counters.md)

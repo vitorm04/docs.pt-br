@@ -33,7 +33,7 @@ Duas sequências cujos elementos correspondentes são iguais e que têm o mesmo 
   
 |Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|Determina se duas sequências são iguais comparando seus elementos por pares.|Não aplicável.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|SequenceEqual|Determina se duas sequências são iguais comparando seus elementos por pares.|Não aplicável.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq>   

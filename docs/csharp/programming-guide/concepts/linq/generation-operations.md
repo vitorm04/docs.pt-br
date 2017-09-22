@@ -35,10 +35,10 @@ Geração refere-se à criação de uma nova sequência de valores.
   
 |Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|DefaultIfEmpty|Substitui uma coleção vazia por uma coleção de singletons com valor padrão.|Não aplicável.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=fullName>|  
-|Vazio|Retorna uma coleção vazia.|Não aplicável.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=fullName>|  
-|Intervalo|Gera uma coleção que contém uma sequência de números.|Não aplicável.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=fullName>|  
-|Repetir|Gera uma coleção que contém um valor repetido.|Não aplicável.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=fullName>|  
+|DefaultIfEmpty|Substitui uma coleção vazia por uma coleção de singletons com valor padrão.|Não aplicável.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Vazio|Retorna uma coleção vazia.|Não aplicável.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Intervalo|Gera uma coleção que contém uma sequência de números.|Não aplicável.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Repetir|Gera uma coleção que contém um valor repetido.|Não aplicável.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq>   

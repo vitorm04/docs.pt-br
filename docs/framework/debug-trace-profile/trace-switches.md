@@ -45,13 +45,13 @@ As opções de rastreamento permitem habilitar, desabilitar e filtrar a saída d
 ## <a name="trace-levels"></a>Níveis de rastreamento  
  Ao usar **TraceSwitch**, há considerações adicionais. Um objeto **TraceSwitch** tem quatro propriedades que retornam valores **boolianos**, indicando se a opção é definida com, pelo menos, um nível específico:  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  Os níveis permitem limitar a quantidade de informações de rastreamento recebidas apenas às informações necessárias para solucionar um problema. Especifique o nível de detalhe desejado na saída de rastreamento, definindo e configurando opções de rastreamento para o nível de rastreamento apropriado. Você pode receber mensagens de erro, mensagens de aviso, mensagens informativas, mensagens de rastreamento detalhado ou nenhuma mensagem.  
   

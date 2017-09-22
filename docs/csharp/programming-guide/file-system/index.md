@@ -62,5 +62,5 @@ Os tópicos a seguir mostram como usar o C# e o .NET Framework para executar vá
   
  [Arquivos, pastas e unidades](../../../csharp/programming-guide/file-system/index.md)  
   
- <xref:System.IO?displayProperty=fullName>
+ <xref:System.IO?displayProperty=nameWithType>
 

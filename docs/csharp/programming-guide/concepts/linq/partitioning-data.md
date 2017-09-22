@@ -39,10 +39,10 @@ Particionamento em LINQ refere-se à operação de dividir uma sequência de ent
   
 |Nome do operador|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-------------------|-----------------|---------------------------------|----------------------|  
-|Skip|Ignora elementos até uma posição especificada na sequência.|Não aplicável.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=fullName>|  
-|SkipWhile|Ignora elementos com base em uma função de predicado até que um elemento não satisfaça a condição.|Não aplicável.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=fullName>|  
-|Take|Aceita elementos até uma posição especificada na sequência.|Não aplicável.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=fullName>|  
-|TakeWhile|Aceita elementos com base em uma função de predicado até que um elemento não satisfaça a condição.|Não aplicável.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=fullName>|  
+|Skip|Ignora elementos até uma posição especificada na sequência.|Não aplicável.|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
+|SkipWhile|Ignora elementos com base em uma função de predicado até que um elemento não satisfaça a condição.|Não aplicável.|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  
+|Take|Aceita elementos até uma posição especificada na sequência.|Não aplicável.|<xref:System.Linq.Enumerable.Take%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Take%2A?displayProperty=nameWithType>|  
+|TakeWhile|Aceita elementos com base em uma função de predicado até que um elemento não satisfaça a condição.|Não aplicável.|<xref:System.Linq.Enumerable.TakeWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.TakeWhile%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq>   

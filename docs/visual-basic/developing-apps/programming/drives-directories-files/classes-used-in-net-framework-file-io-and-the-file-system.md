@@ -47,40 +47,40 @@ As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .
   
 |Classe|Descrição|  
 |-----------|-----------------|  
-|<xref:System.IO.Directory?displayProperty=fullName>|Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
-|<xref:System.IO.DirectoryInfo?displayProperty=fullName>|Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
-|<xref:System.IO.DriveInfo?displayProperty=fullName>|Fornece métodos de instância para criar, mover e enumerar ao longo de unidades.|  
-|<xref:System.IO.File?displayProperty=fullName>|Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um `FileStream`.|  
-|<xref:System.IO.FileAccess?displayProperty=fullName>|Define constantes para acesso de leitura, gravação ou leitura/gravação para um arquivo.|  
-|<xref:System.IO.FileAttributes?displayProperty=fullName>|Fornece atributos para arquivos e diretórios como `Archive`, `Hidden` e `ReadOnly`.|  
-|<xref:System.IO.FileInfo?displayProperty=fullName>|Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=fullName>|Controla como um arquivo é aberto. Este parâmetro é especificado em muitos dos construtores para `FileStream` e `IsolatedStorageFileStream`, também para os métodos `Open` de <xref:System.IO.File> e <xref:System.IO.FileInfo>.|  
-|<xref:System.IO.FileShare?displayProperty=fullName>|Define constantes para controlar o tipo de acesso que outros fluxos de arquivos podem ter ao mesmo arquivo.|  
-|<xref:System.IO.Path?displayProperty=fullName>|Fornece métodos e propriedades para processar cadeias de caracteres de diretório.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|Controla o acesso de arquivos e pastas definindo permissões <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> e <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
+|<xref:System.IO.Directory?displayProperty=nameWithType>|Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
+|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
+|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Fornece métodos de instância para criar, mover e enumerar ao longo de unidades.|  
+|<xref:System.IO.File?displayProperty=nameWithType>|Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um `FileStream`.|  
+|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Define constantes para acesso de leitura, gravação ou leitura/gravação para um arquivo.|  
+|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|Fornece atributos para arquivos e diretórios como `Archive`, `Hidden` e `ReadOnly`.|  
+|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um `FileStream`.|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|Controla como um arquivo é aberto. Este parâmetro é especificado em muitos dos construtores para `FileStream` e `IsolatedStorageFileStream`, também para os métodos `Open` de <xref:System.IO.File> e <xref:System.IO.FileInfo>.|  
+|<xref:System.IO.FileShare?displayProperty=nameWithType>|Define constantes para controlar o tipo de acesso que outros fluxos de arquivos podem ter ao mesmo arquivo.|  
+|<xref:System.IO.Path?displayProperty=nameWithType>|Fornece métodos e propriedades para processar cadeias de caracteres de diretório.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Controla o acesso de arquivos e pastas definindo permissões <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> e <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Classes usadas para criar fluxos  
  A tabela a seguir lista e descreve as principais classes usadas para criar fluxos.  
   
 |Classe|Descrição|  
 |-----------|-----------------|  
-|<xref:System.IO.BufferedStream?displayProperty=fullName>|Adiciona uma camada de armazenamento em buffer para ler e gravar operações em outro fluxo.|  
-|<xref:System.IO.FileStream?displayProperty=fullName>|Dá suporte ao acesso aleatório a arquivos por meio de seu método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre arquivos de forma síncrona por padrão, mas também dá suporte à operação assíncrona.|  
-|<xref:System.IO.MemoryStream?displayProperty=fullName>|Cria um fluxo cujo repositório de backup é a memória, em vez de um arquivo.|  
-|<xref:System.Net.Sockets.NetworkStream?displayProperty=fullName>|Fornece o fluxo de dados subjacente para acesso à rede.|  
-|<xref:System.Security.Cryptography.CryptoStream?displayProperty=fullName>|Define uma transmissão que liga fluxos de dados a transformações criptográficas.|  
+|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Adiciona uma camada de armazenamento em buffer para ler e gravar operações em outro fluxo.|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|Dá suporte ao acesso aleatório a arquivos por meio de seu método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre arquivos de forma síncrona por padrão, mas também dá suporte à operação assíncrona.|  
+|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Cria um fluxo cujo repositório de backup é a memória, em vez de um arquivo.|  
+|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Fornece o fluxo de dados subjacente para acesso à rede.|  
+|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Define uma transmissão que liga fluxos de dados a transformações criptográficas.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Classes usadas para ler e gravar em fluxos  
  A tabela a seguir mostra as classes específicas usadas para ler e gravar em arquivos com fluxos.  
   
 |**Class**|**Descrição**|  
 |---------------|---------------------|  
-|<xref:System.IO.BinaryReader?displayProperty=fullName>|Lê cadeias de caracteres codificadas e tipos de dados primitivos de um <xref:System.IO.FileStream>.|  
-|<xref:System.IO.BinaryWriter?displayProperty=fullName>|Grava cadeias de caracteres codificadas e tipos de dados primitivos em um <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=fullName>|Lê caracteres de um <xref:System.IO.FileStream>, usando <xref:System.IO.StreamReader.CurrentEncoding%2A> para converter caracteres em bytes e vice-versa. <xref:System.IO.StreamReader> tem um construtor que tenta determinar o <xref:System.IO.StreamReader.CurrentEncoding%2A> correto de determinado fluxo, com base na presença de um preâmbulo específico de <xref:System.IO.StreamReader.CurrentEncoding%2A>, como uma marca de ordem de byte.|  
-|<xref:System.IO.StreamWriter?displayProperty=fullName>|Grava caracteres em um `FileStream`, usando <xref:System.IO.StreamWriter.Encoding%2A> para converter caracteres em bytes.|  
-|<xref:System.IO.StringReader?displayProperty=fullName>|Lê caracteres de um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
-|<xref:System.IO.StringWriter?displayProperty=fullName>|Grava caracteres em um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
+|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Lê cadeias de caracteres codificadas e tipos de dados primitivos de um <xref:System.IO.FileStream>.|  
+|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Grava cadeias de caracteres codificadas e tipos de dados primitivos em um <xref:System.IO.FileStream>.|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Lê caracteres de um <xref:System.IO.FileStream>, usando <xref:System.IO.StreamReader.CurrentEncoding%2A> para converter caracteres em bytes e vice-versa. <xref:System.IO.StreamReader> tem um construtor que tenta determinar o <xref:System.IO.StreamReader.CurrentEncoding%2A> correto de determinado fluxo, com base na presença de um preâmbulo específico de <xref:System.IO.StreamReader.CurrentEncoding%2A>, como uma marca de ordem de byte.|  
+|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Grava caracteres em um `FileStream`, usando <xref:System.IO.StreamWriter.Encoding%2A> para converter caracteres em bytes.|  
+|<xref:System.IO.StringReader?displayProperty=nameWithType>|Lê caracteres de um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
+|<xref:System.IO.StringWriter?displayProperty=nameWithType>|Grava caracteres em um `String`. A saída pode ser um fluxo em qualquer codificação ou um `String`.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Compondo fluxos](https://msdn.microsoft.com/library/e4y2dch9)   
