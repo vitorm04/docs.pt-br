@@ -53,21 +53,21 @@ O coletor de lixo do .NET gerencia a alocação e a liberação de memória para
 |[Referências fracas](../../../docs/standard/garbage-collection/weak-references.md)|Descreve os recursos que permitem que um objeto seja, simultaneamente, coletado pelo coletor de lixo e acessado pelo aplicativo.|  
   
 ## <a name="reference"></a>Referência  
- <xref:System.GC?displayProperty=fullName>  
+ <xref:System.GC?displayProperty=nameWithType>  
   
- <xref:System.GCCollectionMode?displayProperty=fullName>  
+ <xref:System.GCCollectionMode?displayProperty=nameWithType>  
   
- <xref:System.GCNotificationStatus?displayProperty=fullName>  
+ <xref:System.GCNotificationStatus?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCLatencyMode?displayProperty=fullName>  
+ <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings?displayProperty=nameWithType>  
   
- <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>  
+ <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>  
   
- <xref:System.Object.Finalize%2A?displayProperty=fullName>  
+ <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
   
- <xref:System.IDisposable?displayProperty=fullName>  
+ <xref:System.IDisposable?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Consulte também  
  [Limpando recursos não gerenciados](../../../docs/standard/garbage-collection/unmanaged.md)

@@ -58,5 +58,5 @@ O objeto `My.Computer.Keyboard` fornece propriedades para acessar o estado atual
   
 ## <a name="see-also"></a>Consulte também  
  <xref:Microsoft.VisualBasic.Devices.Keyboard>   
- <xref:System.Windows.Forms.Keys?displayProperty=fullName>
+ <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
 

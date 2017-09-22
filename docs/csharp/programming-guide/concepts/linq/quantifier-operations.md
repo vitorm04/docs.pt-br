@@ -39,9 +39,9 @@ As operações de quantificador retornam um valor <xref:System.Boolean> que indi
   
 |Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Todos|Determina se todos os elementos em uma sequência satisfazem uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.All%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=fullName>|  
-|Qualquer|Determina se todos os elementos em uma sequência satisfazem uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=fullName>|  
-|Contém|Determina se uma sequência contém um elemento especificado.|Não aplicável.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=fullName>|  
+|Todos|Determina se todos os elementos em uma sequência satisfazem uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|Qualquer|Determina se todos os elementos em uma sequência satisfazem uma condição.|Não aplicável.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|Contém|Determina se uma sequência contém um elemento especificado.|Não aplicável.|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também  
  <xref:System.Linq>   

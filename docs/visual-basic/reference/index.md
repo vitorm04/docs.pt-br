@@ -52,10 +52,10 @@ Esta seção fornece links para informações de referência sobre vários aspec
  Fornece links para a conclusão da especificação do idioma [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], que contêm informações detalhadas sobre todos os aspectos do idioma.  
   
 ## <a name="reference"></a>Referência  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  Esse namespace contém classes para os controles do Visual Basic Power Packs. Controles do Visual Basic Power Packs são adicionais aos controles do Windows Forms.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  Este namespace fornece um componente que habilita você a imprimir um fax de forma conforme aparece na tela.  
   
 ## <a name="related-sections"></a>Seções relacionadas  

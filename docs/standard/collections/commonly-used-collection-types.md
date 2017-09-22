@@ -50,19 +50,19 @@ Tipos de coleção são as variações comuns de coleções de dados, como tabel
 |[Genéricos](../../../docs/standard/generics/index.md)|Descreve o recurso Genéricos, incluindo coleções, delegados e interfaces genéricos fornecidos pelo [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Fornece links à documentação de recursos para C#, Visual Basic e Visual C++ e para oferecer suporte a tecnologias, tais como a de reflexão.|  
   
 ## <a name="reference"></a>Referência  
- <xref:System.Collections?displayProperty=fullName>  
+ <xref:System.Collections?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic?displayProperty=fullName>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
   
- <xref:System.Collections.ICollection?displayProperty=fullName>  
+ <xref:System.Collections.ICollection?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IList?displayProperty=fullName>  
+ <xref:System.Collections.IList?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.IList%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IDictionary?displayProperty=fullName>  
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 

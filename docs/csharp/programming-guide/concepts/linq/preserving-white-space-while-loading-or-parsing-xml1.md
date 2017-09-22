@@ -38,13 +38,13 @@ Este tópico descreve como controlar o comportamento de espaço em branco de [!I
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Comportamento dos métodos que preenchem árvores XML  
  Os seguintes métodos nas classes de <xref:System.Xml.Linq.XElement> e de <xref:System.Xml.Linq.XDocument> preenchem uma árvore XML. Você pode preencher uma árvore XML de um arquivo, um <xref:System.IO.TextReader>, um <xref:System.Xml.XmlReader>, ou de uma cadeia de caracteres:  
   
--   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
  Se o método não utiliza <xref:System.Xml.Linq.LoadOptions> como um argumento, o método não irá preservar espaço em branco irrisória.  
   
