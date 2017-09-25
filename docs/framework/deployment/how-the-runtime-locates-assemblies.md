@@ -27,10 +27,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 75642ff3beb4462faa9068db76c89f3cb5f75ab8
-ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
 ms.contentlocale: pt-br
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Como o tempo de execução localiza assemblies
@@ -42,13 +42,13 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
 >  Você pode exibir informações de associação no arquivo de log usando o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que está incluído no [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
 ## <a name="initiating-the-bind"></a>Iniciando a associação  
- O processo de localização e associação a um assembly começa quando o tempo de execução tenta resolver uma referência a outro assembly. Essa referência pode ser estática ou dinâmica. O compilador registra as referências estáticas nos metadados do manifesto do assembly no tempo de build. Referências dinâmicas são construídas em tempo real como resultado de chamar vários métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  
+ O processo de localização e associação a um assembly começa quando o tempo de execução tenta resolver uma referência a outro assembly. Essa referência pode ser estática ou dinâmica. O compilador registra as referências estáticas nos metadados do manifesto do assembly no tempo de build. Referências dinâmicas são construídas em tempo real como resultado de chamar vários métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
   
  A melhor maneira de referenciar um assembly é usar uma referência completa, incluindo o nome do assembly, a versão, a cultura e o token de chave pública (se houver). O tempo de execução usa essas informações para localizar o assembly, seguindo as etapas descritas posteriormente nesta seção. O tempo de execução usa o mesmo processo de resolução, independentemente de se a referência é para um assembly estático ou dinâmico.  
   
- Você também pode fazer uma referência dinâmica a um assembly fornecendo o método de chamada apenas com informações parciais sobre o assembly, como especificando apenas o nome do assembly. Nesse caso, somente o diretório do aplicativo é pesquisado par ao assembly e não ocorre nenhuma outra verificação. Você faz uma referência parcial usando qualquer um dos vários métodos para carregar assemblies como <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> ou <xref:System.AppDomain.Load%2A?displayProperty=fullName>.  
+ Você também pode fazer uma referência dinâmica a um assembly fornecendo o método de chamada apenas com informações parciais sobre o assembly, como especificando apenas o nome do assembly. Nesse caso, somente o diretório do aplicativo é pesquisado par ao assembly e não ocorre nenhuma outra verificação. Você faz uma referência parcial usando qualquer um dos vários métodos para carregar assemblies como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> ou <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>.  
   
- Por fim, você pode fazer uma referência dinâmica usando um método como <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> e fornecer apenas uma informação parcial. Em seguida, você qualifica a referência usando o elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) no arquivo de configuração de aplicativo. Esse elemento permite que você forneça as informações de referência completa (nome, versão, cultura e, se aplicável, o token de chave pública) em seu arquivo de configuração de aplicativo em vez de no seu código. Você usaria essa técnica se desejasse qualificar completamente uma referência a um assembly fora do diretório do aplicativo ou se desejasse referenciar um assembly no cache de assembly global, mas quisesse a conveniência de especificar a referência completa no arquivo de configuração em vez de no código.  
+ Por fim, você pode fazer uma referência dinâmica usando um método como <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> e fornecer apenas uma informação parcial. Em seguida, você qualifica a referência usando o elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) no arquivo de configuração de aplicativo. Esse elemento permite que você forneça as informações de referência completa (nome, versão, cultura e, se aplicável, o token de chave pública) em seu arquivo de configuração de aplicativo em vez de no seu código. Você usaria essa técnica se desejasse qualificar completamente uma referência a um assembly fora do diretório do aplicativo ou se desejasse referenciar um assembly no cache de assembly global, mas quisesse a conveniência de especificar a referência completa no arquivo de configuração em vez de no código.  
   
 > [!NOTE]
 >  Esse tipo de referência parcial não deve ser usado com assemblies que são compartilhados entre vários aplicativos. Como as definições de configuração são aplicadas por aplicativo e não por assembly, um assembly compartilhado usando esse tipo de referência parcial exigiria que cada aplicativo usando o assembly compartilhado tivesse as informações de qualificação no seu arquivo de configuração.  
@@ -66,7 +66,7 @@ Para implantar seu aplicativo .NET Framework com êxito, você deve entender com
   
 4.  [Investiga o assembly](#step4) usando as seguintes etapas:  
   
-    1.  Se a política do publicador e a configuração não afetam a referência original e se a solicitação de associação foi criada usando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName>, o tempo de execução procura dicas de localização.  
+    1.  Se a política do publicador e a configuração não afetam a referência original e se a solicitação de associação foi criada usando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, o tempo de execução procura dicas de localização.  
   
     2.  Se uma base de código for encontrada nos arquivos de configuração, o tempo de execução verificará apenas esse local. Se essa investigação falhar, o tempo de execução determinará que a solicitação de associação falhou e não ocorrem outras investigações.  
   
@@ -258,7 +258,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>Outros locais investigados  
- O local do assembly também pode ser determinado usando o contexto de associação atual. Isso normalmente ocorre quando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> é usado e em cenários de interoperabilidade COM. Se um assembly usa o método <xref:System.Reflection.Assembly.LoadFrom%2A> para referenciar outro assembly, o local do assembly de chamada é considerado uma dica de onde encontrar o assembly referenciado. Se uma correspondência for encontrada, esse assembly será carregado. Se nenhuma correspondência for encontrada, o tempo de execução continuará com sua semântica de pesquisa e, em seguida, consultará o Windows Installer para fornecer o assembly. Se não for fornecido nenhum assembly correspondente à solicitação de associação, uma exceção será gerada. Essa exceção será uma <xref:System.TypeLoadException> no código gerenciado se um tipo tiver sido referenciado ou uma <xref:System.IO.FileNotFoundException> se um assembly sendo carregado não tiver sido encontrado.  
+ O local do assembly também pode ser determinado usando o contexto de associação atual. Isso normalmente ocorre quando o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> é usado e em cenários de interoperabilidade COM. Se um assembly usa o método <xref:System.Reflection.Assembly.LoadFrom%2A> para referenciar outro assembly, o local do assembly de chamada é considerado uma dica de onde encontrar o assembly referenciado. Se uma correspondência for encontrada, esse assembly será carregado. Se nenhuma correspondência for encontrada, o tempo de execução continuará com sua semântica de pesquisa e, em seguida, consultará o Windows Installer para fornecer o assembly. Se não for fornecido nenhum assembly correspondente à solicitação de associação, uma exceção será gerada. Essa exceção será uma <xref:System.TypeLoadException> no código gerenciado se um tipo tiver sido referenciado ou uma <xref:System.IO.FileNotFoundException> se um assembly sendo carregado não tiver sido encontrado.  
   
  Por exemplo, se Assembly1 fizer referência a Assembly2 e Assembly1 tiver sido baixado de http://www.code.microsoft.com/utils, esse local será considerado uma dica sobre onde encontrar o Assembly2.dll. O tempo de execução investiga o assembly em http://www.code.microsoft.com/utils/Assembly2.dll e http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Se Assembly2 não for encontrado em um desses locais, o tempo de execução de consultará o Windows Installer.  
   
