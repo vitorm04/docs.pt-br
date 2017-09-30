@@ -1,0 +1,7 @@
+# [Desenvolvimento para várias plataformas](index.md)
+## [Biblioteca de classes portátil](cross-platform-development-with-the-portable-class-library.md)
+## [Usando a biblioteca de classes portátil com modelo MVVM](using-portable-class-library-with-model-view-view-model.md)
+## [Recursos do aplicativo para bibliotecas direcionadas a várias plataformas](app-resources-for-libraries-that-target-multiple-platforms.md)
+## [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](support-for-windows-store-apps-and-windows-runtime.md)
+## [Passando um URI para o tempo de execução do Windows](passing-a-uri-to-the-windows-runtime.md)
+## [Método Windowsruntimestreamextensions](windowsruntimestreamextensions-asrandomaccessstream-method.md)
