@@ -33,20 +33,20 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aed1d4f086f0b1334df750fd912d20d66326a043
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 1c873dfdf001f7efc3340637d210e5fdf42a2852
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referência de C#)
-Uma instrução `foreach` repete um grupo de instruções inseridas para cada elemento em uma matriz ou coleção que implementa a interface <xref:System.Collections.IEnumerable?displayProperty=fullName> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName>. A instrução `foreach` é usada para iterar na coleção para obter as informações que você deseja, mas não pode ser usada para adicionar ou remover itens da coleção de origem para evitar efeitos colaterais imprevisíveis. Se você precisar adicionar ou remover itens da coleção de origem, use um loop [for](../../../csharp/language-reference/keywords/for.md).  
+Uma instrução `foreach` repete um grupo de instruções inseridas para cada elemento em uma matriz ou coleção que implementa a interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. A instrução `foreach` é usada para iterar na coleção para obter as informações que você deseja, mas não pode ser usada para adicionar ou remover itens da coleção de origem para evitar efeitos colaterais imprevisíveis. Se você precisar adicionar ou remover itens da coleção de origem, use um loop [for](../../../csharp/language-reference/keywords/for.md).  
   
  As instruções inseridas continuam em execução para cada elemento da matriz ou coleção. Após a iteração ter sido concluída para todos os elementos na coleção, o controle é transferido para a próxima instrução que segue o bloco `foreach`.  
   
  Em qualquer ponto dentro do bloco `foreach`, você pode sair do loop usando a palavra-chave [break](../../../csharp/language-reference/keywords/break.md) ou seguir para a próxima iteração no loop, usando a palavra-chave [continue](../../../csharp/language-reference/keywords/continue.md).  
   
- Um loop `foreach` também pode ser encerrado pelas instruções [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
+ Um loop `foreach` também pode ser encerrado pelas instruções [goto](../../../csharp/language-reference/keywords/goto.md), [retorn](../../../csharp/language-reference/keywords/return.md) ou [throw](../../../csharp/language-reference/keywords/throw.md).  
   
  Para obter mais informações sobre a palavra-chave `foreach` e exemplos de códigos, consulte os seguintes tópicos:  
   

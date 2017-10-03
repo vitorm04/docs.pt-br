@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: ea3104b1850fd2014ef0d4b8fcd31098d2c4b9d4
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Criando e lançando exceções (Guia de Programação em C#)
@@ -73,7 +73,7 @@ As exceções são usadas para indicar que ocorreu um erro durante a execução 
   
 -   As exceções não devem ser retornadas como um valor retornado ou um parâmetro em vez de serem lançadas.  
   
--   Não lance <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> ou <xref:System.IndexOutOfRangeException?displayProperty=fullName> intencionalmente de seu próprio código-fonte.  
+-   Não lance <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> ou <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> intencionalmente de seu próprio código-fonte.  
   
 -   Não crie exceções que podem ser lançadas no modo de depuração, mas não no modo de versão. Em vez disso, use o Debug Assert para identificar erros em tempo de execução durante a fase de desenvolvimento.  
   

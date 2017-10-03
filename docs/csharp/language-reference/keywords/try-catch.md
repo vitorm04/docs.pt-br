@@ -35,10 +35,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referência de C#)
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- Embora a cláusula `catch` possa ser usada sem argumentos para capturar qualquer tipo de exceção, esse uso não é recomendado. Em geral, você deve capturar apenas as exceções das quais você sabe se recuperar. Portanto, você sempre deve especificar um argumento de objeto derivado de <xref:System.Exception?displayProperty=fullName>, por exemplo:  
+ Embora a cláusula `catch` possa ser usada sem argumentos para capturar qualquer tipo de exceção, esse uso não é recomendado. Em geral, você deve capturar apenas as exceções das quais você sabe se recuperar. Portanto, você sempre deve especificar um argumento de objeto derivado de <xref:System.Exception?displayProperty=nameWithType>, por exemplo:  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -150,7 +150,7 @@ static void Main()
   
  Para capturar a exceção, aguarde a tarefa em um bloco `try` e capture a exceção no bloco `catch` associado. Para ver um exemplo, consulte a seção “Exemplo”.  
   
- Uma tarefa pode estar em um estado de falha porque ocorreram várias exceções no método assíncrono esperado. Por exemplo, a tarefa pode ser o resultado de uma chamada para <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. Quando você espera uma tarefa, somente uma das exceções é capturada e não é possível prever qual exceção será capturada. Para ver um exemplo, consulte a seção “Exemplo”.  
+ Uma tarefa pode estar em um estado de falha porque ocorreram várias exceções no método assíncrono esperado. Por exemplo, a tarefa pode ser o resultado de uma chamada para <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quando você espera uma tarefa, somente uma das exceções é capturada e não é possível prever qual exceção será capturada. Para ver um exemplo, consulte a seção “Exemplo”.  
   
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, o bloco `try` contém uma chamada para o método `ProcessString` que pode causar uma exceção. A cláusula `catch` contém o manipulador de exceção que apenas exibe uma mensagem na tela. Quando instrução `throw` é chamada de dentro de `MyMethod`, o sistema procura a instrução `catch` e exibe a mensagem `Exception caught`.  
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir ilustra a manipulação de exceção em que várias tarefas podem resultar em várias exceções. O bloco `try` aguarda a tarefa que é retornada por uma chamada para <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>. A tarefa é concluída quando as três tarefas às quais WhenAll se aplica são concluídas.  
+ O exemplo a seguir ilustra a manipulação de exceção em que várias tarefas podem resultar em várias exceções. O bloco `try` aguarda a tarefa que é retornada por uma chamada para <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. A tarefa é concluída quando as três tarefas às quais WhenAll se aplica são concluídas.  
   
- Cada uma das três tarefas causa uma exceção. O bloco `catch` itera por meio de exceções, que são encontradas na propriedade `Exception.InnerExceptions` da tarefa que foi retornada por <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>.  
+ Cada uma das três tarefas causa uma exceção. O bloco `catch` itera por meio de exceções, que são encontradas na propriedade `Exception.InnerExceptions` da tarefa que foi retornada por <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   

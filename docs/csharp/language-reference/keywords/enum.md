@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf12724ec9e450a2bc237db614f235d7f03a4a7e
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="enum-c-reference"></a>enum (Referência de C#)
@@ -77,7 +77,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 int x = (int)Days.Sun;  
 ```  
   
- Quando você aplica <xref:System.FlagsAttribute?displayProperty=fullName> a uma enumeração que contém elementos que podem ser combinados com uma operação `OR` bit a bit, o atributo afeta o comportamento do `enum` quando ele é usado com algumas ferramentas. Você pode observar essas alterações quando usa ferramentas como os métodos da classe <xref:System.Console> e o Avaliador de Expressão. (Consulte o terceiro exemplo.)  
+ Quando você aplica <xref:System.FlagsAttribute?displayProperty=nameWithType> a uma enumeração que contém elementos que podem ser combinados com uma operação `OR` bit a bit, o atributo afeta o comportamento do `enum` quando ele é usado com algumas ferramentas. Você pode observar essas alterações quando usa ferramentas como os métodos da classe <xref:System.Console> e o Avaliador de Expressão. (Consulte o terceiro exemplo.)  
   
 ## <a name="robust-programming"></a>Programação robusta  
  Assim como ocorre com qualquer constante, todas as referências aos valores individuais de um enum são convertidas em literais numéricos em tempo de compilação. Isso pode criar problemas de controle de versão, conforme descrito em [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md).  
@@ -97,7 +97,7 @@ int x = (int)Days.Sun;
  [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir ilustra o uso e o efeito do atributo <xref:System.FlagsAttribute?displayProperty=fullName> em uma declaração `enum`.  
+ O exemplo de código a seguir ilustra o uso e o efeito do atributo <xref:System.FlagsAttribute?displayProperty=nameWithType> em uma declaração `enum`.  
   
  [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   

@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: de10e3978d768aab34efa675fe00cfd059ff55df
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="set-c-reference"></a>set (Referência de C#)
@@ -44,11 +44,11 @@ O exemplo a seguir define um acessador `get` e um acessador `set` para uma propr
  
  [!code-cs[set#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
 
-Frequentemente, o acessador `set` consiste em uma única instrução que retorna um valor, como no exemplo anterior. Começando com o C# 7, você pode implementar o acessador `set` como um membro com corpo de expressão. O exemplo a seguir implementa os acessadores `get` e `set` como membros com corpo de expressão.
+Geralmente, o acessador `set` consiste em uma única instrução que retorna um valor, como no exemplo anterior. Começando com o C# 7, você pode implementar o acessador `set` como um membro com corpo de expressão. O exemplo a seguir implementa os acessadores `get` e `set` como membros com corpo de expressão.
 
  [!code-cs[set#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
     
-Para casos simples em que os acessadores `get` e `set` de uma propriedade não realizam nenhuma outra operação além da configuração ou da recuperação de um valor em um campo de suporte particular, você pode tirar proveito do suporte do compilador do C# para propriedades autoimplementadas. O exemplo a seguir implementa `Hours` como uma propriedade autoimplementada. 
+Para casos simples em que os acessadores `get` e `set` de uma propriedade não realizam nenhuma outra operação, a não ser a configuração ou a recuperação de um valor em um campo de suporte particular, você pode tirar proveito do suporte do compilador do C# para propriedades autoimplementadas. O exemplo a seguir implementa `Hours` como uma propriedade autoimplementada. 
   
  [!code-cs[set#2](../../../../samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]  
     

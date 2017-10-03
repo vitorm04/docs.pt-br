@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df2f33c4599baef6d606738cbe5766fdd88e4ef3
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 910b0e0675fe416fae71a6e46c4a6cf2293327e6
 ms.contentlocale: pt-br
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="interoperability-c-programming-guide"></a>Interoperabilidade (Guia de Programação em C#)
@@ -65,7 +65,7 @@ A interoperabilidade permite que você mantenha e aproveite os investimentos exi
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Consulte também  
- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   
+ <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>   
  [Guia de Programação em C#](../../../csharp/programming-guide/index.md)   
  [Interoperação com código não gerenciado](https://msdn.microsoft.com/library/sd10k43k)   
  [Passo a passo: programação do Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
