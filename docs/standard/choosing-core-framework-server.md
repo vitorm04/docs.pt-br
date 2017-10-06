@@ -15,7 +15,7 @@ ms.lasthandoff: 08/21/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor
 
-Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar.  Este artigo fornece diretrizes sobre quando usar cada um.
+Há duas implementações com suporte para a compilação de aplicativos de servidor com o .NET: .NET Framework e .NET Core. Ambas compartilham muitos dos mesmos componentes e você pode compartilhar código entre as duas. No entanto, há diferenças fundamentais entre as duas e sua escolha depende do que você deseja realizar. Este artigo fornece diretrizes sobre quando usar cada uma.
 
 Use o .NET Core para o aplicativo para servidores se:
 
